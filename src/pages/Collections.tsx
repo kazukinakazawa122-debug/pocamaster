@@ -13,6 +13,7 @@ const SHORT: Record<string, string> = {
   シーズングリーティング: 'シーグリ',
   'ファンミ・ファンコン': 'ファンミ',
   'ライブ・ツアー': 'ツアー',
+  ノンアルバム: 'NON ALBUM',
 }
 
 export default function Collections() {
