@@ -14,6 +14,7 @@ const SHORT: Record<string, string> = {
   'ファンミ・ファンコン': 'ファンミ',
   'ライブ・ツアー': 'ツアー',
   ノンアルバム: 'NON ALBUM',
+  '個人（ソロ）': 'ソロ',
 }
 
 export default function Collections() {

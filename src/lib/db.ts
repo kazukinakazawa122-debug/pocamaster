@@ -8,6 +8,7 @@ export const COLLECTION_TYPES = [
   'ファンミ・ファンコン',
   'ライブ・ツアー',
   'ノンアルバム',
+  '個人（ソロ）',
   'ポップアップ',
   'その他',
 ] as const

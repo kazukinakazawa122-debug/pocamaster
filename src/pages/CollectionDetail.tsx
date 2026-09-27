@@ -21,7 +21,7 @@ function byMember(a: Card, b: Card): number {
 export default function CollectionDetail() {
   const { id = '' } = useParams()
   const [params, setParams] = useSearchParams()
-  const member = (params.get('m') as MemberId | null) ?? null
+  const memberParam = (params.get('m') as MemberId | null) ?? null
   const status = (params.get('s') as (typeof STATUS_FILTERS)[number] | null) ?? 'すべて'
   const [openCardId, setOpenCardId] = useState<string | null>(null)
   const showUndo = useUndo()
@@ -46,6 +46,12 @@ export default function CollectionDetail() {
     setCardStatus(card, to)
     showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => setCardStatus({ ...card, status: to }, card.status))
   }
+
+  // カードに出てくるメンバーだけタブにする。1 人だけ（個人のコレクション）なら「全員」タブを出さない
+  const present = MEMBERS.filter((mm) => cards.some((c) => c.memberIds.includes(mm.id)))
+  const tabs = present.length > 0 ? present : MEMBERS
+  const solo = present.length === 1
+  const member = solo ? present[0].id : memberParam && tabs.some((t) => t.id === memberParam) ? memberParam : null
 
   const total = progress(cards)
   const memberCards = member ? cards.filter((c) => c.memberIds.includes(member)) : cards
@@ -101,10 +107,12 @@ export default function CollectionDetail() {
       </div>
 
       <div className="chips" style={{ marginBottom: 8 }}>
-        <button className={`chip${!member ? ' on' : ''}`} onClick={() => setParam('m', null)}>
-          全員
-        </button>
-        {MEMBERS.map((mm) => {
+        {!solo && (
+          <button className={`chip${!member ? ' on' : ''}`} onClick={() => setParam('m', null)}>
+            全員
+          </button>
+        )}
+        {tabs.map((mm) => {
           const on = member === mm.id
           return (
             <button
@@ -126,7 +134,7 @@ export default function CollectionDetail() {
         ))}
       </div>
 
-      {m && (
+      {m && !solo && (
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '8px 0' }}>
           <span className="small" style={{ color: m.text, fontWeight: 700 }}>
             {m.name}
@@ -147,6 +155,31 @@ export default function CollectionDetail() {
         </div>
       ) : visible.length === 0 ? (
         <div className="empty">該当するカードはありません</div>
+      ) : solo ? (
+        // 個人のコレクション：入手元ごとの段に横 3 枚で並べる
+        [...new Set(visible.map((c) => c.source))].map((source) => {
+          const all = cards.filter((c) => c.source === source)
+          return (
+            <section key={source}>
+              <div className="row-head">
+                <span style={{ fontWeight: 700 }}>{source}</span>
+                <span className="muted num">
+                  {progress(all).owned}/{all.length}
+                </span>
+              </div>
+              <div className="grid-3">
+                {visible
+                  .filter((c) => c.source === source)
+                  .map((c) => (
+                    <div key={c.id}>
+                      {tile(c, false)}
+                      {c.version && <div className="tile-label">{c.version}</div>}
+                    </div>
+                  ))}
+              </div>
+            </section>
+          )
+        })
       ) : member ? (
         <div className="grid-3" style={{ marginTop: 8 }}>
           {visible.map((c) => (
