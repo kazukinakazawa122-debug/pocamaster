@@ -28,8 +28,13 @@ export function memberOrder(id: MemberId): number {
   return MEMBERS.findIndex((m) => m.id === id)
 }
 
-/** 仮カードや一覧に出すメンバー名。6 人全員なら「全員」 */
+/** メンバー名をメンバー順に並べる。6 人全員なら ['全員'] */
+export function memberNames(ids: MemberId[]): string[] {
+  if (ids.length === MEMBERS.length) return ['全員']
+  return [...ids].sort((a, b) => memberOrder(a) - memberOrder(b)).map((id) => MEMBER_BY_ID[id].name)
+}
+
+/** 仮カードや一覧に出すメンバー名 */
 export function memberLabel(ids: MemberId[]): string {
-  if (ids.length === MEMBERS.length) return '全員'
-  return [...ids].sort((a, b) => memberOrder(a) - memberOrder(b)).map((id) => MEMBER_BY_ID[id].name).join('・')
+  return memberNames(ids).join('・')
 }

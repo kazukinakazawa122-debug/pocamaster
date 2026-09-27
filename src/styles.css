@@ -108,6 +108,9 @@ a { color: inherit; text-decoration: none; }
   border: 1.5px solid; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
   transition: filter .15s; touch-action: manipulation;
 }
+.poca { container-type: inline-size; }
+/* カードの幅に合わせて文字を縮め、「ウォニョン」（5 文字）まで 1 行に収める */
+.poca .ph-name { white-space: nowrap; font-weight: 700; font-size: min(13px, 18cqi); letter-spacing: -0.02em; }
 .poca img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
 .poca.off { filter: grayscale(.8) brightness(.55); }
 .poca .ph { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 3px; line-height: 1.25; word-break: break-all; color: var(--text); }

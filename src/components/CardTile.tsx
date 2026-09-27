@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import type { Card } from '../lib/db'
-import { MEMBER_BY_ID, memberLabel, memberOrder } from '../lib/members'
+import { MEMBER_BY_ID, memberLabel, memberNames, memberOrder } from '../lib/members'
 import { useImageUrl } from './ui'
 
 const LONG_PRESS_MS = 450
@@ -71,9 +71,12 @@ export default function CardTile({ card, collectionName, compact, onTap, onLongP
       ) : (
         <span className="ph">
           {compact ? (
-            <span className="xs" style={{ fontWeight: 700 }}>
-              {name}
-            </span>
+            // 6 枚並びでも名前を 1 行に収める（ユニットは 1 人 1 行）
+            memberNames(card.memberIds).map((n) => (
+              <span key={n} className="ph-name">
+                {n}
+              </span>
+            ))
           ) : (
             <>
               <span className="xs muted">{collectionName}</span>
