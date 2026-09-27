@@ -5,7 +5,8 @@ export const COLLECTION_TYPES = [
   'アルバム（韓国盤）',
   'アルバム（日本盤）',
   'シーズングリーティング',
-  'ファンミ・コンサート',
+  'ファンミ・ファンコン',
+  'ライブ・ツアー',
   'ポップアップ',
   'その他',
 ] as const
@@ -75,6 +76,19 @@ db.version(1).stores({
   achievements: 'key',
   settings: 'key',
 })
+
+// 種別「ファンミ・コンサート」を「ファンミ・ファンコン」と「ライブ・ツアー」に分けた
+db.version(2)
+  .stores({})
+  .upgrade((tx) =>
+    tx
+      .table('collections')
+      .toCollection()
+      .modify((c: Collection) => {
+        if ((c.type as string) !== 'ファンミ・コンサート') return
+        c.type = /TOUR|ツアー|ライブ|LIVE/i.test(c.name) ? 'ライブ・ツアー' : 'ファンミ・ファンコン'
+      }),
+  )
 
 export function newId(): string {
   return crypto.randomUUID()
