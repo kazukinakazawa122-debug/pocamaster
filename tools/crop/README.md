@@ -19,6 +19,6 @@
 | check.py / check2.py | 切り出し結果の確認用シート |
 
 ## 既知の問題
-- グッズ・ステッカーの切り出しがずれているものがある（要修正）
+- グッズ・ステッカーの切り出しがずれているものがある（未修正）。今は `merge.py` の `GOODS = False` で cards.csv と ZIP から外している
 
 必要なもの：Python 3、Pillow、numpy、scipy
