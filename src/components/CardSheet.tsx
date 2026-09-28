@@ -32,7 +32,7 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
       const id = newId()
       await db.transaction('rw', db.images, db.cards, async () => {
         await db.images.add({ id, ...img })
-        await db.cards.update(card.id, { imageId: id })
+        await db.cards.update(card.id, { imageId: id, imageCredit: undefined })
         if (card.imageId) await db.images.delete(card.imageId)
       })
     } catch (e) {
@@ -72,6 +72,7 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
         <div className="small muted">
           {collectionName}　{card.source} {card.version}
         </div>
+        {card.imageId && card.imageCredit && <div className="xs muted">画像：{card.imageCredit}</div>}
       </div>
 
       <div className="stack">

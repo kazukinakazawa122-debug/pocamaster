@@ -32,6 +32,8 @@ export interface Card {
   source: string
   version: string
   imageId?: string
+  /** 画像の出典（一覧表の作者など） */
+  imageCredit?: string
   status: CardStatus
   statusChangedAt: number
   order: number

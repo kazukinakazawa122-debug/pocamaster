@@ -1,9 +1,10 @@
 import { useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { IconDatabaseImport, IconDownload, IconFileImport, IconRestore } from '@tabler/icons-react'
+import { IconDatabaseImport, IconDownload, IconFileImport, IconPhotoUp, IconRestore } from '@tabler/icons-react'
 import { db, getSetting } from '../lib/db'
 import { exportBackup, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv } from '../lib/csv'
+import { importImages } from '../lib/imageImport'
 import { TopBar } from '../components/ui'
 
 const SEED_BASE = `${import.meta.env.BASE_URL}seed/`
@@ -21,6 +22,7 @@ export default function Settings() {
   const [busy, setBusy] = useState(false)
   const restoreRef = useRef<HTMLInputElement>(null)
   const csvRef = useRef<HTMLInputElement>(null)
+  const imagesRef = useRef<HTMLInputElement>(null)
 
   const run = async (fn: () => Promise<string>) => {
     setBusy(true)
@@ -126,7 +128,27 @@ export default function Settings() {
             e.target.value = ''
           }}
         />
-        <div className="xs muted">すでにあるカードの状態は上書きしません。</div>
+        <button className="btn block" disabled={busy} onClick={() => imagesRef.current?.click()}>
+          <IconPhotoUp size={20} aria-hidden />
+          画像をまとめて取り込む（ZIP）
+        </button>
+        <input
+          ref={imagesRef}
+          type="file"
+          accept=".zip,application/zip"
+          hidden
+          onChange={(e) => {
+            const f = e.target.files?.[0]
+            e.target.value = ''
+            if (!f) return
+            run(async () => {
+              const r = await importImages(f, (done, total) => setMessage(`画像を取り込み中… ${done} / ${total}`))
+              const miss = r.unmatched.length
+              return `画像 ${r.matched} 枚を取り込みました` + (miss ? `（対応するカードがなかった ${miss} 枚：${r.unmatched.slice(0, 5).join('、')}${miss > 5 ? ' など' : ''}）` : '')
+            })
+          }}
+        />
+        <div className="xs muted">すでにあるカードの状態は上書きしません。画像は同じカードの画像を置き換えます。</div>
       </div>
 
       {message && (
