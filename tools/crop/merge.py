@@ -22,6 +22,7 @@ KEEP = {
 }
 KEEP3 = {("IVE SWITCH", "Soundwave ラキドロ", "6.0"), ("IVE SWITCH", "TOKYO DOME 限定", "9/4"), ("IVE SWITCH", "TOKYO DOME 限定", "9/5")}
 KEEP_VERSION = {("LOVE DIVE", "グッズ｜POB", "Sticker")}  # 表から作り直すので古い方は消す
+GOODS = False  # トレカ以外のグッズ（入手元が「グッズ｜」で始まる）を入れるか。今は入れない（本人決定、2026-09-28）
 
 
 def q(s):
@@ -44,11 +45,15 @@ for r in body:
         continue
     if (r[0], r[2], r[3]) in KEEP_VERSION:
         continue
+    if not GOODS and r[2].startswith("グッズ｜"):
+        continue
     kept.append(tuple(r))
 have = {key(r) for r in kept}
 added = 0
 front = []  # 作り直したコレクションは、表から作った枠を先に並べる
 for r in new_seed:
+    if not GOODS and r[2].startswith("グッズ｜"):
+        continue
     if key(r) not in have:
         (front if r[0] in REPLACE else kept).append(r)
         have.add(key(r))
@@ -70,7 +75,7 @@ for j in jobs:
 uniq = {}
 for e in entries:
     uniq[(e["collection"], tuple(sorted(e["members"])), e["source"], e["version"])] = e
-entries = list(uniq.values())
+entries = [e for e in uniq.values() if GOODS or not e["source"].startswith("グッズ｜")]
 zp = "C:/Users/kazuk/OneDrive/pocamaster-images/pocamaster-images.zip"
 with zipfile.ZipFile(zp, "w", zipfile.ZIP_STORED) as z:
     for e in entries:
