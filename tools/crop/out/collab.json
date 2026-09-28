@@ -1,0 +1,264 @@
+{
+"seed": [
+[
+"Collab & Event｜コラボ・イベント",
+"ガウル",
+"UNI-KON",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"ユジン",
+"UNI-KON",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"レイ",
+"UNI-KON",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"ウォニョン",
+"UNI-KON",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"リズ",
+"UNI-KON",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"イソ",
+"UNI-KON",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"ガウル",
+"V Coloring イベント特典",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"ユジン",
+"V Coloring イベント特典",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"レイ",
+"V Coloring イベント特典",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"ウォニョン",
+"V Coloring イベント特典",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"リズ",
+"V Coloring イベント特典",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"イソ",
+"V Coloring イベント特典",
+""
+],
+[
+"Collab & Event｜コラボ・イベント",
+"イソ/ユジン",
+"V Coloring イベント特典",
+"ユニット"
+],
+[
+"Collab & Event｜コラボ・イベント",
+"ウォニョン/ガウル",
+"V Coloring イベント特典",
+"ユニット"
+],
+[
+"Collab & Event｜コラボ・イベント",
+"リズ/レイ",
+"V Coloring イベント特典",
+"ユニット"
+]
+],
+"images": [
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ガウル"
+],
+"source": "UNI-KON",
+"version": "",
+"file": "collab/0000.jpg",
+"thumb": "collab/0000_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ユジン"
+],
+"source": "UNI-KON",
+"version": "",
+"file": "collab/0001.jpg",
+"thumb": "collab/0001_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"レイ"
+],
+"source": "UNI-KON",
+"version": "",
+"file": "collab/0002.jpg",
+"thumb": "collab/0002_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ウォニョン"
+],
+"source": "UNI-KON",
+"version": "",
+"file": "collab/0003.jpg",
+"thumb": "collab/0003_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"リズ"
+],
+"source": "UNI-KON",
+"version": "",
+"file": "collab/0004.jpg",
+"thumb": "collab/0004_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"イソ"
+],
+"source": "UNI-KON",
+"version": "",
+"file": "collab/0005.jpg",
+"thumb": "collab/0005_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ガウル"
+],
+"source": "V Coloring イベント特典",
+"version": "",
+"file": "collab/0006.jpg",
+"thumb": "collab/0006_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ユジン"
+],
+"source": "V Coloring イベント特典",
+"version": "",
+"file": "collab/0007.jpg",
+"thumb": "collab/0007_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"レイ"
+],
+"source": "V Coloring イベント特典",
+"version": "",
+"file": "collab/0008.jpg",
+"thumb": "collab/0008_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ウォニョン"
+],
+"source": "V Coloring イベント特典",
+"version": "",
+"file": "collab/0009.jpg",
+"thumb": "collab/0009_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"リズ"
+],
+"source": "V Coloring イベント特典",
+"version": "",
+"file": "collab/0010.jpg",
+"thumb": "collab/0010_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"イソ"
+],
+"source": "V Coloring イベント特典",
+"version": "",
+"file": "collab/0011.jpg",
+"thumb": "collab/0011_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"イソ",
+"ユジン"
+],
+"source": "V Coloring イベント特典",
+"version": "ユニット",
+"file": "collab/0012.jpg",
+"thumb": "collab/0012_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ウォニョン",
+"ガウル"
+],
+"source": "V Coloring イベント特典",
+"version": "ユニット",
+"file": "collab/0013.jpg",
+"thumb": "collab/0013_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"リズ",
+"レイ"
+],
+"source": "V Coloring イベント特典",
+"version": "ユニット",
+"file": "collab/0014.jpg",
+"thumb": "collab/0014_t.jpg",
+"credit": "@reina831wy"
+}
+]
+}

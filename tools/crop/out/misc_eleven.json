@@ -1,0 +1,244 @@
+{
+"seed": [
+[
+"ELEVEN -Japanese ver.-",
+"ガウル",
+"お見送り会 CD購入特典",
+""
+],
+[
+"ELEVEN -Japanese ver.-",
+"ユジン",
+"お見送り会 CD購入特典",
+""
+],
+[
+"ELEVEN -Japanese ver.-",
+"レイ",
+"お見送り会 CD購入特典",
+""
+],
+[
+"ELEVEN -Japanese ver.-",
+"ウォニョン",
+"お見送り会 CD購入特典",
+""
+],
+[
+"ELEVEN -Japanese ver.-",
+"リズ",
+"お見送り会 CD購入特典",
+""
+],
+[
+"ELEVEN -Japanese ver.-",
+"イソ",
+"お見送り会 CD購入特典",
+""
+],
+[
+"ELEVEN",
+"ガウル",
+"グッズ｜Official MD",
+"スクエアポストカード"
+],
+[
+"ELEVEN",
+"ユジン",
+"グッズ｜Official MD",
+"スクエアポストカード"
+],
+[
+"ELEVEN",
+"レイ",
+"グッズ｜Official MD",
+"スクエアポストカード"
+],
+[
+"ELEVEN",
+"全員",
+"グッズ｜Official MD",
+"スクエアポストカード 1"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"グッズ｜Official MD",
+"スクエアポストカード"
+],
+[
+"ELEVEN",
+"リズ",
+"グッズ｜Official MD",
+"スクエアポストカード"
+],
+[
+"ELEVEN",
+"イソ",
+"グッズ｜Official MD",
+"スクエアポストカード"
+],
+[
+"ELEVEN",
+"全員",
+"グッズ｜Official MD",
+"スクエアポストカード 2"
+]
+],
+"images": [
+{
+"collection": "ELEVEN -Japanese ver.-",
+"members": [
+"ガウル"
+],
+"source": "お見送り会 CD購入特典",
+"version": "",
+"file": "misc_eleven/0000.jpg",
+"thumb": "misc_eleven/0000_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN -Japanese ver.-",
+"members": [
+"ユジン"
+],
+"source": "お見送り会 CD購入特典",
+"version": "",
+"file": "misc_eleven/0001.jpg",
+"thumb": "misc_eleven/0001_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN -Japanese ver.-",
+"members": [
+"レイ"
+],
+"source": "お見送り会 CD購入特典",
+"version": "",
+"file": "misc_eleven/0002.jpg",
+"thumb": "misc_eleven/0002_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN -Japanese ver.-",
+"members": [
+"ウォニョン"
+],
+"source": "お見送り会 CD購入特典",
+"version": "",
+"file": "misc_eleven/0003.jpg",
+"thumb": "misc_eleven/0003_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN -Japanese ver.-",
+"members": [
+"リズ"
+],
+"source": "お見送り会 CD購入特典",
+"version": "",
+"file": "misc_eleven/0004.jpg",
+"thumb": "misc_eleven/0004_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN -Japanese ver.-",
+"members": [
+"イソ"
+],
+"source": "お見送り会 CD購入特典",
+"version": "",
+"file": "misc_eleven/0005.jpg",
+"thumb": "misc_eleven/0005_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "グッズ｜Official MD",
+"version": "スクエアポストカード",
+"file": "misc_eleven/0006.jpg",
+"thumb": "misc_eleven/0006_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "グッズ｜Official MD",
+"version": "スクエアポストカード",
+"file": "misc_eleven/0007.jpg",
+"thumb": "misc_eleven/0007_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "グッズ｜Official MD",
+"version": "スクエアポストカード",
+"file": "misc_eleven/0008.jpg",
+"thumb": "misc_eleven/0008_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"全員"
+],
+"source": "グッズ｜Official MD",
+"version": "スクエアポストカード 1",
+"file": "misc_eleven/0009.jpg",
+"thumb": "misc_eleven/0009_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "グッズ｜Official MD",
+"version": "スクエアポストカード",
+"file": "misc_eleven/0010.jpg",
+"thumb": "misc_eleven/0010_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "グッズ｜Official MD",
+"version": "スクエアポストカード",
+"file": "misc_eleven/0011.jpg",
+"thumb": "misc_eleven/0011_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "グッズ｜Official MD",
+"version": "スクエアポストカード",
+"file": "misc_eleven/0012.jpg",
+"thumb": "misc_eleven/0012_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"全員"
+],
+"source": "グッズ｜Official MD",
+"version": "スクエアポストカード 2",
+"file": "misc_eleven/0013.jpg",
+"thumb": "misc_eleven/0013_t.jpg",
+"credit": "@reina831wy"
+}
+]
+}

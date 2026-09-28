@@ -1,0 +1,178 @@
+{
+"seed": [
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"ウォニョン",
+"Round 1",
+"A"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"ウォニョン",
+"Round 1",
+"B"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"イソ",
+"Round 1",
+"A"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"イソ",
+"Round 1",
+"B"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"ウォニョン",
+"Round 2",
+"A"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"ウォニョン",
+"Round 2",
+"B"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"イソ",
+"Round 2",
+"A"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"イソ",
+"Round 2",
+"B"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"ウォニョン/イソ",
+"Round 1",
+"GROUP"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"ウォニョン/イソ",
+"Round 2",
+"GROUP"
+]
+],
+"images": [
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"ウォニョン"
+],
+"source": "Round 1",
+"version": "A",
+"file": "pepsi/0000.jpg",
+"thumb": "pepsi/0000_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"ウォニョン"
+],
+"source": "Round 1",
+"version": "B",
+"file": "pepsi/0001.jpg",
+"thumb": "pepsi/0001_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"イソ"
+],
+"source": "Round 1",
+"version": "A",
+"file": "pepsi/0002.jpg",
+"thumb": "pepsi/0002_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"イソ"
+],
+"source": "Round 1",
+"version": "B",
+"file": "pepsi/0003.jpg",
+"thumb": "pepsi/0003_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"ウォニョン"
+],
+"source": "Round 2",
+"version": "A",
+"file": "pepsi/0004.jpg",
+"thumb": "pepsi/0004_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"ウォニョン"
+],
+"source": "Round 2",
+"version": "B",
+"file": "pepsi/0005.jpg",
+"thumb": "pepsi/0005_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"イソ"
+],
+"source": "Round 2",
+"version": "A",
+"file": "pepsi/0006.jpg",
+"thumb": "pepsi/0006_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"イソ"
+],
+"source": "Round 2",
+"version": "B",
+"file": "pepsi/0007.jpg",
+"thumb": "pepsi/0007_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"ウォニョン",
+"イソ"
+],
+"source": "Round 1",
+"version": "GROUP",
+"file": "pepsi/0008.jpg",
+"thumb": "pepsi/0008_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"ウォニョン",
+"イソ"
+],
+"source": "Round 2",
+"version": "GROUP",
+"file": "pepsi/0009.jpg",
+"thumb": "pepsi/0009_t.jpg",
+"credit": "@reina831wy"
+}
+]
+}

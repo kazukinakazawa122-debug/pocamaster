@@ -1,0 +1,414 @@
+{
+"seed": [
+[
+"Magazine｜雑誌特典",
+"ガウル",
+"S Cawaii! 主婦の友 特典B トレカ",
+""
+],
+[
+"Magazine｜雑誌特典",
+"ユジン",
+"S Cawaii! 主婦の友 特典B トレカ",
+""
+],
+[
+"Magazine｜雑誌特典",
+"レイ",
+"S Cawaii! 主婦の友 特典B トレカ",
+""
+],
+[
+"Magazine｜雑誌特典",
+"ウォニョン",
+"S Cawaii! 主婦の友 特典B トレカ",
+""
+],
+[
+"Magazine｜雑誌特典",
+"リズ",
+"S Cawaii! 主婦の友 特典B トレカ",
+""
+],
+[
+"Magazine｜雑誌特典",
+"イソ",
+"S Cawaii! 主婦の友 特典B トレカ",
+""
+],
+[
+"Magazine｜雑誌特典",
+"ガウル",
+"グッズ｜S Cawaii!",
+"主婦の友 特典A ポストカード"
+],
+[
+"Magazine｜雑誌特典",
+"ユジン",
+"グッズ｜S Cawaii!",
+"主婦の友 特典A ポストカード"
+],
+[
+"Magazine｜雑誌特典",
+"レイ",
+"グッズ｜S Cawaii!",
+"主婦の友 特典A ポストカード"
+],
+[
+"Magazine｜雑誌特典",
+"ウォニョン",
+"グッズ｜S Cawaii!",
+"主婦の友 特典A ポストカード"
+],
+[
+"Magazine｜雑誌特典",
+"リズ",
+"グッズ｜S Cawaii!",
+"主婦の友 特典A ポストカード"
+],
+[
+"Magazine｜雑誌特典",
+"イソ",
+"グッズ｜S Cawaii!",
+"主婦の友 特典A ポストカード"
+],
+[
+"Magazine｜雑誌特典",
+"ガウル",
+"グッズ｜S Cawaii!",
+"タワレコ 特典C ブロマイド"
+],
+[
+"Magazine｜雑誌特典",
+"ユジン",
+"グッズ｜S Cawaii!",
+"タワレコ 特典C ブロマイド"
+],
+[
+"Magazine｜雑誌特典",
+"レイ",
+"グッズ｜S Cawaii!",
+"タワレコ 特典C ブロマイド"
+],
+[
+"Magazine｜雑誌特典",
+"ウォニョン",
+"グッズ｜S Cawaii!",
+"タワレコ 特典C ブロマイド"
+],
+[
+"Magazine｜雑誌特典",
+"リズ",
+"グッズ｜S Cawaii!",
+"タワレコ 特典C ブロマイド"
+],
+[
+"Magazine｜雑誌特典",
+"イソ",
+"グッズ｜S Cawaii!",
+"タワレコ 特典C ブロマイド"
+],
+[
+"Magazine｜雑誌特典",
+"ガウル",
+"ViVi セブンネット特典",
+""
+],
+[
+"Magazine｜雑誌特典",
+"ユジン",
+"ViVi セブンネット特典",
+""
+],
+[
+"Magazine｜雑誌特典",
+"レイ",
+"ViVi セブンネット特典",
+""
+],
+[
+"Magazine｜雑誌特典",
+"ウォニョン",
+"ViVi セブンネット特典",
+""
+],
+[
+"Magazine｜雑誌特典",
+"リズ",
+"ViVi セブンネット特典",
+""
+],
+[
+"Magazine｜雑誌特典",
+"イソ",
+"ViVi セブンネット特典",
+""
+]
+],
+"images": [
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ガウル"
+],
+"source": "S Cawaii! 主婦の友 特典B トレカ",
+"version": "",
+"file": "magazine/0000.jpg",
+"thumb": "magazine/0000_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ユジン"
+],
+"source": "S Cawaii! 主婦の友 特典B トレカ",
+"version": "",
+"file": "magazine/0001.jpg",
+"thumb": "magazine/0001_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "S Cawaii! 主婦の友 特典B トレカ",
+"version": "",
+"file": "magazine/0002.jpg",
+"thumb": "magazine/0002_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "S Cawaii! 主婦の友 特典B トレカ",
+"version": "",
+"file": "magazine/0003.jpg",
+"thumb": "magazine/0003_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"リズ"
+],
+"source": "S Cawaii! 主婦の友 特典B トレカ",
+"version": "",
+"file": "magazine/0004.jpg",
+"thumb": "magazine/0004_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"イソ"
+],
+"source": "S Cawaii! 主婦の友 特典B トレカ",
+"version": "",
+"file": "magazine/0005.jpg",
+"thumb": "magazine/0005_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ガウル"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "主婦の友 特典A ポストカード",
+"file": "magazine/0006.jpg",
+"thumb": "magazine/0006_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ユジン"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "主婦の友 特典A ポストカード",
+"file": "magazine/0007.jpg",
+"thumb": "magazine/0007_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "主婦の友 特典A ポストカード",
+"file": "magazine/0008.jpg",
+"thumb": "magazine/0008_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "主婦の友 特典A ポストカード",
+"file": "magazine/0009.jpg",
+"thumb": "magazine/0009_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"リズ"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "主婦の友 特典A ポストカード",
+"file": "magazine/0010.jpg",
+"thumb": "magazine/0010_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"イソ"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "主婦の友 特典A ポストカード",
+"file": "magazine/0011.jpg",
+"thumb": "magazine/0011_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ガウル"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "タワレコ 特典C ブロマイド",
+"file": "magazine/0012.jpg",
+"thumb": "magazine/0012_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ユジン"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "タワレコ 特典C ブロマイド",
+"file": "magazine/0013.jpg",
+"thumb": "magazine/0013_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "タワレコ 特典C ブロマイド",
+"file": "magazine/0014.jpg",
+"thumb": "magazine/0014_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "タワレコ 特典C ブロマイド",
+"file": "magazine/0015.jpg",
+"thumb": "magazine/0015_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"リズ"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "タワレコ 特典C ブロマイド",
+"file": "magazine/0016.jpg",
+"thumb": "magazine/0016_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"イソ"
+],
+"source": "グッズ｜S Cawaii!",
+"version": "タワレコ 特典C ブロマイド",
+"file": "magazine/0017.jpg",
+"thumb": "magazine/0017_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ガウル"
+],
+"source": "ViVi セブンネット特典",
+"version": "",
+"file": "magazine/0018.jpg",
+"thumb": "magazine/0018_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ユジン"
+],
+"source": "ViVi セブンネット特典",
+"version": "",
+"file": "magazine/0019.jpg",
+"thumb": "magazine/0019_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "ViVi セブンネット特典",
+"version": "",
+"file": "magazine/0020.jpg",
+"thumb": "magazine/0020_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "ViVi セブンネット特典",
+"version": "",
+"file": "magazine/0021.jpg",
+"thumb": "magazine/0021_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"リズ"
+],
+"source": "ViVi セブンネット特典",
+"version": "",
+"file": "magazine/0022.jpg",
+"thumb": "magazine/0022_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"イソ"
+],
+"source": "ViVi セブンネット特典",
+"version": "",
+"file": "magazine/0023.jpg",
+"thumb": "magazine/0023_t.jpg",
+"credit": "@reina831wy"
+}
+]
+}
