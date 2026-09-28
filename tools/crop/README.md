@@ -17,6 +17,7 @@
 | albums_*.py | コレクションごとの設定（どの表のどの位置がどのカードか） |
 | merge.py | すべてをまとめて cards.csv と ZIP を作る |
 | check.py / check2.py | 切り出し結果の確認用シート |
+| inventory.py | 手元の資料の一覧と大きさを `out/sources.csv` に書き出す（画質のよい資料を探す用） |
 
 ## 既知の問題
 - グッズ・ステッカーの切り出しがずれているものがある（未修正）。今は `merge.py` の `GOODS = False` で cards.csv と ZIP から外している
