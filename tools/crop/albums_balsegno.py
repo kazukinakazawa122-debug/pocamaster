@@ -3,6 +3,7 @@
 - 資料：pocamaster-images/_nonalbum/balsegno_liz/merch_1.jpg・merch_2.jpg（4000×7110）
 - リズ 1 人分の表なので、種類（枠）は 6 人分作り、画像はリズの分だけ入れる（グッズ・特典はメンバー 1 人 1 種類）
 - ユニットのカード（リズとだれか）は、相手を顔で決めることになるので入れない
+- Prom Queens DVD の Ktown4U 特典は、アプリの「特典（店舗不明）」と同じとみなした（ほかの種類が同じなので）
 - アプリにすでにある種類は入れない：
   IVE SCOUT の EMPATHY Soundwave ラキドロ（→ IVE EMPATHY「Soundwave ラキドロ 8.0 IVE SCOUT」）、
   愛知・横浜の会場特典（→ Be Alright「IVE SCOUT」）、DIVE ZONE Day 1（→「Day 1 IVE SCOUT ver.」）、
@@ -107,10 +108,72 @@ SETS = [
     (FOURTH, "SuperStar STARSHIP", "2", 2, 135, False),
 ]
 
+# 第 2 弾（2026-09-30）：アプリの画像（リズ）と写真で突き合わせ、見つからなかった種類。番号は上の段から数えた通し番号（表 1 は 900 から）
+_, b1f = boxes(D + "merch_1.jpg", 900)
+assert len(b1f) == 179, len(b1f)
+COL = "Collab & Event｜コラボ・イベント"
+MAGZ = "Magazine｜雑誌特典"
+FC = "DIVE Official Fanclub｜ファンクラブ"
+SWIH = "1st WORLD TOUR 'SHOW WHAT I HAVE'"
+PROM = "1st FAN CONCERT 'The Prom Queens'"
+PEPSI = "Pepsi × IVE 'BLUE & BLACK'"
+PARK = "MINIVE POP-UP 'MINIVE PARK'"
+SCHOOL = "MINIVE POP-UP 'MINIVE SCHOOL'"
+BOOK = "1st PHOTOBOOK 'A Dreamy Day'"
+DICON = "DICON 'I have a dream, I have a fantasy'"
+ENC = "Encore（アンコール）"
+ENCB = "Encore Blu-ray・Kit"
+STAR = "SuperStar POP-UP 'STAR+ING: Christmas Bear'"
+SETS2 = [
+    # 表 1（通し番号）
+    (COL, PARK, "Poca Binder", 3, 31, False), (COL, PARK, "Face Cushion", 3, 32, False), (COL, PARK, "Mega Cushion", 3, 33, False),
+    (COL, PARK, "Pouch", 3, 34, False), (COL, PARK, "50K Benefit 1st week", 3, 35, False), (COL, PARK, "50K Benefit 2nd week", 3, 36, False),
+    (COL, "SuperStar STARSHIP", "KCON LA", 3, 37, False), (COL, "SuperStar STARSHIP", "LONDON", 3, 38, False),
+    (PROM, "DVD・Blu-ray・Kit", "DVD", 3, 54, False), (PROM, "DVD・Blu-ray・Kit", "Blu-ray", 3, 55, False),
+    (PROM, "DVD・Blu-ray・Kit", "Kit", 3, 56, False), (PROM, "DVD・Blu-ray・Kit", "Kit POLA", 3, 57, True),
+    (PROM, "DVD・Blu-ray・Kit", "Apple Music 特典", 3, 58, False), (PROM, "DVD・Blu-ray・Kit", "特典（店舗不明）", 3, 59, False),
+    (COL, BOOK, "Pool Party ver.", 3, 64, False), (COL, BOOK, "Summer Beach Story ver.", 3, 65, False), (COL, BOOK, "Polaroid", 3, 66, True),
+    (COL, BOOK, "Starship Square", 3, 67, False), (COL, BOOK, "withmuu", 3, 68, False),
+    (COL, "MINIVE Christmas", "", 3, 69, False),
+    (FC, "DIVE 3期 'IVE SCOUT'", "", 3, 75, False), (FC, "DIVE 3期 'IVE SCOUT'", "DIVE JAPAN", 3, 76, False),
+    (FC, "DIVE JAPAN Phone Tab", "", 3, 77, False), (FC, "DIVE JAPAN Phone Tab", "FC 特典", 3, 78, False),
+    (SWIH, "Thailand Random Photocard", "1", 3, 109, False), (SWIH, "Thailand Random Photocard", "2", 3, 110, False),
+    (SWIH, "MD", "Trading Card Stand（東京ドーム）1", 3, 116, False), (SWIH, "MD", "Trading Card Stand（東京ドーム）2", 3, 117, False),
+    (SWIH, "DIVE JAPAN", "Label Drink", 3, 118, False),
+    ("IVE SWITCH", "LINE FRIENDS トレカ", "3", 3, 135, False), ("IVE SWITCH", "LINE FRIENDS トレカ", "4", 3, 137, False),
+    ("IVE SWITCH", "LINE FRIENDS キーリング", "", 3, 138, False), ("IVE SWITCH", "LINE FRIENDS 特典", "3", 3, 141, False),
+    (MAGZ, DICON, "Lucky Card Set 1", 3, 142, False), (MAGZ, DICON, "Lucky Card Set 2", 3, 143, False),
+    (MAGZ, DICON, "Type A 1", 3, 144, False), (MAGZ, DICON, "Type A 2", 3, 145, False), (MAGZ, DICON, "Type A 3", 3, 146, False),
+    (MAGZ, DICON, "Double Sided", 3, 148, False),
+    (MAGZ, DICON, "Type B 1", 3, 149, False), (MAGZ, DICON, "Type B 2", 3, 150, False), (MAGZ, DICON, "Type B 3", 3, 151, False),
+    (MAGZ, DICON, "Kakao 特典 1", 3, 153, False), (MAGZ, DICON, "Kakao 特典 2", 3, 154, False),
+    (SWIH, ENC, "Random Photocard 1", 3, 155, False), (SWIH, ENC, "Random Photocard 2", 3, 156, False),
+    (SWIH, ENC, "Wing Hair Pin Set", 3, 157, False), (SWIH, ENC, "Compact Mirror", 3, 158, False),
+    (SWIH, ENC, "Photocard Holder Keyring", 3, 159, False), (SWIH, ENC, "DIVE ZONE Day 1", 3, 160, False),
+    (SWIH, ENC, "DIVE ZONE Day 2", 3, 161, False), (SWIH, ENC, "SuperStar STARSHIP 1", 3, 162, False),
+    (SWIH, ENC, "SuperStar STARSHIP 2", 3, 163, False),
+    # 表 2
+    (PEPSI, "IVE × PEPSI 2025", "1", 2, 4, False), (PEPSI, "IVE × PEPSI 2025", "2", 2, 5, False),
+    (SWIH, ENCB, "Blu-ray", 2, 36, False), (SWIH, ENCB, "Kit", 2, 37, False), (SWIH, ENCB, "Apple Music 特典", 2, 38, True),
+    (SWIH, ENCB, "Ktown4U 特典", 2, 39, False), (SWIH, ENCB, "Starship Square 特典", 2, 40, False),
+    (FC, "DIVE 4期 'DIVE into IVE'", "", 2, 41, False), (FC, "DIVE 4期 'DIVE into IVE'", "DIVE JAPAN", 2, 42, False),
+    (COL, "Papa John's", "7.0", 2, 45, False),
+    (COL, SCHOOL, "Fluffy Plush", 2, 46, False), (COL, SCHOOL, "Hug Bag", 2, 47, False), (COL, SCHOOL, "70K Benefit", 2, 48, False),
+    (COL, SCHOOL, "Shanghai MD 特典", 2, 49, False), (COL, SCHOOL, "Taipei & Kaohsiung MD 特典", 2, 50, False),
+    (COL, "公式ペンライト", "ver.2", 2, 81, False),
+    (COL, STAR, "Best", 2, 109, False), (COL, STAR, "Christmas", 2, 110, False), (COL, STAR, "Winter", 2, 111, False),
+    (COL, STAR, "STAR+ING Tokyo", 2, 112, False),
+]
+
 if __name__ == "__main__":
     j = Job("balsegno_liz")
     for coll, src, ver, sheet, idx, wide in SETS:
         im, bs = (im1, b1) if sheet == 1 else (im2, b2)
+        box = outer(im, bs[idx]) if wide else bs[idx]
+        for m in MEMBERS:
+            j.add(coll, [m], src, ver, im.crop(box) if m == "リズ" else None, CREDIT)
+    for coll, src, ver, sheet, idx, wide in SETS2:
+        im, bs = (im1, b1f) if sheet == 3 else (im2, b2)
         box = outer(im, bs[idx]) if wide else bs[idx]
         for m in MEMBERS:
             j.add(coll, [m], src, ver, im.crop(box) if m == "リズ" else None, CREDIT)
