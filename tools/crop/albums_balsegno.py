@@ -165,6 +165,28 @@ SETS2 = [
     (COL, STAR, "STAR+ING Tokyo", 2, 112, False),
 ]
 
+# 第 3 弾（2026-09-30）：リズ 1 人の広告・特典（本人：実際にあるので、リズ個人のコレクションに入れる）。枠・画像ともリズだけ
+LIZ = "Liz Solo｜リズ個人"
+PC = "powercircles 'Colorful Summer'（2025.6）"
+WV = "WAVES 漫潮 'Princess Thief'（2025.10）"
+_dx = b2[56][0] - b2[53][0]
+PC_C_POLA = (b2[56][0] + _dx, b2[56][1], b2[56][2] + _dx, b2[56][3])  # 見つからなかったポラロイド（set b のポラロイドから同じ間隔で右）
+SETS3 = [
+    (PC, "Set A 1", 51, False), (PC, "Set A 2", 52, False), (PC, "Set A POLA", 53, True),
+    (PC, "Set B 1", 54, False), (PC, "Set B 2", 55, False), (PC, "Set B POLA", 56, True),
+    (PC, "Set C 1", 57, False), (PC, "Set C 2", 58, False), (PC, "Set C POLA", PC_C_POLA, True),
+    (PC, "Set D POLA 1", 59, True), (PC, "Set D POLA 2", 60, True), (PC, "Set D POLA 3", 61, True),
+    (WV, "Set A 1", 62, False), (WV, "Set A 2", 63, False), (WV, "Set A POLA", 64, True),
+    (WV, "Set B 1", 65, False), (WV, "Set B 2", 66, False), (WV, "Set B POLA", 67, True),
+    (WV, "Set C 1", 68, False), (WV, "Set C 2", 69, False), (WV, "Set C POLA", 70, True),
+    (WV, "Set D POLA 1", 71, True), (WV, "Set D POLA 2", 72, True), (WV, "Set D POLA 3", 73, True),
+    ("8seconds", "1", 74, False), ("8seconds", "2", 75, False), ("8seconds", "3", 76, False),
+    ("s.nature", "1", 77, False), ("s.nature", "2", 78, False), ("s.nature", "3", 79, False), ("s.nature", "4", 80, False),
+    ("TONYMOLY", "1", 136, False), ("TONYMOLY", "2", 137, False), ("TONYMOLY", "3", 138, False),
+]
+# @an_chan_luv の SHOW WHAT I AM ソウル公演ランダムトレカの表にある全員のカード 4 枚（ID 入りの表なので枠だけ）
+SWIA_IVE = [(SWIA, "Random Photocard Pack Korea", f"IVE {i}") for i in range(1, 5)]
+
 if __name__ == "__main__":
     j = Job("balsegno_liz")
     for coll, src, ver, sheet, idx, wide in SETS:
@@ -177,4 +199,9 @@ if __name__ == "__main__":
         box = outer(im, bs[idx]) if wide else bs[idx]
         for m in MEMBERS:
             j.add(coll, [m], src, ver, im.crop(box) if m == "リズ" else None, CREDIT)
+    for src, ver, idx, wide in SETS3:
+        b = idx if isinstance(idx, tuple) else b2[idx]
+        j.add(LIZ, ["リズ"], src, ver, im2.crop(outer(im2, b) if wide else b), CREDIT)
+    for coll, src, ver in SWIA_IVE:
+        j.add(coll, ["全員"], src, ver)
     j.save()
