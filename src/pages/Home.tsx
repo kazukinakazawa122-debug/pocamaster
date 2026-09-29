@@ -1,31 +1,49 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { Link } from 'react-router-dom'
 import { IconAlertTriangle, IconCrown, IconPhoto } from '@tabler/icons-react'
-import { db, getSetting, type Card, type Collection } from '../lib/db'
+import { db, getSetting, type Card, type Collection, type Profile } from '../lib/db'
 import { MEMBERS, memberLabel } from '../lib/members'
 import { isComplete, memberProgress, pctText, progress, type Progress } from '../lib/stats'
-import { ProgressBar, useImageUrl } from '../components/ui'
+import { ProfileAvatar, ProgressBar, useImageUrl } from '../components/ui'
 import { cardColors } from '../components/CardTile'
 
 const BACKUP_REMIND_DAYS = 14
 
 export default function Home() {
   const data = useLiveQuery(async () => {
-    const [collections, cards, lastBackupAt, history] = await Promise.all([
+    const [collections, cards, lastBackupAt, profile, history] = await Promise.all([
       db.collections.toArray(),
       db.cards.toArray(),
       getSetting<number>('lastBackupAt'),
+      getSetting<Profile>('profile'),
       // 最近「所持中」にした記録（同じカードを何度も切り替えることがあるので多めに取る）
       db.statusHistory.orderBy('changedAt').reverse().filter((h) => h.to === '所持中').limit(200).toArray(),
     ])
-    return { collections, cards, lastBackupAt, history }
+    return { collections, cards, lastBackupAt, profile, history }
   })
   if (!data) return <div className="page empty">読み込み中…</div>
-  const { collections, cards, lastBackupAt, history = [] } = data
+  const { collections, cards, lastBackupAt, profile, history = [] } = data
+
+  // 上のバー：左にプロフィールのアイコン（押すと設定のプロフィールへ）、真ん中にアプリの名前
+  const header = (
+    <>
+      <header className="topbar home">
+        <div className="side">
+          <Link to="/settings" aria-label="プロフィール">
+            <ProfileAvatar profile={profile} size={36} />
+          </Link>
+        </div>
+        <h1>pocamaster</h1>
+        <div className="side" />
+      </header>
+      <div className="topbar-space" />
+    </>
+  )
 
   if (collections.length === 0) {
     return (
       <div className="page">
+        {header}
         <div className="empty">
           <p>最初のコレクションを追加しましょう</p>
           <p className="small">設定から初期データを取り込むか、コレクションを追加してください。</p>
@@ -87,6 +105,7 @@ export default function Home() {
 
   return (
     <div className="page">
+      {header}
       {needBackup && (
         <Link to="/settings" className="banner">
           <IconAlertTriangle size={18} aria-hidden />

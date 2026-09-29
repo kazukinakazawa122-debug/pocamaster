@@ -62,6 +62,19 @@ export interface Achievement {
   unlockedAt: number
 }
 
+/** 自分のプロフィール（settings の 'profile' に保存） */
+export interface Profile {
+  name: string
+  /** 推しメン */
+  biasIds: MemberId[]
+  /** ひとこと */
+  bio: string
+  /** アイコンの画像（images の id） */
+  imageId?: string
+}
+
+export const EMPTY_PROFILE: Profile = { name: '', biasIds: [], bio: '' }
+
 export interface Setting {
   key: string
   value: unknown

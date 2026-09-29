@@ -21,6 +21,48 @@ function byMember(a: Card, b: Card): number {
   return memberOrder(a.memberIds[0]) - memberOrder(b.memberIds[0])
 }
 
+type Row = { key: string; source: string; version: string; all: Card[]; shown: Card[] }
+
+/**
+ * 番号がメンバーごとに違うカード（AMUSE ウエハース2 の N-01〜N-06 など）は 1 段に 1 枚になってしまうので、
+ * 同じ入手元で続いている「1 人 1 枚の段」を、メンバーが重ならない範囲で 6 枚まで 1 段にまとめる
+ */
+function mergeNumbered(rows: Row[]): Row[] {
+  const out: Row[] = []
+  let group: Row[] = []
+  const flush = () => {
+    if (group.length === 0) return
+    const first = group[0]
+    const last = group[group.length - 1]
+    out.push(
+      group.length === 1
+        ? first
+        : {
+            key: first.key,
+            source: first.source,
+            version: `${first.version}〜${last.version}`,
+            all: group.flatMap((r) => r.all),
+            shown: group.flatMap((r) => r.shown),
+          },
+    )
+    group = []
+  }
+  for (const r of rows) {
+    const single = r.all.length === 1 && r.all[0].memberIds.length === 1
+    const fits =
+      single &&
+      group.length > 0 &&
+      group.length < MEMBERS.length &&
+      group[0].source === r.source &&
+      !group.some((g) => g.all[0].memberIds[0] === r.all[0].memberIds[0])
+    if (!fits) flush()
+    if (single) group.push(r)
+    else out.push(r)
+  }
+  flush()
+  return out
+}
+
 export default function CollectionDetail() {
   const { id = '' } = useParams()
   const [params, setParams] = useSearchParams()
@@ -75,7 +117,7 @@ export default function CollectionDetail() {
   const openCard = cards.find((c) => c.id === openCardId)
 
   // 「全員」タブ：入手元＋バージョンごとの段にする（最初に出てきた順）
-  const rows: { key: string; source: string; version: string; all: Card[]; shown: Card[] }[] = []
+  const rows: Row[] = []
   if (!member) {
     const index = new Map<string, number>()
     for (const c of cards) {
@@ -90,6 +132,7 @@ export default function CollectionDetail() {
     }
     rows.forEach((r) => r.shown.sort(byMember))
   }
+  const grouped = member ? rows : mergeNumbered(rows)
 
   const tile = (c: Card, compact: boolean) => (
     <CardTile key={c.id} card={c} collectionName={col.name} compact={compact} onTap={() => toggle(c)} onLongPress={() => setOpenCardId(c.id)} />
@@ -218,7 +261,7 @@ export default function CollectionDetail() {
           ))}
         </div>
       ) : (
-        rows
+        grouped
           .filter((r) => r.shown.length > 0)
           .map((r) => (
             <section key={r.key}>

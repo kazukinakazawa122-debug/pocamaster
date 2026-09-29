@@ -1,7 +1,8 @@
 import { useEffect, useState, type ReactNode, type RefObject } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { IconChevronLeft } from '@tabler/icons-react'
-import { db } from '../lib/db'
+import { IconChevronLeft, IconUser } from '@tabler/icons-react'
+import { db, type Profile } from '../lib/db'
+import { MEMBER_BY_ID } from '../lib/members'
 
 export function ProgressBar({ pct, color = 'var(--all)' }: { pct: number | null; color?: string }) {
   return (
@@ -61,6 +62,17 @@ export function useNearScreen(ref: RefObject<Element | null>, margin = 800): boo
     return () => io.disconnect()
   }, [ref, margin])
   return near
+}
+
+/** プロフィールのアイコン（丸）。推しメンがいれば、その色の枠にする */
+export function ProfileAvatar({ profile, size }: { profile?: Profile; size: number }) {
+  const url = useImageUrl(profile?.imageId, 'thumb')
+  const bias = profile?.biasIds[0] ? MEMBER_BY_ID[profile.biasIds[0]] : null
+  return (
+    <span className="avatar" style={{ width: size, height: size, borderColor: bias?.color ?? 'var(--line)' }}>
+      {url ? <img src={url} alt="" /> : <IconUser size={size * 0.55} aria-hidden />}
+    </span>
+  )
 }
 
 /** 保存した画像を表示用の URL にする */

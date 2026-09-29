@@ -1,5 +1,5 @@
 import JSZip from 'jszip'
-import { db, putSetting } from './db'
+import { db, putSetting, type Profile } from './db'
 
 const FORMAT = 1
 
@@ -22,6 +22,9 @@ export async function exportBackup(): Promise<{ file: File; skipped: number }> {
     ...cards.filter((c) => c.imageId && !c.imageCredit).map((c) => c.imageId!),
     ...collections.filter((c) => c.coverImageId).map((c) => c.coverImageId!),
   ]
+  // プロフィールのアイコン
+  const profile = settings.find((s) => s.key === 'profile')?.value as Profile | undefined
+  if (profile?.imageId) ownIds.push(profile.imageId)
   const dir = zip.folder('images')!
   // 読めない画像（iPhone で「The I/O read operation failed」になるもの）は飛ばし、記録だけでも保存できるようにする
   let skipped = 0

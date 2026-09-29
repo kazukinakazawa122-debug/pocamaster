@@ -1,11 +1,13 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { IconDatabaseImport, IconDownload, IconFileImport, IconPhotoUp, IconRestore } from '@tabler/icons-react'
-import { db, getSetting } from '../lib/db'
+import { IconCamera, IconDatabaseImport, IconDownload, IconFileImport, IconPhotoUp, IconRestore } from '@tabler/icons-react'
+import { db, EMPTY_PROFILE, getSetting, newId, putSetting, type Profile } from '../lib/db'
+import { makeImage } from '../lib/image'
+import MemberPicker from '../components/MemberPicker'
 import { exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv } from '../lib/csv'
 import { importImages } from '../lib/imageImport'
-import { TopBar } from '../components/ui'
+import { ProfileAvatar, TopBar } from '../components/ui'
 
 const SEED_BASE = `${import.meta.env.BASE_URL}seed/`
 
@@ -65,6 +67,9 @@ export default function Settings() {
   return (
     <div className="page">
       <TopBar title="設定" />
+
+      <div className="section-title">プロフィール</div>
+      <ProfileEditor />
 
       <div className="section-title">バックアップ</div>
       <div className="panel stack">
@@ -184,6 +189,81 @@ export default function Settings() {
           {message}
         </p>
       )}
+    </div>
+  )
+}
+
+/** 設定のいちばん上のプロフィール。変えたらすぐ保存する */
+function ProfileEditor() {
+  const [draft, setDraft] = useState<Profile | null>(null)
+  const latest = useRef<Profile | null>(null)
+  const photoRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    getSetting<Profile>('profile').then((p) => {
+      latest.current = { ...EMPTY_PROFILE, ...p }
+      setDraft(latest.current)
+    })
+  }, [])
+  if (!draft) return <div className="panel small muted">読み込み中…</div>
+
+  // 写真の変換中に文字を打っても消えないよう、いちばん新しい内容に変更点だけを重ねる
+  const save = (patch: Partial<Profile>) => {
+    latest.current = { ...latest.current!, ...patch }
+    setDraft(latest.current)
+    putSetting('profile', latest.current)
+  }
+
+  const setPhoto = async (file: File) => {
+    const img = await makeImage(file)
+    const id = newId()
+    await db.images.add({ id, ...img })
+    const old = latest.current?.imageId
+    save({ imageId: id })
+    if (old) await db.images.delete(old)
+  }
+
+  return (
+    <div className="panel">
+      <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
+        <button type="button" className="icon-btn" aria-label="アイコンの写真を選ぶ" onClick={() => photoRef.current?.click()} style={{ position: 'relative' }}>
+          <ProfileAvatar profile={draft} size={72} />
+          <span
+            style={{ position: 'absolute', right: -2, bottom: -2, width: 26, height: 26, borderRadius: '50%', background: 'var(--all)', color: 'var(--on-all)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <IconCamera size={15} aria-hidden />
+          </span>
+        </button>
+        <input
+          ref={photoRef}
+          type="file"
+          accept="image/*"
+          hidden
+          onChange={(e) => {
+            const f = e.target.files?.[0]
+            e.target.value = ''
+            if (f) setPhoto(f)
+          }}
+        />
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontSize: 19, fontWeight: 800, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            {draft.name || <span className="muted">名前なし</span>}
+          </div>
+          {draft.bio && <div className="small muted" style={{ whiteSpace: 'pre-wrap' }}>{draft.bio}</div>}
+        </div>
+      </div>
+      <label className="field">
+        <span>名前（ニックネーム）</span>
+        <input type="text" value={draft.name} maxLength={30} placeholder="ニックネームを入力" onChange={(e) => save({ name: e.target.value })} />
+      </label>
+      <div className="field">
+        <span>推しメン（アイコンの枠がこの色になります）</span>
+        <MemberPicker value={draft.biasIds} onChange={(biasIds) => save({ biasIds })} />
+      </div>
+      <label className="field" style={{ marginBottom: 0 }}>
+        <span>ひとこと</span>
+        <textarea value={draft.bio} maxLength={100} placeholder="例：ユジン推しの 2022 年からの DIVE です" onChange={(e) => save({ bio: e.target.value })} />
+      </label>
     </div>
   )
 }
