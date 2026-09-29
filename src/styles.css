@@ -44,6 +44,10 @@ body {
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior-y: none;
 }
+/* 長押しで Safari の「開く」「共有」などのメニューや、文字の選択が出ないようにする（アプリらしくするため） */
+body { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+img, a { -webkit-user-drag: none; }
+input, textarea, select { -webkit-touch-callout: default; -webkit-user-select: text; user-select: text; }
 button, input, select { font: inherit; color: inherit; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
