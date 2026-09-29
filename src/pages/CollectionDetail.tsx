@@ -110,7 +110,7 @@ export default function CollectionDetail() {
       </TopBar>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
-        <span className="num" style={{ fontSize: 22, fontWeight: 500 }}>
+        <span className="num" style={{ fontSize: 24, fontWeight: 700 }}>
           {pctText(total)}
         </span>
         <div style={{ flex: 1 }}>

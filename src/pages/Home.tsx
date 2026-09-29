@@ -98,7 +98,7 @@ export default function Home() {
 
       <div className="small muted">全体コンプ率</div>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-        <span className="num" style={{ fontSize: 44, fontWeight: 500, lineHeight: 1.1 }}>
+        <span className="num" style={{ fontSize: 46, fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
           {pctText(total)}
         </span>
         <span className="small muted num">
