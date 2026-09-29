@@ -42,7 +42,9 @@ export default function App() {
         <nav className="tabbar">
           {TABS.map(({ to, label, Icon, end }) => (
             <NavLink key={to} to={to} end={end}>
-              <Icon size={24} stroke={1.6} aria-hidden />
+              <span className="tab-ic">
+                <Icon size={24} stroke={1.6} aria-hidden />
+              </span>
               {label}
             </NavLink>
           ))}
