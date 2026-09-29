@@ -13,7 +13,39 @@ ROOT = "C:/Users/kazuk/OneDrive/pocamaster-images/"
 DIR = sys.argv[1] if len(sys.argv) > 1 else ROOT + "_jackets/"
 OUT = sys.argv[2] if len(sys.argv) > 2 else ROOT + "pocamaster-jackets.zip"
 SEED = os.path.dirname(os.path.abspath(__file__)) + "/../../public/seed/collections.csv"
-EXT = (".jpg", ".jpeg", ".png", ".webp")
+EXT = (".jpg", ".jpeg", ".png", ".webp", ".avif")
+
+# ファイル名がコレクション名と違うもの（2026-09-29 に本人が入れた分。画像を見て確認済み）
+MAP = {
+    "IVE - Eleven Album Cover": "ELEVEN",
+    "IVE _ REVIVE+": "REVIVE+",
+    "IVE 〈ELEVEN -Japanese ver_〉 ALBUM COVER": "ELEVEN -Japanese ver.-",
+    "IVE 〈I'VE MINE〉 ALBUM COVER": "I've MINE",
+    "IVE 〈I've IVE〉 ALBUM COVER": "I've IVE",
+    "IVE 〈IVE EMPATHY〉 ALBUM COVER": "IVE EMPATHY",
+    "IVE 〈WAVE〉 ALBUM COVER": "WAVE",
+    "IVE_season_greeting_2024_cover": "2024 SEASON'S GREETINGS [A Fairy's Wish]",
+    "Ive - Ive Switch Album": "IVE SWITCH",
+    "ive-2026-seasons-greetings-atelier-ive": "2026 SEASON'S GREETINGS [ATELIER IVE]",
+    "ive_afterlike_cover": "After LIKE",
+    "ive_alive_cover": "ALIVE",
+    "ive_bealright_cover": "Be Alright",
+    "ive_dive_fanclub": "DIVE Official Fanclub｜ファンクラブ",
+    "ive_dive_into_ive_cover": "4th FAN CONCERT 'DIVE into IVE'",
+    "ive_lovedive_cover": "LOVE DIVE",
+    "ive_lucid_dream_cover": "LUCID DREAM",
+    "ive_magazine_ive_cover": "2nd FANMEETING 'MAGAZINE IVE'",
+    "ive_pepsi_cover": "Pepsi × IVE 'BLUE & BLACK'",
+    "ive_scount_jacket": "3rd FAN CONCERT 'IVE SCOUT'",
+    "ive_season_greeting_2022_cover": "2022 SEASON'S GREETINGS [A RAY OF SUNSHINE]",
+    "ive_season_greeting_2023_cover": "2023 SEASON'S GREETINGS [Ready, Get Set, IVE!]",
+    "ive_season_greeting_2025_cover": "2025 SEASON'S GREETINGS [Colorful Days with IVE]",
+    "ive_secret_cover": "IVE SECRET",
+    "ive_show_ehat_i_have_cover": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+    "ive_show_what_i_am_cover": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+    "ive_the_prom_queens_cover": "1st FAN CONCERT 'The Prom Queens'",
+    "ive_wonyoung_album_cover": "Wonyoung Solo｜ウォニョン個人",
+}
 
 
 def norm(s: str) -> str:
@@ -35,14 +67,16 @@ with zipfile.ZipFile(OUT, "w", zipfile.ZIP_STORED) as z:
         stem, ext = os.path.splitext(fn)
         if ext.lower() not in EXT:
             continue
-        name = by_norm.get(norm(stem))
+        name = MAP.get(stem) or by_norm.get(norm(stem))
         if not name:
             unknown.append(fn)
             continue
         im = ImageOps.exif_transpose(Image.open(DIR + fn)).convert("RGB")
-        # 一覧の四角に合わせて、真ん中を正方形に切る
+        # 一覧の四角に合わせて正方形に切る。縦長のポスターはタイトルが上にあることが多いので、少し上寄りに切る
         s = min(im.size)
-        im = im.crop(((im.width - s) // 2, (im.height - s) // 2, (im.width + s) // 2, (im.height + s) // 2))
+        x0 = (im.width - s) // 2
+        y0 = (im.height - s) // 4
+        im = im.crop((x0, y0, x0 + s, y0 + s))
         k = len(entries)
         for path, size, q in [(f"jackets/{k:03d}.jpg", 800, 88), (f"jackets/{k:03d}_t.jpg", 300, 85)]:
             b = io.BytesIO()
