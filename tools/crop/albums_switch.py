@@ -31,4 +31,12 @@ for mem, p in files.items():
         print("SKIP", mem, len(seq)); continue
     for b, (s, v) in zip(seq, lab):
         j.add(C, [mem], s, v, im.crop(tuple(int(x) for x in b)), "@yunahsrem")
+# ラキドロのポラ（@LILY_221019 の一覧 ver.9 で見つけた。アプリにポラが 1 枚もなかった。番号は LILY さんの表のまま。枠だけ、2026-09-29）
+POLA = [("Soundwave ラキドロ", "2.0 POLA"), ("withmuu ラキドロ", "2.0 POLA"), ("Music Korea ラキドロ", "2.0 POLA"),
+        ("Soundwave ラキドロ", "4.0 POLA"), ("withmuu ラキドロ", "5.0 POLA"), ("Makestar ラキドロ", "4.0 POLA"),
+        ("withmuu ラキドロ", "6.0 POLA"), ("Soundwave ラキドロ", "6.0 POLA"), ("Soundwave ラキドロ", "9.0 POLA"),
+        ("Soundwave ラキドロ", "11.0 POLA")]
+for mem in files:
+    for s, v in POLA:
+        j.add(C, [mem], s, v)
 j.save()

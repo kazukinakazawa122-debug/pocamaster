@@ -2854,6 +2854,18 @@ Pepsi × IVE 'BLUE & BLACK',イソ,IVE × PEPSI 2024,7.0 B
 1st FAN CONCERT 'The Prom Queens',ウォニョン,DVD・Blu-ray・Kit,特典（店舗不明）
 1st FAN CONCERT 'The Prom Queens',リズ,DVD・Blu-ray・Kit,特典（店舗不明）
 1st FAN CONCERT 'The Prom Queens',イソ,DVD・Blu-ray・Kit,特典（店舗不明）
+ALIVE,ウォニョン/ユジン,オフラインイベント,10/13 TOKYO ユニット
+ALIVE,ユジン/イソ,オフラインイベント,10/13 TOKYO ユニット
+ALIVE,ガウル/イソ,オフラインイベント,10/13 TOKYO ユニット
+ALIVE,ガウル/リズ,オフラインイベント,10/13 TOKYO ユニット
+ALIVE,レイ/リズ,オフラインイベント,10/13 TOKYO ユニット
+ALIVE,レイ/ウォニョン,オフラインイベント,10/13 TOKYO ユニット
+ALIVE,ウォニョン/ユジン,オフラインイベント,10/14 OSAKA ユニット
+ALIVE,ユジン/イソ,オフラインイベント,10/14 OSAKA ユニット
+ALIVE,ガウル/イソ,オフラインイベント,10/14 OSAKA ユニット
+ALIVE,ガウル/リズ,オフラインイベント,10/14 OSAKA ユニット
+ALIVE,レイ/リズ,オフラインイベント,10/14 OSAKA ユニット
+ALIVE,レイ/ウォニョン,オフラインイベント,10/14 OSAKA ユニット
 ELEVEN,ガウル,本体封入,ver.1
 ELEVEN,ユジン,本体封入,ver.1
 ELEVEN,レイ,本体封入,ver.1
@@ -4622,6 +4634,66 @@ IVE SWITCH,イソ,LINE FRIENDS 特典,2
 IVE SWITCH,イソ,OSAKA イベント,
 IVE SWITCH,イソ,Broadcast,1週目
 IVE SWITCH,イソ,Broadcast,2週目
+IVE SWITCH,ガウル,Soundwave ラキドロ,2.0 POLA
+IVE SWITCH,ガウル,withmuu ラキドロ,2.0 POLA
+IVE SWITCH,ガウル,Music Korea ラキドロ,2.0 POLA
+IVE SWITCH,ガウル,Soundwave ラキドロ,4.0 POLA
+IVE SWITCH,ガウル,withmuu ラキドロ,5.0 POLA
+IVE SWITCH,ガウル,Makestar ラキドロ,4.0 POLA
+IVE SWITCH,ガウル,withmuu ラキドロ,6.0 POLA
+IVE SWITCH,ガウル,Soundwave ラキドロ,6.0 POLA
+IVE SWITCH,ガウル,Soundwave ラキドロ,9.0 POLA
+IVE SWITCH,ガウル,Soundwave ラキドロ,11.0 POLA
+IVE SWITCH,ユジン,Soundwave ラキドロ,2.0 POLA
+IVE SWITCH,ユジン,withmuu ラキドロ,2.0 POLA
+IVE SWITCH,ユジン,Music Korea ラキドロ,2.0 POLA
+IVE SWITCH,ユジン,Soundwave ラキドロ,4.0 POLA
+IVE SWITCH,ユジン,withmuu ラキドロ,5.0 POLA
+IVE SWITCH,ユジン,Makestar ラキドロ,4.0 POLA
+IVE SWITCH,ユジン,withmuu ラキドロ,6.0 POLA
+IVE SWITCH,ユジン,Soundwave ラキドロ,6.0 POLA
+IVE SWITCH,ユジン,Soundwave ラキドロ,9.0 POLA
+IVE SWITCH,ユジン,Soundwave ラキドロ,11.0 POLA
+IVE SWITCH,レイ,Soundwave ラキドロ,2.0 POLA
+IVE SWITCH,レイ,withmuu ラキドロ,2.0 POLA
+IVE SWITCH,レイ,Music Korea ラキドロ,2.0 POLA
+IVE SWITCH,レイ,Soundwave ラキドロ,4.0 POLA
+IVE SWITCH,レイ,withmuu ラキドロ,5.0 POLA
+IVE SWITCH,レイ,Makestar ラキドロ,4.0 POLA
+IVE SWITCH,レイ,withmuu ラキドロ,6.0 POLA
+IVE SWITCH,レイ,Soundwave ラキドロ,6.0 POLA
+IVE SWITCH,レイ,Soundwave ラキドロ,9.0 POLA
+IVE SWITCH,レイ,Soundwave ラキドロ,11.0 POLA
+IVE SWITCH,ウォニョン,Soundwave ラキドロ,2.0 POLA
+IVE SWITCH,ウォニョン,withmuu ラキドロ,2.0 POLA
+IVE SWITCH,ウォニョン,Music Korea ラキドロ,2.0 POLA
+IVE SWITCH,ウォニョン,Soundwave ラキドロ,4.0 POLA
+IVE SWITCH,ウォニョン,withmuu ラキドロ,5.0 POLA
+IVE SWITCH,ウォニョン,Makestar ラキドロ,4.0 POLA
+IVE SWITCH,ウォニョン,withmuu ラキドロ,6.0 POLA
+IVE SWITCH,ウォニョン,Soundwave ラキドロ,6.0 POLA
+IVE SWITCH,ウォニョン,Soundwave ラキドロ,9.0 POLA
+IVE SWITCH,ウォニョン,Soundwave ラキドロ,11.0 POLA
+IVE SWITCH,リズ,Soundwave ラキドロ,2.0 POLA
+IVE SWITCH,リズ,withmuu ラキドロ,2.0 POLA
+IVE SWITCH,リズ,Music Korea ラキドロ,2.0 POLA
+IVE SWITCH,リズ,Soundwave ラキドロ,4.0 POLA
+IVE SWITCH,リズ,withmuu ラキドロ,5.0 POLA
+IVE SWITCH,リズ,Makestar ラキドロ,4.0 POLA
+IVE SWITCH,リズ,withmuu ラキドロ,6.0 POLA
+IVE SWITCH,リズ,Soundwave ラキドロ,6.0 POLA
+IVE SWITCH,リズ,Soundwave ラキドロ,9.0 POLA
+IVE SWITCH,リズ,Soundwave ラキドロ,11.0 POLA
+IVE SWITCH,イソ,Soundwave ラキドロ,2.0 POLA
+IVE SWITCH,イソ,withmuu ラキドロ,2.0 POLA
+IVE SWITCH,イソ,Music Korea ラキドロ,2.0 POLA
+IVE SWITCH,イソ,Soundwave ラキドロ,4.0 POLA
+IVE SWITCH,イソ,withmuu ラキドロ,5.0 POLA
+IVE SWITCH,イソ,Makestar ラキドロ,4.0 POLA
+IVE SWITCH,イソ,withmuu ラキドロ,6.0 POLA
+IVE SWITCH,イソ,Soundwave ラキドロ,6.0 POLA
+IVE SWITCH,イソ,Soundwave ラキドロ,9.0 POLA
+IVE SWITCH,イソ,Soundwave ラキドロ,11.0 POLA
 IVE EMPATHY,ユジン,Amulet Card (Tokyo 3/29),
 IVE EMPATHY,ガウル,Amulet Card (Tokyo 3/29),
 IVE EMPATHY,レイ,Amulet Card (Tokyo 3/29),
