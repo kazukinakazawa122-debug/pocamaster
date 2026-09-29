@@ -62,6 +62,17 @@ export interface Achievement {
   unlockedAt: number
 }
 
+/** 1 ページのポケットの数（3×3） */
+export const ALBUM_PAGE_SIZE = 9
+
+/** マイアルバム：自分で好きなカードを並べるバインダー。slots はページ順に 9 個ずつ並べたカードの id（空きは null） */
+export interface MyAlbum {
+  id: string
+  name: string
+  slots: (string | null)[]
+  createdAt: number
+}
+
 /** 自分のプロフィール（settings の 'profile' に保存） */
 export interface Profile {
   name: string
@@ -87,6 +98,7 @@ export const db = new Dexie('pocamaster') as Dexie & {
   statusHistory: EntityTable<StatusHistory, 'id'>
   achievements: EntityTable<Achievement, 'key'>
   settings: EntityTable<Setting, 'key'>
+  myAlbums: EntityTable<MyAlbum, 'id'>
 }
 
 db.version(1).stores({
@@ -111,6 +123,15 @@ db.version(2)
       }),
   )
 
+// マイアルバムを追加（実績の画面の代わり、2026-09-30）
+db.version(3).stores({ myAlbums: 'id, createdAt' })
+
+export async function createMyAlbum(name: string): Promise<string> {
+  const id = newId()
+  await db.myAlbums.add({ id, name, slots: Array(ALBUM_PAGE_SIZE).fill(null), createdAt: Date.now() })
+  return id
+}
+
 export function newId(): string {
   return crypto.randomUUID()
 }
@@ -125,16 +146,22 @@ export async function setCardStatus(card: Card, to: CardStatus): Promise<void> {
 }
 
 export async function deleteCard(card: Card): Promise<void> {
-  await db.transaction('rw', db.cards, db.images, db.statusHistory, async () => {
+  await db.transaction('rw', [db.cards, db.images, db.statusHistory, db.myAlbums], async () => {
     if (card.imageId) await db.images.delete(card.imageId)
     await db.statusHistory.where('cardId').equals(card.id).delete()
     await db.cards.delete(card.id)
+    // マイアルバムに入れていたら、そのポケットを空ける
+    await db.myAlbums
+      .filter((a) => a.slots.includes(card.id))
+      .modify((a: MyAlbum) => {
+        a.slots = a.slots.map((s) => (s === card.id ? null : s))
+      })
   })
 }
 
 export async function deleteCollection(c: Collection): Promise<void> {
   const cards = await db.cards.where('collectionId').equals(c.id).toArray()
-  await db.transaction('rw', db.collections, db.cards, db.images, db.statusHistory, async () => {
+  await db.transaction('rw', [db.collections, db.cards, db.images, db.statusHistory, db.myAlbums], async () => {
     for (const card of cards) await deleteCard(card)
     if (c.coverImageId) await db.images.delete(c.coverImageId)
     await db.collections.delete(c.id)

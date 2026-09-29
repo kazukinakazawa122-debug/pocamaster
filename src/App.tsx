@@ -1,6 +1,6 @@
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import { IconCards, IconSettings } from '@tabler/icons-react'
-import { IveLogoIcon, TrophyIcon } from './components/TabIcons'
+import { AlbumIcon, IveLogoIcon } from './components/TabIcons'
 import { UndoProvider } from './components/Undo'
 import ErrorBoundary from './components/ErrorBoundary'
 import Home from './pages/Home'
@@ -9,13 +9,14 @@ import CollectionDetail from './pages/CollectionDetail'
 import CollectionEdit from './pages/CollectionEdit'
 import CardEdit from './pages/CardEdit'
 import BulkCreate from './pages/BulkCreate'
-import Achievements from './pages/Achievements'
+import MyAlbums from './pages/MyAlbums'
+import MyAlbumDetail from './pages/MyAlbumDetail'
 import Settings from './pages/Settings'
 
 const TABS = [
   { to: '/', label: 'ホーム', Icon: IveLogoIcon, end: true },
   { to: '/collections', label: 'コレクション', Icon: IconCards, end: false },
-  { to: '/achievements', label: '実績', Icon: TrophyIcon, end: false },
+  { to: '/albums', label: 'マイアルバム', Icon: AlbumIcon, end: false },
   { to: '/settings', label: '設定', Icon: IconSettings, end: false },
 ]
 
@@ -35,7 +36,8 @@ export default function App() {
             <Route path="/collections/:id/bulk" element={<BulkCreate />} />
             <Route path="/collections/:id/cards/new" element={<CardEdit />} />
             <Route path="/cards/:cardId/edit" element={<CardEdit />} />
-            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/albums" element={<MyAlbums />} />
+            <Route path="/albums/:id" element={<MyAlbumDetail />} />
             <Route path="/settings" element={<Settings />} />
           </Routes>
         </ErrorBoundary>

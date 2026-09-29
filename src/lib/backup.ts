@@ -10,14 +10,15 @@ const FORMAT = 1
  */
 export async function exportBackup(): Promise<{ file: File; skipped: number }> {
   const zip = new JSZip()
-  const [collections, cards, statusHistory, achievements, settings] = await Promise.all([
+  const [collections, cards, statusHistory, achievements, settings, myAlbums] = await Promise.all([
     db.collections.toArray(),
     db.cards.toArray(),
     db.statusHistory.toArray(),
     db.achievements.toArray(),
     db.settings.toArray(),
+    db.myAlbums.toArray(),
   ])
-  zip.file('data.json', JSON.stringify({ format: FORMAT, exportedAt: Date.now(), collections, cards, statusHistory, achievements, settings }))
+  zip.file('data.json', JSON.stringify({ format: FORMAT, exportedAt: Date.now(), collections, cards, statusHistory, achievements, settings, myAlbums }))
   const ownIds = [
     ...cards.filter((c) => c.imageId && !c.imageCredit).map((c) => c.imageId!),
     ...collections.filter((c) => c.coverImageId).map((c) => c.coverImageId!),
@@ -89,8 +90,12 @@ export async function restoreBackup(file: Blob): Promise<void> {
   for (const c of data.cards) if (c.imageId && !have.has(c.imageId)) delete c.imageId
   for (const c of data.collections) if (c.coverImageId && !have.has(c.coverImageId)) delete c.coverImageId
 
-  await db.transaction('rw', [db.collections, db.cards, db.images, db.statusHistory, db.achievements, db.settings], async () => {
-    await Promise.all([db.collections.clear(), db.cards.clear(), db.images.clear(), db.statusHistory.clear(), db.achievements.clear(), db.settings.clear()])
+  await db.transaction('rw', [db.collections, db.cards, db.images, db.statusHistory, db.achievements, db.settings, db.myAlbums], async () => {
+    await Promise.all([
+      db.collections.clear(), db.cards.clear(), db.images.clear(), db.statusHistory.clear(), db.achievements.clear(), db.settings.clear(), db.myAlbums.clear(),
+    ])
+    // マイアルバムを作る前のバックアップには myAlbums がない
+    await db.myAlbums.bulkAdd(data.myAlbums ?? [])
     await db.collections.bulkAdd(data.collections)
     await db.cards.bulkAdd(data.cards)
     await db.images.bulkAdd(images)
