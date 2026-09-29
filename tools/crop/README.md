@@ -17,6 +17,7 @@
 | memlist.py | メンバー別リストのカードを読む順に並べる |
 | albums_*.py | コレクションごとの設定（どの表のどの位置がどのカードか） |
 | albums_new0929.py | 2026-09-29 に追加した資料（`新しい資料 2026-09-29/`）のコラボ・ペプシ・シーグリ・ALIVE・Be Alright など |
+| albums_balsegno.py | @balsegno のリズのノンアルバム一覧（`_nonalbum/balsegno_liz/`）から、ファンミ・ファンコン・ツアーの種類を 6 人分足す（画像はリズだけ） |
 | jackets.py | コレクションの表紙（アルバムのジャケット）の ZIP を作る。`pocamaster-images/_jackets/` に「コレクション名.jpg」で入れて実行 → `pocamaster-jackets.zip` |
 | hires.py | 画質を上げる：いまの画像と同じ写真を店舗ごとの表から探し、大きい画像に差し替える（枠はそのまま） |
 | merge.py | すべてをまとめて cards.csv と ZIP を作る。`ID_CREDITS` の資料（画像に ID の透かしがあるもの）の画像は入れない |
