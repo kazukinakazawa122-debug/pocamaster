@@ -1,0 +1,953 @@
+{
+"seed": [
+[
+"WAVE",
+"ユジン",
+"本体封入",
+"初回AB盤 photocard I"
+],
+[
+"WAVE",
+"ユジン",
+"本体封入",
+"初回C盤 photocard II"
+],
+[
+"WAVE",
+"ユジン",
+"本体封入",
+"通常盤 photocard III"
+],
+[
+"WAVE",
+"ユジン",
+"本体封入",
+"DIVE盤 photocard IV"
+],
+[
+"WAVE",
+"ユジン",
+"Sony Music ラキドロ",
+""
+],
+[
+"WAVE",
+"ユジン",
+"全国CDショップ ラキドロ",
+""
+],
+[
+"WAVE",
+"ユジン",
+"タワレコ",
+"抽選会特典"
+],
+[
+"WAVE",
+"ユジン",
+"Soundwave",
+"ランダム"
+],
+[
+"WAVE",
+"ユジン",
+"タワレコ",
+"ランダム"
+],
+[
+"WAVE",
+"ユジン",
+"HMV",
+"ランダム"
+],
+[
+"WAVE",
+"ガウル",
+"本体封入",
+"初回AB盤 photocard I"
+],
+[
+"WAVE",
+"ガウル",
+"本体封入",
+"初回C盤 photocard II"
+],
+[
+"WAVE",
+"ガウル",
+"本体封入",
+"通常盤 photocard III"
+],
+[
+"WAVE",
+"ガウル",
+"本体封入",
+"DIVE盤 photocard IV"
+],
+[
+"WAVE",
+"ガウル",
+"Sony Music ラキドロ",
+""
+],
+[
+"WAVE",
+"ガウル",
+"全国CDショップ ラキドロ",
+""
+],
+[
+"WAVE",
+"ガウル",
+"タワレコ",
+"抽選会特典"
+],
+[
+"WAVE",
+"ガウル",
+"Soundwave",
+"ランダム"
+],
+[
+"WAVE",
+"ガウル",
+"タワレコ",
+"ランダム"
+],
+[
+"WAVE",
+"ガウル",
+"HMV",
+"ランダム"
+],
+[
+"WAVE",
+"レイ",
+"本体封入",
+"初回AB盤 photocard I"
+],
+[
+"WAVE",
+"レイ",
+"本体封入",
+"初回C盤 photocard II"
+],
+[
+"WAVE",
+"レイ",
+"本体封入",
+"DIVE盤 photocard IV"
+],
+[
+"WAVE",
+"レイ",
+"Sony Music ラキドロ",
+""
+],
+[
+"WAVE",
+"レイ",
+"全国CDショップ ラキドロ",
+""
+],
+[
+"WAVE",
+"レイ",
+"タワレコ",
+"抽選会特典"
+],
+[
+"WAVE",
+"レイ",
+"Soundwave",
+"ランダム"
+],
+[
+"WAVE",
+"レイ",
+"タワレコ",
+"ランダム"
+],
+[
+"WAVE",
+"レイ",
+"HMV",
+"ランダム"
+],
+[
+"WAVE",
+"ウォニョン",
+"本体封入",
+"初回AB盤 photocard I"
+],
+[
+"WAVE",
+"ウォニョン",
+"本体封入",
+"初回C盤 photocard II"
+],
+[
+"WAVE",
+"ウォニョン",
+"本体封入",
+"DIVE盤 photocard IV"
+],
+[
+"WAVE",
+"ウォニョン",
+"Sony Music ラキドロ",
+""
+],
+[
+"WAVE",
+"ウォニョン",
+"全国CDショップ ラキドロ",
+""
+],
+[
+"WAVE",
+"ウォニョン",
+"タワレコ",
+"抽選会特典"
+],
+[
+"WAVE",
+"ウォニョン",
+"Soundwave",
+"ランダム"
+],
+[
+"WAVE",
+"ウォニョン",
+"ハイタッチ会",
+"A"
+],
+[
+"WAVE",
+"ウォニョン",
+"タワレコ",
+"ランダム"
+],
+[
+"WAVE",
+"ウォニョン",
+"HMV",
+"ランダム"
+],
+[
+"WAVE",
+"リズ",
+"本体封入",
+"初回AB盤 photocard I"
+],
+[
+"WAVE",
+"リズ",
+"本体封入",
+"初回C盤 photocard II"
+],
+[
+"WAVE",
+"リズ",
+"本体封入",
+"DIVE盤 photocard IV"
+],
+[
+"WAVE",
+"リズ",
+"Sony Music ラキドロ",
+""
+],
+[
+"WAVE",
+"リズ",
+"全国CDショップ ラキドロ",
+""
+],
+[
+"WAVE",
+"リズ",
+"タワレコ",
+"抽選会特典"
+],
+[
+"WAVE",
+"リズ",
+"Soundwave",
+"ランダム"
+],
+[
+"WAVE",
+"リズ",
+"タワレコ",
+"ランダム"
+],
+[
+"WAVE",
+"リズ",
+"HMV",
+"ランダム"
+],
+[
+"WAVE",
+"イソ",
+"本体封入",
+"初回AB盤 photocard I"
+],
+[
+"WAVE",
+"イソ",
+"本体封入",
+"初回C盤 photocard II"
+],
+[
+"WAVE",
+"イソ",
+"本体封入",
+"通常盤 photocard III"
+],
+[
+"WAVE",
+"イソ",
+"本体封入",
+"DIVE盤 photocard IV"
+],
+[
+"WAVE",
+"イソ",
+"全国CDショップ ラキドロ",
+""
+],
+[
+"WAVE",
+"イソ",
+"タワレコ",
+"抽選会特典"
+],
+[
+"WAVE",
+"イソ",
+"Soundwave",
+"ランダム"
+],
+[
+"WAVE",
+"イソ",
+"タワレコ",
+"ランダム"
+],
+[
+"WAVE",
+"イソ",
+"HMV",
+"ランダム"
+]
+],
+"images": [
+{
+"collection": "WAVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "初回AB盤 photocard I",
+"file": "zz_ri_WAVE_youngningz_HD/0000.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0000_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "初回C盤 photocard II",
+"file": "zz_ri_WAVE_youngningz_HD/0001.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0001_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "DIVE盤 photocard IV",
+"file": "zz_ri_WAVE_youngningz_HD/0003.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0003_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ユジン"
+],
+"source": "Sony Music ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0004.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0004_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ユジン"
+],
+"source": "全国CDショップ ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0005.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0005_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ユジン"
+],
+"source": "タワレコ",
+"version": "抽選会特典",
+"file": "zz_ri_WAVE_youngningz_HD/0006.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0006_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ユジン"
+],
+"source": "Soundwave",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0007.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0007_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ユジン"
+],
+"source": "タワレコ",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0008.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0008_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ユジン"
+],
+"source": "HMV",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0009.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0009_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "初回AB盤 photocard I",
+"file": "zz_ri_WAVE_youngningz_HD/0010.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0010_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "初回C盤 photocard II",
+"file": "zz_ri_WAVE_youngningz_HD/0011.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0011_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "通常盤 photocard III",
+"file": "zz_ri_WAVE_youngningz_HD/0012.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0012_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "DIVE盤 photocard IV",
+"file": "zz_ri_WAVE_youngningz_HD/0013.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0013_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "Sony Music ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0014.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0014_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "全国CDショップ ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0015.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0015_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "タワレコ",
+"version": "抽選会特典",
+"file": "zz_ri_WAVE_youngningz_HD/0016.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0016_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "Soundwave",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0017.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0017_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "タワレコ",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0018.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0018_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ガウル"
+],
+"source": "HMV",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0019.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0019_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "初回AB盤 photocard I",
+"file": "zz_ri_WAVE_youngningz_HD/0020.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0020_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "初回C盤 photocard II",
+"file": "zz_ri_WAVE_youngningz_HD/0021.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0021_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "DIVE盤 photocard IV",
+"file": "zz_ri_WAVE_youngningz_HD/0022.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0022_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"レイ"
+],
+"source": "Sony Music ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0023.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0023_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"レイ"
+],
+"source": "全国CDショップ ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0024.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0024_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"レイ"
+],
+"source": "タワレコ",
+"version": "抽選会特典",
+"file": "zz_ri_WAVE_youngningz_HD/0025.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0025_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"レイ"
+],
+"source": "Soundwave",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0026.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0026_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"レイ"
+],
+"source": "タワレコ",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0027.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0027_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"レイ"
+],
+"source": "HMV",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0028.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0028_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "初回AB盤 photocard I",
+"file": "zz_ri_WAVE_youngningz_HD/0029.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0029_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "初回C盤 photocard II",
+"file": "zz_ri_WAVE_youngningz_HD/0030.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0030_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "DIVE盤 photocard IV",
+"file": "zz_ri_WAVE_youngningz_HD/0031.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0031_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ウォニョン"
+],
+"source": "Sony Music ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0032.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0032_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ウォニョン"
+],
+"source": "全国CDショップ ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0033.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0033_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ウォニョン"
+],
+"source": "タワレコ",
+"version": "抽選会特典",
+"file": "zz_ri_WAVE_youngningz_HD/0034.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0034_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ウォニョン"
+],
+"source": "Soundwave",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0035.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0035_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ウォニョン"
+],
+"source": "タワレコ",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0037.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0037_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"ウォニョン"
+],
+"source": "HMV",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0038.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0038_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "初回AB盤 photocard I",
+"file": "zz_ri_WAVE_youngningz_HD/0039.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0039_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "初回C盤 photocard II",
+"file": "zz_ri_WAVE_youngningz_HD/0040.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0040_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "DIVE盤 photocard IV",
+"file": "zz_ri_WAVE_youngningz_HD/0041.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0041_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"リズ"
+],
+"source": "Sony Music ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0042.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0042_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"リズ"
+],
+"source": "全国CDショップ ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0043.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0043_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"リズ"
+],
+"source": "タワレコ",
+"version": "抽選会特典",
+"file": "zz_ri_WAVE_youngningz_HD/0044.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0044_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"リズ"
+],
+"source": "Soundwave",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0045.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0045_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"リズ"
+],
+"source": "タワレコ",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0046.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0046_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"リズ"
+],
+"source": "HMV",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0047.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0047_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "初回AB盤 photocard I",
+"file": "zz_ri_WAVE_youngningz_HD/0048.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0048_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "初回C盤 photocard II",
+"file": "zz_ri_WAVE_youngningz_HD/0049.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0049_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "通常盤 photocard III",
+"file": "zz_ri_WAVE_youngningz_HD/0050.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0050_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "DIVE盤 photocard IV",
+"file": "zz_ri_WAVE_youngningz_HD/0051.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0051_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"イソ"
+],
+"source": "全国CDショップ ラキドロ",
+"version": "",
+"file": "zz_ri_WAVE_youngningz_HD/0052.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0052_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"イソ"
+],
+"source": "タワレコ",
+"version": "抽選会特典",
+"file": "zz_ri_WAVE_youngningz_HD/0053.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0053_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"イソ"
+],
+"source": "Soundwave",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0054.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0054_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"イソ"
+],
+"source": "タワレコ",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0055.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0055_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "WAVE",
+"members": [
+"イソ"
+],
+"source": "HMV",
+"version": "ランダム",
+"file": "zz_ri_WAVE_youngningz_HD/0056.jpg",
+"thumb": "zz_ri_WAVE_youngningz_HD/0056_t.jpg",
+"credit": "@youngningz"
+}
+]
+}

@@ -1,0 +1,788 @@
+{
+"seed": [
+[
+"ELEVEN",
+"ユジン",
+"本体封入",
+"ver.1"
+],
+[
+"ELEVEN",
+"ユジン",
+"本体封入",
+"ver.2"
+],
+[
+"ELEVEN",
+"ユジン",
+"Starship Square",
+"1"
+],
+[
+"ELEVEN",
+"ユジン",
+"Starship Square",
+"2"
+],
+[
+"ELEVEN",
+"ユジン",
+"Soundwave ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"ユジン",
+"Soundwave ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"ユジン",
+"Withdrama ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"ガウル",
+"本体封入",
+"ver.1"
+],
+[
+"ELEVEN",
+"ガウル",
+"本体封入",
+"ver.2"
+],
+[
+"ELEVEN",
+"ガウル",
+"Starship Square",
+"1"
+],
+[
+"ELEVEN",
+"ガウル",
+"Starship Square",
+"2"
+],
+[
+"ELEVEN",
+"ガウル",
+"Soundwave ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"ガウル",
+"Soundwave ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"ガウル",
+"Withdrama ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"ガウル",
+"Withdrama ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"レイ",
+"本体封入",
+"ver.1"
+],
+[
+"ELEVEN",
+"レイ",
+"本体封入",
+"ver.2"
+],
+[
+"ELEVEN",
+"レイ",
+"Starship Square",
+"1"
+],
+[
+"ELEVEN",
+"レイ",
+"Starship Square",
+"2"
+],
+[
+"ELEVEN",
+"レイ",
+"Soundwave ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"レイ",
+"Soundwave ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"レイ",
+"Withdrama ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"レイ",
+"Withdrama ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"レイ",
+"Withdrama ラキドロ",
+"2.0 POLA"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"本体封入",
+"ver.1"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"Starship Square",
+"1"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"Starship Square",
+"2"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"Soundwave ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"Soundwave ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"Soundwave ラキドロ",
+"2.0 POLA"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"Withdrama ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"Withdrama ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"リズ",
+"本体封入",
+"ver.1"
+],
+[
+"ELEVEN",
+"リズ",
+"本体封入",
+"ver.2"
+],
+[
+"ELEVEN",
+"リズ",
+"Starship Square",
+"1"
+],
+[
+"ELEVEN",
+"リズ",
+"Soundwave ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"リズ",
+"Soundwave ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"リズ",
+"Withdrama ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"イソ",
+"本体封入",
+"ver.1"
+],
+[
+"ELEVEN",
+"イソ",
+"本体封入",
+"ver.2"
+],
+[
+"ELEVEN",
+"イソ",
+"Starship Square",
+"1"
+],
+[
+"ELEVEN",
+"イソ",
+"Starship Square",
+"2"
+],
+[
+"ELEVEN",
+"イソ",
+"Soundwave ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"イソ",
+"Soundwave ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"イソ",
+"Withdrama ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"イソ",
+"Withdrama ラキドロ",
+"2.0-2"
+]
+],
+"images": [
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "ver.1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0000.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0000_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "ver.2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0001.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0001_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "Starship Square",
+"version": "1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0002.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0002_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "Starship Square",
+"version": "2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0003.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0003_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0004.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0004_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0005.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0005_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0006.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0006_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "ver.1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0007.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0007_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "ver.2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0008.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0008_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "Starship Square",
+"version": "1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0009.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0009_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "Starship Square",
+"version": "2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0010.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0010_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0011.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0011_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0012.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0012_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0013.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0013_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0014.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0014_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "ver.1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0015.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0015_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "ver.2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0016.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0016_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "Starship Square",
+"version": "1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0017.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0017_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "Starship Square",
+"version": "2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0018.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0018_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0019.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0019_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0020.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0020_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0021.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0021_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0022.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0022_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0 POLA",
+"file": "zz_ri_ELEVEN_youngningz_HD/0023.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0023_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "ver.1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0024.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0024_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "Starship Square",
+"version": "1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0025.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0025_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "Starship Square",
+"version": "2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0026.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0026_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0027.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0027_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0028.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0028_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0 POLA",
+"file": "zz_ri_ELEVEN_youngningz_HD/0029.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0029_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0030.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0030_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0031.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0031_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "ver.1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0032.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0032_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "ver.2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0033.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0033_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "Starship Square",
+"version": "1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0034.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0034_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0035.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0035_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0036.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0036_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0037.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0037_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "ver.1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0038.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0038_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "ver.2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0039.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0039_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Starship Square",
+"version": "1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0040.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0040_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Starship Square",
+"version": "2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0041.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0041_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0042.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0042_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0043.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0043_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-1",
+"file": "zz_ri_ELEVEN_youngningz_HD/0044.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0044_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-2",
+"file": "zz_ri_ELEVEN_youngningz_HD/0045.jpg",
+"thumb": "zz_ri_ELEVEN_youngningz_HD/0045_t.jpg",
+"credit": "@youngningz"
+}
+]
+}
