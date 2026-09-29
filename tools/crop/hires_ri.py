@@ -1,6 +1,6 @@
 """@ri__chan94 のメンバー別の表（高画質）から、いまの画像と同じ写真を探して大きい画像に差し替える
 
-使い方：python hires_ri.py "<コレクション名>" "<pocamaster-images のフォルダ名>"
+使い方：python hires_ri.py "<コレクション名>" "<pocamaster-images のフォルダ名>" ["<作者>"]
   フォルダの中の「<何か> YUJIN.png」などメンバー名入りのファイルを読む
 結果：out/zz_ri_<フォルダ名>.json（merge.py で最後の方に読むので、同じ枠の古い画像より優先）
 確認用：out/ri_report_<フォルダ名>.csv
@@ -15,6 +15,7 @@ from build2 import *
 
 Image.MAX_IMAGE_PIXELS = None
 COLL, FOLDER = sys.argv[1], sys.argv[2]
+CREDIT = sys.argv[3] if len(sys.argv) > 3 else "@ri__chan94"  # 表の作者
 MEMBERS = {"YUJIN": "ユジン", "GAEUL": "ガウル", "REI": "レイ", "WONYOUNG": "ウォニョン", "LIZ": "リズ", "LEESEO": "イソ"}
 TH, MARGIN, GAIN = 0.80, 0.06, 1.25
 
@@ -78,7 +79,7 @@ for path in sorted(glob.glob(ROOT + FOLDER + "/*.png")):
         rep.append([COLL, "/".join(o["members"]), o["source"], o["version"], o["file"], round(float(best), 3),
                     round(float(second), 3), o["_w"], min(c.size), round(sh), os.path.basename(path), "差し替え" if ok else ""])
         if ok:
-            j.add(COLL, o["members"], o["source"], o["version"], c, "@ri__chan94")
+            j.add(COLL, o["members"], o["source"], o["version"], c, CREDIT)
 j.save()
 with open(SP + f"out/ri_report_{re.sub(r'\W+', '_', FOLDER)}.csv", "w", encoding="utf-8-sig", newline="") as f:
     w = csv.writer(f)

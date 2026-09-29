@@ -34,4 +34,11 @@ for mem, i in [("イソ", 53), ("リズ", 54), ("ウォニョン", 55), ("レイ
         print("SKIP", mem, len(seq)); continue
     for k, (b, (s, v)) in enumerate(zip(seq, lab)):
         j.add(C, [mem], s, v, None if k in NOIMG else im.crop(tuple(int(x) for x in b)), "@LILY_221019")
+# @hallojisoo の一覧（Google ドライブ、2026-08-23 更新）で見つけた種類。枠だけ（2026-09-29）
+EXTRA = [("本体封入", "Vinyl"), ("Melon Live", ""), ("QQ Music", "Membership"),
+         ("QQ Music", "1"), ("QQ Music", "2"), ("QQ Music", "3"), ("QQ Music", "4"), ("QQ Music", "5"), ("QQ Music", "Shatter Card"),
+         ("QQ Music", "POP-UP"), ("HIT! MAGAZINE", ""), ("KMONSTAR", "2.0")]
+for mem in ["イソ", "リズ", "ウォニョン", "レイ", "ユジン", "ガウル"]:
+    for s, v in EXTRA:
+        j.add(C, [mem], s, v)
 j.save()
