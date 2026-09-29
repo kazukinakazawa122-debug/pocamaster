@@ -152,3 +152,5 @@ a { color: inherit; text-decoration: none; }
 
 .empty { text-align: center; padding: 48px 16px; color: var(--text-2); }
 .stack { display: flex; flex-direction: column; gap: 8px; }
+.h-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.h-scroll::-webkit-scrollbar { display: none; }
