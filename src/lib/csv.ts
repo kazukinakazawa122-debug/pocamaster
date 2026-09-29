@@ -1,4 +1,4 @@
-import { db, newId, COLLECTION_TYPES, type Card, type Collection, type CollectionType } from './db'
+import { db, deleteCard, newId, COLLECTION_TYPES, type Card, type Collection, type CollectionType } from './db'
 import { MEMBER_BY_NAME, MEMBERS, type MemberId } from './members'
 
 /** ダブルクォート対応の簡単な CSV パーサー */
@@ -117,4 +117,25 @@ export async function importCsv(collectionsCsv: string, cardsCsv: string): Promi
     result.addedCards = toAdd.length
   })
   return result
+}
+
+/**
+ * 初期データからなくした枠（まちがえて作った枠など）を消す。removed.csv（collection,member,source,version）。
+ * 所持中・お気に入りにしたカードは消さない。消した枚数を返す
+ */
+export async function removeObsolete(removedCsv: string): Promise<number> {
+  const rows = toObjects(removedCsv)
+  if (rows.length === 0) return 0
+  const byName = new Map((await db.collections.toArray()).map((c) => [c.name, c]))
+  const targets = new Set(
+    rows.flatMap((r) => {
+      const col = byName.get(r.collection)
+      return col ? [cardKey(col.id, parseMembers(r.member), r.source, r.version ?? '')] : []
+    }),
+  )
+  const cards = (await db.cards.toArray()).filter(
+    (c) => targets.has(cardKey(c.collectionId, c.memberIds, c.source, c.version)) && c.status === '未所持' && !c.favorite,
+  )
+  for (const c of cards) await deleteCard(c)
+  return cards.length
 }

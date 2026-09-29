@@ -5,7 +5,7 @@ import { db, EMPTY_PROFILE, getSetting, newId, putSetting, type Profile } from '
 import { makeImage } from '../lib/image'
 import MemberPicker from '../components/MemberPicker'
 import { exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
-import { importCsv } from '../lib/csv'
+import { importCsv, removeObsolete } from '../lib/csv'
 import { importImages } from '../lib/imageImport'
 import { ProfileAvatar, TopBar } from '../components/ui'
 
@@ -51,7 +51,13 @@ export default function Settings() {
         ),
       )
       const r = await importCsv(cols, cards)
-      return `コレクション ${r.addedCollections} 件、カード ${r.addedCards} 枚を追加しました（すでにある ${r.skippedCards} 枚はそのまま）`
+      // 初期データからなくした枠を消す（ファイルがなければ何もしない）
+      const removedCsv = await fetch(SEED_BASE + 'removed.csv').then((res) => (res.ok ? res.text() : ''))
+      const removed = await removeObsolete(removedCsv)
+      return (
+        `コレクション ${r.addedCollections} 件、カード ${r.addedCards} 枚を追加しました（すでにある ${r.skippedCards} 枚はそのまま）` +
+        (removed ? `。まちがっていた枠 ${removed} 枚を消しました` : '')
+      )
     })
 
   const importFiles = (files: FileList | null) =>

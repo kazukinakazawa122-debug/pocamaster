@@ -187,12 +187,15 @@ SETS3 = [
 # @an_chan_luv の SHOW WHAT I AM ソウル公演ランダムトレカの表にある全員のカード 4 枚（ID 入りの表なので枠だけ）
 SWIA_IVE = [(SWIA, "Random Photocard Pack Korea", f"IVE {i}") for i in range(1, 5)]
 
+LIZ_ONLY = {(MAG, "MD", "Cushion"), (SCOUT, "MD", "Cereal Bowl + Spoon Set")}
+
 if __name__ == "__main__":
     j = Job("balsegno_liz")
     for coll, src, ver, sheet, idx, wide in SETS:
         im, bs = (im1, b1) if sheet == 1 else (im2, b2)
         box = outer(im, bs[idx]) if wide else bs[idx]
-        for m in MEMBERS:
+        # メンバーごとに品物が違うグッズは、リズの分だけ（ほかのメンバーは albums_idalshiro.py）
+        for m in (["リズ"] if (coll, src, ver) in LIZ_ONLY else MEMBERS):
             j.add(coll, [m], src, ver, im.crop(box) if m == "リズ" else None, CREDIT)
     for coll, src, ver, sheet, idx, wide in SETS2:
         im, bs = (im1, b1f) if sheet == 3 else (im2, b2)
