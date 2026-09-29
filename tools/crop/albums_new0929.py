@@ -275,6 +275,10 @@ for a, s_, v0 in BA + [(36, "本体封入", "通常盤 ユニット")]:
         img = best[2] if best[0] > 0.85 and min(best[2].size) > min(small.size) else small
         log.append((s_, v, "/".join(mem), round(best[0], 3), img.size))
         j.add(C, mem, s_, v, img, LILY)
+# 日本のオフラインイベント（@LILY_221019 の一覧 ver.5、2025-10 で追加された分。IVE SECRET の同じ日付のカードとは別の写真）。枠だけ（2026-09-29）
+for v in ["9.23 TOKYO", "9.24 OSAKA", "10.12 TOKYO", "10.13 OSAKA"]:
+    for m in M:
+        j.add(C, [m], "オフラインイベント", v)
 j.save()
 for l in log:
     print(*l)
