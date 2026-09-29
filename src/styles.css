@@ -1,11 +1,12 @@
 /* 06_デザインシステム に対応するトークン */
 :root {
-  --bg: #ffffff;
-  --surface: #f4f4f5;
-  --text: #18181b;
-  --text-2: #71717a;
-  --line: #e4e4e7;
-  --all: #3f3f46;
+  /* 和紙のような生成り色（2026-09-29、本人の要望で白から変更） */
+  --bg: #f6f1e7;
+  --surface: #ece5d6;
+  --text: #1f1b16;
+  --text-2: #6b6356;
+  --line: #ddd4c2;
+  --all: #3d3830;
   --on-all: #ffffff;
   --warn-bg: #fef3c7;
   --warn-text: #92400e;
