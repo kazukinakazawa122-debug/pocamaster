@@ -1,6 +1,6 @@
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { Link, useNavigationType } from 'react-router-dom'
+import { Link, useNavigationType, useSearchParams } from 'react-router-dom'
 import { IconCrown, IconPhoto, IconPlus } from '@tabler/icons-react'
 import { COLLECTION_TYPES, db, type Collection } from '../lib/db'
 import { isComplete, pctText, type Progress } from '../lib/stats'
@@ -44,7 +44,14 @@ async function loadList(): Promise<ListData> {
 const EMPTY: Progress = { owned: 0, total: 0, pct: null }
 
 export default function Collections() {
-  const [filter, setFilter] = useState<(typeof FILTERS)[number]>('すべて')
+  // 絞り込み（韓国盤・日本盤など）は URL に入れておく。アルバムを開いて「戻る」で来ても、同じ絞り込みのままになる
+  const [params, setParams] = useSearchParams()
+  const t = params.get('t')
+  const filter: (typeof FILTERS)[number] = FILTERS.find((f) => f === t) ?? 'すべて'
+  const setFilter = (f: (typeof FILTERS)[number]) => {
+    setParams(f === 'すべて' ? {} : { t: f }, { replace: true })
+    window.scrollTo(0, 0)
+  }
   const live = useLiveQuery(loadList)
   if (live) lastData = live
   const data = live ?? lastData
