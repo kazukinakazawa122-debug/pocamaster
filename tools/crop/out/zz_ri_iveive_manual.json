@@ -1,0 +1,278 @@
+{
+"seed": [
+[
+"I've IVE",
+"ガウル",
+"Starship Square Special",
+""
+],
+[
+"I've IVE",
+"ガウル",
+"withmuu ラキドロ",
+"3"
+],
+[
+"I've IVE",
+"ガウル",
+"Tower Records",
+"1"
+],
+[
+"I've IVE",
+"ユジン",
+"本体封入",
+"I ver."
+],
+[
+"I've IVE",
+"ユジン",
+"本体封入",
+"Special Edition"
+],
+[
+"I've IVE",
+"ユジン",
+"withmuu ラキドロ",
+"3"
+],
+[
+"I've IVE",
+"ユジン",
+"Tower Records",
+"1"
+],
+[
+"I've IVE",
+"レイ",
+"Soundwave ラキドロ",
+"2"
+],
+[
+"I've IVE",
+"レイ",
+"withmuu ラキドロ",
+"2"
+],
+[
+"I've IVE",
+"レイ",
+"withmuu ラキドロ",
+"3"
+],
+[
+"I've IVE",
+"レイ",
+"Tower Records",
+"1"
+],
+[
+"I've IVE",
+"ウォニョン",
+"withmuu ラキドロ",
+"3"
+],
+[
+"I've IVE",
+"リズ",
+"Tower Records",
+"1"
+],
+[
+"I've IVE",
+"イソ",
+"本体封入",
+"Special Edition"
+],
+[
+"I've IVE",
+"イソ",
+"Tower Records",
+"1"
+],
+[
+"I've IVE",
+"イソ",
+"Tower Records",
+"2"
+]
+],
+"images": [
+{
+"collection": "I've IVE",
+"members": [
+"ガウル"
+],
+"source": "Starship Square Special",
+"version": "",
+"file": "zz_ri_iveive_manual/0000.jpg",
+"thumb": "zz_ri_iveive_manual/0000_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ガウル"
+],
+"source": "withmuu ラキドロ",
+"version": "3",
+"file": "zz_ri_iveive_manual/0001.jpg",
+"thumb": "zz_ri_iveive_manual/0001_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ガウル"
+],
+"source": "Tower Records",
+"version": "1",
+"file": "zz_ri_iveive_manual/0002.jpg",
+"thumb": "zz_ri_iveive_manual/0002_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "I ver.",
+"file": "zz_ri_iveive_manual/0003.jpg",
+"thumb": "zz_ri_iveive_manual/0003_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "Special Edition",
+"file": "zz_ri_iveive_manual/0004.jpg",
+"thumb": "zz_ri_iveive_manual/0004_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ユジン"
+],
+"source": "withmuu ラキドロ",
+"version": "3",
+"file": "zz_ri_iveive_manual/0005.jpg",
+"thumb": "zz_ri_iveive_manual/0005_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ユジン"
+],
+"source": "Tower Records",
+"version": "1",
+"file": "zz_ri_iveive_manual/0006.jpg",
+"thumb": "zz_ri_iveive_manual/0006_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"レイ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2",
+"file": "zz_ri_iveive_manual/0007.jpg",
+"thumb": "zz_ri_iveive_manual/0007_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"レイ"
+],
+"source": "withmuu ラキドロ",
+"version": "2",
+"file": "zz_ri_iveive_manual/0008.jpg",
+"thumb": "zz_ri_iveive_manual/0008_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"レイ"
+],
+"source": "withmuu ラキドロ",
+"version": "3",
+"file": "zz_ri_iveive_manual/0009.jpg",
+"thumb": "zz_ri_iveive_manual/0009_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"レイ"
+],
+"source": "Tower Records",
+"version": "1",
+"file": "zz_ri_iveive_manual/0010.jpg",
+"thumb": "zz_ri_iveive_manual/0010_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ウォニョン"
+],
+"source": "withmuu ラキドロ",
+"version": "3",
+"file": "zz_ri_iveive_manual/0011.jpg",
+"thumb": "zz_ri_iveive_manual/0011_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"リズ"
+],
+"source": "Tower Records",
+"version": "1",
+"file": "zz_ri_iveive_manual/0012.jpg",
+"thumb": "zz_ri_iveive_manual/0012_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Special Edition",
+"file": "zz_ri_iveive_manual/0013.jpg",
+"thumb": "zz_ri_iveive_manual/0013_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"イソ"
+],
+"source": "Tower Records",
+"version": "1",
+"file": "zz_ri_iveive_manual/0014.jpg",
+"thumb": "zz_ri_iveive_manual/0014_t.jpg",
+"credit": "@youngningz"
+},
+{
+"collection": "I've IVE",
+"members": [
+"イソ"
+],
+"source": "Tower Records",
+"version": "2",
+"file": "zz_ri_iveive_manual/0015.jpg",
+"thumb": "zz_ri_iveive_manual/0015_t.jpg",
+"credit": "@youngningz"
+}
+]
+}

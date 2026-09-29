@@ -16,8 +16,11 @@ from build2 import *
 Image.MAX_IMAGE_PIXELS = None
 COLL, FOLDER = sys.argv[1], sys.argv[2]
 CREDIT = sys.argv[3] if len(sys.argv) > 3 else "@ri__chan94"  # 表の作者
+# ぼかし判定のしきい値。表によってくっきり具合が違うので変えられる（そのあと必ず目で確認する）
+BLUR_TH = float(sys.argv[4]) if len(sys.argv) > 4 else 450
 MEMBERS = {"YUJIN": "ユジン", "GAEUL": "ガウル", "REI": "レイ", "WONYOUNG": "ウォニョン", "LIZ": "リズ", "LEESEO": "イソ"}
 TH, MARGIN, GAIN = 0.80, 0.06, 1.25
+ID_CREDITS = {"@powerofablink"}  # merge.py と同じ。画像に ID の透かしがある資料
 
 
 def feat(img):
@@ -74,8 +77,10 @@ for path in sorted(glob.glob(ROOT + FOLDER + "/*.png")):
         best = S[i, b]
         second = max([S[i, k] for k in order[1:] if news[k][1] @ news[b][1] < 0.9] or [0])
         c, _, sh = news[b]
-        blur = sh < 450  # ぼかしのカードは 350 以下、くっきりしたカードは 600 以上だった（SECRET で確認）
-        ok = best >= TH and best - second >= MARGIN and min(c.size) >= o["_w"] * GAIN and not blur
+        blur = sh < BLUR_TH  # ぼかしのカードは 350 以下、くっきりしたカードは 600 以上だった（SECRET で確認）
+        # いまの画像が ID 入り（アプリでは使っていない）なら、大きさは問わない
+        gain = 0 if o.get("credit") in ID_CREDITS else GAIN
+        ok = best >= TH and best - second >= MARGIN and min(c.size) >= o["_w"] * gain and not blur
         rep.append([COLL, "/".join(o["members"]), o["source"], o["version"], o["file"], round(float(best), 3),
                     round(float(second), 3), o["_w"], min(c.size), round(sh), os.path.basename(path), "差し替え" if ok else ""])
         if ok:
