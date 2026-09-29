@@ -57,15 +57,16 @@ export async function importImages(file: Blob, onProgress?: (done: number, total
     const label = `${e.collection} / ${e.members.join('・')} / ${e.source} ${e.version}`.trim()
     const cid = colId.get(e.collection)
     const card = cid ? byKey.get(cardKey(cid, parseMembers(e.members.join('/')), e.source, e.version)) : undefined
-    const blob = await zip.file(e.file)?.async('blob')
+    // 中身をいったんメモリに読み出してから保存する（元の ZIP ファイルを参照したままだと、
+    // iPhone であとから「The I/O read operation failed」で読めなくなることがあるため）
+    const bytes = await zip.file(e.file)?.async('arraybuffer')
+    const blob = bytes && new Blob([bytes], { type: 'image/jpeg' })
     if (!card || !blob) {
       result.unmatched.push(label)
       continue
     }
-    const thumb = e.thumb ? await zip.file(e.thumb)?.async('blob') : undefined
-    const img = thumb
-      ? { full: new Blob([blob], { type: 'image/jpeg' }), thumb: new Blob([thumb], { type: 'image/jpeg' }) }
-      : await makeImage(blob)
+    const thumb = e.thumb ? await zip.file(e.thumb)?.async('arraybuffer') : undefined
+    const img = thumb ? { full: blob, thumb: new Blob([thumb], { type: 'image/jpeg' }) } : await makeImage(blob)
     const id = newId()
     pending.push({ id, card, img, credit: e.credit })
     if (pending.length >= 50) await flush()

@@ -8,7 +8,7 @@ const FORMAT = 1
  * 画像の ZIP から取り込んだ画像（出典のあるもの）は、ZIP を取り込み直せば戻るので入れない。
  * 自分で登録した画像とコレクションの表紙だけを入れる（全部入れると 100MB を超え、iPhone で失敗するため）
  */
-export async function exportBackup(): Promise<File> {
+export async function exportBackup(): Promise<{ file: File; skipped: number }> {
   const zip = new JSZip()
   const [collections, cards, statusHistory, achievements, settings] = await Promise.all([
     db.collections.toArray(),
@@ -23,15 +23,22 @@ export async function exportBackup(): Promise<File> {
     ...collections.filter((c) => c.coverImageId).map((c) => c.coverImageId!),
   ]
   const dir = zip.folder('images')!
+  // 読めない画像（iPhone で「The I/O read operation failed」になるもの）は飛ばし、記録だけでも保存できるようにする
+  let skipped = 0
   for (const img of await db.images.bulkGet(ownIds)) {
     if (!img) continue
-    dir.file(`${img.id}.full.jpg`, img.full)
-    dir.file(`${img.id}.thumb.jpg`, img.thumb)
+    try {
+      const [full, thumb] = await Promise.all([img.full.arrayBuffer(), img.thumb.arrayBuffer()])
+      dir.file(`${img.id}.full.jpg`, full)
+      dir.file(`${img.id}.thumb.jpg`, thumb)
+    } catch {
+      skipped++
+    }
   }
   const blob = await zip.generateAsync({ type: 'blob' })
   const d = new Date()
   const stamp = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`
-  return new File([blob], `pocamaster-backup-${stamp}.zip`, { type: 'application/zip' })
+  return { file: new File([blob], `pocamaster-backup-${stamp}.zip`, { type: 'application/zip' }), skipped }
 }
 
 /** 保存できたら、最後にバックアップした日を記録する */
@@ -69,8 +76,8 @@ export async function restoreBackup(file: Blob): Promise<void> {
   const ids = new Set<string>()
   zip.folder('images')?.forEach((path) => ids.add(path.split('.')[0]))
   for (const id of ids) {
-    const full = await zip.file(`images/${id}.full.jpg`)?.async('blob')
-    const thumb = await zip.file(`images/${id}.thumb.jpg`)?.async('blob')
+    const full = await zip.file(`images/${id}.full.jpg`)?.async('arraybuffer')
+    const thumb = await zip.file(`images/${id}.thumb.jpg`)?.async('arraybuffer')
     if (full && thumb) images.push({ id, full: new Blob([full], { type: 'image/jpeg' }), thumb: new Blob([thumb], { type: 'image/jpeg' }) })
   }
 

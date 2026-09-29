@@ -94,8 +94,12 @@ export default function Settings() {
             onClick={() =>
               run(async () => {
                 setMessage('バックアップを作っています…')
-                setBackupFile(await exportBackup())
-                return 'できました。上の保存ボタンを押して「ファイル」アプリに保存してください'
+                const { file, skipped } = await exportBackup()
+                setBackupFile(file)
+                return (
+                  'できました。上の保存ボタンを押して「ファイル」アプリに保存してください' +
+                  (skipped ? `（読み込めなかった画像 ${skipped} 枚は入っていません。記録はすべて入っています）` : '')
+                )
               })
             }
           >
