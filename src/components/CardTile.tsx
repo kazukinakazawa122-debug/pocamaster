@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import type { Card } from '../lib/db'
 import { MEMBER_BY_ID, memberLabel, memberNames, memberOrder } from '../lib/members'
-import { useImageUrl } from './ui'
+import { useImageUrl, useNearScreen } from './ui'
 
 const LONG_PRESS_MS = 450
 
@@ -25,7 +25,10 @@ interface Props {
 
 /** タップで状態を切り替え、長押しで拡大を開く */
 export default function CardTile({ card, collectionName, compact, onTap, onLongPress }: Props) {
-  const url = useImageUrl(card.imageId, 'thumb')
+  const ref = useRef<HTMLButtonElement>(null)
+  // 画面の近くにあるときだけ画像を読み込む（離れたら手放す）
+  const near = useNearScreen(ref)
+  const url = useImageUrl(near ? card.imageId : undefined, 'thumb')
   const timer = useRef<number | undefined>(undefined)
   const longPressed = useRef(false)
   const start = useRef<{ x: number; y: number } | null>(null)
@@ -40,6 +43,7 @@ export default function CardTile({ card, collectionName, compact, onTap, onLongP
 
   return (
     <button
+      ref={ref}
       type="button"
       className={`poca${owned ? '' : ' off'}`}
       style={{ borderColor: border, background }}
@@ -67,8 +71,8 @@ export default function CardTile({ card, collectionName, compact, onTap, onLongP
       }}
     >
       {url ? (
-        <img src={url} alt="" />
-      ) : (
+        <img src={url} alt="" decoding="async" />
+      ) : card.imageId ? null : (
         <span className="ph">
           {compact ? (
             // 6 枚並びでも名前を 1 行に収める（ユニットは 1 人 1 行）

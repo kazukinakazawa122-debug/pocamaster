@@ -17,7 +17,7 @@ export default function Home() {
     ])
     return { collections, cards, lastBackupAt }
   })
-  if (!data) return null
+  if (!data) return <div className="page empty">読み込み中…</div>
   const { collections, cards, lastBackupAt } = data
 
   if (collections.length === 0) {
@@ -41,7 +41,11 @@ export default function Home() {
 
   const total = progress(cards)
   const byCollection = new Map<string, Card[]>()
-  for (const c of cards) byCollection.set(c.collectionId, [...(byCollection.get(c.collectionId) ?? []), c])
+  for (const c of cards) {
+    const list = byCollection.get(c.collectionId)
+    if (list) list.push(c)
+    else byCollection.set(c.collectionId, [c])
+  }
   const completed = collections
     .filter((col) => isComplete(progress(byCollection.get(col.id) ?? [])))
     .map((col) => ({ col, at: Math.max(...(byCollection.get(col.id) ?? []).map((c) => c.statusChangedAt)) }))

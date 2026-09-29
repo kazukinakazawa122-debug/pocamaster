@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode, type RefObject } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { IconChevronLeft } from '@tabler/icons-react'
 import { db } from '../lib/db'
@@ -39,6 +39,25 @@ export function Sheet({ onClose, children }: { onClose: () => void; children: Re
       </div>
     </div>
   )
+}
+
+/**
+ * 要素が画面の近く（上下 margin 以内）にあるか。
+ * 画面から離れたカードの画像は読み込まない・手放すために使う（iPhone で画像が多いと落ちるため）
+ */
+export function useNearScreen(ref: RefObject<Element | null>, margin = 800): boolean {
+  const [near, setNear] = useState(false)
+  useEffect(() => {
+    const el = ref.current
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      setNear(true)
+      return
+    }
+    const io = new IntersectionObserver(([e]) => setNear(e.isIntersecting), { rootMargin: `${margin}px 0px` })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [ref, margin])
+  return near
 }
 
 /** 保存した画像を表示用の URL にする */

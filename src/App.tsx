@@ -1,6 +1,7 @@
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import { IconBooks, IconHome, IconSettings, IconTrophy } from '@tabler/icons-react'
 import { UndoProvider } from './components/Undo'
+import ErrorBoundary from './components/ErrorBoundary'
 import Home from './pages/Home'
 import Collections from './pages/Collections'
 import CollectionDetail from './pages/CollectionDetail'
@@ -18,21 +19,25 @@ const TABS = [
 ]
 
 export default function App() {
+  const { pathname } = useLocation()
   return (
     <UndoProvider>
       <div className="app">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/collections" element={<Collections />} />
-          <Route path="/collections/new" element={<CollectionEdit />} />
-          <Route path="/collections/:id" element={<CollectionDetail />} />
-          <Route path="/collections/:id/edit" element={<CollectionEdit />} />
-          <Route path="/collections/:id/bulk" element={<BulkCreate />} />
-          <Route path="/collections/:id/cards/new" element={<CardEdit />} />
-          <Route path="/cards/:cardId/edit" element={<CardEdit />} />
-          <Route path="/achievements" element={<Achievements />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
+        {/* 画面を移ったらエラー表示を消す */}
+        <ErrorBoundary key={pathname}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/collections" element={<Collections />} />
+            <Route path="/collections/new" element={<CollectionEdit />} />
+            <Route path="/collections/:id" element={<CollectionDetail />} />
+            <Route path="/collections/:id/edit" element={<CollectionEdit />} />
+            <Route path="/collections/:id/bulk" element={<BulkCreate />} />
+            <Route path="/collections/:id/cards/new" element={<CardEdit />} />
+            <Route path="/cards/:cardId/edit" element={<CardEdit />} />
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </ErrorBoundary>
         <nav className="tabbar">
           {TABS.map(({ to, label, Icon, end }) => (
             <NavLink key={to} to={to} end={end}>

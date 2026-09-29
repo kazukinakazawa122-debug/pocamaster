@@ -3,27 +3,40 @@ import { db, putSetting } from './db'
 
 const FORMAT = 1
 
+/**
+ * バックアップの ZIP を作る。
+ * 画像の ZIP から取り込んだ画像（出典のあるもの）は、ZIP を取り込み直せば戻るので入れない。
+ * 自分で登録した画像とコレクションの表紙だけを入れる（全部入れると 100MB を超え、iPhone で失敗するため）
+ */
 export async function exportBackup(): Promise<File> {
   const zip = new JSZip()
-  const [collections, cards, statusHistory, achievements, settings, images] = await Promise.all([
+  const [collections, cards, statusHistory, achievements, settings] = await Promise.all([
     db.collections.toArray(),
     db.cards.toArray(),
     db.statusHistory.toArray(),
     db.achievements.toArray(),
     db.settings.toArray(),
-    db.images.toArray(),
   ])
   zip.file('data.json', JSON.stringify({ format: FORMAT, exportedAt: Date.now(), collections, cards, statusHistory, achievements, settings }))
+  const ownIds = [
+    ...cards.filter((c) => c.imageId && !c.imageCredit).map((c) => c.imageId!),
+    ...collections.filter((c) => c.coverImageId).map((c) => c.coverImageId!),
+  ]
   const dir = zip.folder('images')!
-  for (const img of images) {
+  for (const img of await db.images.bulkGet(ownIds)) {
+    if (!img) continue
     dir.file(`${img.id}.full.jpg`, img.full)
     dir.file(`${img.id}.thumb.jpg`, img.thumb)
   }
   const blob = await zip.generateAsync({ type: 'blob' })
   const d = new Date()
   const stamp = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`
-  await putSetting('lastBackupAt', Date.now())
   return new File([blob], `pocamaster-backup-${stamp}.zip`, { type: 'application/zip' })
+}
+
+/** 保存できたら、最後にバックアップした日を記録する */
+export async function markBackedUp(): Promise<void> {
+  await putSetting('lastBackupAt', Date.now())
 }
 
 /** iPhone では共有シート（「ファイルに保存」）を使い、使えなければダウンロードする */
@@ -54,12 +67,17 @@ export async function restoreBackup(file: Blob): Promise<void> {
 
   const images: { id: string; full: Blob; thumb: Blob }[] = []
   const ids = new Set<string>()
-  zip.folder('images')!.forEach((path) => ids.add(path.split('.')[0]))
+  zip.folder('images')?.forEach((path) => ids.add(path.split('.')[0]))
   for (const id of ids) {
     const full = await zip.file(`images/${id}.full.jpg`)?.async('blob')
     const thumb = await zip.file(`images/${id}.thumb.jpg`)?.async('blob')
     if (full && thumb) images.push({ id, full: new Blob([full], { type: 'image/jpeg' }), thumb: new Blob([thumb], { type: 'image/jpeg' }) })
   }
+
+  // バックアップに入っていない画像（画像の ZIP から取り込んだもの）は、ZIP を取り込み直すまで画像なしにする
+  const have = new Set(images.map((i) => i.id))
+  for (const c of data.cards) if (c.imageId && !have.has(c.imageId)) delete c.imageId
+  for (const c of data.collections) if (c.coverImageId && !have.has(c.coverImageId)) delete c.coverImageId
 
   await db.transaction('rw', [db.collections, db.cards, db.images, db.statusHistory, db.achievements, db.settings], async () => {
     await Promise.all([db.collections.clear(), db.cards.clear(), db.images.clear(), db.statusHistory.clear(), db.achievements.clear(), db.settings.clear()])
@@ -69,7 +87,7 @@ export async function restoreBackup(file: Blob): Promise<void> {
     await db.statusHistory.bulkAdd(data.statusHistory)
     await db.achievements.bulkAdd(data.achievements)
     await db.settings.bulkAdd(data.settings)
-    // data.json は書き出し日を記録する前に作られるため、ここで書き出し日を入れ直す
+    // 戻したバックアップの日付を「最後のバックアップ」にする
     await db.settings.put({ key: 'lastBackupAt', value: data.exportedAt })
   })
 }

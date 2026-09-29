@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { Link } from 'react-router-dom'
+import { Link, useNavigationType } from 'react-router-dom'
 import { IconCrown, IconPhoto, IconPlus } from '@tabler/icons-react'
-import { COLLECTION_TYPES, db, type Card, type Collection } from '../lib/db'
-import { isComplete, pctText, progress } from '../lib/stats'
+import { COLLECTION_TYPES, db, type Collection } from '../lib/db'
+import { isComplete, pctText, type Progress } from '../lib/stats'
 import { ProgressBar, TopBar, useImageUrl } from '../components/ui'
 
 const FILTERS = ['すべて', ...COLLECTION_TYPES] as const
@@ -17,15 +17,51 @@ const SHORT: Record<string, string> = {
   '個人（ソロ）': 'ソロ',
 }
 
+interface ListData {
+  collections: Collection[]
+  byCollection: Map<string, Progress>
+}
+
+// 一覧に戻ってきたとき、読み込み中に白い画面にならないよう、前回の内容とスクロール位置を覚えておく
+let lastData: ListData | undefined
+let lastScrollY = 0
+
+async function loadList(): Promise<ListData> {
+  const [collections, cards] = await Promise.all([db.collections.toArray(), db.cards.toArray()])
+  // カードは数千枚あるので、コレクションごとの枚数だけを 1 回で数える
+  const count = new Map<string, { owned: number; total: number }>()
+  for (const c of cards) {
+    const n = count.get(c.collectionId) ?? { owned: 0, total: 0 }
+    n.total++
+    if (c.status === '所持中') n.owned++
+    count.set(c.collectionId, n)
+  }
+  const byCollection = new Map<string, Progress>()
+  for (const [id, n] of count) byCollection.set(id, { ...n, pct: Math.floor((n.owned / n.total) * 100) })
+  return { collections, byCollection }
+}
+
+const EMPTY: Progress = { owned: 0, total: 0, pct: null }
+
 export default function Collections() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>('すべて')
-  const data = useLiveQuery(async () => {
-    const [collections, cards] = await Promise.all([db.collections.toArray(), db.cards.toArray()])
-    const byCollection = new Map<string, Card[]>()
-    for (const c of cards) byCollection.set(c.collectionId, [...(byCollection.get(c.collectionId) ?? []), c])
-    return { collections, byCollection }
-  })
-  if (!data) return null
+  const live = useLiveQuery(loadList)
+  if (live) lastData = live
+  const data = live ?? lastData
+
+  // 「戻る」で来たときは前回のスクロール位置に戻す。スクロールするたびに位置を覚える
+  const back = useNavigationType() === 'POP'
+  const ready = !!data
+  useLayoutEffect(() => {
+    if (ready) window.scrollTo(0, back ? lastScrollY : 0)
+  }, [ready, back])
+  useEffect(() => {
+    const onScroll = () => (lastScrollY = window.scrollY)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  if (!data) return <div className="page empty">読み込み中…</div>
 
   const list = data.collections
     .filter((c) => filter === 'すべて' || c.type === filter)
@@ -53,15 +89,14 @@ export default function Collections() {
           </Link>
         </div>
       ) : (
-        list.map((c) => <Row key={c.id} col={c} cards={data.byCollection.get(c.id) ?? []} />)
+        list.map((c) => <Row key={c.id} col={c} p={data.byCollection.get(c.id) ?? EMPTY} />)
       )}
     </div>
   )
 }
 
-function Row({ col, cards }: { col: Collection; cards: Card[] }) {
+function Row({ col, p }: { col: Collection; p: Progress }) {
   const url = useImageUrl(col.coverImageId, 'thumb')
-  const p = progress(cards)
   const done = isComplete(p)
   return (
     <Link to={`/collections/${col.id}`} className="list-item">

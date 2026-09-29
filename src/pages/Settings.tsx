@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { IconDatabaseImport, IconDownload, IconFileImport, IconPhotoUp, IconRestore } from '@tabler/icons-react'
 import { db, getSetting } from '../lib/db'
-import { exportBackup, restoreBackup, saveFile } from '../lib/backup'
+import { exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv } from '../lib/csv'
 import { importImages } from '../lib/imageImport'
 import { TopBar } from '../components/ui'
@@ -20,6 +20,8 @@ export default function Settings() {
   const counts = useLiveQuery(async () => ({ collections: await db.collections.count(), cards: await db.cards.count() }))
   const [message, setMessage] = useState('')
   const [busy, setBusy] = useState(false)
+  // 作ったバックアップ。iPhone の「保存」はタップの直後でないと開けないので、作るのと保存を 2 回のタップに分ける
+  const [backupFile, setBackupFile] = useState<File | null>(null)
   const restoreRef = useRef<HTMLInputElement>(null)
   const csvRef = useRef<HTMLInputElement>(null)
   const imagesRef = useRef<HTMLInputElement>(null)
@@ -69,19 +71,41 @@ export default function Settings() {
         <div className="small muted">
           最後のバックアップ：{lastBackupAt ? formatDate(lastBackupAt) : 'まだありません'}
         </div>
-        <button
-          className="btn primary block"
-          disabled={busy}
-          onClick={() =>
-            run(async () => {
-              await saveFile(await exportBackup())
-              return 'バックアップを書き出しました。「ファイル」アプリに保存してください'
-            })
-          }
-        >
-          <IconDownload size={20} aria-hidden />
-          バックアップを書き出す
-        </button>
+        {backupFile ? (
+          <button
+            className="btn primary block"
+            disabled={busy}
+            onClick={() =>
+              run(async () => {
+                await saveFile(backupFile)
+                await markBackedUp()
+                setBackupFile(null)
+                return 'バックアップを保存しました'
+              })
+            }
+          >
+            <IconDownload size={20} aria-hidden />
+            「ファイル」に保存する（{Math.max(1, Math.round(backupFile.size / 1024 / 1024))}MB）
+          </button>
+        ) : (
+          <button
+            className="btn primary block"
+            disabled={busy}
+            onClick={() =>
+              run(async () => {
+                setMessage('バックアップを作っています…')
+                setBackupFile(await exportBackup())
+                return 'できました。上の保存ボタンを押して「ファイル」アプリに保存してください'
+              })
+            }
+          >
+            <IconDownload size={20} aria-hidden />
+            バックアップを書き出す
+          </button>
+        )}
+        <div className="xs muted">
+          画像の ZIP から取り込んだ画像は入りません（戻したあと、画像の ZIP を取り込み直してください）。自分で登録した画像は入ります。
+        </div>
         <button className="btn block" disabled={busy} onClick={() => restoreRef.current?.click()}>
           <IconRestore size={20} aria-hidden />
           バックアップから戻す
@@ -98,7 +122,7 @@ export default function Settings() {
             if (!confirm('今のデータはすべてバックアップの内容に置き換わります。よろしいですか？')) return
             run(async () => {
               await restoreBackup(f)
-              return 'バックアップから戻しました'
+              return 'バックアップから戻しました。画像は「画像をまとめて取り込む」で ZIP を取り込み直してください'
             })
           }}
         />

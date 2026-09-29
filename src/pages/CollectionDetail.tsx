@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { Link, useParams, useSearchParams } from 'react-router-dom'
+import { Link, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import { IconEdit, IconLayoutGridAdd, IconPlus } from '@tabler/icons-react'
 import { db, setCardStatus, type Card, type CardStatus } from '../lib/db'
 import { MEMBER_BY_ID, MEMBERS, memberLabel, memberOrder, type MemberId } from '../lib/members'
@@ -11,6 +11,9 @@ import CardSheet from '../components/CardSheet'
 import { useUndo } from '../components/Undo'
 
 const STATUS_FILTERS = ['すべて', '未所持', '所持中'] as const
+
+/** コレクションごとのスクロール位置（カードの編集などから「戻る」で来たときに元の位置に戻す） */
+const scrollById = new Map<string, number>()
 
 /** ソロを先にメンバー順、そのあとユニット */
 function byMember(a: Card, b: Card): number {
@@ -30,7 +33,19 @@ export default function CollectionDetail() {
     const [col, cards] = await Promise.all([db.collections.get(id), db.cards.where('collectionId').equals(id).sortBy('order')])
     return { col, cards }
   }, [id])
-  if (!data) return null
+
+  const back = useNavigationType() === 'POP'
+  const ready = !!data
+  useLayoutEffect(() => {
+    if (ready) window.scrollTo(0, back ? (scrollById.get(id) ?? 0) : 0)
+  }, [ready, back, id])
+  useEffect(() => {
+    const onScroll = () => scrollById.set(id, window.scrollY)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [id])
+
+  if (!data) return <div className="page empty">読み込み中…</div>
   const { col, cards } = data
   if (!col) return <div className="page empty">コレクションが見つかりません</div>
 
