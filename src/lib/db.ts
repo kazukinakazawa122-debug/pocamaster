@@ -22,6 +22,8 @@ export interface Collection {
   type: CollectionType
   releaseDate: string // YYYY-MM-DD
   coverImageId?: string
+  /** ホームの「集め中のアルバム」に出す */
+  pinned?: boolean
   createdAt: number
 }
 
@@ -34,6 +36,8 @@ export interface Card {
   imageId?: string
   /** 画像の出典（一覧表の作者など） */
   imageCredit?: string
+  /** お気に入り（ホームに出す） */
+  favorite?: boolean
   status: CardStatus
   statusChangedAt: number
   order: number

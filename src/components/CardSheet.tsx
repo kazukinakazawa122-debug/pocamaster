@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { IconEdit, IconPhotoPlus, IconTrash } from '@tabler/icons-react'
+import { IconEdit, IconHeart, IconHeartFilled, IconPhotoPlus, IconTrash } from '@tabler/icons-react'
 import { db, deleteCard, newId, type Card } from '../lib/db'
 import { makeImage } from '../lib/image'
 import { memberLabel } from '../lib/members'
@@ -76,9 +76,19 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
       </div>
 
       <div className="stack">
-        <button className="btn primary block" onClick={onToggle}>
-          {owned ? '未所持にする' : '所持中にする'}
-        </button>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <button className="btn primary" style={{ flex: 1 }} onClick={onToggle}>
+            {owned ? '未所持にする' : '所持中にする'}
+          </button>
+          <button
+            className="btn"
+            aria-label={card.favorite ? 'お気に入りから外す' : 'お気に入りにする'}
+            aria-pressed={!!card.favorite}
+            onClick={() => db.cards.update(card.id, { favorite: !card.favorite })}
+          >
+            {card.favorite ? <IconHeartFilled size={22} color="#E85A9C" aria-hidden /> : <IconHeart size={22} aria-hidden />}
+          </button>
+        </div>
         <button className="btn block" disabled={busy} onClick={() => fileRef.current?.click()}>
           <IconPhotoPlus size={20} aria-hidden />
           {busy ? '保存中…' : card.imageId ? '画像を変更' : '画像を登録'}

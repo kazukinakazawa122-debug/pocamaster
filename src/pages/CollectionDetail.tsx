@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { Link, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
-import { IconEdit, IconLayoutGridAdd, IconPlus } from '@tabler/icons-react'
+import { IconEdit, IconLayoutGridAdd, IconPin, IconPinFilled, IconPlus } from '@tabler/icons-react'
 import { db, setCardStatus, type Card, type CardStatus } from '../lib/db'
 import { MEMBER_BY_ID, MEMBERS, memberLabel, memberOrder, type MemberId } from '../lib/members'
 import { memberProgress, pctText, progress } from '../lib/stats'
@@ -119,6 +119,15 @@ export default function CollectionDetail() {
         <span className="small muted num">
           {total.owned} / {total.total}
         </span>
+        <button
+          className={`chip${col.pinned ? ' on' : ''}`}
+          aria-pressed={!!col.pinned}
+          onClick={() => db.collections.update(col.id, { pinned: !col.pinned })}
+          style={{ display: 'inline-flex', alignItems: 'center', gap: 2 }}
+        >
+          {col.pinned ? <IconPinFilled size={14} aria-hidden /> : <IconPin size={14} aria-hidden />}
+          {col.pinned ? 'ホームに表示中' : 'ホームに出す'}
+        </button>
       </div>
 
       <div className="chips" style={{ marginBottom: 8 }}>

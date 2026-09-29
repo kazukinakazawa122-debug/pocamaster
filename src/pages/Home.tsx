@@ -74,6 +74,14 @@ export default function Home() {
     .slice(0, 3)
   const colById = new Map(collections.map((c) => [c.id, c]))
 
+  // 集め中のアルバム（コレクションの画面で「ホームに出す」を押したもの）。発売日の新しい順
+  const pinned = collections
+    .filter((c) => c.pinned)
+    .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate))
+    .map((col) => ({ col, p: progress(byCollection.get(col.id) ?? []) }))
+  // お気に入りのカード（コレクションの並び順）
+  const favorites = cards.filter((c) => c.favorite).sort((a, b) => a.order - b.order)
+
   const needBackup =
     cards.length > 0 && (!lastBackupAt || Date.now() - lastBackupAt > BACKUP_REMIND_DAYS * 24 * 60 * 60 * 1000)
 
@@ -103,6 +111,28 @@ export default function Home() {
       <div className="small muted">
         コンプ済みコレクション <span className="num">{completed.length} / {collections.length}</span>
       </div>
+
+      <div className="section-title">集め中のアルバム</div>
+      {pinned.length > 0 ? (
+        <div className="h-scroll">
+          {pinned.map(({ col, p }) => (
+            <PinnedAlbum key={col.id} col={col} p={p} />
+          ))}
+        </div>
+      ) : (
+        <div className="xs muted">コレクションの画面で「ホームに出す」を押すと、ここに出ます</div>
+      )}
+
+      <div className="section-title">お気に入りのカード</div>
+      {favorites.length > 0 ? (
+        <div className="h-scroll">
+          {favorites.map((card) => (
+            <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} />
+          ))}
+        </div>
+      ) : (
+        <div className="xs muted">カードを長押しして ♡ を押すと、ここに出ます</div>
+      )}
 
       {recent.length > 0 && (
         <>
@@ -158,10 +188,32 @@ export default function Home() {
   )
 }
 
-function RecentCard({ card, col, at }: { card: Card; col?: Collection; at: number }) {
+function PinnedAlbum({ col, p }: { col: Collection; p: Progress }) {
+  const url = useImageUrl(col.coverImageId, 'thumb')
+  return (
+    <Link to={`/collections/${col.id}`} style={{ width: 128, flex: 'none' }}>
+      <div className="cover" style={{ width: 128, height: 128, position: 'relative' }}>
+        {url ? <img src={url} alt="" /> : <IconPhoto size={32} aria-hidden />}
+        {isComplete(p) && <IconCrown size={22} color="#D4A017" aria-label="コンプリート" style={{ position: 'absolute', top: 4, right: 4 }} />}
+      </div>
+      <div className="small" style={{ marginTop: 4, fontWeight: 700, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+        {col.name}
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+        <div style={{ flex: 1 }}>
+          <ProgressBar pct={p.pct} />
+        </div>
+        <span className="xs num">{pctText(p)}</span>
+      </div>
+    </Link>
+  )
+}
+
+/** 横に並べる小さなカード。at があれば下に日付を出す */
+function RecentCard({ card, col, at }: { card: Card; col?: Collection; at?: number }) {
   const url = useImageUrl(card.imageId, 'thumb')
   const { border, background } = cardColors(card)
-  const d = new Date(at)
+  const d = at ? new Date(at) : null
   return (
     <Link to={`/collections/${card.collectionId}`} style={{ width: 72, flex: 'none' }} aria-label={`${col?.name ?? ''} ${memberLabel(card.memberIds)}`}>
       <div className="poca" style={{ borderColor: border, background }}>
@@ -173,9 +225,11 @@ function RecentCard({ card, col, at }: { card: Card; col?: Collection; at: numbe
           </span>
         )}
       </div>
-      <div className="xs muted num" style={{ marginTop: 4, textAlign: 'center' }}>
-        {d.getMonth() + 1}/{d.getDate()}
-      </div>
+      {d && (
+        <div className="xs muted num" style={{ marginTop: 4, textAlign: 'center' }}>
+          {d.getMonth() + 1}/{d.getDate()}
+        </div>
+      )}
     </Link>
   )
 }
