@@ -20,6 +20,12 @@ fixed_grid(j, path, C, R, [345 + P * i for i in range(8)], [
     (G + "MD", "Postcard"), (G + "MD", "Ticket"), (G + "MD", "Poster"),
     ("1st DIVE FC Class DIVE", "1"), ("1st DIVE FC Class DIVE", "2"),
     ("SuperStar STARSHIP", "1"), ("SuperStar STARSHIP", "2"), ("SuperStar STARSHIP", "3")], 272)
+# DVD・Blu-ray・Kit のカード（@powerofablink のウォニョンの表で見つけ、本人がファンコンのものと確認。
+# ID の透かしがあるので枠だけ。6 人分あるはず（本人、2026-09-29））
+S = "DVD・Blu-ray・Kit"
+for v in ["DVD", "Blu-ray", "Kit", "Kit POLA", "Starship Square 特典", "Apple Music 特典", "特典（店舗不明）"]:
+    for m in ORDER:
+        j.add(C, [m], S, v)
 j.save()
 
 j = Job("tour1")
