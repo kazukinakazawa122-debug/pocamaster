@@ -12,6 +12,8 @@ interface ManifestEntry {
   /** 一覧用の小さい画像（あれば縮める処理を省く） */
   thumb?: string
   credit?: string
+  /** true ならカードではなく、コレクションの表紙（アルバムのジャケットなど）にする */
+  cover?: boolean
 }
 
 export interface ImageImportResult {
@@ -54,6 +56,26 @@ export async function importImages(file: Blob, onProgress?: (done: number, total
   }
   for (const [i, e] of entries.entries()) {
     onProgress?.(i, entries.length)
+    if (e.cover) {
+      // コレクションの表紙：いまの表紙を置き換える
+      const col = collections.find((c) => c.name === e.collection)
+      const bytes = await zip.file(e.file)?.async('arraybuffer')
+      const thumb = e.thumb ? await zip.file(e.thumb)?.async('arraybuffer') : undefined
+      if (!col || !bytes) {
+        result.unmatched.push(`${e.collection}（表紙）`)
+        continue
+      }
+      const full = new Blob([bytes], { type: 'image/jpeg' })
+      const img = thumb ? { full, thumb: new Blob([thumb], { type: 'image/jpeg' }) } : await makeImage(full)
+      const id = newId()
+      await db.transaction('rw', db.images, db.collections, async () => {
+        await db.images.add({ id, ...img })
+        await db.collections.update(col.id, { coverImageId: id })
+        if (col.coverImageId) await db.images.delete(col.coverImageId)
+      })
+      result.matched++
+      continue
+    }
     const label = `${e.collection} / ${e.members.join('・')} / ${e.source} ${e.version}`.trim()
     const cid = colId.get(e.collection)
     const card = cid ? byKey.get(cardKey(cid, parseMembers(e.members.join('/')), e.source, e.version)) : undefined
