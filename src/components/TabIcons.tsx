@@ -8,6 +8,11 @@ interface Props {
   'aria-hidden'?: boolean
 }
 
+/** ホーム：IVE のロゴ（public/ive-logo.png の形を、いまの文字色で塗る） */
+export function IveLogoIcon({ size = 24 }: Props) {
+  return <span className="tab-logo" style={{ width: size, height: size }} aria-hidden />
+}
+
 /** 実績：取っ手・台座・星のついたトロフィー */
 export function TrophyIcon({ size = 24, stroke = 1.6, ...rest }: Props) {
   return (

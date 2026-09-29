@@ -1,15 +1,15 @@
 /* 06_デザインシステム に対応するトークン */
 :root {
-  /* 和紙のような生成り色（2026-09-29、本人の要望で白から変更） */
-  --bg: #f6f1e7;
-  --surface: #ece5d6;
-  --text: #1f1b16;
-  --text-2: #6b6356;
-  --line: #ddd4c2;
-  --all: #3d3830;
+  /* IVE EMPATHY のジャケットの配色（2026-09-29、本人の要望）：紙の色の背景・ローズピンク・深いえんじ色の文字 */
+  --bg: #f5f0ed;
+  --surface: #ebe3df;
+  --text: #3a2228;
+  --text-2: #7a5a62;
+  --line: #e3d3d5;
+  --all: #b8325e;
   --on-all: #ffffff;
-  --warn-bg: #fef3c7;
-  --warn-text: #92400e;
+  --warn-bg: #f7dde4;
+  --warn-text: #8a2f4a;
   --danger: #dc2626;
   --r-card: 6px;
   --r-panel: 12px;
@@ -25,8 +25,8 @@
     --text: #f4f4f5;
     --text-2: #a1a1aa;
     --line: #2a2a2e;
-    --all: #d4d4d8;
-    --on-all: #18181b;
+    --all: #e889a6;
+    --on-all: #2a1419;
     --warn-bg: #422006;
     --warn-text: #fcd34d;
   }
@@ -57,7 +57,9 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px solid var(--line);
 }
 .tabbar a { display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 64px; min-height: 44px; font-size: 11px; color: var(--text-2); }
-.tabbar a.active { color: var(--text); }
+.tabbar a.active { color: var(--all); }
+/* ホームのタブ：IVE のロゴ（画像の形だけを使い、色は文字色に合わせる） */
+.tab-logo { width: 24px; height: 24px; background: currentColor; -webkit-mask: url(/pocamaster/ive-logo.png) center / contain no-repeat; mask: url(/pocamaster/ive-logo.png) center / contain no-repeat; }
 
 .topbar {
   /* スクロールしても戻るボタンとタイトルが見えるよう、画面の上に固定する（iPhone でも確実に効く fixed を使う） */
