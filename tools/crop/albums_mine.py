@@ -19,7 +19,7 @@ lab = [("本体封入", "Either Way (Pink ver.)"), ("本体封入", "Off The Rec
        ("Tower Records", "2.0"), (SW, "6.0"), ("withmuu", "5.0"), ("withmuu" + LD, "6.0-1"), ("withmuu" + LD, "6.0-2"), ("withmuu" + LD, "6.0-3"),
        ("Makestar", "2.0"), ("Yizhiyu", "1.0"), (SW, "7.0 Busan"), (SW, "8.0 Daegu"), (SW, "9.0 Gwangju"), (SW, "10.0 Daejeon"),
        (SW, "11.0 Xmas"), ("KMStation", "4.0"), (SW, "12.0 Thailand"), ("mymusictaste", "3.0"), ("Yizhiyu", "2.0")]
-BLUR = {70, 72, 73}
+BLUR = set()  # ぼかしのカード（70, 72, 73）も、ほかに画像がないので入れる（本人決定、2026-09-29）
 D = ENG + "I_VE MINE/"
 _, tmpl, rows = ml.ordered(D + "06.JPG")
 assert len(tmpl) == len(lab) == 74, (len(tmpl), len(lab))

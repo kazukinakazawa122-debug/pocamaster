@@ -22,6 +22,7 @@ KEEP = {
 }
 KEEP3 = {("IVE SWITCH", "Soundwave ラキドロ", "6.0"), ("IVE SWITCH", "TOKYO DOME 限定", "9/4"), ("IVE SWITCH", "TOKYO DOME 限定", "9/5")}
 KEEP_VERSION = {("LOVE DIVE", "グッズ｜POB", "Sticker")}  # 表から作り直すので古い方は消す
+ID_CREDITS = {"@powerofablink"}  # 画像に作者の ID（透かし）が写っている資料。画像は使わない（本人のルール、2026-09-29）
 GOODS = False  # トレカ以外のグッズ（入手元が「グッズ｜」で始まる）を入れるか。今は入れない（本人決定、2026-09-28）
 
 
@@ -71,6 +72,7 @@ if os.path.exists(CARDS + "manifest.json"):
     entries = [e for e in json.load(open(CARDS + "manifest.json", encoding="utf-8")) if e["collection"] == "After LIKE"]
 for j in jobs:
     entries += j["images"]
+entries = [e for e in entries if e["credit"] not in ID_CREDITS]
 # 同じカードの画像が 2 つあれば、あとの方（新しい表）を使う
 uniq = {}
 for e in entries:

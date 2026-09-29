@@ -18,7 +18,9 @@ lab = album + pre
 _, t, rows = ml.ordered(ROOT + ml.FILES[36])
 tmpl = [t[i] for i in [0, 1, 2, 3, 6, 7, 8, 9, 10]] + t[11:]
 assert len(tmpl) == len(lab) == 65, (len(tmpl), len(lab))
-BLUR = {len(lab) - 3, len(lab) - 2, len(lab) - 1}
+BLUR = set()  # ぼかしのカード（最後の 3 種類）も、ほかに画像がないので入れる（本人決定、2026-09-29）
+# 店の透かし「StarRiver 星河集美」が写っているので画像なし（本人のルール、2026-09-29 確認）
+BLUR |= {k for k, (s, v) in enumerate(lab) if s == "StarRiver"}
 j = Job("empathy")
 for mem, i in [("レイ", 34), ("ユジン", 35), ("ガウル", 36), ("イソ", 37), ("ウォニョン", 38), ("リズ", 39)]:
     im = grid.load(ROOT + ml.FILES[i])

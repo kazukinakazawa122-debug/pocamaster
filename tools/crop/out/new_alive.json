@@ -1,0 +1,1434 @@
+{
+"seed": [
+[
+"ALIVE",
+"ユジン",
+"本体封入",
+"Album A（I ver.）"
+],
+[
+"ALIVE",
+"ガウル",
+"本体封入",
+"Album A（I ver.）"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"Album A（I ver.）"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Album A（I ver.）"
+],
+[
+"ALIVE",
+"リズ",
+"本体封入",
+"Album A（I ver.）"
+],
+[
+"ALIVE",
+"イソ",
+"本体封入",
+"Album A（I ver.）"
+],
+[
+"ALIVE",
+"ユジン",
+"本体封入",
+"Album B（II ver.）"
+],
+[
+"ALIVE",
+"ガウル",
+"本体封入",
+"Album B（II ver.）"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"Album B（II ver.）"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Album B（II ver.）"
+],
+[
+"ALIVE",
+"リズ",
+"本体封入",
+"Album B（II ver.）"
+],
+[
+"ALIVE",
+"イソ",
+"本体封入",
+"Album B（II ver.）"
+],
+[
+"ALIVE",
+"ユジン",
+"本体封入",
+"Normal ED（III ver.）"
+],
+[
+"ALIVE",
+"ガウル",
+"本体封入",
+"Normal ED（III ver.）"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"Normal ED（III ver.）"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Normal ED（III ver.）"
+],
+[
+"ALIVE",
+"リズ",
+"本体封入",
+"Normal ED（III ver.）"
+],
+[
+"ALIVE",
+"イソ",
+"本体封入",
+"Normal ED（III ver.）"
+],
+[
+"ALIVE",
+"ユジン",
+"本体封入",
+"Solo（IV ver.）"
+],
+[
+"ALIVE",
+"ガウル",
+"本体封入",
+"Solo（IV ver.）"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"Solo（IV ver.）"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Solo（IV ver.）"
+],
+[
+"ALIVE",
+"リズ",
+"本体封入",
+"Solo（IV ver.）"
+],
+[
+"ALIVE",
+"イソ",
+"本体封入",
+"Solo（IV ver.）"
+],
+[
+"ALIVE",
+"ユジン",
+"本体封入",
+"Limited ED（V ver.）"
+],
+[
+"ALIVE",
+"ガウル",
+"本体封入",
+"Limited ED（V ver.）"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"Limited ED（V ver.）"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Limited ED（V ver.）"
+],
+[
+"ALIVE",
+"リズ",
+"本体封入",
+"Limited ED（V ver.）"
+],
+[
+"ALIVE",
+"イソ",
+"本体封入",
+"Limited ED（V ver.）"
+],
+[
+"ALIVE",
+"ユジン",
+"本体封入",
+"Clear Photocard"
+],
+[
+"ALIVE",
+"ガウル",
+"本体封入",
+"Clear Photocard"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"Clear Photocard"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Clear Photocard"
+],
+[
+"ALIVE",
+"リズ",
+"本体封入",
+"Clear Photocard"
+],
+[
+"ALIVE",
+"イソ",
+"本体封入",
+"Clear Photocard"
+],
+[
+"ALIVE",
+"ユジン",
+"Sony Music Shop",
+"オンライン ラキドロ"
+],
+[
+"ALIVE",
+"ガウル",
+"Sony Music Shop",
+"オンライン ラキドロ"
+],
+[
+"ALIVE",
+"レイ",
+"Sony Music Shop",
+"オンライン ラキドロ"
+],
+[
+"ALIVE",
+"ウォニョン",
+"Sony Music Shop",
+"オンライン ラキドロ"
+],
+[
+"ALIVE",
+"リズ",
+"Sony Music Shop",
+"オンライン ラキドロ"
+],
+[
+"ALIVE",
+"イソ",
+"Sony Music Shop",
+"オンライン ラキドロ"
+],
+[
+"ALIVE",
+"ユジン",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"ガウル",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"レイ",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"ウォニョン",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"リズ",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"イソ",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"ユジン",
+"HMV・LAWSON",
+"Selca Photocard #C"
+],
+[
+"ALIVE",
+"ガウル",
+"HMV・LAWSON",
+"Selca Photocard #C"
+],
+[
+"ALIVE",
+"レイ",
+"HMV・LAWSON",
+"Selca Photocard #C"
+],
+[
+"ALIVE",
+"ウォニョン",
+"HMV・LAWSON",
+"Selca Photocard #C"
+],
+[
+"ALIVE",
+"リズ",
+"HMV・LAWSON",
+"Selca Photocard #C"
+],
+[
+"ALIVE",
+"イソ",
+"HMV・LAWSON",
+"Selca Photocard #C"
+],
+[
+"ALIVE",
+"ユジン",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"ガウル",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"レイ",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"ウォニョン",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"リズ",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"イソ",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"ユジン",
+"オフラインイベント",
+"8/19 TOKYO"
+],
+[
+"ALIVE",
+"ガウル",
+"オフラインイベント",
+"8/19 TOKYO"
+],
+[
+"ALIVE",
+"レイ",
+"オフラインイベント",
+"8/19 TOKYO"
+],
+[
+"ALIVE",
+"ウォニョン",
+"オフラインイベント",
+"8/19 TOKYO"
+],
+[
+"ALIVE",
+"リズ",
+"オフラインイベント",
+"8/19 TOKYO"
+],
+[
+"ALIVE",
+"イソ",
+"オフラインイベント",
+"8/19 TOKYO"
+],
+[
+"ALIVE",
+"ユジン",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"ガウル",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"レイ",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"ウォニョン",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"リズ",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"イソ",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"ユジン",
+"Tower Records Shibuya",
+"限定抽選 A賞"
+],
+[
+"ALIVE",
+"ガウル",
+"Tower Records Shibuya",
+"限定抽選 A賞"
+],
+[
+"ALIVE",
+"レイ",
+"Tower Records Shibuya",
+"限定抽選 A賞"
+],
+[
+"ALIVE",
+"ウォニョン",
+"Tower Records Shibuya",
+"限定抽選 A賞"
+],
+[
+"ALIVE",
+"リズ",
+"Tower Records Shibuya",
+"限定抽選 A賞"
+],
+[
+"ALIVE",
+"イソ",
+"Tower Records Shibuya",
+"限定抽選 A賞"
+],
+[
+"ALIVE",
+"ユジン",
+"Sony Music Shop",
+"期間限定特典"
+],
+[
+"ALIVE",
+"ガウル",
+"Sony Music Shop",
+"期間限定特典"
+],
+[
+"ALIVE",
+"レイ",
+"Sony Music Shop",
+"期間限定特典"
+],
+[
+"ALIVE",
+"ウォニョン",
+"Sony Music Shop",
+"期間限定特典"
+],
+[
+"ALIVE",
+"リズ",
+"Sony Music Shop",
+"期間限定特典"
+],
+[
+"ALIVE",
+"イソ",
+"Sony Music Shop",
+"期間限定特典"
+]
+],
+"images": [
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "Album A（I ver.）",
+"file": "new_alive/0000.jpg",
+"thumb": "new_alive/0000_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "Album A（I ver.）",
+"file": "new_alive/0001.jpg",
+"thumb": "new_alive/0001_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Album A（I ver.）",
+"file": "new_alive/0002.jpg",
+"thumb": "new_alive/0002_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Album A（I ver.）",
+"file": "new_alive/0003.jpg",
+"thumb": "new_alive/0003_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "Album A（I ver.）",
+"file": "new_alive/0004.jpg",
+"thumb": "new_alive/0004_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Album A（I ver.）",
+"file": "new_alive/0005.jpg",
+"thumb": "new_alive/0005_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "Album B（II ver.）",
+"file": "new_alive/0006.jpg",
+"thumb": "new_alive/0006_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "Album B（II ver.）",
+"file": "new_alive/0007.jpg",
+"thumb": "new_alive/0007_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Album B（II ver.）",
+"file": "new_alive/0008.jpg",
+"thumb": "new_alive/0008_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Album B（II ver.）",
+"file": "new_alive/0009.jpg",
+"thumb": "new_alive/0009_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "Album B（II ver.）",
+"file": "new_alive/0010.jpg",
+"thumb": "new_alive/0010_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Album B（II ver.）",
+"file": "new_alive/0011.jpg",
+"thumb": "new_alive/0011_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "Normal ED（III ver.）",
+"file": "new_alive/0012.jpg",
+"thumb": "new_alive/0012_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "Normal ED（III ver.）",
+"file": "new_alive/0013.jpg",
+"thumb": "new_alive/0013_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Normal ED（III ver.）",
+"file": "new_alive/0014.jpg",
+"thumb": "new_alive/0014_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Normal ED（III ver.）",
+"file": "new_alive/0015.jpg",
+"thumb": "new_alive/0015_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "Normal ED（III ver.）",
+"file": "new_alive/0016.jpg",
+"thumb": "new_alive/0016_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Normal ED（III ver.）",
+"file": "new_alive/0017.jpg",
+"thumb": "new_alive/0017_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "Solo（IV ver.）",
+"file": "new_alive/0018.jpg",
+"thumb": "new_alive/0018_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "Solo（IV ver.）",
+"file": "new_alive/0019.jpg",
+"thumb": "new_alive/0019_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Solo（IV ver.）",
+"file": "new_alive/0020.jpg",
+"thumb": "new_alive/0020_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Solo（IV ver.）",
+"file": "new_alive/0021.jpg",
+"thumb": "new_alive/0021_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "Solo（IV ver.）",
+"file": "new_alive/0022.jpg",
+"thumb": "new_alive/0022_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Solo（IV ver.）",
+"file": "new_alive/0023.jpg",
+"thumb": "new_alive/0023_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "Limited ED（V ver.）",
+"file": "new_alive/0024.jpg",
+"thumb": "new_alive/0024_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "Limited ED（V ver.）",
+"file": "new_alive/0025.jpg",
+"thumb": "new_alive/0025_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Limited ED（V ver.）",
+"file": "new_alive/0026.jpg",
+"thumb": "new_alive/0026_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Limited ED（V ver.）",
+"file": "new_alive/0027.jpg",
+"thumb": "new_alive/0027_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "Limited ED（V ver.）",
+"file": "new_alive/0028.jpg",
+"thumb": "new_alive/0028_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Limited ED（V ver.）",
+"file": "new_alive/0029.jpg",
+"thumb": "new_alive/0029_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "Clear Photocard",
+"file": "new_alive/0030.jpg",
+"thumb": "new_alive/0030_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "Clear Photocard",
+"file": "new_alive/0031.jpg",
+"thumb": "new_alive/0031_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Clear Photocard",
+"file": "new_alive/0032.jpg",
+"thumb": "new_alive/0032_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Clear Photocard",
+"file": "new_alive/0033.jpg",
+"thumb": "new_alive/0033_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "Clear Photocard",
+"file": "new_alive/0034.jpg",
+"thumb": "new_alive/0034_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Clear Photocard",
+"file": "new_alive/0035.jpg",
+"thumb": "new_alive/0035_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "Sony Music Shop",
+"version": "オンライン ラキドロ",
+"file": "new_alive/0036.jpg",
+"thumb": "new_alive/0036_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "Sony Music Shop",
+"version": "オンライン ラキドロ",
+"file": "new_alive/0037.jpg",
+"thumb": "new_alive/0037_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "Sony Music Shop",
+"version": "オンライン ラキドロ",
+"file": "new_alive/0038.jpg",
+"thumb": "new_alive/0038_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "Sony Music Shop",
+"version": "オンライン ラキドロ",
+"file": "new_alive/0039.jpg",
+"thumb": "new_alive/0039_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "Sony Music Shop",
+"version": "オンライン ラキドロ",
+"file": "new_alive/0040.jpg",
+"thumb": "new_alive/0040_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "Sony Music Shop",
+"version": "オンライン ラキドロ",
+"file": "new_alive/0041.jpg",
+"thumb": "new_alive/0041_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "new_alive/0042.jpg",
+"thumb": "new_alive/0042_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "new_alive/0043.jpg",
+"thumb": "new_alive/0043_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "new_alive/0044.jpg",
+"thumb": "new_alive/0044_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "new_alive/0045.jpg",
+"thumb": "new_alive/0045_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "new_alive/0046.jpg",
+"thumb": "new_alive/0046_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "new_alive/0047.jpg",
+"thumb": "new_alive/0047_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "HMV・LAWSON",
+"version": "Selca Photocard #C",
+"file": "new_alive/0048.jpg",
+"thumb": "new_alive/0048_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "HMV・LAWSON",
+"version": "Selca Photocard #C",
+"file": "new_alive/0049.jpg",
+"thumb": "new_alive/0049_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "HMV・LAWSON",
+"version": "Selca Photocard #C",
+"file": "new_alive/0050.jpg",
+"thumb": "new_alive/0050_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "HMV・LAWSON",
+"version": "Selca Photocard #C",
+"file": "new_alive/0051.jpg",
+"thumb": "new_alive/0051_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "HMV・LAWSON",
+"version": "Selca Photocard #C",
+"file": "new_alive/0052.jpg",
+"thumb": "new_alive/0052_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "HMV・LAWSON",
+"version": "Selca Photocard #C",
+"file": "new_alive/0053.jpg",
+"thumb": "new_alive/0053_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "new_alive/0054.jpg",
+"thumb": "new_alive/0054_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "new_alive/0055.jpg",
+"thumb": "new_alive/0055_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "new_alive/0056.jpg",
+"thumb": "new_alive/0056_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "new_alive/0057.jpg",
+"thumb": "new_alive/0057_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "new_alive/0058.jpg",
+"thumb": "new_alive/0058_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "new_alive/0059.jpg",
+"thumb": "new_alive/0059_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "8/19 TOKYO",
+"file": "new_alive/0060.jpg",
+"thumb": "new_alive/0060_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "8/19 TOKYO",
+"file": "new_alive/0061.jpg",
+"thumb": "new_alive/0061_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "8/19 TOKYO",
+"file": "new_alive/0062.jpg",
+"thumb": "new_alive/0062_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "8/19 TOKYO",
+"file": "new_alive/0063.jpg",
+"thumb": "new_alive/0063_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "8/19 TOKYO",
+"file": "new_alive/0064.jpg",
+"thumb": "new_alive/0064_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "8/19 TOKYO",
+"file": "new_alive/0065.jpg",
+"thumb": "new_alive/0065_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "new_alive/0066.jpg",
+"thumb": "new_alive/0066_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "new_alive/0067.jpg",
+"thumb": "new_alive/0067_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "new_alive/0068.jpg",
+"thumb": "new_alive/0068_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "new_alive/0069.jpg",
+"thumb": "new_alive/0069_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "new_alive/0070.jpg",
+"thumb": "new_alive/0070_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "new_alive/0071.jpg",
+"thumb": "new_alive/0071_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "Tower Records Shibuya",
+"version": "限定抽選 A賞",
+"file": "new_alive/0072.jpg",
+"thumb": "new_alive/0072_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "Tower Records Shibuya",
+"version": "限定抽選 A賞",
+"file": "new_alive/0073.jpg",
+"thumb": "new_alive/0073_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "Tower Records Shibuya",
+"version": "限定抽選 A賞",
+"file": "new_alive/0074.jpg",
+"thumb": "new_alive/0074_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "Tower Records Shibuya",
+"version": "限定抽選 A賞",
+"file": "new_alive/0075.jpg",
+"thumb": "new_alive/0075_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "Tower Records Shibuya",
+"version": "限定抽選 A賞",
+"file": "new_alive/0076.jpg",
+"thumb": "new_alive/0076_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "Tower Records Shibuya",
+"version": "限定抽選 A賞",
+"file": "new_alive/0077.jpg",
+"thumb": "new_alive/0077_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "Sony Music Shop",
+"version": "期間限定特典",
+"file": "new_alive/0078.jpg",
+"thumb": "new_alive/0078_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "Sony Music Shop",
+"version": "期間限定特典",
+"file": "new_alive/0079.jpg",
+"thumb": "new_alive/0079_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "Sony Music Shop",
+"version": "期間限定特典",
+"file": "new_alive/0080.jpg",
+"thumb": "new_alive/0080_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "Sony Music Shop",
+"version": "期間限定特典",
+"file": "new_alive/0081.jpg",
+"thumb": "new_alive/0081_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "Sony Music Shop",
+"version": "期間限定特典",
+"file": "new_alive/0082.jpg",
+"thumb": "new_alive/0082_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "Sony Music Shop",
+"version": "期間限定特典",
+"file": "new_alive/0083.jpg",
+"thumb": "new_alive/0083_t.jpg",
+"credit": "@ri__chan94"
+}
+]
+}

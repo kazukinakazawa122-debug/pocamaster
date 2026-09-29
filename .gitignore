@@ -4,3 +4,4 @@ dist
 *.tsbuildinfo
 images/
 public/_tmp_*
+__pycache__/

@@ -1,0 +1,3 @@
+collection,members,source,version,credit,what,decision
+IVE EMPATHY,ガウル・ユジン・レイ・ウォニョン・リズ・イソ（各 3 枚、計 18 枚）,StarRiver,1.0 / 2.0 / 3.0,@LILY_221019,店の透かし「StarRiver 星河集美」,画像なし（albums_empathy.py で除外）
+I've IVE,全員（225 枚すべて）,すべて,すべて,@powerofablink,作者の透かし「powerofablink」,画像なし（merge.py で除外）→ 店舗ごとの表（@reina831wy）で差し替えできたものだけ画像あり
