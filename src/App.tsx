@@ -1,5 +1,6 @@
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom'
-import { IconBooks, IconHome, IconSettings, IconTrophy } from '@tabler/icons-react'
+import { IconCards, IconHome, IconSettings } from '@tabler/icons-react'
+import { TrophyIcon } from './components/TabIcons'
 import { UndoProvider } from './components/Undo'
 import ErrorBoundary from './components/ErrorBoundary'
 import Home from './pages/Home'
@@ -13,8 +14,8 @@ import Settings from './pages/Settings'
 
 const TABS = [
   { to: '/', label: 'ホーム', Icon: IconHome, end: true },
-  { to: '/collections', label: 'コレクション', Icon: IconBooks, end: false },
-  { to: '/achievements', label: '実績', Icon: IconTrophy, end: false },
+  { to: '/collections', label: 'コレクション', Icon: IconCards, end: false },
+  { to: '/achievements', label: '実績', Icon: TrophyIcon, end: false },
   { to: '/settings', label: '設定', Icon: IconSettings, end: false },
 ]
 
