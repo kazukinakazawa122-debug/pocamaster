@@ -14,15 +14,18 @@ export function ProgressBar({ pct, color = 'var(--all)' }: { pct: number | null;
 export function TopBar({ title, back, children }: { title: string; back?: boolean; children?: ReactNode }) {
   const navigate = useNavigate()
   return (
-    <header className="topbar">
-      {back && (
-        <button className="icon-btn" aria-label="戻る" onClick={() => navigate(-1)}>
-          <IconChevronLeft size={24} />
-        </button>
-      )}
-      <h1>{title}</h1>
-      {children}
-    </header>
+    <>
+      <header className="topbar">
+        {back && (
+          <button className="icon-btn" aria-label="戻る" onClick={() => navigate(-1)}>
+            <IconChevronLeft size={24} />
+          </button>
+        )}
+        <h1>{title}</h1>
+        {children}
+      </header>
+      <div className="topbar-space" />
+    </>
   )
 }
 
