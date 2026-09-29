@@ -48,4 +48,10 @@ for m, _ in mems:
             if tuple(members) in done: continue
             done.add(tuple(members))
         j.add(C, members, s, v, ims[m].crop(tuple(int(x) for x in bx)), "@LILY_221019")
+
+# 上の表にない種類（@powerofablink の表で見つけた。ID の透かしがあるので枠だけ足し、画像は使わない。2026-09-29）
+EXTRA = [("MD", ""), ("IDOLSHOP", "POLA"), ("StarRiver", "2.0")] + [("QQ Music", str(n)) for n in range(1, 7)]
+for m, _ in mems:
+    for s, v in EXTRA:
+        j.add(C, [m], s, v)
 j.save()
