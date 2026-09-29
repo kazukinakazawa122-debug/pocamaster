@@ -1,6 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { useNavigate, useParams } from 'react-router-dom'
 import { IconChevronLeft, IconChevronRight, IconEdit, IconPlus, IconReplace, IconTrash, IconX } from '@tabler/icons-react'
 import { ALBUM_PAGE_SIZE, db, type Card, type MyAlbum } from '../lib/db'
 import { memberLabel } from '../lib/members'
@@ -38,9 +37,7 @@ export function AlbumPocket({ card, onClick, size = 'thumb' }: { card?: Card; on
 }
 
 /** マイアルバムの中身：3×3 のページを左右にめくる */
-export default function MyAlbumDetail() {
-  const { id = '' } = useParams()
-  const navigate = useNavigate()
+export default function MyAlbumDetail({ albumId: id }: { albumId: string }) {
   const [page, setPage] = useState(0)
   const [picking, setPicking] = useState<number | null>(null) // カードを入れるポケットの番号
   const [selected, setSelected] = useState<number | null>(null) // カードの入ったポケットを押したとき
@@ -109,8 +106,8 @@ export default function MyAlbumDetail() {
 
   return (
     <div className="page">
-      <TopBar title={album.name} back>
-        <button className="icon-btn" aria-label="アルバムを編集" onClick={() => setEditing(true)}>
+      <TopBar title={album.name}>
+        <button className="icon-btn" aria-label="アルバムの名前を変える" onClick={() => setEditing(true)}>
           <IconEdit size={22} />
         </button>
       </TopBar>
@@ -209,12 +206,12 @@ export default function MyAlbumDetail() {
         </Sheet>
       )}
 
-      {editing && <EditSheet album={album} onClose={() => setEditing(false)} onDeleted={() => navigate('/albums', { replace: true })} />}
+      {editing && <EditSheet album={album} onClose={() => setEditing(false)} />}
     </div>
   )
 }
 
-function EditSheet({ album, onClose, onDeleted }: { album: MyAlbum; onClose: () => void; onDeleted: () => void }) {
+function EditSheet({ album, onClose }: { album: MyAlbum; onClose: () => void }) {
   const [name, setName] = useState(album.name)
   return (
     <Sheet onClose={onClose}>
@@ -223,29 +220,16 @@ function EditSheet({ album, onClose, onDeleted }: { album: MyAlbum; onClose: () 
         <span>アルバムの名前</span>
         <input type="text" value={name} maxLength={30} onChange={(e) => setName(e.target.value)} />
       </label>
-      <div className="stack">
-        <button
-          className="btn primary block"
-          disabled={!name.trim()}
-          onClick={async () => {
-            await db.myAlbums.update(album.id, { name: name.trim() })
-            onClose()
-          }}
-        >
-          保存
-        </button>
-        <button
-          className="btn danger block"
-          onClick={async () => {
-            if (!confirm(`「${album.name}」を削除しますか？（カードそのものは消えません）`)) return
-            await db.myAlbums.delete(album.id)
-            onDeleted()
-          }}
-        >
-          <IconTrash size={20} aria-hidden />
-          アルバムを削除
-        </button>
-      </div>
+      <button
+        className="btn primary block"
+        disabled={!name.trim()}
+        onClick={async () => {
+          await db.myAlbums.update(album.id, { name: name.trim() })
+          onClose()
+        }}
+      >
+        保存
+      </button>
     </Sheet>
   )
 }

@@ -33,7 +33,13 @@ export default function Home() {
             <ProfileAvatar profile={profile} size={36} />
           </Link>
         </div>
-        <h1>pocamaster</h1>
+        <h1 aria-label="pocamaster">
+          <span className="wordmark" aria-hidden>
+            <span className="wm-poca">poca</span>
+            <span className="wm-master">MASTER</span>
+            <span className="wm-star">✦</span>
+          </span>
+        </h1>
         <div className="side" />
       </header>
       <div className="topbar-space" />
@@ -115,9 +121,9 @@ export default function Home() {
         </Link>
       )}
 
-      <div className="small muted">全体コンプ率</div>
+      <div className="small muted" style={{ marginTop: 16 }}>全体コンプ率</div>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-        <span className="num" style={{ fontSize: 46, fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+        <span className="num" style={{ fontSize: 68, fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em' }}>
           {pctText(total)}
         </span>
         <span className="small muted num">

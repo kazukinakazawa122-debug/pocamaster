@@ -10,7 +10,6 @@ import CollectionEdit from './pages/CollectionEdit'
 import CardEdit from './pages/CardEdit'
 import BulkCreate from './pages/BulkCreate'
 import MyAlbums from './pages/MyAlbums'
-import MyAlbumDetail from './pages/MyAlbumDetail'
 import Settings from './pages/Settings'
 
 const TABS = [
@@ -37,7 +36,6 @@ export default function App() {
             <Route path="/collections/:id/cards/new" element={<CardEdit />} />
             <Route path="/cards/:cardId/edit" element={<CardEdit />} />
             <Route path="/albums" element={<MyAlbums />} />
-            <Route path="/albums/:id" element={<MyAlbumDetail />} />
             <Route path="/settings" element={<Settings />} />
           </Routes>
         </ErrorBoundary>
