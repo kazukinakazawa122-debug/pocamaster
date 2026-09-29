@@ -5,22 +5,20 @@ import { MEMBERS, memberOrder, type MemberId } from '../lib/members'
 import CardTile from './CardTile'
 import { Sheet } from './ui'
 
-/**
- * マイアルバムに入れるカードを選ぶ。
- * 最初は「所持中」だけを出す。未所持も出すときは、枚数が多い（5,000 枚以上）のでコレクションを選んでもらう
- */
+/** マイアルバムに入れるカードを選ぶ。入れられるのは所持中のカードだけ（本人の要望、2026-09-30） */
 export default function CardPicker({ onPick, onClose }: { onPick: (card: Card) => void; onClose: () => void }) {
   const [collectionId, setCollectionId] = useState('')
   const [member, setMember] = useState<MemberId | null>(null)
-  const [ownedOnly, setOwnedOnly] = useState(true)
 
-  const collections = useLiveQuery(() => db.collections.orderBy('releaseDate').toArray())
-  const cards = useLiveQuery(async () => {
-    if (!ownedOnly && !collectionId) return []
-    let list = collectionId ? await db.cards.where('collectionId').equals(collectionId).toArray() : await db.cards.where('status').equals('所持中').toArray()
-    if (ownedOnly) list = list.filter((c) => c.status === '所持中')
-    return list
-  }, [collectionId, ownedOnly])
+  // 所持中のカードがあるコレクションだけを選べるようにする
+  const collections = useLiveQuery(async () => {
+    const ids = new Set((await db.cards.where('status').equals('所持中').toArray()).map((c) => c.collectionId))
+    return (await db.collections.orderBy('releaseDate').toArray()).filter((c) => ids.has(c.id))
+  })
+  const cards = useLiveQuery(
+    () => db.cards.where('status').equals('所持中').filter((c) => !collectionId || c.collectionId === collectionId).toArray(),
+    [collectionId],
+  )
   const colName = new Map((collections ?? []).map((c) => [c.id, c.name]))
   const colOrder = new Map((collections ?? []).map((c, i) => [c.id, i]))
 
@@ -64,21 +62,14 @@ export default function CardPicker({ onPick, onClose }: { onPick: (card: Card) =
           </button>
         ))}
       </div>
-      <div className="chips" style={{ marginBottom: 10 }}>
-        <button className={`chip${ownedOnly ? ' on' : ''}`} onClick={() => setOwnedOnly(true)}>
-          所持中だけ
-        </button>
-        <button className={`chip${!ownedOnly ? ' on' : ''}`} onClick={() => setOwnedOnly(false)}>
-          未所持も出す
-        </button>
+      <div className="xs muted" style={{ marginBottom: 10 }}>
+        入れられるのは所持中のカードです
       </div>
 
-      {!ownedOnly && !collectionId ? (
-        <div className="empty small">未所持のカードも出すときは、上でコレクションを選んでください</div>
-      ) : !cards ? (
+      {!cards ? (
         <div className="empty small">読み込み中…</div>
       ) : shown.length === 0 ? (
-        <div className="empty small">{ownedOnly ? '所持中のカードがありません' : 'カードがありません'}</div>
+        <div className="empty small">所持中のカードがありません</div>
       ) : (
         <div className="grid-3">
           {shown.map((c) => (

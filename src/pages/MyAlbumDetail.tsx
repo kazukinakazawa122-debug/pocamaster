@@ -22,7 +22,8 @@ export function AlbumPocket({ card, onClick, size = 'thumb' }: { card?: Card; on
   const { border, background } = cardColors(card)
   return (
     <Tag type={onClick ? 'button' : undefined} className="pocket" onClick={onClick} aria-label={onClick ? memberLabel(card.memberIds) : undefined}>
-      <span className="poca" style={{ borderColor: border, background }}>
+      {/* あとで未所持に戻したカードは暗くする（入れられるのは所持中のカードだけ） */}
+      <span className={`poca${card.status === '所持中' ? '' : ' off'}`} style={{ borderColor: border, background }}>
         {url ? (
           <img src={url} alt="" decoding="async" />
         ) : (
