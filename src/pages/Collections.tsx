@@ -76,7 +76,7 @@ export default function Collections() {
 
   return (
     <div className="page">
-      <TopBar title="コレクション">
+      <TopBar title="コレクション" minive>
         <Link className="icon-btn" to="/collections/new" aria-label="コレクションを追加">
           <IconPlus size={24} />
         </Link>

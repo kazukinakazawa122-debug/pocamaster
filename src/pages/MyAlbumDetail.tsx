@@ -106,7 +106,7 @@ export default function MyAlbumDetail({ albumId: id }: { albumId: string }) {
 
   return (
     <div className="page">
-      <TopBar title={album.name}>
+      <TopBar title={album.name} minive>
         <button className="icon-btn" aria-label="アルバムの名前を変える" onClick={() => setEditing(true)}>
           <IconEdit size={22} />
         </button>

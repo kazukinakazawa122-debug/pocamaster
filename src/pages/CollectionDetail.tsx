@@ -24,43 +24,49 @@ function byMember(a: Card, b: Card): number {
 type Row = { key: string; source: string; version: string; all: Card[]; shown: Card[] }
 
 /**
- * 番号がメンバーごとに違うカード（AMUSE ウエハース2 の N-01〜N-06 など）は 1 段に 1 枚になってしまうので、
- * 同じ入手元で続いている「1 人 1 枚の段」を、メンバーが重ならない範囲で 6 枚まで 1 段にまとめる
+ * 1 段に 1 枚しかない段をまとめる（本人の要望）。
+ * - 番号がメンバーごとに違うカード（AMUSE ウエハース2 の N-01〜N-06 など）
+ * - メンバーごとに品物が違うグッズ（IVE SCOUT の Rug・Hoodie など）。データの並びで離れていても 1 段にする
+ * 同じ入手元の「1 人 1 枚の段」を、メンバーが重ならない範囲で 6 枚まで、最初に出てきた位置にまとめる
  */
 function mergeNumbered(rows: Row[]): Row[] {
-  const out: Row[] = []
-  let group: Row[] = []
-  const flush = () => {
-    if (group.length === 0) return
-    const first = group[0]
-    const last = group[group.length - 1]
-    out.push(
-      group.length === 1
-        ? first
-        : {
-            key: first.key,
-            source: first.source,
-            version: `${first.version}〜${last.version}`,
-            all: group.flatMap((r) => r.all),
-            shown: group.flatMap((r) => r.shown),
-          },
-    )
-    group = []
-  }
+  type Group = { rows: Row[]; members: Set<string> }
+  const out: (Row | Group)[] = []
+  const open = new Map<string, Group[]>() // 入手元 → まだ入るまとまり
   for (const r of rows) {
     const single = r.all.length === 1 && r.all[0].memberIds.length === 1
-    const fits =
-      single &&
-      group.length > 0 &&
-      group.length < MEMBERS.length &&
-      group[0].source === r.source &&
-      !group.some((g) => g.all[0].memberIds[0] === r.all[0].memberIds[0])
-    if (!fits) flush()
-    if (single) group.push(r)
-    else out.push(r)
+    if (!single) {
+      out.push(r)
+      continue
+    }
+    const m = r.all[0].memberIds[0]
+    const list = open.get(r.source) ?? []
+    let g = list.find((x) => x.rows.length < MEMBERS.length && !x.members.has(m))
+    if (!g) {
+      g = { rows: [], members: new Set() }
+      list.push(g)
+      open.set(r.source, list)
+      out.push(g)
+    }
+    g.rows.push(r)
+    g.members.add(m)
   }
-  flush()
-  return out
+  return out.map((x) => {
+    if (!('members' in x)) return x
+    const group = x.rows
+    if (group.length === 1) return group[0]
+    const first = group[0]
+    const last = group[group.length - 1]
+    // 番号の並び（N-01 など）なら「N-01〜N-06」、品物の名前なら「メンバーごとのグッズ」
+    const numbered = group.every((g) => /\d+$/.test(g.version))
+    return {
+      key: first.key,
+      source: first.source,
+      version: numbered ? `${first.version}〜${last.version}` : 'メンバーごとのグッズ',
+      all: group.flatMap((g) => g.all),
+      shown: group.flatMap((g) => g.shown).sort(byMember),
+    }
+  })
 }
 
 export default function CollectionDetail() {

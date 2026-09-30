@@ -6,6 +6,7 @@ import { MEMBERS, memberLabel } from '../lib/members'
 import { isComplete, memberProgress, pctText, progress, type Progress } from '../lib/stats'
 import { ProfileAvatar, ProgressBar, useImageUrl } from '../components/ui'
 import { cardColors } from '../components/CardTile'
+import { MiniveTrio } from '../components/Minive'
 
 const BACKUP_REMIND_DAYS = 14
 
@@ -34,13 +35,14 @@ export default function Home() {
           </Link>
         </div>
         <h1 aria-label="pocamaster">
+          <MiniveTrio side="left" />
           <span className="wordmark" aria-hidden>
             <span className="wm-poca">poca</span>
             <span className="wm-master">MASTER</span>
             <span className="wm-star">✦</span>
           </span>
+          <MiniveTrio side="right" />
         </h1>
-        <div className="side" />
       </header>
       <div className="topbar-space" />
     </>
