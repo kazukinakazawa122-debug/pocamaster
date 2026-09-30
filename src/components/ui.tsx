@@ -2,7 +2,6 @@ import { useEffect, useState, type ReactNode, type RefObject } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { IconChevronLeft, IconUser } from '@tabler/icons-react'
 import { db, type Profile } from '../lib/db'
-import { MEMBER_BY_ID } from '../lib/members'
 import { MiniveRun, type MiniveStyle } from './Minive'
 
 export function ProgressBar({ pct, color = 'var(--all)' }: { pct: number | null; color?: string }) {
@@ -66,12 +65,11 @@ export function useNearScreen(ref: RefObject<Element | null>, margin = 800): boo
   return near
 }
 
-/** プロフィールのアイコン（丸）。推しメンがいれば、その色の枠にする */
+/** プロフィールのアイコン（丸）。枠は推しメンの色にしない（本人の要望、2026-10-01） */
 export function ProfileAvatar({ profile, size }: { profile?: Profile; size: number }) {
   const url = useImageUrl(profile?.imageId, 'thumb')
-  const bias = profile?.biasIds[0] ? MEMBER_BY_ID[profile.biasIds[0]] : null
   return (
-    <span className="avatar" style={{ width: size, height: size, borderColor: bias?.color ?? 'var(--line)' }}>
+    <span className="avatar" style={{ width: size, height: size, borderColor: 'var(--line)' }}>
       {url ? <img src={url} alt="" /> : <IconUser size={size * 0.55} aria-hidden />}
     </span>
   )
