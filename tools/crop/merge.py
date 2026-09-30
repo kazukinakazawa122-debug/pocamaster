@@ -73,6 +73,9 @@ if os.path.exists(CARDS + "manifest.json"):
 for j in jobs:
     entries += j["images"]
 entries = [e for e in entries if e["credit"] not in ID_CREDITS]
+# 本人の確認で「その枠のカードではない」とわかった画像（代わりの画像がないので外すだけ）
+WRONG_IMAGES = {("Be Alright", ("イソ",), "Sony Music ラキドロ", "")}
+entries = [e for e in entries if (e["collection"], tuple(sorted(e["members"])), e["source"], e["version"]) not in WRONG_IMAGES]
 # 同じカードの画像が 2 つあれば、あとの方（新しい表）を使う
 uniq = {}
 for e in entries:

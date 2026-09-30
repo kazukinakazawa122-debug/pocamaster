@@ -145,21 +145,26 @@ LEESEO = {
 PAGE3 = {"ALIVE", "Be Alright", "LUCID DREAM"}
 NO_IMAGE_SOURCES = {"StarRiver"}
 # 表の画像に店の透かし（BOYCOTT・中国語の印）がある → 枠だけ
-NO_IMAGE_NO = {("leeseo", 27), ("leeseo", 70), ("leeseo", 122)}
+NO_IMAGE_NO = {("leeseo", 27), ("leeseo", 70), ("leeseo", 122), ("leeseo", 137), ("leeseo", 146)}
 TABLES = {"leeseo": ("イソ", LEESEO)}
+# 見比べページ（_review/<メンバー>_have.html）で本人が「ちがう」とした番号：アプリの画像を表の画像に入れ替える。
+# 「同じ」としたものは、大きい方（画質のよい方）を使う
+DIFF = {"leeseo": {23, 37, 43, 56, 73, 113, 152, 153, 194, 209}}
+GAIN = 1.1
 
 if __name__ == "__main__":
     S = SP + "review/"
     seed = list(csv.reader(io.StringIO(open(PROJ + "public/seed/cards.csv", encoding="utf-8").read())))[1:]
     have = {(r[0], r[1], r[2], r[3]) for r in seed}
     # いまの画像がある枠
-    imaged = set()
+    imaged = {}  # 画像がある枠 → その画像の短い辺の長さ
     for p in sorted(glob.glob(SP + "out/*.json")):
         if os.path.basename(p) == "zzzz_ida_check.json":
             continue
         for e in json.load(open(p, encoding="utf-8"))["images"]:
             if e["credit"] not in ("@powerofablink",):
-                imaged.add((e["collection"], "/".join(e["members"]), e["source"], e["version"]))
+                imaged[(e["collection"], "/".join(e["members"]), e["source"], e["version"])] = e["file"]
+    imaged = {k: min(Image.open(CARDS + f).size) for k, f in imaged.items()}
     j = Job("zzzz_ida_check")
     report = []
     for key, (name, table) in TABLES.items():
@@ -182,11 +187,20 @@ if __name__ == "__main__":
                     print("枠が見つからない", i, coll, src, ver)
                     report.append([name, i, coll, src, ver, "枠が見つからない"])
                     continue
-                if img is not None and (coll, name, src, ver) not in imaged:
+                k4 = (coll, name, src, ver)
+                if img is None:
+                    report.append([name, i, coll, src, ver, "枠あり（表の画像は使えないのでそのまま）"])
+                elif k4 not in imaged:
                     j.add(coll, [name], src, ver, img, "@idalshiro")
                     report.append([name, i, coll, src, ver, "画像を入れた"])
+                elif i in DIFF.get(key, set()):
+                    j.add(coll, [name], src, ver, img, "@idalshiro")
+                    report.append([name, i, coll, src, ver, "ちがう画像だったので入れ替えた"])
+                elif min(img.size) >= imaged[k4] * GAIN:
+                    j.add(coll, [name], src, ver, img, "@idalshiro")
+                    report.append([name, i, coll, src, ver, "同じ写真で大きい方に入れ替えた"])
                 else:
-                    report.append([name, i, coll, src, ver, "枠あり（画像はそのまま）"])
+                    report.append([name, i, coll, src, ver, "同じ写真（アプリの方が大きいのでそのまま）"])
                 continue
             for m in MEMBERS:
                 j.add(coll, [m], src, ver, img if m == name else None, "@idalshiro")
