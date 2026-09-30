@@ -1,0 +1,907 @@
+{
+"seed": [
+[
+"LUCID DREAM",
+"ユジン",
+"本体封入",
+"初回生産限定盤 E"
+],
+[
+"LUCID DREAM",
+"ガウル",
+"本体封入",
+"会場限定盤"
+],
+[
+"LUCID DREAM",
+"ユジン",
+"本体封入",
+"期間生産限定盤"
+],
+[
+"LUCID DREAM",
+"ユジン",
+"オフラインイベント",
+"8.30 OSAKA"
+],
+[
+"LUCID DREAM",
+"ガウル",
+"オフラインイベント",
+"8.30 OSAKA"
+],
+[
+"LUCID DREAM",
+"レイ",
+"オフラインイベント",
+"8.30 OSAKA"
+],
+[
+"LUCID DREAM",
+"ウォニョン",
+"オフラインイベント",
+"8.30 OSAKA"
+],
+[
+"LUCID DREAM",
+"リズ",
+"オフラインイベント",
+"8.30 OSAKA"
+],
+[
+"LUCID DREAM",
+"イソ",
+"オフラインイベント",
+"8.30 OSAKA"
+],
+[
+"LUCID DREAM",
+"ユジン",
+"HMV",
+"C"
+],
+[
+"LUCID DREAM",
+"ガウル",
+"HMV",
+"C"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"本体封入",
+"SPOILERS"
+],
+[
+"LUCID DREAM",
+"ウォニョン",
+"本体封入",
+"初回生産限定盤 I"
+],
+[
+"LUCID DREAM",
+"リズ",
+"HMV",
+"C"
+],
+[
+"LUCID DREAM",
+"ガウル",
+"オフラインイベント",
+"4.29 TOKYO"
+],
+[
+"LUCID DREAM",
+"リズ",
+"オフラインイベント",
+"4.29 TOKYO"
+],
+[
+"LUCID DREAM",
+"イソ",
+"オフラインイベント",
+"4.29 TOKYO"
+],
+[
+"LUCID DREAM",
+"ユジン",
+"タワレコ",
+"online ラキドロ"
+],
+[
+"LUCID DREAM",
+"ガウル",
+"タワレコ",
+"online ラキドロ"
+],
+[
+"LUCID DREAM",
+"レイ",
+"タワレコ",
+"online ラキドロ"
+],
+[
+"LUCID DREAM",
+"ウォニョン",
+"タワレコ",
+"online ラキドロ"
+],
+[
+"LUCID DREAM",
+"リズ",
+"タワレコ",
+"online ラキドロ"
+],
+[
+"LUCID DREAM",
+"イソ",
+"タワレコ",
+"online ラキドロ"
+],
+[
+"LUCID DREAM",
+"ユジン",
+"SWIA OSAKA exclusive",
+"4.18"
+],
+[
+"LUCID DREAM",
+"ウォニョン",
+"SWIA OSAKA exclusive",
+"4.18"
+],
+[
+"LUCID DREAM",
+"リズ",
+"SWIA OSAKA exclusive",
+"4.18"
+],
+[
+"2nd WORLD TOUR 'SHOW WHAT I AM'",
+"リズ",
+"VIP Perks Japan",
+""
+],
+[
+"REVIVE+",
+"ユジン",
+"SWIA OSAKA exclusive",
+"4.19"
+],
+[
+"REVIVE+",
+"ガウル",
+"SWIA OSAKA exclusive",
+"4.19"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"SWIA OSAKA exclusive",
+"4.19"
+],
+[
+"REVIVE+",
+"リズ",
+"SWIA OSAKA exclusive",
+"4.19"
+],
+[
+"REVIVE+",
+"ユジン",
+"オフラインイベント",
+"4.12 OSAKA"
+],
+[
+"REVIVE+",
+"レイ",
+"オフラインイベント",
+"4.12 OSAKA"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"オフラインイベント",
+"4.12 OSAKA"
+],
+[
+"REVIVE+",
+"リズ",
+"オフラインイベント",
+"4.12 OSAKA"
+],
+[
+"REVIVE+",
+"イソ",
+"オフラインイベント",
+"4.12 OSAKA"
+],
+[
+"REVIVE+",
+"ガウル",
+"本体封入",
+"LOVED IVE"
+],
+[
+"REVIVE+",
+"レイ",
+"withmuu",
+"4.0"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"本体封入",
+"LOVED IVE"
+],
+[
+"REVIVE+",
+"リズ",
+"本体封入",
+"LOVED IVE"
+],
+[
+"REVIVE+",
+"イソ",
+"本体封入",
+"LOVED IVE"
+],
+[
+"REVIVE+",
+"ユジン",
+"Sony Music",
+"B"
+],
+[
+"REVIVE+",
+"ガウル",
+"Sony Music",
+"B"
+],
+[
+"REVIVE+",
+"リズ",
+"Sony Music",
+"B"
+],
+[
+"REVIVE+",
+"ユジン",
+"Tower Records",
+"A"
+],
+[
+"REVIVE+",
+"ガウル",
+"Tower Records",
+"A"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"Tower Records",
+"A"
+],
+[
+"REVIVE+",
+"レイ",
+"Tower Records",
+"A"
+],
+[
+"REVIVE+",
+"リズ",
+"Tower Records",
+"A"
+],
+[
+"REVIVE+",
+"イソ",
+"withmuu",
+"1.0"
+],
+[
+"IVE SECRET",
+"ガウル",
+"A!SMART",
+"C"
+],
+[
+"IVE SECRET",
+"レイ",
+"A!SMART",
+"C"
+],
+[
+"IVE SECRET",
+"リズ",
+"A!SMART",
+"C"
+]
+],
+"images": [
+{
+"collection": "LUCID DREAM",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "初回生産限定盤 E",
+"file": "zzz_hires_real_0930/0000.jpg",
+"thumb": "zzz_hires_real_0930/0000_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzz_hires_real_0930/0001.jpg",
+"thumb": "zzz_hires_real_0930/0001_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "期間生産限定盤",
+"file": "zzz_hires_real_0930/0002.jpg",
+"thumb": "zzz_hires_real_0930/0002_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "8.30 OSAKA",
+"file": "zzz_hires_real_0930/0003.jpg",
+"thumb": "zzz_hires_real_0930/0003_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "8.30 OSAKA",
+"file": "zzz_hires_real_0930/0004.jpg",
+"thumb": "zzz_hires_real_0930/0004_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "8.30 OSAKA",
+"file": "zzz_hires_real_0930/0005.jpg",
+"thumb": "zzz_hires_real_0930/0005_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "8.30 OSAKA",
+"file": "zzz_hires_real_0930/0006.jpg",
+"thumb": "zzz_hires_real_0930/0006_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "8.30 OSAKA",
+"file": "zzz_hires_real_0930/0007.jpg",
+"thumb": "zzz_hires_real_0930/0007_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "8.30 OSAKA",
+"file": "zzz_hires_real_0930/0008.jpg",
+"thumb": "zzz_hires_real_0930/0008_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ユジン"
+],
+"source": "HMV",
+"version": "C",
+"file": "zzz_hires_real_0930/0009.jpg",
+"thumb": "zzz_hires_real_0930/0009_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ガウル"
+],
+"source": "HMV",
+"version": "C",
+"file": "zzz_hires_real_0930/0010.jpg",
+"thumb": "zzz_hires_real_0930/0010_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "SPOILERS",
+"file": "zzz_hires_real_0930/0011.jpg",
+"thumb": "zzz_hires_real_0930/0011_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "初回生産限定盤 I",
+"file": "zzz_hires_real_0930/0012.jpg",
+"thumb": "zzz_hires_real_0930/0012_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"リズ"
+],
+"source": "HMV",
+"version": "C",
+"file": "zzz_hires_real_0930/0013.jpg",
+"thumb": "zzz_hires_real_0930/0013_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "4.29 TOKYO",
+"file": "zzz_hires_real_0930/0014.jpg",
+"thumb": "zzz_hires_real_0930/0014_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "4.29 TOKYO",
+"file": "zzz_hires_real_0930/0015.jpg",
+"thumb": "zzz_hires_real_0930/0015_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "4.29 TOKYO",
+"file": "zzz_hires_real_0930/0016.jpg",
+"thumb": "zzz_hires_real_0930/0016_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ユジン"
+],
+"source": "タワレコ",
+"version": "online ラキドロ",
+"file": "zzz_hires_real_0930/0017.jpg",
+"thumb": "zzz_hires_real_0930/0017_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ガウル"
+],
+"source": "タワレコ",
+"version": "online ラキドロ",
+"file": "zzz_hires_real_0930/0018.jpg",
+"thumb": "zzz_hires_real_0930/0018_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"レイ"
+],
+"source": "タワレコ",
+"version": "online ラキドロ",
+"file": "zzz_hires_real_0930/0019.jpg",
+"thumb": "zzz_hires_real_0930/0019_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ウォニョン"
+],
+"source": "タワレコ",
+"version": "online ラキドロ",
+"file": "zzz_hires_real_0930/0020.jpg",
+"thumb": "zzz_hires_real_0930/0020_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"リズ"
+],
+"source": "タワレコ",
+"version": "online ラキドロ",
+"file": "zzz_hires_real_0930/0021.jpg",
+"thumb": "zzz_hires_real_0930/0021_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"イソ"
+],
+"source": "タワレコ",
+"version": "online ラキドロ",
+"file": "zzz_hires_real_0930/0022.jpg",
+"thumb": "zzz_hires_real_0930/0022_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ユジン"
+],
+"source": "SWIA OSAKA exclusive",
+"version": "4.18",
+"file": "zzz_hires_real_0930/0023.jpg",
+"thumb": "zzz_hires_real_0930/0023_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ウォニョン"
+],
+"source": "SWIA OSAKA exclusive",
+"version": "4.18",
+"file": "zzz_hires_real_0930/0024.jpg",
+"thumb": "zzz_hires_real_0930/0024_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"リズ"
+],
+"source": "SWIA OSAKA exclusive",
+"version": "4.18",
+"file": "zzz_hires_real_0930/0025.jpg",
+"thumb": "zzz_hires_real_0930/0025_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"リズ"
+],
+"source": "VIP Perks Japan",
+"version": "",
+"file": "zzz_hires_real_0930/0026.jpg",
+"thumb": "zzz_hires_real_0930/0026_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "SWIA OSAKA exclusive",
+"version": "4.19",
+"file": "zzz_hires_real_0930/0027.jpg",
+"thumb": "zzz_hires_real_0930/0027_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "SWIA OSAKA exclusive",
+"version": "4.19",
+"file": "zzz_hires_real_0930/0028.jpg",
+"thumb": "zzz_hires_real_0930/0028_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "SWIA OSAKA exclusive",
+"version": "4.19",
+"file": "zzz_hires_real_0930/0029.jpg",
+"thumb": "zzz_hires_real_0930/0029_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "SWIA OSAKA exclusive",
+"version": "4.19",
+"file": "zzz_hires_real_0930/0030.jpg",
+"thumb": "zzz_hires_real_0930/0030_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "4.12 OSAKA",
+"file": "zzz_hires_real_0930/0031.jpg",
+"thumb": "zzz_hires_real_0930/0031_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "4.12 OSAKA",
+"file": "zzz_hires_real_0930/0032.jpg",
+"thumb": "zzz_hires_real_0930/0032_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "4.12 OSAKA",
+"file": "zzz_hires_real_0930/0033.jpg",
+"thumb": "zzz_hires_real_0930/0033_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "4.12 OSAKA",
+"file": "zzz_hires_real_0930/0034.jpg",
+"thumb": "zzz_hires_real_0930/0034_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "4.12 OSAKA",
+"file": "zzz_hires_real_0930/0035.jpg",
+"thumb": "zzz_hires_real_0930/0035_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzz_hires_real_0930/0036.jpg",
+"thumb": "zzz_hires_real_0930/0036_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "withmuu",
+"version": "4.0",
+"file": "zzz_hires_real_0930/0037.jpg",
+"thumb": "zzz_hires_real_0930/0037_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzz_hires_real_0930/0038.jpg",
+"thumb": "zzz_hires_real_0930/0038_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzz_hires_real_0930/0039.jpg",
+"thumb": "zzz_hires_real_0930/0039_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzz_hires_real_0930/0040.jpg",
+"thumb": "zzz_hires_real_0930/0040_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "Sony Music",
+"version": "B",
+"file": "zzz_hires_real_0930/0041.jpg",
+"thumb": "zzz_hires_real_0930/0041_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "Sony Music",
+"version": "B",
+"file": "zzz_hires_real_0930/0042.jpg",
+"thumb": "zzz_hires_real_0930/0042_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "Sony Music",
+"version": "B",
+"file": "zzz_hires_real_0930/0043.jpg",
+"thumb": "zzz_hires_real_0930/0043_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "Tower Records",
+"version": "A",
+"file": "zzz_hires_real_0930/0044.jpg",
+"thumb": "zzz_hires_real_0930/0044_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "Tower Records",
+"version": "A",
+"file": "zzz_hires_real_0930/0045.jpg",
+"thumb": "zzz_hires_real_0930/0045_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "Tower Records",
+"version": "A",
+"file": "zzz_hires_real_0930/0046.jpg",
+"thumb": "zzz_hires_real_0930/0046_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Tower Records",
+"version": "A",
+"file": "zzz_hires_real_0930/0047.jpg",
+"thumb": "zzz_hires_real_0930/0047_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "Tower Records",
+"version": "A",
+"file": "zzz_hires_real_0930/0048.jpg",
+"thumb": "zzz_hires_real_0930/0048_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "withmuu",
+"version": "1.0",
+"file": "zzz_hires_real_0930/0049.jpg",
+"thumb": "zzz_hires_real_0930/0049_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ガウル"
+],
+"source": "A!SMART",
+"version": "C",
+"file": "zzz_hires_real_0930/0050.jpg",
+"thumb": "zzz_hires_real_0930/0050_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "A!SMART",
+"version": "C",
+"file": "zzz_hires_real_0930/0051.jpg",
+"thumb": "zzz_hires_real_0930/0051_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"リズ"
+],
+"source": "A!SMART",
+"version": "C",
+"file": "zzz_hires_real_0930/0052.jpg",
+"thumb": "zzz_hires_real_0930/0052_t.jpg",
+"credit": "本人の写真"
+}
+]
+}
