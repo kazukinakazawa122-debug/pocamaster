@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import { IconCards, IconSettings } from '@tabler/icons-react'
 import { AlbumIcon, IveLogoIcon } from './components/TabIcons'
@@ -19,8 +20,34 @@ const TABS = [
   { to: '/settings', label: '設定', Icon: IconSettings, end: false },
 ]
 
+/**
+ * iPhone で文字を入力するとキーボードが出て、画面（見えている範囲）がずれる。
+ * そのままだと上のバーが画面の外へ行き、下のタブがキーボードの上に浮いてくるので、
+ * 見えている範囲の上端に上のバーを合わせ、キーボードが出ている間は下のタブを隠す
+ */
+function useKeyboardFix() {
+  useEffect(() => {
+    const vv = window.visualViewport
+    if (!vv) return
+    const root = document.documentElement
+    const update = () => {
+      root.style.setProperty('--vv-top', `${Math.max(0, vv.offsetTop)}px`)
+      const keyboard = window.innerHeight - vv.height > 120
+      root.classList.toggle('kb-open', keyboard)
+    }
+    update()
+    vv.addEventListener('resize', update)
+    vv.addEventListener('scroll', update)
+    return () => {
+      vv.removeEventListener('resize', update)
+      vv.removeEventListener('scroll', update)
+    }
+  }, [])
+}
+
 export default function App() {
   const { pathname } = useLocation()
+  useKeyboardFix()
   return (
     <UndoProvider>
       <div className="app">

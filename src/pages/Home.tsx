@@ -10,8 +10,18 @@ import { MiniveTrio } from '../components/Minive'
 
 const BACKUP_REMIND_DAYS = 14
 
+type HomeData = {
+  collections: Collection[]
+  cards: Card[]
+  lastBackupAt?: number
+  profile?: Profile
+  history: { cardId: string; changedAt: number }[]
+}
+// ほかの画面から戻ってきたとき「読み込み中…」で待たせないよう、前回の内容をすぐ出す（裏で読み込み直す）
+let lastData: HomeData | undefined
+
 export default function Home() {
-  const data = useLiveQuery(async () => {
+  const data = useLiveQuery<HomeData | undefined, HomeData | undefined>(async () => {
     const [collections, cards, lastBackupAt, profile, history] = await Promise.all([
       db.collections.toArray(),
       db.cards.toArray(),
@@ -20,8 +30,9 @@ export default function Home() {
       // 最近「所持中」にした記録（同じカードを何度も切り替えることがあるので多めに取る）
       db.statusHistory.orderBy('changedAt').reverse().filter((h) => h.to === '所持中').limit(200).toArray(),
     ])
-    return { collections, cards, lastBackupAt, profile, history }
-  })
+    lastData = { collections, cards, lastBackupAt, profile, history }
+    return lastData
+  }, [], lastData)
   if (!data) return <div className="page empty">読み込み中…</div>
   const { collections, cards, lastBackupAt, profile, history = [] } = data
 
