@@ -68,7 +68,18 @@ export default function App() {
         </ErrorBoundary>
         <nav className="tabbar">
           {TABS.map(({ to, label, Icon, end }) => (
-            <NavLink key={to} to={to} end={end}>
+            <NavLink
+              key={to}
+              to={to}
+              end={end}
+              onClick={(e) => {
+                // いま開いている画面のタブをもう一度押したら、一番上までスクロールする
+                if (pathname === to) {
+                  e.preventDefault()
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
+              }}
+            >
               <span className="tab-ic">
                 <Icon size={24} stroke={1.6} aria-hidden />
               </span>

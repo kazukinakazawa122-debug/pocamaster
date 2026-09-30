@@ -9,7 +9,13 @@ import MyAlbumDetail from './MyAlbumDetail'
 // 同時に 2 回呼ばれても 1 冊しか作らない
 let ensuring: Promise<string> | null = null
 function ensureAlbum(): Promise<string> {
-  ensuring ??= (async () => (await db.myAlbums.orderBy('createdAt').first())?.id ?? (await createMyAlbum('マイアルバム')))().finally(() => {
+  ensuring ??= (async () => {
+    const first = await db.myAlbums.orderBy('createdAt').first()
+    if (!first) return createMyAlbum('マイアルバム')
+    // 前は「マイアルバム 1」のように番号をつけていた（何冊も作れたころ）。1 冊だけになったので番号を外す
+    if (/^マイアルバム \d+$/.test(first.name)) await db.myAlbums.update(first.id, { name: 'マイアルバム' })
+    return first.id
+  })().finally(() => {
     ensuring = null
   })
   return ensuring

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { HashRouter } from 'react-router-dom'
 import { registerSW } from 'virtual:pwa-register'
 import App from './App'
+import '@fontsource/fredoka/latin-600.css'
 import './styles.css'
 
 // iPhone がデータを勝手に消さないようにお願いする（対応していない環境では何もしない）

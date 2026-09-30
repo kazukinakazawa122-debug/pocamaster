@@ -72,7 +72,7 @@ export default function Settings() {
 
   return (
     <div className="page">
-      <TopBar title="設定" minive="mix" />
+      <TopBar title="設定" minive="face" />
 
       <div className="section-title">プロフィール</div>
       <ProfileEditor />

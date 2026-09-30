@@ -126,7 +126,7 @@ export default function Home() {
     .slice(0, 3)
   const colById = new Map(collections.map((c) => [c.id, c]))
 
-  // 集め中のアルバム（コレクションの画面で「ホームに出す」を押したもの）。発売日の新しい順
+  // 収集中のアルバム（コレクションの画面で「ホームに出す」を押したもの）。発売日の新しい順
   const pinned = collections
     .filter((c) => c.pinned)
     .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate))
@@ -163,7 +163,7 @@ export default function Home() {
         コンプ済みコレクション <span className="num">{completed.length} / {collections.length}</span>
       </div>
 
-      <div className="section-title">集め中のアルバム</div>
+      <div className="section-title">収集中のアルバム</div>
       {pinned.length > 0 ? (
         <div className="h-scroll">
           {pinned.map(({ col, p }) => (
