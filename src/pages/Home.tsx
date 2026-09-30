@@ -149,12 +149,10 @@ export default function Home() {
         </Link>
       )}
 
-      <div className="small muted" style={{ marginTop: 16 }}>全体コンプ率</div>
+      <div className="total-title">全体コンプ率</div>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-        <span className="num" style={{ fontSize: 68, fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em' }}>
-          {pctText(total)}
-        </span>
-        <span className="small muted num">
+        <span className="total-pct">{pctText(total)}</span>
+        <span className="small muted">
           {total.owned} / {total.total} 種類
         </span>
       </div>
