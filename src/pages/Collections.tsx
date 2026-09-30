@@ -17,6 +17,17 @@ const SHORT: Record<string, string> = {
   '個人（ソロ）': 'ソロ',
 }
 
+// 「すべて」のときの並び：アルバム（韓国盤・日本盤をまとめて）→ シーグリ → ファンミ → ツアー → そのほか。
+// 同じグループの中は発売日の新しい順（本人の要望、2026-09-30）
+const GROUP: Record<string, number> = {
+  'アルバム（韓国盤）': 0,
+  'アルバム（日本盤）': 0,
+  シーズングリーティング: 1,
+  'ファンミ・ファンコン': 2,
+  'ライブ・ツアー': 3,
+}
+const groupOf = (c: Collection) => GROUP[c.type] ?? 4
+
 interface ListData {
   collections: Collection[]
   byCollection: Map<string, Progress>
@@ -72,7 +83,7 @@ export default function Collections() {
 
   const list = data.collections
     .filter((c) => filter === 'すべて' || c.type === filter)
-    .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate) || b.createdAt - a.createdAt)
+    .sort((a, b) => groupOf(a) - groupOf(b) || b.releaseDate.localeCompare(a.releaseDate) || b.createdAt - a.createdAt)
 
   return (
     <div className="page">

@@ -218,7 +218,7 @@ a { color: inherit; text-decoration: none; }
 .minive-face img { height: 30px; margin-right: 3px; border-radius: 3px; }
 /* ホーム：ロゴの左右に 3 人ずつ */
 .minive-trio { display: inline-flex; align-items: flex-end; flex: none; }
-.minive-trio img { display: block; height: 26px; width: auto; margin: 0 -2px; }
+.minive-trio img { display: block; height: 26px; width: auto; }
 /* 幅の狭い iPhone では、左のプロフィールのアイコンに重ならないよう少し小さく */
 @media (max-width: 385px) { .minive-trio img { height: 22px; } }
 .topbar.home h1 { overflow: visible; }
