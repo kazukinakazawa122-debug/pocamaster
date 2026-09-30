@@ -208,45 +208,6 @@ export default function Home() {
         </Link>
       )}
 
-      <div className="total-title" style={sel ? { color: sel.text } : undefined}>{sel ? `${sel.name}のコンプ率` : '全体コンプ率'}</div>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-        <span className="total-pct" style={sel ? { color: sel.color } : undefined}>{pctText(total)}</span>
-        <span className="small muted">
-          {total.owned} / {total.total} 種類
-        </span>
-      </div>
-      <div style={{ margin: '8px 0' }}>
-        <ProgressBar pct={total.pct} color={sel?.color} />
-      </div>
-      <div className="small muted">
-        コンプ済みコレクション <span className="num">{completed.length} / {collections.length}</span>
-      </div>
-
-      {/* 全体コンプ率のすぐ下にメンバー別（「すべて」のときだけ。押すとそのメンバーを選ぶ） */}
-      {!sel && (
-      <>
-      <div className="section-title">メンバー別</div>
-      <div className="stack">
-        {MEMBERS.map((m) => {
-          const p = memberProgress(allCards, m.id)
-          return (
-            <button key={m.id} onClick={() => setMember(m.id)} style={{ display: 'flex', alignItems: 'center', gap: 10, border: 'none', background: 'none', padding: 0, width: '100%', textAlign: 'left' }}>
-              <span className="small" style={{ width: 76, color: m.text, fontWeight: 700 }}>
-                {m.name}
-              </span>
-              <div style={{ flex: 1 }}>
-                <ProgressBar pct={p.pct} color={m.color} />
-              </div>
-              <span className="small num" style={{ width: 40, textAlign: 'right' }}>
-                {pctText(p)}
-              </span>
-            </button>
-          )
-        })}
-      </div>
-      </>
-      )}
-
       <div className="section-title">収集中のアルバム</div>
       {pinned.length > 0 ? (
         <div className="h-scroll">
@@ -287,6 +248,49 @@ export default function Home() {
             <AlmostRow key={col.id} col={col} p={p} />
           ))}
         </>
+      )}
+
+      {/* 全体コンプ率とメンバー別は下の方に（本人の要望、2026-10-01） */}
+      <div className="total-title" style={sel ? { color: sel.text } : undefined}>{sel ? `${sel.name}のコンプ率` : '全体コンプ率'}</div>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+        <span className="total-pct" style={sel ? { color: sel.color } : undefined}>
+          {total.pct === null ? '—' : total.pct}
+          {total.pct !== null && <span className="pct-sign">%</span>}
+        </span>
+        <span className="small muted">
+          {total.owned} / {total.total} 種類
+        </span>
+      </div>
+      <div style={{ margin: '8px 0' }}>
+        <ProgressBar pct={total.pct} color={sel?.color} />
+      </div>
+      <div className="small muted">
+        コンプ済みコレクション <span className="num">{completed.length} / {collections.length}</span>
+      </div>
+
+      {/* 全体コンプ率のすぐ下にメンバー別（「すべて」のときだけ。押すとそのメンバーを選ぶ） */}
+      {!sel && (
+      <>
+      <div className="section-title">メンバー別</div>
+      <div className="stack">
+        {MEMBERS.map((m) => {
+          const p = memberProgress(allCards, m.id)
+          return (
+            <button key={m.id} onClick={() => setMember(m.id)} style={{ display: 'flex', alignItems: 'center', gap: 10, border: 'none', background: 'none', padding: 0, width: '100%', textAlign: 'left' }}>
+              <span className="small" style={{ width: 76, color: m.text, fontWeight: 700 }}>
+                {m.name}
+              </span>
+              <div style={{ flex: 1 }}>
+                <ProgressBar pct={p.pct} color={m.color} />
+              </div>
+              <span className="member-pct" style={{ width: 44, textAlign: 'right' }}>
+                {pctText(p)}
+              </span>
+            </button>
+          )
+        })}
+      </div>
+      </>
       )}
 
       {completed.length > 0 && (
