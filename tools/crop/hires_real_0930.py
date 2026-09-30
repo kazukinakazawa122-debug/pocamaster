@@ -6,6 +6,10 @@
 - 同じ写真だと目で確かめたもの（OK）だけ。位置：review/0930/real_photos.json（マスの位置・いちばん似ている枠）
 - 2 回目（本人「切り取られていない画像もある」）：残りのマスも重ねる方法で照らし合わせ、同じ写真だと目で確かめた 15 枚を足した
   （review/0930/real_photos_extra.json、マスの番号 → 枠）
+- 3 回目（本人「緑と赤がまじる写真の赤は同じシリーズ」「12 枚の写真は SWIA TOKYO 6.24-1・2」）：同じシリーズでまだ使っていないメンバーの枠の画像と
+  1 つずつ重ね、いちばん合うものに決めて、目で確かめた 41 枚を足した（メンバーは顔では決めていない）
+- 4 回目：カードが小さく写っていた写真 3 枚（LUCID DREAM 通常盤ユニットトレカ 6・メンバーソロジャケット盤 6・期間生産限定盤 6）を足した。
+  36〜41 の写真はシリーズが決まらず未使用
 - 確認用：out/real_0930_check.jpg（元の写真に切り取り範囲を描いたもの）
 """
 import glob, json
@@ -37,7 +41,7 @@ def ncc(img, tpl):
     return num / (np.sqrt(np.maximum(var, 1e-6)) * tn)
 
 
-def locate(photo, cell, old):
+def locate(photo, cell, old, lo=0.7, hi=1.15):
     """cell の周りで old（カード全体）がいちばん重なる範囲を探す。戻り値：(x0, y0, x1, y1), スコア"""
     cw, ch = cell[2] - cell[0], cell[3] - cell[1]
     pad = int(max(cw, ch) * 0.25)
@@ -49,7 +53,7 @@ def locate(photo, cell, old):
     f = 160 / max(cw, 1)
     g = gray(region.resize((max(1, int(region.width * f)), max(1, int(region.height * f)))))
     best = (-2, None)
-    for w in np.linspace(0.7 * cw, 1.15 * cw, 19):
+    for w in np.linspace(lo * cw, hi * cw, 19):
         tw = int(w * f); th = int(w * ar * f)
         if tw < 20 or th >= g.shape[0] or tw >= g.shape[1]:
             continue
@@ -88,8 +92,7 @@ if __name__ == "__main__":
         if "real_0930" in p:
             continue
         for e in json.load(open(p, encoding="utf-8"))["images"]:
-            if len(e["members"]) == 1:
-                cur[(e["collection"], e["members"][0], e["source"], e["version"])] = e["file"]
+            cur[(e["collection"], "/".join(e["members"]), e["source"], e["version"])] = e["file"]
     extra = {int(k): v for k, v in json.load(open(SP + "review/0930/real_photos_extra.json", encoding="utf-8")).items()}
     j = Job("zzz_hires_real_0930"); ims = {}; found = {}
     for n in sorted(OK | set(extra)):
@@ -98,10 +101,10 @@ if __name__ == "__main__":
             ims[r["file"]] = Image.open(D + r["file"]).convert("RGB")
         k = tuple(extra[n]) if n in extra else tuple(r["cands"][0][0])
         old = Image.open(CARDS + cur[k]).convert("RGB")
-        box, sc = locate(ims[r["file"]], r["box"], old)
+        box, sc = locate(ims[r["file"]], r["box"], old, lo=0.45 if n < 18 else 0.7, hi=1.1 if n < 18 else 1.15)
         found[n] = (box, sc)
         print(n, k[1], k[2], k[3], box, round(sc, 3))
         if box and sc >= 0.5 and min(box[2] - box[0], box[3] - box[1]) > min(old.size):
-            j.add(k[0], [k[1]], k[2], k[3], ims[r["file"]].crop(box), "本人の写真")
+            j.add(k[0], k[1].split("/"), k[2], k[3], ims[r["file"]].crop(box), "本人の写真")
     j.save()
     json.dump({str(n): v for n, v in found.items()}, open(SP + "review/0930/real_photos_found.json", "w"))
