@@ -233,14 +233,14 @@ a { color: inherit; text-decoration: none; }
 .topbar.home h1 { position: absolute; left: 0; right: 0; bottom: 6px; top: calc(var(--safe-top) + 8px); pointer-events: none; }
 .topbar.home .side { position: relative; z-index: 1; }
 
-/* ホームの全体コンプ率（本人の要望、2026-10-01：数字をもっと美しく）。
-   見出しは小さめで字間を広げ、数字は細身のセリフ体（iPhone の Didot・Bodoni）にする */
-.total-title { margin-top: 28px; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: var(--text-2); }
+/* ホームの全体コンプ率（本人の要望、2026-10-01）：IVE のロゴ・I've IVE のジャケットの文字に近い、幾何学的な太いゴシック体
+   （iPhone の Futura。パソコンでは Century Gothic などで代わりに出る）。見出しも同じ書体で字間を広げる */
+.total-title { margin-top: 28px; font-family: 'Futura', 'Avenir Next', 'Century Gothic', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: var(--text-2); }
 .total-pct {
-  font-family: 'Didot', 'Bodoni 72', 'Bodoni MT', 'Playfair Display', 'Georgia', serif;
-  font-size: 60px; font-weight: 400; line-height: 1; letter-spacing: -0.01em; color: var(--all);
+  font-family: 'Futura', 'Avenir Next', 'Century Gothic', 'Montserrat', sans-serif;
+  font-size: 60px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; color: var(--all);
   font-variant-numeric: lining-nums;
 }
 .total-pct .pct-sign { font-size: 0.5em; margin-left: 2px; }
 /* メンバー別の % も同じ書体に */
-.member-pct { font-family: 'Didot', 'Bodoni 72', 'Bodoni MT', 'Georgia', serif; font-size: 17px; font-weight: 400; }
+.member-pct { font-family: 'Futura', 'Avenir Next', 'Century Gothic', sans-serif; font-size: 15px; font-weight: 700; }
