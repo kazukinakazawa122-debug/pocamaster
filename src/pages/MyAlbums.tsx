@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { createMyAlbum, db } from '../lib/db'
+import { MiniveLoading } from '../components/Minive'
 import MyAlbumDetail from './MyAlbumDetail'
 
 /**
@@ -30,6 +31,6 @@ export default function MyAlbums() {
       alive = false
     }
   }, [])
-  if (!id) return <div className="page empty">読み込み中…</div>
+  if (!id) return <MiniveLoading />
   return <MyAlbumDetail albumId={id} />
 }

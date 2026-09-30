@@ -26,6 +26,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,woff2,csv}'],
+        // 手元の確認ページ（public/_review、Git に入れない）はアプリに含めない
+        globIgnores: ['**/_review/**'],
       },
     }),
   ],

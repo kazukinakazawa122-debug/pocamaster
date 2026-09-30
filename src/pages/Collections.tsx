@@ -4,6 +4,7 @@ import { Link, useNavigationType, useSearchParams } from 'react-router-dom'
 import { IconCrown, IconPhoto, IconPlus } from '@tabler/icons-react'
 import { COLLECTION_TYPES, db, type Collection } from '../lib/db'
 import { isComplete, pctText, type Progress } from '../lib/stats'
+import { MiniveLoading } from '../components/Minive'
 import { ProgressBar, TopBar, useImageUrl } from '../components/ui'
 
 const FILTERS = ['すべて', ...COLLECTION_TYPES] as const
@@ -79,7 +80,7 @@ export default function Collections() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  if (!data) return <div className="page empty">読み込み中…</div>
+  if (!data) return <MiniveLoading />
 
   const list = data.collections
     .filter((c) => filter === 'すべて' || c.type === filter)
@@ -92,7 +93,8 @@ export default function Collections() {
           <IconPlus size={24} />
         </Link>
       </TopBar>
-      <div className="chips" style={{ marginBottom: 8 }}>
+      {/* 下にスクロールしても「すべて・韓国盤…」が上に残るよう固定する（本人の要望、2026-10-01） */}
+      <div className="chips sticky-chips">
         {FILTERS.map((f) => (
           <button key={f} className={`chip${filter === f ? ' on' : ''}`} onClick={() => setFilter(f)}>
             {SHORT[f] ?? f}

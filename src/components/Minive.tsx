@@ -40,3 +40,17 @@ export function MiniveTrio({ side }: { side: 'left' | 'right' }) {
     </span>
   )
 }
+
+/** 読み込み中の画面：画面の真ん中で、立ち姿の 6 人が順にはねる（本人の要望、2026-10-01） */
+export function MiniveLoading({ text = '読み込み中' }: { text?: string }) {
+  return (
+    <div className="page loading" role="status">
+      <div className="loading-minive" aria-hidden>
+        {ORDER.map((n) => (
+          <img key={n} src={`${BASE}flat/${n}.png`} alt="" />
+        ))}
+      </div>
+      <div className="loading-text">{text}…</div>
+    </div>
+  )
+}

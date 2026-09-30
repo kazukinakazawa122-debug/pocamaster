@@ -5,6 +5,7 @@ import { ALBUM_PAGE_SIZE, db, type Card, type MyAlbum } from '../lib/db'
 import { memberLabel } from '../lib/members'
 import { cardColors } from '../components/CardTile'
 import CardPicker from '../components/CardPicker'
+import { MiniveLoading } from '../components/Minive'
 import { Sheet, TopBar, useImageUrl } from '../components/ui'
 
 /** バインダーのポケット 1 つ。カードがなければ点線の空きポケット */
@@ -78,7 +79,7 @@ export default function MyAlbumDetail({ albumId: id }: { albumId: string }) {
     if (pending === null && page > pageCount - 1) goTo(pageCount - 1)
   })
 
-  if (!data) return <div className="page empty">読み込み中…</div>
+  if (!data) return <MiniveLoading />
   const { album, cardById, colName } = data
   if (!album) return <div className="page empty">アルバムが見つかりません</div>
 

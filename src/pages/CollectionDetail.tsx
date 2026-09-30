@@ -8,6 +8,7 @@ import { memberProgress, pctText, progress } from '../lib/stats'
 import { ProgressBar, TopBar } from '../components/ui'
 import CardTile from '../components/CardTile'
 import CardSheet from '../components/CardSheet'
+import { MiniveLoading } from '../components/Minive'
 import { useUndo } from '../components/Undo'
 
 const STATUS_FILTERS = ['すべて', '未所持', '所持中'] as const
@@ -93,7 +94,7 @@ export default function CollectionDetail() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [id])
 
-  if (!data) return <div className="page empty">読み込み中…</div>
+  if (!data) return <MiniveLoading />
   const { col, cards } = data
   if (!col) return <div className="page empty">コレクションが見つかりません</div>
 

@@ -1,13 +1,13 @@
-import { useSyncExternalStore } from 'react'
+import { useState, useSyncExternalStore } from 'react'
 import { liveQuery } from 'dexie'
 import { Link } from 'react-router-dom'
 import { IconAlertTriangle, IconCrown, IconPhoto } from '@tabler/icons-react'
 import { db, getSetting, type Card, type Collection, type Profile } from '../lib/db'
-import { MEMBERS, memberLabel } from '../lib/members'
+import { MEMBERS, MEMBER_BY_ID, memberLabel, type MemberId } from '../lib/members'
 import { isComplete, memberProgress, pctText, progress, type Progress } from '../lib/stats'
 import { ProfileAvatar, ProgressBar, useImageUrl } from '../components/ui'
 import { cardColors } from '../components/CardTile'
-import { MiniveTrio } from '../components/Minive'
+import { MiniveTrio, MiniveLoading } from '../components/Minive'
 
 const BACKUP_REMIND_DAYS = 14
 
@@ -63,10 +63,34 @@ loadHome().then((v) => {
   listeners.forEach((f) => f())
 })
 
+const MEMBER_KEY = 'homeMember'
+function loadMember(): MemberId | 'all' {
+  try {
+    const v = localStorage.getItem(MEMBER_KEY)
+    return v && v in MEMBER_BY_ID ? (v as MemberId) : 'all'
+  } catch {
+    return 'all'
+  }
+}
+
 export default function Home() {
   const data = useSyncExternalStore(subscribe, () => lastData)
-  if (!data) return <div className="page empty">読み込み中…</div>
-  const { collections, cards, lastBackupAt, profile, history = [] } = data
+  // 選んでいるメンバー（本人の要望、2026-10-01）。「すべて」か 1 人。次に開いたときも同じにする
+  const [member, setMemberState] = useState<MemberId | 'all'>(loadMember)
+  const setMember = (m: MemberId | 'all') => {
+    setMemberState(m)
+    try {
+      localStorage.setItem(MEMBER_KEY, m)
+    } catch {
+      /* 保存できなくても表示は変える */
+    }
+  }
+  if (!data) return <MiniveLoading />
+  const { collections, lastBackupAt, profile, history = [] } = data
+  // メンバーを選んでいるときは、そのメンバーが写っているカード（ソロ・ユニット両方）だけで数える
+  const allCards = data.cards
+  const cards = member === 'all' ? allCards : allCards.filter((c) => c.memberIds.includes(member))
+  const sel = member === 'all' ? null : MEMBER_BY_ID[member]
 
   // 上のバー：左にプロフィールのアイコン（押すと設定のプロフィールへ）、真ん中にアプリの名前
   const header = (
@@ -88,6 +112,22 @@ export default function Home() {
         </h1>
       </header>
       <div className="topbar-space" />
+      {/* タイトルバーの下にメンバーを選ぶボタン。スクロールしても見える */}
+      <div className="chips sticky-chips">
+        <button className={`chip${member === 'all' ? ' on' : ''}`} onClick={() => setMember('all')}>
+          すべて
+        </button>
+        {MEMBERS.map((m) => (
+          <button
+            key={m.id}
+            className={`chip member${member === m.id ? ' on' : ''}`}
+            style={member === m.id ? { background: m.color, borderColor: m.color, color: m.on } : { color: m.text }}
+            onClick={() => setMember(m.id)}
+          >
+            {m.name}
+          </button>
+        ))}
+      </div>
     </>
   )
 
@@ -123,7 +163,7 @@ export default function Home() {
     .map((col) => ({ col, at: Math.max(...(byCollection.get(col.id) ?? []).map((c) => c.statusChangedAt)) }))
     .sort((a, b) => b.at - a.at)
 
-  // 最近ゲットしたカード：いまも所持中のものだけ、新しい順に 15 枚
+  // 最近入手したカード：いまも所持中のものだけ、新しい順に 15 枚
   const cardById = new Map(cards.map((c) => [c.id, c]))
   const seen = new Set<string>()
   const recent: { card: Card; at: number }[] = []
@@ -148,6 +188,8 @@ export default function Home() {
     .filter((c) => c.pinned)
     .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate))
     .map((col) => ({ col, p: progress(byCollection.get(col.id) ?? []) }))
+    // メンバーを選んでいるときは、そのメンバーのカードがないコレクションは出さない
+    .filter(({ p }) => p.total > 0)
   // お気に入りのカード（コレクションの並び順）
   const favorites = cards.filter((c) => c.favorite).sort((a, b) => a.order - b.order)
 
@@ -166,19 +208,44 @@ export default function Home() {
         </Link>
       )}
 
-      <div className="total-title">全体コンプ率</div>
+      <div className="total-title" style={sel ? { color: sel.text } : undefined}>{sel ? `${sel.name}のコンプ率` : '全体コンプ率'}</div>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-        <span className="total-pct">{pctText(total)}</span>
+        <span className="total-pct" style={sel ? { color: sel.color } : undefined}>{pctText(total)}</span>
         <span className="small muted">
           {total.owned} / {total.total} 種類
         </span>
       </div>
       <div style={{ margin: '8px 0' }}>
-        <ProgressBar pct={total.pct} />
+        <ProgressBar pct={total.pct} color={sel?.color} />
       </div>
       <div className="small muted">
         コンプ済みコレクション <span className="num">{completed.length} / {collections.length}</span>
       </div>
+
+      {/* 全体コンプ率のすぐ下にメンバー別（「すべて」のときだけ。押すとそのメンバーを選ぶ） */}
+      {!sel && (
+      <>
+      <div className="section-title">メンバー別</div>
+      <div className="stack">
+        {MEMBERS.map((m) => {
+          const p = memberProgress(allCards, m.id)
+          return (
+            <button key={m.id} onClick={() => setMember(m.id)} style={{ display: 'flex', alignItems: 'center', gap: 10, border: 'none', background: 'none', padding: 0, width: '100%', textAlign: 'left' }}>
+              <span className="small" style={{ width: 76, color: m.text, fontWeight: 700 }}>
+                {m.name}
+              </span>
+              <div style={{ flex: 1 }}>
+                <ProgressBar pct={p.pct} color={m.color} />
+              </div>
+              <span className="small num" style={{ width: 40, textAlign: 'right' }}>
+                {pctText(p)}
+              </span>
+            </button>
+          )
+        })}
+      </div>
+      </>
+      )}
 
       <div className="section-title">収集中のアルバム</div>
       {pinned.length > 0 ? (
@@ -204,7 +271,7 @@ export default function Home() {
 
       {recent.length > 0 && (
         <>
-          <div className="section-title">最近ゲットしたカード</div>
+          <div className="section-title">最近入手したカード</div>
           <div className="h-scroll">
             {recent.map(({ card, at }) => (
               <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} at={at} />
@@ -221,26 +288,6 @@ export default function Home() {
           ))}
         </>
       )}
-
-      <div className="section-title">メンバー別</div>
-      <div className="stack">
-        {MEMBERS.map((m) => {
-          const p = memberProgress(cards, m.id)
-          return (
-            <div key={m.id} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span className="small" style={{ width: 76, color: m.text, fontWeight: 700 }}>
-                {m.name}
-              </span>
-              <div style={{ flex: 1 }}>
-                <ProgressBar pct={p.pct} color={m.color} />
-              </div>
-              <span className="small num" style={{ width: 40, textAlign: 'right' }}>
-                {pctText(p)}
-              </span>
-            </div>
-          )
-        })}
-      </div>
 
       {completed.length > 0 && (
         <>
