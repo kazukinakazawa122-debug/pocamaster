@@ -31,9 +31,11 @@ function useKeyboardFix() {
     if (!vv) return
     const root = document.documentElement
     const update = () => {
-      root.style.setProperty('--vv-top', `${Math.max(0, vv.offsetTop)}px`)
       const keyboard = window.innerHeight - vv.height > 120
       root.classList.toggle('kb-open', keyboard)
+      // 上のバーを動かすのはキーボードが出ているときだけ。一番下でさらに引っぱったとき（はね返り）にも
+      // 見えている範囲がずれるので、いつも動かすとバーが下がってしまう（本人の報告、2026-09-30）
+      root.style.setProperty('--vv-top', keyboard ? `${Math.max(0, vv.offsetTop)}px` : '0px')
     }
     update()
     vv.addEventListener('resize', update)

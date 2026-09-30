@@ -57,7 +57,7 @@ export default function Home() {
       <header className="topbar home">
         <div className="side">
           <Link to="/settings" aria-label="プロフィール">
-            <ProfileAvatar profile={profile} size={36} />
+            <ProfileAvatar profile={profile} size={44} />
           </Link>
         </div>
         <h1 aria-label="pocamaster">
