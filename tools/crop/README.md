@@ -21,6 +21,7 @@
 | albums_idalshiro.py | @idalshiro のメンバー別の全トレカ一覧（`_nonalbum/idalshiro/`）から、メンバーごとに違うグッズなどを足す |
 | albums_solo.py | @idalshiro の solo merch（`_nonalbum/idalshiro/solo/`）から、メンバー個人の広告・イベントのトレカを個人のコレクションに入れる |
 | hires_ida.py | 画質を上げる：@idalshiro のメンバー別の表から、同じ写真の大きい画像に差し替える（`ida_drop.json` は目で見て外したもの） |
+| albums_ida_check.py | 本人が確認ページで「ない」とした @idalshiro のカードを、ラベルに合わせて枠・画像にする（`review/` に番号と位置） |
 | jackets.py | コレクションの表紙（アルバムのジャケット）の ZIP を作る。`pocamaster-images/_jackets/` に「コレクション名.jpg」で入れて実行 → `pocamaster-jackets.zip` |
 | hires.py | 画質を上げる：いまの画像と同じ写真を店舗ごとの表から探し、大きい画像に差し替える（枠はそのまま） |
 | merge.py | すべてをまとめて cards.csv と ZIP を作る。`ID_CREDITS` の資料（画像に ID の透かしがあるもの）の画像は入れない |
