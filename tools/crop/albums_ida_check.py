@@ -37,9 +37,9 @@ LEESEO = {
     31: ("After LIKE", "Broadcast", "3", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
     33: ("I've IVE", "Vinyl", "", N),
     34: ("I've IVE", "US Exclusive", "", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
-    37: ("I've IVE", "Naver Live", "", H),
+    37: ("I've IVE", "Naver Live", "", X),  # 何人かのカード → GROUPS
     38: ("I've IVE", "Naver Live", "2", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
-    43: ("I've MINE", "Broadcast", "Baddie", H),
+    43: ("I've MINE", "Broadcast", "Baddie", X),  # 何人かのカード → GROUPS
     45: ("I've MINE", "Starship Square", "PB LOVED IVE", H),
     46: ("I've MINE", "KMStation", "1.0", H),
     52: ("I've MINE", SWL, "3-2", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
@@ -67,7 +67,7 @@ LEESEO = {
     85: ("IVE SWITCH", SWL, "3.0-2", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
     86: ("IVE SWITCH", SWL, "3.0-3", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
     87: ("IVE SWITCH", SWL, "3.0-4", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
-    88: ("IVE SWITCH", SWL, "3.0-5", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
+    88: ("IVE SWITCH", SWL, "3.0 POLA", N),
     90: ("IVE SWITCH", SWL, "4.0-3", N),
     91: ("IVE SWITCH", "TOKYO DOME 限定", "9/4", X),  # 2 人のカード。ユニットの枠がある
     92: ("IVE SWITCH", "TOKYO DOME 限定", "9/5", X),
@@ -142,14 +142,38 @@ LEESEO = {
     218: ("LUCID DREAM", "タワレコ", "B", H),
     220: ("LUCID DREAM", "SWIA OSAKA exclusive", "4.19", X),  # 2 人のカード。ユニットの枠がある
 }
-PAGE3 = {"ALIVE", "Be Alright", "LUCID DREAM"}
+PAGE3 = set()  # 本人：BOYCOTT の印は使ってよい（2026-09-30）。3 ページ目の画像も使う
 NO_IMAGE_SOURCES = {"StarRiver"}
 # 表の画像に店の透かし（BOYCOTT・中国語の印）がある → 枠だけ
-NO_IMAGE_NO = {("leeseo", 27), ("leeseo", 70), ("leeseo", 122), ("leeseo", 137), ("leeseo", 146)}
+NO_IMAGE_NO = {("leeseo", 27)}  # After LIKE TOU WINNER：中国語の店の印
 TABLES = {"leeseo": ("イソ", LEESEO)}
 # 見比べページ（_review/<メンバー>_have.html）で本人が「ちがう」とした番号：アプリの画像を表の画像に入れ替える。
 # 「同じ」としたものは、大きい方（画質のよい方）を使う
-DIFF = {"leeseo": {23, 37, 43, 56, 73, 113, 152, 153, 194, 209}}
+DIFF = {"leeseo": {23, 56, 73, 113, 152, 153, 194, 209}}
+# 37（I've IVE Naver Live）・43（I've MINE Broadcast Baddie）は、表では何人かで写ったカードだった。
+# アプリの 1 人ずつの枠（1 人のカード）はそのままにして、下の GROUPS で何人かのカードの枠を足す
+
+# 何人かで写ったカード（本人の要望：枠の作り方を直す）。メンバーは顔ではなく、メンバー別の表どうしで同じ写真を探して決めた
+# （tools/crop/group_ida.py、似ている度合い 0.88 以上。レイの表は並びがずれているので直接比べた）
+# (コレクション, 入手元, バージョン, メンバー, 画像の場所 (表の持ち主, 確認ページの番号))
+GROUPS = [
+    ("After LIKE", "Broadcast", "グループ 1", ["ガウル", "ウォニョン", "イソ"], ("leeseo", 31)),
+    ("After LIKE", "Broadcast", "グループ 2", ["ユジン", "レイ", "リズ"], ("yujin", 31)),
+    ("I've IVE", "Naver Live", "グループ 1", ["ガウル", "ウォニョン", "イソ"], ("leeseo", 37)),
+    ("I've IVE", "Naver Live", "グループ 2", ["ガウル", "リズ", "イソ"], ("leeseo", 38)),
+    ("I've IVE", "Naver Live", "ユニット 1", ["ユジン", "ウォニョン"], ("yujin", 37)),
+    # ユジンの表の同じ位置のカードは 3 人の写真だが、3 人目が表どうしで確かめられない（レイの表は並びがずれている）→ まだ作らない
+    ("I've MINE", "Broadcast", "グループ 1", ["ユジン", "リズ", "イソ"], ("leeseo", 43)),
+    ("I've MINE", "Broadcast", "グループ 2", ["ガウル", "レイ", "ウォニョン"], ("gaeul", 43)),
+    ("I've MINE", SWL, "3 ユニット 1", ["リズ", "イソ"], ("leeseo", 52)),
+    ("I've MINE", SWL, "3 ユニット 2", ["リズ", "イソ"], ("leeseo", 53)),
+    ("IVE SWITCH", SWL, "3.0 ユニット", ["ユジン", "イソ"], ("leeseo", 84)),
+    ("IVE SWITCH", SWL, "3.0 ユニット", ["ガウル", "イソ"], ("leeseo", 85)),
+    ("IVE SWITCH", SWL, "3.0 ユニット", ["レイ", "イソ"], ("leeseo", 86)),
+    ("IVE SWITCH", SWL, "3.0 ユニット", ["リズ", "イソ"], ("leeseo", 87)),
+    ("ALIVE", "オフラインイベント", "9/4 TOKYO ユニット 1", ["ユジン", "イソ"], ("leeseo", 201)),
+    ("ALIVE", "オフラインイベント", "9/4 TOKYO ユニット 2", ["ユジン", "イソ"], ("leeseo", 202)),
+]
 GAIN = 1.1
 
 if __name__ == "__main__":
@@ -205,6 +229,17 @@ if __name__ == "__main__":
             for m in MEMBERS:
                 j.add(coll, [m], src, ver, img if m == name else None, "@idalshiro")
             report.append([name, i, coll, src, ver, "新しい枠（6 人）" + ("" if img is not None else "・画像なし")])
+    # 何人かで写ったカード
+    for coll, src, ver, members, (owner, i) in GROUPS:
+        miss = json.load(open(S + "miss_leeseo.json"))
+        page, b, _ = miss[i]
+        cx, cy = (b[0] + b[2]) / 2, (b[1] + b[3]) / 2
+        im = grid.load(D + f"{owner}_{page}.jpg")
+        # 表は 6 人とも同じ並び：持ち主の表の同じ位置のカード
+        bs = grid.card_boxes(im, min_w=0.03, max_w=0.08)
+        bx = min(bs, key=lambda x: abs((x[0] + x[2]) / 2 - cx) + abs((x[1] + x[3]) / 2 - cy))
+        j.add(coll, members, src, ver, im.crop(inset_frame(im, bx)), "@idalshiro")
+        report.append(["/".join(members), i, coll, src, ver, "何人かのカードの枠"])
     j.save()
     with open(SP + "out/ida_check_report.csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)

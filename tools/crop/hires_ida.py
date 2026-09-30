@@ -19,7 +19,7 @@ TH, MARGIN, GAIN = 0.85, 0.05, 1.25
 BLOCK_TH = 0.55  # 3×4 のブロックごとの似ている度合いの最低（上に重ねた文字・スタンプや、別の写真を外す）
 SKIP = {"idalshiro.json", "solo_idalshiro.json", "zzz_ida_hires.json"}
 # 目で見て外したもの：お店の透かし（BOYCOTT）が写っている表の画像（2026-09-30）
-DROP = {tuple(x) for x in json.load(open(SP + "ida_drop.json", encoding="utf-8"))}
+DROP = set()  # 本人：BOYCOTT の印は使ってよい（2026-09-30）。前は ida_drop.json の 2 枚を外していた
 
 
 def trim_pink(c):

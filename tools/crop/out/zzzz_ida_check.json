@@ -187,18 +187,6 @@
 ""
 ],
 [
-"I've IVE",
-"イソ",
-"Naver Live",
-""
-],
-[
-"I've MINE",
-"イソ",
-"Broadcast",
-"Baddie"
-],
-[
 "I've MINE",
 "イソ",
 "withmuu",
@@ -790,6 +778,42 @@
 "IVE SWITCH",
 "ユジン",
 "Soundwave ラキドロ",
+"3.0 POLA"
+],
+[
+"IVE SWITCH",
+"ガウル",
+"Soundwave ラキドロ",
+"3.0 POLA"
+],
+[
+"IVE SWITCH",
+"レイ",
+"Soundwave ラキドロ",
+"3.0 POLA"
+],
+[
+"IVE SWITCH",
+"ウォニョン",
+"Soundwave ラキドロ",
+"3.0 POLA"
+],
+[
+"IVE SWITCH",
+"リズ",
+"Soundwave ラキドロ",
+"3.0 POLA"
+],
+[
+"IVE SWITCH",
+"イソ",
+"Soundwave ラキドロ",
+"3.0 POLA"
+],
+[
+"IVE SWITCH",
+"ユジン",
+"Soundwave ラキドロ",
 "4.0-3"
 ],
 [
@@ -1076,6 +1100,12 @@
 ],
 [
 "IVE SECRET",
+"イソ",
+"Sony Music",
+"B"
+],
+[
+"IVE SECRET",
 "ユジン",
 "Mukor",
 ""
@@ -1121,6 +1151,12 @@
 "イソ",
 "Makestar",
 "3.0"
+],
+[
+"IVE SECRET",
+"イソ",
+"オフラインイベント",
+"9.23 TOKYO"
 ],
 [
 "IVE SECRET",
@@ -1627,6 +1663,42 @@
 "1.0"
 ],
 [
+"Be Alright",
+"イソ",
+"Sony Music ラキドロ",
+""
+],
+[
+"Be Alright",
+"イソ",
+"オフラインイベント",
+"9.23 TOKYO"
+],
+[
+"Be Alright",
+"イソ",
+"オフラインイベント",
+"9.24 OSAKA"
+],
+[
+"Be Alright",
+"イソ",
+"オフラインイベント",
+"10.12 TOKYO"
+],
+[
+"Be Alright",
+"イソ",
+"オフラインイベント",
+"10.13 OSAKA"
+],
+[
+"LUCID DREAM",
+"イソ",
+"本体封入",
+"期間生産限定盤"
+],
+[
 "LUCID DREAM",
 "ユジン",
 "本体封入",
@@ -1661,6 +1733,102 @@
 "イソ",
 "本体封入",
 "DIVE 盤"
+],
+[
+"LUCID DREAM",
+"イソ",
+"タワレコ",
+"B"
+],
+[
+"After LIKE",
+"ガウル/ウォニョン/イソ",
+"Broadcast",
+"グループ 1"
+],
+[
+"After LIKE",
+"ユジン/レイ/リズ",
+"Broadcast",
+"グループ 2"
+],
+[
+"I've IVE",
+"ガウル/ウォニョン/イソ",
+"Naver Live",
+"グループ 1"
+],
+[
+"I've IVE",
+"ガウル/リズ/イソ",
+"Naver Live",
+"グループ 2"
+],
+[
+"I've IVE",
+"ユジン/ウォニョン",
+"Naver Live",
+"ユニット 1"
+],
+[
+"I've MINE",
+"ユジン/リズ/イソ",
+"Broadcast",
+"グループ 1"
+],
+[
+"I've MINE",
+"ガウル/レイ/ウォニョン",
+"Broadcast",
+"グループ 2"
+],
+[
+"I've MINE",
+"リズ/イソ",
+"Soundwave ラキドロ",
+"3 ユニット 1"
+],
+[
+"I've MINE",
+"リズ/イソ",
+"Soundwave ラキドロ",
+"3 ユニット 2"
+],
+[
+"IVE SWITCH",
+"ユジン/イソ",
+"Soundwave ラキドロ",
+"3.0 ユニット"
+],
+[
+"IVE SWITCH",
+"ガウル/イソ",
+"Soundwave ラキドロ",
+"3.0 ユニット"
+],
+[
+"IVE SWITCH",
+"レイ/イソ",
+"Soundwave ラキドロ",
+"3.0 ユニット"
+],
+[
+"IVE SWITCH",
+"リズ/イソ",
+"Soundwave ラキドロ",
+"3.0 ユニット"
+],
+[
+"ALIVE",
+"ユジン/イソ",
+"オフラインイベント",
+"9/4 TOKYO ユニット 1"
+],
+[
+"ALIVE",
+"ユジン/イソ",
+"オフラインイベント",
+"9/4 TOKYO ユニット 2"
 ]
 ],
 "images": [
@@ -1775,12 +1943,12 @@
 "credit": "@idalshiro"
 },
 {
-"collection": "I've IVE",
+"collection": "I've MINE",
 "members": [
 "イソ"
 ],
-"source": "Naver Live",
-"version": "",
+"source": "withmuu",
+"version": "4.0",
 "file": "zzzz_ida_check/0010.jpg",
 "thumb": "zzzz_ida_check/0010_t.jpg",
 "credit": "@idalshiro"
@@ -1790,8 +1958,8 @@
 "members": [
 "イソ"
 ],
-"source": "Broadcast",
-"version": "Baddie",
+"source": "Soundwave ファンサイン",
+"version": "Singapore",
 "file": "zzzz_ida_check/0011.jpg",
 "thumb": "zzzz_ida_check/0011_t.jpg",
 "credit": "@idalshiro"
@@ -1801,8 +1969,8 @@
 "members": [
 "イソ"
 ],
-"source": "withmuu",
-"version": "4.0",
+"source": "Soundwave ファンサイン",
+"version": "Malaysia",
 "file": "zzzz_ida_check/0012.jpg",
 "thumb": "zzzz_ida_check/0012_t.jpg",
 "credit": "@idalshiro"
@@ -1812,8 +1980,8 @@
 "members": [
 "イソ"
 ],
-"source": "Soundwave ファンサイン",
-"version": "Singapore",
+"source": "Sony Music Japan",
+"version": "2-1",
 "file": "zzzz_ida_check/0013.jpg",
 "thumb": "zzzz_ida_check/0013_t.jpg",
 "credit": "@idalshiro"
@@ -1823,8 +1991,8 @@
 "members": [
 "イソ"
 ],
-"source": "Soundwave ファンサイン",
-"version": "Malaysia",
+"source": "Sony Music Japan",
+"version": "2-2",
 "file": "zzzz_ida_check/0014.jpg",
 "thumb": "zzzz_ida_check/0014_t.jpg",
 "credit": "@idalshiro"
@@ -1835,7 +2003,7 @@
 "イソ"
 ],
 "source": "Sony Music Japan",
-"version": "2-1",
+"version": "2-4",
 "file": "zzzz_ida_check/0015.jpg",
 "thumb": "zzzz_ida_check/0015_t.jpg",
 "credit": "@idalshiro"
@@ -1846,7 +2014,7 @@
 "イソ"
 ],
 "source": "Sony Music Japan",
-"version": "2-2",
+"version": "2-5",
 "file": "zzzz_ida_check/0016.jpg",
 "thumb": "zzzz_ida_check/0016_t.jpg",
 "credit": "@idalshiro"
@@ -1856,8 +2024,8 @@
 "members": [
 "イソ"
 ],
-"source": "Sony Music Japan",
-"version": "2-4",
+"source": "A!SMART ファンサイン",
+"version": "",
 "file": "zzzz_ida_check/0017.jpg",
 "thumb": "zzzz_ida_check/0017_t.jpg",
 "credit": "@idalshiro"
@@ -1867,32 +2035,21 @@
 "members": [
 "イソ"
 ],
-"source": "Sony Music Japan",
-"version": "2-5",
+"source": "Yizhiyu",
+"version": "3.0",
 "file": "zzzz_ida_check/0018.jpg",
 "thumb": "zzzz_ida_check/0018_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "I've MINE",
+"collection": "IVE SWITCH",
 "members": [
 "イソ"
 ],
-"source": "A!SMART ファンサイン",
-"version": "",
+"source": "Tower Records",
+"version": "2",
 "file": "zzzz_ida_check/0019.jpg",
 "thumb": "zzzz_ida_check/0019_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "I've MINE",
-"members": [
-"イソ"
-],
-"source": "Yizhiyu",
-"version": "3.0",
-"file": "zzzz_ida_check/0020.jpg",
-"thumb": "zzzz_ida_check/0020_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -1902,6 +2059,17 @@
 ],
 "source": "Soundwave ラキドロ",
 "version": "1.0-3",
+"file": "zzzz_ida_check/0020.jpg",
+"thumb": "zzzz_ida_check/0020_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"イソ"
+],
+"source": "withmuu ラキドロ",
+"version": "1.0-2",
 "file": "zzzz_ida_check/0021.jpg",
 "thumb": "zzzz_ida_check/0021_t.jpg",
 "credit": "@idalshiro"
@@ -1912,7 +2080,7 @@
 "イソ"
 ],
 "source": "withmuu ラキドロ",
-"version": "1.0-2",
+"version": "1.0-3",
 "file": "zzzz_ida_check/0022.jpg",
 "thumb": "zzzz_ida_check/0022_t.jpg",
 "credit": "@idalshiro"
@@ -1922,8 +2090,8 @@
 "members": [
 "イソ"
 ],
-"source": "withmuu ラキドロ",
-"version": "1.0-3",
+"source": "Soundwave ラキドロ",
+"version": "2.0-3",
 "file": "zzzz_ida_check/0023.jpg",
 "thumb": "zzzz_ida_check/0023_t.jpg",
 "credit": "@idalshiro"
@@ -1933,8 +2101,8 @@
 "members": [
 "イソ"
 ],
-"source": "Soundwave ラキドロ",
-"version": "2.0-3",
+"source": "withmuu ラキドロ",
+"version": "3.0-3",
 "file": "zzzz_ida_check/0024.jpg",
 "thumb": "zzzz_ida_check/0024_t.jpg",
 "credit": "@idalshiro"
@@ -1945,7 +2113,7 @@
 "イソ"
 ],
 "source": "withmuu ラキドロ",
-"version": "3.0-3",
+"version": "4.0-3",
 "file": "zzzz_ida_check/0025.jpg",
 "thumb": "zzzz_ida_check/0025_t.jpg",
 "credit": "@idalshiro"
@@ -1955,8 +2123,8 @@
 "members": [
 "イソ"
 ],
-"source": "withmuu ラキドロ",
-"version": "4.0-3",
+"source": "Makestar ラキドロ",
+"version": "3",
 "file": "zzzz_ida_check/0026.jpg",
 "thumb": "zzzz_ida_check/0026_t.jpg",
 "credit": "@idalshiro"
@@ -1966,8 +2134,8 @@
 "members": [
 "イソ"
 ],
-"source": "Makestar ラキドロ",
-"version": "3",
+"source": "withmuu ラキドロ",
+"version": "4.0（2 組目）-3",
 "file": "zzzz_ida_check/0027.jpg",
 "thumb": "zzzz_ida_check/0027_t.jpg",
 "credit": "@idalshiro"
@@ -1977,8 +2145,8 @@
 "members": [
 "イソ"
 ],
-"source": "withmuu ラキドロ",
-"version": "4.0（2 組目）-3",
+"source": "Soundwave ラキドロ",
+"version": "3.0 POLA",
 "file": "zzzz_ida_check/0028.jpg",
 "thumb": "zzzz_ida_check/0028_t.jpg",
 "credit": "@idalshiro"
@@ -2054,8 +2222,8 @@
 "members": [
 "イソ"
 ],
-"source": "Soundwave",
-"version": "4.0（2 枚目）",
+"source": "オフラインイベント",
+"version": "TOKYO 2",
 "file": "zzzz_ida_check/0035.jpg",
 "thumb": "zzzz_ida_check/0035_t.jpg",
 "credit": "@idalshiro"
@@ -2065,8 +2233,8 @@
 "members": [
 "イソ"
 ],
-"source": "K-MONSTAR",
-"version": "Taiwan POLA",
+"source": "Soundwave",
+"version": "4.0（2 枚目）",
 "file": "zzzz_ida_check/0036.jpg",
 "thumb": "zzzz_ida_check/0036_t.jpg",
 "credit": "@idalshiro"
@@ -2076,8 +2244,8 @@
 "members": [
 "イソ"
 ],
-"source": "Makestar",
-"version": "4.0 Shanghai",
+"source": "K-MONSTAR",
+"version": "Taiwan POLA",
 "file": "zzzz_ida_check/0037.jpg",
 "thumb": "zzzz_ida_check/0037_t.jpg",
 "credit": "@idalshiro"
@@ -2088,18 +2256,18 @@
 "イソ"
 ],
 "source": "Makestar",
-"version": "4.0 Shanghai 3",
+"version": "4.0 Shanghai",
 "file": "zzzz_ida_check/0038.jpg",
 "thumb": "zzzz_ida_check/0038_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "IVE SECRET",
+"collection": "IVE EMPATHY",
 "members": [
 "イソ"
 ],
-"source": "MD",
-"version": "",
+"source": "Makestar",
+"version": "4.0 Shanghai 3",
 "file": "zzzz_ida_check/0039.jpg",
 "thumb": "zzzz_ida_check/0039_t.jpg",
 "credit": "@idalshiro"
@@ -2109,7 +2277,7 @@
 "members": [
 "イソ"
 ],
-"source": "Mukor",
+"source": "MD",
 "version": "",
 "file": "zzzz_ida_check/0040.jpg",
 "thumb": "zzzz_ida_check/0040_t.jpg",
@@ -2120,8 +2288,8 @@
 "members": [
 "イソ"
 ],
-"source": "MusicArt",
-"version": "",
+"source": "Sony Music",
+"version": "B",
 "file": "zzzz_ida_check/0041.jpg",
 "thumb": "zzzz_ida_check/0041_t.jpg",
 "credit": "@idalshiro"
@@ -2131,8 +2299,8 @@
 "members": [
 "イソ"
 ],
-"source": "Makestar",
-"version": "3.0",
+"source": "Mukor",
+"version": "",
 "file": "zzzz_ida_check/0042.jpg",
 "thumb": "zzzz_ida_check/0042_t.jpg",
 "credit": "@idalshiro"
@@ -2142,8 +2310,8 @@
 "members": [
 "イソ"
 ],
-"source": "QQ Music",
-"version": "1",
+"source": "MusicArt",
+"version": "",
 "file": "zzzz_ida_check/0043.jpg",
 "thumb": "zzzz_ida_check/0043_t.jpg",
 "credit": "@idalshiro"
@@ -2153,8 +2321,8 @@
 "members": [
 "イソ"
 ],
-"source": "QQ Music",
-"version": "2",
+"source": "Makestar",
+"version": "3.0",
 "file": "zzzz_ida_check/0044.jpg",
 "thumb": "zzzz_ida_check/0044_t.jpg",
 "credit": "@idalshiro"
@@ -2164,8 +2332,8 @@
 "members": [
 "イソ"
 ],
-"source": "QQ Music",
-"version": "3",
+"source": "オフラインイベント",
+"version": "9.23 TOKYO",
 "file": "zzzz_ida_check/0045.jpg",
 "thumb": "zzzz_ida_check/0045_t.jpg",
 "credit": "@idalshiro"
@@ -2176,7 +2344,7 @@
 "イソ"
 ],
 "source": "QQ Music",
-"version": "4",
+"version": "1",
 "file": "zzzz_ida_check/0046.jpg",
 "thumb": "zzzz_ida_check/0046_t.jpg",
 "credit": "@idalshiro"
@@ -2186,8 +2354,8 @@
 "members": [
 "イソ"
 ],
-"source": "withmuu ラキドロ",
-"version": "2.0",
+"source": "QQ Music",
+"version": "2",
 "file": "zzzz_ida_check/0047.jpg",
 "thumb": "zzzz_ida_check/0047_t.jpg",
 "credit": "@idalshiro"
@@ -2197,8 +2365,8 @@
 "members": [
 "イソ"
 ],
-"source": "withmuu ラキドロ",
-"version": "2.0 POLA",
+"source": "QQ Music",
+"version": "3",
 "file": "zzzz_ida_check/0048.jpg",
 "thumb": "zzzz_ida_check/0048_t.jpg",
 "credit": "@idalshiro"
@@ -2208,8 +2376,8 @@
 "members": [
 "イソ"
 ],
-"source": "Shanghai",
-"version": "WINNER",
+"source": "QQ Music",
+"version": "4",
 "file": "zzzz_ida_check/0049.jpg",
 "thumb": "zzzz_ida_check/0049_t.jpg",
 "credit": "@idalshiro"
@@ -2219,7 +2387,7 @@
 "members": [
 "イソ"
 ],
-"source": "KMONSTAR",
+"source": "withmuu ラキドロ",
 "version": "2.0",
 "file": "zzzz_ida_check/0050.jpg",
 "thumb": "zzzz_ida_check/0050_t.jpg",
@@ -2231,7 +2399,7 @@
 "イソ"
 ],
 "source": "withmuu ラキドロ",
-"version": "5.0-2",
+"version": "2.0 POLA",
 "file": "zzzz_ida_check/0051.jpg",
 "thumb": "zzzz_ida_check/0051_t.jpg",
 "credit": "@idalshiro"
@@ -2241,8 +2409,8 @@
 "members": [
 "イソ"
 ],
-"source": "QQ Music × Starship Square",
-"version": "Christmas",
+"source": "Shanghai",
+"version": "WINNER",
 "file": "zzzz_ida_check/0052.jpg",
 "thumb": "zzzz_ida_check/0052_t.jpg",
 "credit": "@idalshiro"
@@ -2252,8 +2420,8 @@
 "members": [
 "イソ"
 ],
-"source": "IDOLSHOP",
-"version": "",
+"source": "KMONSTAR",
+"version": "2.0",
 "file": "zzzz_ida_check/0053.jpg",
 "thumb": "zzzz_ida_check/0053_t.jpg",
 "credit": "@idalshiro"
@@ -2264,40 +2432,40 @@
 "イソ"
 ],
 "source": "withmuu ラキドロ",
-"version": "4.0-3",
+"version": "5.0-2",
 "file": "zzzz_ida_check/0054.jpg",
 "thumb": "zzzz_ida_check/0054_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "REVIVE+",
+"collection": "IVE SECRET",
 "members": [
 "イソ"
 ],
-"source": "本体封入",
-"version": "MINI MINI",
+"source": "QQ Music × Starship Square",
+"version": "Christmas",
 "file": "zzzz_ida_check/0055.jpg",
 "thumb": "zzzz_ida_check/0055_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "REVIVE+",
+"collection": "IVE SECRET",
 "members": [
 "イソ"
 ],
-"source": "Mukor",
+"source": "IDOLSHOP",
 "version": "",
 "file": "zzzz_ida_check/0056.jpg",
 "thumb": "zzzz_ida_check/0056_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "REVIVE+",
+"collection": "IVE SECRET",
 "members": [
 "イソ"
 ],
-"source": "QQ Music",
-"version": "Member set 2",
+"source": "withmuu ラキドロ",
+"version": "4.0-3",
 "file": "zzzz_ida_check/0057.jpg",
 "thumb": "zzzz_ida_check/0057_t.jpg",
 "credit": "@idalshiro"
@@ -2307,8 +2475,8 @@
 "members": [
 "イソ"
 ],
-"source": "QQ Music",
-"version": "2.0 ランダム 1",
+"source": "本体封入",
+"version": "MINI MINI",
 "file": "zzzz_ida_check/0058.jpg",
 "thumb": "zzzz_ida_check/0058_t.jpg",
 "credit": "@idalshiro"
@@ -2318,8 +2486,8 @@
 "members": [
 "イソ"
 ],
-"source": "QQ Music",
-"version": "2.0 ランダム 2",
+"source": "Mukor",
+"version": "",
 "file": "zzzz_ida_check/0059.jpg",
 "thumb": "zzzz_ida_check/0059_t.jpg",
 "credit": "@idalshiro"
@@ -2330,7 +2498,7 @@
 "イソ"
 ],
 "source": "QQ Music",
-"version": "2.0 ランダム 3",
+"version": "Member set 2",
 "file": "zzzz_ida_check/0060.jpg",
 "thumb": "zzzz_ida_check/0060_t.jpg",
 "credit": "@idalshiro"
@@ -2341,7 +2509,7 @@
 "イソ"
 ],
 "source": "QQ Music",
-"version": "2.0 ランダム 4",
+"version": "2.0 ランダム 1",
 "file": "zzzz_ida_check/0061.jpg",
 "thumb": "zzzz_ida_check/0061_t.jpg",
 "credit": "@idalshiro"
@@ -2352,7 +2520,7 @@
 "イソ"
 ],
 "source": "QQ Music",
-"version": "2.0 ランダム 5",
+"version": "2.0 ランダム 2",
 "file": "zzzz_ida_check/0062.jpg",
 "thumb": "zzzz_ida_check/0062_t.jpg",
 "credit": "@idalshiro"
@@ -2363,7 +2531,7 @@
 "イソ"
 ],
 "source": "QQ Music",
-"version": "2.0 ランダム 6",
+"version": "2.0 ランダム 3",
 "file": "zzzz_ida_check/0063.jpg",
 "thumb": "zzzz_ida_check/0063_t.jpg",
 "credit": "@idalshiro"
@@ -2373,8 +2541,8 @@
 "members": [
 "イソ"
 ],
-"source": "Soundwave ラキドロ",
-"version": "2.0",
+"source": "QQ Music",
+"version": "2.0 ランダム 4",
 "file": "zzzz_ida_check/0064.jpg",
 "thumb": "zzzz_ida_check/0064_t.jpg",
 "credit": "@idalshiro"
@@ -2384,8 +2552,8 @@
 "members": [
 "イソ"
 ],
-"source": "MusicArt ラキドロ",
-"version": "2.0 POLA",
+"source": "QQ Music",
+"version": "2.0 ランダム 5",
 "file": "zzzz_ida_check/0065.jpg",
 "thumb": "zzzz_ida_check/0065_t.jpg",
 "credit": "@idalshiro"
@@ -2395,10 +2563,317 @@
 "members": [
 "イソ"
 ],
-"source": "KMONSTAR",
-"version": "1.0",
+"source": "QQ Music",
+"version": "2.0 ランダム 6",
 "file": "zzzz_ida_check/0066.jpg",
 "thumb": "zzzz_ida_check/0066_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0",
+"file": "zzzz_ida_check/0067.jpg",
+"thumb": "zzzz_ida_check/0067_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "MusicArt ラキドロ",
+"version": "2.0 POLA",
+"file": "zzzz_ida_check/0068.jpg",
+"thumb": "zzzz_ida_check/0068_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "KMONSTAR",
+"version": "1.0",
+"file": "zzzz_ida_check/0069.jpg",
+"thumb": "zzzz_ida_check/0069_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Be Alright",
+"members": [
+"イソ"
+],
+"source": "Sony Music ラキドロ",
+"version": "",
+"file": "zzzz_ida_check/0070.jpg",
+"thumb": "zzzz_ida_check/0070_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Be Alright",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "9.23 TOKYO",
+"file": "zzzz_ida_check/0071.jpg",
+"thumb": "zzzz_ida_check/0071_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Be Alright",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "9.24 OSAKA",
+"file": "zzzz_ida_check/0072.jpg",
+"thumb": "zzzz_ida_check/0072_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Be Alright",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "10.12 TOKYO",
+"file": "zzzz_ida_check/0073.jpg",
+"thumb": "zzzz_ida_check/0073_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Be Alright",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "10.13 OSAKA",
+"file": "zzzz_ida_check/0074.jpg",
+"thumb": "zzzz_ida_check/0074_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "期間生産限定盤",
+"file": "zzzz_ida_check/0075.jpg",
+"thumb": "zzzz_ida_check/0075_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "DIVE 盤",
+"file": "zzzz_ida_check/0076.jpg",
+"thumb": "zzzz_ida_check/0076_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"イソ"
+],
+"source": "タワレコ",
+"version": "B",
+"file": "zzzz_ida_check/0077.jpg",
+"thumb": "zzzz_ida_check/0077_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "After LIKE",
+"members": [
+"ガウル",
+"ウォニョン",
+"イソ"
+],
+"source": "Broadcast",
+"version": "グループ 1",
+"file": "zzzz_ida_check/0078.jpg",
+"thumb": "zzzz_ida_check/0078_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "After LIKE",
+"members": [
+"ユジン",
+"レイ",
+"リズ"
+],
+"source": "Broadcast",
+"version": "グループ 2",
+"file": "zzzz_ida_check/0079.jpg",
+"thumb": "zzzz_ida_check/0079_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ガウル",
+"ウォニョン",
+"イソ"
+],
+"source": "Naver Live",
+"version": "グループ 1",
+"file": "zzzz_ida_check/0080.jpg",
+"thumb": "zzzz_ida_check/0080_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ガウル",
+"リズ",
+"イソ"
+],
+"source": "Naver Live",
+"version": "グループ 2",
+"file": "zzzz_ida_check/0081.jpg",
+"thumb": "zzzz_ida_check/0081_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ユジン",
+"ウォニョン"
+],
+"source": "Naver Live",
+"version": "ユニット 1",
+"file": "zzzz_ida_check/0082.jpg",
+"thumb": "zzzz_ida_check/0082_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "I've MINE",
+"members": [
+"ユジン",
+"リズ",
+"イソ"
+],
+"source": "Broadcast",
+"version": "グループ 1",
+"file": "zzzz_ida_check/0083.jpg",
+"thumb": "zzzz_ida_check/0083_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "I've MINE",
+"members": [
+"ガウル",
+"レイ",
+"ウォニョン"
+],
+"source": "Broadcast",
+"version": "グループ 2",
+"file": "zzzz_ida_check/0084.jpg",
+"thumb": "zzzz_ida_check/0084_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "I've MINE",
+"members": [
+"リズ",
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "3 ユニット 1",
+"file": "zzzz_ida_check/0085.jpg",
+"thumb": "zzzz_ida_check/0085_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "I've MINE",
+"members": [
+"リズ",
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "3 ユニット 2",
+"file": "zzzz_ida_check/0086.jpg",
+"thumb": "zzzz_ida_check/0086_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ユジン",
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "3.0 ユニット",
+"file": "zzzz_ida_check/0087.jpg",
+"thumb": "zzzz_ida_check/0087_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ガウル",
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "3.0 ユニット",
+"file": "zzzz_ida_check/0088.jpg",
+"thumb": "zzzz_ida_check/0088_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"レイ",
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "3.0 ユニット",
+"file": "zzzz_ida_check/0089.jpg",
+"thumb": "zzzz_ida_check/0089_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"リズ",
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "3.0 ユニット",
+"file": "zzzz_ida_check/0090.jpg",
+"thumb": "zzzz_ida_check/0090_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン",
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "9/4 TOKYO ユニット 1",
+"file": "zzzz_ida_check/0091.jpg",
+"thumb": "zzzz_ida_check/0091_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン",
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "9/4 TOKYO ユニット 2",
+"file": "zzzz_ida_check/0092.jpg",
+"thumb": "zzzz_ida_check/0092_t.jpg",
 "credit": "@idalshiro"
 }
 ]
