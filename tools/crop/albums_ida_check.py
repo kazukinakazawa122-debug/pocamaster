@@ -29,7 +29,7 @@ LEESEO = {
     17: ("LOVE DIVE", "Tower Records", "2 POLA", H),
     18: ("After LIKE", "本体封入", "ver.2", H),
     20: ("After LIKE", "Jewel ver. POB", "6+3set", H),
-    23: ("After LIKE", WML, "2.0-2", H),
+    23: ("After LIKE", WML, "2.0-3", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     24: ("After LIKE", SWL, "2.0-2", H),
     26: ("After LIKE", "Tower Records", "2", H),
     27: ("After LIKE", "TOU", "WINNER", N),
@@ -44,7 +44,7 @@ LEESEO = {
     46: ("I've MINE", "KMStation", "1.0", H),
     52: ("I've MINE", SWL, "3-2", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
     53: ("I've MINE", SWL, "3-3", X),  # 2 人以上のカード（相手を顔で決めることになるので入れない）
-    56: ("I've MINE", "withmuu", "4.0", H),
+    56: ("I've MINE", WM, "5.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     57: ("I've MINE", "Soundwave ファンサイン", "Singapore", N),
     61: ("I've MINE", "Soundwave ファンサイン", "Malaysia", N),
     62: ("I've MINE", "Sony Music Japan", "2-1", N),
@@ -78,12 +78,12 @@ LEESEO = {
     106: ("IVE EMPATHY", "StarRiver", "1.0", H),
     111: ("IVE EMPATHY", "StarRiver", "2.0", H),
     112: ("IVE EMPATHY", "Makestar", "2.0", H),
-    113: ("IVE EMPATHY", "withmuu", "2.0 Live Studio Choom", H),
+    113: ("IVE EMPATHY", WM, "4.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     114: ("IVE EMPATHY", "Makestar", "3.0", H),
-    121: ("IVE EMPATHY", SWL, "2.0-2", N),
+    121: ("IVE EMPATHY", SWL, "4.0 POLA", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     122: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),
     124: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", N),
-    125: ("IVE EMPATHY", "Soundwave", "4.0（2 枚目）", N),
+    125: ("IVE EMPATHY", SW, "7.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     126: ("IVE EMPATHY", "K-MONSTAR", "Taiwan POLA", H),
     127: ("IVE EMPATHY", "Makestar", "4.0 Shanghai", H),
     128: ("IVE EMPATHY", "Makestar", "4.0 Shanghai 3", N),
@@ -92,7 +92,7 @@ LEESEO = {
     134: ("IVE SECRET", "Apple Music", "1.0", H),
     136: ("IVE SECRET", "Tower Records", "Shibuya", H),
     137: ("IVE SECRET", "Sony Music", "B", H),
-    138: ("IVE SECRET", "Mukor", "", N),
+    138: ("IVE SECRET", "Music Korea", "", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     139: ("IVE SECRET", "OLIVE YOUNG ラキドロ", "", H),
     144: ("IVE SECRET", "MusicArt", "", H),
     145: ("IVE SECRET", "Makestar", "3.0", H),
@@ -101,8 +101,8 @@ LEESEO = {
     148: ("IVE SECRET", "QQ Music", "2", H),
     149: ("IVE SECRET", "QQ Music", "3", H),
     150: ("IVE SECRET", "QQ Music", "4", H),
-    152: ("IVE SECRET", WML, "2.0", H),
-    153: ("IVE SECRET", WML, "2.0 POLA", H),
+    152: ("IVE SECRET", WML, "4.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
+    153: ("IVE SECRET", WML, "4.0 POLA", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     157: ("IVE SECRET", "Shanghai", "WINNER", N),
     159: ("IVE SECRET", "KMONSTAR", "2.0", H),
     163: ("IVE SECRET", WML, "9.0-2", H),  # 前は新しい枠 5.0-2 にしていた（まちがい。表の「WITHMUU LD 5」はアプリの 9.0）
@@ -120,7 +120,7 @@ LEESEO = {
     186: ("REVIVE+", "QQ Music", "2.0 ランダム 6", N),
     189: ("REVIVE+", SWL, "2.0", H),
     190: ("REVIVE+", "MusicArt ラキドロ", "2.0 POLA", H),
-    194: ("REVIVE+", "KMONSTAR", "1.0", H),
+    194: ("REVIVE+", "KMONSTAR", "2.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     # 3 ページ目（日本盤）：画像は使わない
     198: ("ALIVE", "A!SMART", "ユニット 1", X),  # 2 人のカード。相手を顔で決めることになるので入れない
     199: ("ALIVE", "A!SMART", "ユニット 2", X),
@@ -138,18 +138,18 @@ LEESEO = {
     213: ("Be Alright", "オフラインイベント", "10.12 TOKYO", H),
     214: ("Be Alright", "オフラインイベント", "10.13 OSAKA", H),
     216: ("LUCID DREAM", "本体封入", "期間生産限定盤", H),
-    217: ("LUCID DREAM", "本体封入", "DIVE 盤", N),
+    217: ("LUCID DREAM", "本体封入", "DIVE 盤", N),  # 表のラベルは「DIVE」。ほかのメンバーの同じ位置は、アプリの「メンバーソロジャケット盤」の画像と同じ写真（本人に確認中）
     218: ("LUCID DREAM", "タワレコ", "B", H),
     220: ("LUCID DREAM", "SWIA OSAKA exclusive", "4.19", X),  # 2 人のカード。ユニットの枠がある
 }
 
 # リズ（review_liz.json の番号 → ラベル）。表の並びはイソと同じなので、同じ位置はイソと同じラベル
 LIZ = {
-    9: ("LOVE DIVE", "Makestar", "2.0", N),
+    9: ("ELEVEN", "Makestar", "2.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     12: ("ELEVEN", "Fansign Special", "", H),
     13: ("ELEVEN", "Fansign Special", "2", N),
     23: ("LOVE DIVE", "Fansign", "", N),
-    27: ("After LIKE", WML, "2.0-2", H),
+    27: ("After LIKE", WML, "2.0-3", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     28: ("After LIKE", "本体封入", "ver.1", H),
     29: ("After LIKE", "Tower Records", "2", H),
     30: ("After LIKE", "TOU", "WINNER", N),
@@ -158,10 +158,10 @@ LIZ = {
     35: ("I've IVE", "Vinyl", "", N),
     36: ("I've IVE", "US Exclusive", "", X),  # 何人かのカード（メンバーが確かめられない）
     37: ("I've IVE", "Namil Music", "", H),
-    40: ("I've IVE", "Tower Records", "2", H),
+    40: ("I've IVE", "Tower Records", "1", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     41: ("I've IVE", "Naver Live", "", X),  # ユジン・リズ＋もう 1 人（確かめられない）
     42: ("I've IVE", "Naver Live", "グループ 2", X),  # 枠はある
-    44: ("I've IVE", "Fansign", "", N),
+    44: ("I've IVE", "Fancall", "", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     46: ("I've MINE", "Broadcast", "グループ 1", X),  # 枠はある
     49: ("I've MINE", "Starship Square", "PB LOVED IVE", H),
     50: ("I've MINE", "Namil Music", "1.0", H),
@@ -199,16 +199,16 @@ LIZ = {
     122: ("IVE SWITCH", "Japan ファンサイン", "Tokyo", H),  # 表の「TOKYO 19.08」
     123: ("IVE SWITCH", "TOKYO DOME 限定", "9/4", X),  # 2 人のカード → GROUPS
     124: ("IVE SWITCH", "TOKYO DOME 限定", "9/5", X),  # 2 人のカード → GROUPS
-    129: ("IVE SWITCH", "StarRiver ファンサイン", "3.0", N),
+    129: ("IVE SWITCH", "StarRiver ファンサイン", "2.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     135: ("IVE EMPATHY", "StarRiver", "1.0", H),
     138: ("IVE EMPATHY", "StarRiver", "2.0", H),
-    140: ("IVE EMPATHY", SWL, "2.0", H),
+    140: ("IVE EMPATHY", SW, "3.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     148: ("IVE EMPATHY", WML, "5.0 POLA", H),
-    149: ("IVE EMPATHY", SWL, "2.0-1", N),
-    150: ("IVE EMPATHY", SWL, "2.0-2", N),
+    149: ("IVE EMPATHY", SWL, "4.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
+    150: ("IVE EMPATHY", SWL, "4.0 POLA", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     153: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),
     155: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", N),
-    156: ("IVE EMPATHY", "Soundwave", "4.0（2 枚目）", N),
+    156: ("IVE EMPATHY", SW, "7.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     159: ("IVE EMPATHY", "Makestar", "4.0 Shanghai カフェ店長 ver.", H),
     160: ("IVE EMPATHY", "Makestar", "4.0 Shanghai 3", N),
     161: ("IVE EMPATHY", "Broadcast", "1.0", H),
@@ -220,8 +220,8 @@ LIZ = {
     177: ("IVE SECRET", "QQ Music", "2", H),
     187: ("IVE SECRET", "QQ Music", "3", H),
     181: ("IVE SECRET", "QQ Music", "4", H),
-    179: ("IVE SECRET", SWL, "2.0", H),  # 表の「SOUNDWAVE LD 2（show what i am）」1 枚目
-    180: ("IVE SECRET", SWL, "6.0", H),  # 表の「SOUNDWAVE LD 3」1 枚目
+    179: ("IVE SECRET", WML, "6.0 Special HI-BYE-1", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
+    180: ("IVE SECRET", "Makestar ラキドロ", "4.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     184: ("IVE SECRET", "Shanghai", "WINNER", N),
     185: ("IVE SECRET", "hellolive", "2.0", H),
     186: ("IVE SECRET", "KMONSTAR", "2.0", H),
@@ -241,9 +241,9 @@ LIZ = {
     213: ("REVIVE+", "QQ Music", "2.0 ランダム 4", N),
     214: ("REVIVE+", "QQ Music", "2.0 ランダム 5", N),
     215: ("REVIVE+", "QQ Music", "2.0 ランダム 6", N),
-    217: ("REVIVE+", "QQ Music", "POP-UP", H),
+    217: ("REVIVE+", "QQ音乐 ラキドロ", "", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     223: ("REVIVE+", "KMStation", "2.0", H),
-    226: ("REVIVE+", "KMONSTAR", "1.0", H),
+    226: ("REVIVE+", "KMONSTAR", "2.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     230: ("ALIVE", "A!SMART", "ユニット 1", X),  # 2 人のカード。相手がわからない
     231: ("ALIVE", "A!SMART", "ユニット 2", X),  # 2 人のカード。相手がわからない
     234: ("ALIVE", "オフラインイベント", "9/4 TOKYO ユニット", X),  # 2 人のカード。相手がわからない
@@ -278,7 +278,7 @@ WONYOUNG = {
     16: ("LOVE DIVE", "Fansign", "", N),  # leeseo 16
     17: ("LOVE DIVE", "Tower Records", "2 POLA", H),  # leeseo 17
     18: ("After LIKE", "Ktown4U", "", H),
-    20: ("After LIKE", WML, "2.0-2", H),  # leeseo 23
+    20: ("After LIKE", WML, "2.0-3", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     21: ("After LIKE", "TOU", "1.0", H),
     22: ("After LIKE", "Tower Records", "2", H),  # leeseo 26
     23: ("After LIKE", "Broadcast", "3", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
@@ -330,7 +330,7 @@ WONYOUNG = {
     96: ("IVE EMPATHY", "StarRiver", "1.0", H),  # leeseo 106
     98: ("IVE EMPATHY", WML, "3.0 POLA", H),
     100: ("IVE EMPATHY", "StarRiver", "2.0", H),  # leeseo 111
-    101: ("IVE EMPATHY", WM, "2.0 Live Studio Choom", H),  # leeseo 113
+    101: ("IVE EMPATHY", WM, "4.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     106: ("IVE EMPATHY", "Apple Music", "4.0", H),
     108: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),  # leeseo 122
     112: ("IVE EMPATHY", "IDOUSTAGE", "2.0", H),
@@ -361,7 +361,7 @@ WONYOUNG = {
     162: ("REVIVE+", "QQ Music", "2.0 ランダム 6", N),  # liz 215
     165: ("REVIVE+", "MusicArt ラキドロ", "2.0 POLA", H),  # leeseo 190
     167: ("REVIVE+", WML, "9.0", H),
-    168: ("REVIVE+", "KMONSTAR", "1.0", H),  # leeseo 194
+    168: ("REVIVE+", "KMONSTAR", "2.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     176: ("ALIVE", "A!SMART", "ユニット 1", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
     177: ("ALIVE", "A!SMART", "ユニット 2", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
     179: ("ALIVE", "オフラインイベント", "9/4 TOKYO ユニット", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
@@ -392,7 +392,7 @@ REI = {
     17: ("LOVE DIVE", "Fansign", "", N),  # leeseo 16
     18: ("LOVE DIVE", "Tower Records", "2 POLA", H),  # leeseo 17
     20: ("After LIKE", "Naver Shopping Live", "", H),
-    21: ("After LIKE", WML, "2.0-2", H),  # leeseo 23
+    21: ("After LIKE", WML, "2.0-3", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     22: ("After LIKE", "Tower Records", "2", H),  # leeseo 26
     24: ("After LIKE", "TOU", "WINNER", N),  # leeseo 27
     26: ("After LIKE", "Broadcast", "3", X),  # 何人かのカード → GROUPS（相手がわからないもの・すでに枠と画像があるものは入れない）
@@ -469,7 +469,7 @@ REI = {
     181: ("REVIVE+", "QQ Music", "2.0 ランダム 6", N),  # liz 215
     182: ("REVIVE+", WML, "3.0 POLA", H),  # wonyoung 161
     187: ("REVIVE+", WML, "6.0 POLA", H),
-    190: ("REVIVE+", "KMONSTAR", "1.0", H),  # leeseo 194
+    190: ("REVIVE+", "KMONSTAR", "2.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     192: ("ELEVEN -Japanese ver.-", "タワレコ", "IDトレカ", H),
     194: ("ALIVE", "本体封入", "Album B（II ver.）", H),
     196: ("ALIVE", "A!SMART", "ユニット 1", X),  # 何人かのカード → GROUPS（相手がわからないもの・すでに枠と画像があるものは入れない）
@@ -497,7 +497,11 @@ NO_IMAGE_NO = {("leeseo", 27), ("liz", 30), ("wonyoung", 24), ("rei", 24)}  # Af
 TABLES = {"leeseo": ("イソ", LEESEO), "liz": ("リズ", LIZ), "wonyoung": ("ウォニョン", WONYOUNG), "rei": ("レイ", REI)}
 # 見比べページ（_review/<メンバー>_have.html）で本人が「ちがう」とした番号：アプリの画像を表の画像に入れ替える。
 # 「同じ」としたものは、大きい方（画質のよい方）を使う
-DIFF = {"leeseo": {23, 56, 73, 113, 152, 153, 194, 209}, "liz": {27, 40, 140, 179, 180, 226, 246}, "wonyoung": {20, 90, 101, 168}, "rei": {21, 190}}
+DIFF = {"leeseo": {73, 209}, "liz": {246}, "wonyoung": {90}, "rei": set()}
+# ラベルを直したもの（2026-09-30）：前は「ちがう」だった 23・56・113・152・153・194（イソ）、27・40・140・179・180・226（リズ）、20・101・168（ウォニョン）、21・190（レイ）。
+# 直した枠に画像があるものは、見比べページ（_review/fix_have.html）で本人に聞き直す
+# ラベルを直したもので、直した枠にもう画像があるもの：本人の見比べ（_review/fix_have.html）が済むまで、アプリの画像のままにする
+PENDING = {("leeseo", i) for i in (23, 56, 113, 152, 153, 194)} | {("liz", i) for i in (27, 40, 140, 179, 180, 226, 9, 44, 129, 149, 150, 156, 217)}     | {("wonyoung", i) for i in (20, 101, 168)} | {("rei", i) for i in (21, 190)} | {("leeseo", i) for i in (121, 125, 138)}
 # 37（I've IVE Naver Live）・43（I've MINE Broadcast Baddie）は、表では何人かで写ったカードだった。
 # アプリの 1 人ずつの枠（1 人のカード）はそのままにして、下の GROUPS で何人かのカードの枠を足す
 
@@ -594,6 +598,8 @@ if __name__ == "__main__":
                 elif k4 not in imaged:
                     j.add(coll, [name], src, ver, img, "@idalshiro")
                     report.append([name, i, coll, src, ver, "画像を入れた"])
+                elif (key, i) in PENDING:
+                    report.append([name, i, coll, src, ver, "見比べ待ち（アプリの画像のまま）"])
                 elif i in DIFF.get(key, set()):
                     j.add(coll, [name], src, ver, img, "@idalshiro")
                     report.append([name, i, coll, src, ver, "ちがう画像だったので入れ替えた"])
