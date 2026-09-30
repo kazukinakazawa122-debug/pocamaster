@@ -210,10 +210,17 @@ a { color: inherit; text-decoration: none; }
 /* MINIVE：タイトルの横に 6 人を並べる（動かさない）。上が切れないよう、バーの高さに収まる大きさにする */
 .minive-run { flex: 1; min-width: 0; display: flex; align-items: flex-end; gap: 0; margin-left: 8px; overflow: hidden; padding-top: 2px; }
 .minive-run img { flex: none; height: 30px; width: auto; margin-right: -3px; }
+.minive-3d img { height: 34px; margin-right: -2px; }
+.minive-flat img { height: 32px; margin-right: 1px; }
+.minive-mix img { height: 32px; margin-right: 0; }
 /* ホーム：ロゴの左右に 3 人ずつ */
 .minive-trio { display: inline-flex; align-items: flex-end; flex: none; }
 .minive-trio img { display: block; height: 28px; width: auto; margin: 0 -2px; }
 .topbar.home h1 { overflow: visible; }
+/* ロゴは画面の真ん中に置く（左のアイコンの幅に引っぱられないよう、バーの幅いっぱいに重ねる） */
+.topbar.home { position: fixed; }
+.topbar.home h1 { position: absolute; left: 0; right: 0; bottom: 6px; top: calc(var(--safe-top) + 8px); pointer-events: none; }
+.topbar.home .side { position: relative; z-index: 1; }
 
 /* ホームの全体コンプ率：見出しと数字を同じ書体・太さにそろえる（本人の要望、2026-09-30） */
 .total-title { margin-top: 16px; font-size: 19px; font-weight: 800; letter-spacing: 0.02em; }

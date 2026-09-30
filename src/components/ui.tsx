@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { IconChevronLeft, IconUser } from '@tabler/icons-react'
 import { db, type Profile } from '../lib/db'
 import { MEMBER_BY_ID } from '../lib/members'
-import { MiniveRun } from './Minive'
+import { MiniveRun, type MiniveStyle } from './Minive'
 
 export function ProgressBar({ pct, color = 'var(--all)' }: { pct: number | null; color?: string }) {
   return (
@@ -13,7 +13,7 @@ export function ProgressBar({ pct, color = 'var(--all)' }: { pct: number | null;
   )
 }
 
-export function TopBar({ title, back, minive, children }: { title: string; back?: boolean; minive?: boolean; children?: ReactNode }) {
+export function TopBar({ title, back, minive, children }: { title: string; back?: boolean; minive?: MiniveStyle; children?: ReactNode }) {
   const navigate = useNavigate()
   return (
     <>
@@ -24,7 +24,7 @@ export function TopBar({ title, back, minive, children }: { title: string; back?
           </button>
         )}
         <h1 style={minive ? { flex: 'none' } : undefined}>{title}</h1>
-        {minive && <MiniveRun />}
+        {minive && <MiniveRun style={minive} />}
         {children}
       </header>
       <div className="topbar-space" />
