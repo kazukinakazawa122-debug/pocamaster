@@ -337,6 +337,24 @@
 "2"
 ],
 [
+"Collab & Event｜コラボ・イベント",
+"イソ",
+"SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"Christmas"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
+"イソ",
+"SuperStar STARSHIP",
+"1"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
+"イソ",
+"SuperStar STARSHIP",
+"2"
+],
+[
 "4th FAN CONCERT 'DIVE into IVE'",
 "イソ",
 "MD",
@@ -961,14 +979,47 @@
 "credit": "@idalshiro"
 },
 {
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"イソ"
+],
+"source": "SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"version": "Christmas",
+"file": "idalshiro_na_leeseo/0056.jpg",
+"thumb": "idalshiro_na_leeseo/0056_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
+"members": [
+"イソ"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_leeseo/0057.jpg",
+"thumb": "idalshiro_na_leeseo/0057_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
+"members": [
+"イソ"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_leeseo/0058.jpg",
+"thumb": "idalshiro_na_leeseo/0058_t.jpg",
+"credit": "@idalshiro"
+},
+{
 "collection": "4th FAN CONCERT 'DIVE into IVE'",
 "members": [
 "イソ"
 ],
 "source": "MD",
 "version": "Photo Kit",
-"file": "idalshiro_na_leeseo/0056.jpg",
-"thumb": "idalshiro_na_leeseo/0056_t.jpg",
+"file": "idalshiro_na_leeseo/0059.jpg",
+"thumb": "idalshiro_na_leeseo/0059_t.jpg",
 "credit": "@idalshiro"
 }
 ]

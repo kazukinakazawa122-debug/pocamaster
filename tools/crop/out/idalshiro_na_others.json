@@ -337,6 +337,24 @@
 "2"
 ],
 [
+"Collab & Event｜コラボ・イベント",
+"ユジン",
+"SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"Christmas"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
+"ユジン",
+"SuperStar STARSHIP",
+"1"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
+"ユジン",
+"SuperStar STARSHIP",
+"2"
+],
+[
 "1st FAN CONCERT 'The Prom Queens'",
 "ガウル",
 "DVD・Blu-ray・Kit",
@@ -673,6 +691,24 @@
 "2"
 ],
 [
+"Collab & Event｜コラボ・イベント",
+"ガウル",
+"SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"Christmas"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
+"ガウル",
+"SuperStar STARSHIP",
+"1"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
+"ガウル",
+"SuperStar STARSHIP",
+"2"
+],
+[
 "1st FAN CONCERT 'The Prom Queens'",
 "レイ",
 "DVD・Blu-ray・Kit",
@@ -1009,6 +1045,24 @@
 "2"
 ],
 [
+"Collab & Event｜コラボ・イベント",
+"レイ",
+"SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"Christmas"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
+"レイ",
+"SuperStar STARSHIP",
+"1"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
+"レイ",
+"SuperStar STARSHIP",
+"2"
+],
+[
 "1st FAN CONCERT 'The Prom Queens'",
 "ウォニョン",
 "DVD・Blu-ray・Kit",
@@ -1340,6 +1394,24 @@
 ],
 [
 "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"ウォニョン",
+"SuperStar STARSHIP",
+"2"
+],
+[
+"Collab & Event｜コラボ・イベント",
+"ウォニョン",
+"SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"Christmas"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
+"ウォニョン",
+"SuperStar STARSHIP",
+"1"
+],
+[
+"4th FAN CONCERT 'DIVE into IVE'",
 "ウォニョン",
 "SuperStar STARSHIP",
 "2"
@@ -1963,34 +2035,34 @@
 "credit": "@idalshiro"
 },
 {
-"collection": "1st FAN CONCERT 'The Prom Queens'",
+"collection": "Collab & Event｜コラボ・イベント",
 "members": [
-"ガウル"
+"ユジン"
 ],
-"source": "DVD・Blu-ray・Kit",
-"version": "DVD",
+"source": "SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"version": "Christmas",
 "file": "idalshiro_na_others/0056.jpg",
 "thumb": "idalshiro_na_others/0056_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "1st FAN CONCERT 'The Prom Queens'",
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
 "members": [
-"ガウル"
+"ユジン"
 ],
-"source": "DVD・Blu-ray・Kit",
-"version": "Blu-ray",
+"source": "SuperStar STARSHIP",
+"version": "1",
 "file": "idalshiro_na_others/0057.jpg",
 "thumb": "idalshiro_na_others/0057_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "1st FAN CONCERT 'The Prom Queens'",
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
 "members": [
-"ガウル"
+"ユジン"
 ],
-"source": "DVD・Blu-ray・Kit",
-"version": "Kit",
+"source": "SuperStar STARSHIP",
+"version": "2",
 "file": "idalshiro_na_others/0058.jpg",
 "thumb": "idalshiro_na_others/0058_t.jpg",
 "credit": "@idalshiro"
@@ -2001,40 +2073,40 @@
 "ガウル"
 ],
 "source": "DVD・Blu-ray・Kit",
-"version": "Kit POLA",
+"version": "DVD",
 "file": "idalshiro_na_others/0059.jpg",
 "thumb": "idalshiro_na_others/0059_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "Magazine｜雑誌特典",
+"collection": "1st FAN CONCERT 'The Prom Queens'",
 "members": [
 "ガウル"
 ],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type A 1",
+"source": "DVD・Blu-ray・Kit",
+"version": "Blu-ray",
 "file": "idalshiro_na_others/0060.jpg",
 "thumb": "idalshiro_na_others/0060_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "Magazine｜雑誌特典",
+"collection": "1st FAN CONCERT 'The Prom Queens'",
 "members": [
 "ガウル"
 ],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type A 2",
+"source": "DVD・Blu-ray・Kit",
+"version": "Kit",
 "file": "idalshiro_na_others/0061.jpg",
 "thumb": "idalshiro_na_others/0061_t.jpg",
 "credit": "@idalshiro"
 },
 {
-"collection": "Magazine｜雑誌特典",
+"collection": "1st FAN CONCERT 'The Prom Queens'",
 "members": [
 "ガウル"
 ],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type A 3",
+"source": "DVD・Blu-ray・Kit",
+"version": "Kit POLA",
 "file": "idalshiro_na_others/0062.jpg",
 "thumb": "idalshiro_na_others/0062_t.jpg",
 "credit": "@idalshiro"
@@ -2045,7 +2117,7 @@
 "ガウル"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Lucky Card Set 1",
+"version": "Type A 1",
 "file": "idalshiro_na_others/0063.jpg",
 "thumb": "idalshiro_na_others/0063_t.jpg",
 "credit": "@idalshiro"
@@ -2056,7 +2128,7 @@
 "ガウル"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Lucky Card Set 2",
+"version": "Type A 2",
 "file": "idalshiro_na_others/0064.jpg",
 "thumb": "idalshiro_na_others/0064_t.jpg",
 "credit": "@idalshiro"
@@ -2067,7 +2139,7 @@
 "ガウル"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type B 1",
+"version": "Type A 3",
 "file": "idalshiro_na_others/0065.jpg",
 "thumb": "idalshiro_na_others/0065_t.jpg",
 "credit": "@idalshiro"
@@ -2078,7 +2150,7 @@
 "ガウル"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type B 2",
+"version": "Lucky Card Set 1",
 "file": "idalshiro_na_others/0066.jpg",
 "thumb": "idalshiro_na_others/0066_t.jpg",
 "credit": "@idalshiro"
@@ -2089,7 +2161,7 @@
 "ガウル"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type B 3",
+"version": "Lucky Card Set 2",
 "file": "idalshiro_na_others/0067.jpg",
 "thumb": "idalshiro_na_others/0067_t.jpg",
 "credit": "@idalshiro"
@@ -2100,7 +2172,7 @@
 "ガウル"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Kakao 特典 1",
+"version": "Type B 1",
 "file": "idalshiro_na_others/0068.jpg",
 "thumb": "idalshiro_na_others/0068_t.jpg",
 "credit": "@idalshiro"
@@ -2111,7 +2183,7 @@
 "ガウル"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Kakao 特典 2",
+"version": "Type B 2",
 "file": "idalshiro_na_others/0069.jpg",
 "thumb": "idalshiro_na_others/0069_t.jpg",
 "credit": "@idalshiro"
@@ -2122,9 +2194,42 @@
 "ガウル"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Double Sided",
+"version": "Type B 3",
 "file": "idalshiro_na_others/0070.jpg",
 "thumb": "idalshiro_na_others/0070_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ガウル"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Kakao 特典 1",
+"file": "idalshiro_na_others/0071.jpg",
+"thumb": "idalshiro_na_others/0071_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ガウル"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Kakao 特典 2",
+"file": "idalshiro_na_others/0072.jpg",
+"thumb": "idalshiro_na_others/0072_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ガウル"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Double Sided",
+"file": "idalshiro_na_others/0073.jpg",
+"thumb": "idalshiro_na_others/0073_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2134,8 +2239,8 @@
 ],
 "source": "Encore（アンコール）",
 "version": "Wing Hair Pin Set",
-"file": "idalshiro_na_others/0071.jpg",
-"thumb": "idalshiro_na_others/0071_t.jpg",
+"file": "idalshiro_na_others/0074.jpg",
+"thumb": "idalshiro_na_others/0074_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2145,39 +2250,6 @@
 ],
 "source": "Encore（アンコール）",
 "version": "DIVE ZONE Day 1",
-"file": "idalshiro_na_others/0072.jpg",
-"thumb": "idalshiro_na_others/0072_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ガウル"
-],
-"source": "Random Photocard Pack Japan",
-"version": "1",
-"file": "idalshiro_na_others/0073.jpg",
-"thumb": "idalshiro_na_others/0073_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ガウル"
-],
-"source": "Random Photocard Pack Japan",
-"version": "2",
-"file": "idalshiro_na_others/0074.jpg",
-"thumb": "idalshiro_na_others/0074_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ガウル"
-],
-"source": "MD",
-"version": "Photo Kit",
 "file": "idalshiro_na_others/0075.jpg",
 "thumb": "idalshiro_na_others/0075_t.jpg",
 "credit": "@idalshiro"
@@ -2187,8 +2259,8 @@
 "members": [
 "ガウル"
 ],
-"source": "MD",
-"version": "Bandana",
+"source": "Random Photocard Pack Japan",
+"version": "1",
 "file": "idalshiro_na_others/0076.jpg",
 "thumb": "idalshiro_na_others/0076_t.jpg",
 "credit": "@idalshiro"
@@ -2198,8 +2270,8 @@
 "members": [
 "ガウル"
 ],
-"source": "MD",
-"version": "Acrylic Stand",
+"source": "Random Photocard Pack Japan",
+"version": "2",
 "file": "idalshiro_na_others/0077.jpg",
 "thumb": "idalshiro_na_others/0077_t.jpg",
 "credit": "@idalshiro"
@@ -2210,7 +2282,7 @@
 "ガウル"
 ],
 "source": "MD",
-"version": "Whistle Necklace",
+"version": "Photo Kit",
 "file": "idalshiro_na_others/0078.jpg",
 "thumb": "idalshiro_na_others/0078_t.jpg",
 "credit": "@idalshiro"
@@ -2221,7 +2293,7 @@
 "ガウル"
 ],
 "source": "MD",
-"version": "Stainless Mug",
+"version": "Bandana",
 "file": "idalshiro_na_others/0079.jpg",
 "thumb": "idalshiro_na_others/0079_t.jpg",
 "credit": "@idalshiro"
@@ -2231,8 +2303,8 @@
 "members": [
 "ガウル"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 2",
+"source": "MD",
+"version": "Acrylic Stand",
 "file": "idalshiro_na_others/0080.jpg",
 "thumb": "idalshiro_na_others/0080_t.jpg",
 "credit": "@idalshiro"
@@ -2242,8 +2314,8 @@
 "members": [
 "ガウル"
 ],
-"source": "Lotte Cinema Live Viewing",
-"version": "",
+"source": "MD",
+"version": "Whistle Necklace",
 "file": "idalshiro_na_others/0081.jpg",
 "thumb": "idalshiro_na_others/0081_t.jpg",
 "credit": "@idalshiro"
@@ -2253,8 +2325,8 @@
 "members": [
 "ガウル"
 ],
-"source": "VIP Perks Japan",
-"version": "",
+"source": "MD",
+"version": "Stainless Mug",
 "file": "idalshiro_na_others/0082.jpg",
 "thumb": "idalshiro_na_others/0082_t.jpg",
 "credit": "@idalshiro"
@@ -2264,8 +2336,8 @@
 "members": [
 "ガウル"
 ],
-"source": "DIVE JAPAN",
-"version": "Clear Files",
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 2",
 "file": "idalshiro_na_others/0083.jpg",
 "thumb": "idalshiro_na_others/0083_t.jpg",
 "credit": "@idalshiro"
@@ -2275,8 +2347,8 @@
 "members": [
 "ガウル"
 ],
-"source": "SuperStar STARSHIP",
-"version": "1",
+"source": "Lotte Cinema Live Viewing",
+"version": "",
 "file": "idalshiro_na_others/0084.jpg",
 "thumb": "idalshiro_na_others/0084_t.jpg",
 "credit": "@idalshiro"
@@ -2286,10 +2358,43 @@
 "members": [
 "ガウル"
 ],
-"source": "SuperStar STARSHIP",
-"version": "2",
+"source": "VIP Perks Japan",
+"version": "",
 "file": "idalshiro_na_others/0085.jpg",
 "thumb": "idalshiro_na_others/0085_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ガウル"
+],
+"source": "DIVE JAPAN",
+"version": "Clear Files",
+"file": "idalshiro_na_others/0086.jpg",
+"thumb": "idalshiro_na_others/0086_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ガウル"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_others/0087.jpg",
+"thumb": "idalshiro_na_others/0087_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ガウル"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_others/0088.jpg",
+"thumb": "idalshiro_na_others/0088_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2299,8 +2404,8 @@
 ],
 "source": "DIVE 4期 'DIVE into IVE'",
 "version": "",
-"file": "idalshiro_na_others/0086.jpg",
-"thumb": "idalshiro_na_others/0086_t.jpg",
+"file": "idalshiro_na_others/0089.jpg",
+"thumb": "idalshiro_na_others/0089_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2310,39 +2415,6 @@
 ],
 "source": "DIVE 4期 'DIVE into IVE'",
 "version": "DIVE JAPAN",
-"file": "idalshiro_na_others/0087.jpg",
-"thumb": "idalshiro_na_others/0087_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
-"members": [
-"ガウル"
-],
-"source": "Encore Blu-ray・Kit",
-"version": "Blu-ray",
-"file": "idalshiro_na_others/0088.jpg",
-"thumb": "idalshiro_na_others/0088_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
-"members": [
-"ガウル"
-],
-"source": "Encore Blu-ray・Kit",
-"version": "Kit",
-"file": "idalshiro_na_others/0089.jpg",
-"thumb": "idalshiro_na_others/0089_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
-"members": [
-"ガウル"
-],
-"source": "Encore Blu-ray・Kit",
-"version": "Starship Square 特典",
 "file": "idalshiro_na_others/0090.jpg",
 "thumb": "idalshiro_na_others/0090_t.jpg",
 "credit": "@idalshiro"
@@ -2353,7 +2425,7 @@
 "ガウル"
 ],
 "source": "Encore Blu-ray・Kit",
-"version": "Apple Music 特典",
+"version": "Blu-ray",
 "file": "idalshiro_na_others/0091.jpg",
 "thumb": "idalshiro_na_others/0091_t.jpg",
 "credit": "@idalshiro"
@@ -2364,9 +2436,42 @@
 "ガウル"
 ],
 "source": "Encore Blu-ray・Kit",
-"version": "Ktown4U 特典",
+"version": "Kit",
 "file": "idalshiro_na_others/0092.jpg",
 "thumb": "idalshiro_na_others/0092_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+"members": [
+"ガウル"
+],
+"source": "Encore Blu-ray・Kit",
+"version": "Starship Square 特典",
+"file": "idalshiro_na_others/0093.jpg",
+"thumb": "idalshiro_na_others/0093_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+"members": [
+"ガウル"
+],
+"source": "Encore Blu-ray・Kit",
+"version": "Apple Music 特典",
+"file": "idalshiro_na_others/0094.jpg",
+"thumb": "idalshiro_na_others/0094_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+"members": [
+"ガウル"
+],
+"source": "Encore Blu-ray・Kit",
+"version": "Ktown4U 特典",
+"file": "idalshiro_na_others/0095.jpg",
+"thumb": "idalshiro_na_others/0095_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2376,39 +2481,6 @@
 ],
 "source": "公式ペンライト",
 "version": "ver.2",
-"file": "idalshiro_na_others/0093.jpg",
-"thumb": "idalshiro_na_others/0093_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ガウル"
-],
-"source": "Random Photocard Pack Korea",
-"version": "1",
-"file": "idalshiro_na_others/0094.jpg",
-"thumb": "idalshiro_na_others/0094_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ガウル"
-],
-"source": "Random Photocard Pack Korea",
-"version": "2",
-"file": "idalshiro_na_others/0095.jpg",
-"thumb": "idalshiro_na_others/0095_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ガウル"
-],
-"source": "Random Photocard Pack Korea",
-"version": "3",
 "file": "idalshiro_na_others/0096.jpg",
 "thumb": "idalshiro_na_others/0096_t.jpg",
 "credit": "@idalshiro"
@@ -2419,7 +2491,7 @@
 "ガウル"
 ],
 "source": "Random Photocard Pack Korea",
-"version": "4",
+"version": "1",
 "file": "idalshiro_na_others/0097.jpg",
 "thumb": "idalshiro_na_others/0097_t.jpg",
 "credit": "@idalshiro"
@@ -2430,7 +2502,7 @@
 "ガウル"
 ],
 "source": "Random Photocard Pack Korea",
-"version": "5",
+"version": "2",
 "file": "idalshiro_na_others/0098.jpg",
 "thumb": "idalshiro_na_others/0098_t.jpg",
 "credit": "@idalshiro"
@@ -2441,7 +2513,7 @@
 "ガウル"
 ],
 "source": "Random Photocard Pack Korea",
-"version": "6",
+"version": "3",
 "file": "idalshiro_na_others/0099.jpg",
 "thumb": "idalshiro_na_others/0099_t.jpg",
 "credit": "@idalshiro"
@@ -2451,8 +2523,8 @@
 "members": [
 "ガウル"
 ],
-"source": "Random Photocard Pack Japan",
-"version": "1",
+"source": "Random Photocard Pack Korea",
+"version": "4",
 "file": "idalshiro_na_others/0100.jpg",
 "thumb": "idalshiro_na_others/0100_t.jpg",
 "credit": "@idalshiro"
@@ -2462,8 +2534,8 @@
 "members": [
 "ガウル"
 ],
-"source": "Random Photocard Pack Japan",
-"version": "2",
+"source": "Random Photocard Pack Korea",
+"version": "5",
 "file": "idalshiro_na_others/0101.jpg",
 "thumb": "idalshiro_na_others/0101_t.jpg",
 "credit": "@idalshiro"
@@ -2473,8 +2545,8 @@
 "members": [
 "ガウル"
 ],
-"source": "MD",
-"version": "Chain Strap",
+"source": "Random Photocard Pack Korea",
+"version": "6",
 "file": "idalshiro_na_others/0102.jpg",
 "thumb": "idalshiro_na_others/0102_t.jpg",
 "credit": "@idalshiro"
@@ -2484,8 +2556,8 @@
 "members": [
 "ガウル"
 ],
-"source": "MD",
-"version": "Smart Tok",
+"source": "Random Photocard Pack Japan",
+"version": "1",
 "file": "idalshiro_na_others/0103.jpg",
 "thumb": "idalshiro_na_others/0103_t.jpg",
 "credit": "@idalshiro"
@@ -2495,8 +2567,8 @@
 "members": [
 "ガウル"
 ],
-"source": "MD",
-"version": "Ring",
+"source": "Random Photocard Pack Japan",
+"version": "2",
 "file": "idalshiro_na_others/0104.jpg",
 "thumb": "idalshiro_na_others/0104_t.jpg",
 "credit": "@idalshiro"
@@ -2507,7 +2579,7 @@
 "ガウル"
 ],
 "source": "MD",
-"version": "Acrylic Stand",
+"version": "Chain Strap",
 "file": "idalshiro_na_others/0105.jpg",
 "thumb": "idalshiro_na_others/0105_t.jpg",
 "credit": "@idalshiro"
@@ -2518,7 +2590,7 @@
 "ガウル"
 ],
 "source": "MD",
-"version": "70K Benefit",
+"version": "Smart Tok",
 "file": "idalshiro_na_others/0106.jpg",
 "thumb": "idalshiro_na_others/0106_t.jpg",
 "credit": "@idalshiro"
@@ -2528,8 +2600,8 @@
 "members": [
 "ガウル"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 1",
+"source": "MD",
+"version": "Ring",
 "file": "idalshiro_na_others/0107.jpg",
 "thumb": "idalshiro_na_others/0107_t.jpg",
 "credit": "@idalshiro"
@@ -2539,8 +2611,8 @@
 "members": [
 "ガウル"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 2",
+"source": "MD",
+"version": "Acrylic Stand",
 "file": "idalshiro_na_others/0108.jpg",
 "thumb": "idalshiro_na_others/0108_t.jpg",
 "credit": "@idalshiro"
@@ -2550,8 +2622,8 @@
 "members": [
 "ガウル"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 3",
+"source": "MD",
+"version": "70K Benefit",
 "file": "idalshiro_na_others/0109.jpg",
 "thumb": "idalshiro_na_others/0109_t.jpg",
 "credit": "@idalshiro"
@@ -2561,8 +2633,8 @@
 "members": [
 "ガウル"
 ],
-"source": "SuperStar STARSHIP",
-"version": "1",
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 1",
 "file": "idalshiro_na_others/0110.jpg",
 "thumb": "idalshiro_na_others/0110_t.jpg",
 "credit": "@idalshiro"
@@ -2572,10 +2644,76 @@
 "members": [
 "ガウル"
 ],
-"source": "SuperStar STARSHIP",
-"version": "2",
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 2",
 "file": "idalshiro_na_others/0111.jpg",
 "thumb": "idalshiro_na_others/0111_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ガウル"
+],
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 3",
+"file": "idalshiro_na_others/0112.jpg",
+"thumb": "idalshiro_na_others/0112_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ガウル"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_others/0113.jpg",
+"thumb": "idalshiro_na_others/0113_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ガウル"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_others/0114.jpg",
+"thumb": "idalshiro_na_others/0114_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ガウル"
+],
+"source": "SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"version": "Christmas",
+"file": "idalshiro_na_others/0115.jpg",
+"thumb": "idalshiro_na_others/0115_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
+"members": [
+"ガウル"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_others/0116.jpg",
+"thumb": "idalshiro_na_others/0116_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
+"members": [
+"ガウル"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_others/0117.jpg",
+"thumb": "idalshiro_na_others/0117_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2585,8 +2723,8 @@
 ],
 "source": "DVD・Blu-ray・Kit",
 "version": "DVD",
-"file": "idalshiro_na_others/0112.jpg",
-"thumb": "idalshiro_na_others/0112_t.jpg",
+"file": "idalshiro_na_others/0118.jpg",
+"thumb": "idalshiro_na_others/0118_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2596,8 +2734,8 @@
 ],
 "source": "DVD・Blu-ray・Kit",
 "version": "Blu-ray",
-"file": "idalshiro_na_others/0113.jpg",
-"thumb": "idalshiro_na_others/0113_t.jpg",
+"file": "idalshiro_na_others/0119.jpg",
+"thumb": "idalshiro_na_others/0119_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2607,8 +2745,8 @@
 ],
 "source": "DVD・Blu-ray・Kit",
 "version": "Kit",
-"file": "idalshiro_na_others/0114.jpg",
-"thumb": "idalshiro_na_others/0114_t.jpg",
+"file": "idalshiro_na_others/0120.jpg",
+"thumb": "idalshiro_na_others/0120_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2618,72 +2756,6 @@
 ],
 "source": "DVD・Blu-ray・Kit",
 "version": "Kit POLA",
-"file": "idalshiro_na_others/0115.jpg",
-"thumb": "idalshiro_na_others/0115_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"レイ"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type A 1",
-"file": "idalshiro_na_others/0116.jpg",
-"thumb": "idalshiro_na_others/0116_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"レイ"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type A 2",
-"file": "idalshiro_na_others/0117.jpg",
-"thumb": "idalshiro_na_others/0117_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"レイ"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type A 3",
-"file": "idalshiro_na_others/0118.jpg",
-"thumb": "idalshiro_na_others/0118_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"レイ"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Lucky Card Set 1",
-"file": "idalshiro_na_others/0119.jpg",
-"thumb": "idalshiro_na_others/0119_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"レイ"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Lucky Card Set 2",
-"file": "idalshiro_na_others/0120.jpg",
-"thumb": "idalshiro_na_others/0120_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"レイ"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type B 1",
 "file": "idalshiro_na_others/0121.jpg",
 "thumb": "idalshiro_na_others/0121_t.jpg",
 "credit": "@idalshiro"
@@ -2694,7 +2766,7 @@
 "レイ"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type B 2",
+"version": "Type A 1",
 "file": "idalshiro_na_others/0122.jpg",
 "thumb": "idalshiro_na_others/0122_t.jpg",
 "credit": "@idalshiro"
@@ -2705,7 +2777,7 @@
 "レイ"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type B 3",
+"version": "Type A 2",
 "file": "idalshiro_na_others/0123.jpg",
 "thumb": "idalshiro_na_others/0123_t.jpg",
 "credit": "@idalshiro"
@@ -2716,7 +2788,7 @@
 "レイ"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Kakao 特典 1",
+"version": "Type A 3",
 "file": "idalshiro_na_others/0124.jpg",
 "thumb": "idalshiro_na_others/0124_t.jpg",
 "credit": "@idalshiro"
@@ -2727,7 +2799,7 @@
 "レイ"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Kakao 特典 2",
+"version": "Lucky Card Set 1",
 "file": "idalshiro_na_others/0125.jpg",
 "thumb": "idalshiro_na_others/0125_t.jpg",
 "credit": "@idalshiro"
@@ -2738,9 +2810,75 @@
 "レイ"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Double Sided",
+"version": "Lucky Card Set 2",
 "file": "idalshiro_na_others/0126.jpg",
 "thumb": "idalshiro_na_others/0126_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Type B 1",
+"file": "idalshiro_na_others/0127.jpg",
+"thumb": "idalshiro_na_others/0127_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Type B 2",
+"file": "idalshiro_na_others/0128.jpg",
+"thumb": "idalshiro_na_others/0128_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Type B 3",
+"file": "idalshiro_na_others/0129.jpg",
+"thumb": "idalshiro_na_others/0129_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Kakao 特典 1",
+"file": "idalshiro_na_others/0130.jpg",
+"thumb": "idalshiro_na_others/0130_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Kakao 特典 2",
+"file": "idalshiro_na_others/0131.jpg",
+"thumb": "idalshiro_na_others/0131_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"レイ"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Double Sided",
+"file": "idalshiro_na_others/0132.jpg",
+"thumb": "idalshiro_na_others/0132_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2750,8 +2888,8 @@
 ],
 "source": "Encore（アンコール）",
 "version": "Wing Hair Pin Set",
-"file": "idalshiro_na_others/0127.jpg",
-"thumb": "idalshiro_na_others/0127_t.jpg",
+"file": "idalshiro_na_others/0133.jpg",
+"thumb": "idalshiro_na_others/0133_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2761,72 +2899,6 @@
 ],
 "source": "Encore（アンコール）",
 "version": "DIVE ZONE Day 1",
-"file": "idalshiro_na_others/0128.jpg",
-"thumb": "idalshiro_na_others/0128_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"レイ"
-],
-"source": "Random Photocard Pack Japan",
-"version": "1",
-"file": "idalshiro_na_others/0129.jpg",
-"thumb": "idalshiro_na_others/0129_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"レイ"
-],
-"source": "Random Photocard Pack Japan",
-"version": "2",
-"file": "idalshiro_na_others/0130.jpg",
-"thumb": "idalshiro_na_others/0130_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"レイ"
-],
-"source": "MD",
-"version": "Photo Kit",
-"file": "idalshiro_na_others/0131.jpg",
-"thumb": "idalshiro_na_others/0131_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"レイ"
-],
-"source": "MD",
-"version": "Bandana",
-"file": "idalshiro_na_others/0132.jpg",
-"thumb": "idalshiro_na_others/0132_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"レイ"
-],
-"source": "MD",
-"version": "Acrylic Stand",
-"file": "idalshiro_na_others/0133.jpg",
-"thumb": "idalshiro_na_others/0133_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"レイ"
-],
-"source": "MD",
-"version": "Whistle Necklace",
 "file": "idalshiro_na_others/0134.jpg",
 "thumb": "idalshiro_na_others/0134_t.jpg",
 "credit": "@idalshiro"
@@ -2836,8 +2908,8 @@
 "members": [
 "レイ"
 ],
-"source": "MD",
-"version": "Stainless Mug",
+"source": "Random Photocard Pack Japan",
+"version": "1",
 "file": "idalshiro_na_others/0135.jpg",
 "thumb": "idalshiro_na_others/0135_t.jpg",
 "credit": "@idalshiro"
@@ -2847,8 +2919,8 @@
 "members": [
 "レイ"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 2",
+"source": "Random Photocard Pack Japan",
+"version": "2",
 "file": "idalshiro_na_others/0136.jpg",
 "thumb": "idalshiro_na_others/0136_t.jpg",
 "credit": "@idalshiro"
@@ -2858,8 +2930,8 @@
 "members": [
 "レイ"
 ],
-"source": "Lotte Cinema Live Viewing",
-"version": "",
+"source": "MD",
+"version": "Photo Kit",
 "file": "idalshiro_na_others/0137.jpg",
 "thumb": "idalshiro_na_others/0137_t.jpg",
 "credit": "@idalshiro"
@@ -2869,8 +2941,8 @@
 "members": [
 "レイ"
 ],
-"source": "VIP Perks Japan",
-"version": "",
+"source": "MD",
+"version": "Bandana",
 "file": "idalshiro_na_others/0138.jpg",
 "thumb": "idalshiro_na_others/0138_t.jpg",
 "credit": "@idalshiro"
@@ -2880,8 +2952,8 @@
 "members": [
 "レイ"
 ],
-"source": "DIVE JAPAN",
-"version": "Clear Files",
+"source": "MD",
+"version": "Acrylic Stand",
 "file": "idalshiro_na_others/0139.jpg",
 "thumb": "idalshiro_na_others/0139_t.jpg",
 "credit": "@idalshiro"
@@ -2891,8 +2963,8 @@
 "members": [
 "レイ"
 ],
-"source": "SuperStar STARSHIP",
-"version": "1",
+"source": "MD",
+"version": "Whistle Necklace",
 "file": "idalshiro_na_others/0140.jpg",
 "thumb": "idalshiro_na_others/0140_t.jpg",
 "credit": "@idalshiro"
@@ -2902,10 +2974,76 @@
 "members": [
 "レイ"
 ],
-"source": "SuperStar STARSHIP",
-"version": "2",
+"source": "MD",
+"version": "Stainless Mug",
 "file": "idalshiro_na_others/0141.jpg",
 "thumb": "idalshiro_na_others/0141_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"レイ"
+],
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 2",
+"file": "idalshiro_na_others/0142.jpg",
+"thumb": "idalshiro_na_others/0142_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"レイ"
+],
+"source": "Lotte Cinema Live Viewing",
+"version": "",
+"file": "idalshiro_na_others/0143.jpg",
+"thumb": "idalshiro_na_others/0143_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"レイ"
+],
+"source": "VIP Perks Japan",
+"version": "",
+"file": "idalshiro_na_others/0144.jpg",
+"thumb": "idalshiro_na_others/0144_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"レイ"
+],
+"source": "DIVE JAPAN",
+"version": "Clear Files",
+"file": "idalshiro_na_others/0145.jpg",
+"thumb": "idalshiro_na_others/0145_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"レイ"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_others/0146.jpg",
+"thumb": "idalshiro_na_others/0146_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"レイ"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_others/0147.jpg",
+"thumb": "idalshiro_na_others/0147_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2915,8 +3053,8 @@
 ],
 "source": "DIVE 4期 'DIVE into IVE'",
 "version": "",
-"file": "idalshiro_na_others/0142.jpg",
-"thumb": "idalshiro_na_others/0142_t.jpg",
+"file": "idalshiro_na_others/0148.jpg",
+"thumb": "idalshiro_na_others/0148_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2926,8 +3064,8 @@
 ],
 "source": "DIVE 4期 'DIVE into IVE'",
 "version": "DIVE JAPAN",
-"file": "idalshiro_na_others/0143.jpg",
-"thumb": "idalshiro_na_others/0143_t.jpg",
+"file": "idalshiro_na_others/0149.jpg",
+"thumb": "idalshiro_na_others/0149_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2937,8 +3075,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Blu-ray",
-"file": "idalshiro_na_others/0144.jpg",
-"thumb": "idalshiro_na_others/0144_t.jpg",
+"file": "idalshiro_na_others/0150.jpg",
+"thumb": "idalshiro_na_others/0150_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2948,8 +3086,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Kit",
-"file": "idalshiro_na_others/0145.jpg",
-"thumb": "idalshiro_na_others/0145_t.jpg",
+"file": "idalshiro_na_others/0151.jpg",
+"thumb": "idalshiro_na_others/0151_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2959,8 +3097,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Starship Square 特典",
-"file": "idalshiro_na_others/0146.jpg",
-"thumb": "idalshiro_na_others/0146_t.jpg",
+"file": "idalshiro_na_others/0152.jpg",
+"thumb": "idalshiro_na_others/0152_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2970,8 +3108,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Apple Music 特典",
-"file": "idalshiro_na_others/0147.jpg",
-"thumb": "idalshiro_na_others/0147_t.jpg",
+"file": "idalshiro_na_others/0153.jpg",
+"thumb": "idalshiro_na_others/0153_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2981,8 +3119,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Ktown4U 特典",
-"file": "idalshiro_na_others/0148.jpg",
-"thumb": "idalshiro_na_others/0148_t.jpg",
+"file": "idalshiro_na_others/0154.jpg",
+"thumb": "idalshiro_na_others/0154_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -2992,72 +3130,6 @@
 ],
 "source": "公式ペンライト",
 "version": "ver.2",
-"file": "idalshiro_na_others/0149.jpg",
-"thumb": "idalshiro_na_others/0149_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"レイ"
-],
-"source": "Random Photocard Pack Korea",
-"version": "1",
-"file": "idalshiro_na_others/0150.jpg",
-"thumb": "idalshiro_na_others/0150_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"レイ"
-],
-"source": "Random Photocard Pack Korea",
-"version": "2",
-"file": "idalshiro_na_others/0151.jpg",
-"thumb": "idalshiro_na_others/0151_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"レイ"
-],
-"source": "Random Photocard Pack Korea",
-"version": "3",
-"file": "idalshiro_na_others/0152.jpg",
-"thumb": "idalshiro_na_others/0152_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"レイ"
-],
-"source": "Random Photocard Pack Korea",
-"version": "4",
-"file": "idalshiro_na_others/0153.jpg",
-"thumb": "idalshiro_na_others/0153_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"レイ"
-],
-"source": "Random Photocard Pack Korea",
-"version": "5",
-"file": "idalshiro_na_others/0154.jpg",
-"thumb": "idalshiro_na_others/0154_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"レイ"
-],
-"source": "Random Photocard Pack Korea",
-"version": "6",
 "file": "idalshiro_na_others/0155.jpg",
 "thumb": "idalshiro_na_others/0155_t.jpg",
 "credit": "@idalshiro"
@@ -3067,7 +3139,7 @@
 "members": [
 "レイ"
 ],
-"source": "Random Photocard Pack Japan",
+"source": "Random Photocard Pack Korea",
 "version": "1",
 "file": "idalshiro_na_others/0156.jpg",
 "thumb": "idalshiro_na_others/0156_t.jpg",
@@ -3078,7 +3150,7 @@
 "members": [
 "レイ"
 ],
-"source": "Random Photocard Pack Japan",
+"source": "Random Photocard Pack Korea",
 "version": "2",
 "file": "idalshiro_na_others/0157.jpg",
 "thumb": "idalshiro_na_others/0157_t.jpg",
@@ -3089,8 +3161,8 @@
 "members": [
 "レイ"
 ],
-"source": "MD",
-"version": "Chain Strap",
+"source": "Random Photocard Pack Korea",
+"version": "3",
 "file": "idalshiro_na_others/0158.jpg",
 "thumb": "idalshiro_na_others/0158_t.jpg",
 "credit": "@idalshiro"
@@ -3100,8 +3172,8 @@
 "members": [
 "レイ"
 ],
-"source": "MD",
-"version": "Smart Tok",
+"source": "Random Photocard Pack Korea",
+"version": "4",
 "file": "idalshiro_na_others/0159.jpg",
 "thumb": "idalshiro_na_others/0159_t.jpg",
 "credit": "@idalshiro"
@@ -3111,8 +3183,8 @@
 "members": [
 "レイ"
 ],
-"source": "MD",
-"version": "Ring",
+"source": "Random Photocard Pack Korea",
+"version": "5",
 "file": "idalshiro_na_others/0160.jpg",
 "thumb": "idalshiro_na_others/0160_t.jpg",
 "credit": "@idalshiro"
@@ -3122,8 +3194,8 @@
 "members": [
 "レイ"
 ],
-"source": "MD",
-"version": "Acrylic Stand",
+"source": "Random Photocard Pack Korea",
+"version": "6",
 "file": "idalshiro_na_others/0161.jpg",
 "thumb": "idalshiro_na_others/0161_t.jpg",
 "credit": "@idalshiro"
@@ -3133,8 +3205,8 @@
 "members": [
 "レイ"
 ],
-"source": "MD",
-"version": "70K Benefit",
+"source": "Random Photocard Pack Japan",
+"version": "1",
 "file": "idalshiro_na_others/0162.jpg",
 "thumb": "idalshiro_na_others/0162_t.jpg",
 "credit": "@idalshiro"
@@ -3144,8 +3216,8 @@
 "members": [
 "レイ"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 1",
+"source": "Random Photocard Pack Japan",
+"version": "2",
 "file": "idalshiro_na_others/0163.jpg",
 "thumb": "idalshiro_na_others/0163_t.jpg",
 "credit": "@idalshiro"
@@ -3155,8 +3227,8 @@
 "members": [
 "レイ"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 2",
+"source": "MD",
+"version": "Chain Strap",
 "file": "idalshiro_na_others/0164.jpg",
 "thumb": "idalshiro_na_others/0164_t.jpg",
 "credit": "@idalshiro"
@@ -3166,8 +3238,8 @@
 "members": [
 "レイ"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 3",
+"source": "MD",
+"version": "Smart Tok",
 "file": "idalshiro_na_others/0165.jpg",
 "thumb": "idalshiro_na_others/0165_t.jpg",
 "credit": "@idalshiro"
@@ -3177,8 +3249,8 @@
 "members": [
 "レイ"
 ],
-"source": "SuperStar STARSHIP",
-"version": "1",
+"source": "MD",
+"version": "Ring",
 "file": "idalshiro_na_others/0166.jpg",
 "thumb": "idalshiro_na_others/0166_t.jpg",
 "credit": "@idalshiro"
@@ -3188,10 +3260,109 @@
 "members": [
 "レイ"
 ],
-"source": "SuperStar STARSHIP",
-"version": "2",
+"source": "MD",
+"version": "Acrylic Stand",
 "file": "idalshiro_na_others/0167.jpg",
 "thumb": "idalshiro_na_others/0167_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"レイ"
+],
+"source": "MD",
+"version": "70K Benefit",
+"file": "idalshiro_na_others/0168.jpg",
+"thumb": "idalshiro_na_others/0168_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"レイ"
+],
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 1",
+"file": "idalshiro_na_others/0169.jpg",
+"thumb": "idalshiro_na_others/0169_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"レイ"
+],
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 2",
+"file": "idalshiro_na_others/0170.jpg",
+"thumb": "idalshiro_na_others/0170_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"レイ"
+],
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 3",
+"file": "idalshiro_na_others/0171.jpg",
+"thumb": "idalshiro_na_others/0171_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"レイ"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_others/0172.jpg",
+"thumb": "idalshiro_na_others/0172_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"レイ"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_others/0173.jpg",
+"thumb": "idalshiro_na_others/0173_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"レイ"
+],
+"source": "SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"version": "Christmas",
+"file": "idalshiro_na_others/0174.jpg",
+"thumb": "idalshiro_na_others/0174_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
+"members": [
+"レイ"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_others/0175.jpg",
+"thumb": "idalshiro_na_others/0175_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
+"members": [
+"レイ"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_others/0176.jpg",
+"thumb": "idalshiro_na_others/0176_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3201,8 +3372,8 @@
 ],
 "source": "DVD・Blu-ray・Kit",
 "version": "DVD",
-"file": "idalshiro_na_others/0168.jpg",
-"thumb": "idalshiro_na_others/0168_t.jpg",
+"file": "idalshiro_na_others/0177.jpg",
+"thumb": "idalshiro_na_others/0177_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3212,8 +3383,8 @@
 ],
 "source": "DVD・Blu-ray・Kit",
 "version": "Blu-ray",
-"file": "idalshiro_na_others/0169.jpg",
-"thumb": "idalshiro_na_others/0169_t.jpg",
+"file": "idalshiro_na_others/0178.jpg",
+"thumb": "idalshiro_na_others/0178_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3223,8 +3394,8 @@
 ],
 "source": "DVD・Blu-ray・Kit",
 "version": "Kit",
-"file": "idalshiro_na_others/0170.jpg",
-"thumb": "idalshiro_na_others/0170_t.jpg",
+"file": "idalshiro_na_others/0179.jpg",
+"thumb": "idalshiro_na_others/0179_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3234,105 +3405,6 @@
 ],
 "source": "DVD・Blu-ray・Kit",
 "version": "Kit POLA",
-"file": "idalshiro_na_others/0171.jpg",
-"thumb": "idalshiro_na_others/0171_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"ウォニョン"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type A 1",
-"file": "idalshiro_na_others/0172.jpg",
-"thumb": "idalshiro_na_others/0172_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"ウォニョン"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type A 2",
-"file": "idalshiro_na_others/0173.jpg",
-"thumb": "idalshiro_na_others/0173_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"ウォニョン"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type A 3",
-"file": "idalshiro_na_others/0174.jpg",
-"thumb": "idalshiro_na_others/0174_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"ウォニョン"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Lucky Card Set 1",
-"file": "idalshiro_na_others/0175.jpg",
-"thumb": "idalshiro_na_others/0175_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"ウォニョン"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Lucky Card Set 2",
-"file": "idalshiro_na_others/0176.jpg",
-"thumb": "idalshiro_na_others/0176_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"ウォニョン"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type B 1",
-"file": "idalshiro_na_others/0177.jpg",
-"thumb": "idalshiro_na_others/0177_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"ウォニョン"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type B 2",
-"file": "idalshiro_na_others/0178.jpg",
-"thumb": "idalshiro_na_others/0178_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"ウォニョン"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Type B 3",
-"file": "idalshiro_na_others/0179.jpg",
-"thumb": "idalshiro_na_others/0179_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "Magazine｜雑誌特典",
-"members": [
-"ウォニョン"
-],
-"source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Kakao 特典 1",
 "file": "idalshiro_na_others/0180.jpg",
 "thumb": "idalshiro_na_others/0180_t.jpg",
 "credit": "@idalshiro"
@@ -3343,7 +3415,7 @@
 "ウォニョン"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Kakao 特典 2",
+"version": "Type A 1",
 "file": "idalshiro_na_others/0181.jpg",
 "thumb": "idalshiro_na_others/0181_t.jpg",
 "credit": "@idalshiro"
@@ -3354,9 +3426,108 @@
 "ウォニョン"
 ],
 "source": "DICON 'I have a dream, I have a fantasy'",
-"version": "Double Sided",
+"version": "Type A 2",
 "file": "idalshiro_na_others/0182.jpg",
 "thumb": "idalshiro_na_others/0182_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Type A 3",
+"file": "idalshiro_na_others/0183.jpg",
+"thumb": "idalshiro_na_others/0183_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Lucky Card Set 1",
+"file": "idalshiro_na_others/0184.jpg",
+"thumb": "idalshiro_na_others/0184_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Lucky Card Set 2",
+"file": "idalshiro_na_others/0185.jpg",
+"thumb": "idalshiro_na_others/0185_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Type B 1",
+"file": "idalshiro_na_others/0186.jpg",
+"thumb": "idalshiro_na_others/0186_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Type B 2",
+"file": "idalshiro_na_others/0187.jpg",
+"thumb": "idalshiro_na_others/0187_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Type B 3",
+"file": "idalshiro_na_others/0188.jpg",
+"thumb": "idalshiro_na_others/0188_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Kakao 特典 1",
+"file": "idalshiro_na_others/0189.jpg",
+"thumb": "idalshiro_na_others/0189_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Kakao 特典 2",
+"file": "idalshiro_na_others/0190.jpg",
+"thumb": "idalshiro_na_others/0190_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Magazine｜雑誌特典",
+"members": [
+"ウォニョン"
+],
+"source": "DICON 'I have a dream, I have a fantasy'",
+"version": "Double Sided",
+"file": "idalshiro_na_others/0191.jpg",
+"thumb": "idalshiro_na_others/0191_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3366,8 +3537,8 @@
 ],
 "source": "Encore（アンコール）",
 "version": "Wing Hair Pin Set",
-"file": "idalshiro_na_others/0183.jpg",
-"thumb": "idalshiro_na_others/0183_t.jpg",
+"file": "idalshiro_na_others/0192.jpg",
+"thumb": "idalshiro_na_others/0192_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3377,105 +3548,6 @@
 ],
 "source": "Encore（アンコール）",
 "version": "DIVE ZONE Day 1",
-"file": "idalshiro_na_others/0184.jpg",
-"thumb": "idalshiro_na_others/0184_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Japan",
-"version": "1",
-"file": "idalshiro_na_others/0185.jpg",
-"thumb": "idalshiro_na_others/0185_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Japan",
-"version": "2",
-"file": "idalshiro_na_others/0186.jpg",
-"thumb": "idalshiro_na_others/0186_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ウォニョン"
-],
-"source": "MD",
-"version": "Photo Kit",
-"file": "idalshiro_na_others/0187.jpg",
-"thumb": "idalshiro_na_others/0187_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ウォニョン"
-],
-"source": "MD",
-"version": "Bandana",
-"file": "idalshiro_na_others/0188.jpg",
-"thumb": "idalshiro_na_others/0188_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ウォニョン"
-],
-"source": "MD",
-"version": "Acrylic Stand",
-"file": "idalshiro_na_others/0189.jpg",
-"thumb": "idalshiro_na_others/0189_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ウォニョン"
-],
-"source": "MD",
-"version": "Whistle Necklace",
-"file": "idalshiro_na_others/0190.jpg",
-"thumb": "idalshiro_na_others/0190_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ウォニョン"
-],
-"source": "MD",
-"version": "Stainless Mug",
-"file": "idalshiro_na_others/0191.jpg",
-"thumb": "idalshiro_na_others/0191_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ウォニョン"
-],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 2",
-"file": "idalshiro_na_others/0192.jpg",
-"thumb": "idalshiro_na_others/0192_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "3rd FAN CONCERT 'IVE SCOUT'",
-"members": [
-"ウォニョン"
-],
-"source": "Lotte Cinema Live Viewing",
-"version": "",
 "file": "idalshiro_na_others/0193.jpg",
 "thumb": "idalshiro_na_others/0193_t.jpg",
 "credit": "@idalshiro"
@@ -3485,8 +3557,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "VIP Perks Japan",
-"version": "",
+"source": "Random Photocard Pack Japan",
+"version": "1",
 "file": "idalshiro_na_others/0194.jpg",
 "thumb": "idalshiro_na_others/0194_t.jpg",
 "credit": "@idalshiro"
@@ -3496,8 +3568,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "DIVE JAPAN",
-"version": "Clear Files",
+"source": "Random Photocard Pack Japan",
+"version": "2",
 "file": "idalshiro_na_others/0195.jpg",
 "thumb": "idalshiro_na_others/0195_t.jpg",
 "credit": "@idalshiro"
@@ -3507,8 +3579,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "SuperStar STARSHIP",
-"version": "1",
+"source": "MD",
+"version": "Photo Kit",
 "file": "idalshiro_na_others/0196.jpg",
 "thumb": "idalshiro_na_others/0196_t.jpg",
 "credit": "@idalshiro"
@@ -3518,10 +3590,109 @@
 "members": [
 "ウォニョン"
 ],
-"source": "SuperStar STARSHIP",
-"version": "2",
+"source": "MD",
+"version": "Bandana",
 "file": "idalshiro_na_others/0197.jpg",
 "thumb": "idalshiro_na_others/0197_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ウォニョン"
+],
+"source": "MD",
+"version": "Acrylic Stand",
+"file": "idalshiro_na_others/0198.jpg",
+"thumb": "idalshiro_na_others/0198_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ウォニョン"
+],
+"source": "MD",
+"version": "Whistle Necklace",
+"file": "idalshiro_na_others/0199.jpg",
+"thumb": "idalshiro_na_others/0199_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ウォニョン"
+],
+"source": "MD",
+"version": "Stainless Mug",
+"file": "idalshiro_na_others/0200.jpg",
+"thumb": "idalshiro_na_others/0200_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ウォニョン"
+],
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 2",
+"file": "idalshiro_na_others/0201.jpg",
+"thumb": "idalshiro_na_others/0201_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ウォニョン"
+],
+"source": "Lotte Cinema Live Viewing",
+"version": "",
+"file": "idalshiro_na_others/0202.jpg",
+"thumb": "idalshiro_na_others/0202_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ウォニョン"
+],
+"source": "VIP Perks Japan",
+"version": "",
+"file": "idalshiro_na_others/0203.jpg",
+"thumb": "idalshiro_na_others/0203_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ウォニョン"
+],
+"source": "DIVE JAPAN",
+"version": "Clear Files",
+"file": "idalshiro_na_others/0204.jpg",
+"thumb": "idalshiro_na_others/0204_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ウォニョン"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_others/0205.jpg",
+"thumb": "idalshiro_na_others/0205_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "3rd FAN CONCERT 'IVE SCOUT'",
+"members": [
+"ウォニョン"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_others/0206.jpg",
+"thumb": "idalshiro_na_others/0206_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3531,8 +3702,8 @@
 ],
 "source": "DIVE 4期 'DIVE into IVE'",
 "version": "",
-"file": "idalshiro_na_others/0198.jpg",
-"thumb": "idalshiro_na_others/0198_t.jpg",
+"file": "idalshiro_na_others/0207.jpg",
+"thumb": "idalshiro_na_others/0207_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3542,8 +3713,8 @@
 ],
 "source": "DIVE 4期 'DIVE into IVE'",
 "version": "DIVE JAPAN",
-"file": "idalshiro_na_others/0199.jpg",
-"thumb": "idalshiro_na_others/0199_t.jpg",
+"file": "idalshiro_na_others/0208.jpg",
+"thumb": "idalshiro_na_others/0208_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3553,8 +3724,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Blu-ray",
-"file": "idalshiro_na_others/0200.jpg",
-"thumb": "idalshiro_na_others/0200_t.jpg",
+"file": "idalshiro_na_others/0209.jpg",
+"thumb": "idalshiro_na_others/0209_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3564,8 +3735,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Kit",
-"file": "idalshiro_na_others/0201.jpg",
-"thumb": "idalshiro_na_others/0201_t.jpg",
+"file": "idalshiro_na_others/0210.jpg",
+"thumb": "idalshiro_na_others/0210_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3575,8 +3746,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Starship Square 特典",
-"file": "idalshiro_na_others/0202.jpg",
-"thumb": "idalshiro_na_others/0202_t.jpg",
+"file": "idalshiro_na_others/0211.jpg",
+"thumb": "idalshiro_na_others/0211_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3586,8 +3757,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Apple Music 特典",
-"file": "idalshiro_na_others/0203.jpg",
-"thumb": "idalshiro_na_others/0203_t.jpg",
+"file": "idalshiro_na_others/0212.jpg",
+"thumb": "idalshiro_na_others/0212_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3597,8 +3768,8 @@
 ],
 "source": "Encore Blu-ray・Kit",
 "version": "Ktown4U 特典",
-"file": "idalshiro_na_others/0204.jpg",
-"thumb": "idalshiro_na_others/0204_t.jpg",
+"file": "idalshiro_na_others/0213.jpg",
+"thumb": "idalshiro_na_others/0213_t.jpg",
 "credit": "@idalshiro"
 },
 {
@@ -3608,105 +3779,6 @@
 ],
 "source": "公式ペンライト",
 "version": "ver.2",
-"file": "idalshiro_na_others/0205.jpg",
-"thumb": "idalshiro_na_others/0205_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Korea",
-"version": "1",
-"file": "idalshiro_na_others/0206.jpg",
-"thumb": "idalshiro_na_others/0206_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Korea",
-"version": "2",
-"file": "idalshiro_na_others/0207.jpg",
-"thumb": "idalshiro_na_others/0207_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Korea",
-"version": "3",
-"file": "idalshiro_na_others/0208.jpg",
-"thumb": "idalshiro_na_others/0208_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Korea",
-"version": "4",
-"file": "idalshiro_na_others/0209.jpg",
-"thumb": "idalshiro_na_others/0209_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Korea",
-"version": "5",
-"file": "idalshiro_na_others/0210.jpg",
-"thumb": "idalshiro_na_others/0210_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Korea",
-"version": "6",
-"file": "idalshiro_na_others/0211.jpg",
-"thumb": "idalshiro_na_others/0211_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Japan",
-"version": "1",
-"file": "idalshiro_na_others/0212.jpg",
-"thumb": "idalshiro_na_others/0212_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Japan",
-"version": "2",
-"file": "idalshiro_na_others/0213.jpg",
-"thumb": "idalshiro_na_others/0213_t.jpg",
-"credit": "@idalshiro"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ウォニョン"
-],
-"source": "MD",
-"version": "Chain Strap",
 "file": "idalshiro_na_others/0214.jpg",
 "thumb": "idalshiro_na_others/0214_t.jpg",
 "credit": "@idalshiro"
@@ -3716,8 +3788,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "MD",
-"version": "Smart Tok",
+"source": "Random Photocard Pack Korea",
+"version": "1",
 "file": "idalshiro_na_others/0215.jpg",
 "thumb": "idalshiro_na_others/0215_t.jpg",
 "credit": "@idalshiro"
@@ -3727,8 +3799,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "MD",
-"version": "Ring",
+"source": "Random Photocard Pack Korea",
+"version": "2",
 "file": "idalshiro_na_others/0216.jpg",
 "thumb": "idalshiro_na_others/0216_t.jpg",
 "credit": "@idalshiro"
@@ -3738,8 +3810,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "MD",
-"version": "Acrylic Stand",
+"source": "Random Photocard Pack Korea",
+"version": "3",
 "file": "idalshiro_na_others/0217.jpg",
 "thumb": "idalshiro_na_others/0217_t.jpg",
 "credit": "@idalshiro"
@@ -3749,8 +3821,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "MD",
-"version": "70K Benefit",
+"source": "Random Photocard Pack Korea",
+"version": "4",
 "file": "idalshiro_na_others/0218.jpg",
 "thumb": "idalshiro_na_others/0218_t.jpg",
 "credit": "@idalshiro"
@@ -3760,8 +3832,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 1",
+"source": "Random Photocard Pack Korea",
+"version": "5",
 "file": "idalshiro_na_others/0219.jpg",
 "thumb": "idalshiro_na_others/0219_t.jpg",
 "credit": "@idalshiro"
@@ -3771,8 +3843,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 2",
+"source": "Random Photocard Pack Korea",
+"version": "6",
 "file": "idalshiro_na_others/0220.jpg",
 "thumb": "idalshiro_na_others/0220_t.jpg",
 "credit": "@idalshiro"
@@ -3782,8 +3854,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "DIVE ZONE FC ブース特典",
-"version": "Day 3",
+"source": "Random Photocard Pack Japan",
+"version": "1",
 "file": "idalshiro_na_others/0221.jpg",
 "thumb": "idalshiro_na_others/0221_t.jpg",
 "credit": "@idalshiro"
@@ -3793,8 +3865,8 @@
 "members": [
 "ウォニョン"
 ],
-"source": "SuperStar STARSHIP",
-"version": "1",
+"source": "Random Photocard Pack Japan",
+"version": "2",
 "file": "idalshiro_na_others/0222.jpg",
 "thumb": "idalshiro_na_others/0222_t.jpg",
 "credit": "@idalshiro"
@@ -3804,10 +3876,142 @@
 "members": [
 "ウォニョン"
 ],
-"source": "SuperStar STARSHIP",
-"version": "2",
+"source": "MD",
+"version": "Chain Strap",
 "file": "idalshiro_na_others/0223.jpg",
 "thumb": "idalshiro_na_others/0223_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ウォニョン"
+],
+"source": "MD",
+"version": "Smart Tok",
+"file": "idalshiro_na_others/0224.jpg",
+"thumb": "idalshiro_na_others/0224_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ウォニョン"
+],
+"source": "MD",
+"version": "Ring",
+"file": "idalshiro_na_others/0225.jpg",
+"thumb": "idalshiro_na_others/0225_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ウォニョン"
+],
+"source": "MD",
+"version": "Acrylic Stand",
+"file": "idalshiro_na_others/0226.jpg",
+"thumb": "idalshiro_na_others/0226_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ウォニョン"
+],
+"source": "MD",
+"version": "70K Benefit",
+"file": "idalshiro_na_others/0227.jpg",
+"thumb": "idalshiro_na_others/0227_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ウォニョン"
+],
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 1",
+"file": "idalshiro_na_others/0228.jpg",
+"thumb": "idalshiro_na_others/0228_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ウォニョン"
+],
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 2",
+"file": "idalshiro_na_others/0229.jpg",
+"thumb": "idalshiro_na_others/0229_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ウォニョン"
+],
+"source": "DIVE ZONE FC ブース特典",
+"version": "Day 3",
+"file": "idalshiro_na_others/0230.jpg",
+"thumb": "idalshiro_na_others/0230_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ウォニョン"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_others/0231.jpg",
+"thumb": "idalshiro_na_others/0231_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ウォニョン"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_others/0232.jpg",
+"thumb": "idalshiro_na_others/0232_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ウォニョン"
+],
+"source": "SuperStar POP-UP 'STAR+ING: Christmas Bear'",
+"version": "Christmas",
+"file": "idalshiro_na_others/0233.jpg",
+"thumb": "idalshiro_na_others/0233_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
+"members": [
+"ウォニョン"
+],
+"source": "SuperStar STARSHIP",
+"version": "1",
+"file": "idalshiro_na_others/0234.jpg",
+"thumb": "idalshiro_na_others/0234_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "4th FAN CONCERT 'DIVE into IVE'",
+"members": [
+"ウォニョン"
+],
+"source": "SuperStar STARSHIP",
+"version": "2",
+"file": "idalshiro_na_others/0235.jpg",
+"thumb": "idalshiro_na_others/0235_t.jpg",
 "credit": "@idalshiro"
 }
 ]
