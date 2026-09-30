@@ -620,11 +620,11 @@ NO_IMAGE_NO = {("leeseo", 27), ("liz", 30), ("wonyoung", 24), ("rei", 24), ("gae
 TABLES = {"leeseo": ("イソ", LEESEO), "liz": ("リズ", LIZ), "wonyoung": ("ウォニョン", WONYOUNG), "rei": ("レイ", REI), "gaeul": ("ガウル", GAEUL)}
 # 見比べページ（_review/<メンバー>_have.html）で本人が「ちがう」とした番号：アプリの画像を表の画像に入れ替える。
 # 「同じ」としたものは、大きい方（画質のよい方）を使う
-DIFF = {"leeseo": {73, 209}, "liz": {246}, "wonyoung": {90}, "rei": set(), "gaeul": set()}
+DIFF = {"leeseo": {73, 209}, "liz": {246, 44}, "wonyoung": {90}, "rei": set(), "gaeul": set()}
 # ラベルを直したもの（2026-09-30）：前は「ちがう」だった 23・56・113・152・153・194（イソ）、27・40・140・179・180・226（リズ）、20・101・168（ウォニョン）、21・190（レイ）。
 # 直した枠に画像があるものは、見比べページ（_review/fix_have.html）で本人に聞き直す
 # ラベルを直したもので、直した枠にもう画像があるもの：本人の見比べ（_review/fix_have.html）が済むまで、アプリの画像のままにする
-PENDING = {("leeseo", i) for i in (23, 56, 113, 152, 153, 194)} | {("liz", i) for i in (27, 40, 140, 179, 180, 226, 9, 44, 129, 149, 150, 156, 217)}     | {("wonyoung", i) for i in (20, 101, 168)} | {("rei", i) for i in (21, 190)} | {("leeseo", i) for i in (121, 125, 138)}
+PENDING = set()  # 本人の見比べが済んだ（2026-09-30）：liz 44（I've IVE Fancall）だけ「ちがう」→ 表の画像に入れ替え（DIFF）。ほかは「同じ」
 # 37（I've IVE Naver Live）・43（I've MINE Broadcast Baddie）は、表では何人かで写ったカードだった。
 # アプリの 1 人ずつの枠（1 人のカード）はそのままにして、下の GROUPS で何人かのカードの枠を足す
 
