@@ -50,6 +50,8 @@ if __name__ == "__main__":
     rows = [r for r in csv.DictReader(open(PROJ + "public/seed/cards.csv", encoding="utf-8")) if r["member"] == "イソ"]
     have = set()
     for p in sorted(glob.glob(SP + "out/*.json")):
+        if os.path.basename(p) == "idalshiro_na_leeseo.json":  # 自分の前の結果は数えない
+            continue
         for e in json.load(open(p, encoding="utf-8"))["images"]:
             if e["members"] == ["イソ"]:
                 have.add((e["collection"], e["source"], e["version"]))
