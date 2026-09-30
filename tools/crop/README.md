@@ -19,6 +19,7 @@
 | albums_new0929.py | 2026-09-29 に追加した資料（`新しい資料 2026-09-29/`）のコラボ・ペプシ・シーグリ・ALIVE・Be Alright など |
 | albums_balsegno.py | @balsegno のリズのノンアルバム一覧（`_nonalbum/balsegno_liz/`）から、ファンミ・ファンコン・ツアーの種類を 6 人分足す（画像はリズだけ） |
 | albums_idalshiro.py | @idalshiro のメンバー別の全トレカ一覧（`_nonalbum/idalshiro/`）から、メンバーごとに違うグッズなどを足す |
+| albums_pipipup.py | @_pipipup の「IVE MD pc List. 02」（メンバー 6 枚。`新しい資料 2026-10-01/`）。MAP の位置（段・列）→ 枠。画像のない枠を埋める。`pp_watermark.json` は別の人の ID の透かしがあって外した位置 |
 | albums_solo.py | @idalshiro の solo merch（`_nonalbum/idalshiro/solo/`）から、メンバー個人の広告・イベントのトレカを個人のコレクションに入れる |
 | hires_ida.py | 画質を上げる：@idalshiro のメンバー別の表から、同じ写真の大きい画像に差し替える（`ida_drop.json` は目で見て外したもの） |
 | albums_ida_check.py | 本人が確認ページで「ない」とした @idalshiro のカードを、ラベルに合わせて枠・画像にする（`review/` に番号と位置） |
