@@ -22,8 +22,8 @@ H, N, X = "have", "new", "skip"
 # イソ（review_leeseo.json の番号 → ラベル）
 LEESEO = {
     4: ("ELEVEN", "POB", "ID Card", H),
-    9: ("LOVE DIVE", "Fansign Special", "", H),
-    10: ("LOVE DIVE", "Fansign Special", "2", N),
+    9: ("ELEVEN", "Fansign Special", "", H),  # 前は LOVE DIVE にしていた（まちがい。表の「FANSIGN EXCL」は ELEVEN）
+    10: ("ELEVEN", "Fansign Special", "2", N),
     13: ("LOVE DIVE", WML, "1.0-1", H),
     16: ("LOVE DIVE", "Fansign", "", N),
     17: ("LOVE DIVE", "Tower Records", "2 POLA", H),
@@ -105,7 +105,7 @@ LEESEO = {
     153: ("IVE SECRET", WML, "2.0 POLA", H),
     157: ("IVE SECRET", "Shanghai", "WINNER", N),
     159: ("IVE SECRET", "KMONSTAR", "2.0", H),
-    163: ("IVE SECRET", WML, "5.0-2", N),
+    163: ("IVE SECRET", WML, "9.0-2", H),  # 前は新しい枠 5.0-2 にしていた（まちがい。表の「WITHMUU LD 5」はアプリの 9.0）
     164: ("IVE SECRET", "QQ Music × Starship Square", "Christmas", N),
     165: ("IVE SECRET", "IDOLSHOP", "", H),
     167: ("IVE SECRET", WML, "4.0-3", N),
@@ -146,8 +146,8 @@ LEESEO = {
 # リズ（review_liz.json の番号 → ラベル）。表の並びはイソと同じなので、同じ位置はイソと同じラベル
 LIZ = {
     9: ("LOVE DIVE", "Makestar", "2.0", N),
-    12: ("LOVE DIVE", "Fansign Special", "", H),
-    13: ("LOVE DIVE", "Fansign Special", "2", N),
+    12: ("ELEVEN", "Fansign Special", "", H),
+    13: ("ELEVEN", "Fansign Special", "2", N),
     23: ("LOVE DIVE", "Fansign", "", N),
     27: ("After LIKE", WML, "2.0-2", H),
     28: ("After LIKE", "本体封入", "ver.1", H),
@@ -230,7 +230,7 @@ LIZ = {
     192: ("IVE SECRET", WML, "4.0-3", N),
     193: ("IVE SECRET", "Yetimall ラキドロ", "POLA", H),
     194: ("IVE SECRET", "Apple Music ラキドロ", "5.0 POLA", H),
-    195: ("IVE SECRET", WML, "5.0-2", N),
+    195: ("IVE SECRET", WML, "9.0-2", H),
     199: ("REVIVE+", "本体封入", "MINI MINI", H),
     207: ("REVIVE+", WML, "3.0", H),
     208: ("REVIVE+", "QQ Music", "Membership", H),
@@ -264,11 +264,127 @@ LIZ = {
     255: ("Be Alright", "オフラインイベント", "10.13 OSAKA", H),
 }
 
+# ウォニョン（review_wonyoung.json の番号 → ラベル）。表の並びはイソ・リズと同じなので、同じ位置のラベルを使った（# のあとは元の番号）。
+# 残りはラベルを目で読み、イソ・リズの表の同じ位置のカードがアプリのどの枠かを画像で確かめた
+WONYOUNG = {
+    0: ("ELEVEN", "本体封入", "ver.2", H),
+    3: ("ELEVEN", "Tower Records", "", H),
+    4: ("ELEVEN", SW, "3.0", H),
+    5: ("ELEVEN", SWL, "2.0 POLA", H),
+    7: ("ELEVEN", "Yizhiyu", "1.0", H),
+    8: ("ELEVEN", "Fansign Special", "", H),  # 表の「FANSIGN EXCL」は ELEVEN（LOVE DIVE の見出しより左、衣装も ELEVEN）
+    11: ("ELEVEN", "Fansign Special", "2", N),
+    14: ("LOVE DIVE", WML, "1.0 POLA", H),
+    16: ("LOVE DIVE", "Fansign", "", N),  # leeseo 16
+    17: ("LOVE DIVE", "Tower Records", "2 POLA", H),  # leeseo 17
+    18: ("After LIKE", "Ktown4U", "", H),
+    20: ("After LIKE", WML, "2.0-2", H),  # leeseo 23
+    21: ("After LIKE", "TOU", "1.0", H),
+    22: ("After LIKE", "Tower Records", "2", H),  # leeseo 26
+    23: ("After LIKE", "Broadcast", "3", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    24: ("After LIKE", "TOU", "WINNER", N),  # leeseo 27
+    25: ("I've IVE", "Vinyl", "", N),  # leeseo 33
+    26: ("I've IVE", "US Exclusive", "", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    32: ("I've IVE", "Naver Live", "", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    33: ("I've IVE", "Naver Live", "2", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    34: ("I've MINE", "Broadcast", "Baddie", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    35: ("I've MINE", "Starship Square", "PB LOVED IVE", H),  # leeseo 45
+    36: ("I've MINE", "Namil Music", "1.0", H),  # liz 50
+    44: ("I've MINE", SWL, "3-2", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    45: ("I've MINE", SWL, "3-3", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    48: ("I've MINE", "Soundwave ファンサイン", "Singapore", N),  # leeseo 57
+    49: ("I've MINE", SW, "8.0 Daegu", H),  # liz 74
+    50: ("I've MINE", "mymusictaste", "3.0", H),
+    51: ("I've MINE", "Soundwave ファンサイン", "Malaysia", N),  # leeseo 61
+    52: ("I've MINE", "Sony Music Japan", "2-1", N),  # leeseo 62
+    53: ("I've MINE", "Sony Music Japan", "2-2", N),  # leeseo 63
+    54: ("I've MINE", "Sony Music Japan", "2-4", N),  # leeseo 64
+    55: ("I've MINE", "Sony Music Japan", "2-5", N),  # leeseo 65
+    56: ("I've MINE", "A!SMART ファンサイン", "", N),  # leeseo 66
+    57: ("I've MINE", "Taiwan", "2", N),  # liz 83
+    59: ("I've MINE", "Yizhiyu", "3.0", N),  # liz 92
+    64: ("IVE SWITCH", "Apple Music", "", H),
+    68: ("IVE SWITCH", "Tower Records", "2", N),  # leeseo 70
+    69: ("IVE SWITCH", "StarRiver", "", H),
+    71: ("IVE SWITCH", "Apple Music ファンサイン", "1.0", H),
+    72: ("IVE SWITCH", SWL, "2.0 POLA", H),  # leeseo 72
+    73: ("IVE SWITCH", WML, "1.0-3", N),  # leeseo 74
+    74: ("IVE SWITCH", "Makestar ファンサイン", "2.0", H),
+    75: ("IVE SWITCH", SWL, "4.0 POLA", H),  # leeseo 76
+    76: ("IVE SWITCH", WML, "3.0-3", N),  # leeseo 77
+    77: ("IVE SWITCH", "Apple Music ファンサイン", "2.0", H),
+    78: ("IVE SWITCH", "Makestar ラキドロ", "4.0 POLA", H),  # leeseo 81
+    79: ("IVE SWITCH", WML, "4.0（2 組目）-3", N),  # liz 113
+    80: ("IVE SWITCH", SWL, "3.0-1", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    81: ("IVE SWITCH", SWL, "3.0-2", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    82: ("IVE SWITCH", SWL, "3.0-3", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    83: ("IVE SWITCH", SWL, "3.0-4", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    84: ("IVE SWITCH", SWL, "6.0 POLA", H),  # leeseo 88
+    85: ("IVE SWITCH", SWL, "9.0 POLA", H),  # leeseo 90
+    86: ("IVE SWITCH", "TOKYO DOME 限定", "9/4", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    87: ("IVE SWITCH", "TOKYO DOME 限定", "9/5", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    88: ("IVE SWITCH", SWL, "11.0 POLA", H),  # leeseo 93
+    90: ("IVE SWITCH", "Broadcast", "2週目", H),
+    92: ("IVE EMPATHY", "Starship Square", "LOVED IVE", H),
+    93: ("IVE EMPATHY", "Starship Square", "4TYPE", H),
+    96: ("IVE EMPATHY", "StarRiver", "1.0", H),  # leeseo 106
+    98: ("IVE EMPATHY", WML, "3.0 POLA", H),
+    100: ("IVE EMPATHY", "StarRiver", "2.0", H),  # leeseo 111
+    101: ("IVE EMPATHY", WM, "2.0 Live Studio Choom", H),  # leeseo 113
+    106: ("IVE EMPATHY", "Apple Music", "4.0", H),
+    108: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),  # leeseo 122
+    112: ("IVE EMPATHY", "IDOUSTAGE", "2.0", H),
+    113: ("IVE EMPATHY", "Makestar", "4.0 Shanghai 3", N),  # leeseo 128
+    115: ("IVE SECRET", "MD", "", H),  # leeseo 129
+    124: ("IVE SECRET", "HOTTRACKS", "", H),
+    128: ("IVE SECRET", "QQ Music", "5", H),
+    129: ("IVE SECRET", "QQ Music", "1", H),  # liz 176
+    130: ("IVE SECRET", "QQ Music", "2", H),  # liz 177
+    131: ("IVE SECRET", SWL, "2.0 POLA", H),
+    132: ("IVE SECRET", "QQ Music", "3", H),  # leeseo 149
+    133: ("IVE SECRET", "QQ Music", "4", H),  # leeseo 150
+    134: ("IVE SECRET", "Beatroad", "2.0", H),
+    139: ("IVE SECRET", "Shanghai", "WINNER", N),  # leeseo 157
+    143: ("IVE SECRET", WML, "9.0-2", H),  # 表の「WITHMUU LD 5」＝アプリの 9.0（左が 9.0-2、右が 9.0-1）
+    144: ("IVE SECRET", "QQ Music × Starship Square", "Christmas", N),  # leeseo 164
+    147: ("IVE SECRET", "Yetimall ラキドロ", "POLA", H),  # liz 193
+    148: ("IVE SECRET", "Apple Music ラキドロ", "5.0 POLA", H),  # liz 194
+    149: ("IVE SECRET", WML, "9.0-1", H),
+    152: ("REVIVE+", "本体封入", "MINI MINI", H),  # leeseo 173
+    155: ("REVIVE+", "QQ Music", "Member set 2", N),  # liz 209
+    156: ("REVIVE+", "QQ Music", "2.0 ランダム 1", N),  # liz 210
+    157: ("REVIVE+", "QQ Music", "2.0 ランダム 2", N),  # liz 211
+    158: ("REVIVE+", "QQ Music", "2.0 ランダム 3", N),  # liz 212
+    159: ("REVIVE+", "QQ Music", "2.0 ランダム 4", N),  # liz 213
+    160: ("REVIVE+", "QQ Music", "2.0 ランダム 5", N),  # liz 214
+    161: ("REVIVE+", WML, "3.0 POLA", H),
+    162: ("REVIVE+", "QQ Music", "2.0 ランダム 6", N),  # liz 215
+    165: ("REVIVE+", "MusicArt ラキドロ", "2.0 POLA", H),  # leeseo 190
+    167: ("REVIVE+", WML, "9.0", H),
+    168: ("REVIVE+", "KMONSTAR", "1.0", H),  # leeseo 194
+    176: ("ALIVE", "A!SMART", "ユニット 1", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    177: ("ALIVE", "A!SMART", "ユニット 2", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    179: ("ALIVE", "オフラインイベント", "9/4 TOKYO ユニット", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    180: ("ALIVE", "オフラインイベント", "9/4 TOKYO ユニット", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    181: ("ALIVE", "オフラインイベント", "9/5 TOKYO ユニット 1", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    182: ("ALIVE", "オフラインイベント", "9/5 TOKYO ユニット 2", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    183: ("ALIVE", "オフラインイベント", "10/13 TOKYO ユニット", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    184: ("ALIVE", "オフラインイベント", "10/13 TOKYO ユニット", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    185: ("ALIVE", "オフラインイベント", "10/14 OSAKA ユニット", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    186: ("ALIVE", "オフラインイベント", "10/14 OSAKA ユニット", X),  # 何人かのカード → GROUPS（相手がわからないものは入れない）
+    190: ("Be Alright", "オフラインイベント", "9.24 OSAKA", H),  # leeseo 212
+    191: ("LUCID DREAM", "本体封入", "期間生産限定盤", H),  # leeseo 216
+    193: ("LUCID DREAM", "Sony Music Shop", "1.0 clear pc", H),
+    195: ("Be Alright", "オフラインイベント", "10.12 TOKYO", H),  # leeseo 213
+    196: ("Be Alright", "オフラインイベント", "10.13 OSAKA", H),  # liz 255
+    198: ("LUCID DREAM", "SWIA TOKYO exclusive", "6.24-1", H),
+}
+
 PAGE3 = set()  # 本人：BOYCOTT の印は使ってよい（2026-09-30）。3 ページ目の画像も使う
 NO_IMAGE_SOURCES = {"StarRiver"}
 # 表の画像に店の透かし（BOYCOTT・中国語の印）がある → 枠だけ
-NO_IMAGE_NO = {("leeseo", 27)}  # After LIKE TOU WINNER：中国語の店の印
-TABLES = {"leeseo": ("イソ", LEESEO), "liz": ("リズ", LIZ)}
+NO_IMAGE_NO = {("leeseo", 27), ("liz", 30), ("wonyoung", 24)}  # After LIKE TOU WINNER：中国語の店の印（「不吃香菜」）
+TABLES = {"leeseo": ("イソ", LEESEO), "liz": ("リズ", LIZ), "wonyoung": ("ウォニョン", WONYOUNG)}
 # 見比べページ（_review/<メンバー>_have.html）で本人が「ちがう」とした番号：アプリの画像を表の画像に入れ替える。
 # 「同じ」としたものは、大きい方（画質のよい方）を使う
 DIFF = {"leeseo": {23, 56, 73, 113, 152, 153, 194, 209}, "liz": {27, 40, 140, 179, 180, 226, 246}}
@@ -308,6 +424,18 @@ GROUPS = [
     ("ALIVE", "オフラインイベント", "10/13 TOKYO ユニット", ["レイ", "リズ"], ("liz", "liz", 240)),
     ("ALIVE", "オフラインイベント", "10/14 OSAKA ユニット", ["ガウル", "リズ"], ("liz", "liz", 241)),
     ("ALIVE", "オフラインイベント", "10/14 OSAKA ユニット", ["レイ", "リズ"], ("liz", "liz", 242)),
+    # ウォニョン（似ている度合い 0.94 以上のものだけ。ALIVE 9/4・9/5 TOKYO、10/13 TOKYO の 1 枚目、TOKYO DOME 9/4 は相手がはっきりしないので入れない）
+    ("I've MINE", SWL, "3 ユニット 1", ["ガウル", "ウォニョン"], ("wonyoung", "wonyoung", 44)),
+    ("I've MINE", SWL, "3 ユニット 2", ["ガウル", "ウォニョン"], ("wonyoung", "wonyoung", 45)),
+    ("IVE SWITCH", SWL, "6.0", ["ユジン", "ウォニョン"], ("wonyoung", "wonyoung", 80)),
+    ("IVE SWITCH", SWL, "6.0", ["ガウル", "ウォニョン"], ("wonyoung", "wonyoung", 81)),
+    ("IVE SWITCH", SWL, "6.0", ["レイ", "ウォニョン"], ("wonyoung", "wonyoung", 82)),
+    ("IVE SWITCH", "TOKYO DOME 限定", "9/5", ["ガウル", "ウォニョン"], ("wonyoung", "wonyoung", 87)),
+    ("ALIVE", "A!SMART", "ユニット 1", ["ガウル", "ウォニョン"], ("wonyoung", "wonyoung", 176)),
+    ("ALIVE", "A!SMART", "ユニット 2", ["ガウル", "ウォニョン"], ("wonyoung", "wonyoung", 177)),
+    ("ALIVE", "オフラインイベント", "10/13 TOKYO ユニット", ["ユジン", "ウォニョン"], ("wonyoung", "wonyoung", 184)),
+    ("ALIVE", "オフラインイベント", "10/14 OSAKA ユニット", ["ユジン", "ウォニョン"], ("wonyoung", "wonyoung", 185)),
+    ("ALIVE", "オフラインイベント", "10/14 OSAKA ユニット", ["レイ", "ウォニョン"], ("wonyoung", "wonyoung", 186)),
 ]
 GAIN = 1.1
 

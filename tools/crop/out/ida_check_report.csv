@@ -1,7 +1,7 @@
 ﻿member,no,collection,source,version,result
 イソ,4,ELEVEN,POB,ID Card,同じ写真で大きい方に入れ替えた
-イソ,9,LOVE DIVE,Fansign Special,,画像を入れた
-イソ,10,LOVE DIVE,Fansign Special,2,新しい枠（6 人）
+イソ,9,ELEVEN,Fansign Special,,画像を入れた
+イソ,10,ELEVEN,Fansign Special,2,新しい枠（6 人）
 イソ,13,LOVE DIVE,withmuu ラキドロ,1.0-1,同じ写真（アプリの方が大きいのでそのまま）
 イソ,16,LOVE DIVE,Fansign,,新しい枠（6 人）
 イソ,17,LOVE DIVE,Tower Records,2 POLA,同じ写真（アプリの方が大きいのでそのまま）
@@ -83,7 +83,7 @@
 イソ,153,IVE SECRET,withmuu ラキドロ,2.0 POLA,ちがう画像だったので入れ替えた
 イソ,157,IVE SECRET,Shanghai,WINNER,新しい枠（6 人）
 イソ,159,IVE SECRET,KMONSTAR,2.0,同じ写真で大きい方に入れ替えた
-イソ,163,IVE SECRET,withmuu ラキドロ,5.0-2,新しい枠（6 人）
+イソ,163,IVE SECRET,withmuu ラキドロ,9.0-2,同じ写真で大きい方に入れ替えた
 イソ,164,IVE SECRET,QQ Music × Starship Square,Christmas,新しい枠（6 人）
 イソ,165,IVE SECRET,IDOLSHOP,,同じ写真で大きい方に入れ替えた
 イソ,167,IVE SECRET,withmuu ラキドロ,4.0-3,新しい枠（6 人）
@@ -119,13 +119,13 @@
 イソ,218,LUCID DREAM,タワレコ,B,同じ写真で大きい方に入れ替えた
 イソ,220,LUCID DREAM,SWIA OSAKA exclusive,4.19,入れない
 リズ,9,LOVE DIVE,Makestar,2.0,新しい枠（6 人）
-リズ,12,LOVE DIVE,Fansign Special,,画像を入れた
-リズ,13,LOVE DIVE,Fansign Special,2,新しい枠（6 人）
+リズ,12,ELEVEN,Fansign Special,,画像を入れた
+リズ,13,ELEVEN,Fansign Special,2,新しい枠（6 人）
 リズ,23,LOVE DIVE,Fansign,,新しい枠（6 人）
 リズ,27,After LIKE,withmuu ラキドロ,2.0-2,ちがう画像だったので入れ替えた
 リズ,28,After LIKE,本体封入,ver.1,同じ写真（アプリの方が大きいのでそのまま）
 リズ,29,After LIKE,Tower Records,2,画像を入れた
-リズ,30,After LIKE,TOU,WINNER,新しい枠（6 人）
+リズ,30,After LIKE,TOU,WINNER,新しい枠（6 人）・画像なし
 リズ,31,After LIKE,Broadcast,After ver.,同じ写真（アプリの方が大きいのでそのまま）
 リズ,32,After LIKE,Broadcast,グループ 2,入れない
 リズ,35,I've IVE,Vinyl,,新しい枠（6 人）
@@ -203,7 +203,7 @@
 リズ,192,IVE SECRET,withmuu ラキドロ,4.0-3,新しい枠（6 人）
 リズ,193,IVE SECRET,Yetimall ラキドロ,POLA,同じ写真で大きい方に入れ替えた
 リズ,194,IVE SECRET,Apple Music ラキドロ,5.0 POLA,同じ写真で大きい方に入れ替えた
-リズ,195,IVE SECRET,withmuu ラキドロ,5.0-2,新しい枠（6 人）
+リズ,195,IVE SECRET,withmuu ラキドロ,9.0-2,同じ写真で大きい方に入れ替えた
 リズ,199,REVIVE+,本体封入,MINI MINI,画像を入れた
 リズ,207,REVIVE+,withmuu ラキドロ,3.0,同じ写真で大きい方に入れ替えた
 リズ,208,REVIVE+,QQ Music,Membership,画像を入れた
@@ -235,6 +235,117 @@
 リズ,250,Be Alright,オフラインイベント,9.24 OSAKA,画像を入れた
 リズ,251,LUCID DREAM,A!SMART,A,同じ写真で大きい方に入れ替えた
 リズ,255,Be Alright,オフラインイベント,10.13 OSAKA,画像を入れた
+ウォニョン,0,ELEVEN,本体封入,ver.2,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,3,ELEVEN,Tower Records,,同じ写真で大きい方に入れ替えた
+ウォニョン,4,ELEVEN,Soundwave,3.0,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,5,ELEVEN,Soundwave ラキドロ,2.0 POLA,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,7,ELEVEN,Yizhiyu,1.0,同じ写真で大きい方に入れ替えた
+ウォニョン,8,ELEVEN,Fansign Special,,画像を入れた
+ウォニョン,11,ELEVEN,Fansign Special,2,新しい枠（6 人）
+ウォニョン,14,LOVE DIVE,withmuu ラキドロ,1.0 POLA,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,16,LOVE DIVE,Fansign,,新しい枠（6 人）
+ウォニョン,17,LOVE DIVE,Tower Records,2 POLA,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,18,After LIKE,Ktown4U,,画像を入れた
+ウォニョン,20,After LIKE,withmuu ラキドロ,2.0-2,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,21,After LIKE,TOU,1.0,画像を入れた
+ウォニョン,22,After LIKE,Tower Records,2,画像を入れた
+ウォニョン,23,After LIKE,Broadcast,3,入れない
+ウォニョン,24,After LIKE,TOU,WINNER,新しい枠（6 人）・画像なし
+ウォニョン,25,I've IVE,Vinyl,,新しい枠（6 人）
+ウォニョン,26,I've IVE,US Exclusive,,入れない
+ウォニョン,32,I've IVE,Naver Live,,入れない
+ウォニョン,33,I've IVE,Naver Live,2,入れない
+ウォニョン,34,I've MINE,Broadcast,Baddie,入れない
+ウォニョン,35,I've MINE,Starship Square,PB LOVED IVE,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,36,I've MINE,Namil Music,1.0,同じ写真で大きい方に入れ替えた
+ウォニョン,44,I've MINE,Soundwave ラキドロ,3-2,入れない
+ウォニョン,45,I've MINE,Soundwave ラキドロ,3-3,入れない
+ウォニョン,48,I've MINE,Soundwave ファンサイン,Singapore,新しい枠（6 人）
+ウォニョン,49,I've MINE,Soundwave,8.0 Daegu,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,50,I've MINE,mymusictaste,3.0,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,51,I've MINE,Soundwave ファンサイン,Malaysia,新しい枠（6 人）
+ウォニョン,52,I've MINE,Sony Music Japan,2-1,新しい枠（6 人）
+ウォニョン,53,I've MINE,Sony Music Japan,2-2,新しい枠（6 人）
+ウォニョン,54,I've MINE,Sony Music Japan,2-4,新しい枠（6 人）
+ウォニョン,55,I've MINE,Sony Music Japan,2-5,新しい枠（6 人）
+ウォニョン,56,I've MINE,A!SMART ファンサイン,,新しい枠（6 人）
+ウォニョン,57,I've MINE,Taiwan,2,新しい枠（6 人）
+ウォニョン,59,I've MINE,Yizhiyu,3.0,新しい枠（6 人）
+ウォニョン,64,IVE SWITCH,Apple Music,,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,68,IVE SWITCH,Tower Records,2,新しい枠（6 人）
+ウォニョン,69,IVE SWITCH,StarRiver,,枠あり（表の画像は使えないのでそのまま）
+ウォニョン,71,IVE SWITCH,Apple Music ファンサイン,1.0,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,72,IVE SWITCH,Soundwave ラキドロ,2.0 POLA,画像を入れた
+ウォニョン,73,IVE SWITCH,withmuu ラキドロ,1.0-3,新しい枠（6 人）
+ウォニョン,74,IVE SWITCH,Makestar ファンサイン,2.0,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,75,IVE SWITCH,Soundwave ラキドロ,4.0 POLA,画像を入れた
+ウォニョン,76,IVE SWITCH,withmuu ラキドロ,3.0-3,新しい枠（6 人）
+ウォニョン,77,IVE SWITCH,Apple Music ファンサイン,2.0,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,78,IVE SWITCH,Makestar ラキドロ,4.0 POLA,画像を入れた
+ウォニョン,79,IVE SWITCH,withmuu ラキドロ,4.0（2 組目）-3,新しい枠（6 人）
+ウォニョン,80,IVE SWITCH,Soundwave ラキドロ,3.0-1,入れない
+ウォニョン,81,IVE SWITCH,Soundwave ラキドロ,3.0-2,入れない
+ウォニョン,82,IVE SWITCH,Soundwave ラキドロ,3.0-3,入れない
+ウォニョン,83,IVE SWITCH,Soundwave ラキドロ,3.0-4,入れない
+ウォニョン,84,IVE SWITCH,Soundwave ラキドロ,6.0 POLA,画像を入れた
+ウォニョン,85,IVE SWITCH,Soundwave ラキドロ,9.0 POLA,画像を入れた
+ウォニョン,86,IVE SWITCH,TOKYO DOME 限定,9/4,入れない
+ウォニョン,87,IVE SWITCH,TOKYO DOME 限定,9/5,入れない
+ウォニョン,88,IVE SWITCH,Soundwave ラキドロ,11.0 POLA,画像を入れた
+ウォニョン,90,IVE SWITCH,Broadcast,2週目,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,92,IVE EMPATHY,Starship Square,LOVED IVE,同じ写真で大きい方に入れ替えた
+ウォニョン,93,IVE EMPATHY,Starship Square,4TYPE,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,96,IVE EMPATHY,StarRiver,1.0,枠あり（表の画像は使えないのでそのまま）
+ウォニョン,98,IVE EMPATHY,withmuu ラキドロ,3.0 POLA,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,100,IVE EMPATHY,StarRiver,2.0,枠あり（表の画像は使えないのでそのまま）
+ウォニョン,101,IVE EMPATHY,withmuu,2.0 Live Studio Choom,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,106,IVE EMPATHY,Apple Music,4.0,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,108,IVE EMPATHY,オフラインイベント,TOKYO 2,新しい枠（6 人）
+ウォニョン,112,IVE EMPATHY,IDOUSTAGE,2.0,同じ写真で大きい方に入れ替えた
+ウォニョン,113,IVE EMPATHY,Makestar,4.0 Shanghai 3,新しい枠（6 人）
+ウォニョン,115,IVE SECRET,MD,,画像を入れた
+ウォニョン,124,IVE SECRET,HOTTRACKS,,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,128,IVE SECRET,QQ Music,5,画像を入れた
+ウォニョン,129,IVE SECRET,QQ Music,1,画像を入れた
+ウォニョン,130,IVE SECRET,QQ Music,2,画像を入れた
+ウォニョン,131,IVE SECRET,Soundwave ラキドロ,2.0 POLA,同じ写真で大きい方に入れ替えた
+ウォニョン,132,IVE SECRET,QQ Music,3,画像を入れた
+ウォニョン,133,IVE SECRET,QQ Music,4,画像を入れた
+ウォニョン,134,IVE SECRET,Beatroad,2.0,同じ写真で大きい方に入れ替えた
+ウォニョン,139,IVE SECRET,Shanghai,WINNER,新しい枠（6 人）
+ウォニョン,143,IVE SECRET,withmuu ラキドロ,9.0-2,同じ写真で大きい方に入れ替えた
+ウォニョン,144,IVE SECRET,QQ Music × Starship Square,Christmas,新しい枠（6 人）
+ウォニョン,147,IVE SECRET,Yetimall ラキドロ,POLA,同じ写真で大きい方に入れ替えた
+ウォニョン,148,IVE SECRET,Apple Music ラキドロ,5.0 POLA,同じ写真で大きい方に入れ替えた
+ウォニョン,149,IVE SECRET,withmuu ラキドロ,9.0-1,同じ写真で大きい方に入れ替えた
+ウォニョン,152,REVIVE+,本体封入,MINI MINI,画像を入れた
+ウォニョン,155,REVIVE+,QQ Music,Member set 2,新しい枠（6 人）
+ウォニョン,156,REVIVE+,QQ Music,2.0 ランダム 1,新しい枠（6 人）
+ウォニョン,157,REVIVE+,QQ Music,2.0 ランダム 2,新しい枠（6 人）
+ウォニョン,158,REVIVE+,QQ Music,2.0 ランダム 3,新しい枠（6 人）
+ウォニョン,159,REVIVE+,QQ Music,2.0 ランダム 4,新しい枠（6 人）
+ウォニョン,160,REVIVE+,QQ Music,2.0 ランダム 5,新しい枠（6 人）
+ウォニョン,161,REVIVE+,withmuu ラキドロ,3.0 POLA,同じ写真で大きい方に入れ替えた
+ウォニョン,162,REVIVE+,QQ Music,2.0 ランダム 6,新しい枠（6 人）
+ウォニョン,165,REVIVE+,MusicArt ラキドロ,2.0 POLA,同じ写真で大きい方に入れ替えた
+ウォニョン,167,REVIVE+,withmuu ラキドロ,9.0,同じ写真で大きい方に入れ替えた
+ウォニョン,168,REVIVE+,KMONSTAR,1.0,同じ写真（アプリの方が大きいのでそのまま）
+ウォニョン,176,ALIVE,A!SMART,ユニット 1,入れない
+ウォニョン,177,ALIVE,A!SMART,ユニット 2,入れない
+ウォニョン,179,ALIVE,オフラインイベント,9/4 TOKYO ユニット,入れない
+ウォニョン,180,ALIVE,オフラインイベント,9/4 TOKYO ユニット,入れない
+ウォニョン,181,ALIVE,オフラインイベント,9/5 TOKYO ユニット 1,入れない
+ウォニョン,182,ALIVE,オフラインイベント,9/5 TOKYO ユニット 2,入れない
+ウォニョン,183,ALIVE,オフラインイベント,10/13 TOKYO ユニット,入れない
+ウォニョン,184,ALIVE,オフラインイベント,10/13 TOKYO ユニット,入れない
+ウォニョン,185,ALIVE,オフラインイベント,10/14 OSAKA ユニット,入れない
+ウォニョン,186,ALIVE,オフラインイベント,10/14 OSAKA ユニット,入れない
+ウォニョン,190,Be Alright,オフラインイベント,9.24 OSAKA,画像を入れた
+ウォニョン,191,LUCID DREAM,本体封入,期間生産限定盤,同じ写真で大きい方に入れ替えた
+ウォニョン,193,LUCID DREAM,Sony Music Shop,1.0 clear pc,同じ写真で大きい方に入れ替えた
+ウォニョン,195,Be Alright,オフラインイベント,10.12 TOKYO,画像を入れた
+ウォニョン,196,Be Alright,オフラインイベント,10.13 OSAKA,画像を入れた
+ウォニョン,198,LUCID DREAM,SWIA TOKYO exclusive,6.24-1,同じ写真で大きい方に入れ替えた
 ガウル/ウォニョン/イソ,31,After LIKE,Broadcast,グループ 1,何人かのカードの枠
 ユジン/レイ/リズ,31,After LIKE,Broadcast,グループ 2,何人かのカードの枠
 ガウル/ウォニョン/イソ,37,I've IVE,Naver Live,グループ 1,何人かのカードの枠
@@ -261,3 +372,14 @@
 レイ/リズ,240,ALIVE,オフラインイベント,10/13 TOKYO ユニット,何人かのカードの枠
 ガウル/リズ,241,ALIVE,オフラインイベント,10/14 OSAKA ユニット,何人かのカードの枠
 レイ/リズ,242,ALIVE,オフラインイベント,10/14 OSAKA ユニット,何人かのカードの枠
+ガウル/ウォニョン,44,I've MINE,Soundwave ラキドロ,3 ユニット 1,何人かのカードの枠
+ガウル/ウォニョン,45,I've MINE,Soundwave ラキドロ,3 ユニット 2,何人かのカードの枠
+ユジン/ウォニョン,80,IVE SWITCH,Soundwave ラキドロ,6.0,何人かのカードの枠
+ガウル/ウォニョン,81,IVE SWITCH,Soundwave ラキドロ,6.0,何人かのカードの枠
+レイ/ウォニョン,82,IVE SWITCH,Soundwave ラキドロ,6.0,何人かのカードの枠
+ガウル/ウォニョン,87,IVE SWITCH,TOKYO DOME 限定,9/5,何人かのカードの枠
+ガウル/ウォニョン,176,ALIVE,A!SMART,ユニット 1,何人かのカードの枠
+ガウル/ウォニョン,177,ALIVE,A!SMART,ユニット 2,何人かのカードの枠
+ユジン/ウォニョン,184,ALIVE,オフラインイベント,10/13 TOKYO ユニット,何人かのカードの枠
+ユジン/ウォニョン,185,ALIVE,オフラインイベント,10/14 OSAKA ユニット,何人かのカードの枠
+レイ/ウォニョン,186,ALIVE,オフラインイベント,10/14 OSAKA ユニット,何人かのカードの枠
