@@ -4,6 +4,8 @@
 - 1 回目はマス目で切ったため、カードの端が欠けたり隣が入ったりした（本人の指摘、2026-09-30）→ 切り直した：
   アプリにあるそのカードの画像（カード全体）を、大きさを変えながら写真の上で動かし、いちばん重なる位置（正規化相互相関）をカードの範囲とする
 - 同じ写真だと目で確かめたもの（OK）だけ。位置：review/0930/real_photos.json（マスの位置・いちばん似ている枠）
+- 2 回目（本人「切り取られていない画像もある」）：残りのマスも重ねる方法で照らし合わせ、同じ写真だと目で確かめた 15 枚を足した
+  （review/0930/real_photos_extra.json、マスの番号 → 枠）
 - 確認用：out/real_0930_check.jpg（元の写真に切り取り範囲を描いたもの）
 """
 import glob, json
@@ -88,12 +90,13 @@ if __name__ == "__main__":
         for e in json.load(open(p, encoding="utf-8"))["images"]:
             if len(e["members"]) == 1:
                 cur[(e["collection"], e["members"][0], e["source"], e["version"])] = e["file"]
+    extra = {int(k): v for k, v in json.load(open(SP + "review/0930/real_photos_extra.json", encoding="utf-8")).items()}
     j = Job("zzz_hires_real_0930"); ims = {}; found = {}
-    for n in sorted(OK):
+    for n in sorted(OK | set(extra)):
         r = res[n]
         if r["file"] not in ims:
             ims[r["file"]] = Image.open(D + r["file"]).convert("RGB")
-        k = tuple(r["cands"][0][0])
+        k = tuple(extra[n]) if n in extra else tuple(r["cands"][0][0])
         old = Image.open(CARDS + cur[k]).convert("RGB")
         box, sc = locate(ims[r["file"]], r["box"], old)
         found[n] = (box, sc)
