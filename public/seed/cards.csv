@@ -4180,6 +4180,32 @@ I've MINE,リズ/イソ,Soundwave ラキドロ,3 ユニット 1
 I've MINE,リズ/イソ,Soundwave ラキドロ,3 ユニット 2
 ALIVE,ユジン/イソ,オフラインイベント,9/4 TOKYO ユニット 1
 ALIVE,ユジン/イソ,オフラインイベント,9/4 TOKYO ユニット 2
+I've IVE,ユジン,Fansign,
+I've IVE,ガウル,Fansign,
+I've IVE,レイ,Fansign,
+I've IVE,ウォニョン,Fansign,
+I've IVE,リズ,Fansign,
+I've IVE,イソ,Fansign,
+I've MINE,ユジン,Sony Music Japan,2-3
+I've MINE,ガウル,Sony Music Japan,2-3
+I've MINE,レイ,Sony Music Japan,2-3
+I've MINE,ウォニョン,Sony Music Japan,2-3
+I've MINE,リズ,Sony Music Japan,2-3
+I've MINE,イソ,Sony Music Japan,2-3
+I've MINE,ユジン,Taiwan,2
+I've MINE,ガウル,Taiwan,2
+I've MINE,レイ,Taiwan,2
+I've MINE,ウォニョン,Taiwan,2
+I've MINE,リズ,Taiwan,2
+I've MINE,イソ,Taiwan,2
+ALIVE,ユジン,本体封入,会場限定盤
+ALIVE,ガウル,本体封入,会場限定盤
+ALIVE,レイ,本体封入,会場限定盤
+ALIVE,ウォニョン,本体封入,会場限定盤
+ALIVE,リズ,本体封入,会場限定盤
+ALIVE,イソ,本体封入,会場限定盤
+ALIVE,レイ/リズ,オフラインイベント,9/5 TOKYO ユニット 1
+ALIVE,レイ/リズ,オフラインイベント,9/5 TOKYO ユニット 2
 IVE SWITCH,ユジン,LINE FRIENDS トレカ,3
 IVE SWITCH,ガウル,LINE FRIENDS トレカ,3
 IVE SWITCH,レイ,LINE FRIENDS トレカ,3
@@ -6050,24 +6076,12 @@ IVE SWITCH,レイ,Tower Records,2
 IVE SWITCH,ウォニョン,Tower Records,2
 IVE SWITCH,リズ,Tower Records,2
 IVE SWITCH,イソ,Tower Records,2
-IVE SWITCH,ユジン,Soundwave ラキドロ,1.0-3
-IVE SWITCH,ガウル,Soundwave ラキドロ,1.0-3
-IVE SWITCH,レイ,Soundwave ラキドロ,1.0-3
-IVE SWITCH,ウォニョン,Soundwave ラキドロ,1.0-3
-IVE SWITCH,リズ,Soundwave ラキドロ,1.0-3
-IVE SWITCH,イソ,Soundwave ラキドロ,1.0-3
 IVE SWITCH,ユジン,withmuu ラキドロ,1.0-3
 IVE SWITCH,ガウル,withmuu ラキドロ,1.0-3
 IVE SWITCH,レイ,withmuu ラキドロ,1.0-3
 IVE SWITCH,ウォニョン,withmuu ラキドロ,1.0-3
 IVE SWITCH,リズ,withmuu ラキドロ,1.0-3
 IVE SWITCH,イソ,withmuu ラキドロ,1.0-3
-IVE SWITCH,ユジン,Soundwave ラキドロ,2.0-3
-IVE SWITCH,ガウル,Soundwave ラキドロ,2.0-3
-IVE SWITCH,レイ,Soundwave ラキドロ,2.0-3
-IVE SWITCH,ウォニョン,Soundwave ラキドロ,2.0-3
-IVE SWITCH,リズ,Soundwave ラキドロ,2.0-3
-IVE SWITCH,イソ,Soundwave ラキドロ,2.0-3
 IVE SWITCH,ユジン,withmuu ラキドロ,3.0-3
 IVE SWITCH,ガウル,withmuu ラキドロ,3.0-3
 IVE SWITCH,レイ,withmuu ラキドロ,3.0-3
@@ -6080,36 +6094,12 @@ IVE SWITCH,レイ,withmuu ラキドロ,4.0-3
 IVE SWITCH,ウォニョン,withmuu ラキドロ,4.0-3
 IVE SWITCH,リズ,withmuu ラキドロ,4.0-3
 IVE SWITCH,イソ,withmuu ラキドロ,4.0-3
-IVE SWITCH,ユジン,Makestar ラキドロ,3
-IVE SWITCH,ガウル,Makestar ラキドロ,3
-IVE SWITCH,レイ,Makestar ラキドロ,3
-IVE SWITCH,ウォニョン,Makestar ラキドロ,3
-IVE SWITCH,リズ,Makestar ラキドロ,3
-IVE SWITCH,イソ,Makestar ラキドロ,3
 IVE SWITCH,ユジン,withmuu ラキドロ,4.0（2 組目）-3
 IVE SWITCH,ガウル,withmuu ラキドロ,4.0（2 組目）-3
 IVE SWITCH,レイ,withmuu ラキドロ,4.0（2 組目）-3
 IVE SWITCH,ウォニョン,withmuu ラキドロ,4.0（2 組目）-3
 IVE SWITCH,リズ,withmuu ラキドロ,4.0（2 組目）-3
 IVE SWITCH,イソ,withmuu ラキドロ,4.0（2 組目）-3
-IVE SWITCH,ユジン,Soundwave ラキドロ,3.0 POLA
-IVE SWITCH,ガウル,Soundwave ラキドロ,3.0 POLA
-IVE SWITCH,レイ,Soundwave ラキドロ,3.0 POLA
-IVE SWITCH,ウォニョン,Soundwave ラキドロ,3.0 POLA
-IVE SWITCH,リズ,Soundwave ラキドロ,3.0 POLA
-IVE SWITCH,イソ,Soundwave ラキドロ,3.0 POLA
-IVE SWITCH,ユジン,Soundwave ラキドロ,4.0-3
-IVE SWITCH,ガウル,Soundwave ラキドロ,4.0-3
-IVE SWITCH,レイ,Soundwave ラキドロ,4.0-3
-IVE SWITCH,ウォニョン,Soundwave ラキドロ,4.0-3
-IVE SWITCH,リズ,Soundwave ラキドロ,4.0-3
-IVE SWITCH,イソ,Soundwave ラキドロ,4.0-3
-IVE SWITCH,ユジン,Soundwave ラキドロ,5.0-3
-IVE SWITCH,ガウル,Soundwave ラキドロ,5.0-3
-IVE SWITCH,レイ,Soundwave ラキドロ,5.0-3
-IVE SWITCH,ウォニョン,Soundwave ラキドロ,5.0-3
-IVE SWITCH,リズ,Soundwave ラキドロ,5.0-3
-IVE SWITCH,イソ,Soundwave ラキドロ,5.0-3
 IVE EMPATHY,ユジン,Soundwave ラキドロ,2.0-2
 IVE EMPATHY,ガウル,Soundwave ラキドロ,2.0-2
 IVE EMPATHY,レイ,Soundwave ラキドロ,2.0-2
@@ -6170,10 +6160,24 @@ IVE SECRET,レイ,withmuu ラキドロ,4.0-3
 IVE SECRET,ウォニョン,withmuu ラキドロ,4.0-3
 IVE SECRET,リズ,withmuu ラキドロ,4.0-3
 IVE SECRET,イソ,withmuu ラキドロ,4.0-3
-IVE SWITCH,ユジン/イソ,Soundwave ラキドロ,3.0 ユニット
-IVE SWITCH,ガウル/イソ,Soundwave ラキドロ,3.0 ユニット
-IVE SWITCH,レイ/イソ,Soundwave ラキドロ,3.0 ユニット
-IVE SWITCH,リズ/イソ,Soundwave ラキドロ,3.0 ユニット
+LOVE DIVE,ユジン,Makestar,2.0
+LOVE DIVE,ガウル,Makestar,2.0
+LOVE DIVE,レイ,Makestar,2.0
+LOVE DIVE,ウォニョン,Makestar,2.0
+LOVE DIVE,リズ,Makestar,2.0
+LOVE DIVE,イソ,Makestar,2.0
+IVE SWITCH,ユジン,StarRiver ファンサイン,3.0
+IVE SWITCH,ガウル,StarRiver ファンサイン,3.0
+IVE SWITCH,レイ,StarRiver ファンサイン,3.0
+IVE SWITCH,ウォニョン,StarRiver ファンサイン,3.0
+IVE SWITCH,リズ,StarRiver ファンサイン,3.0
+IVE SWITCH,イソ,StarRiver ファンサイン,3.0
+IVE EMPATHY,ユジン,Soundwave ラキドロ,2.0-1
+IVE EMPATHY,ガウル,Soundwave ラキドロ,2.0-1
+IVE EMPATHY,レイ,Soundwave ラキドロ,2.0-1
+IVE EMPATHY,ウォニョン,Soundwave ラキドロ,2.0-1
+IVE EMPATHY,リズ,Soundwave ラキドロ,2.0-1
+IVE EMPATHY,イソ,Soundwave ラキドロ,2.0-1
 IVE EMPATHY,ユジン,Amulet Card (Tokyo 3/29),
 IVE EMPATHY,ガウル,Amulet Card (Tokyo 3/29),
 IVE EMPATHY,レイ,Amulet Card (Tokyo 3/29),
