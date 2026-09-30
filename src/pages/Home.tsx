@@ -30,21 +30,38 @@ async function loadHome(): Promise<HomeData> {
   return { collections, cards, lastBackupAt, profile, history }
 }
 
-// ホームのデータは、アプリを起動したときから裏でずっと最新にしておく（ほかの画面から戻ったとき待たせないため）
+// ホームのデータ。ほかの画面から戻ったとき待たせないよう、前回の内容をとっておいてすぐ出す。
+// 最新に保つ（カードが変わるたびに読み直す）のは、ホームを開いている間だけ。
+// いつも読み直すと、コレクションでカードを切り替えるたびに約 6,000 枚を読み直して遅くなる（本人の報告、2026-09-30）
 let lastData: HomeData | undefined
 const listeners = new Set<() => void>()
-liveQuery(loadHome).subscribe({
-  next: (v) => {
-    lastData = v
-    listeners.forEach((l) => l())
-  },
-})
+let sub: { unsubscribe(): void } | undefined
+let stopTimer: number | undefined
 function subscribe(l: () => void) {
   listeners.add(l)
+  window.clearTimeout(stopTimer)
+  sub ??= liveQuery(loadHome).subscribe({
+    next: (v) => {
+      lastData = v
+      listeners.forEach((f) => f())
+    },
+  })
   return () => {
     listeners.delete(l)
+    // 画面を離れたら読み直しをやめる（すぐ戻ってきたときのために少しだけ待つ）
+    stopTimer = window.setTimeout(() => {
+      if (listeners.size === 0) {
+        sub?.unsubscribe()
+        sub = undefined
+      }
+    }, 300)
   }
 }
+// アプリを開いたらすぐ 1 回だけ読んでおく（最初にホームを開いたとき待たせないため）
+loadHome().then((v) => {
+  lastData ??= v
+  listeners.forEach((f) => f())
+})
 
 export default function Home() {
   const data = useSyncExternalStore(subscribe, () => lastData)
