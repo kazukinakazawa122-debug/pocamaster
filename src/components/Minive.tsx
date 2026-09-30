@@ -6,26 +6,24 @@ const BASE = `${import.meta.env.BASE_URL}minive/`
 const TOP = ['squirrel', 'bear', 'chick']
 const BOTTOM = ['rabbit', 'puppy', 'cat']
 
-/** 画面のタイトルの横を、6 人が跳ねながら走る */
+/** 画面のタイトルの横に 6 人を並べる（走っているポーズのイラスト。動かさない） */
 export function MiniveRun() {
   return (
     <div className="minive-run" aria-hidden>
-      <div className="minive-track">
-        {[...TOP, ...BOTTOM].map((n, i) => (
-          <img key={n} src={`${BASE}${n}.png`} alt="" style={{ animationDelay: `${i * -0.13}s` }} />
-        ))}
-      </div>
+      {[...TOP, ...BOTTOM].map((n) => (
+        <img key={n} src={`${BASE}${n}.png`} alt="" />
+      ))}
     </div>
   )
 }
 
-/** ホームのロゴの左右に 3 人ずつ（左は上の段の 3 人、右は下の段の 3 人） */
+/** ホームのロゴの左右に 3 人ずつ（左は上の段の 3 人、右は下の段の 3 人）。動かさない */
 export function MiniveTrio({ side }: { side: 'left' | 'right' }) {
   const names = side === 'left' ? TOP : BOTTOM
   return (
     <span className="minive-trio" aria-hidden>
-      {names.map((n, i) => (
-        <img key={n} src={`${BASE}${n}.png`} alt="" style={{ animationDelay: `${(i + (side === 'right' ? 3 : 0)) * -0.2}s` }} />
+      {names.map((n) => (
+        <img key={n} src={`${BASE}${n}.png`} alt="" />
       ))}
     </span>
   )

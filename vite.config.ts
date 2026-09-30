@@ -9,6 +9,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      injectRegister: false, // 登録は main.tsx の registerSW で行う
       includeAssets: ['seed/*.csv'],
       manifest: {
         name: 'pocamaster',

@@ -1,4 +1,5 @@
-import { useLiveQuery } from 'dexie-react-hooks'
+import { useSyncExternalStore } from 'react'
+import { liveQuery } from 'dexie'
 import { Link } from 'react-router-dom'
 import { IconAlertTriangle, IconCrown, IconPhoto } from '@tabler/icons-react'
 import { db, getSetting, type Card, type Collection, type Profile } from '../lib/db'
@@ -17,22 +18,36 @@ type HomeData = {
   profile?: Profile
   history: { cardId: string; changedAt: number }[]
 }
-// ほかの画面から戻ってきたとき「読み込み中…」で待たせないよう、前回の内容をすぐ出す（裏で読み込み直す）
+async function loadHome(): Promise<HomeData> {
+  const [collections, cards, lastBackupAt, profile, history] = await Promise.all([
+    db.collections.toArray(),
+    db.cards.toArray(),
+    getSetting<number>('lastBackupAt'),
+    getSetting<Profile>('profile'),
+    // 最近「所持中」にした記録（同じカードを何度も切り替えることがあるので多めに取る）
+    db.statusHistory.orderBy('changedAt').reverse().filter((h) => h.to === '所持中').limit(200).toArray(),
+  ])
+  return { collections, cards, lastBackupAt, profile, history }
+}
+
+// ホームのデータは、アプリを起動したときから裏でずっと最新にしておく（ほかの画面から戻ったとき待たせないため）
 let lastData: HomeData | undefined
+const listeners = new Set<() => void>()
+liveQuery(loadHome).subscribe({
+  next: (v) => {
+    lastData = v
+    listeners.forEach((l) => l())
+  },
+})
+function subscribe(l: () => void) {
+  listeners.add(l)
+  return () => {
+    listeners.delete(l)
+  }
+}
 
 export default function Home() {
-  const data = useLiveQuery<HomeData | undefined, HomeData | undefined>(async () => {
-    const [collections, cards, lastBackupAt, profile, history] = await Promise.all([
-      db.collections.toArray(),
-      db.cards.toArray(),
-      getSetting<number>('lastBackupAt'),
-      getSetting<Profile>('profile'),
-      // 最近「所持中」にした記録（同じカードを何度も切り替えることがあるので多めに取る）
-      db.statusHistory.orderBy('changedAt').reverse().filter((h) => h.to === '所持中').limit(200).toArray(),
-    ])
-    lastData = { collections, cards, lastBackupAt, profile, history }
-    return lastData
-  }, [], lastData)
+  const data = useSyncExternalStore(subscribe, () => lastData)
   if (!data) return <div className="page empty">読み込み中…</div>
   const { collections, cards, lastBackupAt, profile, history = [] } = data
 

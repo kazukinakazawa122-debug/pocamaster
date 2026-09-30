@@ -207,14 +207,10 @@ a { color: inherit; text-decoration: none; }
 .album-nav .icon-btn:disabled { opacity: .3; }
 .album-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
 
-/* MINIVE：タイトルの横を跳ねながら走る */
-.minive-run { position: relative; flex: 1; min-width: 0; height: 40px; margin-left: 6px; overflow: hidden; }
-.minive-track { position: absolute; bottom: 2px; display: flex; gap: 1px; animation: minive-run 11s linear infinite; }
-.minive-track img, .minive-trio img { display: block; height: 28px; width: auto; animation: minive-hop .42s ease-in-out infinite alternate; }
-@keyframes minive-run { from { left: -190px; } to { left: 100%; } }
-@keyframes minive-hop { from { transform: translateY(0) rotate(-4deg); } to { transform: translateY(-5px) rotate(4deg); } }
-/* ホーム：ロゴの左右に 3 人ずつ。ゆっくり揺れる */
+/* MINIVE：タイトルの横に 6 人を並べる（動かさない）。上が切れないよう、バーの高さに収まる大きさにする */
+.minive-run { flex: 1; min-width: 0; display: flex; align-items: flex-end; gap: 0; margin-left: 8px; overflow: hidden; padding-top: 2px; }
+.minive-run img { flex: none; height: 30px; width: auto; margin-right: -3px; }
+/* ホーム：ロゴの左右に 3 人ずつ */
 .minive-trio { display: inline-flex; align-items: flex-end; flex: none; }
-.minive-trio img { height: 27px; margin: 0 -2px; animation-name: minive-bob; animation-duration: 1.1s; }
-@keyframes minive-bob { from { transform: translateY(0); } to { transform: translateY(-3px); } }
-@media (prefers-reduced-motion: reduce) { .minive-track { animation: none; left: 0; } .minive-track img, .minive-trio img { animation: none; } }
+.minive-trio img { display: block; height: 28px; width: auto; margin: 0 -2px; }
+.topbar.home h1 { overflow: visible; }
