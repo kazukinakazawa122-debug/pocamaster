@@ -256,7 +256,7 @@ a { color: inherit; text-decoration: none; }
 .chip.member.on { color: #fff; }
 
 /* 読み込み中：画面の真ん中に MINIVE の 6 人（2026-10-01） */
-.loading { animation: loading-in .3s ease-out; min-height: calc(100dvh - 180px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: var(--text-2); }
+.loading { min-height: calc(100dvh - 180px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: var(--text-2); }
 .loading-minive { display: flex; align-items: flex-end; gap: 4px; }
 /* ふわふわ浮かぶ（本人の要望、2026-10-01）。画面の処理が重いときも止まらないよう、動きは transform だけにして GPU に任せる */
 .loading-minive img { height: 36px; width: auto; will-change: transform; animation: minive-float 2.4s ease-in-out infinite; }

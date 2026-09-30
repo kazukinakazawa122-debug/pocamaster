@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 /**
  * MINIVE（IVE の公式キャラクター）の飾り（本人の要望、2026-09-30）。線画のシリーズだけを使う（3D は使わない）
  * 画像は public/minive/：
@@ -44,15 +43,9 @@ export function MiniveTrio({ side }: { side: 'left' | 'right' }) {
 
 /**
  * 読み込み中の画面：画面の真ん中で、立ち姿の 6 人が順にはねる（本人の要望、2026-10-01）。
- * すぐ終わる読み込みで一瞬だけ大きく出てちらつかないよう、少し待ってからふわっと出す（本人の報告「バグっている」）
+ * 最初から出す（本人の要望、2026-10-01。前は 0.35 秒待っていた。大きさは 36px 固定なのでちらつかない）
  */
 export function MiniveLoading({ text = '読み込み中' }: { text?: string }) {
-  const [show, setShow] = useState(false)
-  useEffect(() => {
-    const t = window.setTimeout(() => setShow(true), 350)
-    return () => window.clearTimeout(t)
-  }, [])
-  if (!show) return <div className="page loading" aria-busy />
   return (
     <div className="page loading" role="status">
       <div className="loading-minive" aria-hidden>
