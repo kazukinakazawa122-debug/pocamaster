@@ -6,6 +6,7 @@
 - 本人の指示：一覧版と種類ごとの表があるときは、種類ごとの表（カードが大きい）を使う → カードの横幅が MIN_CARD 未満の表は使わない
 - カードの上に ID や透かしがある資料は、先に目で確かめて使わないこと（このスクリプトは透かしを見分けない）
 - 同じ写真（似ている度合い TH 以上・2 番目と MARGIN 以上の差・3×4 のどのブロックも BLOCK_TH 以上）で、GAIN 倍以上大きいときだけ差し替える
+- 自動で差し替えたものも必ず並べて目で見ること（ぼかしの画像に替わることがある。REVIVE+ で 2 枚あった → json から手で外した）
 - 結果：out/zzz_hires_<出力名>.json（merge.py で後に読まれる）、確認用 out/hires_<出力名>_report.csv
 """
 import csv, glob, json, os, sys
@@ -16,7 +17,7 @@ from build2 import *
 from hires_ida import feat, min_block
 
 TH, MARGIN, GAIN, BLOCK_TH = 0.85, 0.05, 1.1, 0.55
-MIN_CARD = 190
+MIN_CARD = int(os.environ.get("MIN_CARD", "190"))  # 小さい表しかないときは MIN_CARD=120 などで実行
 
 if __name__ == "__main__":
     folder, coll, credit, name = sys.argv[1:5]
