@@ -98,5 +98,5 @@ if __name__ == "__main__":
         im, bs = boxes(key, inserts)
         for start, src, vers in groups:
             for k, v in enumerate(vers):
-                j.add(coll, [MEMBER[coll]], src, v, im.crop(tuple(int(x) for x in bs[start + k])), CREDIT)
+                j.add(coll, [MEMBER[coll]], src, v, im.crop(inset_frame(im, bs[start + k])), CREDIT)
     j.save()

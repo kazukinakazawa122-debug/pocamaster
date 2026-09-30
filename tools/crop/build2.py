@@ -277,3 +277,29 @@ def member_lists(job, collection, files, labels, skip=0, credit="", **kw):
             continue
         for b, (src, ver) in zip(seq, labels):
             job.add(collection, [mem], src, ver, im.crop(tuple(int(v) for v in b)), credit)
+
+
+def inset_frame(im, box, max_frac=0.08, extra=0.018):
+    """一覧表のカードを囲む枠線（@idalshiro の表の、メンバーの色の枠など）と角の白を除く。
+    枠の色はメンバーごとに違うので、見つけた箱の一番外側の列の色を枠の色とみなし、
+    その色（または白）に近い点が 35% 以上ある列（行）のあいだ内側へ寄せる。最後に角の丸みの分だけ少し内側にする"""
+    x0, y0, x1, y1 = (int(v) for v in box)
+    a = np.asarray(im.crop((x0, y0, x1, y1)).convert("RGB")).astype(float)
+    h, w = a.shape[:2]
+    lim_x, lim_y = int(w * max_frac), int(h * max_frac)
+    outer = np.concatenate([a[:, 0], a[:, -1], a[0], a[-1]])
+    fc = np.median(outer, axis=0)
+
+    def frame(line):
+        n = len(line)
+        core = line[int(n * .12):int(n * .88)]
+        near = (np.sqrt(((core - fc) ** 2).sum(axis=1)) < 70) | (core.min(axis=1) > 232)
+        return near.mean() > 0.35
+
+    L, R, T, B = 0, w, 0, h
+    while L < lim_x and frame(a[T:B, L]): L += 1
+    while w - R < lim_x and frame(a[T:B, R - 1]): R -= 1
+    while T < lim_y and frame(a[T, L:R]): T += 1
+    while h - B < lim_y and frame(a[B - 1, L:R]): B -= 1
+    ex, ey = int(w * extra) + 1, int(h * extra) + 1
+    return (x0 + L + ex, y0 + T + ey, x0 + R - ex, y0 + B - ey)

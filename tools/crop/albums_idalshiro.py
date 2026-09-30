@@ -55,5 +55,5 @@ if __name__ == "__main__":
             b = nearest(bs, pt)
             if b is None:
                 print("見つからない", name, src, v)
-            j.add(coll, [name], src, v, im.crop(b) if b else None, CREDIT)
+            j.add(coll, [name], src, v, im.crop(inset_frame(im, b)) if b else None, CREDIT)
     j.save()
