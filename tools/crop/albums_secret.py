@@ -52,9 +52,11 @@ for m, _ in mems:
 # 上の表にない種類（@powerofablink の表で見つけた。ID の透かしがあるので枠だけ足し、画像は使わない。2026-09-29）
 EXTRA = [("MD", ""), ("IDOLSHOP", "POLA"), ("StarRiver", "2.0")] + [("QQ Music", str(n)) for n in range(1, 6)]  # QQ Music 6 は「QQ Music × Starship Square」の Christmas と同じ（本人、2026-10-01）
 # @ri__chan94 のメンバー別・全員の表（Google ドライブ、2025-09 更新）で見つけた種類（2026-09-29）
-EXTRA += [("the stage" + LD, "1"), ("the stage" + LD, "2"), ("Krispy Kreme Donuts", "")]
+# 「the stage」は「MusicArt」のこと（本人、2026-10-01）。the stage ラキドロ 1＝MusicArt（すでにある）、2＝MusicArt の全員のカード（下で全員 1 枠）。Krispy Kreme はトレカではない
+
 for m, _ in mems:
     for s, v in EXTRA:
         j.add(C, [m], s, v)
 j.add(C, ["全員"], "HOTTRACKS" + LD, "全員")
+j.add(C, ["全員"], "MusicArt", "全員")
 j.save()
