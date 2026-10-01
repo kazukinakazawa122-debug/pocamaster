@@ -1,0 +1,57 @@
+{
+"seed": [
+[
+"I've IVE",
+"ウォニョン",
+"Tower Records",
+"1"
+],
+[
+"I've IVE",
+"ガウル",
+"Naver Live",
+""
+],
+[
+"I've IVE",
+"リズ",
+"Naver Live",
+""
+]
+],
+"images": [
+{
+"collection": "I've IVE",
+"members": [
+"ウォニョン"
+],
+"source": "Tower Records",
+"version": "1",
+"file": "iveive_add/0000.jpg",
+"thumb": "iveive_add/0000_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ガウル"
+],
+"source": "Naver Live",
+"version": "",
+"file": "iveive_add/0001.jpg",
+"thumb": "iveive_add/0001_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "I've IVE",
+"members": [
+"リズ"
+],
+"source": "Naver Live",
+"version": "",
+"file": "iveive_add/0002.jpg",
+"thumb": "iveive_add/0002_t.jpg",
+"credit": "@reina831wy"
+}
+]
+}
