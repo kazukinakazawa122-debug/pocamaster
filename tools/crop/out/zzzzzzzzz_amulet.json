@@ -1,0 +1,210 @@
+{
+"seed": [
+[
+"IVE EMPATHY",
+"ユジン",
+"Amulet Card (Tokyo 3/29)",
+""
+],
+[
+"IVE EMPATHY",
+"ガウル",
+"Amulet Card (Tokyo 3/29)",
+""
+],
+[
+"IVE EMPATHY",
+"レイ",
+"Amulet Card (Tokyo 3/29)",
+""
+],
+[
+"IVE EMPATHY",
+"ウォニョン",
+"Amulet Card (Tokyo 3/29)",
+""
+],
+[
+"IVE EMPATHY",
+"リズ",
+"Amulet Card (Tokyo 3/29)",
+""
+],
+[
+"IVE EMPATHY",
+"イソ",
+"Amulet Card (Tokyo 3/29)",
+""
+],
+[
+"Be Alright",
+"ユジン",
+"Amulet Card (お守りカード)",
+""
+],
+[
+"Be Alright",
+"ガウル",
+"Amulet Card (お守りカード)",
+""
+],
+[
+"Be Alright",
+"レイ",
+"Amulet Card (お守りカード)",
+""
+],
+[
+"Be Alright",
+"ウォニョン",
+"Amulet Card (お守りカード)",
+""
+],
+[
+"Be Alright",
+"リズ",
+"Amulet Card (お守りカード)",
+""
+],
+[
+"Be Alright",
+"イソ",
+"Amulet Card (お守りカード)",
+""
+]
+],
+"images": [
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ユジン"
+],
+"source": "Amulet Card (Tokyo 3/29)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0000.jpg",
+"thumb": "zzzzzzzzz_amulet/0000_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ガウル"
+],
+"source": "Amulet Card (Tokyo 3/29)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0001.jpg",
+"thumb": "zzzzzzzzz_amulet/0001_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"レイ"
+],
+"source": "Amulet Card (Tokyo 3/29)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0002.jpg",
+"thumb": "zzzzzzzzz_amulet/0002_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ウォニョン"
+],
+"source": "Amulet Card (Tokyo 3/29)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0003.jpg",
+"thumb": "zzzzzzzzz_amulet/0003_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"リズ"
+],
+"source": "Amulet Card (Tokyo 3/29)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0004.jpg",
+"thumb": "zzzzzzzzz_amulet/0004_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"イソ"
+],
+"source": "Amulet Card (Tokyo 3/29)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0005.jpg",
+"thumb": "zzzzzzzzz_amulet/0005_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "Be Alright",
+"members": [
+"ユジン"
+],
+"source": "Amulet Card (お守りカード)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0006.jpg",
+"thumb": "zzzzzzzzz_amulet/0006_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "Be Alright",
+"members": [
+"ガウル"
+],
+"source": "Amulet Card (お守りカード)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0007.jpg",
+"thumb": "zzzzzzzzz_amulet/0007_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "Be Alright",
+"members": [
+"レイ"
+],
+"source": "Amulet Card (お守りカード)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0008.jpg",
+"thumb": "zzzzzzzzz_amulet/0008_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "Be Alright",
+"members": [
+"ウォニョン"
+],
+"source": "Amulet Card (お守りカード)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0009.jpg",
+"thumb": "zzzzzzzzz_amulet/0009_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "Be Alright",
+"members": [
+"リズ"
+],
+"source": "Amulet Card (お守りカード)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0010.jpg",
+"thumb": "zzzzzzzzz_amulet/0010_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "Be Alright",
+"members": [
+"イソ"
+],
+"source": "Amulet Card (お守りカード)",
+"version": "",
+"file": "zzzzzzzzz_amulet/0011.jpg",
+"thumb": "zzzzzzzzz_amulet/0011_t.jpg",
+"credit": "本人の写真"
+}
+]
+}

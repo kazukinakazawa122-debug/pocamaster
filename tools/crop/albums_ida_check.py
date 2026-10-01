@@ -82,7 +82,7 @@ LEESEO = {
     114: ("IVE EMPATHY", "Makestar", "3.0", H),
     121: ("IVE EMPATHY", SWL, "4.0 POLA", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     122: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),
-    124: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", N),
+    124: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", X),
     125: ("IVE EMPATHY", SW, "7.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     126: ("IVE EMPATHY", "K-MONSTAR", "Taiwan POLA", H),
     127: ("IVE EMPATHY", "Makestar", "4.0 Shanghai", H),
@@ -207,7 +207,7 @@ LIZ = {
     149: ("IVE EMPATHY", SWL, "4.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     150: ("IVE EMPATHY", SWL, "4.0 POLA", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     153: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),
-    155: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", N),
+    155: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", X),
     156: ("IVE EMPATHY", SW, "7.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     159: ("IVE EMPATHY", "Makestar", "4.0 Shanghai カフェ店長 ver.", H),
     160: ("IVE EMPATHY", "Makestar", "4.0 Shanghai 3", N),
@@ -443,7 +443,7 @@ REI = {
     123: ("IVE EMPATHY", SW, "5.0", H),
     126: ("IVE EMPATHY", "Apple Music", "4.0", H),  # wonyoung 106
     127: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),  # leeseo 122
-    130: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", N),  # leeseo 124
+    130: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", X),  # leeseo 124
     131: ("IVE EMPATHY", "IDOUSTAGE", "2.0", H),  # wonyoung 112
     134: ("IVE SECRET", "MD", "", H),  # leeseo 129
     135: ("IVE EMPATHY", "Makestar", "4.0 Shanghai 3", N),  # leeseo 128
@@ -677,7 +677,7 @@ YUJIN = {
     120: ("IVE EMPATHY", "A!SMART", "C", H),
     123: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),  # leeseo 122
     125: ("IVE EMPATHY", "K-MONSTAR", "Taiwan POLA", H),  # leeseo 126
-    126: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", N),  # rei 130
+    126: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", X),  # rei 130
     128: ("IVE EMPATHY", "Makestar", "4.0 Shanghai 3", N),  # gaeul 122
     129: ("IVE SECRET", "MD", "", H),  # gaeul 124
     134: ("IVE SECRET", "OLIVE YOUNG ラキドロ", "", H),  # leeseo 139
