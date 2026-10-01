@@ -82,9 +82,26 @@ for e in entries:
     uniq[(e["collection"], tuple(sorted(e["members"])), e["source"], e["version"])] = e
 entries = [e for e in uniq.values() if GOODS or not e["source"].startswith("グッズ｜")]
 zp = "C:/Users/kazuk/OneDrive/pocamaster-images/pocamaster-images.zip"
+# 明るさ補正（本人の要望、2026-10-01「REVIVE+ のカードが暗い」）：REVIVE+ の画像だけ、ZIP に入れるときに暗い部分を持ち上げる（ガンマ）。
+# _cards の元の画像は変えない（補正をやめたいときは BRIGHT を空にして ZIP を作り直す）
+BRIGHT = {"REVIVE+": 0.78}
+
+
+def put(z, name, coll):
+    g = BRIGHT.get(coll)
+    if not g:
+        z.write(CARDS + name, name); return
+    from PIL import Image
+    import numpy as np
+    im = Image.open(CARDS + name).convert("RGB")
+    a = 255.0 * (np.asarray(im).astype(np.float32) / 255.0) ** g
+    buf = io.BytesIO(); Image.fromarray(a.clip(0, 255).astype(np.uint8)).save(buf, "JPEG", quality=88)
+    z.writestr(name, buf.getvalue())
+
+
 with zipfile.ZipFile(zp, "w", zipfile.ZIP_STORED) as z:
     for e in entries:
-        z.write(CARDS + e["file"], e["file"])
-        z.write(CARDS + e["thumb"], e["thumb"])
+        put(z, e["file"], e["collection"])
+        put(z, e["thumb"], e["collection"])
     z.writestr("manifest.json", json.dumps(entries, ensure_ascii=False))
 print("images", len(entries), "zip", os.path.getsize(zp) // 1024, "KB")
