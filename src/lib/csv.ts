@@ -47,7 +47,7 @@ export function parseMembers(text: string): MemberId[] {
   if (text === '全員') return MEMBERS.map((m) => m.id)
   return text.split(/[/・]/).map((name) => {
     const m = MEMBER_BY_NAME[name.trim()]
-    if (!m) throw new Error(`メンバー名がわかりません：「${name}」`)
+    if (!m) throw new Error(`メンバー名がわからない：「${name}」`)
     return m.id
   })
 }
@@ -92,7 +92,7 @@ export async function importCsv(collectionsCsv: string, cardsCsv: string): Promi
     const toAdd: Card[] = []
     cardRows.forEach((r, i) => {
       const col = byName.get(r.collection)
-      if (!col) throw new Error(`${i + 2} 行目：コレクション「${r.collection}」が collections.csv にありません`)
+      if (!col) throw new Error(`${i + 2} 行目：コレクション「${r.collection}」が collections.csv にない`)
       const memberIds = parseMembers(r.member)
       const key = cardKey(col.id, memberIds, r.source, r.version ?? '')
       if (keys.has(key)) {

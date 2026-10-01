@@ -95,7 +95,7 @@ export default function Wants() {
     setImageError('')
     // 多すぎると画像が何十枚にもなり、iPhone では時間がかかって途中で止まることもあるので、絞ってもらう
     if (count > IMAGE_LIMIT) {
-      setImageError(`カードが多すぎます（${count} 枚）。メンバーやコレクションで ${IMAGE_LIMIT} 枚以下に絞ってから、画像にしてください`)
+      setImageError(`${count} 枚は多すぎるので、メンバーやコレクションで ${IMAGE_LIMIT} 枚以下に絞ってね`)
       return
     }
     setMaking('画像を作っています…')
@@ -114,7 +114,7 @@ export default function Wants() {
       )
       setImages(files)
     } catch (e) {
-      setImageError(`画像を作れませんでした：${(e as Error).message}`)
+      setImageError(`画像を作れなかった：${(e as Error).message}`)
     } finally {
       setMaking('')
     }
@@ -213,12 +213,6 @@ export default function Wants() {
               </button>
             ))}
           {imageError && <div className="error" style={{ margin: 0 }}>{imageError}</div>}
-          <div className="xs muted">
-            {trade
-              ? '「譲」の印は、カードを長押しして「譲」を押すか、コレクションの「選ぶ」でまとめて付けます。ここでカードを押すと大きく見られます（印を外すのもそこから）。'
-              : 'カードを押すと「所持中」になり、この一覧から消えます（すぐ下の「元に戻す」で戻せます）。長押しで大きく見られます。'}
-            右上の <IconAdjustmentsHorizontal size={12} aria-hidden style={{ verticalAlign: -2 }} /> で、この絞り込みを隠せます（スクショ用）。
-          </div>
         </div>
       )}
 
@@ -237,10 +231,10 @@ export default function Wants() {
       ) : count === 0 ? (
         <div className="empty">
           {data.cards.length > 0
-            ? 'この絞り込みに合うカードはありません'
+            ? 'この絞り込みに合うカードはないみたい'
             : trade
-              ? '「譲」の印を付けたカードはまだありません。カードを長押しして「譲」を押すか、コレクションの「選ぶ」でまとめて付けられます'
-              : '持っていないカードはありません'}
+              ? '「譲」のカードはまだないよ。カードを長押しして「譲」を押すと、ここに並ぶ'
+              : '持っていないカードはないみたい'}
         </div>
       ) : (
         <CardGroups key={JSON.stringify(view)} groups={groups} columns={view.columns} bright labels={view.labels} tapOpens={trade} />

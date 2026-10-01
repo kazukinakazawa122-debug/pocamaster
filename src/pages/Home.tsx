@@ -142,8 +142,7 @@ export default function Home() {
       <div className="page">
         {header}
         <div className="empty">
-          <p>最初のコレクションを追加しましょう</p>
-          <p className="small">設定から初期データを取り込むか、コレクションを追加してください。</p>
+          <p>まだコレクションがないよ</p>
           <div className="stack" style={{ maxWidth: 280, margin: '16px auto 0' }}>
             <Link className="btn primary" to="/settings">
               初期データを取り込む
@@ -209,31 +208,32 @@ export default function Home() {
         <Link to="/settings" className="banner">
           <IconAlertTriangle size={18} aria-hidden />
           {lastBackupAt
-            ? `最後のバックアップから ${BACKUP_REMIND_DAYS} 日以上たちました`
-            : 'まだバックアップを取っていません'}
+            ? `最後のバックアップから ${BACKUP_REMIND_DAYS} 日以上たったよ`
+            : 'まだバックアップしてないよ'}
         </Link>
       )}
 
-      <div className="section-title">収集中のアルバム</div>
-      {pinned.length > 0 ? (
-        <div className="h-scroll">
-          {pinned.map(({ col, p }) => (
-            <PinnedAlbum key={col.id} col={col} p={p} />
-          ))}
-        </div>
-      ) : (
-        <div className="xs muted">コレクションの画面で「ホームに出す」を押すと、ここに出ます</div>
+      {/* 空のときは見出しごと出さない（説明文を並べない。本人の要望 2026-10-01「AI っぽくなくする」） */}
+      {pinned.length > 0 && (
+        <>
+          <div className="section-title">収集中のアルバム</div>
+          <div className="h-scroll">
+            {pinned.map(({ col, p }) => (
+              <PinnedAlbum key={col.id} col={col} p={p} />
+            ))}
+          </div>
+        </>
       )}
 
-      <div className="section-title">お気に入りのカード</div>
-      {favorites.length > 0 ? (
-        <div className="h-scroll">
-          {favorites.map((card) => (
-            <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} />
-          ))}
-        </div>
-      ) : (
-        <div className="xs muted">カードを長押しして ♡ を押すと、ここに出ます</div>
+      {favorites.length > 0 && (
+        <>
+          <div className="section-title">お気に入りのカード</div>
+          <div className="h-scroll">
+            {favorites.map((card) => (
+              <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} />
+            ))}
+          </div>
+        </>
       )}
 
       {recent.length > 0 && (

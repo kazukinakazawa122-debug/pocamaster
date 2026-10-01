@@ -36,12 +36,12 @@ export default function CollectionEdit() {
 
   const save = async () => {
     if (!name.trim()) {
-      setError('名前を入力してください')
+      setError('名前を入れてね')
       return
     }
     const dup = await db.collections.filter((c) => c.name === name.trim() && c.id !== id).count()
     if (dup > 0) {
-      setError('同じ名前のコレクションがすでにあります')
+      setError('同じ名前のコレクションがもうあるよ')
       return
     }
     setSaving(true)
@@ -69,7 +69,7 @@ export default function CollectionEdit() {
   const remove = async () => {
     if (!original) return
     const count = await db.cards.where('collectionId').equals(original.id).count()
-    if (!confirm(`「${original.name}」とカード ${count} 枚を削除しますか？元に戻せません。`)) return
+    if (!confirm(`「${original.name}」とカード ${count} 枚を消す？もとに戻せないよ`)) return
     await deleteCollection(original)
     navigate('/collections', { replace: true })
   }

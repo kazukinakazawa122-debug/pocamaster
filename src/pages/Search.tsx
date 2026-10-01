@@ -147,7 +147,7 @@ export default function Search() {
       ) : words.length === 0 ? (
         <div style={{ marginTop: 20 }}>
           <div className="small muted" style={{ marginBottom: 8 }}>
-            言葉を入れると、全部のコレクションから探します。空白で区切ると、両方を含むカードだけになります（例：「withmuu ポラ」）。
+            たとえば（空白で区切ると両方を含むカード）
           </div>
           <div className="chips" style={{ flexWrap: 'wrap' }}>
             {EXAMPLES.map((w) => (
@@ -165,7 +165,7 @@ export default function Search() {
           </div>
         </div>
       ) : count === 0 ? (
-        <div className="empty">見つかりませんでした</div>
+        <div className="empty">見つからなかった</div>
       ) : (
         <>
           <div className="small muted" style={{ marginTop: 10 }}>

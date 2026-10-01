@@ -113,7 +113,7 @@ export default function Collections() {
       </div>
       {list.length === 0 ? (
         <div className="empty">
-          <p>このコレクションはまだありません</p>
+          <p>ここにはまだないみたい</p>
           <Link className="btn" to="/collections/new">
             コレクションを追加
           </Link>

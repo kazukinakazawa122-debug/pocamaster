@@ -10,7 +10,7 @@ async function resize(file: Blob, maxSide: number, quality: number): Promise<Blo
   canvas.getContext('2d')!.drawImage(bmp, 0, 0, w, h)
   bmp.close()
   return new Promise((resolve, reject) =>
-    canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('画像を変換できませんでした'))), 'image/jpeg', quality),
+    canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('画像を変換できなかった'))), 'image/jpeg', quality),
   )
 }
 

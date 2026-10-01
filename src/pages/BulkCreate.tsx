@@ -24,8 +24,8 @@ export default function BulkCreate() {
   const count = perVersion * vs.length
 
   const create = async () => {
-    if (!source.trim()) return setError('入手元を入力してください')
-    if (memberIds.length === 0) return setError('メンバーを 1 人以上選んでください')
+    if (!source.trim()) return setError('入手元を入れてね')
+    if (memberIds.length === 0) return setError('メンバーを 1 人以上選んでね')
     const existing = await db.cards.where('collectionId').equals(id).sortBy('order')
     let order = (existing.at(-1)?.order ?? -1) + 1
     const sorted = [...memberIds].sort((a, b) => memberOrder(a) - memberOrder(b))

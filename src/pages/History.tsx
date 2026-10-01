@@ -101,7 +101,7 @@ export default function History() {
         </div>
         <MonthChart months={months} selected={sel.key} onPick={setPicked} />
         <div className="xs muted" style={{ marginTop: 6 }}>
-          棒を押すと、その月の枚数が出ます。いま持っているカード：<span className="num">{owned}</span> 枚
+          持っているカード <span className="num">{owned}</span> 枚
           {first ? `（記録は ${monthLabel(monthKey(first))}から）` : ''}
         </div>
       </div>
@@ -129,7 +129,7 @@ export default function History() {
 
       <div className="section-title">最近「所持中」にしたカード</div>
       {recent.length === 0 ? (
-        <div className="small muted">まだ記録がありません。カードを押して「所持中」にすると、ここに出ます。</div>
+        <div className="small muted">まだないよ。カードを「所持中」にするとここに並ぶ</div>
       ) : (
         <div>
           {recent.map(({ at, c, col }) => (

@@ -172,7 +172,7 @@ export async function makeListImages(opt: ListImageOptions, onProgress?: (done: 
     ctx.textAlign = 'left'
 
     const blob = await new Promise<Blob>((resolve, reject) =>
-      canvas.toBlob((bl) => (bl ? resolve(bl) : reject(new Error('画像を作れませんでした'))), 'image/jpeg', 0.9),
+      canvas.toBlob((bl) => (bl ? resolve(bl) : reject(new Error('画像を作れなかった'))), 'image/jpeg', 0.9),
     )
     // iPhone で大きな画像を続けて作ると覚えておける量を超えるので、使い終わったら手放す
     canvas.width = 0

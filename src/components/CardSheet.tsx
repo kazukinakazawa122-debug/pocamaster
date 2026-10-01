@@ -43,7 +43,7 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
   }
 
   const remove = async () => {
-    if (!confirm('このカードを削除しますか？元に戻せません。')) return
+    if (!confirm('このカードを消す？もとに戻せないよ')) return
     await deleteCard(card)
     onClose()
   }

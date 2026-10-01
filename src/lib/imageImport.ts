@@ -52,7 +52,7 @@ export async function importImages(
 ): Promise<ImageImportResult> {
   const zip = await JSZip.loadAsync(file)
   const json = await zip.file('manifest.json')?.async('string')
-  if (!json) throw new Error('画像の取り込み用ファイルではありません（manifest.json がありません）')
+  if (!json) throw new Error('画像の取り込み用の ZIP じゃないみたい（manifest.json がない）')
   const entries = JSON.parse(json) as ManifestEntry[]
   const infoJson = await zip.file('info.json')?.async('string')
   const info = infoJson ? (JSON.parse(infoJson) as ImageZipInfo) : undefined
