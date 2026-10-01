@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode, type RefObject } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { IconChevronLeft, IconUser } from '@tabler/icons-react'
-import { getFull, getThumb, type Profile } from '../lib/db'
+import { db, getFull, getThumb, type Profile } from '../lib/db'
 import { MiniveRun, type MiniveStyle } from './Minive'
 import { MenuButton } from './SideMenu'
 
@@ -91,9 +91,63 @@ function watchNear(el: Element, margin: number, cb: (near: boolean) => void): ()
   }
 }
 
+/**
+ * ジャケット（コレクションの表紙）とプロフィールのアイコンの URL は、アプリを閉じるまで覚えておく
+ * （本人の報告、2026-10-01「ジャケットの画像が出るのがかなり遅い」：一覧を開くたびに 1 枚ずつ読み直していた）。
+ * 数が少ない（約 40 枚）ので覚えておいても軽い。カードの画像（数千枚）は覚えない
+ */
+const keptUrls = new Map<string, string>()
+const KEEP_MAX = 300
+
+/** ジャケットを 1 回でまとめて読んでおく（1 枚ずつ読むと iPhone では遅い）。読み終わってから一覧を出せば、文字と同時に出る */
+export async function warmCovers(ids: (string | undefined)[]): Promise<void> {
+  const need = [...new Set(ids.filter((id): id is string => !!id && !keptUrls.has(id)))]
+  if (need.length === 0 || keptUrls.size + need.length > KEEP_MAX) return
+  const thumbs = await db.thumbs.bulkGet(need)
+  // 一覧用の小さい画像を分ける前に取り込んだ表紙は images の中にある
+  const missing = need.filter((_, i) => !thumbs[i])
+  const old = missing.length ? await db.images.bulkGet(missing) : []
+  thumbs.forEach((t, i) => t && keptUrls.set(need[i], URL.createObjectURL(t.thumb)))
+  old.forEach((img, i) => {
+    const blob = img?.thumb ?? img?.full
+    if (blob) keptUrls.set(missing[i], URL.createObjectURL(blob))
+  })
+}
+
+/** ジャケット・アイコン用：覚えておいた URL があればすぐ返す。なければ読んで覚える（手放さない） */
+export function useCoverUrl(imageId: string | undefined): string | undefined {
+  const [url, setUrl] = useState(() => (imageId ? keptUrls.get(imageId) : undefined))
+  useEffect(() => {
+    if (!imageId) {
+      setUrl(undefined)
+      return
+    }
+    const kept = keptUrls.get(imageId)
+    if (kept) {
+      setUrl(kept)
+      return
+    }
+    let alive = true
+    getThumb(imageId).then((blob) => {
+      if (!blob) return
+      // 同じ画像をほかの場所が先に読んでいたら、それを使う
+      let u = keptUrls.get(imageId)
+      if (!u) {
+        u = URL.createObjectURL(blob)
+        if (keptUrls.size < KEEP_MAX) keptUrls.set(imageId, u)
+      }
+      if (alive) setUrl(u)
+    })
+    return () => {
+      alive = false
+    }
+  }, [imageId])
+  return url
+}
+
 /** プロフィールのアイコン（丸）。枠は推しメンの色にしない（本人の要望、2026-10-01） */
 export function ProfileAvatar({ profile, size }: { profile?: Profile; size: number }) {
-  const url = useImageUrl(profile?.imageId, 'thumb')
+  const url = useCoverUrl(profile?.imageId)
   return (
     <span className="avatar" style={{ width: size, height: size, borderColor: 'var(--line)' }}>
       {url ? <img src={url} alt="" /> : <IconUser size={size * 0.55} aria-hidden />}

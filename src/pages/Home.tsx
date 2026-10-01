@@ -5,7 +5,7 @@ import { IconAlertTriangle, IconCrown, IconPhoto } from '@tabler/icons-react'
 import { db, getSetting, type Card, type Collection, type Profile } from '../lib/db'
 import { MEMBERS, MEMBER_BY_ID, memberLabel, type MemberId } from '../lib/members'
 import { isComplete, memberProgress, pctText, progress, type Progress } from '../lib/stats'
-import { ProfileAvatar, ProgressBar, useImageUrl } from '../components/ui'
+import { ProfileAvatar, ProgressBar, useCoverUrl, useImageUrl, warmCovers } from '../components/ui'
 import { cardColors } from '../components/CardTile'
 import { MiniveTrio, MiniveLoading } from '../components/Minive'
 import { MenuButton } from '../components/SideMenu'
@@ -28,6 +28,8 @@ async function loadHome(): Promise<HomeData> {
     // 最近「所持中」にした記録（同じカードを何度も切り替えることがあるので多めに取る）
     db.statusHistory.orderBy('changedAt').reverse().filter((h) => h.to === '所持中').limit(200).toArray(),
   ])
+  // ジャケットとアイコンをまとめて読んでおく（ホームの「収集中のアルバム」などに、文字と同時に出す）
+  await warmCovers([...collections.map((c) => c.coverImageId), profile?.imageId])
   return { collections, cards, lastBackupAt, profile, history }
 }
 
@@ -312,7 +314,7 @@ export default function Home() {
 }
 
 function PinnedAlbum({ col, p }: { col: Collection; p: Progress }) {
-  const url = useImageUrl(col.coverImageId, 'thumb')
+  const url = useCoverUrl(col.coverImageId)
   return (
     <Link to={`/collections/${col.id}`} style={{ width: 128, flex: 'none' }}>
       <div className="cover" style={{ width: 128, height: 128, position: 'relative' }}>
@@ -358,7 +360,7 @@ function RecentCard({ card, col, at }: { card: Card; col?: Collection; at?: numb
 }
 
 function AlmostRow({ col, p }: { col: Collection; p: Progress }) {
-  const url = useImageUrl(col.coverImageId, 'thumb')
+  const url = useCoverUrl(col.coverImageId)
   return (
     <Link to={`/collections/${col.id}`} className="list-item">
       <div className="cover" style={{ width: 52, height: 52 }}>
@@ -379,7 +381,7 @@ function AlmostRow({ col, p }: { col: Collection; p: Progress }) {
 }
 
 function CompletedCover({ col }: { col: Collection }) {
-  const url = useImageUrl(col.coverImageId, 'thumb')
+  const url = useCoverUrl(col.coverImageId)
   return (
     <Link to={`/collections/${col.id}`} style={{ width: 96, flex: 'none' }}>
       <div className="cover" style={{ width: 96, height: 96, position: 'relative' }}>

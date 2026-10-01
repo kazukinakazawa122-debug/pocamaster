@@ -5,7 +5,7 @@ import { IconCrown, IconPhoto, IconPlus } from '@tabler/icons-react'
 import { COLLECTION_TYPES, db, type Collection } from '../lib/db'
 import { isComplete, pctText, type Progress } from '../lib/stats'
 import { MiniveLoading } from '../components/Minive'
-import { ProgressBar, TopBar, useImageUrl } from '../components/ui'
+import { ProgressBar, TopBar, useCoverUrl, warmCovers } from '../components/ui'
 
 const FILTERS = ['すべて', ...COLLECTION_TYPES] as const
 const SHORT: Record<string, string> = {
@@ -58,6 +58,8 @@ async function loadList(): Promise<ListData> {
   }
   const byCollection = new Map<string, Progress>()
   for (const [id, n] of count) byCollection.set(id, { ...n, pct: Math.floor((n.owned / n.total) * 100) })
+  // ジャケットをまとめて読んでから出す（文字だけ先に出て、あとからジャケットが 1 枚ずつ現れる、をなくす）
+  await warmCovers(collections.map((c) => c.coverImageId))
   return { collections, byCollection }
 }
 
@@ -124,7 +126,7 @@ export default function Collections() {
 }
 
 function Row({ col, p }: { col: Collection; p: Progress }) {
-  const url = useImageUrl(col.coverImageId, 'thumb')
+  const url = useCoverUrl(col.coverImageId)
   const done = isComplete(p)
   return (
     <Link to={`/collections/${col.id}`} className="list-item">
