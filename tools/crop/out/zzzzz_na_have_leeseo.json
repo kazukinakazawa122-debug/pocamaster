@@ -1,0 +1,74 @@
+{
+"seed": [
+[
+"Collab & Event｜コラボ・イベント",
+"イソ",
+"SuperStar STARSHIP",
+"KCON LA"
+],
+[
+"Collab & Event｜コラボ・イベント",
+"イソ",
+"SuperStar STARSHIP",
+"LONDON"
+],
+[
+"DIVE Official Fanclub｜ファンクラブ",
+"イソ",
+"DIVE JAPAN Phone Tab",
+"FC 特典"
+],
+[
+"1st WORLD TOUR 'SHOW WHAT I HAVE'",
+"イソ",
+"DVD・Blu-ray・Kit",
+"Ktown4U 特典"
+]
+],
+"images": [
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"イソ"
+],
+"source": "SuperStar STARSHIP",
+"version": "KCON LA",
+"file": "zzzzz_na_have_leeseo/0000.jpg",
+"thumb": "zzzzz_na_have_leeseo/0000_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"イソ"
+],
+"source": "SuperStar STARSHIP",
+"version": "LONDON",
+"file": "zzzzz_na_have_leeseo/0001.jpg",
+"thumb": "zzzzz_na_have_leeseo/0001_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "DIVE Official Fanclub｜ファンクラブ",
+"members": [
+"イソ"
+],
+"source": "DIVE JAPAN Phone Tab",
+"version": "FC 特典",
+"file": "zzzzz_na_have_leeseo/0002.jpg",
+"thumb": "zzzzz_na_have_leeseo/0002_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+"members": [
+"イソ"
+],
+"source": "DVD・Blu-ray・Kit",
+"version": "Ktown4U 特典",
+"file": "zzzzz_na_have_leeseo/0003.jpg",
+"thumb": "zzzzz_na_have_leeseo/0003_t.jpg",
+"credit": "@idalshiro"
+}
+]
+}
