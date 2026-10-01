@@ -37,7 +37,8 @@ for mem, i in [("イソ", 53), ("リズ", 54), ("ウォニョン", 55), ("レイ
 # @hallojisoo の一覧（Google ドライブ、2026-08-23 更新）で見つけた種類。枠だけ（2026-09-29）
 # QQ Music 1〜5・Shatter Card・POP-UP は、画像のある「QQ Music 2.0 ランダム 1〜6」などと同じカードなので枠を作らない（本人、2026-10-01。removed.csv）
 # 本体封入 Vinyl はまだ発表されていないので枠を作らない（本人、2026-10-01）
-EXTRA = [("Melon Live", ""), ("QQ Music", "Membership"),
+# Melon Live は実在しない（本人、2026-10-01）
+EXTRA = [("QQ Music", "Membership"),
          ("HIT! MAGAZINE", ""), ("KMONSTAR", "2.0")]
 for mem in ["イソ", "リズ", "ウォニョン", "レイ", "ユジン", "ガウル"]:
     for s, v in EXTRA:
