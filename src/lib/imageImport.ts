@@ -16,9 +16,24 @@ interface ManifestEntry {
   cover?: boolean
 }
 
+/**
+ * ZIP の版（tools/crop/make_diff.py が info.json に書く）。full＝全部入り、diff＝前の版（base）から増えた・差し替えた画像だけ。
+ * 番号は 1, 2, 3… と進む。番号のない ZIP（make_diff.py より前に作ったもの）もある
+ */
+export interface ImageZipInfo {
+  kind: 'full' | 'diff'
+  seq: number
+  base?: number
+  date: string
+  count: number
+}
+
 export interface ImageImportResult {
   matched: number
   unmatched: string[]
+  info?: ImageZipInfo
+  /** check で取り込みをやめた */
+  canceled?: boolean
 }
 
 function cardKey(collectionId: string, memberIds: string[], source: string, version: string): string {
@@ -27,19 +42,27 @@ function cardKey(collectionId: string, memberIds: string[], source: string, vers
 
 /**
  * 画像の ZIP（manifest.json ＋ 画像）を取り込み、カードに画像を付ける。
- * コレクション名・メンバー・入手元・バージョンが一致するカードに付け、すでにある画像は置き換える。
+ * コレクション名・メンバー・入手元・バージョンが一致するカードに付け、すでにある画像は置き換える（ZIP にないカードの画像はそのまま）。
+ * check は ZIP の版を見て取り込むかを決める（false ならやめる）
  */
-export async function importImages(file: Blob, onProgress?: (done: number, total: number) => void): Promise<ImageImportResult> {
+export async function importImages(
+  file: Blob,
+  onProgress?: (done: number, total: number) => void,
+  check?: (info: ImageZipInfo | undefined) => boolean,
+): Promise<ImageImportResult> {
   const zip = await JSZip.loadAsync(file)
   const json = await zip.file('manifest.json')?.async('string')
   if (!json) throw new Error('画像の取り込み用ファイルではありません（manifest.json がありません）')
   const entries = JSON.parse(json) as ManifestEntry[]
+  const infoJson = await zip.file('info.json')?.async('string')
+  const info = infoJson ? (JSON.parse(infoJson) as ImageZipInfo) : undefined
+  if (check && !check(info)) return { matched: 0, unmatched: [], info, canceled: true }
 
   const [collections, cards] = await Promise.all([db.collections.toArray(), db.cards.toArray()])
   const colId = new Map(collections.map((c) => [c.name, c.id]))
   const byKey = new Map<string, Card>(cards.map((c) => [cardKey(c.collectionId, c.memberIds, c.source, c.version), c]))
 
-  const result: ImageImportResult = { matched: 0, unmatched: [] }
+  const result: ImageImportResult = { matched: 0, unmatched: [], info }
   // 50 枚ずつまとめて保存する（1 枚ずつより速い）
   let pending: { id: string; card: Card; img: { full: Blob; thumb: Blob }; credit?: string }[] = []
   const flush = async () => {

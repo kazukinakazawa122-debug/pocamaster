@@ -7,7 +7,10 @@
 1. `albums_*.py` を実行 → `pocamaster-images/_cards/<名前>/` に画像、`out/<名前>.json` に枠と画像の対応
 2. `hires.py` を実行 → 店舗ごとの表（カードが大きい）に同じ写真があれば、大きい画像に差し替える（`out/zz_hires.json`、確認用 `out/hires_report.csv`）
 3. `merge.py` を実行 → `public/seed/cards.csv`（枠）を更新し、`pocamaster-images/pocamaster-images.zip` を作る
-4. アプリの「設定 → 画像をまとめて取り込む（ZIP）」で読み込む
+4. `make_diff.py` を実行 → 前回からの新しい画像・差し替えた画像だけの差分 ZIP（`pocamaster-images/差分ZIP/pocamaster-差分-No<番号>-<日付>.zip`）を作り、全部入りの ZIP に版の番号を書き込む
+   （本人に渡すときに 1 回。merge.py のたびに実行すると番号が細かく進むので、作業の区切りで実行する）
+5. アプリの「設定」で読み込む：ふだんは「新しい画像だけ取り込む（差分 ZIP）」、初めて・データを入れ直したときは「画像をまとめて取り込む（全部入りの ZIP）」。
+   新しい枠（カード）が増えたときは、先に「初期データを取り込む」（アプリを push してから）
 
 ## ファイル
 | ファイル | 内容 |
@@ -26,6 +29,7 @@
 | jackets.py | コレクションの表紙（アルバムのジャケット）の ZIP を作る。`pocamaster-images/_jackets/` に「コレクション名.jpg」で入れて実行 → `pocamaster-jackets.zip` |
 | hires.py | 画質を上げる：いまの画像と同じ写真を店舗ごとの表から探し、大きい画像に差し替える（枠はそのまま） |
 | merge.py | すべてをまとめて cards.csv と ZIP を作る。`ID_CREDITS` の資料（画像に ID の透かしがあるもの）の画像は入れない |
+| make_diff.py | 差分 ZIP を作る。前回の記録（`差分ZIP/history/snapshot-<番号>.json`、カードごとの画像の中身の指紋）と比べる。番号は 2026-10-01 の全部入り（6,091 枚）が No.1。差分 ZIP では画像を消せない（消えた画像は表示される注意に出る） |
 | check.py / check2.py | 切り出し結果の確認用シート |
 | inventory.py | 手元の資料の一覧と大きさを `out/sources.csv` に書き出す（画質のよい資料を探す用） |
 | cardsize.py | 資料ごとにカード 1 枚の横幅を調べて `out/cardsizes.csv` に、いまの切り出し画像の横幅を `out/cropsizes.csv` に書き出す |

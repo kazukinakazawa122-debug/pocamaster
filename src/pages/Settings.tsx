@@ -1,15 +1,45 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { IconCamera, IconDatabaseImport, IconDownload, IconFileImport, IconPhotoUp, IconRestore } from '@tabler/icons-react'
+import { IconCamera, IconDatabaseImport, IconDownload, IconFileImport, IconPhotoPlus, IconPhotoUp, IconRestore } from '@tabler/icons-react'
 import { addImages, db, deleteImages, EMPTY_PROFILE, getSetting, newId, putSetting, type Profile } from '../lib/db'
 import { makeImage } from '../lib/image'
 import MemberPicker from '../components/MemberPicker'
 import { exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv, removeObsolete } from '../lib/csv'
-import { importImages } from '../lib/imageImport'
+import { importImages, type ImageZipInfo } from '../lib/imageImport'
 import { ProfileAvatar, TopBar } from '../components/ui'
 
 const SEED_BASE = `${import.meta.env.BASE_URL}seed/`
+
+/** 最後に取り込んだ画像 ZIP の版（settings の 'imageZip'） */
+interface ImageZipState {
+  /** 版の番号。番号のない ZIP を取り込んだときはなし */
+  seq?: number
+  /** その版を作った日 */
+  date?: string
+  importedAt: number
+}
+
+/** 差分 ZIP を取り込む前の確認。取り込み忘れ・取り込み済みの差分なら知らせる */
+function checkImageZip(mode: 'full' | 'diff', info: ImageZipInfo | undefined, last: ImageZipState | undefined): boolean {
+  if (info?.kind !== 'diff') {
+    return mode === 'full' || confirm('これは全部入りの画像 ZIP です。取り込みに時間がかかりますが、このまま取り込みますか？')
+  }
+  const have = last?.seq
+  if (have === undefined) return true
+  if (info.seq <= have) return confirm(`この差分 ZIP（No.${info.seq}）は取り込み済みです（いまは No.${have}）。もう一度取り込みますか？`)
+  const base = info.base ?? info.seq - 1
+  if (base > have) {
+    const missing = base === have + 1 ? `No.${base}` : `No.${have + 1}〜No.${base}`
+    return confirm(
+      `${missing} の差分 ZIP をまだ取り込んでいません（いまは No.${have}）。
+先にそちらを取り込むか、全部入りの ZIP を取り込んでください。
+
+このまま No.${info.seq} を取り込みますか？`,
+    )
+  }
+  return true
+}
 
 function formatDate(ms: number): string {
   const d = new Date(ms)
@@ -19,6 +49,7 @@ function formatDate(ms: number): string {
 /** S-09 設定 */
 export default function Settings() {
   const lastBackupAt = useLiveQuery(() => getSetting<number>('lastBackupAt'))
+  const imageZip = useLiveQuery(() => getSetting<ImageZipState>('imageZip'))
   const counts = useLiveQuery(async () => ({ collections: await db.collections.count(), cards: await db.cards.count() }))
   const [message, setMessage] = useState('')
   const [busy, setBusy] = useState(false)
@@ -27,6 +58,7 @@ export default function Settings() {
   const restoreRef = useRef<HTMLInputElement>(null)
   const csvRef = useRef<HTMLInputElement>(null)
   const imagesRef = useRef<HTMLInputElement>(null)
+  const diffRef = useRef<HTMLInputElement>(null)
 
   const run = async (fn: () => Promise<string>) => {
     setBusy(true)
@@ -69,6 +101,33 @@ export default function Settings() {
       const r = await importCsv(await cols.text(), await cards.text())
       return `コレクション ${r.addedCollections} 件、カード ${r.addedCards} 枚を追加しました（すでにある ${r.skippedCards} 枚はそのまま）`
     })
+
+  const importImageZip = (f: File | undefined, mode: 'full' | 'diff') => {
+    if (!f) return
+    run(async () => {
+      const last = await getSetting<ImageZipState>('imageZip')
+      setMessage('ZIP を開いています…')
+      const r = await importImages(
+        f,
+        (done, total) => setMessage(`画像を取り込み中… ${done} / ${total}`),
+        (info) => checkImageZip(mode, info, last),
+      )
+      if (r.canceled) return '取り込みをやめました'
+      const info = r.info
+      const isDiff = info?.kind === 'diff'
+      // 差分なら番号を進める（取り込み済みの差分を入れ直しても戻さない）。全部入りならその番号にする
+      const seq = isDiff ? Math.max(last?.seq ?? 0, info.seq) : info?.seq
+      await putSetting('imageZip', { seq, date: isDiff && seq !== info.seq ? last?.date : info?.date, importedAt: Date.now() } satisfies ImageZipState)
+      const miss = r.unmatched.length
+      return (
+        `${isDiff ? `差分 No.${info.seq} の画像` : '画像'} ${r.matched} 枚を取り込みました` +
+        (miss
+          ? `（対応するカードがなかった ${miss} 枚：${r.unmatched.slice(0, 5).join('、')}${miss > 5 ? ' など' : ''}）` +
+            (isDiff ? '。新しいカードの画像なら、先に「初期データを取り込む」をしてから、もう一度この差分 ZIP を取り込んでください' : '')
+          : '')
+      )
+    })
+  }
 
   return (
     <div className="page">
@@ -169,7 +228,7 @@ export default function Settings() {
         />
         <button className="btn block" disabled={busy} onClick={() => imagesRef.current?.click()}>
           <IconPhotoUp size={20} aria-hidden />
-          画像をまとめて取り込む（ZIP）
+          画像をまとめて取り込む（全部入りの ZIP）
         </button>
         <input
           ref={imagesRef}
@@ -179,15 +238,32 @@ export default function Settings() {
           onChange={(e) => {
             const f = e.target.files?.[0]
             e.target.value = ''
-            if (!f) return
-            run(async () => {
-              const r = await importImages(f, (done, total) => setMessage(`画像を取り込み中… ${done} / ${total}`))
-              const miss = r.unmatched.length
-              return `画像 ${r.matched} 枚を取り込みました` + (miss ? `（対応するカードがなかった ${miss} 枚：${r.unmatched.slice(0, 5).join('、')}${miss > 5 ? ' など' : ''}）` : '')
-            })
+            importImageZip(f, 'full')
           }}
         />
-        <div className="xs muted">すでにあるカードの状態は上書きしません。画像は同じカードの画像を置き換えます。</div>
+        <button className="btn block" disabled={busy} onClick={() => diffRef.current?.click()}>
+          <IconPhotoPlus size={20} aria-hidden />
+          新しい画像だけ取り込む（差分 ZIP）
+        </button>
+        <input
+          ref={diffRef}
+          type="file"
+          accept=".zip,application/zip"
+          hidden
+          onChange={(e) => {
+            const f = e.target.files?.[0]
+            e.target.value = ''
+            importImageZip(f, 'diff')
+          }}
+        />
+        <div className="small muted">
+          取り込んだ画像の版：
+          {imageZip?.seq !== undefined ? `No.${imageZip.seq}${imageZip.date ? `（${imageZip.date.replaceAll('-', '/')} の版）` : ''}` : imageZip ? '番号なし（前の形の ZIP）' : 'まだありません'}
+        </div>
+        <div className="xs muted">
+          差分 ZIP は、前の版から増えた・差し替えた画像だけが入った小さい ZIP です（「pocamaster-差分-No番号」）。番号の順に取り込んでください。新しいカードが増えたときは、先に「初期データを取り込む」をしてください。
+          すでにあるカードの状態は上書きしません。画像は同じカードの画像を置き換え、ZIP に入っていないカードの画像はそのまま残ります。
+        </div>
       </div>
 
       {message && (
