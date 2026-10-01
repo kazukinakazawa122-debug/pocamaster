@@ -1,13 +1,16 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { IconAdjustmentsHorizontal } from '@tabler/icons-react'
+import { IconAdjustmentsHorizontal, IconPhoto, IconShare } from '@tabler/icons-react'
 import { db } from '../lib/db'
 import { MEMBER_BY_ID, MEMBERS, type MemberId } from '../lib/members'
 import { TopBar } from '../components/ui'
 import CardGroups, { type CardGroup } from '../components/CardGroups'
 import { MiniveLoading } from '../components/Minive'
+import { makeListImages, shareFiles } from '../lib/listImage'
 
 interface WantsView {
+  /** want＝求めている（持っていない）カード、trade＝譲れるカード（「譲」の印を付けた、持っているカード） */
+  mode: 'want' | 'trade'
   member: MemberId | 'all'
   /** コレクションの id。'all' なら全部 */
   collection: string
@@ -17,8 +20,10 @@ interface WantsView {
   labels: boolean
 }
 
-const DEFAULT_VIEW: WantsView = { member: 'all', collection: 'all', favoritesOnly: false, imagesOnly: true, columns: 4, labels: false }
+const DEFAULT_VIEW: WantsView = { mode: 'want', member: 'all', collection: 'all', favoritesOnly: false, imagesOnly: true, columns: 4, labels: false }
 const VIEW_KEY = 'wantsView'
+/** 画像にできるカードの枚数（横 4 枚で画像 4〜5 枚ほど） */
+const IMAGE_LIMIT = 300
 
 // 選んだ絞り込みは、次に開いたときも同じにする（この端末だけ）
 function loadView(): WantsView {
@@ -30,8 +35,8 @@ function loadView(): WantsView {
 }
 
 /**
- * 求めているカード（F-25、本人の要望 2026-10-01）：持っていないカードだけを、メンバー・コレクションで絞って並べる。
- * 交換や譲ってもらうときに、スクショして見せる用。持っていないカードも暗くしない
+ * 求・譲の一覧（F-25、本人の要望 2026-10-01）：交換で見せる用。メンバー・コレクションで絞って並べ、スクショか画像にする。
+ * 求＝持っていないカード（暗くしない）。譲＝「譲」の印を付けた、持っているカード
  */
 export default function Wants() {
   const [view, setViewState] = useState<WantsView>(loadView)
@@ -46,10 +51,14 @@ export default function Wants() {
     }
   }
 
+  const trade = view.mode === 'trade'
   const data = useLiveQuery(async () => {
-    const [collections, cards] = await Promise.all([db.collections.toArray(), db.cards.where('status').equals('未所持').toArray()])
+    const [collections, cards] = await Promise.all([
+      db.collections.toArray(),
+      trade ? db.cards.where('status').equals('所持中').filter((c) => !!c.trade).toArray() : db.cards.where('status').equals('未所持').toArray(),
+    ])
     return { collections, cards }
-  })
+  }, [trade])
   const collections = useMemo(
     () => [...(data?.collections ?? [])].sort((a, b) => b.releaseDate.localeCompare(a.releaseDate)),
     [data],
@@ -71,10 +80,49 @@ export default function Wants() {
   const count = groups.reduce((n, g) => n + g.cards.length, 0)
   const m = view.member === 'all' ? null : MEMBER_BY_ID[view.member]
   const colName = view.collection === 'all' ? null : collections.find((c) => c.id === view.collection)?.name
+  const mark = trade ? '譲' : '求'
+
+  // 一覧の画像（2026-10-01）。iPhone の共有シートはタップの直後でないと開けないので、作るのと保存・共有を 2 回のタップに分ける
+  const [images, setImages] = useState<File[] | null>(null)
+  const [making, setMaking] = useState('')
+  const [imageError, setImageError] = useState('')
+  const listKey = `${JSON.stringify(view)}|${count}`
+  // 一覧が変わったら作った画像は古くなるので消す
+  useEffect(() => setImages(null), [listKey])
+  const previews = useMemo(() => images?.map((f) => URL.createObjectURL(f)) ?? [], [images])
+  useEffect(() => () => previews.forEach((u) => URL.revokeObjectURL(u)), [previews])
+  const makeImages = async () => {
+    setImageError('')
+    // 多すぎると画像が何十枚にもなり、iPhone では時間がかかって途中で止まることもあるので、絞ってもらう
+    if (count > IMAGE_LIMIT) {
+      setImageError(`カードが多すぎます（${count} 枚）。メンバーやコレクションで ${IMAGE_LIMIT} 枚以下に絞ってから、画像にしてください`)
+      return
+    }
+    setMaking('画像を作っています…')
+    try {
+      const files = await makeListImages(
+        {
+          mark,
+          title: [m ? m.name : '全員', colName].filter(Boolean).join('・'),
+          groups: groups.map((g) => ({ name: g.col.name, cards: g.cards })),
+          columns: view.columns,
+          labels: view.labels,
+          kind: trade ? 'trade' : 'want',
+        },
+        // 1 枚ごとに書き換えると一覧の画面ごと描き直して遅くなるので、12 枚ごとにする
+        (done, total) => (done % 12 === 0 || done === total) && setMaking(`画像を作っています… ${done} / ${total}`),
+      )
+      setImages(files)
+    } catch (e) {
+      setImageError(`画像を作れませんでした：${(e as Error).message}`)
+    } finally {
+      setMaking('')
+    }
+  }
 
   return (
     <div className="page">
-      <TopBar title="求めているカード" back menu>
+      <TopBar title="求・譲の一覧" back menu>
         <button
           className="icon-btn"
           aria-label={showFilters ? '絞り込みを隠す' : '絞り込みを出す'}
@@ -87,6 +135,14 @@ export default function Wants() {
 
       {showFilters && (
         <div className="panel stack" style={{ marginBottom: 12 }}>
+          <div className="chips" role="group" aria-label="どちらの一覧">
+            <button className={`chip${!trade ? ' on' : ''}`} onClick={() => setView({ mode: 'want' })}>
+              求めているカード
+            </button>
+            <button className={`chip${trade ? ' on' : ''}`} onClick={() => setView({ mode: 'trade' })}>
+              譲れるカード
+            </button>
+          </div>
           <div className="chips">
             <button className={`chip${view.member === 'all' ? ' on' : ''}`} onClick={() => setView({ member: 'all' })}>
               全員
@@ -134,8 +190,33 @@ export default function Wants() {
               </button>
             ))}
           </div>
+          {count > 0 &&
+            (images ? (
+              <>
+                <button
+                  className="btn primary block"
+                  onClick={() => shareFiles(images).catch((e) => (e as Error).name !== 'AbortError' && setImageError((e as Error).message))}
+                >
+                  <IconShare size={20} aria-hidden />
+                  画像を保存・共有する{images.length > 1 ? `（${images.length} 枚）` : ''}
+                </button>
+                <div className="list-previews">
+                  {previews.map((u, i) => (
+                    <img key={u} src={u} alt={`できた画像 ${i + 1}`} />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <button className="btn block" disabled={!!making} onClick={makeImages}>
+                <IconPhoto size={20} aria-hidden />
+                {making || 'この一覧を画像にする'}
+              </button>
+            ))}
+          {imageError && <div className="error" style={{ margin: 0 }}>{imageError}</div>}
           <div className="xs muted">
-            カードを押すと「所持中」になり、この一覧から消えます（すぐ下の「元に戻す」で戻せます）。長押しで大きく見られます。
+            {trade
+              ? '「譲」の印は、カードを長押しして「譲」を押すか、コレクションの「選ぶ」でまとめて付けます。ここでカードを押すと大きく見られます（印を外すのもそこから）。'
+              : 'カードを押すと「所持中」になり、この一覧から消えます（すぐ下の「元に戻す」で戻せます）。長押しで大きく見られます。'}
             右上の <IconAdjustmentsHorizontal size={12} aria-hidden style={{ verticalAlign: -2 }} /> で、この絞り込みを隠せます（スクショ用）。
           </div>
         </div>
@@ -143,7 +224,7 @@ export default function Wants() {
 
       {/* スクショしたときに何の一覧かわかる見出し */}
       <div className="wants-head">
-        <span className="wants-mark">求</span>
+        <span className="wants-mark">{mark}</span>
         <span style={m ? { color: m.text } : undefined}>{m ? m.name : '全員'}</span>
         {colName && <span className="muted">・{colName}</span>}
         <span className="muted num" style={{ marginLeft: 'auto', fontSize: 13 }}>
@@ -154,9 +235,15 @@ export default function Wants() {
       {!data ? (
         <MiniveLoading />
       ) : count === 0 ? (
-        <div className="empty">{data.cards.length === 0 ? '持っていないカードはありません' : 'この絞り込みに合うカードはありません'}</div>
+        <div className="empty">
+          {data.cards.length > 0
+            ? 'この絞り込みに合うカードはありません'
+            : trade
+              ? '「譲」の印を付けたカードはまだありません。カードを長押しして「譲」を押すか、コレクションの「選ぶ」でまとめて付けられます'
+              : '持っていないカードはありません'}
+        </div>
       ) : (
-        <CardGroups key={JSON.stringify(view)} groups={groups} columns={view.columns} bright labels={view.labels} />
+        <CardGroups key={JSON.stringify(view)} groups={groups} columns={view.columns} bright labels={view.labels} tapOpens={trade} />
       )}
     </div>
   )

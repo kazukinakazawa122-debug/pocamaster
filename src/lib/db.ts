@@ -38,6 +38,8 @@ export interface Card {
   imageCredit?: string
   /** お気に入り（ホームに出す） */
   favorite?: boolean
+  /** 譲れる（交換に出せる重なったカード。「譲」の一覧に出す。2026-10-01） */
+  trade?: boolean
   status: CardStatus
   statusChangedAt: number
   order: number
@@ -180,6 +182,27 @@ export async function setCardStatus(card: Card, to: CardStatus): Promise<void> {
   await db.transaction('rw', db.cards, db.statusHistory, async () => {
     await db.cards.update(card.id, { status: to, statusChangedAt: now })
     await db.statusHistory.add({ cardId: card.id, from: card.status, to, changedAt: now })
+  })
+}
+
+/** 何枚かの状態をまとめて変える（1 回の保存。すでにその状態のカードは変えない） */
+export async function setCardsStatus(cards: Card[], to: CardStatus): Promise<void> {
+  const change = cards.filter((c) => c.status !== to)
+  if (change.length === 0) return
+  const now = Date.now()
+  await db.transaction('rw', db.cards, db.statusHistory, async () => {
+    await db.cards.bulkUpdate(change.map((c) => ({ key: c.id, changes: { status: to, statusChangedAt: now } })))
+    await db.statusHistory.bulkAdd(change.map((c) => ({ cardId: c.id, from: c.status, to, changedAt: now })))
+  })
+}
+
+/** 何枚かを、それぞれ前の状態に戻す（まとめて変えたあとの「元に戻す」） */
+export async function restoreCardsStatus(cards: Card[], now: CardStatus): Promise<void> {
+  const t = Date.now()
+  const change = cards.filter((c) => c.status !== now)
+  await db.transaction('rw', db.cards, db.statusHistory, async () => {
+    await db.cards.bulkUpdate(change.map((c) => ({ key: c.id, changes: { status: c.status, statusChangedAt: c.statusChangedAt } })))
+    await db.statusHistory.bulkAdd(change.map((c) => ({ cardId: c.id, from: now, to: c.status, changedAt: t })))
   })
 }
 

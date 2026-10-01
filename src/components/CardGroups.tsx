@@ -22,13 +22,15 @@ interface Props {
   bright?: boolean
   /** カードの下にメンバー・入手元・バージョンを出す */
   labels?: boolean
+  /** 押したら状態を切り替えずに拡大を開く（「譲」の一覧：押しただけで未所持にならないように） */
+  tapOpens?: boolean
 }
 
 /**
  * いくつものコレクションのカードを、コレクションごとの見出しを付けて並べる（検索・求めているカード）。
  * タップで状態を切り替え（「元に戻す」付き）、長押しで拡大
  */
-export default function CardGroups({ groups, columns = 3, bright, labels = true }: Props) {
+export default function CardGroups({ groups, columns = 3, bright, labels = true, tapOpens }: Props) {
   const [limit, setLimit] = useState(PAGE)
   const [openId, setOpenId] = useState<string | null>(null)
   const showUndo = useUndo()
@@ -41,7 +43,7 @@ export default function CardGroups({ groups, columns = 3, bright, labels = true 
     setCardStatus(card, to)
     showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => setCardStatus({ ...card, status: to }, card.status))
   }
-  toggleRef.current = toggle
+  toggleRef.current = tapOpens ? (c: Card) => setOpenId(c.id) : toggle
 
   // 「もっと見る」までの枚数で切る
   let left = limit

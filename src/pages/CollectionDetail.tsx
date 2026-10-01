@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { Link, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
-import { IconEdit, IconLayoutGridAdd, IconPin, IconPinFilled, IconPlus } from '@tabler/icons-react'
+import { IconEdit, IconLayoutGridAdd, IconPin, IconPinFilled, IconPlus, IconSquareCheck } from '@tabler/icons-react'
 import { db, setCardStatus, type Card, type CardStatus } from '../lib/db'
 import { MEMBER_BY_ID, MEMBERS, memberLabel, memberOrder, type MemberId } from '../lib/members'
 import { memberProgress, pctText, progress } from '../lib/stats'
@@ -10,6 +10,7 @@ import CardTile from '../components/CardTile'
 import CardSheet from '../components/CardSheet'
 import { MiniveLoading } from '../components/Minive'
 import { useUndo } from '../components/Undo'
+import SelectBar from '../components/SelectBar'
 
 const STATUS_FILTERS = ['すべて', '未所持', '所持中'] as const
 
@@ -76,6 +77,9 @@ export default function CollectionDetail() {
   const memberParam = (params.get('m') as MemberId | null) ?? null
   const status = (params.get('s') as (typeof STATUS_FILTERS)[number] | null) ?? 'すべて'
   const [openCardId, setOpenCardId] = useState<string | null>(null)
+  // まとめて切り替える（2026-10-01）：選んでいる間は、押したカードを選ぶ・外す
+  const [selecting, setSelecting] = useState(false)
+  const [sel, setSel] = useState<Set<string>>(new Set())
   const showUndo = useUndo()
   // カードに渡す関数は毎回同じものを使う（変わっていないカードを描き直さないため）。中身は最新の toggle を呼ぶ
   const toggleRef = useRef<(card: Card) => void>(() => {})
@@ -115,7 +119,15 @@ export default function CollectionDetail() {
     showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => setCardStatus({ ...card, status: to }, card.status))
   }
 
-  toggleRef.current = toggle
+  toggleRef.current = selecting
+    ? (card: Card) =>
+        setSel((prev) => {
+          const next = new Set(prev)
+          if (next.has(card.id)) next.delete(card.id)
+          else next.add(card.id)
+          return next
+        })
+    : toggle
 
   // カードに出てくるメンバーだけタブにする。1 人だけ（個人のコレクション）なら「全員」タブを出さない
   const present = MEMBERS.filter((mm) => cards.some((c) => c.memberIds.includes(mm.id)))
@@ -148,7 +160,15 @@ export default function CollectionDetail() {
   const grouped = member ? rows : mergeNumbered(rows)
 
   const tile = (c: Card, compact: boolean) => (
-    <CardTile key={c.id} card={c} collectionName={col.name} compact={compact} onTap={onTap} onLongPress={onLongPress} />
+    <CardTile
+      key={c.id}
+      card={c}
+      collectionName={col.name}
+      compact={compact}
+      selected={selecting ? sel.has(c.id) : undefined}
+      onTap={onTap}
+      onLongPress={onLongPress}
+    />
   )
 
   return (
@@ -212,7 +232,22 @@ export default function CollectionDetail() {
             {s}
           </button>
         ))}
+        {cards.length > 0 && (
+          <button
+            className={`chip${selecting ? ' on' : ''}`}
+            style={{ marginLeft: 'auto', display: 'inline-flex', alignItems: 'center', gap: 3 }}
+            aria-pressed={selecting}
+            onClick={() => {
+              setSel(new Set())
+              setSelecting(!selecting)
+            }}
+          >
+            <IconSquareCheck size={15} aria-hidden />
+            選ぶ
+          </button>
+        )}
       </div>
+      {selecting && <div className="small muted" style={{ margin: '6px 0 0' }}>カードを押して選び、下のボタンでまとめて切り替えます。</div>}
 
       {m && !solo && (
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '8px 0' }}>
@@ -291,6 +326,18 @@ export default function CollectionDetail() {
           ))
       )}
 
+      {selecting && (
+        <SelectBar
+          selected={cards.filter((c) => sel.has(c.id))}
+          visible={visible}
+          onSelectAll={(list) => setSel(new Set(list.map((c) => c.id)))}
+          onClear={() => setSel(new Set())}
+          onDone={() => {
+            setSelecting(false)
+            setSel(new Set())
+          }}
+        />
+      )}
       {openCard && <CardSheet card={openCard} collectionName={col.name} onClose={() => setOpenCardId(null)} onToggle={() => toggle(openCard)} />}
     </div>
   )

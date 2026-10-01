@@ -6,7 +6,7 @@ import { IconChartBar, IconChevronRight, IconHeartSearch, IconMenu2, IconSearch,
 /** サイドバーから行ける画面（本人の要望、2026-10-01：右上の 3 本線から開く）。機能が増えたらここに足す */
 const ITEMS = [
   { to: '/search', label: 'カードを探す', note: '店の名前・言葉で全部のカードから', Icon: IconSearch },
-  { to: '/wants', label: '求めているカード', note: '持っていないカードを並べてスクショ', Icon: IconHeartSearch },
+  { to: '/wants', label: '求・譲の一覧', note: '交換で見せるカードを並べて画像に', Icon: IconHeartSearch },
   { to: '/history', label: '集めた記録', note: '月ごとに増えた枚数のグラフ', Icon: IconChartBar },
 ]
 

@@ -21,6 +21,8 @@ interface Props {
   compact?: boolean
   /** 持っていなくても暗くしない（求めているカードの一覧。スクショで見やすくする） */
   bright?: boolean
+  /** まとめて選んでいるとき：true＝選んでいる、false＝選んでいない。選ぶ画面でなければ undefined */
+  selected?: boolean
   /** 押したカードを渡す（親は同じ関数を使い回せるので、変わっていないカードを描き直さずに済む） */
   onTap: (card: Card) => void
   onLongPress: (card: Card) => void
@@ -37,6 +39,8 @@ function same(a: Props, b: Props): boolean {
     x.id === y.id &&
     x.status === y.status &&
     x.imageId === y.imageId &&
+    x.trade === y.trade &&
+    a.selected === b.selected &&
     x.source === y.source &&
     x.version === y.version &&
     x.memberIds.join() === y.memberIds.join() &&
@@ -49,7 +53,7 @@ function same(a: Props, b: Props): boolean {
 }
 
 /** タップで状態を切り替え、長押しで拡大を開く */
-function CardTileView({ card, collectionName, compact, bright, onTap, onLongPress }: Props) {
+function CardTileView({ card, collectionName, compact, bright, selected, onTap, onLongPress }: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   // 画面の近くにあるときだけ画像を読み込む（離れたら手放す）
   const near = useNearScreen(ref)
@@ -70,10 +74,11 @@ function CardTileView({ card, collectionName, compact, bright, onTap, onLongPres
     <button
       ref={ref}
       type="button"
-      className={`poca${owned || bright ? '' : ' off'}`}
+      // 選んでいるカードは暗くせず、枠と印で示す（暗くすると印も暗くなるため）
+      className={`poca${owned || bright || selected ? '' : ' off'}${selected ? ' sel' : ''}`}
       style={{ borderColor: border, background }}
       aria-label={`${name} ${card.source} ${card.version} ${card.status}`}
-      aria-pressed={owned}
+      aria-pressed={selected ?? owned}
       onPointerDown={(e) => {
         longPressed.current = false
         start.current = { x: e.clientX, y: e.clientY }
@@ -118,6 +123,12 @@ function CardTileView({ card, collectionName, compact, bright, onTap, onLongPres
           )}
         </span>
       )}
+      {card.trade && owned && (
+        <span className="poca-trade" aria-label="譲れる">
+          譲
+        </span>
+      )}
+      {selected !== undefined && <span className={`poca-check${selected ? ' on' : ''}`} aria-hidden />}
     </button>
   )
 }

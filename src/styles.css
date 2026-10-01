@@ -325,3 +325,43 @@ a { color: inherit; text-decoration: none; }
 .history-table td { padding: 8px; border-bottom: 1px solid var(--line); }
 .history-table th:last-child, .history-table td:last-child { text-align: right; }
 .history-table tr.on td { font-weight: 700; background: var(--surface); }
+
+/* まとめて切り替える（2026-10-01）：選んでいるカードは黒い枠と印。選んでいないカードには空の丸 */
+.poca.sel { outline: 3px solid var(--all); outline-offset: 1px; }
+.poca-check {
+  position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid #fff; background: rgba(0,0,0,.25); box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.poca-check.on { background: var(--all); border-color: var(--on-all); }
+.poca-check.on::after {
+  content: ''; position: absolute; left: 6px; top: 2px; width: 5px; height: 10px;
+  border: solid var(--on-all); border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+/* 「譲」の印：カードの左上の小さな札 */
+.poca-trade {
+  position: absolute; left: 3px; top: 3px; padding: 1px 4px; border-radius: 4px;
+  background: var(--all); color: var(--on-all); font-size: 10px; font-weight: 800; line-height: 1.4;
+}
+/* 選んでいる間は、下のタブの代わりに操作のバーを出す */
+.selecting .tabbar { display: none; }
+.select-bar {
+  position: fixed; z-index: 25; left: 50%; bottom: calc(10px + var(--safe-bottom)); transform: translateX(-50%);
+  width: min(calc(100% - 24px), 480px); padding: 10px; border-radius: 20px;
+  display: flex; flex-direction: column; gap: 8px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid var(--line); box-shadow: 0 6px 24px rgba(0,0,0,.14);
+}
+.select-bar-row { display: flex; align-items: center; gap: 6px; }
+.select-bar .btn { padding: 0 12px; }
+/* 選んでいる間は「元に戻す」をバーの上に出す */
+.selecting .toast { bottom: calc(130px + var(--safe-bottom)); }
+/* できた一覧の画像の小さな見本 */
+.list-previews { display: flex; gap: 6px; overflow-x: auto; }
+.list-previews img { height: 120px; width: auto; border-radius: 6px; border: 1px solid var(--line); }
+/* 選んでいる間は、一番下のカードがバーに隠れないよう下の余白を広げる */
+.selecting .app { padding-bottom: calc(150px + var(--safe-bottom)); }
+/* 6 枚並び（細いカード）では、選ぶ丸と「譲」の札を小さくする */
+.grid-6 .poca-check { width: 16px; height: 16px; top: 3px; right: 3px; border-width: 1.5px; }
+.grid-6 .poca-check.on::after { left: 4px; top: 1px; width: 4px; height: 8px; border-width: 0 1.5px 1.5px 0; }
+.grid-6 .poca-trade { font-size: 9px; padding: 0 3px; left: 2px; top: 2px; }

@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IconEdit, IconHeart, IconHeartFilled, IconPhotoPlus, IconTrash } from '@tabler/icons-react'
-import { addImages, db, deleteCard, deleteImages, newId, type Card } from '../lib/db'
+import { addImages, db, deleteCard, deleteImages, newId, setCardStatus, type Card } from '../lib/db'
 import { makeImage } from '../lib/image'
 import { memberLabel } from '../lib/members'
 import { cardColors } from './CardTile'
@@ -87,6 +87,18 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
             onClick={() => db.cards.update(card.id, { favorite: !card.favorite })}
           >
             {card.favorite ? <IconHeartFilled size={22} color="#E85A9C" aria-hidden /> : <IconHeart size={22} aria-hidden />}
+          </button>
+          {/* 譲れる（交換に出せる）。持っていないカードに付けたら「所持中」にもする */}
+          <button
+            className={`btn${card.trade ? ' primary' : ''}`}
+            aria-label={card.trade ? '「譲」の印を外す' : '「譲」の印を付ける'}
+            aria-pressed={!!card.trade}
+            onClick={async () => {
+              await db.cards.update(card.id, { trade: !card.trade })
+              if (!card.trade && !owned) await setCardStatus(card, '所持中')
+            }}
+          >
+            譲
           </button>
         </div>
         <button className="btn block" disabled={busy} onClick={() => fileRef.current?.click()}>
