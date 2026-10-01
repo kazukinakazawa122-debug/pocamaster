@@ -104,6 +104,22 @@ function TabBar({ pathname }: { pathname: string }) {
   const navigate = useNavigate()
   const ref = useRef<HTMLElement>(null)
   const current = tabIndex(pathname)
+  // 押したタブ。押した瞬間に丸を動かし始め、画面の切り替えはそのあとにする（本人の報告、2026-10-01「丸の動きが滑らかでない」）。
+  // 画面を描く間は丸の動きが止まりやすいので、先に動かしておく
+  const [pending, setPending] = useState<number | null>(null)
+  useEffect(() => setPending(null), [pathname])
+  const go = (i: number) => {
+    setPending(i)
+    // 丸が動き始めてから（2 コマ待ってから）画面を切り替える。コマが来ないとき（画面が隠れているなど）も少しで切り替える
+    let done = false
+    const run = () => {
+      if (done) return
+      done = true
+      navigate(TABS[i].to)
+    }
+    requestAnimationFrame(() => requestAnimationFrame(run))
+    window.setTimeout(run, 80)
+  }
   const [drag, setDrag] = useState<number | null>(null)
   const start = useRef<{ x: number; moved: boolean } | null>(null)
   const dragged = useRef(false)
@@ -111,7 +127,7 @@ function TabBar({ pathname }: { pathname: string }) {
     const r = ref.current!.getBoundingClientRect()
     return Math.min(TABS.length - 1, Math.max(0, Math.floor(((clientX - r.left) / r.width) * TABS.length)))
   }
-  const shown = drag ?? current
+  const shown = drag ?? pending ?? current
   return (
     <nav
       ref={ref}
@@ -137,7 +153,7 @@ function TabBar({ pathname }: { pathname: string }) {
         window.setTimeout(() => (dragged.current = false), 50)
         const i = indexAt(e.clientX)
         setDrag(null)
-        if (TABS[i].to !== pathname) navigate(TABS[i].to)
+        if (TABS[i].to !== pathname) go(i)
       }}
       onPointerCancel={() => {
         start.current = null
@@ -156,11 +172,11 @@ function TabBar({ pathname }: { pathname: string }) {
           end={end}
           className={() => (i === shown ? 'active' : '')}
           onClick={(e) => {
+            if (e.defaultPrevented) return
+            e.preventDefault()
             // いま開いている画面のタブをもう一度押したら、一番上までスクロールする
-            if (pathname === to) {
-              e.preventDefault()
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-            }
+            if (pathname === to) window.scrollTo({ top: 0, behavior: 'smooth' })
+            else go(i)
           }}
         >
           <span className="tab-ic">
