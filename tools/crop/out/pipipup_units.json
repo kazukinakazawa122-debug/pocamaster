@@ -1,0 +1,276 @@
+{
+"seed": [
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ユジン/ガウル",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ユジン/レイ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ユジン/ウォニョン",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ユジン/リズ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ユジン/イソ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ガウル/レイ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ガウル/ウォニョン",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ガウル/リズ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ガウル/イソ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"レイ/ウォニョン",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"レイ/リズ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"レイ/イソ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ウォニョン/リズ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ウォニョン/イソ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"リズ/イソ",
+"Random Photocard Pack",
+"ユニット"
+]
+],
+"images": [
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ユジン",
+"ガウル"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0000.jpg",
+"thumb": "pipipup_units/0000_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ユジン",
+"レイ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0001.jpg",
+"thumb": "pipipup_units/0001_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ユジン",
+"ウォニョン"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0002.jpg",
+"thumb": "pipipup_units/0002_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ユジン",
+"リズ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0003.jpg",
+"thumb": "pipipup_units/0003_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ユジン",
+"イソ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0004.jpg",
+"thumb": "pipipup_units/0004_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ガウル",
+"レイ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0005.jpg",
+"thumb": "pipipup_units/0005_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ガウル",
+"ウォニョン"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0006.jpg",
+"thumb": "pipipup_units/0006_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ガウル",
+"リズ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0007.jpg",
+"thumb": "pipipup_units/0007_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ガウル",
+"イソ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0008.jpg",
+"thumb": "pipipup_units/0008_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"レイ",
+"ウォニョン"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0009.jpg",
+"thumb": "pipipup_units/0009_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"レイ",
+"リズ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0010.jpg",
+"thumb": "pipipup_units/0010_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"レイ",
+"イソ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0011.jpg",
+"thumb": "pipipup_units/0011_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ウォニョン",
+"リズ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0012.jpg",
+"thumb": "pipipup_units/0012_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ウォニョン",
+"イソ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0013.jpg",
+"thumb": "pipipup_units/0013_t.jpg",
+"credit": "@_pipipup"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"リズ",
+"イソ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "pipipup_units/0014.jpg",
+"thumb": "pipipup_units/0014_t.jpg",
+"credit": "@_pipipup"
+}
+]
+}
