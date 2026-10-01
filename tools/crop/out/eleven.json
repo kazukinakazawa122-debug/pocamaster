@@ -75,42 +75,6 @@
 [
 "ELEVEN",
 "ガウル",
-"グッズ｜本体封入",
-"Poster"
-],
-[
-"ELEVEN",
-"ユジン",
-"グッズ｜本体封入",
-"Poster"
-],
-[
-"ELEVEN",
-"レイ",
-"グッズ｜本体封入",
-"Poster"
-],
-[
-"ELEVEN",
-"ウォニョン",
-"グッズ｜本体封入",
-"Poster"
-],
-[
-"ELEVEN",
-"リズ",
-"グッズ｜本体封入",
-"Poster"
-],
-[
-"ELEVEN",
-"イソ",
-"グッズ｜本体封入",
-"Poster"
-],
-[
-"ELEVEN",
-"ガウル",
 "POB",
 "ID Card"
 ],
@@ -1212,72 +1176,6 @@
 "version": "ver.2",
 "file": "eleven/0011.jpg",
 "thumb": "eleven/0011_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "ELEVEN",
-"members": [
-"ガウル"
-],
-"source": "グッズ｜本体封入",
-"version": "Poster",
-"file": "eleven/0012.jpg",
-"thumb": "eleven/0012_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "ELEVEN",
-"members": [
-"ユジン"
-],
-"source": "グッズ｜本体封入",
-"version": "Poster",
-"file": "eleven/0013.jpg",
-"thumb": "eleven/0013_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "ELEVEN",
-"members": [
-"レイ"
-],
-"source": "グッズ｜本体封入",
-"version": "Poster",
-"file": "eleven/0014.jpg",
-"thumb": "eleven/0014_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "ELEVEN",
-"members": [
-"ウォニョン"
-],
-"source": "グッズ｜本体封入",
-"version": "Poster",
-"file": "eleven/0015.jpg",
-"thumb": "eleven/0015_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "ELEVEN",
-"members": [
-"リズ"
-],
-"source": "グッズ｜本体封入",
-"version": "Poster",
-"file": "eleven/0016.jpg",
-"thumb": "eleven/0016_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "ELEVEN",
-"members": [
-"イソ"
-],
-"source": "グッズ｜本体封入",
-"version": "Poster",
-"file": "eleven/0017.jpg",
-"thumb": "eleven/0017_t.jpg",
 "credit": "@reina831wy"
 },
 {

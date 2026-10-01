@@ -39,42 +39,6 @@
 [
 "DIVE Official Fanclub｜ファンクラブ",
 "ガウル",
-"グッズ｜DIVE 1期 会員キット",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"ユジン",
-"グッズ｜DIVE 1期 会員キット",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"レイ",
-"グッズ｜DIVE 1期 会員キット",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"ウォニョン",
-"グッズ｜DIVE 1期 会員キット",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"リズ",
-"グッズ｜DIVE 1期 会員キット",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"イソ",
-"グッズ｜DIVE 1期 会員キット",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"ガウル",
 "IVE JAPAN FC 早期入会特典",
 ""
 ],
@@ -143,42 +107,6 @@
 "イソ",
 "DIVE 2期 'MAGAZINE IVE'",
 ""
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"ガウル",
-"グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"ユジン",
-"グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"レイ",
-"グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"ウォニョン",
-"グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"リズ",
-"グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"Mini Poster"
-],
-[
-"DIVE Official Fanclub｜ファンクラブ",
-"イソ",
-"グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"Mini Poster"
 ]
 ],
 "images": [
@@ -246,72 +174,6 @@
 "version": "",
 "file": "fanclub/0005.jpg",
 "thumb": "fanclub/0005_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"ガウル"
-],
-"source": "グッズ｜DIVE 1期 会員キット",
-"version": "Mini Poster",
-"file": "fanclub/0006.jpg",
-"thumb": "fanclub/0006_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"ユジン"
-],
-"source": "グッズ｜DIVE 1期 会員キット",
-"version": "Mini Poster",
-"file": "fanclub/0007.jpg",
-"thumb": "fanclub/0007_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"レイ"
-],
-"source": "グッズ｜DIVE 1期 会員キット",
-"version": "Mini Poster",
-"file": "fanclub/0008.jpg",
-"thumb": "fanclub/0008_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"ウォニョン"
-],
-"source": "グッズ｜DIVE 1期 会員キット",
-"version": "Mini Poster",
-"file": "fanclub/0009.jpg",
-"thumb": "fanclub/0009_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"リズ"
-],
-"source": "グッズ｜DIVE 1期 会員キット",
-"version": "Mini Poster",
-"file": "fanclub/0010.jpg",
-"thumb": "fanclub/0010_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"イソ"
-],
-"source": "グッズ｜DIVE 1期 会員キット",
-"version": "Mini Poster",
-"file": "fanclub/0011.jpg",
-"thumb": "fanclub/0011_t.jpg",
 "credit": "@reina831wy"
 },
 {
@@ -444,72 +306,6 @@
 "version": "",
 "file": "fanclub/0023.jpg",
 "thumb": "fanclub/0023_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"ガウル"
-],
-"source": "グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"version": "Mini Poster",
-"file": "fanclub/0024.jpg",
-"thumb": "fanclub/0024_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"ユジン"
-],
-"source": "グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"version": "Mini Poster",
-"file": "fanclub/0025.jpg",
-"thumb": "fanclub/0025_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"レイ"
-],
-"source": "グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"version": "Mini Poster",
-"file": "fanclub/0026.jpg",
-"thumb": "fanclub/0026_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"ウォニョン"
-],
-"source": "グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"version": "Mini Poster",
-"file": "fanclub/0027.jpg",
-"thumb": "fanclub/0027_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"リズ"
-],
-"source": "グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"version": "Mini Poster",
-"file": "fanclub/0028.jpg",
-"thumb": "fanclub/0028_t.jpg",
-"credit": "@reina831wy"
-},
-{
-"collection": "DIVE Official Fanclub｜ファンクラブ",
-"members": [
-"イソ"
-],
-"source": "グッズ｜DIVE 2期 'MAGAZINE IVE'",
-"version": "Mini Poster",
-"file": "fanclub/0029.jpg",
-"thumb": "fanclub/0029_t.jpg",
 "credit": "@reina831wy"
 }
 ]

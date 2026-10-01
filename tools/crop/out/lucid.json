@@ -170,18 +170,6 @@
 ],
 [
 "LUCID DREAM",
-"レイ",
-"グッズ｜店舗特典",
-"タワレコ スペシャルフライヤー"
-],
-[
-"LUCID DREAM",
-"レイ",
-"グッズ｜店舗特典",
-"HMV the music & movie master"
-],
-[
-"LUCID DREAM",
 "ユジン",
 "本体封入",
 "初回生産限定盤 I"
@@ -350,18 +338,6 @@
 ],
 [
 "LUCID DREAM",
-"ユジン",
-"グッズ｜店舗特典",
-"タワレコ スペシャルフライヤー"
-],
-[
-"LUCID DREAM",
-"ユジン",
-"グッズ｜店舗特典",
-"HMV the music & movie master"
-],
-[
-"LUCID DREAM",
 "ガウル",
 "本体封入",
 "初回生産限定盤 I"
@@ -503,18 +479,6 @@
 "ガウル",
 "オフラインイベント",
 "8.31 TOKYO"
-],
-[
-"LUCID DREAM",
-"ガウル",
-"グッズ｜店舗特典",
-"タワレコ スペシャルフライヤー"
-],
-[
-"LUCID DREAM",
-"ガウル",
-"グッズ｜店舗特典",
-"HMV the music & movie master"
 ],
 [
 "LUCID DREAM",
@@ -674,18 +638,6 @@
 ],
 [
 "LUCID DREAM",
-"ウォニョン",
-"グッズ｜店舗特典",
-"タワレコ スペシャルフライヤー"
-],
-[
-"LUCID DREAM",
-"ウォニョン",
-"グッズ｜店舗特典",
-"HMV the music & movie master"
-],
-[
-"LUCID DREAM",
 "イソ",
 "本体封入",
 "初回生産限定盤 I"
@@ -842,18 +794,6 @@
 ],
 [
 "LUCID DREAM",
-"イソ",
-"グッズ｜店舗特典",
-"タワレコ スペシャルフライヤー"
-],
-[
-"LUCID DREAM",
-"イソ",
-"グッズ｜店舗特典",
-"HMV the music & movie master"
-],
-[
-"LUCID DREAM",
 "リズ",
 "本体封入",
 "初回生産限定盤 I"
@@ -995,18 +935,6 @@
 "リズ",
 "オフラインイベント",
 "8.31 TOKYO"
-],
-[
-"LUCID DREAM",
-"リズ",
-"グッズ｜店舗特典",
-"タワレコ スペシャルフライヤー"
-],
-[
-"LUCID DREAM",
-"リズ",
-"グッズ｜店舗特典",
-"HMV the music & movie master"
 ]
 ],
 "images": [
@@ -1309,28 +1237,6 @@
 "version": "8.31 TOKYO",
 "file": "lucid/0026.jpg",
 "thumb": "lucid/0026_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"レイ"
-],
-"source": "グッズ｜店舗特典",
-"version": "タワレコ スペシャルフライヤー",
-"file": "lucid/0027.jpg",
-"thumb": "lucid/0027_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"レイ"
-],
-"source": "グッズ｜店舗特典",
-"version": "HMV the music & movie master",
-"file": "lucid/0028.jpg",
-"thumb": "lucid/0028_t.jpg",
 "credit": "@LILY_221019"
 },
 {
@@ -1648,28 +1554,6 @@
 {
 "collection": "LUCID DREAM",
 "members": [
-"ユジン"
-],
-"source": "グッズ｜店舗特典",
-"version": "タワレコ スペシャルフライヤー",
-"file": "lucid/0057.jpg",
-"thumb": "lucid/0057_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"ユジン"
-],
-"source": "グッズ｜店舗特典",
-"version": "HMV the music & movie master",
-"file": "lucid/0058.jpg",
-"thumb": "lucid/0058_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
 "ガウル"
 ],
 "source": "本体封入",
@@ -1929,28 +1813,6 @@
 "version": "8.31 TOKYO",
 "file": "lucid/0082.jpg",
 "thumb": "lucid/0082_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"ガウル"
-],
-"source": "グッズ｜店舗特典",
-"version": "タワレコ スペシャルフライヤー",
-"file": "lucid/0083.jpg",
-"thumb": "lucid/0083_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"ガウル"
-],
-"source": "グッズ｜店舗特典",
-"version": "HMV the music & movie master",
-"file": "lucid/0084.jpg",
-"thumb": "lucid/0084_t.jpg",
 "credit": "@LILY_221019"
 },
 {
@@ -2244,28 +2106,6 @@
 {
 "collection": "LUCID DREAM",
 "members": [
-"ウォニョン"
-],
-"source": "グッズ｜店舗特典",
-"version": "タワレコ スペシャルフライヤー",
-"file": "lucid/0111.jpg",
-"thumb": "lucid/0111_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"ウォニョン"
-],
-"source": "グッズ｜店舗特典",
-"version": "HMV the music & movie master",
-"file": "lucid/0112.jpg",
-"thumb": "lucid/0112_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
 "イソ"
 ],
 "source": "本体封入",
@@ -2554,28 +2394,6 @@
 {
 "collection": "LUCID DREAM",
 "members": [
-"イソ"
-],
-"source": "グッズ｜店舗特典",
-"version": "タワレコ スペシャルフライヤー",
-"file": "lucid/0139.jpg",
-"thumb": "lucid/0139_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"イソ"
-],
-"source": "グッズ｜店舗特典",
-"version": "HMV the music & movie master",
-"file": "lucid/0140.jpg",
-"thumb": "lucid/0140_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
 "リズ"
 ],
 "source": "本体封入",
@@ -2835,28 +2653,6 @@
 "version": "8.31 TOKYO",
 "file": "lucid/0164.jpg",
 "thumb": "lucid/0164_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"リズ"
-],
-"source": "グッズ｜店舗特典",
-"version": "タワレコ スペシャルフライヤー",
-"file": "lucid/0165.jpg",
-"thumb": "lucid/0165_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"リズ"
-],
-"source": "グッズ｜店舗特典",
-"version": "HMV the music & movie master",
-"file": "lucid/0166.jpg",
-"thumb": "lucid/0166_t.jpg",
 "credit": "@LILY_221019"
 }
 ]

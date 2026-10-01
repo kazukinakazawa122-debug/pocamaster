@@ -27,18 +27,6 @@
 [
 "REVIVE+",
 "イソ",
-"グッズ｜本体封入",
-"Postcard BANGERS"
-],
-[
-"REVIVE+",
-"イソ",
-"グッズ｜本体封入",
-"Postcard CHALLENGERS"
-],
-[
-"REVIVE+",
-"イソ",
 "本体封入",
 "Digipack"
 ],
@@ -521,18 +509,6 @@
 "リズ",
 "本体封入",
 "LOVED IVE"
-],
-[
-"REVIVE+",
-"リズ",
-"グッズ｜本体封入",
-"Postcard BANGERS"
-],
-[
-"REVIVE+",
-"リズ",
-"グッズ｜本体封入",
-"Postcard CHALLENGERS"
 ],
 [
 "REVIVE+",
@@ -1023,18 +999,6 @@
 [
 "REVIVE+",
 "ウォニョン",
-"グッズ｜本体封入",
-"Postcard BANGERS"
-],
-[
-"REVIVE+",
-"ウォニョン",
-"グッズ｜本体封入",
-"Postcard CHALLENGERS"
-],
-[
-"REVIVE+",
-"ウォニョン",
 "本体封入",
 "Digipack"
 ],
@@ -1517,18 +1481,6 @@
 "レイ",
 "本体封入",
 "LOVED IVE"
-],
-[
-"REVIVE+",
-"レイ",
-"グッズ｜本体封入",
-"Postcard BANGERS"
-],
-[
-"REVIVE+",
-"レイ",
-"グッズ｜本体封入",
-"Postcard CHALLENGERS"
 ],
 [
 "REVIVE+",
@@ -2019,18 +1971,6 @@
 [
 "REVIVE+",
 "ユジン",
-"グッズ｜本体封入",
-"Postcard BANGERS"
-],
-[
-"REVIVE+",
-"ユジン",
-"グッズ｜本体封入",
-"Postcard CHALLENGERS"
-],
-[
-"REVIVE+",
-"ユジン",
 "本体封入",
 "Digipack"
 ],
@@ -2513,18 +2453,6 @@
 "ガウル",
 "本体封入",
 "LOVED IVE"
-],
-[
-"REVIVE+",
-"ガウル",
-"グッズ｜本体封入",
-"Postcard BANGERS"
-],
-[
-"REVIVE+",
-"ガウル",
-"グッズ｜本体封入",
-"Postcard CHALLENGERS"
 ],
 [
 "REVIVE+",
@@ -3471,28 +3399,6 @@
 "members": [
 "イソ"
 ],
-"source": "グッズ｜本体封入",
-"version": "Postcard BANGERS",
-"file": "revive/0004.jpg",
-"thumb": "revive/0004_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"イソ"
-],
-"source": "グッズ｜本体封入",
-"version": "Postcard CHALLENGERS",
-"file": "revive/0005.jpg",
-"thumb": "revive/0005_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"イソ"
-],
 "source": "本体封入",
 "version": "Digipack",
 "file": "revive/0006.jpg",
@@ -4355,28 +4261,6 @@
 "version": "LOVED IVE",
 "file": "revive/0084.jpg",
 "thumb": "revive/0084_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"リズ"
-],
-"source": "グッズ｜本体封入",
-"version": "Postcard BANGERS",
-"file": "revive/0085.jpg",
-"thumb": "revive/0085_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"リズ"
-],
-"source": "グッズ｜本体封入",
-"version": "Postcard CHALLENGERS",
-"file": "revive/0086.jpg",
-"thumb": "revive/0086_t.jpg",
 "credit": "@LILY_221019"
 },
 {
@@ -5253,28 +5137,6 @@
 "members": [
 "ウォニョン"
 ],
-"source": "グッズ｜本体封入",
-"version": "Postcard BANGERS",
-"file": "revive/0166.jpg",
-"thumb": "revive/0166_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"ウォニョン"
-],
-"source": "グッズ｜本体封入",
-"version": "Postcard CHALLENGERS",
-"file": "revive/0167.jpg",
-"thumb": "revive/0167_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"ウォニョン"
-],
 "source": "本体封入",
 "version": "Digipack",
 "file": "revive/0168.jpg",
@@ -6137,28 +5999,6 @@
 "version": "LOVED IVE",
 "file": "revive/0246.jpg",
 "thumb": "revive/0246_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"レイ"
-],
-"source": "グッズ｜本体封入",
-"version": "Postcard BANGERS",
-"file": "revive/0247.jpg",
-"thumb": "revive/0247_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"レイ"
-],
-"source": "グッズ｜本体封入",
-"version": "Postcard CHALLENGERS",
-"file": "revive/0248.jpg",
-"thumb": "revive/0248_t.jpg",
 "credit": "@LILY_221019"
 },
 {
@@ -7035,28 +6875,6 @@
 "members": [
 "ユジン"
 ],
-"source": "グッズ｜本体封入",
-"version": "Postcard BANGERS",
-"file": "revive/0328.jpg",
-"thumb": "revive/0328_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"ユジン"
-],
-"source": "グッズ｜本体封入",
-"version": "Postcard CHALLENGERS",
-"file": "revive/0329.jpg",
-"thumb": "revive/0329_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"ユジン"
-],
 "source": "本体封入",
 "version": "Digipack",
 "file": "revive/0330.jpg",
@@ -7919,28 +7737,6 @@
 "version": "LOVED IVE",
 "file": "revive/0408.jpg",
 "thumb": "revive/0408_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"ガウル"
-],
-"source": "グッズ｜本体封入",
-"version": "Postcard BANGERS",
-"file": "revive/0409.jpg",
-"thumb": "revive/0409_t.jpg",
-"credit": "@LILY_221019"
-},
-{
-"collection": "REVIVE+",
-"members": [
-"ガウル"
-],
-"source": "グッズ｜本体封入",
-"version": "Postcard CHALLENGERS",
-"file": "revive/0410.jpg",
-"thumb": "revive/0410_t.jpg",
 "credit": "@LILY_221019"
 },
 {
