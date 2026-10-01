@@ -30,4 +30,9 @@ if __name__ == "__main__":
         j.add("After LIKE", [m], SRC, "PVC フォトカードセット", s.crop(tuple(int(v) for v in b)), "@reina831wy")
     for n, (x0, y0, x1, y1) in enumerate([(412, 1430, 743, 1644), (779, 1430, 1111, 1644), (1144, 1430, 1477, 1644)], start=1):
         j.add("After LIKE", ["全員"], SRC, f"PVC GROUP {n}", s.crop((x0, y0, x1, y1)), "@reina831wy")
+    # LOVE DIVE の Jewel ver. 9set POB の Group Photocard 1・2（表の左＝1、右＝2。本人が 2026-10-01 に入れた）
+    ld = Image.open(ROOT + "新しい資料 2026-10-01/LOVE DIVE 追加分/LOVEDIVE_Jewel_9set_POB_group_reina831wy.jpg").convert("RGB")
+    k2 = 1996 / 1500
+    for n, (x0, y0, x1, y1) in enumerate([(224, 922, 472, 1306), (522, 922, 770, 1306)], start=1):
+        j.add("LOVE DIVE", ["全員"], "Jewel ver. 9set POB", f"Group Photocard {n}", ld.crop((int(x0 * k2) + 2, int(y0 * k2) + 2, int(x1 * k2) - 2, int(y1 * k2) - 2)), "@reina831wy")
     j.save()

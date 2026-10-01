@@ -65,6 +65,18 @@
 "全員",
 "Music Korea ファンサイン当選特典",
 "PVC GROUP 3"
+],
+[
+"LOVE DIVE",
+"全員",
+"Jewel ver. 9set POB",
+"Group Photocard 1"
+],
+[
+"LOVE DIVE",
+"全員",
+"Jewel ver. 9set POB",
+"Group Photocard 2"
 ]
 ],
 "images": [
@@ -187,6 +199,28 @@
 "version": "PVC GROUP 3",
 "file": "zzzzzzzzzz_alive_afterlike/0010.jpg",
 "thumb": "zzzzzzzzzz_alive_afterlike/0010_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "LOVE DIVE",
+"members": [
+"全員"
+],
+"source": "Jewel ver. 9set POB",
+"version": "Group Photocard 1",
+"file": "zzzzzzzzzz_alive_afterlike/0011.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0011_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "LOVE DIVE",
+"members": [
+"全員"
+],
+"source": "Jewel ver. 9set POB",
+"version": "Group Photocard 2",
+"file": "zzzzzzzzzz_alive_afterlike/0012.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0012_t.jpg",
 "credit": "@reina831wy"
 }
 ]
