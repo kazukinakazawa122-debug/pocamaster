@@ -1,0 +1,193 @@
+{
+"seed": [
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"会場限定盤"
+],
+[
+"ALIVE",
+"イソ",
+"本体封入",
+"会場限定盤"
+],
+[
+"After LIKE",
+"ガウル",
+"Music Korea ファンサイン当選特典",
+"PVC フォトカードセット"
+],
+[
+"After LIKE",
+"ユジン",
+"Music Korea ファンサイン当選特典",
+"PVC フォトカードセット"
+],
+[
+"After LIKE",
+"レイ",
+"Music Korea ファンサイン当選特典",
+"PVC フォトカードセット"
+],
+[
+"After LIKE",
+"ウォニョン",
+"Music Korea ファンサイン当選特典",
+"PVC フォトカードセット"
+],
+[
+"After LIKE",
+"リズ",
+"Music Korea ファンサイン当選特典",
+"PVC フォトカードセット"
+],
+[
+"After LIKE",
+"イソ",
+"Music Korea ファンサイン当選特典",
+"PVC フォトカードセット"
+],
+[
+"After LIKE",
+"全員",
+"Music Korea ファンサイン当選特典",
+"PVC GROUP 1"
+],
+[
+"After LIKE",
+"全員",
+"Music Korea ファンサイン当選特典",
+"PVC GROUP 2"
+],
+[
+"After LIKE",
+"全員",
+"Music Korea ファンサイン当選特典",
+"PVC GROUP 3"
+]
+],
+"images": [
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzzzzzzzzz_alive_afterlike/0000.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0000_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzzzzzzzzz_alive_afterlike/0001.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0001_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "After LIKE",
+"members": [
+"ガウル"
+],
+"source": "Music Korea ファンサイン当選特典",
+"version": "PVC フォトカードセット",
+"file": "zzzzzzzzzz_alive_afterlike/0002.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0002_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "After LIKE",
+"members": [
+"ユジン"
+],
+"source": "Music Korea ファンサイン当選特典",
+"version": "PVC フォトカードセット",
+"file": "zzzzzzzzzz_alive_afterlike/0003.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0003_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "After LIKE",
+"members": [
+"レイ"
+],
+"source": "Music Korea ファンサイン当選特典",
+"version": "PVC フォトカードセット",
+"file": "zzzzzzzzzz_alive_afterlike/0004.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0004_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "After LIKE",
+"members": [
+"ウォニョン"
+],
+"source": "Music Korea ファンサイン当選特典",
+"version": "PVC フォトカードセット",
+"file": "zzzzzzzzzz_alive_afterlike/0005.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0005_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "After LIKE",
+"members": [
+"リズ"
+],
+"source": "Music Korea ファンサイン当選特典",
+"version": "PVC フォトカードセット",
+"file": "zzzzzzzzzz_alive_afterlike/0006.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0006_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "After LIKE",
+"members": [
+"イソ"
+],
+"source": "Music Korea ファンサイン当選特典",
+"version": "PVC フォトカードセット",
+"file": "zzzzzzzzzz_alive_afterlike/0007.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0007_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "After LIKE",
+"members": [
+"全員"
+],
+"source": "Music Korea ファンサイン当選特典",
+"version": "PVC GROUP 1",
+"file": "zzzzzzzzzz_alive_afterlike/0008.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0008_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "After LIKE",
+"members": [
+"全員"
+],
+"source": "Music Korea ファンサイン当選特典",
+"version": "PVC GROUP 2",
+"file": "zzzzzzzzzz_alive_afterlike/0009.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0009_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "After LIKE",
+"members": [
+"全員"
+],
+"source": "Music Korea ファンサイン当選特典",
+"version": "PVC GROUP 3",
+"file": "zzzzzzzzzz_alive_afterlike/0010.jpg",
+"thumb": "zzzzzzzzzz_alive_afterlike/0010_t.jpg",
+"credit": "@reina831wy"
+}
+]
+}

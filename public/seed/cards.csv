@@ -4124,12 +4124,6 @@ I've MINE,ガウル/ウォニョン,Soundwave ラキドロ,3 ユニット 2
 ALIVE,ガウル/ウォニョン,A!SMART,ユニット 1
 ALIVE,ガウル/ウォニョン,A!SMART,ユニット 2
 I've MINE,ユジン/レイ,Soundwave ラキドロ,3 ユニット 1
-After LIKE,ユジン,MusicArt,
-After LIKE,ガウル,MusicArt,
-After LIKE,レイ,MusicArt,
-After LIKE,ウォニョン,MusicArt,
-After LIKE,リズ,MusicArt,
-After LIKE,イソ,MusicArt,
 ALIVE,リズ/イソ,A!SMART,ユニット 1
 ALIVE,リズ/イソ,A!SMART,ユニット 2
 ALIVE,ユジン/レイ,A!SMART,ユニット 1
@@ -4253,6 +4247,15 @@ Be Alright,レイ,Amulet Card (お守りカード),
 Be Alright,ウォニョン,Amulet Card (お守りカード),
 Be Alright,リズ,Amulet Card (お守りカード),
 Be Alright,イソ,Amulet Card (お守りカード),
+After LIKE,ガウル,Music Korea ファンサイン当選特典,PVC フォトカードセット
+After LIKE,ユジン,Music Korea ファンサイン当選特典,PVC フォトカードセット
+After LIKE,レイ,Music Korea ファンサイン当選特典,PVC フォトカードセット
+After LIKE,ウォニョン,Music Korea ファンサイン当選特典,PVC フォトカードセット
+After LIKE,リズ,Music Korea ファンサイン当選特典,PVC フォトカードセット
+After LIKE,イソ,Music Korea ファンサイン当選特典,PVC フォトカードセット
+After LIKE,全員,Music Korea ファンサイン当選特典,PVC GROUP 1
+After LIKE,全員,Music Korea ファンサイン当選特典,PVC GROUP 2
+After LIKE,全員,Music Korea ファンサイン当選特典,PVC GROUP 3
 IVE SWITCH,ユジン,LINE FRIENDS トレカ,3
 IVE SWITCH,ガウル,LINE FRIENDS トレカ,3
 IVE SWITCH,レイ,LINE FRIENDS トレカ,3

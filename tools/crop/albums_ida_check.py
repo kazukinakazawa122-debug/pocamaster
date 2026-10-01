@@ -508,7 +508,7 @@ GAEUL = {
     29: ("After LIKE", "Tower Records", "1", H),
     30: ("After LIKE", "Tower Records", "2", H),  # leeseo 26
     32: ("After LIKE", "TOU", "WINNER", N),  # leeseo 27
-    34: ("After LIKE", "MusicArt", "", N),
+    34: ("After LIKE", "MusicArt", "", X),
     36: ("After LIKE", "Broadcast", "3", X),  # 何人かのカード → GROUPS（相手がわからないもの・すでに枠と画像があるものは入れない）
     37: ("After LIKE", "Beatroad", "", H),
     38: ("I've IVE", "Vinyl", "", N),  # leeseo 33
