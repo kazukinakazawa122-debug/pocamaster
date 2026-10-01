@@ -7,10 +7,10 @@ from build2 import *
 ORDER = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]
 if __name__ == "__main__":
     rows = list(csv.DictReader(open(PROJ + "public/seed/cards.csv", encoding="utf-8")))
-    cur = {}
-    for p in sorted(glob.glob(SP + "out/*.json")):
-        for e in json.load(open(p, encoding="utf-8"))["images"]:
-            cur[(e["collection"], "/".join(sorted(e["members"])), e["source"], e["version"])] = e
+    import zipfile
+    # 画像があるかは、実際の ZIP（ID 入りの資料は入らない）の manifest で数える
+    z = zipfile.ZipFile("C:/Users/kazuk/OneDrive/pocamaster-images/pocamaster-images.zip")
+    cur = {(e["collection"], "/".join(sorted(e["members"])), e["source"], e["version"]): e for e in json.loads(z.read("manifest.json"))}
     groups = collections.OrderedDict()
     for r in rows:
         k = (r["collection"], r["source"], r["version"])
