@@ -41,7 +41,9 @@ rows = list(csv.reader(io.StringIO(open(SEED, encoding="utf-8").read())))
 header, body = rows[0], rows[1:]
 
 # 番号のつけちがいを直す（本人、2026-10-01）：IVE SECRET の QQ Music は、いまの 1→2・2→3・3→4・4→5・5→1 が正しい番号
-RELABEL = {("IVE SECRET", "QQ Music"): {"1": "2", "2": "3", "3": "4", "4": "5", "5": "1"}}
+RELABEL = {("IVE SECRET", "QQ Music"): {"1": "2", "2": "3", "3": "4", "4": "5", "5": "1"},
+           # IVE SWITCH の Soundwave ラキドロ POLA（本人、2026-10-01）：いまの 2.0 の画像は実際は 1.0、4.0 は 2.0、6.0 は 3.0、9.0 は 4.0。6.0・9.0 の POLA は存在しない
+           ("IVE SWITCH", "Soundwave ラキドロ"): {"2.0 POLA": "1.0 POLA", "4.0 POLA": "2.0 POLA", "6.0 POLA": "3.0 POLA", "9.0 POLA": "4.0 POLA"}}
 
 
 def relabel(c, s, v):
