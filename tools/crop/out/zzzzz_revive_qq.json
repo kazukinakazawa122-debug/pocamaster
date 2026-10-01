@@ -1,0 +1,210 @@
+{
+"seed": [
+[
+"REVIVE+",
+"ユジン",
+"QQ Music",
+"Membership"
+],
+[
+"REVIVE+",
+"ユジン",
+"QQ Music",
+"Member set 2"
+],
+[
+"REVIVE+",
+"ガウル",
+"QQ Music",
+"Membership"
+],
+[
+"REVIVE+",
+"ガウル",
+"QQ Music",
+"Member set 2"
+],
+[
+"REVIVE+",
+"レイ",
+"QQ Music",
+"Membership"
+],
+[
+"REVIVE+",
+"レイ",
+"QQ Music",
+"Member set 2"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"QQ Music",
+"Membership"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"QQ Music",
+"Member set 2"
+],
+[
+"REVIVE+",
+"リズ",
+"QQ Music",
+"Membership"
+],
+[
+"REVIVE+",
+"リズ",
+"QQ Music",
+"Member set 2"
+],
+[
+"REVIVE+",
+"イソ",
+"QQ Music",
+"Membership"
+],
+[
+"REVIVE+",
+"イソ",
+"QQ Music",
+"Member set 2"
+]
+],
+"images": [
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "QQ Music",
+"version": "Membership",
+"file": "zzzzz_revive_qq/0000.jpg",
+"thumb": "zzzzz_revive_qq/0000_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "QQ Music",
+"version": "Member set 2",
+"file": "zzzzz_revive_qq/0001.jpg",
+"thumb": "zzzzz_revive_qq/0001_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "QQ Music",
+"version": "Membership",
+"file": "zzzzz_revive_qq/0002.jpg",
+"thumb": "zzzzz_revive_qq/0002_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "QQ Music",
+"version": "Member set 2",
+"file": "zzzzz_revive_qq/0003.jpg",
+"thumb": "zzzzz_revive_qq/0003_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "QQ Music",
+"version": "Membership",
+"file": "zzzzz_revive_qq/0004.jpg",
+"thumb": "zzzzz_revive_qq/0004_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "QQ Music",
+"version": "Member set 2",
+"file": "zzzzz_revive_qq/0005.jpg",
+"thumb": "zzzzz_revive_qq/0005_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "QQ Music",
+"version": "Membership",
+"file": "zzzzz_revive_qq/0006.jpg",
+"thumb": "zzzzz_revive_qq/0006_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "QQ Music",
+"version": "Member set 2",
+"file": "zzzzz_revive_qq/0007.jpg",
+"thumb": "zzzzz_revive_qq/0007_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "QQ Music",
+"version": "Membership",
+"file": "zzzzz_revive_qq/0008.jpg",
+"thumb": "zzzzz_revive_qq/0008_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "QQ Music",
+"version": "Member set 2",
+"file": "zzzzz_revive_qq/0009.jpg",
+"thumb": "zzzzz_revive_qq/0009_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "QQ Music",
+"version": "Membership",
+"file": "zzzzz_revive_qq/0010.jpg",
+"thumb": "zzzzz_revive_qq/0010_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "QQ Music",
+"version": "Member set 2",
+"file": "zzzzz_revive_qq/0011.jpg",
+"thumb": "zzzzz_revive_qq/0011_t.jpg",
+"credit": "@idalshiro"
+}
+]
+}
