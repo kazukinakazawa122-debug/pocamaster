@@ -1,7 +1,6 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react'
-import { NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
-import { IconCards, IconSettings } from '@tabler/icons-react'
-import { AlbumIcon, IveLogoIcon } from './components/TabIcons'
+import { lazy, Suspense, useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import TabBar from './components/TabBar'
 import { UndoProvider } from './components/Undo'
 import ErrorBoundary from './components/ErrorBoundary'
 import Home from './pages/Home'
@@ -19,13 +18,6 @@ const Settings = lazy(() => import('./pages/Settings'))
 const Search = lazy(() => import('./pages/Search'))
 const Wants = lazy(() => import('./pages/Wants'))
 const History = lazy(() => import('./pages/History'))
-
-const TABS = [
-  { to: '/', label: 'ホーム', Icon: IveLogoIcon, end: true },
-  { to: '/collections', label: 'コレクション', Icon: IconCards, end: false },
-  { to: '/albums', label: 'マイアルバム', Icon: AlbumIcon, end: false },
-  { to: '/settings', label: '設定', Icon: IconSettings, end: false },
-]
 
 /**
  * iPhone で文字を入力するとキーボードが出て、画面（見えている範囲）がずれる。
@@ -83,108 +75,5 @@ export default function App() {
         <TabBar pathname={pathname} />
       </div>
     </UndoProvider>
-  )
-}
-
-/** サイドバーから行く画面（下のタブのどれでもない） */
-const MENU_PAGES = ['/search', '/wants', '/history']
-
-/** いま開いているタブの番号（詳しい画面ではその親のタブ）。サイドバーの画面では -1（どのタブも選ばない） */
-function tabIndex(pathname: string): number {
-  if (MENU_PAGES.some((p) => pathname.startsWith(p))) return -1
-  for (let i = TABS.length - 1; i > 0; i--) if (pathname.startsWith(TABS[i].to)) return i
-  return 0
-}
-
-/**
- * 下のタブ（本人の要望、2026-10-01：Instagram のような浮いた丸いバー）。
- * 選んでいるタブの後ろの丸が動く。バーの上で指を左右にすべらせると丸がついてきて、指を離したタブに移る
- */
-function TabBar({ pathname }: { pathname: string }) {
-  const navigate = useNavigate()
-  const ref = useRef<HTMLElement>(null)
-  const current = tabIndex(pathname)
-  // 押したタブ。押した瞬間に丸を動かし始め、画面の切り替えはそのあとにする（本人の報告、2026-10-01「丸の動きが滑らかでない」）。
-  // 画面を描く間は丸の動きが止まりやすいので、先に動かしておく
-  const [pending, setPending] = useState<number | null>(null)
-  useEffect(() => setPending(null), [pathname])
-  const go = (i: number) => {
-    setPending(i)
-    // 丸が動き始めてから（2 コマ待ってから）画面を切り替える。コマが来ないとき（画面が隠れているなど）も少しで切り替える
-    let done = false
-    const run = () => {
-      if (done) return
-      done = true
-      navigate(TABS[i].to)
-    }
-    requestAnimationFrame(() => requestAnimationFrame(run))
-    window.setTimeout(run, 80)
-  }
-  const [drag, setDrag] = useState<number | null>(null)
-  const start = useRef<{ x: number; moved: boolean } | null>(null)
-  const dragged = useRef(false)
-  const indexAt = (clientX: number) => {
-    const r = ref.current!.getBoundingClientRect()
-    return Math.min(TABS.length - 1, Math.max(0, Math.floor(((clientX - r.left) / r.width) * TABS.length)))
-  }
-  const shown = drag ?? pending ?? current
-  return (
-    <nav
-      ref={ref}
-      className={`tabbar${drag !== null ? ' dragging' : ''}`}
-      onPointerDown={(e) => {
-        start.current = { x: e.clientX, moved: false }
-      }}
-      onPointerMove={(e) => {
-        if (!start.current) return
-        if (!start.current.moved && Math.abs(e.clientX - start.current.x) < 8) return
-        if (!start.current.moved) {
-          start.current.moved = true
-          // すべらせ始めてから指を追う（タップのときはリンクをそのまま押せるように、最初は追わない）
-          ref.current?.setPointerCapture(e.pointerId)
-        }
-        setDrag(indexAt(e.clientX))
-      }}
-      onPointerUp={(e) => {
-        const s = start.current
-        start.current = null
-        if (!s?.moved) return
-        dragged.current = true
-        window.setTimeout(() => (dragged.current = false), 50)
-        const i = indexAt(e.clientX)
-        setDrag(null)
-        if (TABS[i].to !== pathname) go(i)
-      }}
-      onPointerCancel={() => {
-        start.current = null
-        setDrag(null)
-      }}
-      onClickCapture={(e) => {
-        // すべらせて選んだときは、指を離した場所のリンクのクリックを使わない
-        if (dragged.current) e.preventDefault()
-      }}
-    >
-      <span className="tab-pill" style={{ transform: `translateX(${Math.max(0, shown) * 100}%)`, opacity: shown < 0 ? 0 : undefined }} aria-hidden />
-      {TABS.map(({ to, label, Icon, end }, i) => (
-        <NavLink
-          key={to}
-          to={to}
-          end={end}
-          className={() => (i === shown ? 'active' : '')}
-          onClick={(e) => {
-            if (e.defaultPrevented) return
-            e.preventDefault()
-            // いま開いている画面のタブをもう一度押したら、一番上までスクロールする
-            if (pathname === to) window.scrollTo({ top: 0, behavior: 'smooth' })
-            else go(i)
-          }}
-        >
-          <span className="tab-ic">
-            <Icon size={24} stroke={1.6} aria-hidden />
-          </span>
-          {label}
-        </NavLink>
-      ))}
-    </nav>
   )
 }
