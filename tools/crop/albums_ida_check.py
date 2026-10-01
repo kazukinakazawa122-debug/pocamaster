@@ -6,7 +6,7 @@
   - "new"：アプリにない種類。6 人分の枠を足し、画像はそのメンバーの分だけ
   - "skip"：入れない（ユニットのカードで相手がわからない・すでにユニットの枠がある など）
 - @idalshiro の 3 ページ目（日本盤）は作者が全部に「BOYCOTT!」の印を押しているので、画像は使わない（枠だけ）
-- StarRiver は店の透かしがあるので画像は使わない（今までと同じ）
+- StarRiver・中国語の店の印は、実物のスリーブにも入っているので画像を使う（本人、2026-10-01。前は使っていなかった）
 - ラベルの略語：SW=Soundwave、WM=withmuu、LD=ラキドロ、MKS=Makestar、SR=StarRiver、APPMU=Apple Music、YZY=Yizhiyu、
   KMS=KMStation、SSQ=Starship Square。グループのラベル（例「SOUNDWAVE LD 3」が 5 枚）は、表の左から 1, 2, 3… と番号をつけた
 """
@@ -729,10 +729,9 @@ YUJIN = {
 }
 
 PAGE3 = set()  # 本人：BOYCOTT の印は使ってよい（2026-09-30）。3 ページ目の画像も使う
-NO_IMAGE_SOURCES = {"StarRiver"}
+NO_IMAGE_SOURCES = set()  # StarRiver・中国語の店の印は使ってよい（本人、2026-10-01。実物のスリーブにも入っている）
 # 表の画像に店の透かし（BOYCOTT・中国語の印）がある → 枠だけ
-NO_IMAGE_NO = {("leeseo", 27), ("liz", 30), ("wonyoung", 24), ("rei", 24), ("gaeul", 32), ("yujin", 22),
-               ("yujin", 159), ("yujin", 174)}
+NO_IMAGE_NO = {("yujin", 159), ("yujin", 174)}  # 個人の ID の透かし（TOU WINNER などの中国の店の印は使う）
 # After LIKE TOU WINNER：中国語の店の印（「不吃香菜」）。ユジンの 159（SECRET QQ×SSQ Christmas）は「@油炸小…」、174（REVIVE+ QQ ランダム 5）は「tjxxx」の ID の透かし
 TABLES = {"leeseo": ("イソ", LEESEO), "liz": ("リズ", LIZ), "wonyoung": ("ウォニョン", WONYOUNG), "rei": ("レイ", REI), "gaeul": ("ガウル", GAEUL), "yujin": ("ユジン", YUJIN)}
 # 見比べページ（_review/<メンバー>_have.html）で本人が「ちがう」とした番号：アプリの画像を表の画像に入れ替える。

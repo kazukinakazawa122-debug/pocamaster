@@ -6,7 +6,10 @@ import grid
 
 SP = os.path.dirname(os.path.abspath(__file__)) + "/"
 ROOT = r"C:/Users/kazuk/OneDrive/pocamaster-images/"
-FILES = sorted(f for f in os.listdir(ROOT) if f.lower().endswith(".jpg"))
+import re
+# 番号で資料を指している（albums_*.py）。2026-10-01 に最上位へ日付名（20211223_…_iOS.jpg など）の @reina831wy の表が 58 枚入り（店舗ごとの表と同じもの）、
+# 並びがずれたので除く。新しい資料は「新しい資料 <日付>/」に移すこと（番号がずれるため）
+FILES = sorted(f for f in os.listdir(ROOT) if f.lower().endswith(".jpg") and not re.match(r"20\d{6}_\d+_iOS", f))
 
 
 def ordered(path, ratio=(1.15, 1.8), min_w=0.03, max_w=0.12, y_min=0.0, tol=0.35, size_tol=(0.6, 1.5)):
