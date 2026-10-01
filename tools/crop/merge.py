@@ -48,8 +48,12 @@ def relabel(c, s, v):
     return RELABEL.get((c, s), {}).get(v, v)
 
 
-jobs = [json.load(open(p, encoding="utf-8")) for p in sorted(glob.glob(SP + "out/*.json"))]
-for _j in jobs:
+_paths = sorted(glob.glob(SP + "out/*.json"))
+jobs = [json.load(open(p, encoding="utf-8")) for p in _paths]
+RELABELED_ALREADY = {"zzzzzzzzzzzz_secret_qq"}  # 新しい番号で作った job（付け替えない）
+for _p, _j in zip(_paths, jobs):
+    if os.path.splitext(os.path.basename(_p))[0] in RELABELED_ALREADY:
+        continue
     _j["seed"] = [[r[0], r[1], r[2], relabel(r[0], r[2], r[3])] for r in _j["seed"]]
     for _e in _j["images"]:
         _e["version"] = relabel(_e["collection"], _e["source"], _e["version"])
@@ -79,6 +83,13 @@ for r in new_seed:
         have.add(key(r))
         added += 1
 kept = [r for r in kept if r[0] not in REPLACE] + front + [r for r in kept if r[0] in REPLACE]
+# IVE SECRET の QQ Music は「1・2・3・4・5・Christmas」の順に並べる（本人、2026-10-01）。各メンバーの該当行の位置はそのままに、中身を並べ替える
+_qq_order = {"1": 0, "2": 1, "3": 2, "4": 3, "5": 4, "Christmas": 5}
+for _m in {r[1] for r in kept if r[0] == "IVE SECRET"}:
+    _idx = [i for i, r in enumerate(kept) if r[0] == "IVE SECRET" and r[1] == _m and ((r[2] == "QQ Music" and r[3] in _qq_order) or (r[2] == "QQ Music × Starship Square" and r[3] == "Christmas"))]
+    _rows = sorted((kept[i] for i in _idx), key=lambda r: _qq_order[r[3]])
+    for i, r in zip(_idx, _rows):
+        kept[i] = r
 with open(SEED, "w", encoding="utf-8", newline="\n") as f:
     f.write(",".join(header) + "\n")
     for r in kept:
