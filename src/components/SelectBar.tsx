@@ -32,7 +32,7 @@ export default function SelectBar({ selected, visible, onSelectAll, onClear, onD
   const setStatus = async (to: CardStatus) => {
     const snapshot = selected.map((c) => ({ ...c }))
     await setCardsStatus(snapshot, to)
-    showUndo(`${n} 枚を${to}にした`, () => restoreCardsStatus(snapshot, to))
+    showUndo(`${n} 枚を${to}にしました`, () => restoreCardsStatus(snapshot, to))
     onDone()
   }
   const setTrade = async () => {
@@ -42,7 +42,7 @@ export default function SelectBar({ selected, visible, onSelectAll, onClear, onD
     const toOwn = to ? selected.filter((c) => c.status !== '所持中').map((c) => ({ ...c })) : []
     await db.cards.bulkUpdate(snapshot.map((c) => ({ key: c.id, changes: { trade: to } })))
     if (toOwn.length) await setCardsStatus(toOwn, '所持中')
-    showUndo(to ? `${n} 枚に「譲」を付けた` : `${n} 枚の「譲」を外した`, async () => {
+    showUndo(to ? `${n} 枚に「譲」の印を付けました` : `${n} 枚の「譲」の印を外しました`, async () => {
       await db.cards.bulkUpdate(snapshot.map((c) => ({ key: c.id, changes: { trade: c.trade } })))
       if (toOwn.length) await restoreCardsStatus(toOwn, '所持中')
     })
@@ -53,7 +53,7 @@ export default function SelectBar({ selected, visible, onSelectAll, onClear, onD
     <div className="select-bar" role="toolbar" aria-label="選んだカードをまとめて切り替える">
       <div className="select-bar-row">
         <span className="small" style={{ flex: 1 }}>
-          <span className="num">{n}</span> 枚を選択中
+          <span className="num">{n}</span> 枚を選んでいます
         </span>
         <button className="chip" onClick={() => (allSelected ? onClear() : onSelectAll(visible))}>
           {allSelected ? '選ぶのを外す' : '見えているのを全部'}

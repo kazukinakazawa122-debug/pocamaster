@@ -104,7 +104,7 @@ export default function CollectionDetail() {
 
   if (!data) return <MiniveLoading />
   const { col, cards } = data
-  if (!col) return <div className="page empty">コレクションが見つからなかった</div>
+  if (!col) return <div className="page empty">コレクションが見つかりません</div>
 
   const setParam = (key: string, value: string | null) => {
     const next = new URLSearchParams(params)
@@ -116,7 +116,7 @@ export default function CollectionDetail() {
   const toggle = (card: Card) => {
     const to: CardStatus = card.status === '所持中' ? '未所持' : '所持中'
     setCardStatus(card, to)
-    showUndo(`${memberLabel(card.memberIds)} を${to}にした`, () => setCardStatus({ ...card, status: to }, card.status))
+    showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => setCardStatus({ ...card, status: to }, card.status))
   }
 
   toggleRef.current = selecting
@@ -186,7 +186,7 @@ export default function CollectionDetail() {
       </TopBar>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
-        <span className="num" style={{ fontSize: 24, fontWeight: 700 }}>
+        <span className="num" style={{ fontSize: 17, fontWeight: 700 }}>
           {pctText(total)}
         </span>
         <div style={{ flex: 1 }}>
@@ -262,13 +262,13 @@ export default function CollectionDetail() {
 
       {cards.length === 0 ? (
         <div className="empty">
-          <p>まだカードの枠がないよ</p>
+          <p>カードの枠を作りましょう</p>
           <Link className="btn primary" to={`/collections/${id}/bulk`}>
             まとめて追加
           </Link>
         </div>
       ) : visible.length === 0 ? (
-        <div className="empty">ここに合うカードはないみたい</div>
+        <div className="empty">該当するカードはありません</div>
       ) : solo ? (
         // 個人のコレクション：入手元ごとの段に横 3 枚で並べる
         [...new Set(visible.map((c) => c.source))].map((source) => {

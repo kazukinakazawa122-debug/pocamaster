@@ -63,13 +63,13 @@ export default function CardPicker({ onPick, onClose }: { onPick: (card: Card) =
         ))}
       </div>
       <div className="xs muted" style={{ marginBottom: 10 }}>
-        入れられるのは所持中のカードだけ
+        入れられるのは所持中のカードです
       </div>
 
       {!cards ? (
         <div className="empty small">読み込み中…</div>
       ) : shown.length === 0 ? (
-        <div className="empty small">所持中のカードがまだないよ</div>
+        <div className="empty small">所持中のカードがありません</div>
       ) : (
         <div className="grid-3">
           {shown.map((c) => (

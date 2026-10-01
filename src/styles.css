@@ -380,3 +380,17 @@ a { color: inherit; text-decoration: none; }
 .grid-6 .poca-check { width: 16px; height: 16px; top: 3px; right: 3px; border-width: 1.5px; }
 .grid-6 .poca-check.on::after { left: 4px; top: 1px; width: 4px; height: 8px; border-width: 0 1.5px 1.5px 0; }
 .grid-6 .poca-trade { font-size: 9px; padding: 0 3px; left: 2px; top: 2px; }
+
+/* 強弱（2026-10-02、本人の要望「AI っぽくなくする」の 5）：主役は写真（カード・ジャケット）、次に名前・見出し、数字は控えめ。
+   全体コンプ率は主役にせず、画面の一部として小さめに（本人） */
+.section-title { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; margin: 32px 0 10px; }
+.total-title { margin-top: 36px; }
+.total-pct { font-size: 34px; }
+.member-pct { font-size: 13px; }
+/* コレクション一覧：ジャケットを大きく、名前を太く、日付・種別は小さく薄く */
+.cover { width: 80px; height: 80px; border-radius: 10px; }
+.list-item { padding: 12px 0; gap: 14px; }
+.col-name { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }
+.col-meta { font-size: 11px; opacity: .8; margin-top: 1px; }
+/* コレクションの画面：段の見出しは小さく、段の間は広く（カードを目立たせる） */
+.row-head { font-size: 12px; margin: 18px 0 6px; }

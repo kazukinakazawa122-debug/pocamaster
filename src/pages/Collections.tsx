@@ -113,7 +113,7 @@ export default function Collections() {
       </div>
       {list.length === 0 ? (
         <div className="empty">
-          <p>ここにはまだないみたい</p>
+          <p>このコレクションはまだありません</p>
           <Link className="btn" to="/collections/new">
             コレクションを追加
           </Link>
@@ -132,11 +132,11 @@ function Row({ col, p }: { col: Collection; p: Progress }) {
     <Link to={`/collections/${col.id}`} className="list-item">
       <div className="cover">{url ? <img src={url} alt="" /> : <IconPhoto size={24} aria-hidden />}</div>
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4, fontWeight: 700 }}>
+        <div className="col-name" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
           <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{col.name}</span>
           {done && <IconCrown size={18} color="#D4A017" aria-label="コンプリート" style={{ flex: 'none' }} />}
         </div>
-        <div className="xs muted">
+        <div className="xs muted col-meta">
           {col.releaseDate || '日付なし'}　{col.type}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 4 }}>

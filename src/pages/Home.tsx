@@ -142,7 +142,7 @@ export default function Home() {
       <div className="page">
         {header}
         <div className="empty">
-          <p>まだコレクションがないよ</p>
+          <p>最初のコレクションを追加しましょう</p>
           <div className="stack" style={{ maxWidth: 280, margin: '16px auto 0' }}>
             <Link className="btn primary" to="/settings">
               初期データを取り込む
@@ -208,8 +208,8 @@ export default function Home() {
         <Link to="/settings" className="banner">
           <IconAlertTriangle size={18} aria-hidden />
           {lastBackupAt
-            ? `最後のバックアップから ${BACKUP_REMIND_DAYS} 日以上たったよ`
-            : 'まだバックアップしてないよ'}
+            ? `最後のバックアップから ${BACKUP_REMIND_DAYS} 日以上たちました`
+            : 'まだバックアップを取っていません'}
         </Link>
       )}
 
@@ -340,7 +340,7 @@ function RecentCard({ card, col, at }: { card: Card; col?: Collection; at?: numb
   const { border, background } = cardColors(card)
   const d = at ? new Date(at) : null
   return (
-    <Link to={`/collections/${card.collectionId}`} style={{ width: 72, flex: 'none' }} aria-label={`${col?.name ?? ''} ${memberLabel(card.memberIds)}`}>
+    <Link to={`/collections/${card.collectionId}`} style={{ width: 92, flex: 'none' }} aria-label={`${col?.name ?? ''} ${memberLabel(card.memberIds)}`}>
       <div className="poca" style={{ borderColor: border, background }}>
         {url ? (
           <img src={url} alt="" decoding="async" />
@@ -363,7 +363,7 @@ function AlmostRow({ col, p }: { col: Collection; p: Progress }) {
   const url = useCoverUrl(col.coverImageId)
   return (
     <Link to={`/collections/${col.id}`} className="list-item">
-      <div className="cover" style={{ width: 52, height: 52 }}>
+      <div className="cover" style={{ width: 60, height: 60 }}>
         {url ? <img src={url} alt="" /> : <IconPhoto size={22} aria-hidden />}
       </div>
       <div style={{ flex: 1, minWidth: 0 }}>

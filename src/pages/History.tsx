@@ -129,7 +129,7 @@ export default function History() {
 
       <div className="section-title">最近「所持中」にしたカード</div>
       {recent.length === 0 ? (
-        <div className="small muted">まだないよ。カードを「所持中」にするとここに並ぶ</div>
+        <div className="small muted">まだ記録がありません</div>
       ) : (
         <div>
           {recent.map(({ at, c, col }) => (

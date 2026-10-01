@@ -41,7 +41,7 @@ export default function CardGroups({ groups, columns = 3, bright, labels = true,
   const toggle = (card: Card) => {
     const to: CardStatus = card.status === '所持中' ? '未所持' : '所持中'
     setCardStatus(card, to)
-    showUndo(`${memberLabel(card.memberIds)} を${to}にした`, () => setCardStatus({ ...card, status: to }, card.status))
+    showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => setCardStatus({ ...card, status: to }, card.status))
   }
   toggleRef.current = tapOpens ? (c: Card) => setOpenId(c.id) : toggle
 

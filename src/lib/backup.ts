@@ -75,9 +75,9 @@ export async function saveFile(file: File): Promise<void> {
 export async function restoreBackup(file: Blob): Promise<void> {
   const zip = await JSZip.loadAsync(file)
   const json = await zip.file('data.json')?.async('string')
-  if (!json) throw new Error('バックアップのファイルじゃないみたい')
+  if (!json) throw new Error('バックアップファイルではありません')
   const data = JSON.parse(json)
-  if (data.format !== FORMAT) throw new Error('このバックアップの形は読めない')
+  if (data.format !== FORMAT) throw new Error('このバックアップの形式には対応していません')
 
   const images: { id: string; full: Blob; thumb: Blob }[] = []
   const ids = new Set<string>()

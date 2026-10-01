@@ -81,7 +81,7 @@ export default function MyAlbumDetail({ albumId: id }: { albumId: string }) {
 
   if (!data) return <MiniveLoading />
   const { album, cardById, colName } = data
-  if (!album) return <div className="page empty">アルバムが見つからなかった</div>
+  if (!album) return <div className="page empty">アルバムが見つかりません</div>
 
   const save = (slots: (string | null)[]) => db.myAlbums.update(album.id, { slots })
   const setSlot = (i: number, cardId: string | null) => {
@@ -98,7 +98,7 @@ export default function MyAlbumDetail({ albumId: id }: { albumId: string }) {
   const removePage = () => {
     const start = page * ALBUM_PAGE_SIZE
     const inPage = album.slots.slice(start, start + ALBUM_PAGE_SIZE).filter(Boolean).length
-    if (inPage > 0 && !confirm(`このページのカード ${inPage} 枚を外して、このページを消す？`)) return
+    if (inPage > 0 && !confirm(`このページのカード ${inPage} 枚を外して、ページを削除しますか？`)) return
     const slots = [...album.slots.slice(0, start), ...album.slots.slice(start + ALBUM_PAGE_SIZE)]
     save(slots.length ? slots : Array(ALBUM_PAGE_SIZE).fill(null))
   }

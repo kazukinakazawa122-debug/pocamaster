@@ -165,7 +165,7 @@ export default function Search() {
           </div>
         </div>
       ) : count === 0 ? (
-        <div className="empty">見つからなかった</div>
+        <div className="empty">見つかりませんでした</div>
       ) : (
         <>
           <div className="small muted" style={{ marginTop: 10 }}>

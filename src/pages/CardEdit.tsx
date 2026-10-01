@@ -40,8 +40,8 @@ export default function CardEdit() {
   }, [collectionId])
 
   const save = async () => {
-    if (memberIds.length === 0) return setError('メンバーを 1 人以上選んでね')
-    if (!source.trim()) return setError('入手元を入れてね')
+    if (memberIds.length === 0) return setError('メンバーを 1 人以上選んでください')
+    if (!source.trim()) return setError('入手元を入力してください')
     if (original) {
       await db.cards.update(original.id, { memberIds, source: source.trim(), version: version.trim() })
     } else {

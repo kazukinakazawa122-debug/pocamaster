@@ -95,7 +95,7 @@ export default function Wants() {
     setImageError('')
     // 多すぎると画像が何十枚にもなり、iPhone では時間がかかって途中で止まることもあるので、絞ってもらう
     if (count > IMAGE_LIMIT) {
-      setImageError(`${count} 枚は多すぎるので、メンバーやコレクションで ${IMAGE_LIMIT} 枚以下に絞ってね`)
+      setImageError(`カードが多すぎます（${count} 枚）。メンバーやコレクションで ${IMAGE_LIMIT} 枚以下に絞ってください`)
       return
     }
     setMaking('画像を作っています…')
@@ -114,7 +114,7 @@ export default function Wants() {
       )
       setImages(files)
     } catch (e) {
-      setImageError(`画像を作れなかった：${(e as Error).message}`)
+      setImageError(`画像を作れませんでした：${(e as Error).message}`)
     } finally {
       setMaking('')
     }
@@ -231,10 +231,10 @@ export default function Wants() {
       ) : count === 0 ? (
         <div className="empty">
           {data.cards.length > 0
-            ? 'この絞り込みに合うカードはないみたい'
+            ? 'この絞り込みに合うカードはありません'
             : trade
-              ? '「譲」のカードはまだないよ。カードを長押しして「譲」を押すと、ここに並ぶ'
-              : '持っていないカードはないみたい'}
+              ? '「譲」の印を付けたカードはまだありません。カードを長押しして「譲」を押すと付けられます'
+              : '持っていないカードはありません'}
         </div>
       ) : (
         <CardGroups key={JSON.stringify(view)} groups={groups} columns={view.columns} bright labels={view.labels} tapOpens={trade} />

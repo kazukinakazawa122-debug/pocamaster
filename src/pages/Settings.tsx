@@ -23,19 +23,19 @@ interface ImageZipState {
 /** 差分 ZIP を取り込む前の確認。取り込み忘れ・取り込み済みの差分なら知らせる */
 function checkImageZip(mode: 'full' | 'diff', info: ImageZipInfo | undefined, last: ImageZipState | undefined): boolean {
   if (info?.kind !== 'diff') {
-    return mode === 'full' || confirm('これは全部入りの画像 ZIP だよ。時間がかかるけど、取り込む？')
+    return mode === 'full' || confirm('これは全部入りの画像 ZIP です。取り込みに時間がかかりますが、このまま取り込みますか？')
   }
   const have = last?.seq
   if (have === undefined) return true
-  if (info.seq <= have) return confirm(`この差分 ZIP（No.${info.seq}）はもう取り込んであるよ（いまは No.${have}）。もう一度取り込む？`)
+  if (info.seq <= have) return confirm(`この差分 ZIP（No.${info.seq}）は取り込み済みです（いまは No.${have}）。もう一度取り込みますか？`)
   const base = info.base ?? info.seq - 1
   if (base > have) {
     const missing = base === have + 1 ? `No.${base}` : `No.${have + 1}〜No.${base}`
     return confirm(
-      `${missing} の差分 ZIP をまだ取り込んでないよ（いまは No.${have}）。
-先にそっちか、全部入りの ZIP を取り込んでね。
+      `${missing} の差分 ZIP をまだ取り込んでいません（いまは No.${have}）。
+先にそちらを取り込むか、全部入りの ZIP を取り込んでください。
 
-このまま No.${info.seq} を取り込む？`,
+このまま No.${info.seq} を取り込みますか？`,
     )
   }
   return true
@@ -66,7 +66,7 @@ export default function Settings() {
     try {
       setMessage(await fn())
     } catch (e) {
-      if ((e as Error).name !== 'AbortError') setMessage(`うまくいかなかった：${(e as Error).message}`)
+      if ((e as Error).name !== 'AbortError') setMessage(`失敗しました：${(e as Error).message}`)
     } finally {
       setBusy(false)
     }
@@ -77,7 +77,7 @@ export default function Settings() {
       const [cols, cards] = await Promise.all(
         ['collections.csv', 'cards.csv'].map((f) =>
           fetch(SEED_BASE + f).then((r) => {
-            if (!r.ok) throw new Error('初期データが見つからなかった')
+            if (!r.ok) throw new Error('初期データが見つかりません')
             return r.text()
           }),
         ),
@@ -87,8 +87,8 @@ export default function Settings() {
       const removedCsv = await fetch(SEED_BASE + 'removed.csv').then((res) => (res.ok ? res.text() : ''))
       const removed = await removeObsolete(removedCsv, cards)
       return (
-        `コレクション ${r.addedCollections} 件・カード ${r.addedCards} 枚を足した（もとからある ${r.skippedCards} 枚はそのまま）` +
-        (removed ? `。まちがっていた枠 ${removed} 枚を消した` : '')
+        `コレクション ${r.addedCollections} 件、カード ${r.addedCards} 枚を追加しました（すでにある ${r.skippedCards} 枚はそのまま）` +
+        (removed ? `。まちがっていた枠 ${removed} 枚を消しました` : '')
       )
     })
 
@@ -97,9 +97,9 @@ export default function Settings() {
       const list = [...(files ?? [])]
       const cols = list.find((f) => f.name.includes('collection'))
       const cards = list.find((f) => f.name.includes('card'))
-      if (!cols || !cards) throw new Error('collections.csv と cards.csv の 2 つを選んでね')
+      if (!cols || !cards) throw new Error('collections.csv と cards.csv の 2 つを選んでください')
       const r = await importCsv(await cols.text(), await cards.text())
-      return `コレクション ${r.addedCollections} 件・カード ${r.addedCards} 枚を足した（もとからある ${r.skippedCards} 枚はそのまま）`
+      return `コレクション ${r.addedCollections} 件、カード ${r.addedCards} 枚を追加しました（すでにある ${r.skippedCards} 枚はそのまま）`
     })
 
   const importImageZip = (f: File | undefined, mode: 'full' | 'diff') => {
@@ -120,10 +120,10 @@ export default function Settings() {
       await putSetting('imageZip', { seq, date: isDiff && seq !== info.seq ? last?.date : info?.date, importedAt: Date.now() } satisfies ImageZipState)
       const miss = r.unmatched.length
       return (
-        `${isDiff ? `差分 No.${info.seq} の画像` : '画像'} ${r.matched} 枚を取り込んだ` +
+        `${isDiff ? `差分 No.${info.seq} の画像` : '画像'} ${r.matched} 枚を取り込みました` +
         (miss
-          ? `（合うカードがなかった ${miss} 枚：${r.unmatched.slice(0, 5).join('、')}${miss > 5 ? ' など' : ''}）` +
-            (isDiff ? '。新しいカードなら、先に「初期データを取り込む」をしてから、もう一度この差分 ZIP を取り込んでね' : '')
+          ? `（対応するカードがなかった ${miss} 枚：${r.unmatched.slice(0, 5).join('、')}${miss > 5 ? ' など' : ''}）` +
+            (isDiff ? '。新しいカードの画像なら、先に「初期データを取り込む」をしてから、もう一度この差分 ZIP を取り込んでください' : '')
           : '')
       )
     })
@@ -139,7 +139,7 @@ export default function Settings() {
       <div className="section-title">バックアップ</div>
       <div className="panel stack">
         <div className="small muted">
-          最後のバックアップ：{lastBackupAt ? formatDate(lastBackupAt) : 'まだ'}
+          最後のバックアップ：{lastBackupAt ? formatDate(lastBackupAt) : 'まだありません'}
         </div>
         {backupFile ? (
           <button
@@ -150,7 +150,7 @@ export default function Settings() {
                 await saveFile(backupFile)
                 await markBackedUp()
                 setBackupFile(null)
-                return 'バックアップを保存した'
+                return 'バックアップを保存しました'
               })
             }
           >
@@ -167,8 +167,8 @@ export default function Settings() {
                 const { file, skipped } = await exportBackup()
                 setBackupFile(file)
                 return (
-                  'できた。上のボタンで「ファイル」に保存してね' +
-                  (skipped ? `（読めなかった画像 ${skipped} 枚は入っていない。記録は全部入ってる）` : '')
+                  'できました。上の保存ボタンを押して「ファイル」アプリに保存してください' +
+                  (skipped ? `（読み込めなかった画像 ${skipped} 枚は入っていません。記録はすべて入っています）` : '')
                 )
               })
             }
@@ -178,7 +178,7 @@ export default function Settings() {
           </button>
         )}
         <div className="xs muted">
-          ZIP から入れた画像は入らない（戻したら ZIP を取り込み直す）
+          ZIP から取り込んだ画像は入りません（戻したら ZIP を取り込み直してください）
         </div>
         <button className="btn block" disabled={busy} onClick={() => restoreRef.current?.click()}>
           <IconRestore size={20} aria-hidden />
@@ -193,10 +193,10 @@ export default function Settings() {
             const f = e.target.files?.[0]
             e.target.value = ''
             if (!f) return
-            if (!confirm('いまのデータが全部バックアップの中身に置き換わるよ。いい？')) return
+            if (!confirm('今のデータはすべてバックアップの内容に置き換わります。よろしいですか？')) return
             run(async () => {
               await restoreBackup(f)
-              return 'バックアップから戻した。画像は「画像をまとめて取り込む」で ZIP を取り込み直してね'
+              return 'バックアップから戻しました。画像は「画像をまとめて取り込む」で ZIP を取り込み直してください'
             })
           }}
         />
@@ -258,10 +258,10 @@ export default function Settings() {
         />
         <div className="small muted">
           取り込んだ画像の版：
-          {imageZip?.seq !== undefined ? `No.${imageZip.seq}${imageZip.date ? `（${imageZip.date.replaceAll('-', '/')} の版）` : ''}` : imageZip ? '番号なし（前の形の ZIP）' : 'まだ'}
+          {imageZip?.seq !== undefined ? `No.${imageZip.seq}${imageZip.date ? `（${imageZip.date.replaceAll('-', '/')} の版）` : ''}` : imageZip ? '番号なし（前の形の ZIP）' : 'まだありません'}
         </div>
         <div className="xs muted">
-          差分 ZIP は番号の順に。新しいカードが増えたときは、先に「初期データを取り込む」
+          差分 ZIP は番号の順に取り込んでください。新しいカードが増えたときは、先に「初期データを取り込む」をしてください。
         </div>
       </div>
 
