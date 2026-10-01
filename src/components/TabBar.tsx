@@ -39,6 +39,9 @@ export default function TabBar({ pathname }: { pathname: string }) {
   const barRef = useRef<HTMLElement>(null)
   const pillRef = useRef<HTMLSpanElement>(null)
   const current = tabIndex(pathname)
+  // 画面の幅が変わったときの置き直しで使う、いまのタブ（あとから呼ばれる関数でも最新の値を読めるように）
+  const currentRef = useRef(current)
+  currentRef.current = current
   // 丸がいま指しているタブ（文字を濃くする）。押している間は指の下のタブ
   const [lit, setLit] = useState<number | null>(null)
   const press = useRef<{ id: number; x: number; t: number; v: number; moved: boolean } | null>(null)
@@ -106,9 +109,10 @@ export default function TabBar({ pathname }: { pathname: string }) {
   // 最初と、画面の幅が変わったときは、動かさずにその位置へ
   useEffect(() => {
     const place = () => {
-      if (press.current || current < 0 || !barRef.current) return
-      target.current = current
-      setNow(current * slot(), 1, 1)
+      const c = currentRef.current
+      if (press.current || c < 0 || !barRef.current) return
+      target.current = c
+      setNow(c * slot(), 1, 1)
     }
     place()
     window.addEventListener('resize', place)
