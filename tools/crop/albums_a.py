@@ -37,6 +37,5 @@ overview(j, ENG + "02 - love dive/07-all.JPG", C, [
       ("Ktown4U", "2.0"), ("Namil Music", "2.0"), ("withmuu", "3.0"), ("MokketShop", ""), ("Soundwave", "4.0")]),
 ], y_from=0.06)
 sheet6(j, ENG + "02 - love dive/09-daum cafe.jpg", C, "Daum Cafe", "")
-for m in ORDER:
-    j.add(C, [m], "Fansign Special", "")
+# LOVE DIVE の「Fansign Special」は「Fansign」と同じ（本人、2026-10-01）ので枠を作らない
 j.save()
