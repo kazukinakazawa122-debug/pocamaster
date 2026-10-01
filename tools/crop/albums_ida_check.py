@@ -174,7 +174,7 @@ LIZ = {
     76: ("I've MINE", "Soundwave ファンサイン", "Malaysia", N),
     77: ("I've MINE", "Sony Music Japan", "2-1", N),
     78: ("I've MINE", "Sony Music Japan", "2-2", N),
-    79: ("I've MINE", "Sony Music Japan", "2-3", N),
+    79: ("I've MINE", "Sony Music Japan", "2-3", X),
     80: ("I've MINE", "Sony Music Japan", "2-4", N),
     81: ("I've MINE", "Sony Music Japan", "2-5", N),
     82: ("I've MINE", "A!SMART ファンサイン", "", N),
@@ -410,7 +410,7 @@ REI = {
     61: ("I've MINE", "Soundwave ファンサイン", "Singapore", N),  # leeseo 57
     64: ("I've MINE", "Sony Music Japan", "2-1", N),  # leeseo 62
     65: ("I've MINE", "Sony Music Japan", "2-2", N),  # leeseo 63
-    66: ("I've MINE", "Sony Music Japan", "2-3", N),  # liz 79
+    66: ("I've MINE", "Sony Music Japan", "2-3", X),  # liz 79
     67: ("I've MINE", "Sony Music Japan", "2-4", N),  # leeseo 64
     68: ("I've MINE", "Sony Music Japan", "2-5", N),  # leeseo 65
     69: ("I've MINE", "A!SMART ファンサイン", "", N),  # leeseo 66
@@ -529,7 +529,7 @@ GAEUL = {
     67: ("I've MINE", "Soundwave ファンサイン", "Malaysia", N),  # leeseo 61
     68: ("I've MINE", "Sony Music Japan", "2-1", N),  # leeseo 62
     69: ("I've MINE", "Sony Music Japan", "2-2", N),  # leeseo 63
-    70: ("I've MINE", "Sony Music Japan", "2-3", N),  # liz 79
+    70: ("I've MINE", "Sony Music Japan", "2-3", X),  # liz 79
     71: ("I've MINE", "Sony Music Japan", "2-4", N),  # leeseo 64
     72: ("I've MINE", "Sony Music Japan", "2-5", N),  # leeseo 65
     73: ("I've MINE", "A!SMART ファンサイン", "", N),  # leeseo 66
@@ -643,7 +643,7 @@ YUJIN = {
     56: ("I've MINE", "Soundwave ファンサイン", "Malaysia", N),  # gaeul 67
     57: ("I've MINE", "Sony Music Japan", "2-1", N),  # gaeul 68
     58: ("I've MINE", "Sony Music Japan", "2-2", N),  # gaeul 69
-    59: ("I've MINE", "Sony Music Japan", "2-3", N),  # gaeul 70
+    59: ("I've MINE", "Sony Music Japan", "2-3", X),  # gaeul 70
     60: ("I've MINE", "Sony Music Japan", "2-4", N),  # gaeul 71
     61: ("I've MINE", "Sony Music Japan", "2-5", N),  # gaeul 72
     62: ("I've MINE", "A!SMART ファンサイン", "", N),  # gaeul 73
