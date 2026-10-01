@@ -24,6 +24,11 @@ ID_CREDITS = {"@powerofablink"}  # 画像に作者の ID（透かし）が写っ
 GOODS = False  # トレカ以外のグッズ（入手元が「グッズ｜」で始まる）を入れるか。今は入れない（本人決定、2026-09-28）
 
 
+def DROP_SLOT(c, s, v):
+    """本人が「この枠は消す」と決めた枠（作り直しの資料の job が再び作っても入れない）"""
+    return (c == "IVE SWITCH" and s.startswith("LINE FRIENDS")) or (c == "IVE SECRET" and s == "Krispy Kreme Donuts")  # 2026-10-01：LINE FRIENDS はイベントへ移す、Krispy Kreme はトレカではない
+
+
 def q(s):
     return '"' + s.replace('"', '""') + '"' if any(c in s for c in ',"') else s
 
@@ -46,12 +51,16 @@ for r in body:
         continue
     if not GOODS and r[2].startswith("グッズ｜"):
         continue
+    if DROP_SLOT(r[0], r[2], r[3]):
+        continue
     kept.append(tuple(r))
 have = {key(r) for r in kept}
 added = 0
 front = []  # 作り直したコレクションは、表から作った枠を先に並べる
 for r in new_seed:
     if not GOODS and r[2].startswith("グッズ｜"):
+        continue
+    if DROP_SLOT(r[0], r[2], r[3]):
         continue
     if key(r) not in have:
         (front if r[0] in REPLACE else kept).append(r)
@@ -70,7 +79,7 @@ if os.path.exists(CARDS + "manifest.json"):
     entries = [e for e in json.load(open(CARDS + "manifest.json", encoding="utf-8")) if e["collection"] == "After LIKE"]
 for j in jobs:
     entries += j["images"]
-entries = [e for e in entries if e["credit"] not in ID_CREDITS]
+entries = [e for e in entries if e["credit"] not in ID_CREDITS and not DROP_SLOT(e["collection"], e["source"], e["version"])]
 # 本人の確認で「その枠のカードではない」とわかった画像（代わりの画像がないので外すだけ）
 WRONG_IMAGES = set()  # Be Alright のイソの Sony Music ラキドロは、BOYCOTT の印つきの表の画像に入れ替えた
 entries = [e for e in entries if (e["collection"], tuple(sorted(e["members"])), e["source"], e["version"]) not in WRONG_IMAGES]
