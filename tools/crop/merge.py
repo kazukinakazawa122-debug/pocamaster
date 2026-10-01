@@ -52,6 +52,10 @@ def relabel(c, s, v):
     return RELABEL.get((c, s), {}).get(v, v)
 
 
+# 入手元ごと付け替える枠（本人、2026-10-01）：IVE SWITCH の「withmuu ラキドロ 3.0-3」の画像は実際は「Music Korea ラキドロ 1.0 POLA」
+MOVE = {("IVE SWITCH", "withmuu ラキドロ", "3.0-3"): ("Music Korea ラキドロ", "1.0 POLA")}
+
+
 _paths = sorted(glob.glob(SP + "out/*.json"))
 jobs = [json.load(open(p, encoding="utf-8")) for p in _paths]
 RELABELED_ALREADY = {"zzzzzzzzzzzz_secret_qq"}  # 新しい番号で作った job（付け替えない）
@@ -61,6 +65,9 @@ for _p, _j in zip(_paths, jobs):
     _j["seed"] = [[r[0], r[1], r[2], relabel(r[0], r[2], r[3])] for r in _j["seed"]]
     for _e in _j["images"]:
         _e["version"] = relabel(_e["collection"], _e["source"], _e["version"])
+    _j["seed"] = [[r[0], r[1]] + list(MOVE.get((r[0], r[2], r[3]), (r[2], r[3]))) for r in _j["seed"]]
+    for _e in _j["images"]:
+        _e["source"], _e["version"] = MOVE.get((_e["collection"], _e["source"], _e["version"]), (_e["source"], _e["version"]))
 new_seed = [tuple(r) for j in jobs for r in j["seed"]]
 
 kept = []
