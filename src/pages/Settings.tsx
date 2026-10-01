@@ -53,7 +53,7 @@ export default function Settings() {
       const r = await importCsv(cols, cards)
       // 初期データからなくした枠を消す（ファイルがなければ何もしない）
       const removedCsv = await fetch(SEED_BASE + 'removed.csv').then((res) => (res.ok ? res.text() : ''))
-      const removed = await removeObsolete(removedCsv)
+      const removed = await removeObsolete(removedCsv, cards)
       return (
         `コレクション ${r.addedCollections} 件、カード ${r.addedCards} 枚を追加しました（すでにある ${r.skippedCards} 枚はそのまま）` +
         (removed ? `。まちがっていた枠 ${removed} 枚を消しました` : '')

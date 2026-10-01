@@ -39,14 +39,22 @@ let lastData: ListData | undefined
 let lastScrollY = 0
 
 async function loadList(): Promise<ListData> {
-  const [collections, cards] = await Promise.all([db.collections.toArray(), db.cards.toArray()])
-  // カードは数千枚あるので、コレクションごとの枚数だけを 1 回で数える
+  // カードは数千枚あるので、中身は読まない：コレクションごとの枚数は索引の値だけで数え、
+  // 所持中の枚数は所持中のカードだけを読んで数える
+  const [collections, ids, owned] = await Promise.all([
+    db.collections.toArray(),
+    db.cards.orderBy('collectionId').keys() as Promise<string[]>,
+    db.cards.where('status').equals('所持中').toArray(),
+  ])
   const count = new Map<string, { owned: number; total: number }>()
-  for (const c of cards) {
-    const n = count.get(c.collectionId) ?? { owned: 0, total: 0 }
-    n.total++
-    if (c.status === '所持中') n.owned++
-    count.set(c.collectionId, n)
+  for (const id of ids) {
+    const n = count.get(id)
+    if (n) n.total++
+    else count.set(id, { owned: 0, total: 1 })
+  }
+  for (const c of owned) {
+    const n = count.get(c.collectionId)
+    if (n) n.owned++
   }
   const byCollection = new Map<string, Progress>()
   for (const [id, n] of count) byCollection.set(id, { ...n, pct: Math.floor((n.owned / n.total) * 100) })

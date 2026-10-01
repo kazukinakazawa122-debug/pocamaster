@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { Link, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import { IconEdit, IconLayoutGridAdd, IconPin, IconPinFilled, IconPlus } from '@tabler/icons-react'
@@ -77,6 +77,10 @@ export default function CollectionDetail() {
   const status = (params.get('s') as (typeof STATUS_FILTERS)[number] | null) ?? 'すべて'
   const [openCardId, setOpenCardId] = useState<string | null>(null)
   const showUndo = useUndo()
+  // カードに渡す関数は毎回同じものを使う（変わっていないカードを描き直さないため）。中身は最新の toggle を呼ぶ
+  const toggleRef = useRef<(card: Card) => void>(() => {})
+  const onTap = useCallback((c: Card) => toggleRef.current(c), [])
+  const onLongPress = useCallback((c: Card) => setOpenCardId(c.id), [])
 
   const data = useLiveQuery(async () => {
     const [col, cards] = await Promise.all([db.collections.get(id), db.cards.where('collectionId').equals(id).sortBy('order')])
@@ -111,6 +115,8 @@ export default function CollectionDetail() {
     showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => setCardStatus({ ...card, status: to }, card.status))
   }
 
+  toggleRef.current = toggle
+
   // カードに出てくるメンバーだけタブにする。1 人だけ（個人のコレクション）なら「全員」タブを出さない
   const present = MEMBERS.filter((mm) => cards.some((c) => c.memberIds.includes(mm.id)))
   const tabs = present.length > 0 ? present : MEMBERS
@@ -142,7 +148,7 @@ export default function CollectionDetail() {
   const grouped = member ? rows : mergeNumbered(rows)
 
   const tile = (c: Card, compact: boolean) => (
-    <CardTile key={c.id} card={c} collectionName={col.name} compact={compact} onTap={() => toggle(c)} onLongPress={() => setOpenCardId(c.id)} />
+    <CardTile key={c.id} card={c} collectionName={col.name} compact={compact} onTap={onTap} onLongPress={onLongPress} />
   )
 
   return (

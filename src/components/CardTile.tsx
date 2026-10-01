@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { memo, useRef } from 'react'
 import type { Card } from '../lib/db'
 import { MEMBER_BY_ID, memberLabel, memberNames, memberOrder } from '../lib/members'
 import { useImageUrl, useNearScreen } from './ui'
@@ -19,12 +19,34 @@ interface Props {
   collectionName: string
   /** 6 枚並びのときは仮カードにメンバー名だけを出す */
   compact?: boolean
-  onTap: () => void
-  onLongPress: () => void
+  /** 押したカードを渡す（親は同じ関数を使い回せるので、変わっていないカードを描き直さずに済む） */
+  onTap: (card: Card) => void
+  onLongPress: (card: Card) => void
+}
+
+/**
+ * 見た目に関わる値が変わっていないカードは描き直さない。
+ * 数百枚のコレクションで 1 枚切り替えるたびに全部を描き直すと、iPhone で遅くなるため
+ */
+function same(a: Props, b: Props): boolean {
+  const x = a.card
+  const y = b.card
+  return (
+    x.id === y.id &&
+    x.status === y.status &&
+    x.imageId === y.imageId &&
+    x.source === y.source &&
+    x.version === y.version &&
+    x.memberIds.join() === y.memberIds.join() &&
+    a.compact === b.compact &&
+    a.collectionName === b.collectionName &&
+    a.onTap === b.onTap &&
+    a.onLongPress === b.onLongPress
+  )
 }
 
 /** タップで状態を切り替え、長押しで拡大を開く */
-export default function CardTile({ card, collectionName, compact, onTap, onLongPress }: Props) {
+function CardTileView({ card, collectionName, compact, onTap, onLongPress }: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   // 画面の近くにあるときだけ画像を読み込む（離れたら手放す）
   const near = useNearScreen(ref)
@@ -54,7 +76,7 @@ export default function CardTile({ card, collectionName, compact, onTap, onLongP
         start.current = { x: e.clientX, y: e.clientY }
         timer.current = window.setTimeout(() => {
           longPressed.current = true
-          onLongPress()
+          onLongPress(card)
         }, LONG_PRESS_MS)
       }}
       onPointerMove={(e) => {
@@ -67,7 +89,7 @@ export default function CardTile({ card, collectionName, compact, onTap, onLongP
       onContextMenu={(e) => e.preventDefault()}
       onClick={() => {
         if (longPressed.current) return
-        onTap()
+        onTap(card)
       }}
     >
       {url ? (
@@ -96,3 +118,5 @@ export default function CardTile({ card, collectionName, compact, onTap, onLongP
     </button>
   )
 }
+
+export default memo(CardTileView, same)

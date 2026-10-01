@@ -58,11 +58,34 @@ export function useNearScreen(ref: RefObject<Element | null>, margin = 800): boo
       setNear(true)
       return
     }
-    const io = new IntersectionObserver(([e]) => setNear(e.isIntersecting), { rootMargin: `${margin}px 0px` })
-    io.observe(el)
-    return () => io.disconnect()
+    return watchNear(el, margin, setNear)
   }, [ref, margin])
   return near
+}
+
+// カード 1 枚ごとに監視を作ると数百個になって重いので、同じ余白の監視は 1 つを使い回す
+const watchers = new Map<number, { io: IntersectionObserver; cbs: Map<Element, (near: boolean) => void> }>()
+function watchNear(el: Element, margin: number, cb: (near: boolean) => void): () => void {
+  let w = watchers.get(margin)
+  if (!w) {
+    const cbs = new Map<Element, (near: boolean) => void>()
+    const io = new IntersectionObserver(
+      (entries) => {
+        // 同じ要素の通知が続いたときは、いちばん新しい状態だけを使う
+        for (const e of entries) cbs.get(e.target)?.(e.isIntersecting)
+      },
+      { rootMargin: `${margin}px 0px` },
+    )
+    w = { io, cbs }
+    watchers.set(margin, w)
+  }
+  const { io, cbs } = w
+  cbs.set(el, cb)
+  io.observe(el)
+  return () => {
+    cbs.delete(el)
+    io.unobserve(el)
+  }
 }
 
 /** プロフィールのアイコン（丸）。枠は推しメンの色にしない（本人の要望、2026-10-01） */
@@ -93,6 +116,8 @@ export function useImageUrl(imageId: string | undefined, size: 'thumb' | 'full')
     return () => {
       alive = false
       if (objectUrl) URL.revokeObjectURL(objectUrl)
+      // 手放した URL を使い続けると壊れた画像が一瞬出るので、空にしておく
+      setUrl(undefined)
     }
   }, [imageId, size])
   return url

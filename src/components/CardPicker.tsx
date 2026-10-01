@@ -74,7 +74,7 @@ export default function CardPicker({ onPick, onClose }: { onPick: (card: Card) =
         <div className="grid-3">
           {shown.map((c) => (
             <div key={c.id}>
-              <CardTile card={c} collectionName={colName.get(c.collectionId) ?? ''} onTap={() => onPick(c)} onLongPress={() => onPick(c)} />
+              <CardTile card={c} collectionName={colName.get(c.collectionId) ?? ''} onTap={onPick} onLongPress={onPick} />
               <div className="tile-label">
                 {!collectionId && (
                   <>

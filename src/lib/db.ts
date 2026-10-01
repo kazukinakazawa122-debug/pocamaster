@@ -146,15 +146,26 @@ export async function setCardStatus(card: Card, to: CardStatus): Promise<void> {
 }
 
 export async function deleteCard(card: Card): Promise<void> {
+  await deleteCards([card])
+}
+
+/**
+ * カードをまとめて消す（1 回の保存でまとめて行うので、数百枚でも速い）。
+ * 画像・記録を消し、マイアルバムに入れていたらそのポケットを空ける
+ */
+export async function deleteCards(cards: Card[]): Promise<void> {
+  if (cards.length === 0) return
+  const ids = cards.map((c) => c.id)
+  const gone = new Set(ids)
+  const imageIds = cards.flatMap((c) => (c.imageId ? [c.imageId] : []))
   await db.transaction('rw', [db.cards, db.images, db.statusHistory, db.myAlbums], async () => {
-    if (card.imageId) await db.images.delete(card.imageId)
-    await db.statusHistory.where('cardId').equals(card.id).delete()
-    await db.cards.delete(card.id)
-    // マイアルバムに入れていたら、そのポケットを空ける
+    await db.images.bulkDelete(imageIds)
+    await db.statusHistory.where('cardId').anyOf(ids).delete()
+    await db.cards.bulkDelete(ids)
     await db.myAlbums
-      .filter((a) => a.slots.includes(card.id))
+      .filter((a) => a.slots.some((s) => s !== null && gone.has(s)))
       .modify((a: MyAlbum) => {
-        a.slots = a.slots.map((s) => (s === card.id ? null : s))
+        a.slots = a.slots.map((s) => (s !== null && gone.has(s) ? null : s))
       })
   })
 }
@@ -162,7 +173,7 @@ export async function deleteCard(card: Card): Promise<void> {
 export async function deleteCollection(c: Collection): Promise<void> {
   const cards = await db.cards.where('collectionId').equals(c.id).toArray()
   await db.transaction('rw', [db.collections, db.cards, db.images, db.statusHistory, db.myAlbums], async () => {
-    for (const card of cards) await deleteCard(card)
+    await deleteCards(cards)
     if (c.coverImageId) await db.images.delete(c.coverImageId)
     await db.collections.delete(c.id)
   })

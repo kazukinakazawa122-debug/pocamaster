@@ -1,4 +1,4 @@
-import { db, deleteCard, newId, COLLECTION_TYPES, type Card, type Collection, type CollectionType } from './db'
+import { db, deleteCards, newId, COLLECTION_TYPES, type Card, type Collection, type CollectionType } from './db'
 import { MEMBER_BY_NAME, MEMBERS, type MemberId } from './members'
 
 /** ダブルクォート対応の簡単な CSV パーサー */
@@ -123,19 +123,28 @@ export async function importCsv(collectionsCsv: string, cardsCsv: string): Promi
  * 初期データからなくした枠（まちがえて作った枠など）を消す。removed.csv（collection,member,source,version）。
  * 所持中・お気に入りにしたカードは消さない。消した枚数を返す
  */
-export async function removeObsolete(removedCsv: string): Promise<number> {
+export async function removeObsolete(removedCsv: string, currentCardsCsv = ''): Promise<number> {
   const rows = toObjects(removedCsv)
   if (rows.length === 0) return 0
+  // いまの初期データ（cards.csv）にある枠は、消す一覧にまちがって入っていても消さない（番号を付け替えた枠など）
+  const current = new Set(currentCardsCsv ? toObjects(currentCardsCsv).map((r) => `${r.collection}|${r.member}|${r.source}|${r.version ?? ''}`) : [])
   const byName = new Map((await db.collections.toArray()).map((c) => [c.name, c]))
   const targets = new Set(
     rows.flatMap((r) => {
+      if (current.has(`${r.collection}|${r.member}|${r.source}|${r.version ?? ''}`)) return []
       const col = byName.get(r.collection)
-      return col ? [cardKey(col.id, parseMembers(r.member), r.source, r.version ?? '')] : []
+      if (!col) return []
+      try {
+        return [cardKey(col.id, parseMembers(r.member), r.source, r.version ?? '')]
+      } catch {
+        // 読めない行が 1 つあっても、ほかの行の削除は続ける
+        return []
+      }
     }),
   )
   const cards = (await db.cards.toArray()).filter(
     (c) => targets.has(cardKey(c.collectionId, c.memberIds, c.source, c.version)) && c.status === '未所持' && !c.favorite,
   )
-  for (const c of cards) await deleteCard(c)
+  await deleteCards(cards)
   return cards.length
 }

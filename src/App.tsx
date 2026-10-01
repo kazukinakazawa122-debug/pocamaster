@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { IconCards, IconSettings } from '@tabler/icons-react'
 import { AlbumIcon, IveLogoIcon } from './components/TabIcons'
@@ -7,11 +7,14 @@ import ErrorBoundary from './components/ErrorBoundary'
 import Home from './pages/Home'
 import Collections from './pages/Collections'
 import CollectionDetail from './pages/CollectionDetail'
-import CollectionEdit from './pages/CollectionEdit'
-import CardEdit from './pages/CardEdit'
-import BulkCreate from './pages/BulkCreate'
-import MyAlbums from './pages/MyAlbums'
-import Settings from './pages/Settings'
+import { MiniveLoading } from './components/Minive'
+
+// 毎回は使わない画面は、開いたときに読み込む（最初の読み込みを軽くする。設定には ZIP を扱う大きな部品が入っている）
+const CollectionEdit = lazy(() => import('./pages/CollectionEdit'))
+const CardEdit = lazy(() => import('./pages/CardEdit'))
+const BulkCreate = lazy(() => import('./pages/BulkCreate'))
+const MyAlbums = lazy(() => import('./pages/MyAlbums'))
+const Settings = lazy(() => import('./pages/Settings'))
 
 const TABS = [
   { to: '/', label: 'ホーム', Icon: IveLogoIcon, end: true },
@@ -55,6 +58,7 @@ export default function App() {
       <div className="app">
         {/* 画面を移ったらエラー表示を消す */}
         <ErrorBoundary key={pathname}>
+          <Suspense fallback={<MiniveLoading />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/collections" element={<Collections />} />
@@ -67,6 +71,7 @@ export default function App() {
             <Route path="/albums" element={<MyAlbums />} />
             <Route path="/settings" element={<Settings />} />
           </Routes>
+          </Suspense>
         </ErrorBoundary>
         <TabBar pathname={pathname} />
       </div>
