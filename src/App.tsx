@@ -15,6 +15,10 @@ const CardEdit = lazy(() => import('./pages/CardEdit'))
 const BulkCreate = lazy(() => import('./pages/BulkCreate'))
 const MyAlbums = lazy(() => import('./pages/MyAlbums'))
 const Settings = lazy(() => import('./pages/Settings'))
+// サイドバー（右上の 3 本線）から行く画面
+const Search = lazy(() => import('./pages/Search'))
+const Wants = lazy(() => import('./pages/Wants'))
+const History = lazy(() => import('./pages/History'))
 
 const TABS = [
   { to: '/', label: 'ホーム', Icon: IveLogoIcon, end: true },
@@ -70,6 +74,9 @@ export default function App() {
             <Route path="/cards/:cardId/edit" element={<CardEdit />} />
             <Route path="/albums" element={<MyAlbums />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/wants" element={<Wants />} />
+            <Route path="/history" element={<History />} />
           </Routes>
           </Suspense>
         </ErrorBoundary>
@@ -79,8 +86,12 @@ export default function App() {
   )
 }
 
-/** いま開いているタブの番号（詳しい画面ではその親のタブ） */
+/** サイドバーから行く画面（下のタブのどれでもない） */
+const MENU_PAGES = ['/search', '/wants', '/history']
+
+/** いま開いているタブの番号（詳しい画面ではその親のタブ）。サイドバーの画面では -1（どのタブも選ばない） */
 function tabIndex(pathname: string): number {
+  if (MENU_PAGES.some((p) => pathname.startsWith(p))) return -1
   for (let i = TABS.length - 1; i > 0; i--) if (pathname.startsWith(TABS[i].to)) return i
   return 0
 }
@@ -137,7 +148,7 @@ function TabBar({ pathname }: { pathname: string }) {
         if (dragged.current) e.preventDefault()
       }}
     >
-      <span className="tab-pill" style={{ transform: `translateX(${shown * 100}%)` }} aria-hidden />
+      <span className="tab-pill" style={{ transform: `translateX(${Math.max(0, shown) * 100}%)`, opacity: shown < 0 ? 0 : undefined }} aria-hidden />
       {TABS.map(({ to, label, Icon, end }, i) => (
         <NavLink
           key={to}

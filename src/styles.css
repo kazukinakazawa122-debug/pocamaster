@@ -269,3 +269,56 @@ a { color: inherit; text-decoration: none; }
   0%, 100% { transform: translate3d(0, 0, 0) rotate(-3deg); }
   50% { transform: translate3d(0, -9px, 0) rotate(3deg); }
 }
+
+/* ホームの上のバーの右：メニュー（3 本線） */
+.topbar.home .side.right { margin-left: auto; justify-content: flex-end; }
+
+/* サイドバー（右上の 3 本線から、右から出る。2026-10-01） */
+.drawer-backdrop { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.4); animation: drawer-fade .2s ease-out; }
+.drawer {
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(84vw, 320px); overflow-y: auto;
+  background: var(--bg); box-shadow: -8px 0 32px rgba(0,0,0,.18);
+  padding: calc(var(--safe-top) + 8px) 12px calc(16px + var(--safe-bottom));
+  animation: drawer-in .22s cubic-bezier(.2,.8,.3,1);
+}
+.drawer-backdrop.closing { animation: drawer-fade .2s ease-in reverse forwards; }
+.drawer-backdrop.closing .drawer { animation: drawer-in .2s ease-in reverse forwards; }
+.drawer-head { display: flex; align-items: center; justify-content: space-between; padding: 0 0 8px 4px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+.drawer-title { font-size: 17px; font-weight: 800; }
+.drawer-item { display: flex; align-items: center; gap: 12px; padding: 12px 6px; border-radius: 12px; min-height: 56px; }
+.drawer-item:active, .drawer-item.active { background: var(--surface); }
+.drawer-ic { width: 40px; height: 40px; flex: none; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; background: var(--surface); }
+.drawer-item.active .drawer-ic { background: var(--all); color: var(--on-all); }
+.drawer-text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.drawer-label { font-size: 15px; font-weight: 700; }
+.drawer-note { font-size: 12px; color: var(--text-2); }
+@keyframes drawer-in { from { transform: translateX(100%); } }
+@keyframes drawer-fade { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .drawer-backdrop, .drawer, .drawer-backdrop.closing, .drawer-backdrop.closing .drawer { animation: none; } }
+
+/* カードを探す */
+.search-box { display: flex; align-items: center; gap: 6px; padding: 0 4px 0 12px; min-height: 44px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.search-box input { flex: 1; min-width: 0; border: none; background: none; outline: none; font-size: 17px; padding: 8px 0; }
+.search-box input::-webkit-search-cancel-button { display: none; }
+.search-box:focus-within { border-color: var(--text-2); }
+.card-grid { display: grid; }
+
+/* 求めているカード：スクショで何の一覧かわかる見出し */
+.wants-head { display: flex; align-items: center; gap: 6px; margin: 4px 0 2px; font-size: 18px; font-weight: 800; }
+.wants-mark { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 8px; background: var(--all); color: var(--on-all); font-size: 17px; }
+
+/* 集めた記録 */
+.history-hero { font-family: 'Futura', 'Avenir Next', 'Century Gothic', sans-serif; font-size: 44px; font-weight: 700; line-height: 1.1; margin: 2px 0 10px; }
+.history-unit { font-size: 16px; margin-left: 4px; color: var(--text-2); }
+.history-chart { display: block; width: 100%; height: auto; overflow: visible; }
+.history-base { stroke: var(--line); stroke-width: 1; }
+.history-bar { fill: color-mix(in srgb, var(--all) 35%, var(--surface)); }
+.history-bar.on { fill: var(--all); }
+.history-val { font-size: 12px; font-weight: 700; fill: var(--text); }
+.history-month { font-size: 10px; fill: var(--text-2); }
+.history-month.on { fill: var(--text); font-weight: 700; }
+.history-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.history-table th { text-align: left; font-size: 12px; font-weight: 600; color: var(--text-2); padding: 4px 8px; border-bottom: 1px solid var(--line); }
+.history-table td { padding: 8px; border-bottom: 1px solid var(--line); }
+.history-table th:last-child, .history-table td:last-child { text-align: right; }
+.history-table tr.on td { font-weight: 700; background: var(--surface); }

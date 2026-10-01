@@ -19,6 +19,8 @@ interface Props {
   collectionName: string
   /** 6 枚並びのときは仮カードにメンバー名だけを出す */
   compact?: boolean
+  /** 持っていなくても暗くしない（求めているカードの一覧。スクショで見やすくする） */
+  bright?: boolean
   /** 押したカードを渡す（親は同じ関数を使い回せるので、変わっていないカードを描き直さずに済む） */
   onTap: (card: Card) => void
   onLongPress: (card: Card) => void
@@ -39,6 +41,7 @@ function same(a: Props, b: Props): boolean {
     x.version === y.version &&
     x.memberIds.join() === y.memberIds.join() &&
     a.compact === b.compact &&
+    a.bright === b.bright &&
     a.collectionName === b.collectionName &&
     a.onTap === b.onTap &&
     a.onLongPress === b.onLongPress
@@ -46,7 +49,7 @@ function same(a: Props, b: Props): boolean {
 }
 
 /** タップで状態を切り替え、長押しで拡大を開く */
-function CardTileView({ card, collectionName, compact, onTap, onLongPress }: Props) {
+function CardTileView({ card, collectionName, compact, bright, onTap, onLongPress }: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   // 画面の近くにあるときだけ画像を読み込む（離れたら手放す）
   const near = useNearScreen(ref)
@@ -67,7 +70,7 @@ function CardTileView({ card, collectionName, compact, onTap, onLongPress }: Pro
     <button
       ref={ref}
       type="button"
-      className={`poca${owned ? '' : ' off'}`}
+      className={`poca${owned || bright ? '' : ' off'}`}
       style={{ borderColor: border, background }}
       aria-label={`${name} ${card.source} ${card.version} ${card.status}`}
       aria-pressed={owned}

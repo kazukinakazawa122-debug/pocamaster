@@ -8,6 +8,7 @@ import { isComplete, memberProgress, pctText, progress, type Progress } from '..
 import { ProfileAvatar, ProgressBar, useImageUrl } from '../components/ui'
 import { cardColors } from '../components/CardTile'
 import { MiniveTrio, MiniveLoading } from '../components/Minive'
+import { MenuButton } from '../components/SideMenu'
 
 const BACKUP_REMIND_DAYS = 14
 
@@ -92,7 +93,7 @@ export default function Home() {
   const cards = member === 'all' ? allCards : allCards.filter((c) => c.memberIds.includes(member))
   const sel = member === 'all' ? null : MEMBER_BY_ID[member]
 
-  // 上のバー：左にプロフィールのアイコン（押すと設定のプロフィールへ）、真ん中にアプリの名前
+  // 上のバー：左にプロフィールのアイコン（押すと設定のプロフィールへ）、真ん中にアプリの名前、右にメニュー（3 本線）
   const header = (
     <>
       <header className="topbar home">
@@ -110,6 +111,9 @@ export default function Home() {
           </span>
           <MiniveTrio side="right" />
         </h1>
+        <div className="side right">
+          <MenuButton />
+        </div>
       </header>
       <div className="topbar-space" />
       {/* タイトルバーの下にメンバーを選ぶボタン。スクロールしても見える */}

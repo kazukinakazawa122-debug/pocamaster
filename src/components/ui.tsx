@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { IconChevronLeft, IconUser } from '@tabler/icons-react'
 import { getFull, getThumb, type Profile } from '../lib/db'
 import { MiniveRun, type MiniveStyle } from './Minive'
+import { MenuButton } from './SideMenu'
 
 export function ProgressBar({ pct, color = 'var(--all)' }: { pct: number | null; color?: string }) {
   return (
@@ -12,7 +13,8 @@ export function ProgressBar({ pct, color = 'var(--all)' }: { pct: number | null;
   )
 }
 
-export function TopBar({ title, back, minive, children }: { title: string; back?: boolean; minive?: MiniveStyle; children?: ReactNode }) {
+/** 上のバー。menu で右上に 3 本線（サイドバー）を出す（タブの画面と、サイドバーから行く画面） */
+export function TopBar({ title, back, minive, menu, children }: { title: string; back?: boolean; minive?: MiniveStyle; menu?: boolean; children?: ReactNode }) {
   const navigate = useNavigate()
   return (
     <>
@@ -25,6 +27,7 @@ export function TopBar({ title, back, minive, children }: { title: string; back?
         <h1 style={minive ? { flex: 'none' } : undefined}>{title}</h1>
         {minive && <MiniveRun style={minive} />}
         {children}
+        {menu && <MenuButton />}
       </header>
       <div className="topbar-space" />
     </>
