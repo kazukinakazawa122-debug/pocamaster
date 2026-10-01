@@ -1,11 +1,11 @@
 """イソのノンアルバムのページ（leeseo_na.jpg）で「ない」とされたカードのうち、アプリにすでに画像のある枠の見比べページを作る
-出力：public/_review/leeseo_na_have.html（Git には入れない）。「ちがう」＝表の画像のほうが正しい（枠の画像を入れ替える）"""
+出力：public/_review/<メンバー>_na_have.html（Git には入れない）。「ちがう」＝表の画像のほうが正しい（枠の画像を入れ替える）"""
 import base64, csv, glob, io, json, os
 import grid
 from build2 import *
 
 D = ROOT + "_nonalbum/idalshiro/"
-OUT = PROJ + "public/_review/leeseo_na_have.html"
+KEYS = [("yujin", "ユジン"), ("gaeul", "ガウル"), ("rei", "レイ"), ("wonyoung", "ウォニョン"), ("liz", "リズ"), ("leeseo", "イソ")]
 PARK, SCHOOL, PROM, SWIH, MAG = "MINIVE POP-UP 'MINIVE PARK'", "MINIVE POP-UP 'MINIVE SCHOOL'", "The Prom Queens", "SHOW WHAT I HAVE", "MAGAZINE IVE'"
 # 番号 → (コレクション（部分）, 入手元（前方一致）, バージョン, 表のラベル)
 ITEMS = {
@@ -32,31 +32,47 @@ def b64(img, w=240):
     return "data:image/jpeg;base64," + base64.b64encode(f.getvalue()).decode()
 
 
-if __name__ == "__main__":
-    miss = json.load(open(SP + "review/miss_na_leeseo.json", encoding="utf-8"))
-    rows = [r for r in csv.DictReader(open(PROJ + "public/seed/cards.csv", encoding="utf-8")) if r["member"] == "イソ"]
-    cur = {}
-    for p in sorted(glob.glob(SP + "out/*.json")):
-        for e in json.load(open(p, encoding="utf-8"))["images"]:
-            if e["members"] == ["イソ"]:
-                cur[(e["collection"], e["source"], e["version"])] = e
-    im = grid.load(D + "leeseo_na.jpg")
+def nearest(bs, cx, cy, limit=160):
+    b = min(bs, key=lambda b: abs((b[0] + b[2]) / 2 - cx) + abs((b[1] + b[3]) / 2 - cy))
+    return b if abs((b[0] + b[2]) / 2 - cx) + abs((b[1] + b[3]) / 2 - cy) < limit else None
+
+
+def build(key, name, miss, allrows, curall, tmpl):
+    rows = [r for r in allrows if r["member"] == name]
+    cur = curall.get(name, {})
+    im = grid.load(D + f"{key}_na.jpg")
+    bs = grid.card_boxes(im, min_w=0.03, max_w=0.08) if key != "leeseo" else None
     html = []
     for idx, (csub, ssub, ver, lab) in ITEMS.items():
         f = [r for r in rows if csub in r["collection"] and r["source"].startswith(ssub) and r["version"] == ver]
         if len(f) != 1:
-            print("枠が見つからない/複数", idx, csub, ssub, ver, len(f)); continue
+            continue
         r = f[0]; e = cur.get((r["collection"], r["source"], r["version"]))
         if e is None:
-            print("画像なし", idx); continue
-        new = im.crop(inset_frame(im, miss[idx][1])); old = Image.open(CARDS + e["file"])
+            continue
+        x0, y0, x1, y1 = miss[idx][1]
+        box = miss[idx][1] if bs is None else nearest(bs, (x0 + x1) / 2, (y0 + y1) / 2)
+        if box is None:
+            continue
+        new = im.crop(inset_frame(im, box)); old = Image.open(CARDS + e["file"])
         html.append(f'<div class="row" id="r{idx}"><div class="col"><img src="{b64(old)}">いまのアプリ（{old.size[0]}px）</div>'
                     f'<div class="col"><img src="{b64(new)}">表の画像（{new.size[0]}px）</div>'
                     f'<div class="col" style="width:150px;text-align:left">#{idx} 表のラベル：{lab}<br><b>{r["source"]}</b> {r["version"]}<br>{r["collection"][:28]}<br>出典：{e["credit"]}</div>'
                     f'<div class="btns"><button class="y" data-i="{idx}">同じ</button><button class="n" data-i="{idx}">ちがう</button></div></div>')
-    page = open(PROJ + "public/_review/leeseo_have.html", encoding="utf-8").read()
-    head = page[:page.index("<main>") + 6]
-    tail = page[page.index("</main>"):]
-    head = head.replace("画像の見比べ（イソ）", "画像の見比べ（イソ・ノンアルバム）")
-    open(OUT, "w", encoding="utf-8").write(head + "".join(html) + tail)
-    print(len(html))
+    head = tmpl[:tmpl.index("<main>") + 6].replace("イソ", name).replace("画像の見比べ（" + name + "）", "画像の見比べ（" + name + "・ノンアルバム）")
+    tail = tmpl[tmpl.index("</main>"):].replace("イソ", name)
+    open(PROJ + f"public/_review/{key}_na_have.html", "w", encoding="utf-8").write(head + "".join(html) + tail)
+    print(name, len(html))
+
+
+if __name__ == "__main__":
+    miss = json.load(open(SP + "review/miss_na_leeseo.json", encoding="utf-8"))
+    allrows = list(csv.DictReader(open(PROJ + "public/seed/cards.csv", encoding="utf-8")))
+    curall = {}
+    for p in sorted(glob.glob(SP + "out/*.json")):
+        for e in json.load(open(p, encoding="utf-8"))["images"]:
+            if len(e["members"]) == 1:
+                curall.setdefault(e["members"][0], {})[(e["collection"], e["source"], e["version"])] = e
+    tmpl = open(PROJ + "public/_review/leeseo_have.html", encoding="utf-8").read()
+    for key, name in KEYS:
+        build(key, name, miss, allrows, curall, tmpl)
