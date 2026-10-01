@@ -45,7 +45,9 @@ RELABEL = {("IVE SECRET", "QQ Music"): {"1": "2", "2": "3", "3": "4", "4": "5", 
            # IVE SWITCH の Soundwave ラキドロ POLA（本人、2026-10-01）：いまの 2.0 の画像は実際は 1.0、4.0 は 2.0、6.0 は 3.0、9.0 は 4.0。6.0・9.0 の POLA は存在しない
            ("IVE SWITCH", "Soundwave ラキドロ"): {"2.0 POLA": "1.0 POLA", "4.0 POLA": "2.0 POLA", "6.0 POLA": "3.0 POLA", "9.0 POLA": "4.0 POLA", "11.0 POLA": "5.0 POLA"},  # 11.0 POLA は実際は 5.0 POLA（本人）
            # IVE SWITCH の「withmuu ラキドロ 4.0-3」の画像は実際は「withmuu ラキドロ 2.0 POLA」（本人、2026-10-01）
-           ("IVE SWITCH", "withmuu ラキドロ"): {"4.0-3": "2.0 POLA"}}
+           ("IVE SWITCH", "withmuu ラキドロ"): {"4.0-3": "2.0 POLA"},
+           # IVE SWITCH の「Tower Records 2」の実際の名前は「Tower Records 1.0 POLA」（本人、2026-10-01）
+           ("IVE SWITCH", "Tower Records"): {"2": "1.0 POLA"}}
 
 
 def relabel(c, s, v):
