@@ -14,8 +14,6 @@ SEED = PROJ + "public/seed/cards.csv"
 REPLACE = {"ELEVEN", "LOVE DIVE", "IVE SWITCH", "IVE EMPATHY", "IVE SECRET"}
 KEEP = {
     ("IVE EMPATHY", "Amulet Card (Tokyo 3/29)"),
-    ("IVE EMPATHY", "'IVE SCOUT' Offline Event Kobe/Yokohama (4/25-26)/(4/29-30)"),
-    ("IVE EMPATHY", "'IVE SCOUT' Offline Event Nagoya/Fukuoka (4/12-13)/(4/21-22)"),
     ("ELEVEN", "グッズ｜Official MD"),
     ("LOVE DIVE", "Jewel ver. 9set POB"),
     ("LOVE DIVE", "グッズ｜POB"),

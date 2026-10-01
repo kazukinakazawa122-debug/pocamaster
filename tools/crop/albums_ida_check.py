@@ -81,7 +81,7 @@ LEESEO = {
     113: ("IVE EMPATHY", WM, "4.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     114: ("IVE EMPATHY", "Makestar", "3.0", H),
     121: ("IVE EMPATHY", SWL, "4.0 POLA", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
-    122: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),
+    122: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", X),
     124: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", X),
     125: ("IVE EMPATHY", SW, "7.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     126: ("IVE EMPATHY", "K-MONSTAR", "Taiwan POLA", H),
@@ -206,7 +206,7 @@ LIZ = {
     148: ("IVE EMPATHY", WML, "5.0 POLA", H),
     149: ("IVE EMPATHY", SWL, "4.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     150: ("IVE EMPATHY", SWL, "4.0 POLA", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
-    153: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),
+    153: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", X),
     155: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", X),
     156: ("IVE EMPATHY", SW, "7.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     159: ("IVE EMPATHY", "Makestar", "4.0 Shanghai カフェ店長 ver.", H),
@@ -332,7 +332,7 @@ WONYOUNG = {
     100: ("IVE EMPATHY", "StarRiver", "2.0", H),  # leeseo 111
     101: ("IVE EMPATHY", WM, "4.0", H),  # 直した（2026-09-30）：ほかのメンバーの表の同じ位置のカードがこの枠だった
     106: ("IVE EMPATHY", "Apple Music", "4.0", H),
-    108: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),  # leeseo 122
+    108: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", X),  # leeseo 122
     112: ("IVE EMPATHY", "IDOUSTAGE", "2.0", H),
     113: ("IVE EMPATHY", "Makestar", "4.0 Shanghai 3", N),  # leeseo 128
     115: ("IVE SECRET", "MD", "", H),  # leeseo 129
@@ -442,7 +442,7 @@ REI = {
     115: ("IVE EMPATHY", "StarRiver", "2.0", H),  # leeseo 111
     123: ("IVE EMPATHY", SW, "5.0", H),
     126: ("IVE EMPATHY", "Apple Music", "4.0", H),  # wonyoung 106
-    127: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),  # leeseo 122
+    127: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", X),  # leeseo 122
     130: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", X),  # leeseo 124
     131: ("IVE EMPATHY", "IDOUSTAGE", "2.0", H),  # wonyoung 112
     134: ("IVE SECRET", "MD", "", H),  # leeseo 129
@@ -560,7 +560,7 @@ GAEUL = {
     109: ("IVE EMPATHY", "Starship Square", "3+6 (A)", H),
     112: ("IVE EMPATHY", SWL, "2.0 POLA", H),
     116: ("IVE EMPATHY", WML, "5.0 POLA", H),  # liz 148
-    117: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),  # leeseo 122
+    117: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", X),  # leeseo 122
     121: ("IVE EMPATHY", "Makestar", "4.0 Shanghai", H),  # leeseo 127
     122: ("IVE EMPATHY", "Makestar", "4.0 Shanghai 3", N),  # leeseo 128
     124: ("IVE SECRET", "MD", "", H),  # leeseo 129
@@ -675,7 +675,7 @@ YUJIN = {
     114: ("IVE EMPATHY", "StarRiver", "2.0", H),  # leeseo 111
     116: ("IVE EMPATHY", WM, "4.0", H),  # leeseo 113
     120: ("IVE EMPATHY", "A!SMART", "C", H),
-    123: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", N),  # leeseo 122
+    123: ("IVE EMPATHY", "オフラインイベント", "TOKYO 2", X),  # leeseo 122
     125: ("IVE EMPATHY", "K-MONSTAR", "Taiwan POLA", H),  # leeseo 126
     126: ("IVE EMPATHY", "StarRiver", "2.0（2 枚目）", X),  # rei 130
     128: ("IVE EMPATHY", "Makestar", "4.0 Shanghai 3", N),  # gaeul 122
