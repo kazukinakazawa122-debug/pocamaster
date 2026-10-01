@@ -3,7 +3,7 @@
 - 本人（2026-10-01）：IVE SWITCH の LINE FRIENDS の枠は SWITCH ではなくイベントに入れる → コラボ・イベントの「MINIVE × LINE FRIENDS」にする
 - 表の 6 枚（左から）：トレカ pink・white・black・purple、HOLDER、50K KRW（列 x=3105+211.4×i・y=2638・幅 194・高さ約 296）
   旧 SWITCH の「LINE FRIENDS トレカ 1＝purple・2＝white」（アプリの画像と同じ写真。ユジン 0.74/0.91・ガウル 0.97/0.82・レイ 0.94/0.88）
-- 旧「LINE FRIENDS キーリング」「特典 1〜3」は表にない。移すだけ（画像は今まで通り。なければ画像なし）。merge.py の DROP_SLOT で IVE SWITCH 側は消える
+- 旧「LINE FRIENDS キーリング」＝HOLDER、「特典 3」＝50K KRW（本人、2026-10-01）。「特典 1・2」は表にない（IVE x LINE の 2 枚）ので移すだけ。merge.py の DROP_SLOT で IVE SWITCH 側は消える
 - 画像は表（カード 194px と小さい）から。旧画像のほうが大きいときは旧画像を使う
 """
 import csv, glob, json, os
@@ -18,7 +18,8 @@ SRC = "MINIVE × LINE FRIENDS"
 KEYS = [("yujin", "ユジン"), ("gaeul", "ガウル"), ("rei", "レイ"), ("wonyoung", "ウォニョン"), ("liz", "リズ"), ("leeseo", "イソ")]
 NEW = ["トレカ pink", "トレカ white", "トレカ black", "トレカ purple", "HOLDER", "50K KRW"]
 OLD_MAP = {("LINE FRIENDS トレカ", "1"): "トレカ purple", ("LINE FRIENDS トレカ", "2"): "トレカ white"}
-CARRY = [("LINE FRIENDS キーリング", ""), ("LINE FRIENDS 特典", "1"), ("LINE FRIENDS 特典", "2"), ("LINE FRIENDS 特典", "3")]
+# キーリング＝HOLDER、特典 3＝50K KRW（同じカード。本人、2026-10-01）なので別の枠にしない。特典 1・2 だけ移す
+CARRY = [("LINE FRIENDS 特典", "1"), ("LINE FRIENDS 特典", "2")]
 if __name__ == "__main__":
     old = {}
     for p in sorted(glob.glob(SP + "out/*.json")):
