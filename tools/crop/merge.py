@@ -26,7 +26,7 @@ GOODS = False  # トレカ以外のグッズ（入手元が「グッズ｜」で
 
 def DROP_SLOT(c, s, v):
     """本人が「この枠は消す」と決めた枠（作り直しの資料の job が再び作っても入れない）"""
-    return (c == "IVE SWITCH" and s.startswith("LINE FRIENDS")) or (c == "IVE SECRET" and s == "Krispy Kreme Donuts") or (s == "MINIVE × LINE FRIENDS" and v in ("キーリング", "特典 3"))  # 2026-10-01：LINE FRIENDS はイベントへ移す、Krispy Kreme はトレカではない
+    return (c == "IVE SWITCH" and s.startswith("LINE FRIENDS")) or (c == "IVE SECRET" and s == "Krispy Kreme Donuts") or (s == "MINIVE × LINE FRIENDS" and v in ("キーリング", "特典 3")) or (c == "IVE SECRET" and s == "withmuu ラキドロ" and v == "4.0-3")  # 2026-10-01：LINE FRIENDS はイベントへ移す、Krispy Kreme はトレカではない
 
 
 def q(s):
