@@ -35,9 +35,9 @@ for mem, i in [("イソ", 53), ("リズ", 54), ("ウォニョン", 55), ("レイ
     for k, (b, (s, v)) in enumerate(zip(seq, lab)):
         j.add(C, [mem], s, v, None if k in NOIMG else im.crop(tuple(int(x) for x in b)), "@LILY_221019")
 # @hallojisoo の一覧（Google ドライブ、2026-08-23 更新）で見つけた種類。枠だけ（2026-09-29）
+# QQ Music 1〜5・Shatter Card・POP-UP は、画像のある「QQ Music 2.0 ランダム 1〜6」などと同じカードなので枠を作らない（本人、2026-10-01。removed.csv）
 EXTRA = [("本体封入", "Vinyl"), ("Melon Live", ""), ("QQ Music", "Membership"),
-         ("QQ Music", "1"), ("QQ Music", "2"), ("QQ Music", "3"), ("QQ Music", "4"), ("QQ Music", "5"), ("QQ Music", "Shatter Card"),
-         ("QQ Music", "POP-UP"), ("HIT! MAGAZINE", ""), ("KMONSTAR", "2.0")]
+         ("HIT! MAGAZINE", ""), ("KMONSTAR", "2.0")]
 for mem in ["イソ", "リズ", "ウォニョン", "レイ", "ユジン", "ガウル"]:
     for s, v in EXTRA:
         j.add(C, [mem], s, v)
