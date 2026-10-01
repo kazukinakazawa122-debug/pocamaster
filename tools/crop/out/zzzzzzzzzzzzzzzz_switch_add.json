@@ -1,0 +1,40 @@
+{
+"seed": [
+[
+"IVE SWITCH",
+"ウォニョン",
+"withmuu ラキドロ",
+"2.0 POLA"
+],
+[
+"IVE SWITCH",
+"リズ",
+"Soundwave ラキドロ",
+"5.0 POLA"
+]
+],
+"images": [
+{
+"collection": "IVE SWITCH",
+"members": [
+"ウォニョン"
+],
+"source": "withmuu ラキドロ",
+"version": "2.0 POLA",
+"file": "zzzzzzzzzzzzzzzz_switch_add/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzz_switch_add/0000_t.jpg",
+"credit": "@ri__chan94"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"リズ"
+],
+"source": "Soundwave ラキドロ",
+"version": "5.0 POLA",
+"file": "zzzzzzzzzzzzzzzz_switch_add/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzz_switch_add/0001_t.jpg",
+"credit": "@ri__chan94"
+}
+]
+}

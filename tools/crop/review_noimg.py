@@ -17,7 +17,9 @@ if __name__ == "__main__":
         e = cur.get((r["collection"], "/".join(sorted(r["member"].split("/"))), r["source"], r["version"]))
         g = groups.setdefault(k, {"no": [], "yes": []})
         (g["yes"] if e else g["no"]).append((r["member"], e))
-    items = [(k, g) for k, g in groups.items() if g["no"]]
+    # 本人が「このまま（残す）」と決めた枠は一覧に出さない：IVE SECRET の StarRiver 2.0（実在するが出回りが少ない）
+    KEEP_AS_IS = {("IVE SECRET", "StarRiver", "2.0")}
+    items = [(k, g) for k, g in groups.items() if g["no"] and k not in KEEP_AS_IS]
     bycoll = collections.OrderedDict()
     for k, g in items:
         bycoll.setdefault(k[0], []).append((k, g))
