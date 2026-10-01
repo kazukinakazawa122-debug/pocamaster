@@ -130,7 +130,7 @@ export default function Settings() {
   }
 
   return (
-    <div className="page settings-page">
+    <div className="page">
       <TopBar title="設定" minive="face" menu />
 
       <div className="section-title">プロフィール</div>

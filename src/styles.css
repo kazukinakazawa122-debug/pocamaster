@@ -122,7 +122,8 @@ a { color: inherit; text-decoration: none; }
 }
 .chip.on { background: var(--all); border-color: var(--all); color: var(--on-all); }
 
-.panel { background: var(--surface); border-radius: var(--r-panel); padding: 16px; }
+/* 区切りの箱：うっすらした色の背景は付けない（本人の要望、2026-10-01）。見出しと余白で区切る */
+.panel { padding: 4px 0; }
 .banner { background: var(--warn-bg); color: var(--warn-text); border-radius: var(--r-panel); padding: 10px 12px; font-size: 13px; display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
 
 .btn {
@@ -322,6 +323,3 @@ a { color: inherit; text-decoration: none; }
 .history-table td { padding: 8px; border-bottom: 1px solid var(--line); }
 .history-table th:last-child, .history-table td:last-child { text-align: right; }
 .history-table tr.on td { font-weight: 700; background: var(--surface); }
-
-/* 設定：区切りの箱にうっすら色を付けない（本人の要望、2026-10-01）。見出しとボタンの枠線で区切る */
-.settings-page .panel { background: none; padding: 4px 0; }
