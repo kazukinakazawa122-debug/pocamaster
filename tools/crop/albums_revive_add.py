@@ -6,8 +6,8 @@
   - 7 段目の 1 枚目「KMONSTAR」→ ガウルの KMONSTAR 2.0（本人：ガウルの全種類の KMONSTAR と書いてある所）
 - wishlist_Yujin_idalshiro.jpg：ユジンの同じ表。4 段目の 2 枚目「QQ MUSIC member set」→ ユジンの QQ Music Membership（＝Member set。本人、2026-10-01）
 - QQ_random5_6cards.jpg：QQ Music 2.0 ランダム 5 の 6 人分（ガウル・ユジン・レイ・ウォニョン・リズ・イソの順。ユジンの表の「tjxxx」の ID 入りと同じ写真で確かめた）→ ユジンの ランダム 5（ID のないきれいな画像）
-- QQ Music の「Membership」と「Member set 2」は同じカード（本人）：Membership に一本化し、Member set 2 の枠は消す。
-  画像のなかったイソ・ウォニョンの Membership には、Member set 2 の画像を入れる
+- QQ Music の「Membership」と「Member set 2」は別のカード（本人、2026-10-01 の訂正）：表の「QQ MUSIC member set」の 1 枚目＝Membership、2 枚目＝Member set 2。
+  ユジン・ガウルは表から入れる（Membership＝4 段目の 2 列目、Member set 2＝3 列目）。ほかのメンバーは表がないので、いまの画像のまま（リズは 2 つが同じ写真に見える→要確認）
 - 「本体封入 Vinyl」はまだ発表されていないので枠を消す（本人）
 """
 import csv, glob, json, os
@@ -30,20 +30,11 @@ if __name__ == "__main__":
     g = grid.load(D + "wishlist_Gaeul_idalshiro.jpg")
     j.add(C, ["ガウル"], "KMONSTAR", "2.0", g.crop(inset_frame(g, box(7, 0))), "@idalshiro")
     y = grid.load(D + "wishlist_Yujin_idalshiro.jpg")
-    j.add(C, ["ユジン"], "QQ Music", "Membership", y.crop(inset_frame(y, box(3, 1))), "@idalshiro")
+    # 「QQ MUSIC member set」は 4 段目の 2 枚（本人、2026-10-01）：1 枚目＝アプリの Membership、2 枚目＝アプリの Member set 2
+    for who, im in (("ユジン", y), ("ガウル", g)):
+        j.add(C, [who], "QQ Music", "Membership", im.crop(inset_frame(im, box(3, 1))), "@idalshiro")
+        j.add(C, [who], "QQ Music", "Member set 2", im.crop(inset_frame(im, box(3, 2))), "@idalshiro")
     q = grid.load(D + "QQ_random5_6cards.jpg")
     W, H = q.size
     j.add(C, ["ユジン"], "QQ Music", "2.0 ランダム 5", q.crop((int(W / 3), 0, int(W * 2 / 3), int(H / 2))), "@idalshiro")
-    # Member set 2 の画像を Membership にコピー（Membership に画像のないメンバーだけ）
-    have = {}
-    for p in sorted(glob.glob(SP + "out/*.json")):
-        if os.path.basename(p) == "revive_add.json":
-            continue
-        for e in json.load(open(p, encoding="utf-8"))["images"]:
-            if e["collection"] == C and len(e["members"]) == 1 and e["source"] == "QQ Music" and e["credit"] != "@powerofablink":
-                have[(e["members"][0], e["version"])] = e
-    for n in ORDER:
-        if (n, "Membership") not in have and (n, "Member set 2") in have and n != "ユジン":
-            e = have[(n, "Member set 2")]
-            j.add(C, [n], "QQ Music", "Membership", Image.open(CARDS + e["file"]), e["credit"])
     j.save()

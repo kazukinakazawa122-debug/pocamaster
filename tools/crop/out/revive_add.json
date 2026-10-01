@@ -52,19 +52,25 @@
 "REVIVE+",
 "ユジン",
 "QQ Music",
+"Member set 2"
+],
+[
+"REVIVE+",
+"ガウル",
+"QQ Music",
+"Membership"
+],
+[
+"REVIVE+",
+"ガウル",
+"QQ Music",
+"Member set 2"
+],
+[
+"REVIVE+",
+"ユジン",
+"QQ Music",
 "2.0 ランダム 5"
-],
-[
-"REVIVE+",
-"ウォニョン",
-"QQ Music",
-"Membership"
-],
-[
-"REVIVE+",
-"イソ",
-"QQ Music",
-"Membership"
 ]
 ],
 "images": [
@@ -162,7 +168,7 @@
 "ユジン"
 ],
 "source": "QQ Music",
-"version": "2.0 ランダム 5",
+"version": "Member set 2",
 "file": "revive_add/0008.jpg",
 "thumb": "revive_add/0008_t.jpg",
 "credit": "@idalshiro"
@@ -170,7 +176,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ウォニョン"
+"ガウル"
 ],
 "source": "QQ Music",
 "version": "Membership",
@@ -181,12 +187,23 @@
 {
 "collection": "REVIVE+",
 "members": [
-"イソ"
+"ガウル"
 ],
 "source": "QQ Music",
-"version": "Membership",
+"version": "Member set 2",
 "file": "revive_add/0010.jpg",
 "thumb": "revive_add/0010_t.jpg",
+"credit": "@idalshiro"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "QQ Music",
+"version": "2.0 ランダム 5",
+"file": "revive_add/0011.jpg",
+"thumb": "revive_add/0011_t.jpg",
 "credit": "@idalshiro"
 }
 ]

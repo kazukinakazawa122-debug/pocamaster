@@ -110,7 +110,7 @@ LEESEO = {
     165: ("IVE SECRET", "IDOLSHOP", "", H),
     167: ("IVE SECRET", WML, "4.0-3", N),
     173: ("REVIVE+", "本体封入", "MINI MINI", H),
-    175: ("REVIVE+", "Mukor", "", N),
+    175: ("REVIVE+", "Mukor", "", X),
     180: ("REVIVE+", "QQ Music", "Member set 2", N),
     181: ("REVIVE+", "QQ Music", "2.0 ランダム 1", N),
     182: ("REVIVE+", "QQ Music", "2.0 ランダム 2", N),
