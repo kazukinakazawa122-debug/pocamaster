@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { IconCamera, IconDatabaseImport, IconDownload, IconFileImport, IconPhotoUp, IconRestore } from '@tabler/icons-react'
-import { db, EMPTY_PROFILE, getSetting, newId, putSetting, type Profile } from '../lib/db'
+import { addImages, db, deleteImages, EMPTY_PROFILE, getSetting, newId, putSetting, type Profile } from '../lib/db'
 import { makeImage } from '../lib/image'
 import MemberPicker from '../components/MemberPicker'
 import { exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
@@ -223,10 +223,10 @@ function ProfileEditor() {
   const setPhoto = async (file: File) => {
     const img = await makeImage(file)
     const id = newId()
-    await db.images.add({ id, ...img })
+    await addImages([{ id, ...img }])
     const old = latest.current?.imageId
     save({ imageId: id })
-    if (old) await db.images.delete(old)
+    if (old) await deleteImages([old])
   }
 
   return (

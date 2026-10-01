@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { IconPhoto } from '@tabler/icons-react'
-import { COLLECTION_TYPES, db, deleteCollection, newId, type Collection, type CollectionType } from '../lib/db'
+import { addImages, COLLECTION_TYPES, db, deleteCollection, deleteImages, getThumb, newId, type Collection, type CollectionType } from '../lib/db'
 import { makeImage } from '../lib/image'
 import { TopBar } from '../components/ui'
 
@@ -28,8 +28,8 @@ export default function CollectionEdit() {
       setType(c.type)
       setReleaseDate(c.releaseDate)
       if (c.coverImageId) {
-        const img = await db.images.get(c.coverImageId)
-        if (img) setCoverUrl(URL.createObjectURL(img.thumb))
+        const thumb = await getThumb(c.coverImageId)
+        if (thumb) setCoverUrl(URL.createObjectURL(thumb))
       }
     })
   }, [id])
@@ -49,8 +49,8 @@ export default function CollectionEdit() {
     if (cover) {
       const img = await makeImage(cover)
       const newImageId = newId()
-      await db.images.add({ id: newImageId, ...img })
-      if (coverImageId) await db.images.delete(coverImageId)
+      await addImages([{ id: newImageId, ...img }])
+      if (coverImageId) await deleteImages([coverImageId])
       coverImageId = newImageId
     }
     const data: Collection = {

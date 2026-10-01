@@ -1,5 +1,5 @@
 import JSZip from 'jszip'
-import { db, newId, type Card } from './db'
+import { addImages, db, deleteImages, newId, type Card } from './db'
 import { makeImage } from './image'
 import { parseMembers } from './csv'
 
@@ -46,12 +46,10 @@ export async function importImages(file: Blob, onProgress?: (done: number, total
     const batch = pending
     pending = []
     if (batch.length === 0) return
-    await db.transaction('rw', db.images, db.cards, async () => {
-      await db.images.bulkAdd(batch.map((b) => ({ id: b.id, ...b.img })))
-      for (const b of batch) {
-        await db.cards.update(b.card.id, { imageId: b.id, imageCredit: b.credit })
-        if (b.card.imageId) await db.images.delete(b.card.imageId)
-      }
+    await db.transaction('rw', db.images, db.thumbs, db.cards, async () => {
+      await addImages(batch.map((b) => ({ id: b.id, ...b.img })))
+      for (const b of batch) await db.cards.update(b.card.id, { imageId: b.id, imageCredit: b.credit })
+      await deleteImages(batch.flatMap((b) => (b.card.imageId ? [b.card.imageId] : [])))
     })
   }
   for (const [i, e] of entries.entries()) {
@@ -68,10 +66,10 @@ export async function importImages(file: Blob, onProgress?: (done: number, total
       const full = new Blob([bytes], { type: 'image/jpeg' })
       const img = thumb ? { full, thumb: new Blob([thumb], { type: 'image/jpeg' }) } : await makeImage(full)
       const id = newId()
-      await db.transaction('rw', db.images, db.collections, async () => {
-        await db.images.add({ id, ...img })
+      await db.transaction('rw', db.images, db.thumbs, db.collections, async () => {
+        await addImages([{ id, ...img }])
         await db.collections.update(col.id, { coverImageId: id })
-        if (col.coverImageId) await db.images.delete(col.coverImageId)
+        if (col.coverImageId) await deleteImages([col.coverImageId])
       })
       result.matched++
       continue

@@ -46,6 +46,13 @@ export interface Card {
 export interface StoredImage {
   id: string
   full: Blob
+  /** 版 4 より前に保存した画像だけが持つ。いまの一覧用の小さい画像は thumbs に分けて保存する */
+  thumb?: Blob
+}
+
+/** 一覧用の小さい画像（id は images と同じ） */
+export interface StoredThumb {
+  id: string
   thumb: Blob
 }
 
@@ -95,6 +102,7 @@ export const db = new Dexie('pocamaster') as Dexie & {
   collections: EntityTable<Collection, 'id'>
   cards: EntityTable<Card, 'id'>
   images: EntityTable<StoredImage, 'id'>
+  thumbs: EntityTable<StoredThumb, 'id'>
   statusHistory: EntityTable<StatusHistory, 'id'>
   achievements: EntityTable<Achievement, 'key'>
   settings: EntityTable<Setting, 'key'>
@@ -125,6 +133,36 @@ db.version(2)
 
 // マイアルバムを追加（実績の画面の代わり、2026-09-30）
 db.version(3).stores({ myAlbums: 'id, createdAt' })
+
+// 一覧用の小さい画像を別の表に分けた（一覧で大きい画像を読まないため、2026-10-01）。
+// 前に保存した画像は移さない（iPhone で数千枚を一度に書き換えないため）。画像の ZIP を取り込み直すと分かれる
+db.version(4).stores({ thumbs: 'id' })
+
+/** 画像を保存する。一覧用の小さい画像は thumbs に分ける */
+export async function addImages(list: { id: string; full: Blob; thumb: Blob }[]): Promise<void> {
+  if (list.length === 0) return
+  await db.transaction('rw', db.images, db.thumbs, async () => {
+    await db.images.bulkAdd(list.map(({ id, full }) => ({ id, full })))
+    await db.thumbs.bulkAdd(list.map(({ id, thumb }) => ({ id, thumb })))
+  })
+}
+
+export async function deleteImages(ids: string[]): Promise<void> {
+  if (ids.length === 0) return
+  await db.transaction('rw', db.images, db.thumbs, async () => {
+    await db.images.bulkDelete(ids)
+    await db.thumbs.bulkDelete(ids)
+  })
+}
+
+/** 一覧用の小さい画像。分ける前に保存した画像は images の中のものを使う */
+export async function getThumb(id: string): Promise<Blob | undefined> {
+  return (await db.thumbs.get(id))?.thumb ?? (await db.images.get(id))?.thumb
+}
+
+export async function getFull(id: string): Promise<Blob | undefined> {
+  return (await db.images.get(id))?.full
+}
 
 export async function createMyAlbum(name: string): Promise<string> {
   const id = newId()
@@ -158,8 +196,8 @@ export async function deleteCards(cards: Card[]): Promise<void> {
   const ids = cards.map((c) => c.id)
   const gone = new Set(ids)
   const imageIds = cards.flatMap((c) => (c.imageId ? [c.imageId] : []))
-  await db.transaction('rw', [db.cards, db.images, db.statusHistory, db.myAlbums], async () => {
-    await db.images.bulkDelete(imageIds)
+  await db.transaction('rw', [db.cards, db.images, db.thumbs, db.statusHistory, db.myAlbums], async () => {
+    await deleteImages(imageIds)
     await db.statusHistory.where('cardId').anyOf(ids).delete()
     await db.cards.bulkDelete(ids)
     await db.myAlbums
@@ -172,9 +210,9 @@ export async function deleteCards(cards: Card[]): Promise<void> {
 
 export async function deleteCollection(c: Collection): Promise<void> {
   const cards = await db.cards.where('collectionId').equals(c.id).toArray()
-  await db.transaction('rw', [db.collections, db.cards, db.images, db.statusHistory, db.myAlbums], async () => {
+  await db.transaction('rw', [db.collections, db.cards, db.images, db.thumbs, db.statusHistory, db.myAlbums], async () => {
     await deleteCards(cards)
-    if (c.coverImageId) await db.images.delete(c.coverImageId)
+    if (c.coverImageId) await deleteImages([c.coverImageId])
     await db.collections.delete(c.id)
   })
 }

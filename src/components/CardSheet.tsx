@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IconEdit, IconHeart, IconHeartFilled, IconPhotoPlus, IconTrash } from '@tabler/icons-react'
-import { db, deleteCard, newId, type Card } from '../lib/db'
+import { addImages, db, deleteCard, deleteImages, newId, type Card } from '../lib/db'
 import { makeImage } from '../lib/image'
 import { memberLabel } from '../lib/members'
 import { cardColors } from './CardTile'
@@ -30,10 +30,10 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
     try {
       const img = await makeImage(file)
       const id = newId()
-      await db.transaction('rw', db.images, db.cards, async () => {
-        await db.images.add({ id, ...img })
+      await db.transaction('rw', db.images, db.thumbs, db.cards, async () => {
+        await addImages([{ id, ...img }])
         await db.cards.update(card.id, { imageId: id, imageCredit: undefined })
-        if (card.imageId) await db.images.delete(card.imageId)
+        if (card.imageId) await deleteImages([card.imageId])
       })
     } catch (e) {
       setError((e as Error).message)

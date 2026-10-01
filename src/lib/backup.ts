@@ -1,5 +1,5 @@
 import JSZip from 'jszip'
-import { db, putSetting, type Profile } from './db'
+import { addImages, db, putSetting, type Profile } from './db'
 
 const FORMAT = 1
 
@@ -29,10 +29,13 @@ export async function exportBackup(): Promise<{ file: File; skipped: number }> {
   const dir = zip.folder('images')!
   // 読めない画像（iPhone で「The I/O read operation failed」になるもの）は飛ばし、記録だけでも保存できるようにする
   let skipped = 0
-  for (const img of await db.images.bulkGet(ownIds)) {
-    if (!img) continue
+  const [fulls, thumbs] = await Promise.all([db.images.bulkGet(ownIds), db.thumbs.bulkGet(ownIds)])
+  for (const [i, img] of fulls.entries()) {
+    // 一覧用の小さい画像は thumbs にある（分ける前に保存した画像は images の中）
+    const thumbBlob = thumbs[i]?.thumb ?? img?.thumb
+    if (!img || !thumbBlob) continue
     try {
-      const [full, thumb] = await Promise.all([img.full.arrayBuffer(), img.thumb.arrayBuffer()])
+      const [full, thumb] = await Promise.all([img.full.arrayBuffer(), thumbBlob.arrayBuffer()])
       dir.file(`${img.id}.full.jpg`, full)
       dir.file(`${img.id}.thumb.jpg`, thumb)
     } catch {
@@ -90,15 +93,15 @@ export async function restoreBackup(file: Blob): Promise<void> {
   for (const c of data.cards) if (c.imageId && !have.has(c.imageId)) delete c.imageId
   for (const c of data.collections) if (c.coverImageId && !have.has(c.coverImageId)) delete c.coverImageId
 
-  await db.transaction('rw', [db.collections, db.cards, db.images, db.statusHistory, db.achievements, db.settings, db.myAlbums], async () => {
+  await db.transaction('rw', [db.collections, db.cards, db.images, db.thumbs, db.statusHistory, db.achievements, db.settings, db.myAlbums], async () => {
     await Promise.all([
-      db.collections.clear(), db.cards.clear(), db.images.clear(), db.statusHistory.clear(), db.achievements.clear(), db.settings.clear(), db.myAlbums.clear(),
+      db.collections.clear(), db.cards.clear(), db.images.clear(), db.thumbs.clear(), db.statusHistory.clear(), db.achievements.clear(), db.settings.clear(), db.myAlbums.clear(),
     ])
     // マイアルバムを作る前のバックアップには myAlbums がない
     await db.myAlbums.bulkAdd(data.myAlbums ?? [])
     await db.collections.bulkAdd(data.collections)
     await db.cards.bulkAdd(data.cards)
-    await db.images.bulkAdd(images)
+    await addImages(images)
     await db.statusHistory.bulkAdd(data.statusHistory)
     await db.achievements.bulkAdd(data.achievements)
     await db.settings.bulkAdd(data.settings)

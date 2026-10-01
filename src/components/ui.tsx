@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode, type RefObject } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { IconChevronLeft, IconUser } from '@tabler/icons-react'
-import { db, type Profile } from '../lib/db'
+import { getFull, getThumb, type Profile } from '../lib/db'
 import { MiniveRun, type MiniveStyle } from './Minive'
 
 export function ProgressBar({ pct, color = 'var(--all)' }: { pct: number | null; color?: string }) {
@@ -98,7 +98,7 @@ export function ProfileAvatar({ profile, size }: { profile?: Profile; size: numb
   )
 }
 
-/** 保存した画像を表示用の URL にする */
+/** 保存した画像を表示用の URL にする（'thumb' は一覧用の小さい画像だけを読む） */
 export function useImageUrl(imageId: string | undefined, size: 'thumb' | 'full'): string | undefined {
   const [url, setUrl] = useState<string>()
   useEffect(() => {
@@ -108,9 +108,9 @@ export function useImageUrl(imageId: string | undefined, size: 'thumb' | 'full')
     }
     let objectUrl: string | undefined
     let alive = true
-    db.images.get(imageId).then((img) => {
-      if (!alive || !img) return
-      objectUrl = URL.createObjectURL(img[size])
+    ;(size === 'thumb' ? getThumb(imageId) : getFull(imageId)).then((blob) => {
+      if (!alive || !blob) return
+      objectUrl = URL.createObjectURL(blob)
       setUrl(objectUrl)
     })
     return () => {
