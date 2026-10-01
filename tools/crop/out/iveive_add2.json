@@ -1,0 +1,74 @@
+{
+"seed": [
+[
+"I've IVE",
+"ガウル",
+"Broadcast",
+"1"
+],
+[
+"I've IVE",
+"リズ",
+"Broadcast",
+"1"
+],
+[
+"I've IVE",
+"レイ",
+"Broadcast",
+"2"
+],
+[
+"I've IVE",
+"リズ",
+"Broadcast",
+"3"
+]
+],
+"images": [
+{
+"collection": "I've IVE",
+"members": [
+"ガウル"
+],
+"source": "Broadcast",
+"version": "1",
+"file": "iveive_add2/0000.jpg",
+"thumb": "iveive_add2/0000_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "I've IVE",
+"members": [
+"リズ"
+],
+"source": "Broadcast",
+"version": "1",
+"file": "iveive_add2/0001.jpg",
+"thumb": "iveive_add2/0001_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "I've IVE",
+"members": [
+"レイ"
+],
+"source": "Broadcast",
+"version": "2",
+"file": "iveive_add2/0002.jpg",
+"thumb": "iveive_add2/0002_t.jpg",
+"credit": "@reina831wy"
+},
+{
+"collection": "I've IVE",
+"members": [
+"リズ"
+],
+"source": "Broadcast",
+"version": "3",
+"file": "iveive_add2/0003.jpg",
+"thumb": "iveive_add2/0003_t.jpg",
+"credit": "@reina831wy"
+}
+]
+}
