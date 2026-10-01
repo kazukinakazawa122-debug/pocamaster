@@ -1,0 +1,74 @@
+{
+"seed": [
+[
+"Be Alright",
+"ユジン",
+"オフラインイベント",
+"9.23 TOKYO"
+],
+[
+"Be Alright",
+"ガウル",
+"オフラインイベント",
+"9.23 TOKYO"
+],
+[
+"Be Alright",
+"ウォニョン",
+"オフラインイベント",
+"9.23 TOKYO"
+],
+[
+"Be Alright",
+"リズ",
+"オフラインイベント",
+"10.12 TOKYO"
+]
+],
+"images": [
+{
+"collection": "Be Alright",
+"members": [
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "9.23 TOKYO",
+"file": "bealright_add/0000.jpg",
+"thumb": "bealright_add/0000_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "Be Alright",
+"members": [
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "9.23 TOKYO",
+"file": "bealright_add/0001.jpg",
+"thumb": "bealright_add/0001_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "Be Alright",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "9.23 TOKYO",
+"file": "bealright_add/0002.jpg",
+"thumb": "bealright_add/0002_t.jpg",
+"credit": "本人の写真"
+},
+{
+"collection": "Be Alright",
+"members": [
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "10.12 TOKYO",
+"file": "bealright_add/0003.jpg",
+"thumb": "bealright_add/0003_t.jpg",
+"credit": "本人の写真"
+}
+]
+}
