@@ -40,7 +40,19 @@ def key(r):
 rows = list(csv.reader(io.StringIO(open(SEED, encoding="utf-8").read())))
 header, body = rows[0], rows[1:]
 
+# 番号のつけちがいを直す（本人、2026-10-01）：IVE SECRET の QQ Music は、いまの 1→2・2→3・3→4・4→5・5→1 が正しい番号
+RELABEL = {("IVE SECRET", "QQ Music"): {"1": "2", "2": "3", "3": "4", "4": "5", "5": "1"}}
+
+
+def relabel(c, s, v):
+    return RELABEL.get((c, s), {}).get(v, v)
+
+
 jobs = [json.load(open(p, encoding="utf-8")) for p in sorted(glob.glob(SP + "out/*.json"))]
+for _j in jobs:
+    _j["seed"] = [[r[0], r[1], r[2], relabel(r[0], r[2], r[3])] for r in _j["seed"]]
+    for _e in _j["images"]:
+        _e["version"] = relabel(_e["collection"], _e["source"], _e["version"])
 new_seed = [tuple(r) for j in jobs for r in j["seed"]]
 
 kept = []
