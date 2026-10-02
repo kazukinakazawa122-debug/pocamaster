@@ -1,0 +1,414 @@
+{
+"seed": [
+[
+"IVE SECRET",
+"ユジン",
+"IDOLSHOP",
+""
+],
+[
+"IVE SECRET",
+"ガウル",
+"IDOLSHOP",
+""
+],
+[
+"IVE SECRET",
+"レイ",
+"IDOLSHOP",
+""
+],
+[
+"IVE SECRET",
+"ウォニョン",
+"IDOLSHOP",
+""
+],
+[
+"IVE SECRET",
+"リズ",
+"IDOLSHOP",
+""
+],
+[
+"IVE SECRET",
+"イソ",
+"IDOLSHOP",
+""
+],
+[
+"IVE SECRET",
+"リズ",
+"A!SMART",
+"C"
+],
+[
+"IVE SECRET",
+"ユジン",
+"withmuu",
+"7.0"
+],
+[
+"IVE SECRET",
+"ガウル",
+"withmuu",
+"7.0"
+],
+[
+"IVE SECRET",
+"レイ",
+"withmuu",
+"7.0"
+],
+[
+"IVE SECRET",
+"ウォニョン",
+"withmuu",
+"7.0"
+],
+[
+"IVE SECRET",
+"リズ",
+"withmuu",
+"7.0"
+],
+[
+"IVE SECRET",
+"イソ",
+"withmuu",
+"7.0"
+],
+[
+"REVIVE+",
+"ユジン",
+"オフラインイベント",
+"4.29 TOKYO"
+],
+[
+"REVIVE+",
+"ガウル",
+"オフラインイベント",
+"4.29 TOKYO"
+],
+[
+"REVIVE+",
+"レイ",
+"オフラインイベント",
+"4.29 TOKYO"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"オフラインイベント",
+"4.29 TOKYO"
+],
+[
+"REVIVE+",
+"リズ",
+"オフラインイベント",
+"4.29 TOKYO"
+],
+[
+"IVE SECRET",
+"ユジン",
+"Apple Music",
+"4.0"
+],
+[
+"IVE SECRET",
+"ガウル",
+"Apple Music",
+"4.0"
+],
+[
+"IVE SECRET",
+"レイ",
+"Apple Music",
+"4.0"
+],
+[
+"IVE SECRET",
+"ウォニョン",
+"Apple Music",
+"4.0"
+],
+[
+"IVE SECRET",
+"リズ",
+"Apple Music",
+"4.0"
+],
+[
+"IVE SECRET",
+"イソ",
+"Apple Music",
+"4.0"
+]
+],
+"images": [
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "IDOLSHOP",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0000_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ガウル"
+],
+"source": "IDOLSHOP",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0001_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "IDOLSHOP",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0002_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ウォニョン"
+],
+"source": "IDOLSHOP",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0003_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"リズ"
+],
+"source": "IDOLSHOP",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0004_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"イソ"
+],
+"source": "IDOLSHOP",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0005_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"リズ"
+],
+"source": "A!SMART",
+"version": "C",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0006_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "withmuu",
+"version": "7.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0007_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ガウル"
+],
+"source": "withmuu",
+"version": "7.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0008_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "withmuu",
+"version": "7.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0009_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ウォニョン"
+],
+"source": "withmuu",
+"version": "7.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0010_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"リズ"
+],
+"source": "withmuu",
+"version": "7.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0011_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"イソ"
+],
+"source": "withmuu",
+"version": "7.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0012_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "4.29 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0013_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "4.29 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0014.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0014_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "4.29 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0015.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0015_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "4.29 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0016.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0016_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "4.29 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0017.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0017_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "Apple Music",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0018.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0018_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ガウル"
+],
+"source": "Apple Music",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0019.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0019_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "Apple Music",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0020.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0020_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ウォニョン"
+],
+"source": "Apple Music",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0021.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0021_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"リズ"
+],
+"source": "Apple Music",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0022.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0022_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"イソ"
+],
+"source": "Apple Music",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0023.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzz_real_flea_1002/0023_t.jpg",
+"credit": "フリマの出品写真"
+}
+]
+}
