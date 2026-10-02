@@ -46,7 +46,11 @@ for pi in sorted({o["pi"] for o in out if not o["skip"]}):
     rows = []
     for i, (n, o) in enumerate(cells, 1):
         b = [o["box"][0] - bx[0], o["box"][1] - bx[1], o["box"][2] - bx[0], o["box"][3] - bx[1]]
-        d.rectangle(b, outline=(255, 0, 60), width=6)
+        if o['pi'] in T.QUAD:
+            q = [(x - bx[0], y - bx[1]) for x, y in T.QUAD[o['pi']]]
+            d.polygon(q, outline=(255, 0, 60), width=6)
+        else:
+            d.rectangle(b, outline=(255, 0, 60), width=6)
         d.rectangle([b[0], b[1], b[0] + 54, b[1] + 54], fill=(255, 0, 60))
         d.text((b[0] + 8, b[1] + 6), str(i), fill=(255, 255, 255), font_size=40) if hasattr(d, "textbbox") else None
         k = tuple(o["key"])

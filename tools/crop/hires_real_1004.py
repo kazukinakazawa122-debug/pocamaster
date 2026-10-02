@@ -200,6 +200,50 @@ def single_series():
     json.dump(out, open(H.OUTJ, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
+# 斜めから撮った写真は、カードの四隅（左上・右上・右下・左下。写真の座標）を読み取って、まっすぐに直して切り取る（本人「24 がずれています」、2026-10-03）
+# 写真 24：拡大した写真に目盛りを重ねて、辺を延ばした交点を読み取った。端から少し内側
+QUAD = {24: [(315, 832), (952, 840), (996, 1890), (204, 1880)]}
+
+
+def warp(im, quad, size):
+    """四隅（左上・右上・右下・左下）を size の長方形に直す（遠近の補正）"""
+    w, h = size
+    src = np.array(quad, dtype=float)
+    dst = np.array([(0, 0), (w, 0), (w, h), (0, h)], dtype=float)
+    A = []
+    for (x, y), (u, v) in zip(dst, src):   # 出力の点 (x,y) → 元の写真の点 (u,v)
+        A.append([x, y, 1, 0, 0, 0, -u * x, -u * y]); A.append([0, 0, 0, x, y, 1, -v * x, -v * y])
+    c = np.linalg.solve(np.array(A), src.reshape(-1))
+    return im.transform((w, h), Image.PERSPECTIVE, tuple(c), Image.BICUBIC)
+
+
+def apply():
+    """H.apply と同じ。ただし QUAD の写真は四隅からまっすぐに直して切り取る"""
+    out = json.load(open(H.OUTJ, encoding="utf-8"))
+    z = zipfile.ZipFile(H.ZIP)
+    byk = {H.key(e): e for e in json.loads(z.read("manifest.json")) if not e.get("cover")}
+    j = Job(H.JOB)
+    ims = {}
+    n_add = 0
+    for n, o in enumerate(out):
+        if o.get("skip"):
+            continue
+        if o["photo"] not in ims:
+            ims[o["photo"]] = Image.open(H.D + o["photo"]).convert("RGB")
+        im = ims[o["photo"]]
+        if o["pi"] in QUAD:
+            q = QUAD[o["pi"]]
+            w = int(round((q[1][0] - q[0][0] + q[2][0] - q[3][0]) / 2)); h = int(round(w * 1.55))
+            new = warp(im, q, (w, h))
+        else:
+            new = im.crop(tuple(o["box"]))
+        k = o["key"]
+        j.add(k[0], k[1].split("/"), k[2], k[3], H.brighten(new, None), "フリマの出品写真")
+        n_add += 1
+    j.save()
+    print("差し替え", n_add)
+
+
 def mark():
     """使わない写真・大きくならないものに skip を付け、確認ページには差し替えるものだけを出す"""
     out = json.load(open(H.OUTJ, encoding="utf-8"))
@@ -220,4 +264,4 @@ def mark():
 
 
 if __name__ == "__main__":
-    {"single_series": single_series, "series": series, "mark": mark, "find": find, "refine": H.refine, "apply": H.apply}[sys.argv[1] if len(sys.argv) > 1 else "find"]()
+    {"single_series": single_series, "series": series, "mark": mark, "find": find, "refine": H.refine, "apply": apply}[sys.argv[1] if len(sys.argv) > 1 else "find"]()
