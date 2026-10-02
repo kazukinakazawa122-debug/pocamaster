@@ -118,7 +118,7 @@ def page(out, z, entries):
     for n, o in sorted(enumerate(out), key=lambda x: -x[1]["score"]):
         # 0.75 未満は目で見て全部ちがうカードだった（2026-10-02）→ 本人の手間を減らすため、ページに出さない
         # （シリーズで決め直したものは 0.7 以上なら出す）
-        if o["score"] < (0.7 if o.get("series") else 0.75):
+        if o["score"] < (0.55 if o.get("series") else 0.75) or o.get("skip"):
             continue
         if o["photo"] not in ims:
             ims[o["photo"]] = Image.open(D + o["photo"]).convert("RGB")
@@ -210,7 +210,7 @@ def apply():
     ims = {}
     n_add = 0
     for n, o in enumerate(out):
-        if o["score"] < (0.7 if o.get("series") else 0.75):
+        if o["score"] < (0.55 if o.get("series") else 0.75) or o.get("skip"):
             continue  # ページに出していない（ちがうカード）
         if o["photo"] not in ims:
             ims[o["photo"]] = Image.open(D + o["photo"]).convert("RGB")

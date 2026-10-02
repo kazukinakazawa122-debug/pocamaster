@@ -852,19 +852,19 @@
    1388
   ],
   "box": [
-   43,
-   914,
-   349,
-   1377
+   237,
+   975,
+   480,
+   1378
   ],
-  "score": 0.596,
+  "score": 0.817,
   "key": [
-   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "IVE SECRET",
    "ユジン",
-   "in CINEMA",
-   "Acryl Photocard Stand"
+   "withmuu",
+   "1.0"
   ],
-  "old_h": 148,
+  "old_h": 800,
   "alts": [
    [
     "ELEVEN",
@@ -884,7 +884,9 @@
     "本体封入",
     "Clear Photocard"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060319000_iOS.png",
@@ -898,19 +900,19 @@
    1388
   ],
   "box": [
-   495,
-   862,
-   781,
-   1307
+   512,
+   983,
+   755,
+   1368
   ],
-  "score": 0.552,
+  "score": 0.917,
   "key": [
-   "4th FAN CONCERT 'DIVE into IVE'",
-   "レイ",
-   "MD",
-   "Designed by the members"
+   "IVE SECRET",
+   "ガウル",
+   "withmuu",
+   "1.0"
   ],
-  "old_h": 221,
+  "old_h": 800,
   "alts": [
    [
     "IVE SECRET",
@@ -930,7 +932,9 @@
     "Apple Music",
     "1.0"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060319000_iOS.png",
@@ -944,19 +948,19 @@
    1388
   ],
   "box": [
-   939,
-   1033,
-   1182,
-   1396
+   795,
+   985,
+   1038,
+   1372
   ],
-  "score": 0.589,
+  "score": 0.746,
   "key": [
-   "REVIVE+",
-   "ユジン",
+   "IVE SECRET",
+   "レイ",
    "withmuu",
-   "7.0"
+   "1.0"
   ],
-  "old_h": 219,
+  "old_h": 800,
   "alts": [
    [
     "1st WORLD TOUR 'SHOW WHAT I HAVE'",
@@ -976,7 +980,9 @@
     "D'ICON 'one & only'",
     "Type B 1"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060319000_iOS.png",
@@ -990,19 +996,19 @@
    1869
   ],
   "box": [
-   120,
-   1417,
-   363,
-   1796
+   244,
+   1405,
+   487,
+   1845
   ],
-  "score": 0.614,
+  "score": 0.576,
   "key": [
-   "ALIVE",
-   "ユジン",
-   "Japan CD Shop ラキドロ",
-   ""
+   "IVE SECRET",
+   "ウォニョン",
+   "withmuu",
+   "1.0"
   ],
-  "old_h": 320,
+  "old_h": 800,
   "alts": [
    [
     "I've IVE",
@@ -1022,7 +1028,9 @@
     "Soundwave",
     "3.0"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060319000_iOS.png",
@@ -1036,19 +1044,19 @@
    1869
   ],
   "box": [
-   505,
-   1400,
+   530,
+   1403,
    773,
-   1816
+   1826
   ],
-  "score": 0.465,
+  "score": 0.635,
   "key": [
-   "REVIVE+",
-   "ウォニョン",
-   "Tower Records",
-   "Shibuya"
+   "IVE SECRET",
+   "リズ",
+   "withmuu",
+   "1.0"
   ],
-  "old_h": 186,
+  "old_h": 800,
   "alts": [
    [
     "WAVE",
@@ -1068,7 +1076,9 @@
     "withmuu",
     "4.0"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060319000_iOS.png",
@@ -1082,19 +1092,19 @@
    1869
   ],
   "box": [
-   834,
-   1284,
-   1100,
-   1686
+   790,
+   1429,
+   1041,
+   1799
   ],
-  "score": 0.433,
+  "score": 0.937,
   "key": [
-   "2nd WORLD TOUR 'SHOW WHAT I AM'",
-   "ユジン",
-   "Random Photocard Pack Japan",
-   "2"
+   "IVE SECRET",
+   "イソ",
+   "withmuu",
+   "1.0"
   ],
-  "old_h": 265,
+  "old_h": 800,
   "alts": [
    [
     "IVE EMPATHY",
@@ -1114,7 +1124,9 @@
     "MINIVE × LINE FRIENDS",
     "トレカ white"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060336000_iOS.png",
@@ -1684,19 +1696,19 @@
    1388
   ],
   "box": [
-   71,
-   878,
-   359,
-   1310
+   81,
+   850,
+   416,
+   1372
   ],
-  "score": 0.47,
+  "score": 0.885,
   "key": [
-   "ELEVEN",
-   "ガウル",
-   "Soundwave ラキドロ",
-   "2.0-2"
+   "IVE SWITCH",
+   "ユジン",
+   "Soundwave ファンサイン",
+   "1.0"
   ],
-  "old_h": 589,
+  "old_h": 512,
   "alts": [
    [
     "2nd WORLD TOUR 'SHOW WHAT I AM'",
@@ -1716,7 +1728,9 @@
     "NY Music ラキドロ",
     "2.0"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060459000_iOS.png",
@@ -1730,19 +1744,19 @@
    1388
   ],
   "box": [
-   456,
-   798,
-   792,
-   1319
+   457,
+   850,
+   790,
+   1368
   ],
-  "score": 0.67,
+  "score": 0.951,
   "key": [
-   "IVE EMPATHY",
-   "イソ",
-   "HOTTRACKS",
-   ""
+   "IVE SWITCH",
+   "ガウル",
+   "Soundwave ファンサイン",
+   "1.0"
   ],
-  "old_h": 583,
+  "old_h": 512,
   "alts": [
    [
     "IVE EMPATHY",
@@ -1762,7 +1776,9 @@
     "SuperStar STARSHIP",
     "MEXICO"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060459000_iOS.png",
@@ -1776,19 +1792,19 @@
    1388
   ],
   "box": [
-   847,
-   901,
-   1266,
-   1528
+   831,
+   852,
+   1164,
+   1370
   ],
-  "score": 0.625,
+  "score": 0.925,
   "key": [
-   "DIVE Official Fanclub｜ファンクラブ",
-   "イソ",
-   "DIVE JAPAN Phone Tab",
-   "FC 特典"
+   "IVE SWITCH",
+   "レイ",
+   "Soundwave ファンサイン",
+   "1.0"
   ],
-  "old_h": 277,
+  "old_h": 512,
   "alts": [
    [
     "IVE SWITCH",
@@ -1808,7 +1824,9 @@
     "Soundwave ラキドロ",
     "2.0"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060459000_iOS.png",
@@ -1822,19 +1840,19 @@
    2030
   ],
   "box": [
-   18,
-   1391,
-   428,
-   2006
+   83,
+   1417,
+   410,
+   1926
   ],
-  "score": 0.639,
+  "score": 0.937,
   "key": [
-   "IVE EMPATHY",
-   "イソ",
-   "Makestar",
-   "4.0 Shanghai 3"
+   "IVE SWITCH",
+   "ウォニョン",
+   "Soundwave ファンサイン",
+   "1.0"
   ],
-  "old_h": 276,
+  "old_h": 512,
   "alts": [
    [
     "Yujin Solo｜ユジン個人",
@@ -1854,7 +1872,9 @@
     "本体封入",
     "Album A（I ver.）"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060459000_iOS.png",
@@ -1868,19 +1888,19 @@
    2030
   ],
   "box": [
-   722,
-   1488,
-   965,
-   1855
+   469,
+   1422,
+   793,
+   1927
   ],
-  "score": 0.612,
+  "score": 0.944,
   "key": [
-   "1st FAN CONCERT 'The Prom Queens'",
-   "イソ",
-   "DVD・Blu-ray・Kit",
-   "Kit"
+   "IVE SWITCH",
+   "リズ",
+   "Soundwave ファンサイン",
+   "1.0"
   ],
-  "old_h": 277,
+  "old_h": 512,
   "alts": [
    [
     "I've IVE",
@@ -1900,7 +1920,9 @@
     "本体封入",
     "Me ver."
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060459000_iOS.png",
@@ -1914,19 +1936,19 @@
    2030
   ],
   "box": [
-   923,
-   1466,
-   1251,
-   1957
+   840,
+   1418,
+   1159,
+   1918
   ],
-  "score": 0.636,
+  "score": 0.921,
   "key": [
-   "DIVE Official Fanclub｜ファンクラブ",
+   "IVE SWITCH",
    "イソ",
-   "DIVE JAPAN Phone Tab",
-   "FC 特典"
+   "Soundwave ファンサイン",
+   "1.0"
   ],
-  "old_h": 277,
+  "old_h": 516,
   "alts": [
    [
     "2024 SEASON'S GREETINGS [A Fairy's Wish]",
@@ -1946,7 +1968,9 @@
     "本体封入",
     "Gasp!"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060624000_iOS.png",
@@ -2238,19 +2262,19 @@
    1388
   ],
   "box": [
-   70,
-   887,
-   340,
-   1291
+   67,
+   837,
+   413,
+   1370
   ],
-  "score": 0.647,
+  "score": 0.899,
   "key": [
-   "REVIVE+",
+   "I've MINE",
    "ユジン",
-   "京东",
-   "1.0"
+   "Hi-Touch",
+   "18th・19th"
   ],
-  "old_h": 218,
+  "old_h": 510,
   "alts": [
    [
     "REVIVE+",
@@ -2270,7 +2294,9 @@
     "京东",
     "1.0"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060810000_iOS.png",
@@ -2284,17 +2310,17 @@
    1388
   ],
   "box": [
-   489,
-   841,
-   769,
-   1273
+   439,
+   837,
+   782,
+   1366
   ],
-  "score": 0.591,
+  "score": 0.896,
   "key": [
    "I've MINE",
    "ガウル",
-   "withmuu",
-   "3.0"
+   "Hi-Touch",
+   "18th・19th"
   ],
   "old_h": 510,
   "alts": [
@@ -2316,7 +2342,9 @@
     "Wonderwall",
     ""
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060810000_iOS.png",
@@ -2330,19 +2358,19 @@
    1388
   ],
   "box": [
-   990,
-   886,
-   1233,
-   1262
+   808,
+   845,
+   1144,
+   1366
   ],
-  "score": 0.638,
+  "score": 0.893,
   "key": [
    "I've MINE",
-   "リズ",
-   "HOTTRACKS",
-   ""
+   "レイ",
+   "Hi-Touch",
+   "18th・19th"
   ],
-  "old_h": 511,
+  "old_h": 510,
   "alts": [
    [
     "REVIVE+",
@@ -2362,7 +2390,9 @@
     "rolarola",
     "6-4"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060810000_iOS.png",
@@ -2376,19 +2406,19 @@
    2030
   ],
   "box": [
-   75,
-   1485,
-   369,
-   1929
+   85,
+   1403,
+   424,
+   1925
   ],
-  "score": 0.671,
+  "score": 0.868,
   "key": [
-   "LUCID DREAM",
-   "ユジン",
-   "本体封入",
-   "会場限定盤"
+   "I've MINE",
+   "ウォニョン",
+   "Hi-Touch",
+   "18th・19th"
   ],
-  "old_h": 305,
+  "old_h": 510,
   "alts": [
    [
     "I've MINE",
@@ -2408,7 +2438,9 @@
     "1st DIVE FC Class DIVE",
     "2"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060810000_iOS.png",
@@ -2422,19 +2454,19 @@
    2030
   ],
   "box": [
-   496,
-   1483,
-   773,
-   1899
+   449,
+   1407,
+   789,
+   1924
   ],
-  "score": 0.588,
+  "score": 0.914,
   "key": [
-   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "I've MINE",
    "リズ",
-   "in CINEMA",
-   "70K Benefit（self photocard）"
+   "Hi-Touch",
+   "18th・19th"
   ],
-  "old_h": 147,
+  "old_h": 504,
   "alts": [
    [
     "After LIKE",
@@ -2454,7 +2486,9 @@
     "withmuu ラキドロ",
     "3.0"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060810000_iOS.png",
@@ -2468,19 +2502,19 @@
    2030
   ],
   "box": [
-   788,
-   1323,
-   1187,
-   1789
+   821,
+   1397,
+   1152,
+   1911
   ],
-  "score": 0.694,
+  "score": 0.953,
   "key": [
-   "IVE SECRET",
-   "ガウル",
-   "IDOLSHOP",
-   "POLA"
+   "I've MINE",
+   "イソ",
+   "Hi-Touch",
+   "18th・19th"
   ],
-  "old_h": 118,
+  "old_h": 511,
   "alts": [
    [
     "1st FAN CONCERT 'The Prom Queens'",
@@ -2500,7 +2534,9 @@
     "rolarola",
     "6-4"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060841000_iOS.png",
@@ -2514,19 +2550,19 @@
    1388
   ],
   "box": [
-   66,
-   901,
-   331,
-   1237
+   92,
+   817,
+   438,
+   1344
   ],
-  "score": 0.506,
+  "score": 0.83,
   "key": [
-   "IVE EMPATHY",
-   "ガウル",
-   "K-MONSTAR",
-   "Taiwan POLA"
+   "IVE SECRET",
+   "ユジン",
+   "Yetimall ラキドロ",
+   "-1"
   ],
-  "old_h": 99,
+  "old_h": 119,
   "alts": [
    [
     "IVE SECRET",
@@ -2546,7 +2582,9 @@
     "MINIVE × LINE FRIENDS",
     "特典 2"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060841000_iOS.png",
@@ -2560,19 +2598,19 @@
    1388
   ],
   "box": [
-   518,
-   642,
-   878,
-   1197
+   514,
+   864,
+   821,
+   1326
   ],
-  "score": 0.565,
+  "score": 0.957,
   "key": [
-   "REVIVE+",
-   "イソ",
-   "Ktown4U",
-   "3.0"
+   "IVE SECRET",
+   "ガウル",
+   "Yetimall ラキドロ",
+   "-1"
   ],
-  "old_h": 185,
+  "old_h": 277,
   "alts": [
    [
     "Collab & Event｜コラボ・イベント",
@@ -2592,7 +2630,9 @@
     "オフラインイベント",
     "TOKYO"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060841000_iOS.png",
@@ -2606,19 +2646,19 @@
    1388
   ],
   "box": [
-   918,
-   828,
-   1222,
-   1298
+   855,
+   807,
+   1226,
+   1374
   ],
-  "score": 0.468,
+  "score": 0.769,
   "key": [
-   "I've MINE",
-   "ユジン",
-   "KMStation",
-   "4.0"
+   "IVE SECRET",
+   "レイ",
+   "Yetimall ラキドロ",
+   "-1"
   ],
-  "old_h": 510,
+  "old_h": 119,
   "alts": [
    [
     "1st WORLD TOUR 'SHOW WHAT I HAVE'",
@@ -2638,7 +2678,9 @@
     "Ktown4U",
     ""
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060841000_iOS.png",
@@ -2652,19 +2694,19 @@
    2030
   ],
   "box": [
-   8,
-   1407,
-   369,
-   1949
+   86,
+   1408,
+   438,
+   1930
   ],
-  "score": 0.657,
+  "score": 0.799,
   "key": [
-   "Collab & Event｜コラボ・イベント",
-   "ユジン",
-   "MINIVE POP-UP 'MINIVE PARK'",
-   "Mega Cushion"
+   "IVE SECRET",
+   "ウォニョン",
+   "Yetimall ラキドロ",
+   "-1"
   ],
-  "old_h": 390,
+  "old_h": 119,
   "alts": [
    [
     "ELEVEN",
@@ -2684,7 +2726,9 @@
     "Ktown4U ラキドロ",
     "4.0 POLA"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": false
  },
  {
   "photo": "20261002_060841000_iOS.png",
@@ -2698,19 +2742,19 @@
    2030
   ],
   "box": [
-   540,
-   1515,
-   783,
-   1883
+   476,
+   1410,
+   828,
+   1944
   ],
-  "score": 0.655,
+  "score": 0.972,
   "key": [
-   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
-   "レイ",
-   "in CINEMA",
-   "Tumbler"
+   "IVE SECRET",
+   "リズ",
+   "Yetimall ラキドロ",
+   "-1"
   ],
-  "old_h": 148,
+  "old_h": 210,
   "alts": [
    [
     "REVIVE+",
@@ -2730,7 +2774,9 @@
     "Hapa Kristin",
     "5-1"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": false
  },
  {
   "photo": "20261002_060841000_iOS.png",
@@ -2744,19 +2790,19 @@
    2030
   ],
   "box": [
-   965,
-   1428,
-   1226,
-   1833
+   866,
+   1400,
+   1222,
+   1952
   ],
-  "score": 0.699,
+  "score": 0.883,
   "key": [
-   "LOVE DIVE",
+   "IVE SECRET",
    "イソ",
-   "Daum Cafe",
-   ""
+   "Yetimall ラキドロ",
+   "-1"
   ],
-  "old_h": 511,
+  "old_h": 119,
   "alts": [
    [
     "Collab & Event｜コラボ・イベント",
@@ -2776,7 +2822,9 @@
     "オフラインイベント",
     "10.12 TOKYO"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": false
  },
  {
   "photo": "20261002_060848000_iOS.png",
@@ -2790,19 +2838,19 @@
    1388
   ],
   "box": [
-   86,
-   832,
-   416,
-   1326
+   106,
+   842,
+   445,
+   1355
   ],
-  "score": 0.604,
+  "score": 0.83,
   "key": [
-   "Wonyoung Solo｜ウォニョン個人",
-   "ウォニョン",
-   "D-MALL 予約特典",
-   "3"
+   "IVE SECRET",
+   "ユジン",
+   "Yetimall ラキドロ",
+   "-2"
   ],
-  "old_h": 408,
+  "old_h": 118,
   "alts": [
    [
     "REVIVE+",
@@ -2822,7 +2870,9 @@
     "QQ Music",
     "Member set 2"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060848000_iOS.png",
@@ -2836,19 +2886,19 @@
    1388
   ],
   "box": [
-   485,
-   852,
-   777,
-   1301
+   475,
+   844,
+   818,
+   1363
   ],
-  "score": 0.565,
+  "score": 0.873,
   "key": [
-   "ALIVE",
-   "リズ",
-   "本体封入",
-   "Solo（IV ver.）"
+   "IVE SECRET",
+   "ガウル",
+   "Yetimall ラキドロ",
+   "-2"
   ],
-  "old_h": 318,
+  "old_h": 118,
   "alts": [
    [
     "2024 SEASON'S GREETINGS [A Fairy's Wish]",
@@ -2868,7 +2918,9 @@
     "Starship Square",
     "LOVED IVE"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060848000_iOS.png",
@@ -2882,19 +2934,19 @@
    1388
   ],
   "box": [
-   911,
-   862,
-   1197,
-   1290
+   850,
+   844,
+   1205,
+   1381
   ],
-  "score": 0.622,
+  "score": 0.865,
   "key": [
-   "After LIKE",
-   "ガウル",
-   "Music Korea",
-   ""
+   "IVE SECRET",
+   "レイ",
+   "Yetimall ラキドロ",
+   "-2"
   ],
-  "old_h": 549,
+  "old_h": 118,
   "alts": [
    [
     "Collab & Event｜コラボ・イベント",
@@ -2914,7 +2966,9 @@
     "A!SMART",
     "C"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": true
  },
  {
   "photo": "20261002_060848000_iOS.png",
@@ -2928,19 +2982,19 @@
    2030
   ],
   "box": [
-   114,
-   1441,
-   382,
-   1861
+   112,
+   1408,
+   446,
+   1928
   ],
-  "score": 0.564,
+  "score": 0.888,
   "key": [
-   "Collab & Event｜コラボ・イベント",
-   "イソ",
-   "MINIVE × LINE FRIENDS",
-   "特典 1"
+   "IVE SECRET",
+   "ウォニョン",
+   "Yetimall ラキドロ",
+   "-2"
   ],
-  "old_h": 516,
+  "old_h": 118,
   "alts": [
    [
     "IVE SECRET",
@@ -2960,7 +3014,9 @@
     "Random Photocard",
     "ユニット"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": false
  },
  {
   "photo": "20261002_060848000_iOS.png",
@@ -2974,19 +3030,19 @@
    2030
   ],
   "box": [
-   475,
-   1435,
-   811,
-   1938
+   479,
+   1408,
+   818,
+   1936
   ],
-  "score": 0.671,
+  "score": 0.907,
   "key": [
-   "Liz Solo｜リズ個人",
+   "IVE SECRET",
    "リズ",
-   "s.nature",
-   "4"
+   "Yetimall ラキドロ",
+   "-2"
   ],
-  "old_h": 308,
+  "old_h": 118,
   "alts": [
    [
     "LUCID DREAM",
@@ -3006,7 +3062,9 @@
     "withmuu",
     "8.0"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": false
  },
  {
   "photo": "20261002_060848000_iOS.png",
@@ -3020,19 +3078,19 @@
    2030
   ],
   "box": [
-   695,
-   1707,
-   1058,
-   2190
+   847,
+   1408,
+   1194,
+   1944
   ],
-  "score": 0.584,
+  "score": 0.86,
   "key": [
-   "I've MINE",
-   "ウォニョン",
-   "withmuu ラキドロ",
-   "2.0-2"
+   "IVE SECRET",
+   "イソ",
+   "Yetimall ラキドロ",
+   "-2"
   ],
-  "old_h": 246,
+  "old_h": 118,
   "alts": [
    [
     "Collab & Event｜コラボ・イベント",
@@ -3052,6 +3110,8 @@
     "Broadcast",
     "1"
    ]
-  ]
+  ],
+  "series": true,
+  "skip": false
  }
 ]
