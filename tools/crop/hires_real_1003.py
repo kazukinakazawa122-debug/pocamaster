@@ -153,29 +153,46 @@ def series():
 
 # 写真 12（OLIVEYOUNG の帯がカードの上下の約 10% を隠す）：本人「下の段の 3 枚は切り取って使ってよい」（2026-10-03）。
 # 帯の下から切る（上側が少し足りない）。箱は拡大した写真に目盛りを重ねてカードの角を読み取った。上の段 3 枚は使わない
-MANUAL = {(12, 1, 0): [8, 1410, 412, 1968], (12, 1, 1): [446, 1410, 836, 1976], (12, 1, 2): [898, 1410, 1246, 1962]}
+MANUAL = {(12, 1, 0): [8, 1410, 412, 1968], (12, 1, 1): [446, 1410, 836, 1976], (12, 1, 2): [898, 1410, 1246, 1962],
+          # 写真 8（本人「切り取りがもう少し大きくとれます」、2026-10-03）：重ね合わせの範囲が、実際のカード（スリーブの内側）より内側だった
+          # → 拡大した写真に目盛りを重ねてカードの端を読み取り、端から 6px 内側を切る（6 枚とも）
+          (8, 0, 0): [44, 781, 412, 1349], (8, 0, 1): [453, 773, 819, 1341], (8, 0, 2): [858, 778, 1219, 1349],
+          (8, 1, 0): [38, 1398, 419, 1984], (8, 1, 1): [468, 1398, 834, 1981], (8, 1, 2): [882, 1393, 1249, 1973]}
 
 
 # 本人「先ほどの（写真 12 の 3 枚）も明るくして」（2026-10-03）：写真 12 は黒い衣装の暗い写真で、いまの画像と同じ明るさでは暗いので、
 # 全体の平均（約 132/255）まで暗い部分を持ち上げる（箱の大きさで写真 12 のカードを見分ける）
-_p12_sizes = {(b[2] - b[0], b[3] - b[1]) for b in MANUAL.values()}
-_brighten0 = H.brighten
+_p12_sizes = {(b[2] - b[0], b[3] - b[1]) for k, b in MANUAL.items() if k[0] == 12}   # 写真 12 のカード（大きさで見分ける）
+SAT_K = float(os.environ.get("SAT_K", "1.2"))   # 彩度：持ち上げの強さ（1−ガンマ）× SAT_K を足す。0 なら足さない
+SAT_MAX = 1.4
+LIFT = float(os.environ.get("LIFT", "0.6"))
 
 
-def _brighten(new, old):
-    if new.size in _p12_sizes:
-        a = np.asarray(new.convert("RGB")).astype(np.float32) / 255
-        target = 132 / 255
-        g = 1.0
-        for cand in np.linspace(1.0, 0.5, 51):
-            g = cand
-            if (a ** cand).mean() >= target:
-                break
-        return Image.fromarray((255 * a ** g).clip(0, 255).astype(np.uint8))
-    return _brighten0(new, old)
+def _lift(a, target):
+    g = 1.0
+    for cand in np.linspace(1.0, 0.5, 51):
+        g = cand
+        if (a ** cand).mean() >= target:
+            break
+    return g
 
 
-H.brighten = _brighten
+def _brighten(new, old, p12=False):
+    """いまの画像と同じ明るさまで暗い部分を持ち上げ（写真 12 は全体の平均まで）、持ち上げたぶん白っぽくなるので彩度を上げる（本人「少し白くなった」）"""
+    from PIL import ImageEnhance
+    a = np.asarray(new.convert("RGB")).astype(np.float32) / 255
+    target = 132 / 255 if p12 else np.asarray(old.convert("L")).mean() / 255
+    if a.mean() >= target:
+        return new
+    if not p12:
+        target = a.mean() + LIFT * (target - a.mean())   # いまの画像との差の LIFT 割まで（全部合わせると白っぽくかすむ。本人「少し白くなった」）
+    g = _lift(a, target)
+    img = Image.fromarray((255 * a ** g).clip(0, 255).astype(np.uint8))
+    sat = min(SAT_MAX, 1 + (1 - g) * SAT_K)
+    return ImageEnhance.Color(img).enhance(sat) if sat > 1.001 else img
+
+
+H.brighten = lambda new, old: _brighten(new, old, new.size in _p12_sizes)
 
 
 def mark():

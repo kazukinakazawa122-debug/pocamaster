@@ -254,6 +254,12 @@
 ],
 [
 "REVIVE+",
+"ユジン",
+"QQ Music",
+"2.0 ランダム 1"
+],
+[
+"REVIVE+",
 "ガウル",
 "QQ Music",
 "2.0 ランダム 1"
@@ -905,7 +911,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ガウル"
+"ユジン"
 ],
 "source": "QQ Music",
 "version": "2.0 ランダム 1",
@@ -916,7 +922,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"レイ"
+"ガウル"
 ],
 "source": "QQ Music",
 "version": "2.0 ランダム 1",
@@ -927,7 +933,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ウォニョン"
+"レイ"
 ],
 "source": "QQ Music",
 "version": "2.0 ランダム 1",
@@ -938,7 +944,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"リズ"
+"ウォニョン"
 ],
 "source": "QQ Music",
 "version": "2.0 ランダム 1",
@@ -949,7 +955,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"イソ"
+"リズ"
 ],
 "source": "QQ Music",
 "version": "2.0 ランダム 1",
@@ -958,12 +964,12 @@
 "credit": "フリマの出品写真"
 },
 {
-"collection": "Be Alright",
+"collection": "REVIVE+",
 "members": [
-"ユジン"
+"イソ"
 ],
-"source": "オフラインイベント",
-"version": "10.13 OSAKA",
+"source": "QQ Music",
+"version": "2.0 ランダム 1",
 "file": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0047.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0047_t.jpg",
 "credit": "フリマの出品写真"
@@ -971,7 +977,7 @@
 {
 "collection": "Be Alright",
 "members": [
-"ガウル"
+"ユジン"
 ],
 "source": "オフラインイベント",
 "version": "10.13 OSAKA",
@@ -982,7 +988,7 @@
 {
 "collection": "Be Alright",
 "members": [
-"レイ"
+"ガウル"
 ],
 "source": "オフラインイベント",
 "version": "10.13 OSAKA",
@@ -993,7 +999,7 @@
 {
 "collection": "Be Alright",
 "members": [
-"ウォニョン"
+"レイ"
 ],
 "source": "オフラインイベント",
 "version": "10.13 OSAKA",
@@ -1004,7 +1010,7 @@
 {
 "collection": "Be Alright",
 "members": [
-"リズ"
+"ウォニョン"
 ],
 "source": "オフラインイベント",
 "version": "10.13 OSAKA",
@@ -1015,7 +1021,7 @@
 {
 "collection": "Be Alright",
 "members": [
-"イソ"
+"リズ"
 ],
 "source": "オフラインイベント",
 "version": "10.13 OSAKA",
@@ -1024,12 +1030,12 @@
 "credit": "フリマの出品写真"
 },
 {
-"collection": "REVIVE+",
+"collection": "Be Alright",
 "members": [
-"ウォニョン"
+"イソ"
 ],
-"source": "OLIVE YOUNG ラキドロ",
-"version": "",
+"source": "オフラインイベント",
+"version": "10.13 OSAKA",
 "file": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0053.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0053_t.jpg",
 "credit": "フリマの出品写真"
@@ -1037,7 +1043,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"リズ"
+"ウォニョン"
 ],
 "source": "OLIVE YOUNG ラキドロ",
 "version": "",
@@ -1048,7 +1054,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"イソ"
+"リズ"
 ],
 "source": "OLIVE YOUNG ラキドロ",
 "version": "",
@@ -1059,10 +1065,10 @@
 {
 "collection": "REVIVE+",
 "members": [
-"リズ"
+"イソ"
 ],
-"source": "Beatroad",
-"version": "1.0",
+"source": "OLIVE YOUNG ラキドロ",
+"version": "",
 "file": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0056.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0056_t.jpg",
 "credit": "フリマの出品写真"
@@ -1070,7 +1076,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ガウル"
+"リズ"
 ],
 "source": "Beatroad",
 "version": "1.0",
@@ -1081,7 +1087,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"レイ"
+"ガウル"
 ],
 "source": "Beatroad",
 "version": "1.0",
@@ -1092,7 +1098,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"イソ"
+"レイ"
 ],
 "source": "Beatroad",
 "version": "1.0",
@@ -1103,7 +1109,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ユジン"
+"イソ"
 ],
 "source": "Beatroad",
 "version": "1.0",
@@ -1114,7 +1120,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ウォニョン"
+"ユジン"
 ],
 "source": "Beatroad",
 "version": "1.0",
@@ -1125,10 +1131,10 @@
 {
 "collection": "REVIVE+",
 "members": [
-"レイ"
+"ウォニョン"
 ],
-"source": "withmuu ラキドロ",
-"version": "9.0",
+"source": "Beatroad",
+"version": "1.0",
 "file": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0062.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0062_t.jpg",
 "credit": "フリマの出品写真"
@@ -1136,7 +1142,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ガウル"
+"レイ"
 ],
 "source": "withmuu ラキドロ",
 "version": "9.0",
@@ -1147,7 +1153,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"イソ"
+"ガウル"
 ],
 "source": "withmuu ラキドロ",
 "version": "9.0",
@@ -1158,7 +1164,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ウォニョン"
+"イソ"
 ],
 "source": "withmuu ラキドロ",
 "version": "9.0",
@@ -1169,7 +1175,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ユジン"
+"ウォニョン"
 ],
 "source": "withmuu ラキドロ",
 "version": "9.0",
@@ -1180,10 +1186,10 @@
 {
 "collection": "REVIVE+",
 "members": [
-"リズ"
+"ユジン"
 ],
-"source": "Apple Music",
-"version": "3.0",
+"source": "withmuu ラキドロ",
+"version": "9.0",
 "file": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0067.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0067_t.jpg",
 "credit": "フリマの出品写真"
@@ -1191,7 +1197,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"イソ"
+"リズ"
 ],
 "source": "Apple Music",
 "version": "3.0",
@@ -1202,7 +1208,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ユジン"
+"イソ"
 ],
 "source": "Apple Music",
 "version": "3.0",
@@ -1213,7 +1219,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ガウル"
+"ユジン"
 ],
 "source": "Apple Music",
 "version": "3.0",
@@ -1224,7 +1230,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ウォニョン"
+"ガウル"
 ],
 "source": "Apple Music",
 "version": "3.0",
@@ -1235,12 +1241,23 @@
 {
 "collection": "REVIVE+",
 "members": [
-"レイ"
+"ウォニョン"
 ],
 "source": "Apple Music",
 "version": "3.0",
 "file": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0072.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0072_t.jpg",
+"credit": "フリマの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Apple Music",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0073.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzz_real_flea_1003/0073_t.jpg",
 "credit": "フリマの出品写真"
 }
 ]
