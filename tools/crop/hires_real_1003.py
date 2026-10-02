@@ -165,6 +165,8 @@ MANUAL = {(12, 1, 0): [8, 1410, 412, 1968], (12, 1, 1): [446, 1410, 836, 1976], 
 _p12_sizes = {(b[2] - b[0], b[3] - b[1]) for k, b in MANUAL.items() if k[0] == 12}   # 写真 12 のカード（大きさで見分ける）
 SAT_K = float(os.environ.get("SAT_K", "1.2"))   # 彩度：持ち上げの強さ（1−ガンマ）× SAT_K を足す。0 なら足さない
 SAT_MAX = 1.4
+# 本人「少し白っぽくなっているので、明るさは元に戻していい」（2026-10-03）→ 明るさ・彩度の補正をやめて、写真から切り取ったまま。補正がほしいときは True（LIFT・SAT_K・写真 12 の平均 132 で調整）
+BRIGHTEN = False
 LIFT = float(os.environ.get("LIFT", "0.6"))
 
 
@@ -180,6 +182,8 @@ def _lift(a, target):
 def _brighten(new, old, p12=False):
     """いまの画像と同じ明るさまで暗い部分を持ち上げ（写真 12 は全体の平均まで）、持ち上げたぶん白っぽくなるので彩度を上げる（本人「少し白くなった」）"""
     from PIL import ImageEnhance
+    if not BRIGHTEN:
+        return new
     a = np.asarray(new.convert("RGB")).astype(np.float32) / 255
     target = 132 / 255 if p12 else np.asarray(old.convert("L")).mean() / 255
     if a.mean() >= target:
