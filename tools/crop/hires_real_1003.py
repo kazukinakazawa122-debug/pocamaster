@@ -117,7 +117,7 @@ def find():
 # 11＝店のバーコードのシールがカードにかかる（いまの画像は 600px 以上で、差し替えの利益もない）
 NOT_USED = {11, 12}
 # 本人の確認（2026-10-03）：確認ページの 65 組のうち #88（写真 23）だけ「ちがう」→ 差し替えない
-NOT_USED_N = {88}
+NOT_USED_N = set()   # 以前は #88（写真 23）を「ちがう」としたが、本人に聞いて REVIVE+ リズ withmuu ラキドロ 9.0 と決まった（下の SINGLE）
 H.FIX = {}                                  # 1002 のずれの直しは番号が別なので使わない
 H.JOB = "zzzzzzzzzzzzzzzzzzzz_real_flea_1003"  # 1002 よりあとに読まれる名前
 
@@ -199,6 +199,25 @@ def _brighten(new, old, p12=False):
 H.brighten = lambda new, old: _brighten(new, old, new.size in _p12_sizes)
 
 
+# 本人に聞いて決まった 1 枚の写真（2026-10-03）：23＝REVIVE+ リズ withmuu ラキドロ 9.0。そのカードの画像と重ねて範囲を決め直す
+SINGLE = {23: ("REVIVE+", "リズ", "withmuu ラキドロ", "9.0")}
+
+
+def single():
+    out = json.load(open(H.OUTJ, encoding="utf-8"))
+    z, entries, _ = load()
+    files = H.photos()
+    for pi, k in SINGLE.items():
+        e = next(e for e in entries if H.key(e) == k)
+        old = Image.open(io.BytesIO(z.read(e["file"]))).convert("RGB")
+        o = next(o for o in out if o["pi"] == pi)
+        im = Image.open(files[pi]).convert("RGB")
+        box, sc = locate(im, o["cell"], old, lo=0.4, hi=0.95)
+        print(pi, k, "前", o["key"], o["score"], "→ 重なり", round(sc, 3), box)
+        o.update(key=list(k), score=round(float(sc), 3), box=box, old_h=old.size[1], series=True)
+    json.dump(out, open(H.OUTJ, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+
 def mark():
     """使わない写真・大きくならないものに skip を付け、確認ページには差し替えるものだけを出す"""
     out = json.load(open(H.OUTJ, encoding="utf-8"))
@@ -217,4 +236,4 @@ def mark():
 
 
 if __name__ == "__main__":
-    {"series": series, "mark": mark, "find": find, "refine": H.refine, "apply": H.apply}[sys.argv[1] if len(sys.argv) > 1 else "find"]()
+    {"single": single, "series": series, "mark": mark, "find": find, "refine": H.refine, "apply": H.apply}[sys.argv[1] if len(sys.argv) > 1 else "find"]()

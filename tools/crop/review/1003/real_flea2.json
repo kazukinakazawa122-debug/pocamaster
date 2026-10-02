@@ -2710,19 +2710,19 @@
    2009
   ],
   "box": [
-   372,
-   1195,
-   820,
-   1911
+   276,
+   803,
+   1028,
+   1947
   ],
-  "score": 0.756,
+  "score": 0.949,
   "key": [
    "REVIVE+",
-   "ガウル",
-   "QQ Music",
-   "Member set 2"
+   "リズ",
+   "withmuu ラキドロ",
+   "9.0"
   ],
-  "old_h": 482,
+  "old_h": 181,
   "alts": [
    [
     "ELEVEN -Japanese ver.-",
@@ -2743,7 +2743,8 @@
     "1.0"
    ]
   ],
-  "skip": true
+  "skip": false,
+  "series": true
  },
  {
   "photo": "20261002_150527000_iOS.png",
