@@ -1,0 +1,1732 @@
+[
+ {
+  "photo": "20261002_162051000_iOS.png",
+  "pi": 12,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   427,
+   1388
+  ],
+  "box": [
+   71,
+   794,
+   453,
+   1378
+  ],
+  "score": 0.907,
+  "key": [
+   "IVE SECRET",
+   "ユジン",
+   "hellolive",
+   "1.0"
+  ],
+  "old_h": 119,
+  "alts": [],
+  "series": true,
+  "skip": false
+ },
+ {
+  "photo": "20261002_162051000_iOS.png",
+  "pi": 12,
+  "r": 0,
+  "c": 1,
+  "cell": [
+   427,
+   747,
+   855,
+   1388
+  ],
+  "box": [
+   453,
+   814,
+   824,
+   1381
+  ],
+  "score": 0.815,
+  "key": [
+   "IVE SECRET",
+   "ガウル",
+   "hellolive",
+   "1.0"
+  ],
+  "old_h": 119,
+  "alts": [],
+  "skip": false
+ },
+ {
+  "photo": "20261002_162051000_iOS.png",
+  "pi": 12,
+  "r": 0,
+  "c": 2,
+  "cell": [
+   855,
+   747,
+   1283,
+   1388
+  ],
+  "box": [
+   857,
+   821,
+   1228,
+   1388
+  ],
+  "score": 0.87,
+  "key": [
+   "IVE SECRET",
+   "レイ",
+   "hellolive",
+   "1.0"
+  ],
+  "old_h": 119,
+  "alts": [],
+  "skip": false
+ },
+ {
+  "photo": "20261002_162051000_iOS.png",
+  "pi": 12,
+  "r": 1,
+  "c": 0,
+  "cell": [
+   0,
+   1388,
+   427,
+   2030
+  ],
+  "box": [
+   57,
+   1384,
+   451,
+   1985
+  ],
+  "score": 0.899,
+  "key": [
+   "IVE SECRET",
+   "ウォニョン",
+   "hellolive",
+   "1.0"
+  ],
+  "old_h": 119,
+  "alts": [],
+  "skip": false
+ },
+ {
+  "photo": "20261002_162051000_iOS.png",
+  "pi": 12,
+  "r": 1,
+  "c": 1,
+  "cell": [
+   427,
+   1388,
+   855,
+   2030
+  ],
+  "box": [
+   492,
+   1431,
+   832,
+   1945
+  ],
+  "score": 0.94,
+  "key": [
+   "IVE SECRET",
+   "リズ",
+   "hellolive",
+   "1.0"
+  ],
+  "old_h": 277,
+  "alts": [],
+  "skip": false
+ },
+ {
+  "photo": "20261002_162051000_iOS.png",
+  "pi": 12,
+  "r": 1,
+  "c": 2,
+  "cell": [
+   855,
+   1388,
+   1283,
+   2030
+  ],
+  "box": [
+   817,
+   1377,
+   1204,
+   1968
+  ],
+  "score": 0.728,
+  "key": [
+   "IVE SECRET",
+   "イソ",
+   "hellolive",
+   "1.0"
+  ],
+  "old_h": 119,
+  "alts": [],
+  "series": true,
+  "skip": false
+ },
+ {
+  "photo": "20261002_162107000_iOS.png",
+  "pi": 13,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   427,
+   1388
+  ],
+  "box": [
+   40,
+   846,
+   343,
+   1298
+  ],
+  "score": 0.497,
+  "key": [
+   "IVE EMPATHY",
+   "ウォニョン",
+   "StarRiver",
+   "2.0"
+  ],
+  "old_h": 249,
+  "alts": [],
+  "skip": true
+ },
+ {
+  "photo": "20261002_162107000_iOS.png",
+  "pi": 13,
+  "r": 0,
+  "c": 1,
+  "cell": [
+   427,
+   747,
+   855,
+   1388
+  ],
+  "box": [
+   340,
+   1126,
+   591,
+   1502
+  ],
+  "score": 0.47,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 275,
+  "alts": [],
+  "skip": true
+ },
+ {
+  "photo": "20261002_162107000_iOS.png",
+  "pi": 13,
+  "r": 0,
+  "c": 2,
+  "cell": [
+   855,
+   747,
+   1283,
+   1388
+  ],
+  "box": [
+   868,
+   852,
+   1216,
+   1388
+  ],
+  "score": 0.639,
+  "key": [
+   "DIVE Official Fanclub｜ファンクラブ",
+   "イソ",
+   "DIVE 2期 'MAGAZINE IVE'",
+   ""
+  ],
+  "old_h": 510,
+  "alts": [],
+  "skip": true
+ },
+ {
+  "photo": "20261002_162107000_iOS.png",
+  "pi": 13,
+  "r": 1,
+  "c": 0,
+  "cell": [
+   0,
+   1388,
+   427,
+   2030
+  ],
+  "box": [
+   77,
+   1549,
+   320,
+   1914
+  ],
+  "score": 0.661,
+  "key": [
+   "Collab & Event｜コラボ・イベント",
+   "リズ",
+   "MINIVE POP-UP 'MINIVE PARK'",
+   "Face Cushion"
+  ],
+  "old_h": 390,
+  "alts": [],
+  "skip": true
+ },
+ {
+  "photo": "20261002_162107000_iOS.png",
+  "pi": 13,
+  "r": 1,
+  "c": 1,
+  "cell": [
+   427,
+   1388,
+   855,
+   2030
+  ],
+  "box": [
+   483,
+   1448,
+   814,
+   1945
+  ],
+  "score": 0.539,
+  "key": [
+   "Collab & Event｜コラボ・イベント",
+   "ウォニョン",
+   "MINIVE POP-UP 'MINIVE PARK'",
+   "50K Benefit 2nd week"
+  ],
+  "old_h": 390,
+  "alts": [],
+  "skip": true
+ },
+ {
+  "photo": "20261002_162107000_iOS.png",
+  "pi": 13,
+  "r": 1,
+  "c": 2,
+  "cell": [
+   855,
+   1388,
+   1283,
+   2030
+  ],
+  "box": [
+   879,
+   1682,
+   1186,
+   2155
+  ],
+  "score": 0.593,
+  "key": [
+   "4th FAN CONCERT 'DIVE into IVE'",
+   "ユジン",
+   "Random Photocard Pack",
+   "4"
+  ],
+  "old_h": 225,
+  "alts": [],
+  "skip": true
+ },
+ {
+  "photo": "20261002_161142000_iOS.png",
+  "pi": 0,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   317,
+   939,
+   966,
+   1913
+  ],
+  "score": 0.946,
+  "key": [
+   "IVE SECRET",
+   "リズ",
+   "Beatroad",
+   "2.0"
+  ],
+  "old_h": 276,
+  "alts": [
+   [
+    "IVE SECRET",
+    "レイ",
+    "IDOLSHOP",
+    "POLA"
+   ],
+   [
+    "REVIVE+",
+    "ウォニョン",
+    "Soundwave ラキドロ",
+    "3.0 POLA"
+   ],
+   [
+    "After LIKE",
+    "リズ",
+    "POB",
+    "Circle Card"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_161243000_iOS.png",
+  "pi": 1,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   311,
+   927,
+   922,
+   1868
+  ],
+  "score": 0.923,
+  "key": [
+   "IVE SECRET",
+   "イソ",
+   "Beatroad",
+   "2.0"
+  ],
+  "old_h": 120,
+  "alts": [
+   [
+    "IVE SECRET",
+    "リズ",
+    "Makestar",
+    "5.0"
+   ],
+   [
+    "IVE EMPATHY",
+    "ユジン",
+    "Makestar",
+    "4.0 Shanghai"
+   ],
+   [
+    "2023 SEASON'S GREETINGS [Ready, Get Set, IVE!]",
+    "リズ",
+    "Starship Square",
+    ""
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_161306000_iOS.png",
+  "pi": 2,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   533,
+   1283,
+   2244
+  ],
+  "box": [
+   265,
+   794,
+   1028,
+   1939
+  ],
+  "score": 0.786,
+  "key": [
+   "IVE SECRET",
+   "ガウル",
+   "Beatroad",
+   "2.0"
+  ],
+  "old_h": 276,
+  "alts": [
+   [
+    "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+    "ユジン",
+    "Encore Blu-ray・Kit",
+    "Ktown4U 特典"
+   ],
+   [
+    "I've MINE",
+    "リズ",
+    "mymusictaste",
+    "3.0"
+   ],
+   [
+    "REVIVE+",
+    "ガウル",
+    "Broadcast",
+    "BANG BANG"
+   ]
+  ],
+  "series": true,
+  "skip": false
+ },
+ {
+  "photo": "20261002_161316000_iOS.png",
+  "pi": 3,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   287,
+   851,
+   1042,
+   1984
+  ],
+  "score": 0.938,
+  "key": [
+   "IVE SECRET",
+   "レイ",
+   "Beatroad",
+   "2.0"
+  ],
+  "old_h": 276,
+  "alts": [
+   [
+    "ELEVEN",
+    "ウォニョン",
+    "POB",
+    "Message Card"
+   ],
+   [
+    "IVE SECRET",
+    "ユジン",
+    "IDOLSHOP",
+    "POLA"
+   ],
+   [
+    "LOVE DIVE",
+    "イソ",
+    "本体封入",
+    "Heart Hologram Card"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_161612000_iOS.png",
+  "pi": 4,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   846,
+   1280,
+   2030
+  ],
+  "box": [
+   287,
+   819,
+   975,
+   1847
+  ],
+  "score": 0.858,
+  "key": [
+   "IVE SECRET",
+   "ユジン",
+   "Beatroad",
+   "2.0"
+  ],
+  "old_h": 266,
+  "alts": [
+   [
+    "ALIVE",
+    "ガウル",
+    "本体封入",
+    "Limited ED（V ver.）"
+   ],
+   [
+    "Yujin Solo｜ユジン個人",
+    "ユジン",
+    "Maxim Coffee",
+    "2-1"
+   ],
+   [
+    "ELEVEN",
+    "ガウル",
+    "Soundwave ラキドロ",
+    "2.0 POLA"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_161725000_iOS.png",
+  "pi": 5,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   437,
+   1283,
+   2341
+  ],
+  "box": [
+   135,
+   616,
+   1079,
+   2032
+  ],
+  "score": 0.95,
+  "key": [
+   "IVE SECRET",
+   "ウォニョン",
+   "Beatroad",
+   "2.0"
+  ],
+  "old_h": 276,
+  "alts": [
+   [
+    "DIVE Official Fanclub｜ファンクラブ",
+    "イソ",
+    "DIVE 3期 'IVE SCOUT'",
+    "DIVE JAPAN"
+   ],
+   [
+    "I've MINE",
+    "イソ",
+    "mymusictaste",
+    "2.0"
+   ],
+   [
+    "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+    "レイ",
+    "Encore Blu-ray・Kit",
+    "Kit"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_161831000_iOS.png",
+  "pi": 6,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   533,
+   1283,
+   2244
+  ],
+  "box": [
+   211,
+   710,
+   1029,
+   1975
+  ],
+  "score": 0.749,
+  "key": [
+   "IVE SECRET",
+   "イソ",
+   "Soundwave",
+   "5.0"
+  ],
+  "old_h": 119,
+  "alts": [
+   [
+    "REVIVE+",
+    "イソ",
+    "Tower Records",
+    "A"
+   ],
+   [
+    "REVIVE+",
+    "ウォニョン",
+    "QQ Music",
+    "2.0 ランダム 1"
+   ],
+   [
+    "After LIKE",
+    "全員",
+    "Music Korea ファンサイン当選特典",
+    "PVC GROUP 2"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_161838000_iOS.png",
+  "pi": 7,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   347,
+   844,
+   971,
+   1809
+  ],
+  "score": 0.718,
+  "key": [
+   "IVE SECRET",
+   "リズ",
+   "Soundwave",
+   "5.0"
+  ],
+  "old_h": 119,
+  "alts": [
+   [
+    "IVE SWITCH",
+    "ウォニョン",
+    "withmuu ラキドロ",
+    "1.0-3"
+   ],
+   [
+    "2nd WORLD TOUR 'SHOW WHAT I AM'",
+    "ユジン",
+    "SWIA TAIPEI 特典",
+    "Mnet+"
+   ],
+   [
+    "After LIKE",
+    "ガウル",
+    "POB",
+    "Circle Card"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_161849000_iOS.png",
+  "pi": 8,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   351,
+   855,
+   988,
+   1839
+  ],
+  "score": 0.802,
+  "key": [
+   "IVE SECRET",
+   "レイ",
+   "Soundwave",
+   "5.0"
+  ],
+  "old_h": 119,
+  "alts": [
+   [
+    "REVIVE+",
+    "ガウル",
+    "Makestar ラキドロ",
+    "4.0 POLA"
+   ],
+   [
+    "2nd WORLD TOUR 'SHOW WHAT I AM'",
+    "ウォニョン",
+    "SuperStar STARSHIP",
+    "LA"
+   ],
+   [
+    "ELEVEN",
+    "ウォニョン",
+    "POB",
+    "ID Card"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_161859000_iOS.png",
+  "pi": 9,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   347,
+   903,
+   965,
+   1858
+  ],
+  "score": 0.858,
+  "key": [
+   "IVE SECRET",
+   "ユジン",
+   "Soundwave",
+   "5.0"
+  ],
+  "old_h": 119,
+  "alts": [
+   [
+    "IVE SECRET",
+    "レイ",
+    "IDOLSHOP",
+    "POLA"
+   ],
+   [
+    "IVE SECRET",
+    "ガウル",
+    "IDOLSHOP",
+    "POLA"
+   ],
+   [
+    "After LIKE",
+    "ガウル",
+    "withmuu ラキドロ",
+    "2.0-3"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_161953000_iOS.png",
+  "pi": 10,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   379,
+   929,
+   947,
+   1808
+  ],
+  "score": 0.782,
+  "key": [
+   "IVE SECRET",
+   "ウォニョン",
+   "Soundwave",
+   "5.0"
+  ],
+  "old_h": 119,
+  "alts": [
+   [
+    "LOVE DIVE",
+    "ウォニョン",
+    "本体封入",
+    "Jewel ver."
+   ],
+   [
+    "1st FAN CONCERT 'The Prom Queens'",
+    "ユジン",
+    "DVD・Blu-ray・Kit",
+    "Kit POLA"
+   ],
+   [
+    "Wonyoung Solo｜ウォニョン個人",
+    "ウォニョン",
+    "Music Bank MC 生放送入場限定",
+    "220708"
+   ]
+  ],
+  "series": true,
+  "skip": false
+ },
+ {
+  "photo": "20261002_162026000_iOS.png",
+  "pi": 11,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   241,
+   814,
+   981,
+   1944
+  ],
+  "score": 0.922,
+  "key": [
+   "IVE SECRET",
+   "ウォニョン",
+   "hellolive",
+   "1.0"
+  ],
+  "old_h": 119,
+  "alts": [
+   [
+    "ELEVEN",
+    "レイ",
+    "POB",
+    "Message Card"
+   ],
+   [
+    "ELEVEN",
+    "イソ",
+    "POB",
+    "Message Card"
+   ],
+   [
+    "IVE SECRET",
+    "レイ",
+    "IDOLSHOP",
+    "POLA"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162117000_iOS.png",
+  "pi": 14,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   533,
+   1283,
+   2244
+  ],
+  "box": [
+   345,
+   922,
+   988,
+   1903
+  ],
+  "score": 0.937,
+  "key": [
+   "IVE SECRET",
+   "ウォニョン",
+   "hellolive",
+   "2.0"
+  ],
+  "old_h": 119,
+  "alts": [
+   [
+    "ELEVEN",
+    "リズ",
+    "JoeunMusic",
+    ""
+   ],
+   [
+    "ELEVEN",
+    "リズ",
+    "Withdrama ラキドロ",
+    "2.0 POLA"
+   ],
+   [
+    "Collab & Event｜コラボ・イベント",
+    "リズ",
+    "ForEVER IVE（エバーランド）",
+    "Special Reward 2.0"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162144000_iOS.png",
+  "pi": 15,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   361,
+   1019,
+   853,
+   1824
+  ],
+  "score": 0.859,
+  "key": [
+   "IVE SECRET",
+   "イソ",
+   "MusicArt",
+   ""
+  ],
+  "old_h": 268,
+  "alts": [
+   [
+    "IVE SECRET",
+    "ウォニョン",
+    "IDOLSHOP",
+    "POLA"
+   ],
+   [
+    "I've MINE",
+    "レイ",
+    "withmuu ラキドロ",
+    "6.0-3"
+   ],
+   [
+    "ELEVEN",
+    "リズ",
+    "Yizhiyu",
+    "1.0"
+   ]
+  ],
+  "series": true,
+  "skip": false
+ },
+ {
+  "photo": "20261002_162151000_iOS.png",
+  "pi": 16,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   273,
+   921,
+   903,
+   1887
+  ],
+  "score": 0.913,
+  "key": [
+   "IVE SECRET",
+   "ガウル",
+   "MusicArt",
+   ""
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "IVE SECRET",
+    "レイ",
+    "IDOLSHOP",
+    "POLA"
+   ],
+   [
+    "ELEVEN -Japanese ver.-",
+    "ガウル",
+    "タワレコ",
+    "IDトレカ"
+   ],
+   [
+    "IVE SECRET",
+    "ウォニョン",
+    "IDOLSHOP",
+    "POLA"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162159000_iOS.png",
+  "pi": 17,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   367,
+   945,
+   952,
+   1826
+  ],
+  "score": 0.812,
+  "key": [
+   "IVE SECRET",
+   "リズ",
+   "MusicArt",
+   ""
+  ],
+  "old_h": 277,
+  "alts": [
+   [
+    "IVE SECRET",
+    "イソ",
+    "Apple Music ラキドロ",
+    "5.0 POLA"
+   ],
+   [
+    "IVE SECRET",
+    "レイ",
+    "IDOLSHOP",
+    "POLA"
+   ],
+   [
+    "IVE SWITCH",
+    "レイ",
+    "Makestar ラキドロ",
+    "4.0 POLA"
+   ]
+  ],
+  "series": true,
+  "skip": false
+ },
+ {
+  "photo": "20261002_162206000_iOS.png",
+  "pi": 18,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   325,
+   911,
+   922,
+   1826
+  ],
+  "score": 0.889,
+  "key": [
+   "IVE SECRET",
+   "ウォニョン",
+   "MusicArt",
+   ""
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+    "イソ",
+    "in CINEMA",
+    "Tumbler"
+   ],
+   [
+    "IVE SECRET",
+    "ウォニョン",
+    "withmuu ラキドロ",
+    "8.0 POLA"
+   ],
+   [
+    "2nd FANMEETING 'MAGAZINE IVE'",
+    "レイ",
+    "Random Photocard Pack",
+    "4"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162340000_iOS.png",
+  "pi": 19,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   533,
+   1283,
+   2244
+  ],
+  "box": [
+   277,
+   800,
+   1025,
+   1946
+  ],
+  "score": 0.788,
+  "key": [
+   "IVE SECRET",
+   "レイ",
+   "withmuu ラキドロ",
+   "8.0-2"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "ELEVEN",
+    "ウォニョン",
+    "POB",
+    "ID Card"
+   ],
+   [
+    "ELEVEN",
+    "リズ",
+    "POB",
+    "ID Card"
+   ],
+   [
+    "Be Alright",
+    "レイ",
+    "Amulet Card (お守りカード)",
+    ""
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162349000_iOS.png",
+  "pi": 20,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   533,
+   1283,
+   2244
+  ],
+  "box": [
+   183,
+   718,
+   978,
+   1937
+  ],
+  "score": 0.927,
+  "key": [
+   "IVE SECRET",
+   "ガウル",
+   "withmuu ラキドロ",
+   "8.0-2"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "REVIVE+",
+    "ガウル",
+    "QQ Music",
+    "Member set 2"
+   ],
+   [
+    "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+    "リズ",
+    "in CINEMA",
+    "Tumbler"
+   ],
+   [
+    "REVIVE+",
+    "ガウル",
+    "SWIA OSAKA exclusive",
+    "4.18"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162418000_iOS.png",
+  "pi": 21,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   259,
+   796,
+   1007,
+   1942
+  ],
+  "score": 0.962,
+  "key": [
+   "IVE SECRET",
+   "リズ",
+   "withmuu ラキドロ",
+   "8.0-2"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+    "ガウル",
+    "Random Photocard",
+    "4"
+   ],
+   [
+    "After LIKE",
+    "ユジン",
+    "POB",
+    "Circle Card"
+   ],
+   [
+    "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+    "ガウル",
+    "MD",
+    "Necklace"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162424000_iOS.png",
+  "pi": 22,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   291,
+   887,
+   974,
+   1912
+  ],
+  "score": 0.97,
+  "key": [
+   "IVE SECRET",
+   "ウォニョン",
+   "withmuu ラキドロ",
+   "8.0-2"
+  ],
+  "old_h": 276,
+  "alts": [
+   [
+    "4th FAN CONCERT 'DIVE into IVE'",
+    "ウォニョン",
+    "MD",
+    "70K Benefit"
+   ],
+   [
+    "WAVE",
+    "ウォニョン",
+    "ハイタッチ会",
+    "A"
+   ],
+   [
+    "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+    "ウォニョン",
+    "MD",
+    "Necklace"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162442000_iOS.png",
+  "pi": 23,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   301,
+   887,
+   931,
+   1853
+  ],
+  "score": 0.922,
+  "key": [
+   "IVE SECRET",
+   "ユジン",
+   "withmuu ラキドロ",
+   "8.0-2"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "ELEVEN -Japanese ver.-",
+    "ガウル",
+    "タワレコ",
+    "IDトレカ"
+   ],
+   [
+    "ELEVEN",
+    "レイ",
+    "POB",
+    "ID Card"
+   ],
+   [
+    "IVE SECRET",
+    "イソ",
+    "Makestar",
+    "1.0"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162507000_iOS.png",
+  "pi": 24,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   251,
+   722,
+   967,
+   1819
+  ],
+  "score": 0.795,
+  "key": [
+   "IVE SECRET",
+   "イソ",
+   "withmuu ラキドロ",
+   "8.0-2"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "Rei Solo｜レイ個人",
+    "レイ",
+    "millet",
+    "Set 1"
+   ],
+   [
+    "IVE SECRET",
+    "リズ",
+    "Soundwave",
+    "1.0"
+   ],
+   [
+    "REVIVE+",
+    "ウォニョン",
+    "QQ Music",
+    "2.0 ランダム 1"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162519000_iOS.png",
+  "pi": 25,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   259,
+   820,
+   975,
+   1917
+  ],
+  "score": 0.772,
+  "key": [
+   "IVE SECRET",
+   "ウォニョン",
+   "withmuu ラキドロ",
+   "8.0-1"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "Yujin Solo｜ユジン個人",
+    "ユジン",
+    "CLIO",
+    "3（2023.9）-1"
+   ],
+   [
+    "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+    "ウォニョン",
+    "Encore Blu-ray・Kit",
+    "Blu-ray"
+   ],
+   [
+    "IVE SECRET",
+    "ウォニョン",
+    "Apple Music ラキドロ",
+    "5.0-2"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162536000_iOS.png",
+  "pi": 26,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   277,
+   839,
+   1007,
+   1958
+  ],
+  "score": 0.897,
+  "key": [
+   "IVE SECRET",
+   "レイ",
+   "withmuu ラキドロ",
+   "8.0-1"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "ELEVEN -Japanese ver.-",
+    "リズ",
+    "Soundwave",
+    ""
+   ],
+   [
+    "ELEVEN",
+    "リズ",
+    "Withdrama ラキドロ",
+    "2.0 POLA"
+   ],
+   [
+    "I've MINE",
+    "イソ",
+    "IDOUSTAGE",
+    "2.0"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162542000_iOS.png",
+  "pi": 27,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   329,
+   806,
+   1024,
+   1871
+  ],
+  "score": 0.935,
+  "key": [
+   "IVE SECRET",
+   "ユジン",
+   "withmuu ラキドロ",
+   "8.0-1"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "Be Alright",
+    "ガウル",
+    "IVE SCOUT",
+    "神戸・横浜 2日目"
+   ],
+   [
+    "REVIVE+",
+    "イソ",
+    "HIT! MAGAZINE",
+    ""
+   ],
+   [
+    "REVIVE+",
+    "ウォニョン",
+    "Soundwave ラキドロ",
+    "3.0 POLA"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162548000_iOS.png",
+  "pi": 28,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   267,
+   814,
+   1000,
+   1937
+  ],
+  "score": 0.926,
+  "key": [
+   "IVE SECRET",
+   "リズ",
+   "withmuu ラキドロ",
+   "8.0-1"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "IVE SECRET",
+    "イソ",
+    "オフラインイベント",
+    "11.23 TOKYO"
+   ],
+   [
+    "Be Alright",
+    "ガウル",
+    "オフラインイベント",
+    "9.23 TOKYO"
+   ],
+   [
+    "LUCID DREAM",
+    "リズ",
+    "SWIA TOKYO exclusive",
+    "6.24-2"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162631000_iOS.png",
+  "pi": 29,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   317,
+   931,
+   1007,
+   1988
+  ],
+  "score": 0.886,
+  "key": [
+   "IVE SECRET",
+   "ガウル",
+   "withmuu ラキドロ",
+   "8.0-1"
+  ],
+  "old_h": 118,
+  "alts": [
+   [
+    "ELEVEN -Japanese ver.-",
+    "ウォニョン",
+    "タワレコ",
+    "IDトレカ"
+   ],
+   [
+    "REVIVE+",
+    "ガウル",
+    "京东",
+    "1.0"
+   ],
+   [
+    "ELEVEN",
+    "リズ",
+    "本体封入",
+    "ver.1"
+   ]
+  ],
+  "skip": false,
+  "series": true
+ },
+ {
+  "photo": "20261002_162711000_iOS.png",
+  "pi": 30,
+  "r": 0,
+  "c": 0,
+  "cell": [
+   0,
+   747,
+   1283,
+   2030
+  ],
+  "box": [
+   273,
+   838,
+   982,
+   1905
+  ],
+  "score": 0.953,
+  "key": [
+   "IVE SECRET",
+   "イソ",
+   "withmuu ラキドロ",
+   "8.0-1"
+  ],
+  "old_h": 277,
+  "alts": [
+   [
+    "ALIVE",
+    "イソ",
+    "HMV・LAWSON",
+    "Selca Photocard #C"
+   ],
+   [
+    "REVIVE+",
+    "イソ",
+    "US Exclusive",
+    ""
+   ],
+   [
+    "I've IVE",
+    "ガウル",
+    "withmuu FC",
+    ""
+   ]
+  ],
+  "skip": false,
+  "series": true
+ }
+]
