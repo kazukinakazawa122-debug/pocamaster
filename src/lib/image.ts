@@ -14,7 +14,8 @@ async function resize(file: Blob, maxSide: number, quality: number): Promise<Blo
   )
 }
 
+/** 画質を上げる方針（本人、2026-10-02）：大きい画像 1200→1600px・0.85→0.9、一覧用 400→600px・0.8→0.85（実物の写真をきれいに残す） */
 export async function makeImage(file: Blob): Promise<{ full: Blob; thumb: Blob }> {
-  const [full, thumb] = await Promise.all([resize(file, 1200, 0.85), resize(file, 400, 0.8)])
+  const [full, thumb] = await Promise.all([resize(file, 1600, 0.9), resize(file, 600, 0.85)])
   return { full, thumb }
 }

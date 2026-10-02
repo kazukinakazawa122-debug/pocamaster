@@ -51,11 +51,12 @@ class Job:
         fn = f"{self.n:04d}"
         self.n += 1
         img = img.convert("RGB")
-        img.thumbnail((800, 800))
-        img.save(d + fn + ".jpg", quality=88)
+        # 画質を上げる方針（本人、2026-10-02）：大きな資料を縮めすぎないよう、上限 800→1600px・画質 88→92、一覧用 400→600px・82→88
+        img.thumbnail((1600, 1600))
+        img.save(d + fn + ".jpg", quality=92)
         t = img.copy()
-        t.thumbnail((400, 400))
-        t.save(d + fn + "_t.jpg", quality=82)
+        t.thumbnail((600, 600))
+        t.save(d + fn + "_t.jpg", quality=88)
         self.images.append({"collection": collection, "members": members, "source": source, "version": version,
                             "file": f"{self.name}/{fn}.jpg", "thumb": f"{self.name}/{fn}_t.jpg", "credit": credit})
 

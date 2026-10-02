@@ -20,9 +20,10 @@ def save(collection, members, source, version, img, credit):
     os.makedirs(d, exist_ok=True)
     fn = f"{len([f for f in os.listdir(d) if not f.endswith('_t.jpg')]):04d}"
     img = img.convert("RGB")
-    img.thumbnail((800, 800))
-    img.save(d + fn + ".jpg", quality=88)
-    t = img.copy(); t.thumbnail((400, 400)); t.save(d + fn + "_t.jpg", quality=82)
+    # 画質を上げる方針（本人、2026-10-02）：上限 800→1600px・画質 88→92、一覧用 400→600px・82→88（build2.py と同じ）
+    img.thumbnail((1600, 1600))
+    img.save(d + fn + ".jpg", quality=92)
+    t = img.copy(); t.thumbnail((600, 600)); t.save(d + fn + "_t.jpg", quality=88)
     rel = os.path.relpath(d + fn + ".jpg", OUT).replace("\\", "/")
     # 同じカードの古い画像は置き換える
     key = (collection, tuple(sorted(members)), source, version)

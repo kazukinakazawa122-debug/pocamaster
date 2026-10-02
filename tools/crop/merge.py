@@ -138,7 +138,7 @@ def put(z, name, coll):
     import numpy as np
     im = Image.open(CARDS + name).convert("RGB")
     a = 255.0 * (np.asarray(im).astype(np.float32) / 255.0) ** g
-    buf = io.BytesIO(); Image.fromarray(a.clip(0, 255).astype(np.uint8)).save(buf, "JPEG", quality=88)
+    buf = io.BytesIO(); Image.fromarray(a.clip(0, 255).astype(np.uint8)).save(buf, "JPEG", quality=92)
     z.writestr(name, buf.getvalue())
 
 
