@@ -156,6 +156,28 @@ def series():
 MANUAL = {(12, 1, 0): [8, 1410, 412, 1968], (12, 1, 1): [446, 1410, 836, 1976], (12, 1, 2): [898, 1410, 1246, 1962]}
 
 
+# 本人「先ほどの（写真 12 の 3 枚）も明るくして」（2026-10-03）：写真 12 は黒い衣装の暗い写真で、いまの画像と同じ明るさでは暗いので、
+# 全体の平均（約 132/255）まで暗い部分を持ち上げる（箱の大きさで写真 12 のカードを見分ける）
+_p12_sizes = {(b[2] - b[0], b[3] - b[1]) for b in MANUAL.values()}
+_brighten0 = H.brighten
+
+
+def _brighten(new, old):
+    if new.size in _p12_sizes:
+        a = np.asarray(new.convert("RGB")).astype(np.float32) / 255
+        target = 132 / 255
+        g = 1.0
+        for cand in np.linspace(1.0, 0.5, 51):
+            g = cand
+            if (a ** cand).mean() >= target:
+                break
+        return Image.fromarray((255 * a ** g).clip(0, 255).astype(np.uint8))
+    return _brighten0(new, old)
+
+
+H.brighten = _brighten
+
+
 def mark():
     """使わない写真・大きくならないものに skip を付け、確認ページには差し替えるものだけを出す"""
     out = json.load(open(H.OUTJ, encoding="utf-8"))
