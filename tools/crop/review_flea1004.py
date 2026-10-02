@@ -56,8 +56,8 @@ for pi in sorted({o["pi"] for o in out if not o["skip"]}):
         old = Image.open(prev[pk]) if pk in prev else None
         note = "彩度 ×1.2"
         rows.append(
-            f'<div class="row"><div class="n">{i}</div><div class="c"><img src="{b64(new, 220)}">切り取り後（高さ {new.size[1]}px）</div>'
-            f'<div class="c">{"<img src=" + chr(34) + b64(old, 220) + chr(34) + ">" if old else "（前の画像なし）"}前の画像（高さ {old.size[1] if old else "-"}px）</div>'
+            f'<div class="row"><div class="n">{i}</div><div class="c"><img src="{b64(new, 600, 90)}">切り取り後（高さ {new.size[1]}px）</div>'
+            f'<div class="c">{"<img src=" + chr(34) + b64(old, 600, 90) + chr(34) + ">" if old else "（前の画像なし）"}前の画像（高さ {old.size[1] if old else "-"}px）</div>'
             f'<div class="t"><b>{html.escape(k[1])}</b><br>{html.escape(k[0])}<br>{html.escape(k[2])} {html.escape(k[3])}<br>重なり {o["score"]}'
             f'{"<br>" + note if note else ""}</div></div>')
     sections.append(f'<section><h2>写真 {pi}（{len(cells)} 枚）</h2><div class="ph"><img src="{b64(over, 340)}"><div class="rows">{"".join(rows)}</div></div></section>')
@@ -67,7 +67,7 @@ page = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name
 body{{font-family:system-ui,'Hiragino Sans','Yu Gothic',sans-serif;margin:0;padding:16px;background:#fafafa;color:#222}}
 h1{{font-size:18px}}h2{{font-size:15px;margin:24px 0 8px}}.ph{{display:flex;gap:16px;align-items:flex-start}}.ph>img{{width:340px;flex:none;border:1px solid #ddd}}
 .rows{{display:flex;flex-direction:column;gap:8px}}.row{{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid #e5e5e5;padding:6px}}
-.n{{width:24px;font-weight:700;color:#d00}}.c img{{display:block;width:150px;margin-bottom:2px}}.c{{font-size:11px;color:#666;width:150px}}.t{{font-size:12px;line-height:1.5;width:230px}}
+.n{{width:24px;font-weight:700;color:#d00}}.c img{{display:block;width:200px;margin-bottom:2px}}.c{{font-size:11px;color:#666;width:200px}}.t{{font-size:12px;line-height:1.5;width:230px}}
 </style></head><body><h1>フリマの実物の写真 3 回目：差し替えた {sum(len(s) > 0 for s in sections) and sum(not o["skip"] for o in out)} 枚</h1>
 <p style="font-size:12px;color:#666">左の写真の赤い枠が切り取った範囲（番号は右の行の番号）。「切り取り後」は ZIP に入る画像（彩度 ×1.2 後）、「前の画像」は差し替える前の画像です。</p>{"".join(sections)}</body></html>"""
 open(PROJ + "public/_review/flea_1004.html", "w", encoding="utf-8").write(page)
