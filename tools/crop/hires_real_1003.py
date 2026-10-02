@@ -151,6 +151,11 @@ def series():
     json.dump(out, open(H.OUTJ, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
+# 写真 12（OLIVEYOUNG の帯がカードの上下の約 10% を隠す）：本人「下の段の 3 枚は切り取って使ってよい」（2026-10-03）。
+# 帯の下から切る（上側が少し足りない）。箱は拡大した写真に目盛りを重ねてカードの角を読み取った。上の段 3 枚は使わない
+MANUAL = {(12, 1, 0): [8, 1410, 412, 1968], (12, 1, 1): [446, 1410, 836, 1976], (12, 1, 2): [898, 1410, 1246, 1962]}
+
+
 def mark():
     """使わない写真・大きくならないものに skip を付け、確認ページには差し替えるものだけを出す"""
     out = json.load(open(H.OUTJ, encoding="utf-8"))
@@ -160,6 +165,9 @@ def mark():
         th = 0.55 if o.get("series") or o["pi"] >= SET_N else 0.75
         gain = (o["box"][3] - o["box"][1]) >= o["old_h"] * 1.15
         o["skip"] = o["pi"] in NOT_USED or n in NOT_USED_N or o["score"] < th or not gain
+        if (o["pi"], o["r"], o["c"]) in MANUAL:
+            o["box"] = MANUAL[o["pi"], o["r"], o["c"]]
+            o["skip"] = False
     json.dump(out, open(H.OUTJ, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     H.page(out, z, entries)
     print("差し替える", sum(not o["skip"] for o in out), "枚")
