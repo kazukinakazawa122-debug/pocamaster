@@ -3,6 +3,7 @@ import { liveQuery } from 'dexie'
 import { Link } from 'react-router-dom'
 import { IconAlertTriangle, IconCrown, IconPhoto } from '@tabler/icons-react'
 import { db, getSetting, type Card, type Collection, type Profile } from '../lib/db'
+import { useAllCards } from '../lib/cardStore'
 import { MEMBERS, MEMBER_BY_ID, memberLabel, type MemberId } from '../lib/members'
 import { isComplete, memberProgress, pctText, progress, type Progress } from '../lib/stats'
 import { ProfileAvatar, ProgressBar, useCoverUrl, useImageUrl, warmCovers } from '../components/ui'
@@ -14,15 +15,14 @@ const BACKUP_REMIND_DAYS = 14
 
 type HomeData = {
   collections: Collection[]
-  cards: Card[]
   lastBackupAt?: number
   profile?: Profile
   history: { cardId: string; changedAt: number }[]
 }
 async function loadHome(): Promise<HomeData> {
-  const [collections, cards, lastBackupAt, profile, history] = await Promise.all([
+  // カードは手元の記録（cardStore）から使う。ここで 6,000 枚を読み直さない（2026-10-02）
+  const [collections, lastBackupAt, profile, history] = await Promise.all([
     db.collections.toArray(),
-    db.cards.toArray(),
     getSetting<number>('lastBackupAt'),
     getSetting<Profile>('profile'),
     // 最近「所持中」にした記録（同じカードを何度も切り替えることがあるので多めに取る）
@@ -30,7 +30,7 @@ async function loadHome(): Promise<HomeData> {
   ])
   // ジャケットとアイコンをまとめて読んでおく（ホームの「収集中のアルバム」などに、文字と同時に出す）
   await warmCovers([...collections.map((c) => c.coverImageId), profile?.imageId])
-  return { collections, cards, lastBackupAt, profile, history }
+  return { collections, lastBackupAt, profile, history }
 }
 
 // ホームのデータ。ほかの画面から戻ったとき待たせないよう、前回の内容をとっておいてすぐ出す。
@@ -78,6 +78,7 @@ function loadMember(): MemberId | 'all' {
 
 export default function Home() {
   const data = useSyncExternalStore(subscribe, () => lastData)
+  const storeCards = useAllCards()
   // 選んでいるメンバー（本人の要望、2026-10-01）。「すべて」か 1 人。次に開いたときも同じにする
   const [member, setMemberState] = useState<MemberId | 'all'>(loadMember)
   const setMember = (m: MemberId | 'all') => {
@@ -88,10 +89,10 @@ export default function Home() {
       /* 保存できなくても表示は変える */
     }
   }
-  if (!data) return <MiniveLoading />
+  if (!data || !storeCards) return <MiniveLoading />
   const { collections, lastBackupAt, profile, history = [] } = data
   // メンバーを選んでいるときは、そのメンバーが写っているカード（ソロ・ユニット両方）だけで数える
-  const allCards = data.cards
+  const allCards = storeCards
   const cards = member === 'all' ? allCards : allCards.filter((c) => c.memberIds.includes(member))
   const sel = member === 'all' ? null : MEMBER_BY_ID[member]
 

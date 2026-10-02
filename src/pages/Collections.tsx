@@ -1,8 +1,9 @@
-import { useEffect, useLayoutEffect } from 'react'
+import { useEffect, useLayoutEffect, useMemo } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { Link, useNavigationType, useSearchParams } from 'react-router-dom'
 import { IconCrown, IconPhoto, IconPlus } from '@tabler/icons-react'
 import { COLLECTION_TYPES, db, type Collection } from '../lib/db'
+import { useAllCards } from '../lib/cardStore'
 import { isComplete, pctText, type Progress } from '../lib/stats'
 import { MiniveLoading } from '../components/Minive'
 import { ProgressBar, TopBar, useCoverUrl, warmCovers } from '../components/ui'
@@ -29,38 +30,15 @@ const GROUP: Record<string, number> = {
 }
 const groupOf = (c: Collection) => GROUP[c.type] ?? 4
 
-interface ListData {
-  collections: Collection[]
-  byCollection: Map<string, Progress>
-}
-
 // 一覧に戻ってきたとき、読み込み中に白い画面にならないよう、前回の内容とスクロール位置を覚えておく
-let lastData: ListData | undefined
+let lastCollections: Collection[] | undefined
 let lastScrollY = 0
 
-async function loadList(): Promise<ListData> {
-  // カードは数千枚あるので、中身は読まない：コレクションごとの枚数は索引の値だけで数え、
-  // 所持中の枚数は所持中のカードだけを読んで数える
-  const [collections, ids, owned] = await Promise.all([
-    db.collections.toArray(),
-    db.cards.orderBy('collectionId').keys() as Promise<string[]>,
-    db.cards.where('status').equals('所持中').toArray(),
-  ])
-  const count = new Map<string, { owned: number; total: number }>()
-  for (const id of ids) {
-    const n = count.get(id)
-    if (n) n.total++
-    else count.set(id, { owned: 0, total: 1 })
-  }
-  for (const c of owned) {
-    const n = count.get(c.collectionId)
-    if (n) n.owned++
-  }
-  const byCollection = new Map<string, Progress>()
-  for (const [id, n] of count) byCollection.set(id, { ...n, pct: Math.floor((n.owned / n.total) * 100) })
+async function loadCollections(): Promise<Collection[]> {
+  const collections = await db.collections.toArray()
   // ジャケットをまとめて読んでから出す（文字だけ先に出て、あとからジャケットが 1 枚ずつ現れる、をなくす）
   await warmCovers(collections.map((c) => c.coverImageId))
-  return { collections, byCollection }
+  return collections
 }
 
 const EMPTY: Progress = { owned: 0, total: 0, pct: null }
@@ -74,9 +52,23 @@ export default function Collections() {
     setParams(f === 'すべて' ? {} : { t: f }, { replace: true })
     window.scrollTo(0, 0)
   }
-  const live = useLiveQuery(loadList)
-  if (live) lastData = live
-  const data = live ?? lastData
+  const live = useLiveQuery(loadCollections)
+  if (live) lastCollections = live
+  const collections = live ?? lastCollections
+  // コレクションごとの枚数は、手元のカードの記録から数える（開くたびに 6,000 枚分を読まない。2026-10-02）
+  const cards = useAllCards()
+  const byCollection = useMemo(() => {
+    const count = new Map<string, Progress>()
+    for (const c of cards ?? []) {
+      const n = count.get(c.collectionId) ?? { owned: 0, total: 0, pct: null }
+      n.total++
+      if (c.status === '所持中') n.owned++
+      count.set(c.collectionId, n)
+    }
+    for (const n of count.values()) n.pct = Math.floor((n.owned / n.total) * 100)
+    return count
+  }, [cards])
+  const data = collections && cards ? { collections, byCollection } : undefined
 
   // 「戻る」で来たときは前回のスクロール位置に戻す。スクロールするたびに位置を覚える
   const back = useNavigationType() === 'POP'

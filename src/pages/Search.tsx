@@ -3,6 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { useSearchParams } from 'react-router-dom'
 import { IconSearch, IconX } from '@tabler/icons-react'
 import { db, type Card, type Collection } from '../lib/db'
+import { useAllCards } from '../lib/cardStore'
 import { MEMBER_BY_ID, MEMBERS, type MemberId } from '../lib/members'
 import { TopBar } from '../components/ui'
 import CardGroups, { type CardGroup } from '../components/CardGroups'
@@ -49,10 +50,10 @@ export default function Search() {
     setParams(next, { replace: true })
   }
 
-  const data = useLiveQuery(async () => {
-    const [collections, cards] = await Promise.all([db.collections.toArray(), db.cards.toArray()])
-    return { collections, cards }
-  })
+  // カードは手元の記録から（開くたびに 6,000 枚を読み直さない）
+  const collections = useLiveQuery(() => db.collections.toArray())
+  const cards = useAllCards()
+  const data = useMemo(() => (collections && cards ? { collections, cards } : undefined), [collections, cards])
   // 調べる文字（ひとつずつ作ると重いので、データが変わったときだけ作る）
   const index = useMemo(() => {
     if (!data) return null

@@ -7,6 +7,10 @@ import Home from './pages/Home'
 import Collections from './pages/Collections'
 import CollectionDetail from './pages/CollectionDetail'
 import { MiniveLoading } from './components/Minive'
+import { loadCards } from './lib/cardStore'
+
+// カードの記録は、アプリを開いたらすぐ読み始める（ホームなどを開いたときに待たせないため）
+loadCards()
 
 // 毎回は使わない画面は、開いたときに読み込む（最初の読み込みを軽くする。設定には ZIP を扱う大きな部品が入っている）
 const CollectionEdit = lazy(() => import('./pages/CollectionEdit'))
@@ -52,8 +56,8 @@ export default function App() {
   return (
     <UndoProvider>
       <div className="app">
-        {/* 画面を移ったらエラー表示を消す */}
-        <ErrorBoundary key={pathname}>
+        {/* 画面を移ったらエラー表示を消す（作り直さずに。作り直すと画面の切り替えが 0.3 秒遅れる） */}
+        <ErrorBoundary resetKey={pathname}>
           <Suspense fallback={<MiniveLoading />}>
           <Routes>
             <Route path="/" element={<Home />} />

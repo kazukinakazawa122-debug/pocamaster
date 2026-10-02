@@ -155,7 +155,65 @@ export function ProfileAvatar({ profile, size }: { profile?: Profile; size: numb
   )
 }
 
-/** 保存した画像を表示用の URL にする（'thumb' は一覧用の小さい画像だけを読む） */
+/**
+ * 一覧用の小さい画像は、まとめて読む（本人の報告、2026-10-02「まだ読み込みが長い」）。
+ * カード 1 枚ごとに読みに行くと、画面に出る数十枚の分だけ読む回数が増え、iPhone では遅い。
+ * 同じ瞬間に頼まれた分を 1 回で読み、最近の THUMB_KEEP 枚は覚えておく（戻ってきたときに読み直さない）
+ */
+const THUMB_KEEP = 500
+const thumbKept = new Map<string, Blob>()
+let thumbQueue = new Map<string, ((b: Blob | undefined) => void)[]>()
+let thumbFlushScheduled = false
+
+function keepThumb(id: string, blob: Blob) {
+  thumbKept.delete(id)
+  thumbKept.set(id, blob)
+  // 古いものから捨てる（Map は入れた順に並ぶ）
+  if (thumbKept.size > THUMB_KEEP) thumbKept.delete(thumbKept.keys().next().value!)
+}
+
+async function flushThumbs() {
+  thumbFlushScheduled = false
+  const batch = thumbQueue
+  thumbQueue = new Map()
+  const ids = [...batch.keys()]
+  let blobs: (Blob | undefined)[] = []
+  try {
+    const rows = await db.thumbs.bulkGet(ids)
+    // 一覧用の小さい画像を分ける前に取り込んだ画像は images の中にある
+    const missing = ids.filter((_, i) => !rows[i])
+    const old = missing.length ? await db.images.bulkGet(missing) : []
+    const oldById = new Map(missing.map((id, i) => [id, old[i]?.thumb ?? old[i]?.full]))
+    blobs = ids.map((id, i) => rows[i]?.thumb ?? oldById.get(id))
+  } catch {
+    /* 読めなければ画像なしで出す */
+  }
+  ids.forEach((id, i) => {
+    const b = blobs[i]
+    if (b) keepThumb(id, b)
+    batch.get(id)!.forEach((resolve) => resolve(b))
+  })
+}
+
+function loadThumb(id: string): Promise<Blob | undefined> {
+  const kept = thumbKept.get(id)
+  if (kept) {
+    keepThumb(id, kept)
+    return Promise.resolve(kept)
+  }
+  return new Promise((resolve) => {
+    const waiting = thumbQueue.get(id)
+    if (waiting) waiting.push(resolve)
+    else thumbQueue.set(id, [resolve])
+    if (!thumbFlushScheduled) {
+      thumbFlushScheduled = true
+      // 同じ描き直しで頼まれた分（画面に出るカード全部）を集めてから読む
+      queueMicrotask(flushThumbs)
+    }
+  })
+}
+
+/** 保存した画像を表示用の URL にする（'thumb' は一覧用の小さい画像だけを、まとめて読む） */
 export function useImageUrl(imageId: string | undefined, size: 'thumb' | 'full'): string | undefined {
   const [url, setUrl] = useState<string>()
   useEffect(() => {
@@ -165,7 +223,7 @@ export function useImageUrl(imageId: string | undefined, size: 'thumb' | 'full')
     }
     let objectUrl: string | undefined
     let alive = true
-    ;(size === 'thumb' ? getThumb(imageId) : getFull(imageId)).then((blob) => {
+    ;(size === 'thumb' ? loadThumb(imageId) : getFull(imageId)).then((blob) => {
       if (!alive || !blob) return
       objectUrl = URL.createObjectURL(blob)
       setUrl(objectUrl)

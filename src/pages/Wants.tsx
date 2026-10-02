@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { IconAdjustmentsHorizontal, IconPhoto, IconShare } from '@tabler/icons-react'
 import { db } from '../lib/db'
+import { useAllCards } from '../lib/cardStore'
 import { MEMBER_BY_ID, MEMBERS, type MemberId } from '../lib/members'
 import { TopBar } from '../components/ui'
 import CardGroups, { type CardGroup } from '../components/CardGroups'
@@ -52,13 +53,14 @@ export default function Wants() {
   }
 
   const trade = view.mode === 'trade'
-  const data = useLiveQuery(async () => {
-    const [collections, cards] = await Promise.all([
-      db.collections.toArray(),
-      trade ? db.cards.where('status').equals('所持中').filter((c) => !!c.trade).toArray() : db.cards.where('status').equals('未所持').toArray(),
-    ])
-    return { collections, cards }
-  }, [trade])
+  // カードは手元の記録から（開くたびに数千枚を読み直さない）
+  const allCollections = useLiveQuery(() => db.collections.toArray())
+  const allCards = useAllCards()
+  const data = useMemo(() => {
+    if (!allCollections || !allCards) return undefined
+    const cards = allCards.filter((c) => (trade ? c.status === '所持中' && c.trade : c.status === '未所持'))
+    return { collections: allCollections, cards }
+  }, [allCollections, allCards, trade])
   const collections = useMemo(
     () => [...(data?.collections ?? [])].sort((a, b) => b.releaseDate.localeCompare(a.releaseDate)),
     [data],

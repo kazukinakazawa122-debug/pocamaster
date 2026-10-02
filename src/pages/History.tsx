@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../lib/db'
+import { useAllCards } from '../lib/cardStore'
 import { MEMBER_BY_ID, MEMBERS, memberLabel, type MemberId } from '../lib/members'
 import { TopBar } from '../components/ui'
 import { MiniveLoading } from '../components/Minive'
@@ -28,10 +29,13 @@ function dayLabel(ms: number): string {
 export default function History() {
   const [member, setMember] = useState<MemberId | null>(null)
   const [picked, setPicked] = useState<string | null>(null)
-  const data = useLiveQuery(async () => {
-    const [history, cards, collections] = await Promise.all([db.statusHistory.orderBy('changedAt').toArray(), db.cards.toArray(), db.collections.toArray()])
-    return { history, cards, collections }
+  // カードは手元の記録から（開くたびに 6,000 枚を読み直さない）
+  const hc = useLiveQuery(async () => {
+    const [history, collections] = await Promise.all([db.statusHistory.orderBy('changedAt').toArray(), db.collections.toArray()])
+    return { history, collections }
   })
+  const cards = useAllCards()
+  const data = useMemo(() => (hc && cards ? { ...hc, cards } : undefined), [hc, cards])
 
   const view = useMemo(() => {
     if (!data) return null
