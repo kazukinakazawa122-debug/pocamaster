@@ -113,3 +113,24 @@ export function defaultQuad(width: number, height: number): Quad {
     { x: x0, y: y0 + h },
   ]
 }
+
+/** 押した位置にいちばん近い角の番号（maxDist より遠ければ null）。点そのものでなく、まわりのどこを押しても近い角が動くようにする（指で押しやすいように。2026-10-03） */
+export function nearestCorner(points: Point[], p: Point, maxDist: number): number | null {
+  let best: number | null = null
+  let bd = maxDist
+  points.forEach((q, i) => {
+    const d = Math.hypot(q.x - p.x, q.y - p.y)
+    if (d <= bd) {
+      bd = d
+      best = i
+    }
+  })
+  return best
+}
+
+/** 角を (dx, dy) だけ動かす。写真の外には出さない */
+export function nudge(quad: Quad, i: number, dx: number, dy: number, width: number, height: number): Quad {
+  return quad.map((q, k) =>
+    k === i ? { x: Math.min(width, Math.max(0, q.x + dx)), y: Math.min(height, Math.max(0, q.y + dy)) } : q,
+  ) as Quad
+}

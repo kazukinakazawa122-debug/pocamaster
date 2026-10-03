@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { CARD_RATIO, defaultQuad, homography, outputSize, warp, type Quad, type Rgba } from './warp'
+import { CARD_RATIO, defaultQuad, homography, nearestCorner, nudge, outputSize, warp, type Quad, type Rgba } from './warp'
 
 /** 小さな写真を作る：座標に比例する色（赤＝x、緑＝y）にして、どこから取ったか読めるようにする */
 function gradient(w: number, h: number): Rgba {
@@ -79,5 +79,22 @@ describe('遠近補正の切り出し', () => {
         expect(p.y).toBeLessThanOrEqual(h)
       }
     }
+  })
+
+  it('押した位置にいちばん近い角を選ぶ（遠すぎれば選ばない）', () => {
+    const pts = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 150 }, { x: 0, y: 150 }]
+    expect(nearestCorner(pts, { x: 10, y: 8 }, 60)).toBe(0)
+    expect(nearestCorner(pts, { x: 95, y: 140 }, 60)).toBe(2)
+    expect(nearestCorner(pts, { x: 50, y: 75 }, 60)).toBeNull() // 真ん中は、どの角からも遠い
+    // 近い 2 つの角の間なら、近いほう
+    expect(nearestCorner([{ x: 0, y: 0 }, { x: 30, y: 0 }], { x: 20, y: 5 }, 60)).toBe(1)
+  })
+
+  it('角を動かす（写真の外には出さない）', () => {
+    const q = defaultQuad(100, 150)
+    const moved = nudge(q, 0, -1000, -1000, 100, 150)
+    expect(moved[0]).toEqual({ x: 0, y: 0 })
+    expect(moved[1]).toEqual(q[1]) // ほかの角は動かない
+    expect(nudge(q, 2, 1, 2, 100, 150)[2]).toEqual({ x: q[2].x + 1, y: q[2].y + 2 })
   })
 })
