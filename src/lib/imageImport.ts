@@ -1,5 +1,5 @@
 import JSZip from 'jszip'
-import { addImages, db, deleteImages, newId, type Card } from './db'
+import { addImages, db, deleteImages, getFull, newId, type Card } from './db'
 import { makeImage } from './image'
 import { parseMembers } from './csv'
 
@@ -33,8 +33,10 @@ export interface ImageImportResult {
   matched: number
   /** 前に取り込んだものと同じ画像で、とばした数（取り込み直し・途中で止まった取り込みの続き） */
   skipped: number
-  /** 自分でアプリから登録（切り取り）した画像があるカードは置き換えず、残した数 */
+  /** 自分でアプリから登録（切り取り）した画像があるカードは置き換えず、残した数（ZIP の画像と中身がちがう＝書き出したあとに切り直した画像など） */
   keptOwn: number
+  /** 自分の画像と中身が同じ画像が ZIP に入っていた数。「ZIP に入っている画像」の扱いにして、「自分の画像を ZIP に書き出す」の枚数から外す */
+  adoptedOwn: number
   /** 読み込めなかった画像（iPhone の「I/O read operation failed」など）。1 枚の失敗で全体を止めない */
   failed: string[]
   unmatched: string[]
@@ -69,13 +71,13 @@ export async function importImages(
   const entries = JSON.parse(json) as ManifestEntry[]
   const infoJson = await zip.file('info.json')?.async('string')
   const info = infoJson ? (JSON.parse(infoJson) as ImageZipInfo) : undefined
-  if (check && !check(info)) return { matched: 0, skipped: 0, keptOwn: 0, failed: [], unmatched: [], info, canceled: true }
+  if (check && !check(info)) return { matched: 0, skipped: 0, keptOwn: 0, adoptedOwn: 0, failed: [], unmatched: [], info, canceled: true }
 
   const [collections, cards] = await Promise.all([db.collections.toArray(), db.cards.toArray()])
   const colId = new Map(collections.map((c) => [c.name, c.id]))
   const byKey = new Map<string, Card>(cards.map((c) => [cardKey(c.collectionId, c.memberIds, c.source, c.version), c]))
 
-  const result: ImageImportResult = { matched: 0, skipped: 0, keptOwn: 0, failed: [], unmatched: [], info }
+  const result: ImageImportResult = { matched: 0, skipped: 0, keptOwn: 0, adoptedOwn: 0, failed: [], unmatched: [], info }
   // 画像が実際に残っているカードだけ「同じならとばす」にする（バックアップから戻したあとなどは、指紋が残っていても画像がない）
   const haveImage = new Set((await db.images.toCollection().primaryKeys()) as string[])
   // 50 枚ずつまとめて保存する（1 枚ずつより速い）
@@ -123,12 +125,20 @@ export async function importImages(
         result.unmatched.push(label)
         continue
       }
-      // 自分でアプリから登録した画像（出典なし・指紋なし）は、画像の ZIP で置き換えない（切り取った新しい画像を、古い ZIP の画像で上書きしないため。2026-10-03）
+      const hash = await sha1(bytes)
+      // 自分でアプリから登録した画像（出典なし・指紋なし）は、画像の ZIP で置き換えない（切り取った新しい画像を、古い ZIP の画像で上書きしないため。2026-10-03）。
+      // ただし ZIP の画像と中身が同じなら、書き出した画像がパソコンの ZIP に入ったということなので、書き換えずに「ZIP に入っている画像」の印（出典と指紋）を付ける
+      // → 「自分の画像を ZIP に書き出す」の枚数から減る（本人の要望、2026-10-04）
       if (card.imageId && haveImage.has(card.imageId) && !card.imageCredit && !card.imageHash) {
-        result.keptOwn++
+        const own = await getFull(card.imageId)
+        if (own && (await sha1(await own.arrayBuffer())) === hash) {
+          await db.cards.update(card.id, { imageCredit: e.credit || 'ZIP の画像', imageHash: hash })
+          result.adoptedOwn++
+        } else {
+          result.keptOwn++
+        }
         continue
       }
-      const hash = await sha1(bytes)
       if (card.imageId && haveImage.has(card.imageId) && card.imageHash === hash && (card.imageCredit ?? '') === (e.credit || 'ZIP の画像')) {
         result.skipped++
         continue

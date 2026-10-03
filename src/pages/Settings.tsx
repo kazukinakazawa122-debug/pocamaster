@@ -163,7 +163,8 @@ export default function Settings() {
         return (
           `${isDiff ? `差分 No.${info.seq} の画像` : '画像'} ${r.matched} 枚を取り込みました` +
           (r.skipped ? `（前に取り込んだ画像と同じ ${r.skipped} 枚はとばしました）` : '') +
-          (r.keptOwn ? `（自分で登録した画像がある ${r.keptOwn} 枚は、そのまま残しました）` : '') +
+          (r.adoptedOwn ? `（自分の画像 ${r.adoptedOwn} 枚が、この ZIP に入っていることを確かめました。「自分の画像を ZIP に書き出す」の枚数から外れます）` : '') +
+          (r.keptOwn ? `（自分で登録した画像がある ${r.keptOwn} 枚は、ZIP の画像と中身がちがうので、そのまま残しました。「自分の画像を ZIP に書き出す」でもう一度書き出せます）` : '') +
           (r.failed.length
             ? `。読み込めなかった画像が ${r.failed.length} 枚あります（${r.failed.slice(0, 3).join('、')}${r.failed.length > 3 ? ' など' : ''}）。同じ ZIP をもう一度取り込むと、続きから入ります`
             : '') +

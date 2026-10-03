@@ -48,6 +48,32 @@ describe('自分で登録した画像', () => {
     expect(await (await getFull(c.imageId!))!.text()).toBe('own-full')
   })
 
+  it('書き出した画像が ZIP に入って取り込まれたら（中身が同じ）、「自分の画像」の枚数から外れる。画像そのものは書き換えない', async () => {
+    const r = (await exportOwnImages())!
+    expect((await listOwnImageCards()).length).toBe(1)
+    const before = (await db.cards.get('own'))!.imageId
+    const res = await importImages(r.file) // パソコンの全部入りの ZIP に入った、と同じ中身
+    expect([res.adoptedOwn, res.keptOwn, res.matched]).toEqual([1, 0, 0])
+    const c = (await db.cards.get('own'))!
+    expect(c.imageId).toBe(before) // 画像は書き換えない
+    expect([c.imageCredit, !!c.imageHash]).toEqual([OWN_IMAGE_CREDIT, true])
+    expect(await listOwnImageCards()).toEqual([]) // 書き出しの枚数は 0 になる
+    expect(await exportOwnImages()).toBeNull()
+    // もう一度取り込んでも、とばす
+    const again = await importImages(r.file)
+    expect([again.skipped, again.adoptedOwn]).toEqual([1, 0])
+  })
+
+  it('書き出したあとに切り直した画像は、ZIP の画像と中身がちがうので、「自分の画像」のまま残る', async () => {
+    const r = (await exportOwnImages())!
+    // 書き出したあとで、同じカードの画像を切り直した
+    await addImages([{ id: 'own-img2', full: jpeg('own-full-recropped'), thumb: jpeg('own-thumb2') }])
+    await db.cards.update('own', { imageId: 'own-img2' })
+    const res = await importImages(r.file)
+    expect([res.adoptedOwn, res.keptOwn]).toEqual([0, 1])
+    expect((await listOwnImageCards()).map((c) => c.id)).toEqual(['own'])
+  })
+
   it('書き出せる画像がなければ、何も作らない', async () => {
     await db.cards.update('own', { imageId: undefined })
     expect(await exportOwnImages()).toBeNull()
