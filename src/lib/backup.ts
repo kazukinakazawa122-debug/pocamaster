@@ -1,5 +1,5 @@
 import JSZip from 'jszip'
-import { addImages, db, putSetting, type Profile } from './db'
+import { addImages, db, getSetting, putSetting, type Profile } from './db'
 import { reloadCards } from './cardStore'
 
 const FORMAT = 1
@@ -44,9 +44,35 @@ export async function exportBackup(): Promise<{ file: File; skipped: number }> {
     }
   }
   const blob = await zip.generateAsync({ type: 'blob' })
+  await verifyBackup(blob, { cards: cards.length, collections: collections.length, images: ownIds.length - skipped })
   const d = new Date()
   const stamp = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`
   return { file: new File([blob], `pocamaster-backup-${stamp}.zip`, { type: 'application/zip' }), skipped }
+}
+
+/**
+ * 作ったバックアップを読み直して、中身がそろっているか確かめる（壊れたバックアップを「保存できた」と思わないため。2026-10-03）。
+ * 画像は読めなかったものを飛ばしているので、入れたはずの枚数と比べる
+ */
+export async function verifyBackup(blob: Blob, expected: { cards: number; collections: number; images: number }): Promise<void> {
+  const zip = await JSZip.loadAsync(blob)
+  const json = await zip.file('data.json')?.async('string')
+  if (!json) throw new Error('バックアップの確認に失敗しました（記録のファイルがありません）')
+  const data = JSON.parse(json)
+  if (data.cards?.length !== expected.cards || data.collections?.length !== expected.collections) {
+    throw new Error('バックアップの確認に失敗しました（カードの数が合いません）')
+  }
+  let images = 0
+  zip.folder('images')?.forEach((path) => {
+    if (path.endsWith('.full.jpg')) images++
+  })
+  if (images !== expected.images) throw new Error('バックアップの確認に失敗しました（画像の数が合いません）')
+}
+
+/** 最後のバックアップのあとに、カードの状態を切り替えた回数（バックアップしたことがなければ、これまでの全部） */
+export async function changesSinceBackup(): Promise<number> {
+  const last = (await getSetting<number>('lastBackupAt')) ?? 0
+  return db.statusHistory.where('changedAt').above(last).count()
 }
 
 /** 保存できたら、最後にバックアップした日を記録する */

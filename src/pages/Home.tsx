@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { IconAlertTriangle, IconCrown, IconPhoto } from '@tabler/icons-react'
 import { db, getSetting, type Card, type Collection, type Profile } from '../lib/db'
 import { useAllCards } from '../lib/cardStore'
+import { changesSinceBackup } from '../lib/backup'
 import { MEMBERS, MEMBER_BY_ID, memberLabel, type MemberId } from '../lib/members'
 import { isComplete, memberProgress, pctText, progress, type Progress } from '../lib/stats'
 import { ProfileAvatar, ProgressBar, useCoverUrl, useImageUrl, warmCovers } from '../components/ui'
@@ -12,25 +13,30 @@ import { MiniveTrio, MiniveLoading } from '../components/Minive'
 import { MenuButton } from '../components/SideMenu'
 
 const BACKUP_REMIND_DAYS = 14
+/** 日にちがたっていなくても、これだけ変更したら催促する */
+const BACKUP_REMIND_CHANGES = 100
 
 type HomeData = {
   collections: Collection[]
   lastBackupAt?: number
+  /** 最後のバックアップのあとに、カードの状態を切り替えた回数 */
+  changes: number
   profile?: Profile
   history: { cardId: string; changedAt: number }[]
 }
 async function loadHome(): Promise<HomeData> {
   // カードは手元の記録（cardStore）から使う。ここで 6,000 枚を読み直さない（2026-10-02）
-  const [collections, lastBackupAt, profile, history] = await Promise.all([
+  const [collections, lastBackupAt, profile, history, changes] = await Promise.all([
     db.collections.toArray(),
     getSetting<number>('lastBackupAt'),
     getSetting<Profile>('profile'),
     // 最近「所持中」にした記録（同じカードを何度も切り替えることがあるので多めに取る）
     db.statusHistory.orderBy('changedAt').reverse().filter((h) => h.to === '所持中').limit(200).toArray(),
+    changesSinceBackup(),
   ])
   // ジャケットとアイコンをまとめて読んでおく（ホームの「収集中のアルバム」などに、文字と同時に出す）
   await warmCovers([...collections.map((c) => c.coverImageId), profile?.imageId])
-  return { collections, lastBackupAt, profile, history }
+  return { collections, lastBackupAt, changes, profile, history }
 }
 
 // ホームのデータ。ほかの画面から戻ったとき待たせないよう、前回の内容をとっておいてすぐ出す。
@@ -90,7 +96,7 @@ export default function Home() {
     }
   }
   if (!data || !storeCards) return <MiniveLoading />
-  const { collections, lastBackupAt, profile, history = [] } = data
+  const { collections, lastBackupAt, changes = 0, profile, history = [] } = data
   // メンバーを選んでいるときは、そのメンバーが写っているカード（ソロ・ユニット両方）だけで数える
   const allCards = storeCards
   const cards = member === 'all' ? allCards : allCards.filter((c) => c.memberIds.includes(member))
@@ -199,8 +205,9 @@ export default function Home() {
   // お気に入りのカード（コレクションの並び順）
   const favorites = cards.filter((c) => c.favorite).sort((a, b) => a.order - b.order)
 
-  const needBackup =
-    cards.length > 0 && (!lastBackupAt || Date.now() - lastBackupAt > BACKUP_REMIND_DAYS * 24 * 60 * 60 * 1000)
+  // バックアップしていないデータがあるときだけ催促する（枠の数ではなく、最後のバックアップのあとの変更で決める。2026-10-03）
+  const days = lastBackupAt ? Math.floor((Date.now() - lastBackupAt) / (24 * 60 * 60 * 1000)) : undefined
+  const needBackup = changes > 0 && (days === undefined || days >= BACKUP_REMIND_DAYS || changes >= BACKUP_REMIND_CHANGES)
 
   return (
     <div className="page">
@@ -208,9 +215,9 @@ export default function Home() {
       {needBackup && (
         <Link to="/settings" className="banner">
           <IconAlertTriangle size={18} aria-hidden />
-          {lastBackupAt
-            ? `最後のバックアップから ${BACKUP_REMIND_DAYS} 日以上たちました`
-            : 'まだバックアップを取っていません'}
+          {days === undefined
+            ? `まだバックアップを取っていません（${changes} 回の変更）`
+            : `最後のバックアップ（${days} 日前）のあとに ${changes} 回の変更があります`}
         </Link>
       )}
 

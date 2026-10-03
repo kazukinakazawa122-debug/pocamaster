@@ -4,7 +4,7 @@ import { IconCamera, IconDatabaseImport, IconDownload, IconFileImport, IconPhoto
 import { addImages, db, deleteImages, EMPTY_PROFILE, getSetting, newId, putSetting, type Profile } from '../lib/db'
 import { makeImage } from '../lib/image'
 import MemberPicker from '../components/MemberPicker'
-import { exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
+import { changesSinceBackup, exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv, removeObsolete } from '../lib/csv'
 import { importImages, type ImageZipInfo } from '../lib/imageImport'
 import { ProfileAvatar, TopBar } from '../components/ui'
@@ -50,6 +50,8 @@ function formatDate(ms: number): string {
 export default function Settings() {
   const lastBackupAt = useLiveQuery(() => getSetting<number>('lastBackupAt'))
   const imageZip = useLiveQuery(() => getSetting<ImageZipState>('imageZip'))
+  const changes = useLiveQuery(() => changesSinceBackup())
+  const persisted = useLiveQuery(async () => (await navigator.storage?.persisted?.()) ?? undefined)
   const counts = useLiveQuery(async () => ({ collections: await db.collections.count(), cards: await db.cards.count() }))
   const [message, setMessage] = useState('')
   const [busy, setBusy] = useState(false)
@@ -140,7 +142,11 @@ export default function Settings() {
       <div className="panel stack">
         <div className="small muted">
           最後のバックアップ：{lastBackupAt ? formatDate(lastBackupAt) : 'まだありません'}
+          {changes ? `（そのあとの変更 ${changes} 回）` : ''}
         </div>
+        {persisted === false && (
+          <div className="xs muted">このブラウザは、空き容量が少ないときにデータを消すことがあります。バックアップをこまめに取ってください</div>
+        )}
         {backupFile ? (
           <button
             className="btn primary block"
