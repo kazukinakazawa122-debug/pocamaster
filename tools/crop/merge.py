@@ -167,7 +167,9 @@ def put(z, name, coll):
 
 with zipfile.ZipFile(zp, "w", zipfile.ZIP_STORED) as z:
     for e in entries:
-        put(z, e["file"], e["collection"])
-        put(z, e["thumb"], e["collection"])
+        # アプリで切り取った画像（出典「アプリで登録」）は、本人が見て仕上げたものなので、明るさ補正（REVIVE+ の BRIGHT）はしない（2026-10-03）
+        coll = "" if e["credit"] == "アプリで登録" else e["collection"]
+        put(z, e["file"], coll)
+        put(z, e["thumb"], coll)
     z.writestr("manifest.json", json.dumps(entries, ensure_ascii=False))
 print("images", len(entries), "zip", os.path.getsize(zp) // 1024, "KB")
