@@ -18,6 +18,8 @@ export type CardStatus = '未所持' | '所持中'
 
 export interface Collection {
   id: string
+  /** 初期データ（collections.csv の id 列）の固定の ID。名前が変わっても同じコレクションとわかる（2026-10-03） */
+  seedId?: string
   name: string
   type: CollectionType
   releaseDate: string // YYYY-MM-DD
@@ -29,6 +31,8 @@ export interface Collection {
 
 export interface Card {
   id: string
+  /** 初期データ（cards.csv の id 列）の固定の ID。名前・番号を直しても同じ枠とわかる。自分で作ったカードにはない（2026-10-03） */
+  seedId?: string
   collectionId: string
   memberIds: MemberId[]
   source: string

@@ -27,6 +27,14 @@ describe('初期データ（public/seed）', () => {
     }
   })
 
+  it('すべての枠・コレクションに固定の id があり、重ならない（名前を直しても同じ枠とわかるための ID）', () => {
+    for (const [what, list] of [['コレクション', cols], ['カード', cards]] as const) {
+      const ids = list.map((r) => r.id)
+      expect(ids.every(Boolean), `${what}に id のない行がある`).toBe(true)
+      expect(new Set(ids).size, `${what}の id が重なっている`).toBe(ids.length)
+    }
+  })
+
   it('同じ枠（コレクション・メンバー・入手元・バージョン）が重ならない', () => {
     const seen = new Set<string>()
     const dup: string[] = []

@@ -4,7 +4,7 @@
   （KEEP に書いた、別の資料から追加済みの枠は残す）
 - ほかのコレクションは、まだない枠だけ追加する
 """
-import csv, io, json, os, glob, zipfile
+import csv, io, json, os, glob, uuid, zipfile
 
 SP = os.path.dirname(os.path.abspath(__file__)) + "/"
 PROJ = r"C:/Users/kazuk/pocamaster/"
@@ -39,6 +39,25 @@ def key(r):
 
 rows = list(csv.reader(io.StringIO(open(SEED, encoding="utf-8").read())))
 header, body = rows[0], rows[1:]
+# 枠ごとの固定の ID（id 列。add_slot_ids.py で付けた。名前を直しても同じ枠とわかるための ID。2026-10-03）。
+# 既存の行は ID ごと引き継ぎ、新しい枠にだけ新しい ID を付ける
+if "id" not in header:
+    header.append("id")
+    body = [r + [""] for r in body]
+_used = {r[4] for r in body if r[4]}
+
+
+def new_id():
+    while True:
+        x = uuid.uuid4().hex[:8]
+        if x not in _used:
+            _used.add(x)
+            return x
+
+
+body = [r[:4] + [r[4] or new_id()] for r in body]
+# REPLACE のコレクションは、下で古い枠を消して表から作り直す。同じ名前の枠は、前の ID を引き継ぐ（作り直しのたびに ID が変わらないように）
+OLD_IDS = {(r[0], "/".join(sorted(r[1].split("/"))), r[2], r[3]): r[4] for r in body}
 
 # 番号のつけちがいを直す（本人、2026-10-01）：IVE SECRET の QQ Music は、いまの 1→2・2→3・3→4・4→5・5→1 が正しい番号
 RELABEL = {("IVE SECRET", "QQ Music"): {"1": "2", "2": "3", "3": "4", "4": "5", "5": "1"},
@@ -70,7 +89,7 @@ for _p, _j in zip(_paths, jobs):
     _j["seed"] = [[r[0], r[1]] + list(MOVE.get((r[0], r[2], r[3]), (r[2], r[3]))) for r in _j["seed"]]
     for _e in _j["images"]:
         _e["source"], _e["version"] = MOVE.get((_e["collection"], _e["source"], _e["version"]), (_e["source"], _e["version"]))
-new_seed = [tuple(r) for j in jobs for r in j["seed"]]
+new_seed = [tuple(r[:4]) for j in jobs for r in j["seed"]]
 
 kept = []
 for r in body:
@@ -92,7 +111,7 @@ for r in new_seed:
     if DROP_SLOT(r[0], r[2], r[3]):
         continue
     if key(r) not in have:
-        (front if r[0] in REPLACE else kept).append(r)
+        (front if r[0] in REPLACE else kept).append(r + (OLD_IDS.get(key(r)) or new_id(),))
         have.add(key(r))
         added += 1
 kept = [r for r in kept if r[0] not in REPLACE] + front + [r for r in kept if r[0] in REPLACE]
