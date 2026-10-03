@@ -3,7 +3,7 @@
 
 使い方：
   1. アプリの設定で「自分の画像を ZIP に書き出す」→「ファイルに保存する」。できた ZIP を pocamaster-images/アプリから/ に置く
-  2. python tools/crop/import_app_images.py            （アプリから/ の ZIP を全部）
+  2. python tools/crop/import_app_images.py            （アプリから/ の ZIP のうち、まだ取り込んでいないものだけ。--force で全部作り直す）
      python tools/crop/import_app_images.py <ZIP のパス>  （1 つだけ）
   3. python tools/crop/merge.py → python tools/crop/make_diff.py（本人に渡すとき）
 
@@ -31,8 +31,8 @@ def run(path, have):
     z = zipfile.ZipFile(path)
     manifest = json.loads(z.read("manifest.json"))
     out_dir = CARDS + name + "/"
-    shutil.rmtree(out_dir, ignore_errors=True)
-    os.makedirs(out_dir)
+    # OneDrive がフォルダをつかんでいると、消して作り直すのに失敗することがある → 消さずに、同じ名前の画像を上書きする（古い余りの画像は job に書かないので使われない）
+    os.makedirs(out_dir, exist_ok=True)
     images, seed, missing = [], [], []
     for i, e in enumerate(manifest):
         key = (e["collection"], "/".join(sorted(e["members"])), e["source"], e["version"])
@@ -54,7 +54,11 @@ def run(path, have):
 
 
 if __name__ == "__main__":
-    paths = sys.argv[1:] or sorted(glob.glob(SRC + "*.zip"))
+    force = "--force" in sys.argv
+    args = [a for a in sys.argv[1:] if a != "--force"]
+    # 引数なし：アプリから/ の ZIP のうち、まだ取り込んでいないもの（out/ に job がないもの）だけ。--force で全部作り直す
+    done = lambda p: os.path.exists(SP + "out/zzzzzzzzzzzzzzzzzzzzzz_app_" + os.path.splitext(os.path.basename(p))[0] + ".json")
+    paths = args or [p for p in sorted(glob.glob(SRC + "*.zip")) if force or not done(p)]
     if not paths:
         print("ZIP がありません。アプリで書き出した ZIP を", SRC, "に置いてください")
         sys.exit(1)
