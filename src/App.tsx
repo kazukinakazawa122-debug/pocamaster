@@ -22,6 +22,7 @@ const Settings = lazy(() => import('./pages/Settings'))
 const Search = lazy(() => import('./pages/Search'))
 const Wants = lazy(() => import('./pages/Wants'))
 const History = lazy(() => import('./pages/History'))
+const Orphans = lazy(() => import('./pages/Orphans'))
 
 /**
  * iPhone で文字を入力するとキーボードが出て、画面（見えている範囲）がずれる。
@@ -73,6 +74,7 @@ export default function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/wants" element={<Wants />} />
             <Route path="/history" element={<History />} />
+            <Route path="/orphans" element={<Orphans />} />
           </Routes>
           </Suspense>
         </ErrorBoundary>

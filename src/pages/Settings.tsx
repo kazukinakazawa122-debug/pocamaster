@@ -4,6 +4,8 @@ import { IconCamera, IconDatabaseImport, IconDownload, IconFileImport, IconPhoto
 import { addImages, db, deleteImages, EMPTY_PROFILE, getSetting, newId, putSetting, type Profile } from '../lib/db'
 import { makeImage } from '../lib/image'
 import MemberPicker from '../components/MemberPicker'
+import { Link } from 'react-router-dom'
+import { listOrphans } from '../lib/orphans'
 import { changesSinceBackup, exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv, removeObsolete } from '../lib/csv'
 import { importImages, type ImageZipInfo } from '../lib/imageImport'
@@ -59,6 +61,10 @@ export default function Settings() {
   const lastBackupAt = useLiveQuery(() => getSetting<number>('lastBackupAt'))
   const imageZip = useLiveQuery(() => getSetting<ImageZipState>('imageZip'))
   const changes = useLiveQuery(() => changesSinceBackup())
+  const orphans = useLiveQuery(async () => {
+    const list = await listOrphans()
+    return { total: list.length, owned: list.filter((c) => c.status === '所持中' || c.favorite).length }
+  })
   const persisted = useLiveQuery(async () => (await navigator.storage?.persisted?.()) ?? undefined)
   const counts = useLiveQuery(async () => ({ collections: await db.collections.count(), cards: await db.cards.count() }))
   const [message, setMessage] = useState('')
@@ -86,6 +92,13 @@ export default function Settings() {
 
   const importSeed = () =>
     run(async () => {
+      // 名前・番号を直した枠を、持っている記録ごと引き継ぐので、取り込む前にバックアップをすすめる（2026-10-03）
+      const unsaved = await changesSinceBackup()
+      if (unsaved > 0 && !confirm(`最後のバックアップのあとに ${unsaved} 回の変更があります。取り込みの前に、バックアップを取ることをおすすめします。
+
+このまま取り込みますか？`)) {
+        return '取り込みをやめました（先にバックアップを取ってください）'
+      }
       const [cols, cards] = await Promise.all(
         ['collections.csv', 'cards.csv'].map((f) =>
           fetch(SEED_BASE + f).then((r) => {
@@ -100,6 +113,8 @@ export default function Settings() {
       const removed = await removeObsolete(removedCsv, cards)
       return (
         `コレクション ${r.addedCollections} 件、カード ${r.addedCards} 枚を追加しました（すでにある ${r.skippedCards} 枚はそのまま）` +
+        (r.renamedCards || r.renamedCollections ? `。名前・番号が直された枠 ${r.renamedCards + r.renamedCollections} 件を、記録ごと引き継ぎました` : '') +
+        (r.adoptedCards ? `。${r.adoptedCards} 枚に固定の ID を付けました` : '') +
         (removed ? `。まちがっていた枠 ${removed} 枚を消しました` : '')
       )
     })
@@ -297,6 +312,11 @@ export default function Settings() {
         <div className="xs muted">
           差分 ZIP は番号の順に取り込んでください。新しいカードが増えたときは、先に「初期データを取り込む」をしてください。
         </div>
+        {orphans && orphans.total > 0 && (
+          <Link to="/orphans" className="btn block">
+            初期データにない枠を整理する（{orphans.total} 件{orphans.owned ? `、うち持っている・お気に入り ${orphans.owned} 件` : ''}）
+          </Link>
+        )}
       </div>
 
       {message && (
