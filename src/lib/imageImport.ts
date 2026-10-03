@@ -29,11 +29,22 @@ export interface ImageZipInfo {
 }
 
 export interface ImageImportResult {
+  /** 書き込んだ画像の数 */
   matched: number
+  /** 前に取り込んだものと同じ画像で、とばした数（取り込み直し・途中で止まった取り込みの続き） */
+  skipped: number
+  /** 読み込めなかった画像（iPhone の「I/O read operation failed」など）。1 枚の失敗で全体を止めない */
+  failed: string[]
   unmatched: string[]
   info?: ImageZipInfo
   /** check で取り込みをやめた */
   canceled?: boolean
+}
+
+/** 画像の指紋（SHA-1）。同じ画像かどうかだけに使う */
+async function sha1(bytes: ArrayBuffer): Promise<string> {
+  const d = await crypto.subtle.digest('SHA-1', bytes)
+  return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, '0')).join('')
 }
 
 function cardKey(collectionId: string, memberIds: string[], source: string, version: string): string {
@@ -56,22 +67,24 @@ export async function importImages(
   const entries = JSON.parse(json) as ManifestEntry[]
   const infoJson = await zip.file('info.json')?.async('string')
   const info = infoJson ? (JSON.parse(infoJson) as ImageZipInfo) : undefined
-  if (check && !check(info)) return { matched: 0, unmatched: [], info, canceled: true }
+  if (check && !check(info)) return { matched: 0, skipped: 0, failed: [], unmatched: [], info, canceled: true }
 
   const [collections, cards] = await Promise.all([db.collections.toArray(), db.cards.toArray()])
   const colId = new Map(collections.map((c) => [c.name, c.id]))
   const byKey = new Map<string, Card>(cards.map((c) => [cardKey(c.collectionId, c.memberIds, c.source, c.version), c]))
 
-  const result: ImageImportResult = { matched: 0, unmatched: [], info }
+  const result: ImageImportResult = { matched: 0, skipped: 0, failed: [], unmatched: [], info }
+  // 画像が実際に残っているカードだけ「同じならとばす」にする（バックアップから戻したあとなどは、指紋が残っていても画像がない）
+  const haveImage = new Set((await db.images.toCollection().primaryKeys()) as string[])
   // 50 枚ずつまとめて保存する（1 枚ずつより速い）
-  let pending: { id: string; card: Card; img: { full: Blob; thumb: Blob }; credit?: string }[] = []
+  let pending: { id: string; card: Card; img: { full: Blob; thumb: Blob }; credit?: string; hash: string }[] = []
   const flush = async () => {
     const batch = pending
     pending = []
     if (batch.length === 0) return
     await db.transaction('rw', db.images, db.thumbs, db.cards, async () => {
       await addImages(batch.map((b) => ({ id: b.id, ...b.img })))
-      for (const b of batch) await db.cards.update(b.card.id, { imageId: b.id, imageCredit: b.credit })
+      for (const b of batch) await db.cards.update(b.card.id, { imageId: b.id, imageCredit: b.credit, imageHash: b.hash })
       await deleteImages(batch.flatMap((b) => (b.card.imageId ? [b.card.imageId] : [])))
     })
   }
@@ -100,20 +113,30 @@ export async function importImages(
     const label = `${e.collection} / ${e.members.join('・')} / ${e.source} ${e.version}`.trim()
     const cid = colId.get(e.collection)
     const card = cid ? byKey.get(cardKey(cid, parseMembers(e.members.join('/')), e.source, e.version)) : undefined
-    // 中身をいったんメモリに読み出してから保存する（元の ZIP ファイルを参照したままだと、
-    // iPhone であとから「The I/O read operation failed」で読めなくなることがあるため）
-    const bytes = await zip.file(e.file)?.async('arraybuffer')
-    const blob = bytes && new Blob([bytes], { type: 'image/jpeg' })
-    if (!card || !blob) {
-      result.unmatched.push(label)
-      continue
+    try {
+      // 中身をいったんメモリに読み出してから保存する（元の ZIP ファイルを参照したままだと、
+      // iPhone であとから「The I/O read operation failed」で読めなくなることがあるため）
+      const bytes = await zip.file(e.file)?.async('arraybuffer')
+      if (!card || !bytes) {
+        result.unmatched.push(label)
+        continue
+      }
+      const hash = await sha1(bytes)
+      if (card.imageId && haveImage.has(card.imageId) && card.imageHash === hash && (card.imageCredit ?? '') === (e.credit ?? '')) {
+        result.skipped++
+        continue
+      }
+      const blob = new Blob([bytes], { type: 'image/jpeg' })
+      const thumb = e.thumb ? await zip.file(e.thumb)?.async('arraybuffer') : undefined
+      const img = thumb ? { full: blob, thumb: new Blob([thumb], { type: 'image/jpeg' }) } : await makeImage(blob)
+      pending.push({ id: newId(), card, img, credit: e.credit, hash })
+      result.matched++
+    } catch {
+      // 1 枚が読めなくても、残りは取り込む（読めなかった画像は、もう一度取り込めば続きから入る）
+      result.failed.push(label)
     }
-    const thumb = e.thumb ? await zip.file(e.thumb)?.async('arraybuffer') : undefined
-    const img = thumb ? { full: blob, thumb: new Blob([thumb], { type: 'image/jpeg' }) } : await makeImage(blob)
-    const id = newId()
-    pending.push({ id, card, img, credit: e.credit })
+    // 保存の失敗（容量がいっぱいなど）は 1 枚の失敗ではないので、ここでは止める
     if (pending.length >= 50) await flush()
-    result.matched++
   }
   await flush()
   onProgress?.(entries.length, entries.length)

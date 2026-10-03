@@ -36,6 +36,8 @@ export interface Card {
   imageId?: string
   /** 画像の出典（一覧表の作者など） */
   imageCredit?: string
+  /** 画像 ZIP から取り込んだ画像の指紋（SHA-1）。同じ画像の取り込み直しをとばし、途中で止まった取り込みを続きから行うため（2026-10-03） */
+  imageHash?: string
   /** お気に入り（ホームに出す） */
   favorite?: boolean
   /** 譲れる（交換に出せる重なったカード。「譲」の一覧に出す。2026-10-01） */

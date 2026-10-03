@@ -7,7 +7,7 @@ import MemberPicker from '../components/MemberPicker'
 import { changesSinceBackup, exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv, removeObsolete } from '../lib/csv'
 import { importImages, type ImageZipInfo } from '../lib/imageImport'
-import { ProfileAvatar, TopBar } from '../components/ui'
+import { ProfileAvatar, ProgressBar, TopBar } from '../components/ui'
 
 const SEED_BASE = `${import.meta.env.BASE_URL}seed/`
 
@@ -41,6 +41,14 @@ function checkImageZip(mode: 'full' | 'diff', info: ImageZipInfo | undefined, la
   return true
 }
 
+/** 残り時間の目安（これまでの速さから。始めの数枚と、とばした画像が多いときは当てにならないので、少し進んでから出す） */
+function remainingText(p: { done: number; total: number; startedAt: number }): string {
+  const elapsed = (Date.now() - p.startedAt) / 1000
+  if (p.done < 20 || elapsed < 5 || p.done >= p.total) return ''
+  const sec = (elapsed / p.done) * (p.total - p.done)
+  return sec < 60 ? '（あと 1 分未満）' : `（あと約 ${Math.round(sec / 60)} 分）`
+}
+
 function formatDate(ms: number): string {
   const d = new Date(ms)
   return `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`
@@ -55,6 +63,8 @@ export default function Settings() {
   const counts = useLiveQuery(async () => ({ collections: await db.collections.count(), cards: await db.cards.count() }))
   const [message, setMessage] = useState('')
   const [busy, setBusy] = useState(false)
+  // 画像の取り込みの進み具合（棒と残り時間。2026-10-03）
+  const [progress, setProgress] = useState<{ done: number; total: number; startedAt: number } | null>(null)
   // 作ったバックアップ。iPhone の「保存」はタップの直後でないと開けないので、作るのと保存を 2 回のタップに分ける
   const [backupFile, setBackupFile] = useState<File | null>(null)
   const restoreRef = useRef<HTMLInputElement>(null)
@@ -109,25 +119,43 @@ export default function Settings() {
     run(async () => {
       const last = await getSetting<ImageZipState>('imageZip')
       setMessage('ZIP を開いています…')
-      const r = await importImages(
-        f,
-        (done, total) => setMessage(`画像を取り込み中… ${done} / ${total}`),
-        (info) => checkImageZip(mode, info, last),
-      )
-      if (r.canceled) return '取り込みをやめました'
-      const info = r.info
-      const isDiff = info?.kind === 'diff'
-      // 差分なら番号を進める（取り込み済みの差分を入れ直しても戻さない）。全部入りならその番号にする
-      const seq = isDiff ? Math.max(last?.seq ?? 0, info.seq) : info?.seq
-      await putSetting('imageZip', { seq, date: isDiff && seq !== info.seq ? last?.date : info?.date, importedAt: Date.now() } satisfies ImageZipState)
-      const miss = r.unmatched.length
-      return (
-        `${isDiff ? `差分 No.${info.seq} の画像` : '画像'} ${r.matched} 枚を取り込みました` +
-        (miss
-          ? `（対応するカードがなかった ${miss} 枚：${r.unmatched.slice(0, 5).join('、')}${miss > 5 ? ' など' : ''}）` +
-            (isDiff ? '。新しいカードの画像なら、先に「初期データを取り込む」をしてから、もう一度この差分 ZIP を取り込んでください' : '')
-          : '')
-      )
+      // 取り込み中に画面が暗くなると止まることがあるので、画面を消さないようにお願いする（対応していなければ何もしない）
+      const lock = await navigator.wakeLock?.request('screen').catch(() => null)
+      const startedAt = Date.now()
+      try {
+        const r = await importImages(
+          f,
+          (done, total) => {
+            setMessage('画像を取り込み中…')
+            setProgress({ done, total, startedAt })
+          },
+          (info) => checkImageZip(mode, info, last),
+        )
+        if (r.canceled) return '取り込みをやめました'
+        const info = r.info
+        const isDiff = info?.kind === 'diff'
+        // 差分なら番号を進める（取り込み済みの差分を入れ直しても戻さない）。全部入りならその番号にする。
+        // 読めなかった画像があるときは、番号を進めない（同じ ZIP をもう一度取り込めば続きから入る）
+        if (r.failed.length === 0) {
+          const seq = isDiff ? Math.max(last?.seq ?? 0, info.seq) : info?.seq
+          await putSetting('imageZip', { seq, date: isDiff && seq !== info.seq ? last?.date : info?.date, importedAt: Date.now() } satisfies ImageZipState)
+        }
+        const miss = r.unmatched.length
+        return (
+          `${isDiff ? `差分 No.${info.seq} の画像` : '画像'} ${r.matched} 枚を取り込みました` +
+          (r.skipped ? `（前に取り込んだ画像と同じ ${r.skipped} 枚はとばしました）` : '') +
+          (r.failed.length
+            ? `。読み込めなかった画像が ${r.failed.length} 枚あります（${r.failed.slice(0, 3).join('、')}${r.failed.length > 3 ? ' など' : ''}）。同じ ZIP をもう一度取り込むと、続きから入ります`
+            : '') +
+          (miss
+            ? `（対応するカードがなかった ${miss} 枚：${r.unmatched.slice(0, 5).join('、')}${miss > 5 ? ' など' : ''}）` +
+              (isDiff ? '。新しいカードの画像なら、先に「初期データを取り込む」をしてから、もう一度この差分 ZIP を取り込んでください' : '')
+            : '')
+        )
+      } finally {
+        setProgress(null)
+        lock?.release().catch(() => {})
+      }
     })
   }
 
@@ -275,6 +303,14 @@ export default function Settings() {
         <p className="small" role="status" style={{ marginTop: 16 }}>
           {message}
         </p>
+      )}
+      {progress && progress.total > 0 && (
+        <div style={{ marginTop: 8 }}>
+          <ProgressBar pct={Math.round((progress.done / progress.total) * 100)} />
+          <div className="xs muted" style={{ marginTop: 4 }}>
+            {progress.done} / {progress.total} 枚{remainingText(progress)}
+          </div>
+        </div>
       )}
     </div>
   )

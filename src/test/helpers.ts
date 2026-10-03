@@ -25,11 +25,16 @@ export function card(over: Partial<Card> = {}): Card {
 export async function imageZip(
   entries: { collection: string; members: string[]; source: string; version: string; credit?: string; cover?: boolean }[],
   info?: object,
+  /** 画像の中身を変える（同じ画像かどうかの確認用） */
+  salt = '',
+  /** 一覧用の画像を付けない（縮める処理が要る＝このテスト環境では失敗する。読めなかった画像のまねに使う） */
+  noThumb = false,
 ): Promise<Blob> {
   const zip = new JSZip()
   const manifest = entries.map((e, i) => {
-    zip.file(`img/${i}.jpg`, `full-${i}`)
-    zip.file(`img/${i}_t.jpg`, `thumb-${i}`)
+    zip.file(`img/${i}.jpg`, `full-${i}${salt}`)
+    if (noThumb) return { ...e, file: `img/${i}.jpg` }
+    zip.file(`img/${i}_t.jpg`, `thumb-${i}${salt}`)
     return { ...e, file: `img/${i}.jpg`, thumb: `img/${i}_t.jpg` }
   })
   zip.file('manifest.json', JSON.stringify(manifest))

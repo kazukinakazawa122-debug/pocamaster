@@ -117,7 +117,10 @@ export async function restoreBackup(file: Blob): Promise<void> {
 
   // バックアップに入っていない画像（画像の ZIP から取り込んだもの）は、ZIP を取り込み直すまで画像なしにする
   const have = new Set(images.map((i) => i.id))
-  for (const c of data.cards) if (c.imageId && !have.has(c.imageId)) delete c.imageId
+  for (const c of data.cards) {
+    if (c.imageId && !have.has(c.imageId)) delete c.imageId
+    if (!c.imageId) delete c.imageHash
+  }
   for (const c of data.collections) if (c.coverImageId && !have.has(c.coverImageId)) delete c.coverImageId
 
   await db.transaction('rw', [db.collections, db.cards, db.images, db.thumbs, db.statusHistory, db.achievements, db.settings, db.myAlbums], async () => {
