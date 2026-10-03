@@ -1,11 +1,12 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { IconEdit, IconHeart, IconHeartFilled, IconPhotoPlus, IconTrash } from '@tabler/icons-react'
+import { IconCrop, IconEdit, IconHeart, IconHeartFilled, IconPhotoPlus, IconTrash } from '@tabler/icons-react'
 import { addImages, db, deleteCard, deleteImages, newId, setCardStatus, type Card } from '../lib/db'
 import { makeImage } from '../lib/image'
 import { memberLabel } from '../lib/members'
 import { cardColors } from './CardTile'
 import { Sheet, useImageUrl } from './ui'
+import PhotoCropper from './PhotoCropper'
 
 interface Props {
   card: Card
@@ -18,23 +19,30 @@ interface Props {
 export default function CardSheet({ card, collectionName, onClose, onToggle }: Props) {
   const url = useImageUrl(card.imageId, 'full')
   const fileRef = useRef<HTMLInputElement>(null)
+  const cropRef = useRef<HTMLInputElement>(null)
+  // 写真から切り取る（四隅を合わせる）。選んだ写真
+  const [cropFile, setCropFile] = useState<File | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const { border, background } = cardColors(card)
   const owned = card.status === '所持中'
+
+  /** 自分で登録した画像として保存する（出典なし＝バックアップに入る。いまの画像は置き換える） */
+  const saveOwnImage = async (img: { full: Blob; thumb: Blob }) => {
+    const id = newId()
+    await db.transaction('rw', db.images, db.thumbs, db.cards, async () => {
+      await addImages([{ id, ...img }])
+      await db.cards.update(card.id, { imageId: id, imageCredit: undefined, imageHash: undefined })
+      if (card.imageId) await deleteImages([card.imageId])
+    })
+  }
 
   const onFile = async (file: File | undefined) => {
     if (!file) return
     setBusy(true)
     setError('')
     try {
-      const img = await makeImage(file)
-      const id = newId()
-      await db.transaction('rw', db.images, db.thumbs, db.cards, async () => {
-        await addImages([{ id, ...img }])
-        await db.cards.update(card.id, { imageId: id, imageCredit: undefined })
-        if (card.imageId) await deleteImages([card.imageId])
-      })
+      await saveOwnImage(await makeImage(file))
     } catch (e) {
       setError((e as Error).message)
     } finally {
@@ -106,6 +114,22 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
           {busy ? '保存中…' : card.imageId ? '画像を変更' : '画像を登録'}
         </button>
         <input ref={fileRef} type="file" accept="image/*" hidden onChange={(e) => onFile(e.target.files?.[0])} />
+        <button className="btn block" disabled={busy} onClick={() => cropRef.current?.click()}>
+          <IconCrop size={20} aria-hidden />
+          写真から切り取って登録
+        </button>
+        <input
+          ref={cropRef}
+          type="file"
+          accept="image/*"
+          hidden
+          onChange={(e) => {
+            const f = e.target.files?.[0]
+            e.target.value = ''
+            if (f) setCropFile(f)
+          }}
+        />
+        {cropFile && <PhotoCropper file={cropFile} onDone={saveOwnImage} onClose={() => setCropFile(null)} />}
         {error && <div className="error" style={{ margin: 0 }}>{error}</div>}
         <div style={{ display: 'flex', gap: 8 }}>
           <Link className="btn" style={{ flex: 1 }} to={`/cards/${card.id}/edit`}>

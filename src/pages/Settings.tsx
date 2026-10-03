@@ -6,6 +6,7 @@ import { makeImage } from '../lib/image'
 import MemberPicker from '../components/MemberPicker'
 import { Link } from 'react-router-dom'
 import { listOrphans } from '../lib/orphans'
+import { exportOwnImages, listOwnImageCards } from '../lib/ownImages'
 import { changesSinceBackup, exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv, removeObsolete } from '../lib/csv'
 import { importImages, type ImageZipInfo } from '../lib/imageImport'
@@ -61,6 +62,9 @@ export default function Settings() {
   const lastBackupAt = useLiveQuery(() => getSetting<number>('lastBackupAt'))
   const imageZip = useLiveQuery(() => getSetting<ImageZipState>('imageZip'))
   const changes = useLiveQuery(() => changesSinceBackup())
+  const ownCount = useLiveQuery(async () => (await listOwnImageCards()).length)
+  // 作った自分の画像の ZIP（バックアップと同じく、作るのと保存を 2 回のタップに分ける）
+  const [ownFile, setOwnFile] = useState<File | null>(null)
   const orphans = useLiveQuery(async () => {
     const list = await listOrphans()
     return { total: list.length, owned: list.filter((c) => c.status === '所持中' || c.favorite).length }
@@ -159,6 +163,7 @@ export default function Settings() {
         return (
           `${isDiff ? `差分 No.${info.seq} の画像` : '画像'} ${r.matched} 枚を取り込みました` +
           (r.skipped ? `（前に取り込んだ画像と同じ ${r.skipped} 枚はとばしました）` : '') +
+          (r.keptOwn ? `（自分で登録した画像がある ${r.keptOwn} 枚は、そのまま残しました）` : '') +
           (r.failed.length
             ? `。読み込めなかった画像が ${r.failed.length} 枚あります（${r.failed.slice(0, 3).join('、')}${r.failed.length > 3 ? ' など' : ''}）。同じ ZIP をもう一度取り込むと、続きから入ります`
             : '') +
@@ -233,6 +238,43 @@ export default function Settings() {
           <IconRestore size={20} aria-hidden />
           バックアップから戻す
         </button>
+        {!!ownCount && (
+          <>
+            {ownFile ? (
+              <button
+                className="btn primary block"
+                disabled={busy}
+                onClick={() =>
+                  run(async () => {
+                    await saveFile(ownFile)
+                    setOwnFile(null)
+                    return '自分の画像を保存しました。パソコンの pocamaster-images に置いてください'
+                  })
+                }
+              >
+                <IconDownload size={20} aria-hidden />
+                「ファイル」に保存する（{Math.max(1, Math.round(ownFile.size / 1024 / 1024))}MB）
+              </button>
+            ) : (
+              <button
+                className="btn block"
+                disabled={busy}
+                onClick={() =>
+                  run(async () => {
+                    const r = await exportOwnImages()
+                    if (!r) return '書き出せる画像がありません'
+                    setOwnFile(r.file)
+                    return `${r.count} 枚の画像を ZIP にしました。上の保存ボタンを押してください` + (r.skipped ? `（読み込めなかった ${r.skipped} 枚は入っていません）` : '')
+                  })
+                }
+              >
+                <IconDownload size={20} aria-hidden />
+                自分の画像を ZIP に書き出す（{ownCount} 枚）
+              </button>
+            )}
+            <div className="xs muted">アプリで切り取った・登録した画像を、パソコンに残す用です（全部入りの ZIP に入れられます）</div>
+          </>
+        )}
         <input
           ref={restoreRef}
           type="file"

@@ -134,6 +134,10 @@ if os.path.exists(CARDS + "manifest.json"):
     entries = [e for e in json.load(open(CARDS + "manifest.json", encoding="utf-8")) if e["collection"] == "After LIKE"]
 for j in jobs:
     entries += j["images"]
+# 出典が空の画像は「本人の写真」にする（アプリは、出典のない画像を「自分でアプリから登録した画像」として扱い、画像の ZIP で置き換えないため。2026-10-03）
+for e in entries:
+    if not e.get("credit"):
+        e["credit"] = "本人の写真"
 entries = [e for e in entries if e["credit"] not in ID_CREDITS and not DROP_SLOT(e["collection"], e["source"], e["version"])]
 # 本人の確認で「その枠のカードではない」とわかった画像（代わりの画像がないので外すだけ）
 WRONG_IMAGES = set()  # Be Alright のイソの Sony Music ラキドロは、BOYCOTT の印つきの表の画像に入れ替えた
