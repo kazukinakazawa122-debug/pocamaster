@@ -16,6 +16,8 @@ export default function Orphans() {
   const all = useLiveQuery(() => db.cards.toArray())
   const collections = useLiveQuery(() => db.collections.toArray())
   const [pick, setPick] = useState<Record<string, string>>({})
+  // 付け替え先のコレクション（取り残された枠と同じコレクションに候補がないときや、別のコレクションの枠へ付け替えたいとき）
+  const [otherCol, setOtherCol] = useState<Record<string, string>>({})
   const [message, setMessage] = useState('')
 
   const colName = new Map((collections ?? []).map((c) => [c.id, c.name]))
@@ -39,8 +41,12 @@ export default function Orphans() {
       {orphans && sorted.length === 0 && <p className="muted">整理する枠はありません。</p>}
       <div className="stack">
         {sorted.map((c) => {
-          const cands = candidatesFor(c, all ?? [])
-          const target = byId.get(pick[c.id] ?? cands[0]?.id ?? '')
+          const sameCands = candidatesFor(c, all ?? [])
+          // 同じコレクションに候補がなければ、コレクションを選べるようにする（別のコレクションへ移された枠など）
+          const choose = otherCol[c.id] !== undefined || sameCands.length === 0
+          const colId = otherCol[c.id] || c.collectionId
+          const cands = choose ? candidatesFor(c, all ?? [], colId) : sameCands
+          const target = byId.get(cands.some((t) => t.id === pick[c.id]) ? pick[c.id] : (cands[0]?.id ?? ''))
           return (
             <div key={c.id} className="panel stack" data-testid="orphan">
               <div>
@@ -55,6 +61,24 @@ export default function Orphans() {
                   {c.imageId ? '　画像あり' : ''}
                 </div>
               </div>
+              {choose && (
+                <label className="field">
+                  <select
+                    value={colId}
+                    onChange={(e) => {
+                      setOtherCol({ ...otherCol, [c.id]: e.target.value })
+                      setPick({ ...pick, [c.id]: '' })
+                    }}
+                    aria-label="付け替え先のコレクション"
+                  >
+                    {(collections ?? []).map((col) => (
+                      <option key={col.id} value={col.id}>
+                        {col.name}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
               {cands.length > 0 ? (
                 <>
                   <label className="field">
@@ -80,7 +104,12 @@ export default function Orphans() {
                   </button>
                 </>
               ) : (
-                <div className="xs muted">付け替えられる初期データの枠が、同じコレクションの同じメンバーにはありません</div>
+                <div className="xs muted">このコレクションには、同じメンバーの初期データの枠がありません。上でほかのコレクションを選んでください</div>
+              )}
+              {!choose && (
+                <button className="btn" onClick={() => setOtherCol({ ...otherCol, [c.id]: c.collectionId })}>
+                  ほかのコレクションの枠へ付け替える
+                </button>
               )}
               <div style={{ display: 'flex', gap: 8 }}>
                 <button className="btn" onClick={() => keepAsOwn(c)}>

@@ -9,6 +9,11 @@ describe('初期データにない枠の整理', () => {
     await db.collections.add(collection())
   })
 
+  it('初期データを取り込む前（どのカードにも ID がない）は、整理の対象を出さない', async () => {
+    await db.cards.bulkAdd([card({ id: 'a' }), card({ id: 'b', version: 'B' })])
+    expect(await listOrphans()).toEqual([])
+  })
+
   it('固定の ID のない枠だけが一覧に出る。「自分の枠として残す」にしたものは出ない', async () => {
     await db.cards.bulkAdd([card({ id: 'seed', seedId: 's1' }), card({ id: 'old', version: '旧' }), card({ id: 'mine', version: '自作' })])
     expect((await listOrphans()).map((c) => c.id).sort()).toEqual(['mine', 'old'])
@@ -29,6 +34,15 @@ describe('初期データにない枠の整理', () => {
     ])
     const all = await db.cards.toArray()
     expect(candidatesFor((await db.cards.get('orphan'))!, all).map((c) => c.id)).toEqual(['c2', 'c1', 'c3'])
+  })
+
+  it('コレクションを指定すると、別のコレクションの枠が候補になる（コレクションが移された枠）', async () => {
+    await db.collections.add(collection({ id: 'col2', name: '移した先' }))
+    await db.cards.bulkAdd([card({ id: 'orphan', source: 'LINE', version: '旧' }), card({ id: 'moved', seedId: 'm', collectionId: 'col2', source: 'LINE', version: '新' })])
+    const all = await db.cards.toArray()
+    const o = (await db.cards.get('orphan'))!
+    expect(candidatesFor(o, all)).toEqual([]) // 同じコレクションには候補がない
+    expect(candidatesFor(o, all, 'col2').map((c) => c.id)).toEqual(['moved'])
   })
 
   it('記録（持っている・お気に入り・譲・履歴・マイアルバム・画像）を移して、取り残された枠を消す', async () => {

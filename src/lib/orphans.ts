@@ -6,14 +6,20 @@ import { db, deleteImages, type Card, type MyAlbum } from './db'
  * 「自分の枠として残す」にしたものは除く
  */
 export async function listOrphans(): Promise<Card[]> {
-  return (await db.cards.toArray()).filter((c) => !c.seedId && !c.keepAsOwn)
+  const all = await db.cards.toArray()
+  // 初期データを取り込んで固定の ID が付く前（どのカードにも ID がない）は、全部が「ID のない枠」に見えてしまうので、整理の対象を出さない
+  if (!all.some((c) => c.seedId)) return []
+  return all.filter((c) => !c.seedId && !c.keepAsOwn)
 }
 
-/** 付け替え先の候補：同じコレクションの、同じメンバーの初期データの枠。持っていない枠・同じ入手元の枠を先に */
-export function candidatesFor(orphan: Card, all: Card[]): Card[] {
+/**
+ * 付け替え先の候補：同じメンバーの初期データの枠。持っていない枠・同じ入手元の枠を先に。
+ * collectionId を渡すとそのコレクションの枠、渡さなければ、取り残された枠と同じコレクションの枠（コレクションが移された枠は、別のコレクションを選ぶ。2026-10-03）
+ */
+export function candidatesFor(orphan: Card, all: Card[], collectionId: string = orphan.collectionId): Card[] {
   const members = [...orphan.memberIds].sort().join('+')
   return all
-    .filter((c) => c.seedId && c.collectionId === orphan.collectionId && c.id !== orphan.id && [...c.memberIds].sort().join('+') === members)
+    .filter((c) => c.seedId && c.collectionId === collectionId && c.id !== orphan.id && [...c.memberIds].sort().join('+') === members)
     .sort(
       (a, b) =>
         Number(a.status === '所持中') - Number(b.status === '所持中') ||
