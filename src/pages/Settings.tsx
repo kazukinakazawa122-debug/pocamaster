@@ -6,7 +6,7 @@ import { makeImage } from '../lib/image'
 import MemberPicker from '../components/MemberPicker'
 import { Link } from 'react-router-dom'
 import { listOrphans } from '../lib/orphans'
-import { exportOwnImages, listOwnImageCards } from '../lib/ownImages'
+import { exportOwnImages, listOwnImageCards, listUnexportedOwnImageCards, markExported } from '../lib/ownImages'
 import { changesSinceBackup, exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv, removeObsolete } from '../lib/csv'
 import { importImages, type ImageZipInfo } from '../lib/imageImport'
@@ -62,9 +62,13 @@ export default function Settings() {
   const lastBackupAt = useLiveQuery(() => getSetting<number>('lastBackupAt'))
   const imageZip = useLiveQuery(() => getSetting<ImageZipState>('imageZip'))
   const changes = useLiveQuery(() => changesSinceBackup())
-  const ownCount = useLiveQuery(async () => (await listOwnImageCards()).length)
+  // まだ書き出していない自分の画像の数（書き出し済みは数えない）と、書き出し済みの数
+  const ownCount = useLiveQuery(async () => {
+    const [all, todo] = await Promise.all([listOwnImageCards(), listUnexportedOwnImageCards()])
+    return { todo: todo.length, done: all.length - todo.length }
+  })
   // 作った自分の画像の ZIP（バックアップと同じく、作るのと保存を 2 回のタップに分ける）
-  const [ownFile, setOwnFile] = useState<File | null>(null)
+  const [ownFile, setOwnFile] = useState<{ file: File; imageIds: string[] } | null>(null)
   const orphans = useLiveQuery(async () => {
     const list = await listOrphans()
     return { total: list.length, owned: list.filter((c) => c.status === '所持中' || c.favorite).length }
@@ -239,7 +243,7 @@ export default function Settings() {
           <IconRestore size={20} aria-hidden />
           バックアップから戻す
         </button>
-        {!!ownCount && (
+        {!!ownCount && (ownCount.todo > 0 || ownCount.done > 0 || ownFile) && (
           <>
             {ownFile ? (
               <button
@@ -247,33 +251,59 @@ export default function Settings() {
                 disabled={busy}
                 onClick={() =>
                   run(async () => {
-                    await saveFile(ownFile)
+                    await saveFile(ownFile.file)
+                    // 保存まで終えたら「書き出し済み」にする（次からは、新しく切り取った・切り直した画像だけを書き出す）
+                    await markExported(ownFile.imageIds)
                     setOwnFile(null)
                     return '自分の画像を保存しました。パソコンの pocamaster-images に置いてください'
                   })
                 }
               >
                 <IconDownload size={20} aria-hidden />
-                「ファイル」に保存する（{Math.max(1, Math.round(ownFile.size / 1024 / 1024))}MB）
+                「ファイル」に保存する（{Math.max(1, Math.round(ownFile.file.size / 1024 / 1024))}MB）
               </button>
             ) : (
-              <button
-                className="btn block"
-                disabled={busy}
-                onClick={() =>
-                  run(async () => {
-                    const r = await exportOwnImages()
-                    if (!r) return '書き出せる画像がありません'
-                    setOwnFile(r.file)
-                    return `${r.count} 枚の画像を ZIP にしました。上の保存ボタンを押してください` + (r.skipped ? `（読み込めなかった ${r.skipped} 枚は入っていません）` : '')
-                  })
-                }
-              >
-                <IconDownload size={20} aria-hidden />
-                自分の画像を ZIP に書き出す（{ownCount} 枚）
-              </button>
+              ownCount.todo > 0 && (
+                <button
+                  className="btn block"
+                  disabled={busy}
+                  onClick={() =>
+                    run(async () => {
+                      const r = await exportOwnImages()
+                      if (!r) return '書き出せる画像がありません'
+                      setOwnFile({ file: r.file, imageIds: r.imageIds })
+                      return `${r.count} 枚の画像を ZIP にしました。上の保存ボタンを押してください` + (r.skipped ? `（読み込めなかった ${r.skipped} 枚は入っていません）` : '')
+                    })
+                  }
+                >
+                  <IconDownload size={20} aria-hidden />
+                  自分の画像を ZIP に書き出す（新しい {ownCount.todo} 枚）
+                </button>
+              )
             )}
-            <div className="xs muted">アプリで切り取った・登録した画像を、パソコンに残す用です（全部入りの ZIP に入れられます）</div>
+            <div className="xs muted">
+              アプリで切り取った・登録した画像を、パソコンに残す用です。書き出し済みの{ownCount.done}枚は、次からは入りません
+              {ownCount.done > 0 && !ownFile && (
+                <>
+                  {' '}
+                  <button
+                    className="link"
+                    style={{ background: 'none', border: 'none', padding: 0, color: 'inherit', textDecoration: 'underline', font: 'inherit' }}
+                    disabled={busy}
+                    onClick={() =>
+                      run(async () => {
+                        const r = await exportOwnImages({ all: true })
+                        if (!r) return '書き出せる画像がありません'
+                        setOwnFile({ file: r.file, imageIds: r.imageIds })
+                        return `書き出し済みの分も入れて ${r.count} 枚を ZIP にしました。上の保存ボタンを押してください`
+                      })
+                    }
+                  >
+                    全部を書き出し直す
+                  </button>
+                </>
+              )}
+            </div>
           </>
         )}
         <input

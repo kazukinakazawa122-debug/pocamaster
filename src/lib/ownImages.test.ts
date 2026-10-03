@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import JSZip from 'jszip'
 import { addImages, db, getFull } from './db'
-import { exportOwnImages, listOwnImageCards, OWN_IMAGE_CREDIT } from './ownImages'
+import { exportOwnImages, listOwnImageCards, listUnexportedOwnImageCards, markExported, OWN_IMAGE_CREDIT } from './ownImages'
 import { importImages } from './imageImport'
 import { card, collection, imageZip, jpeg, resetDb } from '../test/helpers'
 
@@ -72,6 +72,46 @@ describe('自分で登録した画像', () => {
     const res = await importImages(r.file)
     expect([res.adoptedOwn, res.keptOwn]).toEqual([0, 1])
     expect((await listOwnImageCards()).map((c) => c.id)).toEqual(['own'])
+  })
+
+  it('書き出して保存した画像は「書き出し済み」になり、次からは新しい画像だけを書き出す（同じものを何度も書き出さない）', async () => {
+    const r1 = (await exportOwnImages())!
+    expect(r1.imageIds).toEqual(['own-img'])
+    // 保存をやめたとき（markExported を呼ばない）は、まだ書き出していない扱い
+    expect((await listUnexportedOwnImageCards()).length).toBe(1)
+    await markExported(r1.imageIds) // 「ファイルに保存する」まで終えた
+    expect(await listUnexportedOwnImageCards()).toEqual([])
+    expect(await exportOwnImages()).toBeNull()
+    // 新しく切り取った画像だけが、次の ZIP に入る
+    await addImages([{ id: 'new-img', full: jpeg('new-full'), thumb: jpeg('new-thumb') }])
+    await db.cards.update('none', { imageId: 'new-img' })
+    const r2 = (await exportOwnImages())!
+    expect([r2.count, r2.imageIds]).toEqual([1, ['new-img']])
+    const manifest = JSON.parse(await (await JSZip.loadAsync(r2.file)).file('manifest.json')!.async('string'))
+    expect(manifest.map((e: { members: string[] }) => e.members[0])).toEqual(['レイ'])
+  })
+
+  it('全部を書き出し直す（all）と、書き出し済みの画像も入る', async () => {
+    await markExported(['own-img'])
+    expect(await exportOwnImages()).toBeNull()
+    const r = (await exportOwnImages({ all: true }))!
+    expect(r.count).toBe(1)
+  })
+
+  it('書き出したあとに切り直した画像（新しい id）は、また書き出し対象になる', async () => {
+    await markExported(['own-img'])
+    await addImages([{ id: 'own-img-v2', full: jpeg('v2'), thumb: jpeg('v2t') }])
+    await db.cards.update('own', { imageId: 'own-img-v2' })
+    expect((await listUnexportedOwnImageCards()).map((c) => c.id)).toEqual(['own'])
+  })
+
+  it('書き出し済みの記録は、バックアップに入って戻る', async () => {
+    await markExported(['own-img'])
+    const { exportBackup, restoreBackup } = await import('./backup')
+    const { file } = await exportBackup()
+    await resetDb()
+    await restoreBackup(file)
+    expect((await db.settings.get('ownExportedImageIds'))!.value).toEqual(['own-img'])
   })
 
   it('書き出せる画像がなければ、何も作らない', async () => {
