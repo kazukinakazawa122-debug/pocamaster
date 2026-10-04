@@ -18,6 +18,9 @@ export default function CollectionEdit() {
   const [error, setError] = useState('')
   const [saving, setSaving] = useState(false)
   const fileRef = useRef<HTMLInputElement>(null)
+  // 作った仮の URL は、画面を閉じるときに手放す（開くたびに増えていくため）
+  const urls = useRef<string[]>([])
+  useEffect(() => () => urls.current.forEach((u) => URL.revokeObjectURL(u)), [])
 
   useEffect(() => {
     if (!id) return
@@ -29,7 +32,11 @@ export default function CollectionEdit() {
       setReleaseDate(c.releaseDate)
       if (c.coverImageId) {
         const thumb = await getThumb(c.coverImageId)
-        if (thumb) setCoverUrl(URL.createObjectURL(thumb))
+        if (thumb) {
+          const u = URL.createObjectURL(thumb)
+          urls.current.push(u)
+          setCoverUrl(u)
+        }
       }
     })
   }, [id])
@@ -112,7 +119,9 @@ export default function CollectionEdit() {
             const f = e.target.files?.[0]
             if (!f) return
             setCover(f)
-            setCoverUrl(URL.createObjectURL(f))
+            const u = URL.createObjectURL(f)
+            urls.current.push(u)
+            setCoverUrl(u)
           }}
         />
       </div>
