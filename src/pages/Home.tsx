@@ -1,4 +1,4 @@
-import { useState, useSyncExternalStore } from 'react'
+import { useRef, useState, useSyncExternalStore } from 'react'
 import { liveQuery } from 'dexie'
 import { Link } from 'react-router-dom'
 import { IconAlertTriangle, IconCrown, IconPhoto } from '@tabler/icons-react'
@@ -7,7 +7,7 @@ import { useAllCards } from '../lib/cardStore'
 import { changesSinceBackup } from '../lib/backup'
 import { MEMBERS, MEMBER_BY_ID, memberLabel, type MemberId } from '../lib/members'
 import { isComplete, memberProgress, pctText, progress, type Progress } from '../lib/stats'
-import { ProfileAvatar, ProgressBar, useCoverUrl, useImageUrl, warmCovers } from '../components/ui'
+import { ProfileAvatar, ProgressBar, useCoverUrl, useImageUrl, useNearScreen, warmCovers } from '../components/ui'
 import { cardColors } from '../components/CardTile'
 import { MiniveTrio, MiniveLoading } from '../components/Minive'
 import { MenuButton } from '../components/SideMenu'
@@ -344,11 +344,14 @@ function PinnedAlbum({ col, p }: { col: Collection; p: Progress }) {
 
 /** 横に並べる小さなカード。at があれば下に日付を出す */
 function RecentCard({ card, col, at }: { card: Card; col?: Collection; at?: number }) {
-  const url = useImageUrl(card.imageId, 'thumb')
+  // 横に並ぶ一覧（お気に入りは何十枚にもなる）は、見える近くの画像だけを読む（本人の報告「ラグ」の調査、2026-10-04）
+  const ref = useRef<HTMLAnchorElement>(null)
+  const near = useNearScreen(ref, 300, 'x')
+  const url = useImageUrl(near ? card.imageId : undefined, 'thumb')
   const { border, background } = cardColors(card)
   const d = at ? new Date(at) : null
   return (
-    <Link to={`/collections/${card.collectionId}`} style={{ width: 92, flex: 'none' }} aria-label={`${col?.name ?? ''} ${memberLabel(card.memberIds)}`}>
+    <Link ref={ref} to={`/collections/${card.collectionId}`} style={{ width: 92, flex: 'none' }} aria-label={`${col?.name ?? ''} ${memberLabel(card.memberIds)}`}>
       <div className="poca" style={{ borderColor: border, background }}>
         {url ? (
           <img src={url} alt="" decoding="async" />

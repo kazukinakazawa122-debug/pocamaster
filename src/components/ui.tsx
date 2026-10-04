@@ -53,7 +53,7 @@ export function Sheet({ onClose, children }: { onClose: () => void; children: Re
  * 要素が画面の近く（上下 margin 以内）にあるか。
  * 画面から離れたカードの画像は読み込まない・手放すために使う（iPhone で画像が多いと落ちるため）
  */
-export function useNearScreen(ref: RefObject<Element | null>, margin = 800): boolean {
+export function useNearScreen(ref: RefObject<Element | null>, margin = 800, axis: 'y' | 'x' = 'y'): boolean {
   const [near, setNear] = useState(false)
   useEffect(() => {
     const el = ref.current
@@ -61,15 +61,16 @@ export function useNearScreen(ref: RefObject<Element | null>, margin = 800): boo
       setNear(true)
       return
     }
-    return watchNear(el, margin, setNear)
-  }, [ref, margin])
+    return watchNear(el, margin, axis, setNear)
+  }, [ref, margin, axis])
   return near
 }
 
 // カード 1 枚ごとに監視を作ると数百個になって重いので、同じ余白の監視は 1 つを使い回す
-const watchers = new Map<number, { io: IntersectionObserver; cbs: Map<Element, (near: boolean) => void> }>()
-function watchNear(el: Element, margin: number, cb: (near: boolean) => void): () => void {
-  let w = watchers.get(margin)
+const watchers = new Map<string, { io: IntersectionObserver; cbs: Map<Element, (near: boolean) => void> }>()
+function watchNear(el: Element, margin: number, axis: 'y' | 'x', cb: (near: boolean) => void): () => void {
+  const wk = `${axis}${margin}`
+  let w = watchers.get(wk)
   if (!w) {
     const cbs = new Map<Element, (near: boolean) => void>()
     const io = new IntersectionObserver(
@@ -77,10 +78,11 @@ function watchNear(el: Element, margin: number, cb: (near: boolean) => void): ()
         // 同じ要素の通知が続いたときは、いちばん新しい状態だけを使う
         for (const e of entries) cbs.get(e.target)?.(e.isIntersecting)
       },
-      { rootMargin: `${margin}px 0px` },
+      // 縦に並ぶ一覧は上下に、横に並ぶ一覧（ホームのお気に入りなど）は左右に、余白をとる
+      { rootMargin: axis === 'y' ? `${margin}px 0px` : `0px ${margin}px` },
     )
     w = { io, cbs }
-    watchers.set(margin, w)
+    watchers.set(wk, w)
   }
   const { io, cbs } = w
   cbs.set(el, cb)
@@ -213,7 +215,49 @@ function loadThumb(id: string): Promise<Blob | undefined> {
   })
 }
 
-/** 保存した画像を表示用の URL にする（'thumb' は一覧用の小さい画像だけを、まとめて読む） */
+/**
+ * 一覧用の画像の仮 URL（createObjectURL）は、作るのが重い（IndexedDB の画像では 1 回ごとに約 1ms。スクロールで数百回、
+ * 本人の報告「ラグ」の調査で、起動・スクロール・ホームの切り替えの処理時間の大きな部分だった。2026-10-04）。
+ * 手放すたびに作り直さず、最近の THUMB_URL_KEEP 枚の URL を使い回す。使っている間（refs > 0）は手放さない
+ */
+const THUMB_URL_KEEP = 400
+const thumbUrls = new Map<string, { url: string; refs: number }>() // 入れた順（＝使った順）に並ぶ
+
+function evictThumbUrls() {
+  if (thumbUrls.size <= THUMB_URL_KEEP) return
+  for (const [id, e] of thumbUrls) {
+    if (thumbUrls.size <= THUMB_URL_KEEP) break
+    if (e.refs > 0) continue // 画面で使っているものは手放さない
+    URL.revokeObjectURL(e.url)
+    thumbUrls.delete(id)
+  }
+}
+
+/** 覚えている URL を使い始める（使った順を新しくする）。なければ undefined */
+function takeThumbUrl(id: string): string | undefined {
+  const e = thumbUrls.get(id)
+  if (!e) return undefined
+  e.refs++
+  thumbUrls.delete(id)
+  thumbUrls.set(id, e)
+  return e.url
+}
+
+function addThumbUrl(id: string, blob: Blob): string {
+  const known = takeThumbUrl(id)
+  if (known) return known
+  const url = URL.createObjectURL(blob)
+  thumbUrls.set(id, { url, refs: 1 })
+  evictThumbUrls()
+  return url
+}
+
+function releaseThumbUrl(id: string) {
+  const e = thumbUrls.get(id)
+  if (e && e.refs > 0) e.refs--
+}
+
+/** 保存した画像を表示用の URL にする（'thumb' は一覧用の小さい画像だけを、まとめて読む。URL は使い回す） */
 export function useImageUrl(imageId: string | undefined, size: 'thumb' | 'full'): string | undefined {
   const [url, setUrl] = useState<string>()
   useEffect(() => {
@@ -221,9 +265,29 @@ export function useImageUrl(imageId: string | undefined, size: 'thumb' | 'full')
       setUrl(undefined)
       return
     }
-    let objectUrl: string | undefined
     let alive = true
-    ;(size === 'thumb' ? loadThumb(imageId) : getFull(imageId)).then((blob) => {
+    if (size === 'thumb') {
+      let held = false
+      // 覚えている URL があれば、読まずにすぐ使う
+      const known = takeThumbUrl(imageId)
+      if (known) {
+        held = true
+        setUrl(known)
+      } else {
+        loadThumb(imageId).then((blob) => {
+          if (!alive || !blob) return
+          held = true
+          setUrl(addThumbUrl(imageId, blob))
+        })
+      }
+      return () => {
+        alive = false
+        if (held) releaseThumbUrl(imageId)
+        setUrl(undefined)
+      }
+    }
+    let objectUrl: string | undefined
+    getFull(imageId).then((blob) => {
       if (!alive || !blob) return
       objectUrl = URL.createObjectURL(blob)
       setUrl(objectUrl)

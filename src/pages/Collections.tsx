@@ -1,3 +1,4 @@
+import { watchScroll } from '../lib/scrollMemory'
 import { useEffect, useLayoutEffect, useMemo } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { Link, useNavigationType, useSearchParams } from 'react-router-dom'
@@ -76,11 +77,7 @@ export default function Collections() {
   useLayoutEffect(() => {
     if (ready) window.scrollTo(0, back ? lastScrollY : 0)
   }, [ready, back])
-  useEffect(() => {
-    const onScroll = () => (lastScrollY = window.scrollY)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  useEffect(() => watchScroll((y) => (lastScrollY = y)), [])
 
   if (!data) return <MiniveLoading />
 

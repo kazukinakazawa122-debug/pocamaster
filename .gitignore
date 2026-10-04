@@ -8,3 +8,6 @@ __pycache__/
 
 # 突き合わせの確認ページ（カードの画像入り。公開しない）
 public/_review/
+dist-prof
+dist-prof-base
+dist-prof-new

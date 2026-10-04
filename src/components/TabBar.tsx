@@ -62,8 +62,21 @@ export default function TabBar({ pathname }: { pathname: string }) {
     const r = barRef.current!.getBoundingClientRect()
     return Math.min(TABS.length - 1, Math.max(0, Math.floor(((clientX - r.left - INSET) / (r.width - INSET * 2)) * TABS.length)))
   }
-  /** いまの丸の位置と大きさ（動いている途中でも、見えているままの値） */
+  /**
+   * 最後に自分で置いた丸の位置と大きさ。動いていないときは、これがそのまま「いま」の値。
+   * idx があるときは「idx 番目のタブの位置」（px は使うときに計算する。起動で幅を読んで、画面の配置を強制しないため）
+   */
+  const placed = useRef<{ x: number; sx: number; sy: number; idx?: number }>({ x: 0, sx: 1, sy: 1 })
+  /**
+   * いまの丸の位置と大きさ（動いている途中でも、見えているままの値）。
+   * getComputedStyle は、画面の style を全部計算し直させる（画面を開くたびに、大きなページの分まで。起動で約 0.7 秒、2026-10-04 の調査）ので、
+   * アニメーションがあるときだけ読む（終わっても fill で値が残るため）。まだ動かしていない（起動のとき）は、最後に置いた値を使う
+   */
   const now = () => {
+    if (!anim.current) {
+      const p = placed.current
+      return { x: p.idx !== undefined ? p.idx * slot() : p.x, sx: p.sx, sy: p.sy }
+    }
     const m = new DOMMatrix(getComputedStyle(pillRef.current!).transform)
     return { x: m.m41, sx: m.a, sy: m.d }
   }
@@ -71,6 +84,7 @@ export default function TabBar({ pathname }: { pathname: string }) {
   const setNow = (x: number, sx: number, sy: number) => {
     anim.current?.cancel()
     anim.current = null
+    placed.current = { x, sx, sy }
     pillRef.current!.style.transform = tf(x, sx, sy)
   }
   /** 丸をタブ i に収める。dir は進んできた向き（少し行き過ぎてから戻る） */
@@ -83,6 +97,7 @@ export default function TabBar({ pathname }: { pathname: string }) {
     const end = tf(to, 1, 1)
     anim.current?.cancel()
     pill.style.transform = end
+    placed.current = { x: to, sx: 1, sy: 1 }
     if (reduceMotion()) return
     const over = Math.max(-10, Math.min(10, dist * 0.08))
     // 遠くへ行くときは途中で横に伸び、着いたら少し行き過ぎて戻る（ぷにっと収まる）
@@ -98,9 +113,15 @@ export default function TabBar({ pathname }: { pathname: string }) {
   }
 
   // 戻るボタンなど、押さずに画面が変わったときも丸を動かす
+  const mounted = useRef(false)
   useLayoutEffect(() => {
     if (press.current || !barRef.current) return
     setLit(null)
+    // 最初（アプリを開いたとき）は動かさない。位置は下の effect が置く（ここで幅を読むと、できたばかりの大きなページの配置を強制してしまう）
+    if (!mounted.current) {
+      mounted.current = true
+      return
+    }
     // タブを押して切り替えたときは、もう丸がそこへ向かっているので動かし直さない
     if (current < 0 || target.current === current) return
     settle(current, true)
@@ -112,7 +133,11 @@ export default function TabBar({ pathname }: { pathname: string }) {
       const c = currentRef.current
       if (press.current || c < 0 || !barRef.current) return
       target.current = c
-      setNow(c * slot(), 1, 1)
+      // 位置は「丸の幅のいくつぶん」（％）で置くので、幅を読まなくてよい。画面の幅が変わっても、そのまま合う
+      anim.current?.cancel()
+      anim.current = null
+      placed.current = { x: 0, sx: 1, sy: 1, idx: c }
+      pillRef.current!.style.transform = `translateX(${c * 100}%)`
     }
     place()
     window.addEventListener('resize', place)

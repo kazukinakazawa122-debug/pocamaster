@@ -1,3 +1,4 @@
+import { watchScroll } from '../lib/scrollMemory'
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { Link, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
@@ -96,11 +97,7 @@ export default function CollectionDetail() {
   useLayoutEffect(() => {
     if (ready) window.scrollTo(0, back ? (scrollById.get(id) ?? 0) : 0)
   }, [ready, back, id])
-  useEffect(() => {
-    const onScroll = () => scrollById.set(id, window.scrollY)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [id])
+  useEffect(() => watchScroll((y) => scrollById.set(id, y)), [id])
 
   if (!data) return <MiniveLoading />
   const { col, cards } = data
