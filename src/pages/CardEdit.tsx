@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { db, newId, type Card } from '../lib/db'
 import type { MemberId } from '../lib/members'
@@ -16,6 +16,7 @@ export default function CardEdit() {
   const [version, setVersion] = useState('')
   const [sources, setSources] = useState<string[]>([])
   const [error, setError] = useState('')
+  const busy = useRef(false) // 保存の途中で、もう一度押されても 2 回作らない
 
   useEffect(() => {
     if (!cardId) return
@@ -42,6 +43,9 @@ export default function CardEdit() {
   const save = async () => {
     if (memberIds.length === 0) return setError('メンバーを 1 人以上選んでください')
     if (!source.trim()) return setError('入手元を入力してください')
+    if (busy.current) return
+    busy.current = true
+    try {
     if (original) {
       await db.cards.update(original.id, { memberIds, source: source.trim(), version: version.trim() })
     } else {
@@ -56,6 +60,10 @@ export default function CardEdit() {
         statusChangedAt: Date.now(),
         order: (last.at(-1)?.order ?? -1) + 1,
       })
+    }
+    } catch (e) {
+      busy.current = false
+      return setError(`保存できませんでした：${(e as Error).message}`)
     }
     navigate(-1)
   }

@@ -9,8 +9,9 @@ import { MiniveLoading } from '../components/Minive'
 import { Sheet, TopBar, useImageUrl } from '../components/ui'
 
 /** バインダーのポケット 1 つ。カードがなければ点線の空きポケット */
-export function AlbumPocket({ card, onClick, size = 'thumb' }: { card?: Card; onClick?: () => void; size?: 'thumb' | 'full' }) {
-  const url = useImageUrl(card?.imageId, size)
+export function AlbumPocket({ card, onClick, size = 'thumb', load = true }: { card?: Card; onClick?: () => void; size?: 'thumb' | 'full'; load?: boolean }) {
+  // load が false のページ（いま見ているページから遠い）は、画像を読まない（ページ数 × 9 枚の大きな画像を一度に読むと、iPhone でメモリが足りなくなる）
+  const url = useImageUrl(load ? card?.imageId : undefined, size)
   const Tag = onClick ? 'button' : 'div'
   if (!card) {
     return (
@@ -83,24 +84,31 @@ export default function MyAlbumDetail({ albumId: id }: { albumId: string }) {
   const { album, cardById, colName } = data
   if (!album) return <div className="page empty">アルバムが見つかりません</div>
 
-  const save = (slots: (string | null)[]) => db.myAlbums.update(album.id, { slots })
-  const setSlot = (i: number, cardId: string | null) => {
-    const slots = [...album.slots]
-    slots[i] = cardId
-    save(slots)
-  }
+  // 画面に出ている album.slots ではなく、保存してある最新の slots を書き換える（続けて 2 回押したとき、1 回目の変更を上書きして消さないため）
+  const edit = (fn: (slots: (string | null)[]) => (string | null)[]) =>
+    db.myAlbums.where('id').equals(album.id).modify((a: MyAlbum) => {
+      a.slots = fn(a.slots)
+    })
+  const setSlot = (i: number, cardId: string | null) =>
+    edit((slots) => {
+      const next = [...slots]
+      next[i] = cardId
+      return next
+    })
 
   const addPage = async () => {
     setPending(pageCount)
-    await save([...album.slots, ...Array(ALBUM_PAGE_SIZE).fill(null)])
+    await edit((slots) => [...slots, ...Array(ALBUM_PAGE_SIZE).fill(null)])
   }
 
   const removePage = () => {
     const start = page * ALBUM_PAGE_SIZE
     const inPage = album.slots.slice(start, start + ALBUM_PAGE_SIZE).filter(Boolean).length
     if (inPage > 0 && !confirm(`このページのカード ${inPage} 枚を外して、ページを削除しますか？`)) return
-    const slots = [...album.slots.slice(0, start), ...album.slots.slice(start + ALBUM_PAGE_SIZE)]
-    save(slots.length ? slots : Array(ALBUM_PAGE_SIZE).fill(null))
+    edit((all) => {
+      const slots = [...all.slice(0, start), ...all.slice(start + ALBUM_PAGE_SIZE)]
+      return slots.length ? slots : Array(ALBUM_PAGE_SIZE).fill(null)
+    })
   }
 
   const selCard = selected !== null ? cardById.get(album.slots[selected] ?? '') : undefined
@@ -129,7 +137,8 @@ export default function MyAlbumDetail({ albumId: id }: { albumId: string }) {
                 const i = p * ALBUM_PAGE_SIZE + k
                 const cardId = album.slots[i] ?? null
                 const card = cardId ? cardById.get(cardId) : undefined
-                return <AlbumPocket key={k} card={card} size="full" onClick={() => (card ? setSelected(i) : setPicking(i))} />
+                // 一覧のポケットは小さい画像（約 120px の大きさに、一覧用の 600px で足りる）。いまのページとその前後だけ画像を読む
+                return <AlbumPocket key={k} card={card} load={Math.abs(p - page) <= 1} onClick={() => (card ? setSelected(i) : setPicking(i))} />
               })}
             </div>
           </div>

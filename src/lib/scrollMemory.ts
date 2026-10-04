@@ -13,9 +13,12 @@ export function watchScroll(save: (y: number) => void): () => void {
   const onClick = () => save(window.scrollY)
   window.addEventListener('scroll', onScroll, { passive: true })
   document.addEventListener('click', onClick, true)
+  // 下のタブは指を離したときに画面を移る（click ではない）ので、押し始めにも読む
+  document.addEventListener('pointerdown', onClick, true)
   return () => {
     window.clearTimeout(timer)
     window.removeEventListener('scroll', onScroll)
     document.removeEventListener('click', onClick, true)
+    document.removeEventListener('pointerdown', onClick, true)
   }
 }

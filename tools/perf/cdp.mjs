@@ -262,8 +262,37 @@ async function startup() {
   c.close(); proc.kill()
 }
 
+// 動作の確認（バグの調査用）：マイアルバムのページごとの画像、続けて 2 回タップしたときの更新、コレクションの編集で項目が残るか
+async function smoke() {
+  const { proc, c } = await open(true)
+  await clearSW(c)
+  await load(c, APP + '#/albums')
+  await sleep(1500)
+  const r = await c.ev(`(async () => {
+    const idb = (store, fn) => new Promise((res, rej) => { const q = indexedDB.open('pocamaster'); q.onsuccess = () => { const db = q.result; const tx = db.transaction(store, 'readwrite'); fn(tx.objectStore(store)); tx.oncomplete = () => { db.close(); res(1); }; tx.onerror = rej; }; });
+    const mk = (c) => new Promise((res) => { const cv = document.createElement('canvas'); cv.width = 600; cv.height = 930; const g = cv.getContext('2d'); g.fillStyle = c; g.fillRect(0, 0, 600, 930); cv.toBlob(res, 'image/jpeg', 0.9); });
+    const blobs = [await mk('#c33'), await mk('#33c')];
+    await idb('collections', (st) => st.put({ id: 'sm-col', seedId: 'sm-seed', name: '確認用', type: 'その他', releaseDate: '2026-01-01', createdAt: 1, pinned: true }));
+    await idb('cards', (st) => { for (let i = 0; i < 30; i++) st.put({ id: 'sm' + i, collectionId: 'sm-col', memberIds: ['yujin'], source: 'MD', version: String(i), status: '所持中', statusChangedAt: 1, order: i, imageId: 'smi' + i }); });
+    await idb('images', (st) => { for (let i = 0; i < 30; i++) st.put({ id: 'smi' + i, full: blobs[0] }); });
+    await idb('thumbs', (st) => { for (let i = 0; i < 30; i++) st.put({ id: 'smi' + i, thumb: blobs[1] }); });
+    const slots = Array(36).fill(null); for (let i = 0; i < 30; i++) slots[i] = 'sm' + i;
+    // マイアルバムは 1 冊だけ。アプリが最初に作った 1 冊の中身を差し替える
+    await new Promise((res) => { const q = indexedDB.open('pocamaster'); q.onsuccess = () => { const db = q.result; const tx = db.transaction('myAlbums', 'readwrite'); const st = tx.objectStore('myAlbums'); const all = st.getAll(); all.onsuccess = () => { const a = all.result[0]; if (a) { a.slots = slots; st.put(a); } else st.put({ id: 'sm-al', name: '確認', slots, createdAt: 1 }); }; tx.oncomplete = () => { db.close(); res(1); }; }; });
+    return 'seeded';
+  })()`)
+  await load(c, APP + '#/albums')
+  await sleep(2500)
+  const albums = await c.ev(`(async () => {
+    const pages = [...document.querySelectorAll('.album-page')];
+    return { pages: pages.length, imgsPerPage: pages.map((p) => p.querySelectorAll('img').length, ), srcKinds: [...new Set([...document.images].map((i) => i.src.slice(0, 5)))], text: document.querySelector('.page')?.innerText.slice(0, 40) };
+  })()`)
+  console.log(JSON.stringify({ r, albums }))
+  c.close(); proc.kill()
+}
+
 try {
-  await (mode === 'seed' ? seed() : mode === 'profile' ? profile() : mode === 'startup' ? startup() : measure())
+  await (mode === 'smoke' ? smoke() : mode === 'seed' ? seed() : mode === 'profile' ? profile() : mode === 'startup' ? startup() : measure())
   process.exit(0)
 } catch (e) {
   console.error('失敗：', e.message)

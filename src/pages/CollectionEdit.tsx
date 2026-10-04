@@ -44,6 +44,7 @@ export default function CollectionEdit() {
       setError('同じ名前のコレクションがすでにあります')
       return
     }
+    if (saving) return
     setSaving(true)
     let coverImageId = original?.coverImageId
     if (cover) {
@@ -53,7 +54,9 @@ export default function CollectionEdit() {
       if (coverImageId) await deleteImages([coverImageId])
       coverImageId = newImageId
     }
+    // 編集のときは、元の項目（「ホームに出す」の pinned、初期データの固定の ID の seedId など）を残す。作り直した値だけで上書きすると消える
     const data: Collection = {
+      ...original,
       id: original?.id ?? newId(),
       name: name.trim(),
       type,

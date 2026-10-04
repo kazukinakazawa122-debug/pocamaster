@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { db, newId, type Card } from '../lib/db'
 import { MEMBERS, memberOrder, type MemberId } from '../lib/members'
@@ -14,6 +14,7 @@ export default function BulkCreate() {
   const [memberIds, setMemberIds] = useState<MemberId[]>(MEMBERS.map((m) => m.id))
   const [asUnit, setAsUnit] = useState(false)
   const [error, setError] = useState('')
+  const busy = useRef(false) // 保存の途中で、もう一度押されても 2 回作らない
 
   const versions = versionsText
     .split(/[,、，]/)
@@ -26,6 +27,8 @@ export default function BulkCreate() {
   const create = async () => {
     if (!source.trim()) return setError('入手元を入力してください')
     if (memberIds.length === 0) return setError('メンバーを 1 人以上選んでください')
+    if (busy.current) return
+    busy.current = true
     const existing = await db.cards.where('collectionId').equals(id).sortBy('order')
     let order = (existing.at(-1)?.order ?? -1) + 1
     const sorted = [...memberIds].sort((a, b) => memberOrder(a) - memberOrder(b))
@@ -37,7 +40,12 @@ export default function BulkCreate() {
         cards.push({ id: newId(), collectionId: id, memberIds: g, source: source.trim(), version, status: '未所持', statusChangedAt: now, order: order++ })
       }
     }
-    await db.cards.bulkAdd(cards)
+    try {
+      await db.cards.bulkAdd(cards)
+    } catch (e) {
+      busy.current = false
+      return setError(`保存できませんでした：${(e as Error).message}`)
+    }
     navigate(-1)
   }
 
