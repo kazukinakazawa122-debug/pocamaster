@@ -74,7 +74,11 @@ def relabel(c, s, v):
 
 
 # 入手元ごと付け替える枠（本人、2026-10-01）：IVE SWITCH の「withmuu ラキドロ 3.0-3」の画像は実際は「Music Korea ラキドロ 1.0 POLA」
-MOVE = {("IVE SWITCH", "withmuu ラキドロ", "3.0-3"): ("Music Korea ラキドロ", "1.0 POLA")}
+MOVE = {("IVE SWITCH", "withmuu ラキドロ", "3.0-3"): ("Music Korea ラキドロ", "1.0 POLA"),
+        # ファンクラブの名前の直し（本人、2026-10-06）
+        ("DIVE Official Fanclub｜ファンクラブ", "DIVE 3期 'IVE SCOUT'", "DIVE JAPAN"): ("DIVE JAPAN 長期特典 3期", ""),
+        ("DIVE Official Fanclub｜ファンクラブ", "DIVE JAPAN Phone Tab", "FC 特典"): ("DIVE JAPAN 長期特典 2期", ""),
+        ("DIVE Official Fanclub｜ファンクラブ", "DIVE 4期 'DIVE into IVE'", "DIVE JAPAN"): ("DIVE JAPAN 長期特典 4期", "")}
 
 
 _paths = sorted(glob.glob(SP + "out/*.json"))
