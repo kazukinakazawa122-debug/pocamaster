@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IconCrop, IconEdit, IconHeart, IconHeartFilled, IconPhotoPlus, IconTrash } from '@tabler/icons-react'
-import { addImages, db, deleteCard, deleteImages, newId, setCardStatus, type Card } from '../lib/db'
+import { addImages, db, deleteCard, deleteImages, newId, type Card } from '../lib/db'
+import { changeCardStatus } from '../lib/cardStore'
 import { makeImage } from '../lib/image'
 import { memberLabel } from '../lib/members'
 import { cardColors } from './CardTile'
@@ -103,7 +104,7 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
             aria-pressed={!!card.trade}
             onClick={async () => {
               await db.cards.update(card.id, { trade: !card.trade })
-              if (!card.trade && !owned) await setCardStatus(card, '所持中')
+              if (!card.trade && !owned) await changeCardStatus(card, '所持中')
             }}
           >
             譲

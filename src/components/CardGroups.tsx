@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { setCardStatus, type Card, type CardStatus, type Collection } from '../lib/db'
+import type { Card, Collection } from '../lib/db'
+import { changeCardStatus, toggleCardStatus } from '../lib/cardStore'
 import { memberLabel } from '../lib/members'
 import CardTile from './CardTile'
 import CardSheet from './CardSheet'
@@ -39,9 +40,8 @@ export default function CardGroups({ groups, columns = 3, bright, labels = true,
   const onTap = useCallback((c: Card) => toggleRef.current(c), [])
   const onLongPress = useCallback((c: Card) => setOpenId(c.id), [])
   const toggle = (card: Card) => {
-    const to: CardStatus = card.status === '所持中' ? '未所持' : '所持中'
-    setCardStatus(card, to)
-    showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => setCardStatus({ ...card, status: to }, card.status))
+    const { from, to } = toggleCardStatus(card)
+    showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => changeCardStatus(card, from))
   }
   toggleRef.current = tapOpens ? (c: Card) => setOpenId(c.id) : toggle
 

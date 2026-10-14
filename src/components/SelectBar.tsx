@@ -30,21 +30,20 @@ export default function SelectBar({ selected, visible, onSelectAll, onClear, onD
   const allTrade = n > 0 && selected.every((c) => c.trade)
 
   const setStatus = async (to: CardStatus) => {
-    const snapshot = selected.map((c) => ({ ...c }))
-    await setCardsStatus(snapshot, to)
-    showUndo(`${n} 枚を${to}にしました`, () => restoreCardsStatus(snapshot, to))
+    // 元に戻すのは、実際に変えたカードだけ（変える前の状態は、保存してある最新のものから）
+    const before = await setCardsStatus(selected, to)
+    showUndo(`${n} 枚を${to}にしました`, () => restoreCardsStatus(before))
     onDone()
   }
   const setTrade = async () => {
     const snapshot = selected.map((c) => ({ id: c.id, trade: c.trade }))
     const to = !allTrade
-    // 譲れるのは持っているカードなので、印を付けるときは「所持中」にもする
-    const toOwn = to ? selected.filter((c) => c.status !== '所持中').map((c) => ({ ...c })) : []
     await db.cards.bulkUpdate(snapshot.map((c) => ({ key: c.id, changes: { trade: to } })))
-    if (toOwn.length) await setCardsStatus(toOwn, '所持中')
+    // 譲れるのは持っているカードなので、印を付けるときは「所持中」にもする
+    const owned = to ? await setCardsStatus(selected, '所持中') : []
     showUndo(to ? `${n} 枚に「譲」の印を付けました` : `${n} 枚の「譲」の印を外しました`, async () => {
       await db.cards.bulkUpdate(snapshot.map((c) => ({ key: c.id, changes: { trade: c.trade } })))
-      if (toOwn.length) await restoreCardsStatus(toOwn, '所持中')
+      await restoreCardsStatus(owned)
     })
     onDone()
   }

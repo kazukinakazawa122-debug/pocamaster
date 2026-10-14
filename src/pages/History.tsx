@@ -3,6 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../lib/db'
 import { useAllCards } from '../lib/cardStore'
 import { MEMBER_BY_ID, MEMBERS, memberLabel, type MemberId } from '../lib/members'
+import { effectiveChanges } from '../lib/stats'
 import { TopBar } from '../components/ui'
 import { MiniveLoading } from '../components/Minive'
 
@@ -43,10 +44,7 @@ export default function History() {
     const colName = new Map(data.collections.map((c) => [c.id, c.name]))
     const history = data.history.filter((h) => !member || cardById.get(h.cardId)?.memberIds.includes(member))
     const net = new Map<string, number>()
-    for (const h of history) {
-      const d = h.to === '所持中' ? 1 : h.from === '所持中' ? -1 : 0
-      if (d) net.set(monthKey(h.changedAt), (net.get(monthKey(h.changedAt)) ?? 0) + d)
-    }
+    for (const { h, d } of effectiveChanges(history)) net.set(monthKey(h.changedAt), (net.get(monthKey(h.changedAt)) ?? 0) + d)
     // いまの月から 12 か月さかのぼる（記録のない月も 0 として出す）
     const now = new Date()
     const months: { key: string; n: number }[] = []

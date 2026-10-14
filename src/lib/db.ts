@@ -184,33 +184,48 @@ export function newId(): string {
   return crypto.randomUUID()
 }
 
-export async function setCardStatus(card: Card, to: CardStatus): Promise<void> {
-  if (card.status === to) return
-  const now = Date.now()
+/**
+ * カードの状態を変える。変える前の状態は、渡された card ではなく保存してある最新のものを読む
+ * （画面の描き直しが追いつく前に続けて押されて card が古くても、記録を二重にしない。2026-10-14）。すでにその状態なら何もしない
+ */
+export async function setCardStatus(card: Card, to: CardStatus, now = Date.now()): Promise<void> {
   await db.transaction('rw', db.cards, db.statusHistory, async () => {
+    const cur = await db.cards.get(card.id)
+    if (!cur || cur.status === to) return
     await db.cards.update(card.id, { status: to, statusChangedAt: now })
-    await db.statusHistory.add({ cardId: card.id, from: card.status, to, changedAt: now })
+    await db.statusHistory.add({ cardId: card.id, from: cur.status, to, changedAt: now })
   })
 }
 
-/** 何枚かの状態をまとめて変える（1 回の保存。すでにその状態のカードは変えない） */
-export async function setCardsStatus(cards: Card[], to: CardStatus): Promise<void> {
-  const change = cards.filter((c) => c.status !== to)
-  if (change.length === 0) return
+/**
+ * 何枚かの状態をまとめて変える（1 回の保存。すでにその状態のカードは変えない。変える前の状態は保存してある最新のものを読む）。
+ * 実際に変えたカードの、変える前の姿を返す（「元に戻す」で restoreCardsStatus に渡す）
+ */
+export async function setCardsStatus(cards: Card[], to: CardStatus): Promise<Card[]> {
+  if (cards.length === 0) return []
   const now = Date.now()
-  await db.transaction('rw', db.cards, db.statusHistory, async () => {
+  return db.transaction('rw', db.cards, db.statusHistory, async () => {
+    const change = (await db.cards.bulkGet(cards.map((c) => c.id))).filter((c): c is Card => !!c && c.status !== to)
+    if (change.length === 0) return []
     await db.cards.bulkUpdate(change.map((c) => ({ key: c.id, changes: { status: to, statusChangedAt: now } })))
     await db.statusHistory.bulkAdd(change.map((c) => ({ cardId: c.id, from: c.status, to, changedAt: now })))
+    return change
   })
 }
 
-/** 何枚かを、それぞれ前の状態に戻す（まとめて変えたあとの「元に戻す」） */
-export async function restoreCardsStatus(cards: Card[], now: CardStatus): Promise<void> {
+/** 何枚かを、それぞれ渡された姿（setCardsStatus が返した、変える前の姿）の状態に戻す（まとめて変えたあとの「元に戻す」） */
+export async function restoreCardsStatus(cards: Card[]): Promise<void> {
+  if (cards.length === 0) return
   const t = Date.now()
-  const change = cards.filter((c) => c.status !== now)
   await db.transaction('rw', db.cards, db.statusHistory, async () => {
-    await db.cards.bulkUpdate(change.map((c) => ({ key: c.id, changes: { status: c.status, statusChangedAt: c.statusChangedAt } })))
-    await db.statusHistory.bulkAdd(change.map((c) => ({ cardId: c.id, from: now, to: c.status, changedAt: t })))
+    const current = await db.cards.bulkGet(cards.map((c) => c.id))
+    const change = cards.flatMap((c, i) => {
+      const cur = current[i]
+      return cur && cur.status !== c.status ? [{ c, from: cur.status }] : []
+    })
+    if (change.length === 0) return
+    await db.cards.bulkUpdate(change.map(({ c }) => ({ key: c.id, changes: { status: c.status, statusChangedAt: c.statusChangedAt } })))
+    await db.statusHistory.bulkAdd(change.map(({ c, from }) => ({ cardId: c.id, from, to: c.status, changedAt: t })))
   })
 }
 

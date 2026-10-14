@@ -1,9 +1,10 @@
 import { watchScroll } from '../lib/scrollMemory'
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { memo, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { Link, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import { IconEdit, IconLayoutGridAdd, IconPin, IconPinFilled, IconPlus, IconSquareCheck } from '@tabler/icons-react'
-import { db, setCardStatus, type Card, type CardStatus } from '../lib/db'
+import { db, type Card } from '../lib/db'
+import { changeCardStatus, toggleCardStatus, useAllCards } from '../lib/cardStore'
 import { MEMBER_BY_ID, MEMBERS, memberLabel, memberOrder, type MemberId } from '../lib/members'
 import { memberProgress, pctText, progress } from '../lib/stats'
 import { ProgressBar, TopBar } from '../components/ui'
@@ -72,6 +73,54 @@ function mergeNumbered(rows: Row[]): Row[] {
   })
 }
 
+const sameCards = (x: Card[], y: Card[]) => x.length === y.length && x.every((c, i) => c === y[i])
+
+interface RowProps {
+  row: Row
+  collectionName: string
+  selecting: boolean
+  sel: Set<string>
+  onTap: (card: Card) => void
+  onLongPress: (card: Card) => void
+}
+
+/**
+ * 「全員」の 1 段（入手元＋バージョン）。中のカードが変わっていない段は描き直さない
+ * （約 560 枠のコレクションで、1 枚押すたびに全部の段を描き直していた。iPhone では表示が変わるまで 0.2〜0.3 秒。2026-10-14）
+ */
+const RowSection = memo(
+  function RowSection({ row, collectionName, selecting, sel, onTap, onLongPress }: RowProps) {
+    return (
+      <section>
+        <div className="row-head">
+          <span style={{ fontWeight: 700 }}>
+            {row.source} <span className="muted" style={{ fontWeight: 400 }}>{row.version}</span>
+          </span>
+          <span className="muted num">
+            {progress(row.all).owned}/{row.all.length}
+          </span>
+        </div>
+        <div className="grid-6">
+          {row.shown.map((c) => (
+            <CardTile key={c.id} card={c} collectionName={collectionName} compact selected={selecting ? sel.has(c.id) : undefined} onTap={onTap} onLongPress={onLongPress} />
+          ))}
+        </div>
+      </section>
+    )
+  },
+  // 手元の記録は、変わっていないカードは同じものを使い回すので、並びの 1 枚ずつが同じなら描き直さなくてよい
+  (a, b) =>
+    a.collectionName === b.collectionName &&
+    a.selecting === b.selecting &&
+    a.onTap === b.onTap &&
+    a.onLongPress === b.onLongPress &&
+    a.row.source === b.row.source &&
+    a.row.version === b.row.version &&
+    sameCards(a.row.all, b.row.all) &&
+    sameCards(a.row.shown, b.row.shown) &&
+    (!b.selecting || b.row.shown.every((c) => a.sel.has(c.id) === b.sel.has(c.id))),
+)
+
 export default function CollectionDetail() {
   const { id = '' } = useParams()
   const [params, setParams] = useSearchParams()
@@ -87,20 +136,24 @@ export default function CollectionDetail() {
   const onTap = useCallback((c: Card) => toggleRef.current(c), [])
   const onLongPress = useCallback((c: Card) => setOpenCardId(c.id), [])
 
-  const data = useLiveQuery(async () => {
-    const [col, cards] = await Promise.all([db.collections.get(id), db.cards.where('collectionId').equals(id).sortBy('order')])
-    return { col, cards }
-  }, [id])
+  const colData = useLiveQuery(async () => ({ col: await db.collections.get(id) }), [id])
+  // カードは手元の記録から（押すたびにデータベースからこのコレクションの全部の枠を読み直さない。押した表示がすぐ出る。2026-10-14）
+  const all = useAllCards()
+  const sorted = useMemo(
+    () => all?.filter((c) => c.collectionId === id).sort((a, b) => a.order - b.order || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0)),
+    [all, id],
+  )
 
   const back = useNavigationType() === 'POP'
-  const ready = !!data
+  const ready = !!colData && !!sorted
   useLayoutEffect(() => {
     if (ready) window.scrollTo(0, back ? (scrollById.get(id) ?? 0) : 0)
   }, [ready, back, id])
   useEffect(() => watchScroll((y) => scrollById.set(id, y)), [id])
 
-  if (!data) return <MiniveLoading />
-  const { col, cards } = data
+  if (!colData || !sorted) return <MiniveLoading />
+  const { col } = colData
+  const cards = sorted
   if (!col) return <div className="page empty">コレクションが見つかりません</div>
 
   const setParam = (key: string, value: string | null) => {
@@ -111,9 +164,8 @@ export default function CollectionDetail() {
   }
 
   const toggle = (card: Card) => {
-    const to: CardStatus = card.status === '所持中' ? '未所持' : '所持中'
-    setCardStatus(card, to)
-    showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => setCardStatus({ ...card, status: to }, card.status))
+    const { from, to } = toggleCardStatus(card)
+    showUndo(`${memberLabel(card.memberIds)} を${to}にしました`, () => changeCardStatus(card, from))
   }
 
   toggleRef.current = selecting
@@ -307,19 +359,7 @@ export default function CollectionDetail() {
       ) : (
         grouped
           .filter((r) => r.shown.length > 0)
-          .map((r) => (
-            <section key={r.key}>
-              <div className="row-head">
-                <span style={{ fontWeight: 700 }}>
-                  {r.source} <span className="muted" style={{ fontWeight: 400 }}>{r.version}</span>
-                </span>
-                <span className="muted num">
-                  {progress(r.all).owned}/{r.all.length}
-                </span>
-              </div>
-              <div className="grid-6">{r.shown.map((c) => tile(c, true))}</div>
-            </section>
-          ))
+          .map((r) => <RowSection key={r.key} row={r} collectionName={col.name} selecting={selecting} sel={sel} onTap={onTap} onLongPress={onLongPress} />)
       )}
 
       {selecting && (
