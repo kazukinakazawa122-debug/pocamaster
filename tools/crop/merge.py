@@ -84,8 +84,12 @@ MOVE = {("IVE SWITCH", "withmuu ラキドロ", "3.0-3"): ("Music Korea ラキド
 _paths = sorted(glob.glob(SP + "out/*.json"))
 jobs = [json.load(open(p, encoding="utf-8")) for p in _paths]
 RELABELED_ALREADY = {"zzzzzzzzzzzz_secret_qq"}  # 新しい番号で作った job（付け替えない）
+# アプリで切り取った画像の job（import_app_images.py）は、アプリのいまの名前・番号で書き出されるので付け替えない。
+# 付け替えると、IVE SECRET の QQ Music が 1 つ隣の番号の枠へずれて入っていた（10/5 と 10/14 の書き出しの 27 枚。2026-10-14）
+APP_JOB = "zzzzzzzzzzzzzzzzzzzzzz_app_"
 for _p, _j in zip(_paths, jobs):
-    if os.path.splitext(os.path.basename(_p))[0] in RELABELED_ALREADY:
+    _name = os.path.splitext(os.path.basename(_p))[0]
+    if _name in RELABELED_ALREADY or _name.startswith(APP_JOB):
         continue
     _j["seed"] = [[r[0], r[1], r[2], relabel(r[0], r[2], r[3])] for r in _j["seed"]]
     for _e in _j["images"]:
