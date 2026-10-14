@@ -114,7 +114,18 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
           <IconPhotoPlus size={20} aria-hidden />
           {busy ? '保存中…' : card.imageId ? '画像を変更' : '画像を登録'}
         </button>
-        <input ref={fileRef} type="file" accept="image/*" hidden onChange={(e) => onFile(e.target.files?.[0])} />
+        <input
+          ref={fileRef}
+          type="file"
+          accept="image/*"
+          hidden
+          onChange={(e) => {
+            const f = e.target.files?.[0]
+            // 選んだ写真を消しておく（そのままだと、同じ写真をもう一度選んでも何も起きない。2026-10-14）
+            e.target.value = ''
+            onFile(f)
+          }}
+        />
         <button className="btn block" disabled={busy} onClick={() => cropRef.current?.click()}>
           <IconCrop size={20} aria-hidden />
           写真から切り取って登録

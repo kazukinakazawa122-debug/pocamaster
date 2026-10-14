@@ -17,6 +17,8 @@ export default function CollectionEdit() {
   const [coverUrl, setCoverUrl] = useState<string>()
   const [error, setError] = useState('')
   const [saving, setSaving] = useState(false)
+  // 保存の途中で、もう一度押されても 2 回作らない（state は描き直すまで変わらないので、ほぼ同時に 2 回押すと 2 つできていた。2026-10-14）
+  const busy = useRef(false)
   const fileRef = useRef<HTMLInputElement>(null)
   // 作った仮の URL は、画面を閉じるときに手放す（開くたびに増えていくため）
   const urls = useRef<string[]>([])
@@ -46,32 +48,42 @@ export default function CollectionEdit() {
       setError('名前を入力してください')
       return
     }
-    const dup = await db.collections.filter((c) => c.name === name.trim() && c.id !== id).count()
-    if (dup > 0) {
-      setError('同じ名前のコレクションがすでにあります')
-      return
-    }
-    if (saving) return
+    if (busy.current) return
+    busy.current = true
     setSaving(true)
-    let coverImageId = original?.coverImageId
-    if (cover) {
-      const img = await makeImage(cover)
-      const newImageId = newId()
-      await addImages([{ id: newImageId, ...img }])
-      if (coverImageId) await deleteImages([coverImageId])
-      coverImageId = newImageId
+    // うまくいかなかったら、理由を出して、もう一度押せるようにする（前は失敗すると「保存中」のまま押せなくなった）
+    const fail = (message: string) => {
+      busy.current = false
+      setSaving(false)
+      setError(message)
     }
-    // 編集のときは、元の項目（「ホームに出す」の pinned、初期データの固定の ID の seedId など）を残す。作り直した値だけで上書きすると消える
-    const data: Collection = {
-      ...original,
-      id: original?.id ?? newId(),
-      name: name.trim(),
-      type,
-      releaseDate,
-      coverImageId,
-      createdAt: original?.createdAt ?? Date.now(),
+    let data: Collection
+    try {
+      const dup = await db.collections.filter((c) => c.name === name.trim() && c.id !== id).count()
+      if (dup > 0) return fail('同じ名前のコレクションがすでにあります')
+      // 写真を縮めるのは、保存のまとまりの外で（中で待つと、まとまりが先に閉じてしまう）
+      const img = cover ? await makeImage(cover) : undefined
+      const oldCover = original?.coverImageId
+      const coverImageId = img ? newId() : oldCover
+      // 編集のときは、元の項目（「ホームに出す」の pinned、初期データの固定の ID の seedId など）を残す。作り直した値だけで上書きすると消える
+      data = {
+        ...original,
+        id: original?.id ?? newId(),
+        name: name.trim(),
+        type,
+        releaseDate,
+        coverImageId,
+        createdAt: original?.createdAt ?? Date.now(),
+      }
+      // 新しい表紙の保存・コレクションの保存・古い表紙の削除を 1 回で（途中で失敗しても、表紙のない画像を指したままにしない）
+      await db.transaction('rw', db.images, db.thumbs, db.collections, async () => {
+        if (img) await addImages([{ id: coverImageId!, ...img }])
+        await db.collections.put(data)
+        if (img && oldCover) await deleteImages([oldCover])
+      })
+    } catch (e) {
+      return fail(`保存できませんでした：${(e as Error).message}`)
     }
-    await db.collections.put(data)
     if (original) navigate(-1)
     else navigate(`/collections/${data.id}`, { replace: true })
   }

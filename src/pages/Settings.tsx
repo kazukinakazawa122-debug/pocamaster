@@ -58,6 +58,12 @@ function formatDate(ms: number): string {
   return `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`
 }
 
+/** アプリの版：公開した日時（日本の時刻）と番号（2026-10-14、本人「アプリ内でバージョンをわかるようにしてほしい」） */
+function versionText(): string {
+  const at = new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(__APP_BUILT_AT__))
+  return __APP_COMMIT__ ? `${at}（${__APP_COMMIT__}）` : at
+}
+
 /** S-09 設定 */
 export default function Settings() {
   const lastBackupAt = useLiveQuery(() => getSetting<number>('lastBackupAt'))
@@ -408,6 +414,10 @@ export default function Settings() {
           </div>
         </div>
       )}
+
+      <div className="xs muted" style={{ textAlign: 'center', marginTop: 32 }}>
+        バージョン {versionText()}
+      </div>
     </div>
   )
 }
@@ -417,6 +427,7 @@ function ProfileEditor() {
   const [draft, setDraft] = useState<Profile | null>(null)
   const latest = useRef<Profile | null>(null)
   const photoRef = useRef<HTMLInputElement>(null)
+  const [photoError, setPhotoError] = useState('')
 
   useEffect(() => {
     getSetting<Profile>('profile').then((p) => {
@@ -434,12 +445,18 @@ function ProfileEditor() {
   }
 
   const setPhoto = async (file: File) => {
-    const img = await makeImage(file)
-    const id = newId()
-    await addImages([{ id, ...img }])
-    const old = latest.current?.imageId
-    save({ imageId: id })
-    if (old) await deleteImages([old])
+    setPhotoError('')
+    try {
+      const img = await makeImage(file)
+      const id = newId()
+      await addImages([{ id, ...img }])
+      const old = latest.current?.imageId
+      save({ imageId: id })
+      if (old) await deleteImages([old])
+    } catch (e) {
+      // 読めない写真のときに、何も起きないままにしない（2026-10-14）
+      setPhotoError((e as Error).message)
+    }
   }
 
   return (
@@ -471,6 +488,7 @@ function ProfileEditor() {
           {draft.bio && <div className="small muted" style={{ whiteSpace: 'pre-wrap' }}>{draft.bio}</div>}
         </div>
       </div>
+      {photoError && <div className="error">{photoError}</div>}
       <label className="field">
         <span>名前（ニックネーム）</span>
         <input type="text" value={draft.name} maxLength={30} placeholder="ニックネームを入力" onChange={(e) => save({ name: e.target.value })} />

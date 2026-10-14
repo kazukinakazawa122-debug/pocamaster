@@ -122,6 +122,9 @@ export default function PhotoCropper({ file, onDone, onClose }: Props) {
       ctx.drawImage(bmp, x0, y0, cv.width, cv.height, 0, 0, cv.width, cv.height)
       bmp.close()
       const src = ctx.getImageData(0, 0, cv.width, cv.height)
+      // 使い終わった画用紙（canvas）はすぐ手放す。iPhone では canvas のメモリの合計に上限があり、何十枚も続けて切り取ると作れなくなることがある（2026-10-14）
+      cv.width = 0
+      cv.height = 0
       const q = quad.map((p) => ({ x: p.x - x0, y: p.y - y0 })) as Quad
       const { width, height } = outputSize(q)
       const out = warp({ width: src.width, height: src.height, data: src.data }, q, width, height)
@@ -131,6 +134,8 @@ export default function PhotoCropper({ file, onDone, onClose }: Props) {
       oc.getContext('2d')!.putImageData(new ImageData(out.data as Uint8ClampedArray<ArrayBuffer>, width, height), 0, 0)
       // このあと makeImage でもう一度縮めて保存するので、ここでは画質を高めに
       const blob = await new Promise<Blob>((res, rej) => oc.toBlob((b) => (b ? res(b) : rej(new Error('画像を作れませんでした'))), 'image/jpeg', 0.95))
+      oc.width = 0
+      oc.height = 0
       const img = await makeImage(blob)
       setPreview({ ...img, url: URL.createObjectURL(img.full) })
     } catch (e) {
@@ -211,6 +216,8 @@ export default function PhotoCropper({ file, onDone, onClose }: Props) {
                     setQuad(defaultQuad(im.naturalWidth, im.naturalHeight))
                     setShown(im.clientWidth)
                   }}
+                  // 開けない写真のときに、何も出ないまま「切り取る」が押せない状態にしない（2026-10-14）
+                  onError={() => url && setError('この写真を開けませんでした。別の写真を選んでください')}
                 />
                 {pts && (
                   <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', overflow: 'visible', pointerEvents: 'none' }}>
