@@ -1,0 +1,569 @@
+{
+ "note": "画像の ZIP（全部入り No.22）のうち、ぼかしの入った画像（ほかに画像がないので仮に入れている見本）。くっきり具合の数値の小さい 240 枚を目で確かめて決めた（2026-10-15）",
+ "cards": [
+  {
+   "collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "members": "リズ",
+   "source": "in CINEMA",
+   "version": "Taiwan"
+  },
+  {
+   "collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "members": "ユジン",
+   "source": "in CINEMA",
+   "version": "Taiwan"
+  },
+  {
+   "collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "members": "ガウル",
+   "source": "in CINEMA",
+   "version": "Taiwan"
+  },
+  {
+   "collection": "IVE SECRET",
+   "members": "全員",
+   "source": "MusicArt",
+   "version": "全員"
+  },
+  {
+   "collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "members": "イソ",
+   "source": "in CINEMA",
+   "version": "Taiwan"
+  },
+  {
+   "collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "members": "ウォニョン",
+   "source": "in CINEMA",
+   "version": "Taiwan"
+  },
+  {
+   "collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "members": "レイ",
+   "source": "in CINEMA",
+   "version": "Taiwan"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "リズ",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Mnet+"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "リズ",
+   "source": "Yetimall",
+   "version": "1.0"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "ユジン",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Mnet+"
+  },
+  {
+   "collection": "4th FAN CONCERT 'DIVE into IVE'",
+   "members": "ガウル",
+   "source": "MD",
+   "version": "Designed by the members"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "レイ",
+   "source": "NY Music ラキドロ",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ユジン",
+   "source": "Yetimall",
+   "version": "1.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ウォニョン",
+   "source": "NY Music ラキドロ",
+   "version": "2.0 POLA"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ユジン",
+   "source": "京东",
+   "version": "2.0"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "リズ",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Early Bird"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "リズ",
+   "source": "京东",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "レイ",
+   "source": "Yetimall",
+   "version": "1.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "イソ",
+   "source": "NY Music ラキドロ",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "イソ",
+   "source": "京东",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "イソ",
+   "source": "NY Music ラキドロ",
+   "version": "2.0 POLA"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ガウル",
+   "source": "NY Music ラキドロ",
+   "version": "2.0 POLA"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ウォニョン",
+   "source": "Yetimall",
+   "version": "1.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ガウル",
+   "source": "Yetimall",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ウォニョン",
+   "source": "KMONSTAR",
+   "version": "1.0"
+  },
+  {
+   "collection": "4th FAN CONCERT 'DIVE into IVE'",
+   "members": "ウォニョン",
+   "source": "MD",
+   "version": "Designed by the members"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "イソ",
+   "source": "Yetimall",
+   "version": "1.0"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "レイ",
+   "source": "KMStation",
+   "version": "4.0"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "レイ",
+   "source": "mymusictaste",
+   "version": "3.0"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "レイ",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Mnet+"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ガウル",
+   "source": "Yetimall",
+   "version": "1.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "リズ",
+   "source": "KMONSTAR",
+   "version": "1.0"
+  },
+  {
+   "collection": "4th FAN CONCERT 'DIVE into IVE'",
+   "members": "レイ",
+   "source": "MD",
+   "version": "Designed by the members"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "ユジン",
+   "source": "IDOUSTAGE",
+   "version": "2.0"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "ユジン",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Early Bird"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ユジン",
+   "source": "KMONSTAR",
+   "version": "1.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ウォニョン",
+   "source": "NY Music ラキドロ",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ユジン",
+   "source": "NY Music ラキドロ",
+   "version": "2.0"
+  },
+  {
+   "collection": "IVE SECRET",
+   "members": "ガウル",
+   "source": "IDOLSHOP",
+   "version": "POLA"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "ユジン",
+   "source": "Makestar",
+   "version": "4.0 Shanghai"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "イソ",
+   "source": "mymusictaste",
+   "version": "3.0"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "ガウル",
+   "source": "KMStation",
+   "version": "4.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ウォニョン",
+   "source": "Yetimall",
+   "version": "2.0"
+  },
+  {
+   "collection": "4th FAN CONCERT 'DIVE into IVE'",
+   "members": "リズ",
+   "source": "MD",
+   "version": "Designed by the members"
+  },
+  {
+   "collection": "IVE SECRET",
+   "members": "全員",
+   "source": "HOTTRACKS ラキドロ",
+   "version": "全員"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "ウォニョン",
+   "source": "mymusictaste",
+   "version": "3.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ユジン",
+   "source": "Yetimall",
+   "version": "2.0"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "ガウル",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Early Bird"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "ウォニョン",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Early Bird"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "リズ",
+   "source": "NY Music ラキドロ",
+   "version": "2.0"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "リズ",
+   "source": "Yizhiyu",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "レイ",
+   "source": "NY Music ラキドロ",
+   "version": "2.0 POLA"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "ユジン",
+   "source": "KMStation",
+   "version": "4.0"
+  },
+  {
+   "collection": "4th FAN CONCERT 'DIVE into IVE'",
+   "members": "ユジン",
+   "source": "MD",
+   "version": "Designed by the members"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "ガウル",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Mnet+"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "ガウル",
+   "source": "Yizhiyu",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ウォニョン",
+   "source": "Soundwave ラキドロ",
+   "version": "3.0 POLA"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "リズ",
+   "source": "Yetimall",
+   "version": "2.0"
+  },
+  {
+   "collection": "IVE SECRET",
+   "members": "リズ",
+   "source": "IDOLSHOP",
+   "version": "POLA"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "リズ",
+   "source": "NY Music ラキドロ",
+   "version": "2.0 POLA"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "イソ",
+   "source": "KMStation",
+   "version": "4.0"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "ガウル",
+   "source": "IDOUSTAGE",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ガウル",
+   "source": "KMONSTAR",
+   "version": "1.0"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "ウォニョン",
+   "source": "Yizhiyu",
+   "version": "2.0"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "イソ",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Early Bird"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "レイ",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Early Bird"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "ガウル",
+   "source": "mymusictaste",
+   "version": "3.0"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "ウォニョン",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Mnet+"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "ユジン",
+   "source": "mymusictaste",
+   "version": "3.0"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "レイ",
+   "source": "Yizhiyu",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "イソ",
+   "source": "KMONSTAR",
+   "version": "1.0"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "イソ",
+   "source": "Yizhiyu",
+   "version": "2.0"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "ウォニョン",
+   "source": "KMStation",
+   "version": "4.0"
+  },
+  {
+   "collection": "4th FAN CONCERT 'DIVE into IVE'",
+   "members": "イソ",
+   "source": "MD",
+   "version": "Designed by the members"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "リズ",
+   "source": "KMStation",
+   "version": "4.0"
+  },
+  {
+   "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "members": "イソ",
+   "source": "SWIA TAIPEI 特典",
+   "version": "Mnet+"
+  },
+  {
+   "collection": "I've MINE",
+   "members": "リズ",
+   "source": "mymusictaste",
+   "version": "3.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "レイ",
+   "source": "Yetimall",
+   "version": "2.0"
+  },
+  {
+   "collection": "IVE SECRET",
+   "members": "イソ",
+   "source": "IDOLSHOP",
+   "version": "POLA"
+  },
+  {
+   "collection": "IVE SECRET",
+   "members": "ウォニョン",
+   "source": "IDOLSHOP",
+   "version": "POLA"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "ユジン",
+   "source": "Makestar",
+   "version": "4.0 Shanghai カフェ店長 ver."
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "レイ",
+   "source": "Makestar",
+   "version": "4.0 Shanghai カフェ店長 ver."
+  },
+  {
+   "collection": "IVE SECRET",
+   "members": "ユジン",
+   "source": "IDOLSHOP",
+   "version": "POLA"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "ガウル",
+   "source": "Makestar",
+   "version": "4.0 Shanghai カフェ店長 ver."
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "ウォニョン",
+   "source": "Makestar",
+   "version": "4.0 Shanghai"
+  },
+  {
+   "collection": "IVE SECRET",
+   "members": "レイ",
+   "source": "IDOLSHOP",
+   "version": "POLA"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "リズ",
+   "source": "IDOUSTAGE",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ユジン",
+   "source": "NY Music ラキドロ",
+   "version": "2.0 POLA"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "レイ",
+   "source": "KMONSTAR",
+   "version": "1.0"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "レイ",
+   "source": "Makestar",
+   "version": "4.0 Shanghai"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "リズ",
+   "source": "Makestar",
+   "version": "4.0 Shanghai"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "イソ",
+   "source": "IDOUSTAGE",
+   "version": "2.0"
+  },
+  {
+   "collection": "REVIVE+",
+   "members": "ガウル",
+   "source": "NY Music ラキドロ",
+   "version": "2.0"
+  },
+  {
+   "collection": "IVE EMPATHY",
+   "members": "ウォニョン",
+   "source": "Makestar",
+   "version": "4.0 Shanghai カフェ店長 ver."
+  }
+ ]
+}
