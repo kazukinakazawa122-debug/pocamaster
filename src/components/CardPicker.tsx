@@ -1,36 +1,64 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db, type Card } from '../lib/db'
+import { useAllCards } from '../lib/cardStore'
 import { MEMBERS, memberOrder, type MemberId } from '../lib/members'
 import CardTile from './CardTile'
 import { Sheet } from './ui'
+
+/**
+ * はじめに並べる枚数（横 3 枚 × 20 段）。下へ動かして終わりに近づいたら、同じだけ足す。
+ * 持っているカード（1,500 枚ほど）を一度に全部並べると、iPhone では出るまで 4 秒ほどかかっていた（2026-10-14）
+ */
+const STEP = 60
 
 /** マイアルバムに入れるカードを選ぶ。入れられるのは所持中のカードだけ（本人の要望、2026-09-30） */
 export default function CardPicker({ onPick, onClose }: { onPick: (card: Card) => void; onClose: () => void }) {
   const [collectionId, setCollectionId] = useState('')
   const [member, setMember] = useState<MemberId | null>(null)
+  const [limit, setLimit] = useState(STEP)
 
+  // カードは手元の記録から選ぶ（開くたびに、持っているカードをデータベースから 2 回読み直さない）
+  const all = useAllCards()
+  const allCollections = useLiveQuery(() => db.collections.orderBy('releaseDate').toArray())
+  const owned = useMemo(() => all?.filter((c) => c.status === '所持中'), [all])
   // 所持中のカードがあるコレクションだけを選べるようにする
-  const collections = useLiveQuery(async () => {
-    const ids = new Set((await db.cards.where('status').equals('所持中').toArray()).map((c) => c.collectionId))
-    return (await db.collections.orderBy('releaseDate').toArray()).filter((c) => ids.has(c.id))
-  })
-  const cards = useLiveQuery(
-    () => db.cards.where('status').equals('所持中').filter((c) => !collectionId || c.collectionId === collectionId).toArray(),
-    [collectionId],
-  )
-  const colName = new Map((collections ?? []).map((c) => [c.id, c.name]))
-  const colOrder = new Map((collections ?? []).map((c, i) => [c.id, i]))
+  const collections = useMemo(() => {
+    if (!owned || !allCollections) return undefined
+    const ids = new Set(owned.map((c) => c.collectionId))
+    return allCollections.filter((c) => ids.has(c.id))
+  }, [owned, allCollections])
+  const colName = useMemo(() => new Map((collections ?? []).map((c) => [c.id, c.name])), [collections])
 
-  const shown = (cards ?? [])
-    .filter((c) => !member || c.memberIds.includes(member))
-    .sort(
-      (a, b) =>
-        (colOrder.get(a.collectionId) ?? 0) - (colOrder.get(b.collectionId) ?? 0) ||
-        a.memberIds.length - b.memberIds.length ||
-        memberOrder(a.memberIds[0]) - memberOrder(b.memberIds[0]) ||
-        a.order - b.order,
-    )
+  const shown = useMemo(() => {
+    const colOrder = new Map((collections ?? []).map((c, i) => [c.id, i]))
+    return (owned ?? [])
+      .filter((c) => (!collectionId || c.collectionId === collectionId) && (!member || c.memberIds.includes(member)))
+      .sort(
+        (a, b) =>
+          (colOrder.get(a.collectionId) ?? 0) - (colOrder.get(b.collectionId) ?? 0) ||
+          a.memberIds.length - b.memberIds.length ||
+          memberOrder(a.memberIds[0]) - memberOrder(b.memberIds[0]) ||
+          a.order - b.order,
+      )
+  }, [owned, collections, collectionId, member])
+
+  // 絞り込みを変えたら、はじめの枚数から
+  useEffect(() => setLimit(STEP), [collectionId, member])
+
+  // 並べた分の終わりが見えてきたら（下に 600px 以内）、続きを足す。足したあとも見えていれば、さらに足す（作り直すと最初の知らせが来る）
+  const endRef = useRef<HTMLDivElement>(null)
+  const hasMore = shown.length > limit
+  useEffect(() => {
+    const el = endRef.current
+    if (!el || !hasMore || typeof IntersectionObserver === 'undefined') return
+    const io = new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && setLimit((n) => n + STEP), {
+      root: el.closest('.sheet'),
+      rootMargin: '0px 0px 600px 0px',
+    })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [hasMore, limit])
 
   return (
     <Sheet onClose={onClose}>
@@ -66,27 +94,30 @@ export default function CardPicker({ onPick, onClose }: { onPick: (card: Card) =
         入れられるのは所持中のカードです
       </div>
 
-      {!cards ? (
+      {!owned ? (
         <div className="empty small">読み込み中…</div>
       ) : shown.length === 0 ? (
         <div className="empty small">所持中のカードがありません</div>
       ) : (
-        <div className="grid-3">
-          {shown.map((c) => (
-            <div key={c.id}>
-              <CardTile card={c} collectionName={colName.get(c.collectionId) ?? ''} onTap={onPick} onLongPress={onPick} />
-              <div className="tile-label">
-                {!collectionId && (
-                  <>
-                    {colName.get(c.collectionId)}
-                    <br />
-                  </>
-                )}
-                {c.source} {c.version}
+        <>
+          <div className="grid-3">
+            {shown.slice(0, limit).map((c) => (
+              <div key={c.id}>
+                <CardTile card={c} collectionName={colName.get(c.collectionId) ?? ''} onTap={onPick} onLongPress={onPick} />
+                <div className="tile-label">
+                  {!collectionId && (
+                    <>
+                      {colName.get(c.collectionId)}
+                      <br />
+                    </>
+                  )}
+                  {c.source} {c.version}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+          {hasMore && <div ref={endRef} style={{ height: 1 }} aria-hidden />}
+        </>
       )}
     </Sheet>
   )
