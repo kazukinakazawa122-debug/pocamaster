@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db, deleteCard, type Card } from '../lib/db'
+import { useAllCards } from '../lib/cardStore'
 import { memberLabel } from '../lib/members'
-import { candidatesFor, keepAsOwn, listOrphans, mergeCardInto } from '../lib/orphans'
+import { candidatesFor, keepAsOwn, mergeCardInto, orphansOf } from '../lib/orphans'
 import { TopBar } from '../components/ui'
 
 const label = (c: Card) => `${c.source}${c.version ? ` ${c.version}` : ''}`
@@ -12,8 +13,9 @@ const label = (c: Card) => `${c.source}${c.version ? ` ${c.version}` : ''}`
  * 初期データの枠へ付け替える（持っている記録・お気に入り・画像を移す）／自分の枠として残す／消す
  */
 export default function Orphans() {
-  const orphans = useLiveQuery(listOrphans)
-  const all = useLiveQuery(() => db.cards.toArray())
+  // カードは手元の記録から（全カードをデータベースから読み直さない。2026-10-14）
+  const all = useAllCards()
+  const orphans = useMemo(() => (all ? orphansOf(all) : undefined), [all])
   const collections = useLiveQuery(() => db.collections.toArray())
   const [pick, setPick] = useState<Record<string, string>>({})
   // 付け替え先のコレクション（取り残された枠と同じコレクションに候補がないときや、別のコレクションの枠へ付け替えたいとき）

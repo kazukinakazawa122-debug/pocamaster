@@ -6,7 +6,11 @@ import { db, deleteImages, type Card, type MyAlbum } from './db'
  * 「自分の枠として残す」にしたものは除く
  */
 export async function listOrphans(): Promise<Card[]> {
-  const all = await db.cards.toArray()
+  return orphansOf(await db.cards.toArray())
+}
+
+/** listOrphans と同じ（渡された全カードから選ぶ。データベースは読まない） */
+export function orphansOf(all: Card[]): Card[] {
   // 初期データを取り込んで固定の ID が付く前（どのカードにも ID がない）は、全部が「ID のない枠」に見えてしまうので、整理の対象を出さない
   if (!all.some((c) => c.seedId)) return []
   return all.filter((c) => !c.seedId && !c.keepAsOwn)

@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import JSZip from 'jszip'
 import { addImages, db, getFull } from './db'
-import { exportOwnImages, listOwnImageCards, listUnexportedOwnImageCards, markExported, OWN_IMAGE_CREDIT } from './ownImages'
+import { exportOwnImages, listOwnImageCards, listUnexportedOwnImageCards, markExported, OWN_IMAGE_CREDIT, ownImageCounts } from './ownImages'
 import { importImages } from './imageImport'
 import { card, collection, imageZip, jpeg, resetDb } from '../test/helpers'
 
@@ -23,6 +23,13 @@ describe('自分で登録した画像', () => {
 
   it('出典のない画像があるカードだけを数える', async () => {
     expect((await listOwnImageCards()).map((c) => c.id)).toEqual(['own'])
+  })
+
+  it('設定の画面の数（手元の全カードから数える）：まだ書き出していない枚数と、書き出し済みの枚数', async () => {
+    const cards = await db.cards.toArray()
+    expect(ownImageCounts(cards, [])).toEqual({ todo: 1, done: 0 })
+    expect(ownImageCounts(cards, ['own-img'])).toEqual({ todo: 0, done: 1 })
+    expect(ownImageCounts(cards, ['zip-img'])).toEqual({ todo: 1, done: 0 }) // ZIP の画像は自分の画像ではない
   })
 
   it('画像の ZIP と同じ形（manifest.json ＋ 画像）に書き出す', async () => {

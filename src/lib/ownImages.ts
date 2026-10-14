@@ -1,13 +1,27 @@
 import JSZip from 'jszip'
-import { db, getFull, getSetting, getThumb, putSetting } from './db'
+import { db, getFull, getSetting, getThumb, putSetting, type Card } from './db'
 import { memberNames } from './members'
 
 /** 自分でアプリから登録した（切り取った）画像があるカード。ZIP から取り込んだ画像（出典あり）は含まない */
-export async function listOwnImageCards() {
-  return (await db.cards.toArray()).filter((c) => c.imageId && !c.imageCredit)
+export function ownImageCardsOf(cards: Card[]): Card[] {
+  return cards.filter((c) => c.imageId && !c.imageCredit)
 }
 
-const EXPORTED_KEY = 'ownExportedImageIds'
+export async function listOwnImageCards() {
+  return ownImageCardsOf(await db.cards.toArray())
+}
+
+/** 書き出し済みの画像の id の一覧（settings のキー） */
+export const OWN_EXPORTED_KEY = 'ownExportedImageIds'
+const EXPORTED_KEY = OWN_EXPORTED_KEY
+
+/** 設定の画面に出す数：まだ書き出していない枚数と、書き出し済みの枚数（渡された全カードから数える。データベースは読まない） */
+export function ownImageCounts(cards: Card[], exported: string[]): { todo: number; done: number } {
+  const done = new Set(exported)
+  const own = ownImageCardsOf(cards)
+  const todo = own.filter((c) => !done.has(c.imageId!)).length
+  return { todo, done: own.length - todo }
+}
 
 /** 前に書き出した（「ファイルに保存する」まで終えた）画像の id。切り直した画像は新しい id なので、また書き出し対象になる */
 async function exportedIds(): Promise<Set<string>> {

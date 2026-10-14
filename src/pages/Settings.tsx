@@ -1,12 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { IconCamera, IconDatabaseImport, IconDownload, IconFileImport, IconPhotoPlus, IconPhotoUp, IconRestore } from '@tabler/icons-react'
 import { addImages, db, deleteImages, EMPTY_PROFILE, getSetting, newId, putSetting, type Profile } from '../lib/db'
 import { makeImage } from '../lib/image'
 import MemberPicker from '../components/MemberPicker'
 import { Link } from 'react-router-dom'
-import { listOrphans } from '../lib/orphans'
-import { exportOwnImages, listOwnImageCards, listUnexportedOwnImageCards, markExported } from '../lib/ownImages'
+import { useAllCards } from '../lib/cardStore'
+import { orphansOf } from '../lib/orphans'
+import { exportOwnImages, markExported, OWN_EXPORTED_KEY, ownImageCounts } from '../lib/ownImages'
 import { changesSinceBackup, exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv, removeObsolete } from '../lib/csv'
 import { importImages, type ImageZipInfo } from '../lib/imageImport'
@@ -62,19 +63,21 @@ export default function Settings() {
   const lastBackupAt = useLiveQuery(() => getSetting<number>('lastBackupAt'))
   const imageZip = useLiveQuery(() => getSetting<ImageZipState>('imageZip'))
   const changes = useLiveQuery(() => changesSinceBackup())
+  // カードの数は手元の記録から数える（前は開くたび・画像の取り込みの保存のたびに、全カードをデータベースから読み直していた。
+  // iPhone ではその間ほかの画面の画像の読み込みが待たされる。2026-10-14）。取り込み中など続けて変わるときは、手が空いたときにまとめて数え直す
+  const allCards = useDeferredValue(useAllCards())
+  const exportedIds = useLiveQuery(async () => (await getSetting<string[]>(OWN_EXPORTED_KEY)) ?? [])
   // まだ書き出していない自分の画像の数（書き出し済みは数えない）と、書き出し済みの数
-  const ownCount = useLiveQuery(async () => {
-    const [all, todo] = await Promise.all([listOwnImageCards(), listUnexportedOwnImageCards()])
-    return { todo: todo.length, done: all.length - todo.length }
-  })
+  const ownCount = useMemo(() => (allCards && exportedIds ? ownImageCounts(allCards, exportedIds) : undefined), [allCards, exportedIds])
   // 作った自分の画像の ZIP（バックアップと同じく、作るのと保存を 2 回のタップに分ける）
   const [ownFile, setOwnFile] = useState<{ file: File; imageIds: string[] } | null>(null)
-  const orphans = useLiveQuery(async () => {
-    const list = await listOrphans()
+  const orphans = useMemo(() => {
+    if (!allCards) return undefined
+    const list = orphansOf(allCards)
     return { total: list.length, owned: list.filter((c) => c.status === '所持中' || c.favorite).length }
-  })
+  }, [allCards])
   const persisted = useLiveQuery(async () => (await navigator.storage?.persisted?.()) ?? undefined)
-  const counts = useLiveQuery(async () => ({ collections: await db.collections.count(), cards: await db.cards.count() }))
+  const collectionCount = useLiveQuery(() => db.collections.count())
   const [message, setMessage] = useState('')
   const [busy, setBusy] = useState(false)
   // 画像の取り込みの進み具合（棒と残り時間。2026-10-03）
@@ -327,7 +330,7 @@ export default function Settings() {
       <div className="section-title">データの取り込み</div>
       <div className="panel stack">
         <div className="small muted">
-          いまの登録数：コレクション {counts?.collections ?? 0} 件、カード {counts?.cards ?? 0} 枚
+          いまの登録数：コレクション {collectionCount ?? 0} 件、カード {allCards?.length ?? 0} 枚
         </div>
         <button className="btn block" disabled={busy} onClick={importSeed}>
           <IconDatabaseImport size={20} aria-hidden />
