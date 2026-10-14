@@ -1,7 +1,7 @@
-import JSZip from 'jszip'
 import { addImages, db, deleteImages, getFull, newId, type Card } from './db'
 import { makeImage } from './image'
 import { parseMembers } from './csv'
+import { openZip } from './zipReader'
 
 interface ManifestEntry {
   collection: string
@@ -65,11 +65,12 @@ export async function importImages(
   onProgress?: (done: number, total: number) => void,
   check?: (info: ImageZipInfo | undefined) => boolean,
 ): Promise<ImageImportResult> {
-  const zip = await JSZip.loadAsync(file)
-  const json = await zip.file('manifest.json')?.async('string')
+  // ZIP 全体を一度にメモリへ読み込まず、中身は 1 枚ずつ切り出して読む（全部入りは約 300MB。2026-10-14）
+  const zip = await openZip(file)
+  const json = await zip.text('manifest.json')
   if (!json) throw new Error('画像の取り込み用ファイルではありません（manifest.json がありません）')
   const entries = JSON.parse(json) as ManifestEntry[]
-  const infoJson = await zip.file('info.json')?.async('string')
+  const infoJson = await zip.text('info.json')
   const info = infoJson ? (JSON.parse(infoJson) as ImageZipInfo) : undefined
   if (check && !check(info)) return { matched: 0, skipped: 0, keptOwn: 0, adoptedOwn: 0, failed: [], unmatched: [], info, canceled: true }
 
@@ -97,8 +98,8 @@ export async function importImages(
     if (e.cover) {
       // コレクションの表紙：いまの表紙を置き換える
       const col = collections.find((c) => c.name === e.collection)
-      const bytes = await zip.file(e.file)?.async('arraybuffer')
-      const thumb = e.thumb ? await zip.file(e.thumb)?.async('arraybuffer') : undefined
+      const bytes = await zip.bytes(e.file)
+      const thumb = e.thumb ? await zip.bytes(e.thumb) : undefined
       if (!col || !bytes) {
         result.unmatched.push(`${e.collection}（表紙）`)
         continue
@@ -120,7 +121,7 @@ export async function importImages(
     try {
       // 中身をいったんメモリに読み出してから保存する（元の ZIP ファイルを参照したままだと、
       // iPhone であとから「The I/O read operation failed」で読めなくなることがあるため）
-      const bytes = await zip.file(e.file)?.async('arraybuffer')
+      const bytes = await zip.bytes(e.file)
       if (!card || !bytes) {
         result.unmatched.push(label)
         continue
@@ -144,7 +145,7 @@ export async function importImages(
         continue
       }
       const blob = new Blob([bytes], { type: 'image/jpeg' })
-      const thumb = e.thumb ? await zip.file(e.thumb)?.async('arraybuffer') : undefined
+      const thumb = e.thumb ? await zip.bytes(e.thumb) : undefined
       const img = thumb ? { full: blob, thumb: new Blob([thumb], { type: 'image/jpeg' }) } : await makeImage(blob)
       pending.push({ id: newId(), card, img, credit: e.credit || 'ZIP の画像', hash })
       result.matched++
