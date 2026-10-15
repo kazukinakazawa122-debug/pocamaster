@@ -6,7 +6,8 @@
     ②同じ写真が別の枠にも入っている（重複。16×16 の dHash で距離 6 以内）
     ③ぼかしの画像（ほかに画像がないので仮に入れている見本）。tools/crop/review/blurred.json（目で確かめたもの）と、
       くっきり具合の数値（縦 120px にそろえたラプラシアンの分散）が BLUR_MAX 以下の画像（あとから増えた画像の分）
-- 粗い：高さ 300px 未満（200px 未満は「とても粗い」）。差し替えが必要なものは、そちらに出す
+- 粗い：高さ 300px 未満。差し替えが必要なものは、そちらに出す
+並び：コレクションごと（初期データの順）に、画像なし・差し替え・粗いをまぜて出す
 出力：public/_review/todo.html（見本の小さな画像は public/_review/todo/。Git には入れない）と、
       スマホで見る 1 ファイル版（画像入り）を pocamaster-images/要対応カード一覧_スマホ用.html に
   python tools/crop/review_todo.py
@@ -22,7 +23,7 @@ ROOT = "C:/Users/kazuk/OneDrive/pocamaster-images/"
 ZIP = ROOT + "pocamaster-images.zip"
 OUT = PROJ + "public/_review/todo/"
 PHONE = ROOT + "要対応カード一覧_スマホ用.html"
-VERY_LOW, LOW = 200, 300
+LOW = 300
 BLUR_MAX = 90
 MEMBERS = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]
 COLOR = {"ユジン": "#378ADD", "ガウル": "#F08A3C", "レイ": "#F2C230", "ウォニョン": "#E85A9C", "リズ": "#3FB56B", "イソ": "#E24B4A"}
@@ -121,51 +122,37 @@ def tile(x, kind):
     if kind == "none":
         bg = COLOR[names[0]] + "40" if len(names) == 1 else "#e2e2de"
         pic = f'<div class="ph" style="border-color:{border};background:{bg}"><b>{esc(label(mk))}</b><span>{esc(src)}</span><span>{esc(ver)}</span></div>'
-        note = ""
+        note = '<div class="tag none">画像なし</div>'
     else:
         e = x["e"]
-        pic = f'<img loading="lazy" src="{x["img"]}" alt="" style="border-color:{border}">'
-        size = f'<div class="px{" very" if e["h"] < VERY_LOW else ""}">{e["w"]}×{e["h"]}</div>'
+        pic = f'<img data-src="{x["img"]}" alt="" style="border-color:{border}">'
+        size = f'<div class="tag">{"粗い " if kind == "low" else ""}{e["w"]}×{e["h"]}</div>'
         why = "".join(f'<div class="why">{esc(r)}</div>' for r in x.get("why", []))
         note = size + why + f'<div class="cr">{esc(e.get("credit") or "")}</div>'
-    very = kind == "low" and x["e"]["h"] < VERY_LOW
-    return f'<div class="t{" very" if very else ""}">{pic}<b>{esc(label(mk))}</b><br>{esc(src)} {esc(ver)}{note}</div>'
+    return f'<div class="t">{pic}<b>{esc(label(mk))}</b><br>{esc(src)} {esc(ver)}{note}</div>'
 
 
 cols_order = [r["name"] for r in csv.DictReader(open(PROJ + "public/seed/collections.csv", encoding="utf-8"))]
-KINDS = [("none", "画像なし", none, "初期データに枠があるのに、画像のないカード。資料（一覧表・店の告知・実物の写真）が見つかったら入れる"),
-         ("replace", "差し替えが必要", replace, "画像がちがう・同じ写真が別の枠にもある・ぼかしの見本。正しい画像・ぼかしのない画像が見つかったら差し替える"),
-         ("low", "粗い", low, f"高さ {LOW}px 未満（赤い数字は {VERY_LOW}px 未満の「とても粗い」）。同じ作者の大きな版・店の告知・実物の写真があれば差し替える")]
-
-# 表：コレクションごとの数（多い順）
-count = collections.defaultdict(lambda: collections.Counter())
-for kind, _, lst, _ in KINDS:
+# コレクションごとに、初期データの並びで（画像なし・差し替え・粗いをまぜる。本人の要望、2026-10-15「コレクション別で分けて」）
+order = {k: i for i, k in enumerate(dict.fromkeys(slots))}
+groups = collections.defaultdict(list)
+for kind, lst in (("none", none), ("replace", replace), ("low", low)):
     for x in lst:
-        count[x["k"][0]][kind] += 1
-        if kind == "low" and x["e"]["h"] < VERY_LOW:
-            count[x["k"][0]]["very"] += 1
+        groups[x["k"][0]].append((order[x["k"]], kind, x))
 total_slots = collections.Counter(s[0] for s in dict.fromkeys(slots))
-cols = sorted(count, key=lambda c: (-(count[c]["none"] + count[c]["replace"] + count[c]["low"]), cols_order.index(c) if c in cols_order else 999))
+cols = sorted(groups, key=lambda c: cols_order.index(c) if c in cols_order else 999)
 rows = "".join(
-    f'<tr><td><a href="#c{cols.index(c)}">{esc(c)}</a></td><td class="n">{total_slots[c]}</td><td class="n">{count[c]["none"] or ""}</td>'
-    f'<td class="n">{count[c]["replace"] or ""}</td><td class="n">{count[c]["low"] or ""}</td><td class="n">{count[c]["very"] or ""}</td></tr>'
-    for c in cols
+    f'<tr><td><a href="#c{n}">{esc(c)}</a></td><td class="n">{total_slots[c]}</td>'
+    + "".join(f'<td class="n">{sum(1 for g in groups[c] if g[1] == kind) or ""}</td>' for kind in ("none", "replace", "low"))
+    + f'<td class="n"><b>{len(groups[c])}</b></td></tr>'
+    for n, c in enumerate(cols)
 )
+sections = [
+    f'<details id="c{n}"><summary>{esc(c)}<span>{len(groups[c])} 枚</span></summary>'
+    f'<div class="grid">{"".join(tile(x, kind) for _, kind, x in sorted(groups[c], key=lambda g: g[0]))}</div><a class="up" href="#top">↑ 表へ</a></details>'
+    for n, c in enumerate(cols)
+]
 
-sections = []
-anchored = set()  # 表から飛ぶ先は、そのコレクションがはじめて出てくる見出し
-for kind, title, lst, desc in KINDS:
-    groups = collections.defaultdict(list)
-    for x in lst:
-        groups[x["k"][0]].append(x)
-    parts = []
-    for c in sorted(groups, key=cols.index):
-        aid = "" if c in anchored else f' id="c{cols.index(c)}"'
-        anchored.add(c)
-        parts.append(f'<h3{aid}>{esc(c)}<span>{len(groups[c])} 枚</span></h3><div class="grid">{"".join(tile(x, kind) for x in groups[c])}</div>')
-    sections.append(f'<section class="k-{kind}"><h2>{title}<span>{len(lst)} 枚</span></h2><p>{desc}</p>{"".join(parts)}</section>')
-
-very_n = sum(1 for x in low if x["e"]["h"] < VERY_LOW)
 page = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>要対応カード一覧</title><style>
 :root{{--bg:#f4f4f2;--text:#1f1f1f;--muted:#6b6b68;--line:#dcdcd8;--warn:#b42318;--panel:#ffffff}}
@@ -174,33 +161,30 @@ body{{margin:0 auto;background:var(--bg);color:var(--text);font:14px/1.5 -apple-
 h1{{font-size:20px;margin:0 0 4px}} p{{color:var(--muted);margin:4px 0 12px}}
 table{{border-collapse:collapse;width:100%;font-size:13px;margin-bottom:12px}} th,td{{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top}}
 th{{color:var(--muted);font-weight:600}} td.n,th.n{{text-align:right;font-variant-numeric:tabular-nums}} a{{color:inherit}}
-.bar{{position:sticky;top:0;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line);z-index:1;display:flex;gap:6px;flex-wrap:wrap}}
-button{{font:inherit;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--text)}} button.on{{background:var(--text);color:var(--bg)}}
-h2{{font-size:18px;margin:28px 0 4px;display:flex;gap:8px;align-items:baseline}} h2 span,h3 span{{color:var(--muted);font-size:12px;font-weight:600}}
-h3{{font-size:15px;margin:18px 0 8px;display:flex;gap:8px;align-items:baseline}}
-h2,h3{{scroll-margin-top:110px}}
+details{{border-top:1px solid var(--line)}} details:last-of-type{{border-bottom:1px solid var(--line)}}
+summary{{font-size:16px;font-weight:700;padding:12px 2px;display:flex;gap:8px;align-items:baseline;cursor:pointer;list-style:none;scroll-margin-top:8px}}
+summary::-webkit-details-marker{{display:none}} summary::before{{content:"▸";color:var(--muted)}} details[open] summary::before{{content:"▾"}}
+summary span{{color:var(--muted);font-size:12px;font-weight:600}}
+.up{{display:block;text-align:right;font-size:12px;color:var(--muted);text-decoration:none;padding:10px 2px 14px}}
 .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}}
 .t{{font-size:11px;line-height:1.35}}
 .t img,.t .ph{{width:100%;aspect-ratio:55/85;object-fit:cover;border-radius:5px;border:2px solid;display:block;box-sizing:border-box;margin-bottom:3px}}
 .t .ph{{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;text-align:center;padding:4px;color:var(--text)}}
-.px{{font-weight:700}} .px.very{{color:var(--warn)}} .why{{color:var(--warn)}} .cr{{color:var(--muted)}}
-.only-very .k-low .t:not(.very){{display:none}}
-body[data-f="none"] section:not(.k-none),body[data-f="replace"] section:not(.k-replace),body[data-f="low"] section:not(.k-low),body[data-f="very"] section:not(.k-low){{display:none}}
-</style></head><body data-f="all">
+.tag{{font-weight:700}} .tag.none,.why{{color:var(--warn)}} .cr{{color:var(--muted)}}
+</style></head><body id="top">
 <h1>要対応カード一覧</h1>
 <p>全部入りの ZIP{(" No." + str(info["seq"])) if info.get("seq") else ""}（{info.get("date", "")}）と初期データ（{len(dict.fromkeys(slots))} 枠）から作りました。
-画像なし <b>{len(none)} 枠</b>・差し替えが必要 <b>{len(replace)} 枚</b>・粗い <b>{len(low)} 枚</b>（そのうち とても粗い {very_n} 枚）。
-「資料の作者」は、同じ作者のもっと大きな版を探す手がかりです。</p>
-<table><tr><th>コレクション</th><th class="n">枠</th><th class="n">画像なし</th><th class="n">差し替え</th><th class="n">粗い</th><th class="n">とても粗い</th></tr>{rows}</table>
-<div class="bar"><button class="on" data-f="all">すべて</button><button data-f="none">画像なし</button><button data-f="replace">差し替えが必要</button><button data-f="low">粗い</button><button data-f="very">とても粗いだけ</button></div>
+画像なし <b>{len(none)} 枠</b>・差し替えが必要 <b>{len(replace)} 枚</b>・粗い <b>{len(low)} 枚</b>（高さ {LOW}px 未満）。
+コレクション名を押すと、そのコレクションのカードが開きます（開いたものだけ画像を読むので軽い）。「資料の作者」は、同じ作者のもっと大きな版を探す手がかりです。</p>
+<table><tr><th>コレクション</th><th class="n">枠</th><th class="n">画像なし</th><th class="n">差し替え</th><th class="n">粗い</th><th class="n">合計</th></tr>{rows}</table>
 <main>{"".join(sections)}</main>
 <script>
-document.querySelectorAll('.bar button').forEach(b => b.onclick = () => {{
-  document.querySelectorAll('.bar button').forEach(x => x.classList.toggle('on', x === b));
-  document.body.dataset.f = b.dataset.f;
-  document.body.classList.toggle('only-very', b.dataset.f === 'very');
-}});
-</script></body></html>"""
+function show(d) {{ d.querySelectorAll('img[data-src]').forEach(i => {{ i.src = i.dataset.src; i.removeAttribute('data-src'); }}); }}
+document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => d.open && show(d)));
+function go() {{ const d = location.hash && document.querySelector(location.hash); if (d && d.tagName === 'DETAILS') {{ d.open = true; d.scrollIntoView(); }} }}
+addEventListener('hashchange', go); go();
+</script>
+</body></html>"""
 open(PROJ + "public/_review/todo.html", "w", encoding="utf-8").write(page)
 
 
@@ -208,16 +192,16 @@ open(PROJ + "public/_review/todo.html", "w", encoding="utf-8").write(page)
 def inline(m):
     with Image.open(PROJ + "public/_review/" + m) as im:
         p = im.convert("RGB")
-        p.thumbnail((200, 310))
+        p.thumbnail((150, 232))
         buf = io.BytesIO()
-        p.save(buf, "JPEG", quality=65)
+        p.save(buf, "JPEG", quality=60)
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
 phone = page
 for x in replace + low:
-    phone = phone.replace(f'src="{x["img"]}"', f'src="{inline(x["img"])}"', 1)
+    phone = phone.replace(f'data-src="{x["img"]}"', f'data-src="{inline(x["img"])}"', 1)
 open(PHONE, "w", encoding="utf-8").write(phone)
-print(f"画像なし {len(none)} 枠・差し替えが必要 {len(replace)} 枚・粗い {len(low)} 枚（とても粗い {very_n} 枚）／ 枠 {len(dict.fromkeys(slots))}・画像 {len(manifest)}")
+print(f"画像なし {len(none)} 枠・差し替えが必要 {len(replace)} 枚・粗い {len(low)} 枚／ 枠 {len(dict.fromkeys(slots))}・画像 {len(manifest)}")
 print("内訳（差し替え）", collections.Counter(("ちがう" if any("ちがう" in r for r in x["why"]) else "") + ("重複" if any("同じ写真" in r for r in x["why"]) else "") + ("ぼかし" if any("ぼかし" in r for r in x["why"]) else "") for x in replace))
 print("出力", PROJ + "public/_review/todo.html", "／", PHONE, round(os.path.getsize(PHONE) / 1e6, 1), "MB")
