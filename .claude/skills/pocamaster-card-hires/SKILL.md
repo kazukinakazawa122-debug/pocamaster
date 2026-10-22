@@ -72,6 +72,7 @@ python tools/crop/mercari_hires.py review <名前>   # pocamaster-images/メル�
 ```
 
 - **SendUserFile で JPEG を送る**（display: render）。本人はスマホで見ることが多く、HTML は開けなかった。
+- **本人に見てほしい・使ってほしいファイルは、場所を書くだけでなく毎回 SendUserFile で送る**（本人「毎回そのリンクを送ってほしい。見れません」2026-10-23）。iPhone に入れる差分 ZIP も送る（display: attach）。
 - 「ちがうものがあれば番号を教えてください」と書く。ちがうと言われたら ok から外して apply からやり直す（前の画像に戻る）。
 - 報告は短く：差し替えた枚数、粗いカードの数の変化（前 → 後）、外したものと理由、iPhone に入れる ZIP、本人に聞くこと、次の候補。
 
