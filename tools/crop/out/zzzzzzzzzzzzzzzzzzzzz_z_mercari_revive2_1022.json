@@ -1,0 +1,482 @@
+{
+"seed": [
+[
+"REVIVE+",
+"レイ",
+"Makestar",
+"2.0"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"Makestar",
+"2.0"
+],
+[
+"REVIVE+",
+"ユジン",
+"Makestar ラキドロ",
+"4.0"
+],
+[
+"REVIVE+",
+"レイ",
+"Makestar",
+"3.0"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"Makestar",
+"3.0"
+],
+[
+"REVIVE+",
+"ユジン",
+"Makestar",
+"2.0"
+],
+[
+"REVIVE+",
+"ガウル",
+"MusicArt ラキドロ",
+"2.0"
+],
+[
+"REVIVE+",
+"イソ",
+"MusicArt ラキドロ",
+"2.0"
+],
+[
+"REVIVE+",
+"レイ",
+"MusicArt ラキドロ",
+"2.0"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"MusicArt ラキドロ",
+"2.0"
+],
+[
+"REVIVE+",
+"ユジン",
+"MusicArt ラキドロ",
+"2.0"
+],
+[
+"REVIVE+",
+"ガウル",
+"Music Korea",
+"3.0"
+],
+[
+"REVIVE+",
+"イソ",
+"Music Korea",
+"1.0"
+],
+[
+"REVIVE+",
+"リズ",
+"Music Korea",
+"3.0"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"Music Korea",
+"2.0"
+],
+[
+"REVIVE+",
+"イソ",
+"Music Korea",
+"2.0"
+],
+[
+"REVIVE+",
+"ガウル",
+"Music Korea",
+"2.0"
+],
+[
+"REVIVE+",
+"レイ",
+"Music Korea",
+"1.0"
+],
+[
+"REVIVE+",
+"レイ",
+"Music Korea",
+"3.0"
+],
+[
+"REVIVE+",
+"イソ",
+"NY Music",
+"1.0"
+],
+[
+"REVIVE+",
+"ガウル",
+"NY Music",
+"1.0"
+],
+[
+"REVIVE+",
+"レイ",
+"NY Music",
+"1.0"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"Soundwave ラキドロ",
+"2.0"
+],
+[
+"REVIVE+",
+"ガウル",
+"Soundwave ラキドロ",
+"2.0"
+],
+[
+"REVIVE+",
+"ユジン",
+"Soundwave ラキドロ",
+"3.0"
+],
+[
+"REVIVE+",
+"イソ",
+"Soundwave ラキドロ",
+"3.0"
+],
+[
+"REVIVE+",
+"リズ",
+"Soundwave ラキドロ",
+"3.0"
+],
+[
+"REVIVE+",
+"レイ",
+"Soundwave ラキドロ",
+"3.0"
+]
+],
+"images": [
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Makestar",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "Makestar",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "Makestar ラキドロ",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Makestar",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "Makestar",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "Makestar",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "MusicArt ラキドロ",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "MusicArt ラキドロ",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0007_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "MusicArt ラキドロ",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0008_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "MusicArt ラキドロ",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0009_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "MusicArt ラキドロ",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0010_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "Music Korea",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0011_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "Music Korea",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0012_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "Music Korea",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0013_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "Music Korea",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0014.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0014_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "Music Korea",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0015.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0015_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "Music Korea",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0016.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0016_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Music Korea",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0017.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0017_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Music Korea",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0018.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0018_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "NY Music",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0019.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0019_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "NY Music",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0020.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0020_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "NY Music",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0021.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0021_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0022.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0022_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0023.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0023_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "Soundwave ラキドロ",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0024.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0024_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0025.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0025_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "Soundwave ラキドロ",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0026.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0026_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Soundwave ラキドロ",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0027.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022/0027_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
