@@ -1,0 +1,431 @@
+{
+"seed": [
+[
+"REVIVE+",
+"イソ",
+"Apple Music",
+"2.0"
+],
+[
+"REVIVE+",
+"ガウル",
+"Apple Music",
+"2.0"
+],
+[
+"REVIVE+",
+"レイ",
+"Apple Music",
+"1.0"
+],
+[
+"REVIVE+",
+"レイ",
+"ARTBOX",
+""
+],
+[
+"REVIVE+",
+"ウォニョン",
+"ARTBOX",
+""
+],
+[
+"REVIVE+",
+"ウォニョン",
+"Starship Square",
+"Digipack"
+],
+[
+"REVIVE+",
+"レイ",
+"本体封入",
+"Digipack"
+],
+[
+"REVIVE+",
+"イソ",
+"本体封入",
+"Digipack"
+],
+[
+"REVIVE+",
+"ガウル",
+"本体封入",
+"Digipack"
+],
+[
+"REVIVE+",
+"イソ",
+"HOTTRACKS",
+""
+],
+[
+"REVIVE+",
+"ウォニョン",
+"京东",
+"1.0"
+],
+[
+"REVIVE+",
+"ユジン",
+"SWIA OSAKA exclusive",
+"4.19"
+],
+[
+"REVIVE+",
+"リズ",
+"本体封入",
+"CHALLENGERS"
+],
+[
+"REVIVE+",
+"リズ",
+"Kakao Talk",
+""
+],
+[
+"REVIVE+",
+"イソ",
+"Ktown4U",
+"1.0"
+],
+[
+"REVIVE+",
+"イソ",
+"本体封入",
+"BANGERS"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"Starship Square",
+"3TYPE"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"オフラインイベント",
+"4.29 TOKYO"
+],
+[
+"REVIVE+",
+"ユジン",
+"本体封入",
+"LOVED IVE"
+],
+[
+"REVIVE+",
+"イソ",
+"Kakao Talk",
+""
+],
+[
+"REVIVE+",
+"イソ",
+"オフラインイベント",
+"4.11 TOKYO"
+],
+[
+"REVIVE+",
+"レイ",
+"オフラインイベント",
+"4.11 TOKYO"
+],
+[
+"REVIVE+",
+"ウォニョン",
+"オフラインイベント",
+"4.11 TOKYO"
+],
+[
+"REVIVE+",
+"ガウル",
+"オフラインイベント",
+"4.11 TOKYO"
+],
+[
+"REVIVE+",
+"リズ",
+"オフラインイベント",
+"4.11 TOKYO"
+]
+],
+"images": [
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "Apple Music",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "Apple Music",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Apple Music",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "ARTBOX",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "ARTBOX",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "Starship Square",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0007_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0008_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "HOTTRACKS",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0009_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "京东",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0010_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "SWIA OSAKA exclusive",
+"version": "4.19",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0011_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "CHALLENGERS",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0012_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "Kakao Talk",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0013_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "Ktown4U",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0014.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0014_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "BANGERS",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0015.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0015_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "Starship Square",
+"version": "3TYPE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0016.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0016_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "4.29 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0017.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0017_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0018.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0018_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "Kakao Talk",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0019.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0019_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "4.11 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0020.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0020_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "4.11 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0021.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0021_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "4.11 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0022.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0022_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "4.11 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0023.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0023_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "4.11 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0024.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261023a/0024_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
