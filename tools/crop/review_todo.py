@@ -83,6 +83,9 @@ for i in range(len(hashes)):
 
 # --- ぼかし ---
 blurred = {(c["collection"], mkey(c["members"]), c["source"], c["version"]) for c in json.load(open(SP + "review/blurred.json", encoding="utf-8"))["cards"]}
+# blurred.json は枠で決めているので、あとで本物の画像に差し替えた枠も残ってしまう（2026-10-23、メルカリの写真で KMONSTAR 1.0 を差し替えて気づいた）
+# → くっきり具合が 300 より上なら外す（差し替えた画像は 379 以上。元のぼかしで 282 のもの〈REVIVE+ ガウル NY Music ラキドロ 2.0〉があったので 240 ではなく 300）
+blurred = {k for k in blurred if k in by_key and by_key[k]["blur"] <= 300}
 blurred |= {k for k, e in by_key.items() if e["blur"] <= BLUR_MAX}
 
 # --- 分ける ---
