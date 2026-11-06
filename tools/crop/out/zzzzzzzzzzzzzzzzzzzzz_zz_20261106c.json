@@ -152,12 +152,6 @@
 ],
 [
 "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"ガウル",
-"SWIA TAIPEI 特典",
-"Mnet+"
-],
-[
-"2nd WORLD TOUR 'SHOW WHAT I AM'",
 "イソ",
 "Random Photocard Pack Korea",
 "2"
@@ -600,10 +594,10 @@
 {
 "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
 "members": [
-"ガウル"
+"イソ"
 ],
-"source": "SWIA TAIPEI 特典",
-"version": "Mnet+",
+"source": "Random Photocard Pack Korea",
+"version": "2",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0025.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0025_t.jpg",
 "credit": "メルカリの出品写真"
@@ -611,9 +605,9 @@
 {
 "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
 "members": [
-"イソ"
+"ガウル"
 ],
-"source": "Random Photocard Pack Korea",
+"source": "Random Photocard Pack Japan",
 "version": "2",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0026.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0026_t.jpg",
@@ -622,7 +616,7 @@
 {
 "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
 "members": [
-"ガウル"
+"リズ"
 ],
 "source": "Random Photocard Pack Japan",
 "version": "2",
@@ -633,7 +627,7 @@
 {
 "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
 "members": [
-"リズ"
+"ウォニョン"
 ],
 "source": "Random Photocard Pack Japan",
 "version": "2",
@@ -644,23 +638,12 @@
 {
 "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
 "members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Japan",
-"version": "2",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0029.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0029_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
 "リズ"
 ],
 "source": "Random Photocard Pack Korea",
 "version": "1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0030.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0030_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0029.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0029_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -670,8 +653,8 @@
 ],
 "source": "Random Photocard Pack Japan",
 "version": "1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0031.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0031_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0030.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0030_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -681,8 +664,8 @@
 ],
 "source": "Random Photocard Pack Korea",
 "version": "1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0032.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0032_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0031.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0031_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -692,8 +675,8 @@
 ],
 "source": "Random Photocard Pack Japan",
 "version": "1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0033.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0033_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0032.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0032_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -703,6 +686,17 @@
 ],
 "source": "Random Photocard Pack Korea",
 "version": "5",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0033.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0033_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ユジン"
+],
+"source": "Random Photocard Pack Korea",
+"version": "6",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0034.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0034_t.jpg",
 "credit": "メルカリの出品写真"
@@ -710,7 +704,7 @@
 {
 "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
 "members": [
-"ユジン"
+"ウォニョン"
 ],
 "source": "Random Photocard Pack Korea",
 "version": "6",
@@ -721,23 +715,12 @@
 {
 "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
 "members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Korea",
-"version": "6",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0036.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0036_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
 "レイ"
 ],
 "source": "MD",
 "version": "Smart Tok",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0037.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0037_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0036.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0036_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -747,8 +730,8 @@
 ],
 "source": "MD",
 "version": "70K Benefit",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0038.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0038_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0037.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0037_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -758,6 +741,17 @@
 ],
 "source": "Random Photocard Pack Korea",
 "version": "4",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0038.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0038_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ガウル"
+],
+"source": "Random Photocard Pack Japan",
+"version": "1",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0039.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0039_t.jpg",
 "credit": "メルカリの出品写真"
@@ -765,7 +759,7 @@
 {
 "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
 "members": [
-"ガウル"
+"ウォニョン"
 ],
 "source": "Random Photocard Pack Japan",
 "version": "1",
@@ -776,23 +770,12 @@
 {
 "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
 "members": [
-"ウォニョン"
-],
-"source": "Random Photocard Pack Japan",
-"version": "1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0041.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0041_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
 "イソ"
 ],
 "source": "Random Photocard Pack Japan",
 "version": "2",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0042.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0042_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0041.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0041_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -802,6 +785,17 @@
 ],
 "source": "VIP Perks Japan",
 "version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0042.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0042_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"ユジン"
+],
+"source": "Random Photocard Pack Japan",
+"version": "2",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0043.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0043_t.jpg",
 "credit": "メルカリの出品写真"
@@ -812,20 +806,9 @@
 "ユジン"
 ],
 "source": "Random Photocard Pack Japan",
-"version": "2",
+"version": "1",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0044.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0044_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"ユジン"
-],
-"source": "Random Photocard Pack Japan",
-"version": "1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0045.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0045_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -835,8 +818,8 @@
 ],
 "source": "VIP Perks Japan",
 "version": "",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0046.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0046_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0045.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0045_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -846,6 +829,17 @@
 ],
 "source": "Random Photocard Pack Korea",
 "version": "6",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0046.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0046_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
+"members": [
+"レイ"
+],
+"source": "Random Photocard Pack Korea",
+"version": "2",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0047.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0047_t.jpg",
 "credit": "メルカリの出品写真"
@@ -855,21 +849,10 @@
 "members": [
 "レイ"
 ],
-"source": "Random Photocard Pack Korea",
-"version": "2",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0048.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0048_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "2nd WORLD TOUR 'SHOW WHAT I AM'",
-"members": [
-"レイ"
-],
 "source": "Random Photocard Pack Japan",
 "version": "1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0049.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0049_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0048.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0048_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -879,8 +862,8 @@
 ],
 "source": "Random Photocard Pack Korea",
 "version": "3",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0050.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0050_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0049.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0049_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -890,8 +873,8 @@
 ],
 "source": "DIVE ZONE FC ブース特典",
 "version": "Day 2",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0051.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0051_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0050.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0050_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -901,8 +884,8 @@
 ],
 "source": "Random Photocard Pack Japan",
 "version": "2",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0052.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0052_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0051.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261106c/0051_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]
