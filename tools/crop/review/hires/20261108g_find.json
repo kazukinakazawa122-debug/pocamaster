@@ -1,0 +1,869 @@
+[
+ {
+  "photo": "SWITCH_m11179363068.jpg",
+  "box": [
+   287,
+   293,
+   684,
+   916
+  ],
+  "score": 0.651,
+  "key": [
+   "IVE SWITCH",
+   "ユジン",
+   "Soundwave ラキドロ",
+   "2.0-2"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m11909585555.jpg",
+  "box": [
+   580,
+   177,
+   887,
+   656
+  ],
+  "score": 0.891,
+  "key": [
+   "IVE SWITCH",
+   "ユジン",
+   "Soundwave ラキドロ",
+   "5.0-2"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m14274649648.jpg",
+  "box": [
+   453,
+   380,
+   760,
+   858
+  ],
+  "score": 0.815,
+  "key": [
+   "IVE SWITCH",
+   "ウォニョン",
+   "Soundwave ラキドロ",
+   "2.0-2"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m16222290325.jpg",
+  "box": [
+   256,
+   287,
+   570,
+   756
+  ],
+  "score": 0.742,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "withmuu ラキドロ",
+   "1.0-3"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWITCH_m16345270734.jpg",
+  "box": [
+   263,
+   114,
+   752,
+   875
+  ],
+  "score": 0.661,
+  "key": [
+   "IVE SWITCH",
+   "イソ",
+   "StarRiver ファンサイン",
+   "1.0"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m17802513756.jpg",
+  "box": [
+   718,
+   117,
+   1029,
+   581
+  ],
+  "score": 0.548,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "withmuu ラキドロ",
+   "1.0-3"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWITCH_m18865037607.jpg",
+  "box": [
+   327,
+   119,
+   797,
+   856
+  ],
+  "score": 0.731,
+  "key": [
+   "IVE SWITCH",
+   "レイ",
+   "Soundwave ファンサイン",
+   "Manila"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m19512137503.jpg",
+  "box": [
+   305,
+   99,
+   829,
+   914
+  ],
+  "score": 0.812,
+  "key": [
+   "IVE SWITCH",
+   "ウォニョン",
+   "Soundwave ラキドロ",
+   "5.0-1"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m23488614366.jpg",
+  "box": [
+   205,
+   4,
+   841,
+   993
+  ],
+  "score": 0.834,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "Soundwave ラキドロ",
+   "5.0-2"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m23559022695.jpg",
+  "box": [
+   160,
+   219,
+   537,
+   806
+  ],
+  "score": 0.682,
+  "key": [
+   "IVE SWITCH",
+   "ガウル",
+   "Soundwave ラキドロ",
+   "2.0-1"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m28352066397.jpg",
+  "box": [
+   688,
+   148,
+   1002,
+   617
+  ],
+  "score": 0.736,
+  "key": [
+   "IVE SWITCH",
+   "レイ",
+   "withmuu ラキドロ",
+   "1.0-3"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWITCH_m31470189993.jpg",
+  "box": [
+   24,
+   202,
+   563,
+   1008
+  ],
+  "score": 0.73,
+  "key": [
+   "IVE SWITCH",
+   "レイ",
+   "withmuu ラキドロ",
+   "1.0-3"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWITCH_m33074235719.jpg",
+  "box": [
+   233,
+   66,
+   874,
+   1019
+  ],
+  "score": 0.899,
+  "key": [
+   "IVE SWITCH",
+   "イソ",
+   "Soundwave ラキドロ",
+   "2.0 POLA"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWITCH_m33995032991.jpg",
+  "box": [
+   62,
+   169,
+   443,
+   759
+  ],
+  "score": 0.518,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "Tower Records",
+   "1.0 POLA"
+  ],
+  "old_h": 576
+ },
+ {
+  "photo": "SWITCH_m34325256054.jpg",
+  "box": [
+   131,
+   271,
+   512,
+   865
+  ],
+  "score": 0.87,
+  "key": [
+   "IVE SWITCH",
+   "ウォニョン",
+   "Soundwave ラキドロ",
+   "5.0-2"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m34680469643.jpg",
+  "box": [
+   684,
+   151,
+   995,
+   622
+  ],
+  "score": 0.542,
+  "key": [
+   "IVE SWITCH",
+   "ガウル",
+   "Music Korea ラキドロ",
+   "1.0 POLA"
+  ],
+  "old_h": 267
+ },
+ {
+  "photo": "SWITCH_m35896176550.jpg",
+  "box": [
+   533,
+   125,
+   899,
+   695
+  ],
+  "score": 0.823,
+  "key": [
+   "IVE SWITCH",
+   "レイ",
+   "Soundwave ラキドロ",
+   "1.0-2"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m38408863902.jpg",
+  "box": [
+   339,
+   141,
+   646,
+   605
+  ],
+  "score": 0.537,
+  "key": [
+   "IVE SWITCH",
+   "イソ",
+   "Makestar",
+   ""
+  ],
+  "old_h": 730
+ },
+ {
+  "photo": "SWITCH_m39420676740.jpg",
+  "box": [
+   271,
+   139,
+   834,
+   1006
+  ],
+  "score": 0.883,
+  "key": [
+   "IVE SWITCH",
+   "イソ",
+   "Soundwave ラキドロ",
+   "2.0-2"
+  ],
+  "old_h": 710
+ },
+ {
+  "photo": "SWITCH_m41604465243.jpg",
+  "box": [
+   116,
+   215,
+   534,
+   872
+  ],
+  "score": 0.891,
+  "key": [
+   "IVE SWITCH",
+   "ガウル",
+   "本体封入",
+   "OFF"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m41956517866.jpg",
+  "box": [
+   258,
+   285,
+   544,
+   715
+  ],
+  "score": 0.88,
+  "key": [
+   "IVE SWITCH",
+   "ユジン",
+   "Soundwave ラキドロ",
+   "4.0 POLA"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWITCH_m44176991153.jpg",
+  "box": [
+   148,
+   187,
+   541,
+   804
+  ],
+  "score": 0.64,
+  "key": [
+   "IVE SWITCH",
+   "ガウル",
+   "withmuu ラキドロ",
+   "3.0-1"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m44197659240.jpg",
+  "box": [
+   485,
+   134,
+   930,
+   799
+  ],
+  "score": 0.821,
+  "key": [
+   "IVE SWITCH",
+   "レイ",
+   "withmuu ラキドロ",
+   "1.0-3"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWITCH_m47873871407.jpg",
+  "box": [
+   106,
+   72,
+   688,
+   977
+  ],
+  "score": 0.766,
+  "key": [
+   "IVE SWITCH",
+   "レイ",
+   "Soundwave ファンサイン",
+   "2.0"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m49719313837.jpg",
+  "box": [
+   182,
+   228,
+   575,
+   844
+  ],
+  "score": 0.927,
+  "key": [
+   "IVE SWITCH",
+   "ガウル",
+   "Soundwave ラキドロ",
+   "2.0-2"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m50221065114.jpg",
+  "box": [
+   84,
+   231,
+   516,
+   876
+  ],
+  "score": 0.696,
+  "key": [
+   "IVE SWITCH",
+   "イソ",
+   "withmuu ラキドロ",
+   "1.0-3"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWITCH_m51090894792.jpg",
+  "box": [
+   254,
+   148,
+   795,
+   952
+  ],
+  "score": 0.919,
+  "key": [
+   "IVE SWITCH",
+   "ウォニョン/レイ",
+   "Soundwave ラキドロ",
+   "6.0"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWITCH_m55843320736.jpg",
+  "box": [
+   303,
+   163,
+   772,
+   900
+  ],
+  "score": 0.915,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "Soundwave ファンサイン",
+   "2.0"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m57348066734.jpg",
+  "box": [
+   299,
+   184,
+   713,
+   828
+  ],
+  "score": 0.884,
+  "key": [
+   "IVE SWITCH",
+   "ウォニョン",
+   "Soundwave ファンサイン",
+   "1.0"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m58776593947.jpg",
+  "box": [
+   267,
+   112,
+   801,
+   950
+  ],
+  "score": 0.904,
+  "key": [
+   "IVE SWITCH",
+   "ユジン",
+   "Soundwave",
+   ""
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m60618834476.jpg",
+  "box": [
+   257,
+   92,
+   770,
+   891
+  ],
+  "score": 0.864,
+  "key": [
+   "IVE SWITCH",
+   "ユジン",
+   "Soundwave ラキドロ",
+   "1.0-1"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m62081663216.jpg",
+  "box": [
+   143,
+   249,
+   516,
+   835
+  ],
+  "score": 0.906,
+  "key": [
+   "IVE SWITCH",
+   "ガウル",
+   "Soundwave ラキドロ",
+   "4.0-1"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m62705966545.jpg",
+  "box": [
+   658,
+   579,
+   988,
+   1052
+  ],
+  "score": 0.594,
+  "key": [
+   "IVE SWITCH",
+   "イソ",
+   "Music Korea ラキドロ",
+   "1.0 POLA"
+  ],
+  "old_h": 238
+ },
+ {
+  "photo": "SWITCH_m63445621675.jpg",
+  "box": [
+   64,
+   0,
+   719,
+   1014
+  ],
+  "score": 0.667,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "Tower Records",
+   "1.0 POLA"
+  ],
+  "old_h": 576
+ },
+ {
+  "photo": "SWITCH_m70064979547.jpg",
+  "box": [
+   212,
+   38,
+   835,
+   1007
+  ],
+  "score": 0.759,
+  "key": [
+   "IVE SWITCH",
+   "ウォニョン",
+   "Soundwave ラキドロ",
+   "1.0-2"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m70678113414.jpg",
+  "box": [
+   56,
+   203,
+   536,
+   955
+  ],
+  "score": 0.687,
+  "key": [
+   "IVE SWITCH",
+   "ガウル",
+   "OSAKA イベント",
+   ""
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m70738147106.jpg",
+  "box": [
+   151,
+   106,
+   681,
+   937
+  ],
+  "score": 0.683,
+  "key": [
+   "IVE SWITCH",
+   "ウォニョン",
+   "本体封入",
+   "PLVE"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m76777469638.jpg",
+  "box": [
+   254,
+   615,
+   552,
+   1080
+  ],
+  "score": 0.668,
+  "key": [
+   "IVE SWITCH",
+   "ユジン",
+   "Tower Records ファンサイン",
+   ""
+  ],
+  "old_h": 513
+ },
+ {
+  "photo": "SWITCH_m77410514479.jpg",
+  "box": [
+   0,
+   97,
+   381,
+   678
+  ],
+  "score": 0.764,
+  "key": [
+   "IVE SWITCH",
+   "ウォニョン",
+   "Makestar ラキドロ",
+   "4.0 POLA"
+  ],
+  "old_h": 267
+ },
+ {
+  "photo": "SWITCH_m79762648059.jpg",
+  "box": [
+   325,
+   143,
+   809,
+   897
+  ],
+  "score": 0.861,
+  "key": [
+   "IVE SWITCH",
+   "ガウル",
+   "Soundwave ラキドロ",
+   "1.0-2"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m80916660825.jpg",
+  "box": [
+   736,
+   538,
+   1047,
+   1022
+  ],
+  "score": 0.624,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "Yizhiyu ファンサイン",
+   "4.0"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m80942528589.jpg",
+  "box": [
+   261,
+   44,
+   504,
+   392
+  ],
+  "score": 0.679,
+  "key": [
+   "IVE SWITCH",
+   "イソ",
+   "Music Korea ラキドロ",
+   "1.0 POLA"
+  ],
+  "old_h": 238
+ },
+ {
+  "photo": "SWITCH_m81148215777.jpg",
+  "box": [
+   331,
+   169,
+   749,
+   824
+  ],
+  "score": 0.692,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "Soundwave ラキドロ",
+   "4.0-2"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m91403481265.jpg",
+  "box": [
+   298,
+   141,
+   782,
+   895
+  ],
+  "score": 0.844,
+  "key": [
+   "IVE SWITCH",
+   "ユジン",
+   "Soundwave ファンサイン",
+   "1.0"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m92194222993.jpg",
+  "box": [
+   327,
+   144,
+   754,
+   809
+  ],
+  "score": 0.858,
+  "key": [
+   "IVE SWITCH",
+   "ユジン",
+   "Soundwave ラキドロ",
+   "1.0-1"
+  ],
+  "old_h": 512
+ },
+ {
+  "photo": "SWITCH_m94824040425.jpg",
+  "box": [
+   91,
+   2,
+   554,
+   708
+  ],
+  "score": 0.753,
+  "key": [
+   "IVE SWITCH",
+   "ウォニョン",
+   "Makestar ラキドロ",
+   "4.0 POLA"
+  ],
+  "old_h": 267
+ },
+ {
+  "photo": "SWITCH_m95184005603.jpg",
+  "box": [
+   216,
+   140,
+   603,
+   747
+  ],
+  "score": 0.752,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "Soundwave ファンサイン",
+   "2.0"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m95745722398.jpg",
+  "box": [
+   20,
+   85,
+   327,
+   559
+  ],
+  "score": 0.386,
+  "key": [
+   "IVE SWITCH",
+   "イソ",
+   "Soundwave ラキドロ",
+   "2.0-2"
+  ],
+  "old_h": 710
+ },
+ {
+  "photo": "SWITCH_m97022384170.jpg",
+  "box": [
+   217,
+   80,
+   796,
+   989
+  ],
+  "score": 0.837,
+  "key": [
+   "IVE SWITCH",
+   "リズ",
+   "Soundwave ラキドロ",
+   "2.0-2"
+  ],
+  "old_h": 516
+ },
+ {
+  "photo": "SWITCH_m97397373752.jpg",
+  "box": [
+   599,
+   254,
+   996,
+   866
+  ],
+  "score": 0.887,
+  "key": [
+   "IVE SWITCH",
+   "イソ",
+   "Soundwave ラキドロ",
+   "2.0-2"
+  ],
+  "old_h": 710
+ },
+ {
+  "photo": "SWITCH_m99534730925.jpg",
+  "box": [
+   669,
+   40,
+   1032,
+   604
+  ],
+  "score": 0.582,
+  "key": [
+   "IVE SWITCH",
+   "レイ",
+   "Soundwave ラキドロ",
+   "2.0-1"
+  ],
+  "old_h": 512
+ }
+]
