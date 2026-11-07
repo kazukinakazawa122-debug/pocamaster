@@ -1,0 +1,568 @@
+{
+"seed": [
+[
+"IVE SWITCH",
+"イソ",
+"本体封入",
+"ON"
+],
+[
+"IVE SWITCH",
+"ウォニョン",
+"Japan ファンサイン",
+"Osaka"
+],
+[
+"IVE SWITCH",
+"イソ",
+"Soundwave ラキドロ",
+"2.0-2"
+],
+[
+"IVE SWITCH",
+"レイ",
+"withmuu ファンサイン",
+"2.0"
+],
+[
+"IVE SWITCH",
+"イソ",
+"Soundwave ファンサイン",
+"Hong Kong"
+],
+[
+"IVE SWITCH",
+"ウォニョン",
+"Starship Square",
+"Digipack"
+],
+[
+"IVE SWITCH",
+"レイ",
+"本体封入",
+"SPIN-OFF"
+],
+[
+"IVE SWITCH",
+"ウォニョン",
+"OSAKA イベント",
+""
+],
+[
+"IVE SWITCH",
+"ユジン",
+"本体封入",
+"LOVED IVE"
+],
+[
+"IVE SWITCH",
+"ユジン",
+"Apple Music ファンサイン",
+"3.0"
+],
+[
+"IVE SWITCH",
+"ウォニョン",
+"Soundwave ラキドロ",
+"1.0-1"
+],
+[
+"IVE SWITCH",
+"ユジン",
+"withmuu ファンサイン",
+"2.0"
+],
+[
+"IVE SWITCH",
+"ユジン",
+"本体封入",
+"SPIN-OFF"
+],
+[
+"IVE SWITCH",
+"ウォニョン",
+"withmuu",
+""
+],
+[
+"IVE SWITCH",
+"ウォニョン",
+"本体封入",
+"LOVED IVE"
+],
+[
+"IVE SWITCH",
+"レイ",
+"Apple Music ファンサイン",
+"2.0"
+],
+[
+"IVE SWITCH",
+"ウォニョン",
+"Apple Music",
+""
+],
+[
+"IVE SWITCH",
+"ガウル",
+"本体封入",
+"SPIN-OFF"
+],
+[
+"IVE SWITCH",
+"レイ",
+"Starship Square",
+"Digipack"
+],
+[
+"IVE SWITCH",
+"イソ",
+"Starship Square",
+"Digipack"
+],
+[
+"IVE SWITCH",
+"リズ",
+"本体封入",
+"PLVE"
+],
+[
+"IVE SWITCH",
+"ユジン",
+"Starship Square",
+"1"
+],
+[
+"IVE SWITCH",
+"レイ",
+"withmuu ラキドロ",
+"2.0-1"
+],
+[
+"IVE SWITCH",
+"リズ",
+"本体封入",
+"LOVED IVE"
+],
+[
+"IVE SWITCH",
+"イソ",
+"Makestar",
+""
+],
+[
+"IVE SWITCH",
+"ユジン",
+"Starship Square",
+"LOVED IVE"
+],
+[
+"IVE SWITCH",
+"ウォニョン/ガウル",
+"TOKYO DOME 限定",
+"9/5"
+],
+[
+"IVE SWITCH",
+"ユジン",
+"本体封入",
+"Digipack"
+],
+[
+"IVE SWITCH",
+"レイ",
+"本体封入",
+"OFF"
+],
+[
+"IVE SWITCH",
+"レイ",
+"Music Korea ラキドロ",
+"2"
+],
+[
+"IVE SWITCH",
+"イソ",
+"OSAKA イベント",
+""
+],
+[
+"IVE SWITCH",
+"リズ",
+"Soundwave ラキドロ",
+"5.0-1"
+],
+[
+"IVE SWITCH",
+"ガウル",
+"本体封入",
+"LOVED IVE"
+]
+],
+"images": [
+{
+"collection": "IVE SWITCH",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "ON",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ウォニョン"
+],
+"source": "Japan ファンサイン",
+"version": "Osaka",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"レイ"
+],
+"source": "withmuu ファンサイン",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"イソ"
+],
+"source": "Soundwave ファンサイン",
+"version": "Hong Kong",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ウォニョン"
+],
+"source": "Starship Square",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "SPIN-OFF",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ウォニョン"
+],
+"source": "OSAKA イベント",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0007_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0008_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ユジン"
+],
+"source": "Apple Music ファンサイン",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0009_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ウォニョン"
+],
+"source": "Soundwave ラキドロ",
+"version": "1.0-1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0010_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ユジン"
+],
+"source": "withmuu ファンサイン",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0011_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "SPIN-OFF",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0012_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ウォニョン"
+],
+"source": "withmuu",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0013_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0014.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0014_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"レイ"
+],
+"source": "Apple Music ファンサイン",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0015.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0015_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ウォニョン"
+],
+"source": "Apple Music",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0016.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0016_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "SPIN-OFF",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0017.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0017_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"レイ"
+],
+"source": "Starship Square",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0018.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0018_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"イソ"
+],
+"source": "Starship Square",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0019.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0019_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "PLVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0020.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0020_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ユジン"
+],
+"source": "Starship Square",
+"version": "1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0021.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0021_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"レイ"
+],
+"source": "withmuu ラキドロ",
+"version": "2.0-1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0022.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0022_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0023.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0023_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"イソ"
+],
+"source": "Makestar",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0024.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0024_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ユジン"
+],
+"source": "Starship Square",
+"version": "LOVED IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0025.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0025_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ウォニョン",
+"ガウル"
+],
+"source": "TOKYO DOME 限定",
+"version": "9/5",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0026.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0026_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0027.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0027_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "OFF",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0028.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0028_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"レイ"
+],
+"source": "Music Korea ラキドロ",
+"version": "2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0029.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0029_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"イソ"
+],
+"source": "OSAKA イベント",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0030.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0030_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"リズ"
+],
+"source": "Soundwave ラキドロ",
+"version": "5.0-1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0031.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0031_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SWITCH",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0032.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261107f/0032_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
