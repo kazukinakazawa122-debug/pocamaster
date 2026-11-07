@@ -1,0 +1,595 @@
+{
+"seed": [
+[
+"ALIVE",
+"レイ",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"リズ/レイ",
+"オフラインイベント",
+"10/14 OSAKA ユニット"
+],
+[
+"ALIVE",
+"イソ/ユジン",
+"オフラインイベント",
+"10/13 TOKYO ユニット"
+],
+[
+"ALIVE",
+"イソ/ウォニョン",
+"オフラインイベント",
+"9/5 TOKYO ユニット 2"
+],
+[
+"ALIVE",
+"ガウル/リズ",
+"オフラインイベント",
+"10/13 TOKYO ユニット"
+],
+[
+"ALIVE",
+"ユジン",
+"オフラインイベント",
+"8/19 TOKYO"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"Album B（II ver.）"
+],
+[
+"ALIVE",
+"ガウル",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Solo（IV ver.）"
+],
+[
+"ALIVE",
+"イソ/ガウル",
+"オフラインイベント",
+"10/13 TOKYO ユニット"
+],
+[
+"ALIVE",
+"ウォニョン/レイ",
+"オフラインイベント",
+"10/14 OSAKA ユニット"
+],
+[
+"ALIVE",
+"レイ",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Album B（II ver.）"
+],
+[
+"ALIVE",
+"イソ",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"リズ/レイ",
+"オフラインイベント",
+"9/5 TOKYO ユニット 1"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"Normal ED（III ver.）"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Normal ED（III ver.）"
+],
+[
+"ALIVE",
+"ウォニョン/ユジン",
+"オフラインイベント",
+"10/14 OSAKA ユニット"
+],
+[
+"ALIVE",
+"レイ",
+"オフラインイベント",
+"8/19 TOKYO"
+],
+[
+"ALIVE",
+"イソ",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"ガウル",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"ウォニョン",
+"オフラインイベント",
+"8/19 TOKYO"
+],
+[
+"ALIVE",
+"ガウル/リズ",
+"オフラインイベント",
+"10/14 OSAKA ユニット"
+],
+[
+"ALIVE",
+"ガウル",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"ユジン/レイ",
+"A!SMART",
+"ユニット 2"
+],
+[
+"ALIVE",
+"リズ",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"イソ",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"Album A（I ver.）"
+],
+[
+"ALIVE",
+"リズ",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"リズ/レイ",
+"オフラインイベント",
+"10/13 TOKYO ユニット"
+],
+[
+"ALIVE",
+"リズ",
+"本体封入",
+"Album B（II ver.）"
+],
+[
+"ALIVE",
+"リズ",
+"本体封入",
+"会場限定盤"
+],
+[
+"ALIVE",
+"ユジン",
+"本体封入",
+"会場限定盤"
+],
+[
+"ALIVE",
+"イソ",
+"本体封入",
+"Album A（I ver.）"
+]
+],
+"images": [
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ",
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "10/14 OSAKA ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ",
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "10/13 TOKYO ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ",
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "9/5 TOKYO ユニット 2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル",
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "10/13 TOKYO ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "8/19 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Album B（II ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0007_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Solo（IV ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0008_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ",
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "10/13 TOKYO ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0009_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン",
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "10/14 OSAKA ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0010_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0011_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Album B（II ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0012_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0013_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ",
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "9/5 TOKYO ユニット 1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0014.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0014_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Normal ED（III ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0015.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0015_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Normal ED（III ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0016.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0016_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン",
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "10/14 OSAKA ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0017.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0017_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "8/19 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0018.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0018_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0019.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0019_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0020.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0020_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "8/19 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0021.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0021_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル",
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "10/14 OSAKA ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0022.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0022_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0023.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0023_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン",
+"レイ"
+],
+"source": "A!SMART",
+"version": "ユニット 2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0024.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0024_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0025.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0025_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0026.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0026_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Album A（I ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0027.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0027_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0028.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0028_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ",
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "10/13 TOKYO ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0029.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0029_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "Album B（II ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0030.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0030_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0031.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0031_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0032.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0032_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Album A（I ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0033.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261108c/0033_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
