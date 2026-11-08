@@ -1,0 +1,248 @@
+{
+"seed": [
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ウォニョン/ガウル",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"イソ/ガウル",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ユジン",
+"Random Photocard Pack",
+"3"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ガウル",
+"Random Photocard Pack",
+"1"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"レイ",
+"Special Photocard",
+"Day 1"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ウォニョン",
+"Special Photocard",
+"Day 1"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ガウル",
+"MD",
+"Polaroid"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ユジン/リズ",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ウォニョン/ユジン",
+"Random Photocard Pack",
+"ユニット"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ユジン",
+"Special Photocard",
+"Day 2"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"リズ",
+"Random Photocard Pack",
+"3"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"レイ",
+"Special Photocard",
+"Day 2"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ウォニョン",
+"Random Photocard Pack",
+"2"
+],
+[
+"2nd FANMEETING 'MAGAZINE IVE'",
+"ウォニョン",
+"Random Photocard Pack",
+"1"
+]
+],
+"images": [
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ウォニョン",
+"ガウル"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"イソ",
+"ガウル"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ユジン"
+],
+"source": "Random Photocard Pack",
+"version": "3",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ガウル"
+],
+"source": "Random Photocard Pack",
+"version": "1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"レイ"
+],
+"source": "Special Photocard",
+"version": "Day 1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ウォニョン"
+],
+"source": "Special Photocard",
+"version": "Day 1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ガウル"
+],
+"source": "MD",
+"version": "Polaroid",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ユジン",
+"リズ"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0007_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ウォニョン",
+"ユジン"
+],
+"source": "Random Photocard Pack",
+"version": "ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0008_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ユジン"
+],
+"source": "Special Photocard",
+"version": "Day 2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0009_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"リズ"
+],
+"source": "Random Photocard Pack",
+"version": "3",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0010_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"レイ"
+],
+"source": "Special Photocard",
+"version": "Day 2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0011_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ウォニョン"
+],
+"source": "Random Photocard Pack",
+"version": "2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0012_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "2nd FANMEETING 'MAGAZINE IVE'",
+"members": [
+"ウォニョン"
+],
+"source": "Random Photocard Pack",
+"version": "1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109h/0013_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

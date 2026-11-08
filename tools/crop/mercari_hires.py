@@ -47,8 +47,9 @@ def find(name, folder, collection=None):
     os.makedirs(CFG, exist_ok=True)
     c = cfg(name); c.update(folder=folder, collection=collection); c.setdefault("ok", []); c.setdefault("trim", {})
     json.dump(c, open(CFG + name + ".json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    out = []
-    for f in sorted(glob.glob(ROOT + folder + "/*.jpg")):
+    # 途中で止まったときは、できた分を読んで続きから（2026-11-09）
+    out = found(name) if os.path.exists(CFG + name + "_find.json") else []
+    for f in sorted(glob.glob(ROOT + folder + "/*.jpg"))[len(out):]:
         im = Image.open(f).convert("RGB")
         g = gray(im.resize((100, int(im.height * 100 / im.width))))
         res = []
@@ -65,6 +66,8 @@ def find(name, folder, collection=None):
             box, sc = locate(im, (0, 0, im.width, im.height), old, lo=0.3, hi=0.95)
             if box and (best is None or sc > best[1]):
                 best = (int(k), sc, box)
+        if best is None:  # どの枠とも重ならない写真は、点数 0 で残す（候補に出ない）
+            best = (0, 0.0, [0, 0, 1, 1])
         k, sc, box = best
         e = entries[k]
         out.append({"photo": os.path.basename(f), "box": box, "score": round(sc, 3), "key": list(H.key(e)),
