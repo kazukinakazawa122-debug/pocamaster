@@ -117,12 +117,6 @@
 [
 "Collab & Event｜コラボ・イベント",
 "ウォニョン",
-"AMUSE ウエハース2",
-"N-16"
-],
-[
-"Collab & Event｜コラボ・イベント",
-"ウォニョン",
 "MINIVE × LINE FRIENDS",
 "トレカ purple"
 ],
@@ -390,21 +384,10 @@
 "members": [
 "ウォニョン"
 ],
-"source": "AMUSE ウエハース2",
-"version": "N-16",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0019.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0019_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "Collab & Event｜コラボ・イベント",
-"members": [
-"ウォニョン"
-],
 "source": "MINIVE × LINE FRIENDS",
 "version": "トレカ purple",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0020.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0020_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0019.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0019_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -414,6 +397,17 @@
 ],
 "source": "AMUSE ウエハース2",
 "version": "N-05",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0020.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0020_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ウォニョン"
+],
+"source": "AMUSE スティックウエハース",
+"version": "Normal C",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0021.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0021_t.jpg",
 "credit": "メルカリの出品写真"
@@ -421,7 +415,7 @@
 {
 "collection": "Collab & Event｜コラボ・イベント",
 "members": [
-"ウォニョン"
+"レイ"
 ],
 "source": "AMUSE スティックウエハース",
 "version": "Normal C",
@@ -432,23 +426,12 @@
 {
 "collection": "Collab & Event｜コラボ・イベント",
 "members": [
-"レイ"
-],
-"source": "AMUSE スティックウエハース",
-"version": "Normal C",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0023.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0023_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "Collab & Event｜コラボ・イベント",
-"members": [
 "ユジン"
 ],
 "source": "AMUSE ウエハース2",
 "version": "N-07",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0024.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0024_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0023.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0023_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -458,6 +441,17 @@
 ],
 "source": "AMUSE ウエハース2",
 "version": "R-26 横（白）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0024.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0024_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ガウル"
+],
+"source": "MINIVE × LINE FRIENDS",
+"version": "トレカ pink",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0025.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0025_t.jpg",
 "credit": "メルカリの出品写真"
@@ -465,7 +459,7 @@
 {
 "collection": "Collab & Event｜コラボ・イベント",
 "members": [
-"ガウル"
+"レイ"
 ],
 "source": "MINIVE × LINE FRIENDS",
 "version": "トレカ pink",
@@ -476,23 +470,12 @@
 {
 "collection": "Collab & Event｜コラボ・イベント",
 "members": [
-"レイ"
-],
-"source": "MINIVE × LINE FRIENDS",
-"version": "トレカ pink",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0027.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0027_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "Collab & Event｜コラボ・イベント",
-"members": [
 "リズ"
 ],
 "source": "MINIVE × LINE FRIENDS",
 "version": "トレカ purple",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0028.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0028_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0027.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109g/0027_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]

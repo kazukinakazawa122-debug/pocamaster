@@ -14,12 +14,6 @@
 ],
 [
 "IVE SECRET",
-"レイ",
-"Soundwave ラキドロ",
-"2.0"
-],
-[
-"IVE SECRET",
 "イソ",
 "本体封入",
 "Shh!"
@@ -87,10 +81,10 @@
 {
 "collection": "IVE SECRET",
 "members": [
-"レイ"
+"イソ"
 ],
-"source": "Soundwave ラキドロ",
-"version": "2.0",
+"source": "本体封入",
+"version": "Shh!",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0002.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0002_t.jpg",
 "credit": "メルカリの出品写真"
@@ -101,7 +95,7 @@
 "イソ"
 ],
 "source": "本体封入",
-"version": "Shh!",
+"version": "Instant Photo Psst!",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0003.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0003_t.jpg",
 "credit": "メルカリの出品写真"
@@ -111,21 +105,10 @@
 "members": [
 "イソ"
 ],
-"source": "本体封入",
-"version": "Instant Photo Psst!",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0004.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0004_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "IVE SECRET",
-"members": [
-"イソ"
-],
 "source": "withmuu ラキドロ",
 "version": "2.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0005.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0005_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0004_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -135,8 +118,8 @@
 ],
 "source": "withmuu",
 "version": "5.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0006.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0006_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0005_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -146,8 +129,8 @@
 ],
 "source": "本体封入",
 "version": "Digipack",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0007.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0007_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0006_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -157,8 +140,8 @@
 ],
 "source": "本体封入",
 "version": "LOVED IVE",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0008.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0008_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0007_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -168,8 +151,8 @@
 ],
 "source": "本体封入",
 "version": "Shh!",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0009.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0009_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109j/0008_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]
