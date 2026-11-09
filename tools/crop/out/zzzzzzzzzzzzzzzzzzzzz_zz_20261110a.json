@@ -15,12 +15,6 @@
 [
 "1st WORLD TOUR 'SHOW WHAT I HAVE'",
 "ガウル",
-"MD",
-"Necklace"
-],
-[
-"1st WORLD TOUR 'SHOW WHAT I HAVE'",
-"ガウル",
 "Random Photocard",
 "4"
 ],
@@ -71,8 +65,8 @@
 "members": [
 "ガウル"
 ],
-"source": "MD",
-"version": "Necklace",
+"source": "Random Photocard",
+"version": "4",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0002.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0002_t.jpg",
 "credit": "メルカリの出品写真"
@@ -80,10 +74,10 @@
 {
 "collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
 "members": [
-"ガウル"
+"リズ"
 ],
-"source": "Random Photocard",
-"version": "4",
+"source": "DVD・Blu-ray・Kit",
+"version": "Ktown4U 特典",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0003.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0003_t.jpg",
 "credit": "メルカリの出品写真"
@@ -94,7 +88,7 @@
 "リズ"
 ],
 "source": "DVD・Blu-ray・Kit",
-"version": "Ktown4U 特典",
+"version": "Kit",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0004.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0004_t.jpg",
 "credit": "メルカリの出品写真"
@@ -105,20 +99,9 @@
 "リズ"
 ],
 "source": "DVD・Blu-ray・Kit",
-"version": "Kit",
+"version": "Blu-ray",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0005.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0005_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "1st WORLD TOUR 'SHOW WHAT I HAVE'",
-"members": [
-"リズ"
-],
-"source": "DVD・Blu-ray・Kit",
-"version": "Blu-ray",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0006.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110a/0006_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]

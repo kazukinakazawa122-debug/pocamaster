@@ -2,12 +2,6 @@
 "seed": [
 [
 "REVIVE+",
-"レイ",
-"B&N",
-""
-],
-[
-"REVIVE+",
 "ガウル",
 "Makestar",
 "2.0"
@@ -119,23 +113,12 @@
 {
 "collection": "REVIVE+",
 "members": [
-"レイ"
-],
-"source": "B&N",
-"version": "",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0000.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0000_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "REVIVE+",
-"members": [
 "ガウル"
 ],
 "source": "Makestar",
 "version": "2.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0001.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0001_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0000_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -145,8 +128,8 @@
 ],
 "source": "Starship Square",
 "version": "LOVED IVE",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0002.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0002_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0001_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -156,8 +139,8 @@
 ],
 "source": "Starship Square",
 "version": "Digipack",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0003.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0003_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0002_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -167,8 +150,8 @@
 ],
 "source": "MusicArt ラキドロ",
 "version": "2.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0004.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0004_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0003_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -178,8 +161,8 @@
 ],
 "source": "SWIA OSAKA exclusive",
 "version": "4.18",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0005.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0005_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0004_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -189,8 +172,8 @@
 ],
 "source": "本体封入",
 "version": "BANGERS",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0006.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0006_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0005_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -200,6 +183,17 @@
 ],
 "source": "Tower Records",
 "version": "A",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "SWIA OSAKA exclusive",
+"version": "4.18",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0007.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0007_t.jpg",
 "credit": "メルカリの出品写真"
@@ -207,7 +201,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ガウル"
+"リズ"
 ],
 "source": "SWIA OSAKA exclusive",
 "version": "4.18",
@@ -218,10 +212,10 @@
 {
 "collection": "REVIVE+",
 "members": [
-"リズ"
+"イソ"
 ],
-"source": "SWIA OSAKA exclusive",
-"version": "4.18",
+"source": "Ktown4U",
+"version": "3.0",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0009.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0009_t.jpg",
 "credit": "メルカリの出品写真"
@@ -229,7 +223,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"イソ"
+"リズ"
 ],
 "source": "Ktown4U",
 "version": "3.0",
@@ -240,23 +234,12 @@
 {
 "collection": "REVIVE+",
 "members": [
-"リズ"
-],
-"source": "Ktown4U",
-"version": "3.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0011.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0011_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "REVIVE+",
-"members": [
 "ウォニョン"
 ],
 "source": "Soundwave",
 "version": "1.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0012.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0012_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0011_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -266,8 +249,8 @@
 ],
 "source": "Kakao Talk",
 "version": "",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0013.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0013_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0012_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -277,8 +260,8 @@
 ],
 "source": "withmuu",
 "version": "2.0 Killing Voice",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0014.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0014_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0013_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -288,8 +271,8 @@
 ],
 "source": "本体封入",
 "version": "LOVED IVE",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0015.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0015_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0014.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0014_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -299,8 +282,8 @@
 ],
 "source": "Music Korea",
 "version": "3.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0016.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0016_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0015.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0015_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -310,8 +293,8 @@
 ],
 "source": "Tower Records",
 "version": "A",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0017.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0017_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0016.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0016_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -321,8 +304,8 @@
 ],
 "source": "US Exclusive",
 "version": "",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0018.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0018_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0017.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110e/0017_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]
