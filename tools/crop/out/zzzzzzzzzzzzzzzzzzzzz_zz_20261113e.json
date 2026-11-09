@@ -20,12 +20,6 @@
 ],
 [
 "Collab & Event｜コラボ・イベント",
-"ウォニョン",
-"Papa John's",
-"6.0 レンチキュラー"
-],
-[
-"Collab & Event｜コラボ・イベント",
 "イソ",
 "Papa John's",
 "1.0"
@@ -56,12 +50,6 @@
 ],
 [
 "Collab & Event｜コラボ・イベント",
-"レイ",
-"Papa John's",
-"6.0 レンチキュラー"
-],
-[
-"Collab & Event｜コラボ・イベント",
 "ユジン",
 "Papa John's",
 "4.0 クリア"
@@ -77,12 +65,6 @@
 "ガウル",
 "Papa John's",
 "3.0"
-],
-[
-"Collab & Event｜コラボ・イベント",
-"ガウル",
-"Papa John's",
-"6.0 レンチキュラー"
 ]
 ],
 "images": [
@@ -122,23 +104,12 @@
 {
 "collection": "Collab & Event｜コラボ・イベント",
 "members": [
-"ウォニョン"
-],
-"source": "Papa John's",
-"version": "6.0 レンチキュラー",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0003.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0003_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "Collab & Event｜コラボ・イベント",
-"members": [
 "イソ"
 ],
 "source": "Papa John's",
 "version": "1.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0004.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0004_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0003_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -148,8 +119,8 @@
 ],
 "source": "Papa John's",
 "version": "4.0 クリア",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0005.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0005_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0004_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -159,8 +130,8 @@
 ],
 "source": "Papa John's",
 "version": "5.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0006.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0006_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0005_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -170,8 +141,8 @@
 ],
 "source": "Papa John's",
 "version": "4.0 クリア",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0007.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0007_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0006_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -181,6 +152,17 @@
 ],
 "source": "Papa John's",
 "version": "5.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0007_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ユジン"
+],
+"source": "Papa John's",
+"version": "4.0 クリア",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0008.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0008_t.jpg",
 "credit": "メルカリの出品写真"
@@ -188,7 +170,7 @@
 {
 "collection": "Collab & Event｜コラボ・イベント",
 "members": [
-"レイ"
+"イソ"
 ],
 "source": "Papa John's",
 "version": "6.0 レンチキュラー",
@@ -199,45 +181,12 @@
 {
 "collection": "Collab & Event｜コラボ・イベント",
 "members": [
-"ユジン"
-],
-"source": "Papa John's",
-"version": "4.0 クリア",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0010.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0010_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "Collab & Event｜コラボ・イベント",
-"members": [
-"イソ"
-],
-"source": "Papa John's",
-"version": "6.0 レンチキュラー",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0011.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0011_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "Collab & Event｜コラボ・イベント",
-"members": [
 "ガウル"
 ],
 "source": "Papa John's",
 "version": "3.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0012.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0012_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "Collab & Event｜コラボ・イベント",
-"members": [
-"ガウル"
-],
-"source": "Papa John's",
-"version": "6.0 レンチキュラー",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0013.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0013_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261113e/0010_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]
