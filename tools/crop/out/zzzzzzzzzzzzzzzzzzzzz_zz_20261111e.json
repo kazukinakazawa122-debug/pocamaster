@@ -56,12 +56,6 @@
 ],
 [
 "Be Alright",
-"レイ",
-"A!SMART",
-"A"
-],
-[
-"Be Alright",
 "リズ",
 "本体封入",
 "ソロジャケット盤"
@@ -194,23 +188,12 @@
 {
 "collection": "Be Alright",
 "members": [
-"レイ"
-],
-"source": "A!SMART",
-"version": "A",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0009.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0009_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "Be Alright",
-"members": [
 "リズ"
 ],
 "source": "本体封入",
 "version": "ソロジャケット盤",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0010.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0010_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0009_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -220,8 +203,8 @@
 ],
 "source": "本体封入",
 "version": "初回生産限定盤 E",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0011.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0011_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0010_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -231,8 +214,8 @@
 ],
 "source": "HMV",
 "version": "C",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0012.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0012_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0011_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -242,8 +225,8 @@
 ],
 "source": "全店ラキドロ",
 "version": "",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0013.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0013_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0012_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -253,8 +236,8 @@
 ],
 "source": "全店ラキドロ",
 "version": "",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0014.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0014_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111e/0013_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]
