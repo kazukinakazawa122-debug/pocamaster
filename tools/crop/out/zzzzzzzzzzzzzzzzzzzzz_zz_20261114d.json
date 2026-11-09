@@ -1,0 +1,261 @@
+{
+"seed": [
+[
+"ELEVEN",
+"ウォニョン",
+"本体封入",
+"ver.2"
+],
+[
+"ELEVEN",
+"ユジン",
+"mymusictaste",
+""
+],
+[
+"ELEVEN",
+"リズ",
+"Yizhiyu",
+"2.0"
+],
+[
+"ELEVEN",
+"リズ",
+"EVERLINE",
+"1.0"
+],
+[
+"ELEVEN",
+"イソ",
+"Makestar",
+"1.0"
+],
+[
+"ELEVEN",
+"イソ",
+"mymusictaste",
+""
+],
+[
+"ELEVEN",
+"イソ",
+"Withdrama",
+"3.0"
+],
+[
+"ELEVEN",
+"イソ",
+"Wonderwall",
+""
+],
+[
+"ELEVEN",
+"イソ",
+"Yizhiyu",
+"2.0"
+],
+[
+"ELEVEN",
+"ガウル",
+"本体封入",
+"ver.1"
+],
+[
+"ELEVEN",
+"ユジン",
+"Soundwave",
+"1.0"
+],
+[
+"ELEVEN",
+"イソ",
+"Soundwave ラキドロ",
+"2.0-2"
+],
+[
+"ELEVEN",
+"リズ",
+"Starship Square",
+"1"
+],
+[
+"ELEVEN",
+"ユジン",
+"Withdrama ラキドロ",
+"2.0 POLA"
+],
+[
+"ELEVEN",
+"ウォニョン",
+"Makestar",
+"1.0"
+]
+],
+"images": [
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "ver.2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "mymusictaste",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "Yizhiyu",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "EVERLINE",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Makestar",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "mymusictaste",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Withdrama",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Wonderwall",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0007_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Yizhiyu",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0008_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "ver.1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0009_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "Soundwave",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0010_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"イソ"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0-2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0011_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"リズ"
+],
+"source": "Starship Square",
+"version": "1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0012_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ユジン"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0 POLA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0013_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "Makestar",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0014.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114d/0014_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

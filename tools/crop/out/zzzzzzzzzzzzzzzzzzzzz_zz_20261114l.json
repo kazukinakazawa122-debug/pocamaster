@@ -1,0 +1,57 @@
+{
+"seed": [
+[
+"IVE SECRET",
+"レイ",
+"Soundwave",
+"1.0"
+],
+[
+"IVE SECRET",
+"レイ",
+"本体封入",
+"Gasp!"
+],
+[
+"IVE SECRET",
+"イソ",
+"withmuu",
+"5.0"
+]
+],
+"images": [
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "Soundwave",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114l/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114l/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Gasp!",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114l/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114l/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"イソ"
+],
+"source": "withmuu",
+"version": "5.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114l/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114l/0002_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

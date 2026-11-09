@@ -1,0 +1,246 @@
+{
+"seed": [
+[
+"ALIVE",
+"リズ",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"ガウル",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"リズ",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"ユジン",
+"Tower Records Shibuya",
+"限定抽選 A賞"
+],
+[
+"ALIVE",
+"ガウル",
+"本体封入",
+"会場限定盤"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"会場限定盤"
+],
+[
+"ALIVE",
+"ウォニョン",
+"オフラインイベント",
+"8/16 OSAKA"
+],
+[
+"ALIVE",
+"ユジン",
+"HMV・LAWSON",
+"Selca Photocard #C"
+],
+[
+"ALIVE",
+"イソ",
+"本体封入",
+"Solo（IV ver.）"
+],
+[
+"ALIVE",
+"ガウル/ユジン",
+"オフラインイベント",
+"9/5 TOKYO ユニット 1"
+],
+[
+"ALIVE",
+"レイ",
+"本体封入",
+"会場限定盤"
+],
+[
+"ALIVE",
+"イソ/ガウル",
+"オフラインイベント",
+"10/14 OSAKA ユニット"
+],
+[
+"ALIVE",
+"ユジン",
+"本体封入",
+"会場限定盤"
+],
+[
+"ALIVE",
+"リズ",
+"本体封入",
+"会場限定盤"
+]
+],
+"images": [
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "Tower Records Shibuya",
+"version": "限定抽選 A賞",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "オフラインイベント",
+"version": "8/16 OSAKA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "HMV・LAWSON",
+"version": "Selca Photocard #C",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0007_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "Solo（IV ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0008_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル",
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "9/5 TOKYO ユニット 1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0009_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0010_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"イソ",
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "10/14 OSAKA ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0011_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ユジン"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0012_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "会場限定盤",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114a/0013_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

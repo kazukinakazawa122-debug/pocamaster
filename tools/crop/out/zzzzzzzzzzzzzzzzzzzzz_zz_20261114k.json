@@ -1,0 +1,91 @@
+{
+"seed": [
+[
+"IVE SECRET",
+"ユジン",
+"Makestar",
+"1.0"
+],
+[
+"IVE SECRET",
+"レイ",
+"Apple Music",
+"4.0"
+],
+[
+"IVE SECRET",
+"ウォニョン",
+"本体封入",
+"Instant Photo Gasp!"
+],
+[
+"IVE SECRET",
+"レイ",
+"IDOLSHOP",
+""
+],
+[
+"IVE SECRET",
+"ウォニョン",
+"本体封入",
+"LOVED IVE"
+]
+],
+"images": [
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "Makestar",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "Apple Music",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Instant Photo Gasp!",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "IDOLSHOP",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261114k/0004_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
