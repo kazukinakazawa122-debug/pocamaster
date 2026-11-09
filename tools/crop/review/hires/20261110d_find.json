@@ -1,0 +1,801 @@
+[
+ {
+  "photo": "SWIH_m82991110805.jpg",
+  "box": [
+   285,
+   123,
+   814,
+   922
+  ],
+  "score": 0.966,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "in CINEMA",
+   "Photo Set"
+  ],
+  "old_h": 148
+ },
+ {
+  "photo": "SWIH_m83470725206.jpg",
+  "box": [
+   78,
+   213,
+   308,
+   561
+  ],
+  "score": 0.565,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "in CINEMA",
+   "Tumbler"
+  ],
+  "old_h": 148
+ },
+ {
+  "photo": "SWIH_m83497254625.jpg",
+  "box": [
+   0,
+   34,
+   307,
+   498
+  ],
+  "score": 0.645,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Apple Music 特典"
+  ],
+  "old_h": 305
+ },
+ {
+  "photo": "SWIH_m83747176868.jpg",
+  "box": [
+   263,
+   182,
+   752,
+   907
+  ],
+  "score": 0.938,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ/ユジン",
+   "Random Photocard",
+   "ユニット"
+  ],
+  "old_h": 314
+ },
+ {
+  "photo": "SWIH_m83767660399.jpg",
+  "box": [
+   96,
+   105,
+   403,
+   562
+  ],
+  "score": 0.695,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIH_m83786529420.jpg",
+  "box": [
+   568,
+   64,
+   879,
+   529
+  ],
+  "score": 0.647,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore Blu-ray・Kit",
+   "Starship Square 特典"
+  ],
+  "old_h": 896
+ },
+ {
+  "photo": "SWIH_m84100377270.jpg",
+  "box": [
+   205,
+   322,
+   512,
+   784
+  ],
+  "score": 0.594,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "SWIH_m84190431444.jpg",
+  "box": [
+   178,
+   148,
+   655,
+   883
+  ],
+  "score": 0.665,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "MD",
+   "Photocard Holder"
+  ],
+  "old_h": 327
+ },
+ {
+  "photo": "SWIH_m84221825110.jpg",
+  "box": [
+   167,
+   462,
+   474,
+   926
+  ],
+  "score": 0.623,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Apple Music 特典"
+  ],
+  "old_h": 305
+ },
+ {
+  "photo": "SWIH_m84897207116.jpg",
+  "box": [
+   240,
+   476,
+   547,
+   938
+  ],
+  "score": 0.655,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "SWIH_m87144683186.jpg",
+  "box": [
+   255,
+   161,
+   813,
+   1000
+  ],
+  "score": 0.759,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 674
+ },
+ {
+  "photo": "SWIH_m88276647553.jpg",
+  "box": [
+   325,
+   246,
+   757,
+   934
+  ],
+  "score": 0.879,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ/リズ",
+   "Random Photocard",
+   "ユニット"
+  ],
+  "old_h": 314
+ },
+ {
+  "photo": "SWIH_m88310449127.jpg",
+  "box": [
+   198,
+   64,
+   853,
+   1081
+  ],
+  "score": 0.775,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "DVD・Blu-ray・Kit",
+   "DVD"
+  ],
+  "old_h": 730
+ },
+ {
+  "photo": "SWIH_m89924736597.jpg",
+  "box": [
+   339,
+   176,
+   788,
+   855
+  ],
+  "score": 0.9,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "in CINEMA",
+   "2nd Week 入場特典"
+  ],
+  "old_h": 148
+ },
+ {
+  "photo": "SWIH_m89975037519.jpg",
+  "box": [
+   359,
+   109,
+   878,
+   918
+  ],
+  "score": 0.821,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "in CINEMA",
+   "Taiwan"
+  ],
+  "old_h": 209
+ },
+ {
+  "photo": "SWIH_m90393952868.jpg",
+  "box": [
+   181,
+   193,
+   628,
+   882
+  ],
+  "score": 0.911,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "2nd DIVE FC Class DIVE",
+   "1"
+  ],
+  "old_h": 328
+ },
+ {
+  "photo": "SWIH_m91595147212.jpg",
+  "box": [
+   8,
+   0,
+   371,
+   545
+  ],
+  "score": 0.756,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 376
+ },
+ {
+  "photo": "SWIH_m91667997486.jpg",
+  "box": [
+   370,
+   146,
+   776,
+   772
+  ],
+  "score": 0.746,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "in CINEMA",
+   "Taiwan"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIH_m92086793777.jpg",
+  "box": [
+   249,
+   188,
+   589,
+   703
+  ],
+  "score": 0.835,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "in CINEMA",
+   "2nd Week 入場特典"
+  ],
+  "old_h": 931
+ },
+ {
+  "photo": "SWIH_m92088852120.jpg",
+  "box": [
+   238,
+   167,
+   562,
+   657
+  ],
+  "score": 0.843,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "in CINEMA",
+   "2nd Week 入場特典"
+  ],
+  "old_h": 931
+ },
+ {
+  "photo": "SWIH_m92241169392.jpg",
+  "box": [
+   411,
+   236,
+   781,
+   813
+  ],
+  "score": 0.815,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "in CINEMA",
+   "Taiwan"
+  ],
+  "old_h": 209
+ },
+ {
+  "photo": "SWIH_m92651804230.jpg",
+  "box": [
+   522,
+   495,
+   866,
+   1028
+  ],
+  "score": 0.668,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 789
+ },
+ {
+  "photo": "SWIH_m92860122760.jpg",
+  "box": [
+   366,
+   552,
+   709,
+   1080
+  ],
+  "score": 0.606,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "SuperStar STARSHIP",
+   "1"
+  ],
+  "old_h": 328
+ },
+ {
+  "photo": "SWIH_m93227195680.jpg",
+  "box": [
+   151,
+   92,
+   570,
+   778
+  ],
+  "score": 0.905,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "DVD・Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 639
+ },
+ {
+  "photo": "SWIH_m93612863615.jpg",
+  "box": [
+   364,
+   315,
+   671,
+   750
+  ],
+  "score": 0.877,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "in CINEMA",
+   "Taiwan"
+  ],
+  "old_h": 252
+ },
+ {
+  "photo": "SWIH_m93798090957.jpg",
+  "box": [
+   238,
+   206,
+   559,
+   692
+  ],
+  "score": 0.848,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "in CINEMA",
+   "2nd Week 入場特典"
+  ],
+  "old_h": 931
+ },
+ {
+  "photo": "SWIH_m93881397850.jpg",
+  "box": [
+   168,
+   144,
+   662,
+   904
+  ],
+  "score": 0.833,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "MD",
+   "Photocard Holder"
+  ],
+  "old_h": 536
+ },
+ {
+  "photo": "SWIH_m94182920463.jpg",
+  "box": [
+   479,
+   48,
+   944,
+   770
+  ],
+  "score": 0.574,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "SuperStar STARSHIP 2"
+  ],
+  "old_h": 208
+ },
+ {
+  "photo": "SWIH_m94457876829.jpg",
+  "box": [
+   127,
+   88,
+   434,
+   551
+  ],
+  "score": 0.629,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "全員",
+   "Random Photocard",
+   "GROUP"
+  ],
+  "old_h": 689
+ },
+ {
+  "photo": "SWIH_m95212915794.jpg",
+  "box": [
+   0,
+   230,
+   402,
+   827
+  ],
+  "score": 0.707,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIH_m95800995007.jpg",
+  "box": [
+   331,
+   581,
+   638,
+   1042
+  ],
+  "score": 0.627,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "in CINEMA",
+   "70K Benefit（self photocard）"
+  ],
+  "old_h": 147
+ },
+ {
+  "photo": "SWIH_m96181443716.jpg",
+  "box": [
+   248,
+   136,
+   800,
+   966
+  ],
+  "score": 0.983,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "SWIH_m96795615705.jpg",
+  "box": [
+   276,
+   109,
+   690,
+   735
+  ],
+  "score": 0.852,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "in CINEMA",
+   "2nd Week 入場特典"
+  ],
+  "old_h": 931
+ },
+ {
+  "photo": "SWIH_m96852387103.jpg",
+  "box": [
+   185,
+   73,
+   637,
+   757
+  ],
+  "score": 0.847,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "in CINEMA",
+   "2nd Week 入場特典"
+  ],
+  "old_h": 931
+ },
+ {
+  "photo": "SWIH_m96926548578.jpg",
+  "box": [
+   444,
+   242,
+   777,
+   738
+  ],
+  "score": 0.696,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIH_m97270465039.jpg",
+  "box": [
+   302,
+   199,
+   826,
+   978
+  ],
+  "score": 0.969,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIH_m97332549960.jpg",
+  "box": [
+   286,
+   194,
+   727,
+   872
+  ],
+  "score": 0.909,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "DVD・Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 183
+ },
+ {
+  "photo": "SWIH_m97491995901.jpg",
+  "box": [
+   384,
+   50,
+   750,
+   615
+  ],
+  "score": 0.461,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "in CINEMA",
+   "Taiwan"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIH_m97587728955.jpg",
+  "box": [
+   256,
+   123,
+   780,
+   926
+  ],
+  "score": 0.842,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "DVD・Blu-ray・Kit",
+   "Starship Square 特典"
+  ],
+  "old_h": 184
+ },
+ {
+  "photo": "SWIH_m97753326741.jpg",
+  "box": [
+   247,
+   246,
+   658,
+   884
+  ],
+  "score": 0.886,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "DIVE JAPAN",
+   "Label Drink"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIH_m97773928381.jpg",
+  "box": [
+   0,
+   90,
+   317,
+   509
+  ],
+  "score": 0.412,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore（アンコール）",
+   "DIVE ZONE Day 1"
+  ],
+  "old_h": 231
+ },
+ {
+  "photo": "SWIH_m98047905558.jpg",
+  "box": [
+   159,
+   228,
+   532,
+   792
+  ],
+  "score": 0.759,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "in CINEMA",
+   "70K Benefit（self photocard）"
+  ],
+  "old_h": 851
+ },
+ {
+  "photo": "SWIH_m98051428834.jpg",
+  "box": [
+   360,
+   550,
+   712,
+   1081
+  ],
+  "score": 0.711,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Apple Music 特典"
+  ],
+  "old_h": 305
+ },
+ {
+  "photo": "SWIH_m99383967807.jpg",
+  "box": [
+   0,
+   181,
+   352,
+   704
+  ],
+  "score": 0.681,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIH_m99513261476.jpg",
+  "box": [
+   137,
+   243,
+   638,
+   942
+  ],
+  "score": 0.911,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Japan Random Photocard",
+   "1"
+  ],
+  "old_h": 543
+ },
+ {
+  "photo": "SWIH_m99537371946.jpg",
+  "box": [
+   357,
+   288,
+   767,
+   920
+  ],
+  "score": 0.899,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "in CINEMA",
+   "Taiwan"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIH_m99783887984.jpg",
+  "box": [
+   429,
+   454,
+   762,
+   970
+  ],
+  "score": 0.41,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Random Photocard",
+   "3"
+  ],
+  "old_h": 359
+ }
+]

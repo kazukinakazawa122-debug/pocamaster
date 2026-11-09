@@ -1,0 +1,91 @@
+{
+"seed": [
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"ガウル",
+"IVE × PEPSI 2024",
+"5.0 A"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"イソ",
+"IVE × PEPSI 2024",
+"5.0 A"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"ウォニョン",
+"Round 1",
+"A"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"イソ",
+"IVE × PEPSI 2023",
+"1.0 A"
+],
+[
+"Pepsi × IVE 'BLUE & BLACK'",
+"イソ",
+"Round 1",
+"B"
+]
+],
+"images": [
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"ガウル"
+],
+"source": "IVE × PEPSI 2024",
+"version": "5.0 A",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"イソ"
+],
+"source": "IVE × PEPSI 2024",
+"version": "5.0 A",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"ウォニョン"
+],
+"source": "Round 1",
+"version": "A",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"イソ"
+],
+"source": "IVE × PEPSI 2023",
+"version": "1.0 A",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Pepsi × IVE 'BLUE & BLACK'",
+"members": [
+"イソ"
+],
+"source": "Round 1",
+"version": "B",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261110g/0004_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

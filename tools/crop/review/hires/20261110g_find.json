@@ -1,0 +1,631 @@
+[
+ {
+  "photo": "PEPSI_m10464368484.jpg",
+  "box": [
+   12,
+   160,
+   501,
+   916
+  ],
+  "score": 0.951,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ユジン",
+   "IVE × PEPSI 2025",
+   "2"
+  ],
+  "old_h": 1100
+ },
+ {
+  "photo": "PEPSI_m13370503074.jpg",
+  "box": [
+   223,
+   117,
+   781,
+   979
+  ],
+  "score": 0.639,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ガウル",
+   "IVE × PEPSI 2025",
+   "2"
+  ],
+  "old_h": 1100
+ },
+ {
+  "photo": "PEPSI_m13796121555.jpg",
+  "box": [
+   103,
+   40,
+   697,
+   945
+  ],
+  "score": 0.955,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ",
+   "IVE × PEPSI 2023",
+   "3.0"
+  ],
+  "old_h": 160
+ },
+ {
+  "photo": "PEPSI_m14408929963.jpg",
+  "box": [
+   164,
+   138,
+   545,
+   727
+  ],
+  "score": 0.469,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ウォニョン",
+   "IVE × PEPSI 2024",
+   "7.0 B"
+  ],
+  "old_h": 162
+ },
+ {
+  "photo": "PEPSI_m14901607175.jpg",
+  "box": [
+   215,
+   146,
+   695,
+   887
+  ],
+  "score": 0.857,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ガウル",
+   "IVE × PEPSI 2024",
+   "5.0 A"
+  ],
+  "old_h": 162
+ },
+ {
+  "photo": "PEPSI_m16855802116.jpg",
+  "box": [
+   121,
+   155,
+   928,
+   677
+  ],
+  "score": 0.883,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ/ウォニョン",
+   "Round 2",
+   "GROUP"
+  ],
+  "old_h": 594
+ },
+ {
+  "photo": "PEPSI_m16915373545.jpg",
+  "box": [
+   219,
+   72,
+   835,
+   1029
+  ],
+  "score": 0.84,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ",
+   "IVE × PEPSI 2024",
+   "5.0 A"
+  ],
+  "old_h": 163
+ },
+ {
+  "photo": "PEPSI_m17313687617.jpg",
+  "box": [
+   198,
+   295,
+   598,
+   914
+  ],
+  "score": 0.873,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ユジン",
+   "IVE × PEPSI 2025",
+   "2"
+  ],
+  "old_h": 1100
+ },
+ {
+  "photo": "PEPSI_m20893326910.jpg",
+  "box": [
+   213,
+   34,
+   861,
+   1028
+  ],
+  "score": 0.635,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ",
+   "IVE × PEPSI 2023",
+   "1.0 A"
+  ],
+  "old_h": 161
+ },
+ {
+  "photo": "PEPSI_m21151621567.jpg",
+  "box": [
+   74,
+   549,
+   388,
+   1029
+  ],
+  "score": 0.562,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ユジン",
+   "IVE × PEPSI 2024",
+   "6.0 A"
+  ],
+  "old_h": 162
+ },
+ {
+  "photo": "PEPSI_m22370353627.jpg",
+  "box": [
+   209,
+   40,
+   857,
+   1041
+  ],
+  "score": 0.957,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ",
+   "Round 2",
+   "A"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "PEPSI_m24120520319.jpg",
+  "box": [
+   112,
+   271,
+   589,
+   971
+  ],
+  "score": 0.843,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ",
+   "IVE × PEPSI 2023",
+   "4.0"
+  ],
+  "old_h": 891
+ },
+ {
+  "photo": "PEPSI_m24724093989.jpg",
+  "box": [
+   264,
+   143,
+   793,
+   960
+  ],
+  "score": 0.754,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "リズ",
+   "IVE × PEPSI 2025",
+   "2"
+  ],
+  "old_h": 1100
+ },
+ {
+  "photo": "PEPSI_m25446234416.jpg",
+  "box": [
+   211,
+   16,
+   827,
+   968
+  ],
+  "score": 0.854,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ウォニョン",
+   "Round 1",
+   "A"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "PEPSI_m25515630768.jpg",
+  "box": [
+   436,
+   500,
+   721,
+   941
+  ],
+  "score": 0.805,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ",
+   "Round 1",
+   "B"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "PEPSI_m26027373891.jpg",
+  "box": [
+   275,
+   144,
+   783,
+   929
+  ],
+  "score": 0.867,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ウォニョン",
+   "IVE × PEPSI 2025",
+   "2"
+  ],
+  "old_h": 1100
+ },
+ {
+  "photo": "PEPSI_m26414126656.jpg",
+  "box": [
+   32,
+   6,
+   339,
+   205
+  ],
+  "score": 0.61,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ/ウォニョン",
+   "Round 1",
+   "GROUP"
+  ],
+  "old_h": 432
+ },
+ {
+  "photo": "PEPSI_m27090956998.jpg",
+  "box": [
+   461,
+   455,
+   768,
+   955
+  ],
+  "score": 0.703,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "リズ",
+   "IVE × PEPSI 2024",
+   "7.0 A"
+  ],
+  "old_h": 698
+ },
+ {
+  "photo": "PEPSI_m28161053322.jpg",
+  "box": [
+   265,
+   64,
+   572,
+   540
+  ],
+  "score": 0.692,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "レイ",
+   "IVE × PEPSI 2024",
+   "5.0 A"
+  ],
+  "old_h": 584
+ },
+ {
+  "photo": "PEPSI_m30598216564.jpg",
+  "box": [
+   212,
+   272,
+   589,
+   855
+  ],
+  "score": 0.923,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ユジン",
+   "IVE × PEPSI 2025",
+   "2"
+  ],
+  "old_h": 1100
+ },
+ {
+  "photo": "PEPSI_m31475724546.jpg",
+  "box": [
+   351,
+   254,
+   736,
+   868
+  ],
+  "score": 0.617,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ガウル",
+   "IVE × PEPSI 2023",
+   "3.0"
+  ],
+  "old_h": 156
+ },
+ {
+  "photo": "PEPSI_m34523070889.jpg",
+  "box": [
+   265,
+   74,
+   834,
+   955
+  ],
+  "score": 0.699,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ユジン",
+   "IVE × PEPSI 2025",
+   "1"
+  ],
+  "old_h": 999
+ },
+ {
+  "photo": "PEPSI_m34974405428.jpg",
+  "box": [
+   491,
+   528,
+   854,
+   1081
+  ],
+  "score": 0.661,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ユジン",
+   "IVE × PEPSI 2024",
+   "5.0 A"
+  ],
+  "old_h": 160
+ },
+ {
+  "photo": "PEPSI_m35001114180.jpg",
+  "box": [
+   213,
+   104,
+   769,
+   951
+  ],
+  "score": 0.621,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ユジン",
+   "IVE × PEPSI 2024",
+   "7.0 B"
+  ],
+  "old_h": 163
+ },
+ {
+  "photo": "PEPSI_m35447279841.jpg",
+  "box": [
+   191,
+   69,
+   421,
+   426
+  ],
+  "score": 0.749,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "レイ",
+   "IVE × PEPSI 2024",
+   "5.0 A"
+  ],
+  "old_h": 584
+ },
+ {
+  "photo": "PEPSI_m37227549329.jpg",
+  "box": [
+   309,
+   169,
+   750,
+   870
+  ],
+  "score": 0.656,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ガウル",
+   "IVE × PEPSI 2025",
+   "1"
+  ],
+  "old_h": 183
+ },
+ {
+  "photo": "PEPSI_m40768983637.jpg",
+  "box": [
+   250,
+   103,
+   813,
+   973
+  ],
+  "score": 0.794,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "リズ",
+   "IVE × PEPSI 2025",
+   "2"
+  ],
+  "old_h": 1100
+ },
+ {
+  "photo": "PEPSI_m40822655041.jpg",
+  "box": [
+   169,
+   68,
+   798,
+   1040
+  ],
+  "score": 0.966,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ウォニョン",
+   "IVE × PEPSI 2025",
+   "2"
+  ],
+  "old_h": 1100
+ },
+ {
+  "photo": "PEPSI_m42301810381.jpg",
+  "box": [
+   165,
+   202,
+   621,
+   912
+  ],
+  "score": 0.942,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ガウル",
+   "IVE × PEPSI 2024",
+   "6.0 A"
+  ],
+  "old_h": 1019
+ },
+ {
+  "photo": "PEPSI_m44049113342.jpg",
+  "box": [
+   96,
+   193,
+   497,
+   813
+  ],
+  "score": 0.685,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ウォニョン",
+   "Round 1",
+   "B"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "PEPSI_m44059236204.jpg",
+  "box": [
+   89,
+   191,
+   470,
+   796
+  ],
+  "score": 0.693,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ウォニョン",
+   "IVE × PEPSI 2023",
+   "4.0"
+  ],
+  "old_h": 149
+ },
+ {
+  "photo": "PEPSI_m44174924227.jpg",
+  "box": [
+   161,
+   109,
+   705,
+   461
+  ],
+  "score": 0.611,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ/ウォニョン",
+   "Round 2",
+   "GROUP"
+  ],
+  "old_h": 594
+ },
+ {
+  "photo": "PEPSI_m44513988132.jpg",
+  "box": [
+   271,
+   153,
+   746,
+   887
+  ],
+  "score": 0.807,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ユジン",
+   "IVE × PEPSI 2024",
+   "7.0 A"
+  ],
+  "old_h": 566
+ },
+ {
+  "photo": "PEPSI_m45278691421.jpg",
+  "box": [
+   210,
+   362,
+   562,
+   907
+  ],
+  "score": 0.898,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ユジン",
+   "IVE × PEPSI 2025",
+   "2"
+  ],
+  "old_h": 1100
+ },
+ {
+  "photo": "PEPSI_m45736737245.jpg",
+  "box": [
+   136,
+   90,
+   546,
+   718
+  ],
+  "score": 0.936,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ",
+   "IVE × PEPSI 2023",
+   "1.0 A"
+  ],
+  "old_h": 161
+ },
+ {
+  "photo": "PEPSI_m46262480375.jpg",
+  "box": [
+   229,
+   34,
+   843,
+   994
+  ],
+  "score": 0.898,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "ウォニョン",
+   "Round 2",
+   "A"
+  ],
+  "old_h": 982
+ },
+ {
+  "photo": "PEPSI_m46612909045.jpg",
+  "box": [
+   116,
+   40,
+   722,
+   976
+  ],
+  "score": 0.776,
+  "key": [
+   "Pepsi × IVE 'BLUE & BLACK'",
+   "イソ",
+   "Round 1",
+   "B"
+  ],
+  "old_h": 800
+ }
+]
