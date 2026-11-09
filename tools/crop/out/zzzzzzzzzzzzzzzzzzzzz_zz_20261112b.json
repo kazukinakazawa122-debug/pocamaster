@@ -1,0 +1,57 @@
+{
+"seed": [
+[
+"ELEVEN",
+"レイ",
+"Shopee",
+""
+],
+[
+"ELEVEN",
+"ウォニョン",
+"Withdrama ラキドロ",
+"2.0-1"
+],
+[
+"ELEVEN",
+"ガウル",
+"本体封入",
+"ver.1"
+]
+],
+"images": [
+{
+"collection": "ELEVEN",
+"members": [
+"レイ"
+],
+"source": "Shopee",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261112b/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261112b/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ウォニョン"
+],
+"source": "Withdrama ラキドロ",
+"version": "2.0-1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261112b/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261112b/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ELEVEN",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "ver.1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261112b/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261112b/0002_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

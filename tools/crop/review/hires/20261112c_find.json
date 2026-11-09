@@ -1,0 +1,631 @@
+[
+ {
+  "photo": "EMPATHY_m12603399843.jpg",
+  "box": [
+   300,
+   175,
+   765,
+   900
+  ],
+  "score": 0.87,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "withmuu ラキドロ",
+   "3.0"
+  ],
+  "old_h": 586
+ },
+ {
+  "photo": "EMPATHY_m16070695704.jpg",
+  "box": [
+   203,
+   24,
+   839,
+   1005
+  ],
+  "score": 0.879,
+  "key": [
+   "IVE EMPATHY",
+   "ユジン",
+   "Soundwave ラキドロ",
+   "8.0 IVE SCOUT-2"
+  ],
+  "old_h": 585
+ },
+ {
+  "photo": "EMPATHY_m16751802526.jpg",
+  "box": [
+   312,
+   159,
+   784,
+   896
+  ],
+  "score": 0.913,
+  "key": [
+   "IVE EMPATHY",
+   "イソ",
+   "IDOUSTAGE ラキドロ",
+   "1.0"
+  ],
+  "old_h": 586
+ },
+ {
+  "photo": "EMPATHY_m18387847796.jpg",
+  "box": [
+   269,
+   552,
+   599,
+   1057
+  ],
+  "score": 0.607,
+  "key": [
+   "IVE EMPATHY",
+   "ウォニョン",
+   "本体封入",
+   "LOVED IVE ver."
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "EMPATHY_m19643622773.jpg",
+  "box": [
+   316,
+   196,
+   752,
+   867
+  ],
+  "score": 0.941,
+  "key": [
+   "IVE EMPATHY",
+   "ウォニョン",
+   "Soundwave",
+   "5.0"
+  ],
+  "old_h": 583
+ },
+ {
+  "photo": "EMPATHY_m20592205687.jpg",
+  "box": [
+   294,
+   155,
+   793,
+   931
+  ],
+  "score": 0.882,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "A!SMART",
+   "C"
+  ],
+  "old_h": 585
+ },
+ {
+  "photo": "EMPATHY_m24606147935.jpg",
+  "box": [
+   192,
+   110,
+   712,
+   923
+  ],
+  "score": 0.839,
+  "key": [
+   "IVE EMPATHY",
+   "ウォニョン",
+   "Starship Square",
+   "3+6 (A)"
+  ],
+  "old_h": 705
+ },
+ {
+  "photo": "EMPATHY_m26294015935.jpg",
+  "box": [
+   205,
+   568,
+   516,
+   1032
+  ],
+  "score": 0.651,
+  "key": [
+   "IVE EMPATHY",
+   "ユジン",
+   "K-MONSTAR",
+   "Taiwan POLA"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "EMPATHY_m29908205780.jpg",
+  "box": [
+   331,
+   250,
+   733,
+   873
+  ],
+  "score": 0.897,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "本体封入",
+   "Me ver."
+  ],
+  "old_h": 1152
+ },
+ {
+  "photo": "EMPATHY_m29957685525.jpg",
+  "box": [
+   333,
+   164,
+   803,
+   893
+  ],
+  "score": 0.891,
+  "key": [
+   "IVE EMPATHY",
+   "イソ",
+   "mymusictaste",
+   "1.0"
+  ],
+  "old_h": 586
+ },
+ {
+  "photo": "EMPATHY_m30484062832.jpg",
+  "box": [
+   290,
+   166,
+   779,
+   925
+  ],
+  "score": 0.928,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "Soundwave",
+   "1.0"
+  ],
+  "old_h": 1146
+ },
+ {
+  "photo": "EMPATHY_m39834169795.jpg",
+  "box": [
+   250,
+   80,
+   796,
+   920
+  ],
+  "score": 0.708,
+  "key": [
+   "IVE EMPATHY",
+   "ウォニョン",
+   "withmuu ラキドロ",
+   "5.0"
+  ],
+  "old_h": 698
+ },
+ {
+  "photo": "EMPATHY_m42683929248.jpg",
+  "box": [
+   570,
+   68,
+   947,
+   552
+  ],
+  "score": 0.649,
+  "key": [
+   "IVE EMPATHY",
+   "レイ",
+   "withmuu ラキドロ",
+   "5.0 POLA"
+  ],
+  "old_h": 100
+ },
+ {
+  "photo": "EMPATHY_m48946147101.jpg",
+  "box": [
+   44,
+   354,
+   414,
+   928
+  ],
+  "score": 0.677,
+  "key": [
+   "IVE EMPATHY",
+   "ユジン",
+   "Starship Square",
+   "3TYPE 2"
+  ],
+  "old_h": 831
+ },
+ {
+  "photo": "EMPATHY_m50572616364.jpg",
+  "box": [
+   437,
+   226,
+   878,
+   914
+  ],
+  "score": 0.862,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "本体封入",
+   "Digipack"
+  ],
+  "old_h": 590
+ },
+ {
+  "photo": "EMPATHY_m51186839780.jpg",
+  "box": [
+   619,
+   498,
+   926,
+   957
+  ],
+  "score": 0.776,
+  "key": [
+   "IVE EMPATHY",
+   "ユジン",
+   "K-MONSTAR",
+   "Taiwan POLA"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "EMPATHY_m52219588230.jpg",
+  "box": [
+   288,
+   178,
+   746,
+   897
+  ],
+  "score": 0.87,
+  "key": [
+   "IVE EMPATHY",
+   "レイ",
+   "withmuu ラキドロ",
+   "3.0"
+  ],
+  "old_h": 993
+ },
+ {
+  "photo": "EMPATHY_m61264573462.jpg",
+  "box": [
+   235,
+   269,
+   545,
+   752
+  ],
+  "score": 0.7,
+  "key": [
+   "IVE EMPATHY",
+   "レイ",
+   "withmuu ラキドロ",
+   "5.0"
+  ],
+  "old_h": 586
+ },
+ {
+  "photo": "EMPATHY_m61341236146.jpg",
+  "box": [
+   286,
+   149,
+   744,
+   856
+  ],
+  "score": 0.812,
+  "key": [
+   "IVE EMPATHY",
+   "ユジン",
+   "オフラインイベント",
+   "OSAKA"
+  ],
+  "old_h": 585
+ },
+ {
+  "photo": "EMPATHY_m63251707294.jpg",
+  "box": [
+   341,
+   265,
+   692,
+   800
+  ],
+  "score": 0.751,
+  "key": [
+   "IVE EMPATHY",
+   "ウォニョン",
+   "本体封入",
+   "And us ver."
+  ],
+  "old_h": 797
+ },
+ {
+  "photo": "EMPATHY_m63682911456.jpg",
+  "box": [
+   259,
+   185,
+   717,
+   892
+  ],
+  "score": 0.808,
+  "key": [
+   "IVE EMPATHY",
+   "イソ",
+   "Soundwave",
+   "3.0"
+  ],
+  "old_h": 585
+ },
+ {
+  "photo": "EMPATHY_m67031720402.jpg",
+  "box": [
+   225,
+   86,
+   455,
+   442
+  ],
+  "score": 0.731,
+  "key": [
+   "IVE EMPATHY",
+   "リズ",
+   "withmuu",
+   "2.0 Live Studio Choom"
+  ],
+  "old_h": 586
+ },
+ {
+  "photo": "EMPATHY_m72878842540.jpg",
+  "box": [
+   296,
+   184,
+   780,
+   935
+  ],
+  "score": 0.863,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "本体封入",
+   "PLVE"
+  ],
+  "old_h": 670
+ },
+ {
+  "photo": "EMPATHY_m78242158740.jpg",
+  "box": [
+   277,
+   146,
+   785,
+   928
+  ],
+  "score": 0.921,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "Soundwave",
+   "5.0"
+  ],
+  "old_h": 583
+ },
+ {
+  "photo": "EMPATHY_m81002536980.jpg",
+  "box": [
+   291,
+   169,
+   771,
+   912
+  ],
+  "score": 0.938,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "withmuu",
+   "1.0"
+  ],
+  "old_h": 914
+ },
+ {
+  "photo": "EMPATHY_m81084820246.jpg",
+  "box": [
+   757,
+   30,
+   1064,
+   507
+  ],
+  "score": 0.58,
+  "key": [
+   "IVE EMPATHY",
+   "ユジン",
+   "withmuu",
+   "4.0"
+  ],
+  "old_h": 986
+ },
+ {
+  "photo": "EMPATHY_m81442487232.jpg",
+  "box": [
+   335,
+   235,
+   732,
+   854
+  ],
+  "score": 0.915,
+  "key": [
+   "IVE EMPATHY",
+   "レイ",
+   "本体封入",
+   "LOVED IVE ver."
+  ],
+  "old_h": 585
+ },
+ {
+  "photo": "EMPATHY_m86751740427.jpg",
+  "box": [
+   96,
+   236,
+   506,
+   871
+  ],
+  "score": 0.895,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "IDOUSTAGE ラキドロ",
+   "1.0"
+  ],
+  "old_h": 583
+ },
+ {
+  "photo": "EMPATHY_m89374524692.jpg",
+  "box": [
+   339,
+   147,
+   804,
+   845
+  ],
+  "score": 0.868,
+  "key": [
+   "IVE EMPATHY",
+   "イソ",
+   "Soundwave",
+   "7.0"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "EMPATHY_m89485654742.jpg",
+  "box": [
+   286,
+   178,
+   761,
+   918
+  ],
+  "score": 0.911,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "StarRiver",
+   "3.0"
+  ],
+  "old_h": 134
+ },
+ {
+  "photo": "EMPATHY_m90172995799.jpg",
+  "box": [
+   360,
+   225,
+   741,
+   793
+  ],
+  "score": 0.928,
+  "key": [
+   "IVE EMPATHY",
+   "イソ",
+   "Makestar",
+   "2.0"
+  ],
+  "old_h": 274
+ },
+ {
+  "photo": "EMPATHY_m93913913217.jpg",
+  "box": [
+   233,
+   174,
+   706,
+   907
+  ],
+  "score": 0.817,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "Starship Square",
+   "3+6 (A)"
+  ],
+  "old_h": 1054
+ },
+ {
+  "photo": "EMPATHY_m94925023774.jpg",
+  "box": [
+   315,
+   169,
+   751,
+   849
+  ],
+  "score": 0.886,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "Soundwave",
+   "6.0"
+  ],
+  "old_h": 586
+ },
+ {
+  "photo": "EMPATHY_m96048794946.jpg",
+  "box": [
+   127,
+   163,
+   434,
+   557
+  ],
+  "score": 0.651,
+  "key": [
+   "IVE EMPATHY",
+   "ウォニョン",
+   "withmuu ラキドロ",
+   "5.0 POLA"
+  ],
+  "old_h": 568
+ },
+ {
+  "photo": "EMPATHY_m97926419840.jpg",
+  "box": [
+   354,
+   145,
+   764,
+   696
+  ],
+  "score": 0.952,
+  "key": [
+   "IVE EMPATHY",
+   "ウォニョン",
+   "Soundwave ラキドロ",
+   "4.0 POLA"
+  ],
+  "old_h": 445
+ },
+ {
+  "photo": "EMPATHY_m98763512466.jpg",
+  "box": [
+   113,
+   228,
+   515,
+   850
+  ],
+  "score": 0.892,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "Soundwave ラキドロ",
+   "2.0"
+  ],
+  "old_h": 585
+ },
+ {
+  "photo": "EMPATHY_m99463011193.jpg",
+  "box": [
+   315,
+   193,
+   785,
+   922
+  ],
+  "score": 0.948,
+  "key": [
+   "IVE EMPATHY",
+   "ガウル",
+   "Makestar",
+   "4.0 Shanghai"
+  ],
+  "old_h": 681
+ }
+]
