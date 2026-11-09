@@ -1,0 +1,30 @@
+{
+ "folder": "新しい資料 20261109/R15/MISC_A",
+ "collection": "IVE EMPATHY||I've IVE||LOVE DIVE||IVE SECRET||REVIVE+||I've MINE||After LIKE||IVE SWITCH||1st FAN CONCERT 'The Prom Queens'||3rd FAN CONCERT 'IVE SCOUT'||4th FAN CONCERT 'DIVE into IVE'||ELEVEN",
+ "ok": [
+  8,
+  9,
+  11,
+  13,
+  15,
+  17,
+  18,
+  21,
+  22
+ ],
+ "trim": {
+  "8": [
+   0.04,
+   0.06,
+   0.03,
+   0.03
+  ],
+  "18": [
+   0,
+   0.1,
+   0,
+   0
+  ]
+ },
+ "note": "外した：1・2・12・16・20（ちがうカード・写真の一部だけ）"
+}

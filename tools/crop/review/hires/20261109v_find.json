@@ -1,0 +1,784 @@
+[
+ {
+  "photo": "SWIA_m12586683124.jpg",
+  "box": [
+   235,
+   589,
+   559,
+   1071
+  ],
+  "score": 0.652,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "イソ",
+   "SuperStar STARSHIP",
+   "LA"
+  ],
+  "old_h": 274
+ },
+ {
+  "photo": "SWIA_m13652071914.jpg",
+  "box": [
+   773,
+   270,
+   1080,
+   758
+  ],
+  "score": 0.658,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m20319562631.jpg",
+  "box": [
+   683,
+   481,
+   1060,
+   1080
+  ],
+  "score": 0.732,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m23244575342.jpg",
+  "box": [
+   750,
+   348,
+   1074,
+   862
+  ],
+  "score": 0.689,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m24466758805.jpg",
+  "box": [
+   118,
+   633,
+   348,
+   979
+  ],
+  "score": 0.736,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m25042252704.jpg",
+  "box": [
+   608,
+   547,
+   860,
+   948
+  ],
+  "score": 0.678,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m25727408325.jpg",
+  "box": [
+   643,
+   142,
+   995,
+   701
+  ],
+  "score": 0.761,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m26160904275.jpg",
+  "box": [
+   665,
+   507,
+   972,
+   995
+  ],
+  "score": 0.784,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m26930128018.jpg",
+  "box": [
+   570,
+   369,
+   887,
+   873
+  ],
+  "score": 0.824,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m28801662601.jpg",
+  "box": [
+   32,
+   167,
+   327,
+   608
+  ],
+  "score": 0.674,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIA_m28894435787.jpg",
+  "box": [
+   653,
+   487,
+   960,
+   975
+  ],
+  "score": 0.75,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m29759556885.jpg",
+  "box": [
+   629,
+   336,
+   1078,
+   1050
+  ],
+  "score": 0.748,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m36362866834.jpg",
+  "box": [
+   618,
+   133,
+   977,
+   703
+  ],
+  "score": 0.755,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m38893019058.jpg",
+  "box": [
+   436,
+   520,
+   788,
+   1080
+  ],
+  "score": 0.788,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m40067094980.jpg",
+  "box": [
+   586,
+   495,
+   926,
+   1035
+  ],
+  "score": 0.723,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m41488863672.jpg",
+  "box": [
+   773,
+   422,
+   1080,
+   810
+  ],
+  "score": 0.753,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 208
+ },
+ {
+  "photo": "SWIA_m42187127861.jpg",
+  "box": [
+   461,
+   562,
+   691,
+   928
+  ],
+  "score": 0.82,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m44593320831.jpg",
+  "box": [
+   746,
+   400,
+   1053,
+   861
+  ],
+  "score": 0.79,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m46554674779.jpg",
+  "box": [
+   348,
+   486,
+   583,
+   836
+  ],
+  "score": 0.728,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIA_m47144126766.jpg",
+  "box": [
+   8,
+   227,
+   348,
+   737
+  ],
+  "score": 0.74,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m51233012705.jpg",
+  "box": [
+   697,
+   530,
+   1004,
+   1018
+  ],
+  "score": 0.731,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m54043985116.jpg",
+  "box": [
+   12,
+   34,
+   339,
+   526
+  ],
+  "score": 0.669,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Early Bird"
+  ],
+  "old_h": 277
+ },
+ {
+  "photo": "SWIA_m54146209145.jpg",
+  "box": [
+   504,
+   79,
+   734,
+   425
+  ],
+  "score": 0.73,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m60241664344.jpg",
+  "box": [
+   559,
+   611,
+   806,
+   1004
+  ],
+  "score": 0.816,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m61885302953.jpg",
+  "box": [
+   294,
+   335,
+   566,
+   741
+  ],
+  "score": 0.698,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "VIP Perks USA",
+   ""
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIA_m63030500497.jpg",
+  "box": [
+   545,
+   355,
+   959,
+   1013
+  ],
+  "score": 0.748,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m63189987926.jpg",
+  "box": [
+   164,
+   282,
+   616,
+   954
+  ],
+  "score": 0.664,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ウォニョン",
+   "Random Photocard Pack Korea",
+   "1"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIA_m64918418432.jpg",
+  "box": [
+   579,
+   246,
+   934,
+   774
+  ],
+  "score": 0.662,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIA_m66544225442.jpg",
+  "box": [
+   568,
+   225,
+   978,
+   819
+  ],
+  "score": 0.914,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "リズ",
+   "Random Photocard Pack Korea",
+   "1"
+  ],
+  "old_h": 438
+ },
+ {
+  "photo": "SWIA_m71013907728.jpg",
+  "box": [
+   493,
+   381,
+   837,
+   919
+  ],
+  "score": 0.672,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "イソ",
+   "DIVE ZONE FC ブース特典",
+   "Day 1"
+  ],
+  "old_h": 896
+ },
+ {
+  "photo": "SWIA_m76916279545.jpg",
+  "box": [
+   260,
+   84,
+   857,
+   974
+  ],
+  "score": 0.766,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ウォニョン",
+   "SuperStar STARSHIP",
+   "1"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m77238580311.jpg",
+  "box": [
+   76,
+   330,
+   410,
+   831
+  ],
+  "score": 0.659,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "イソ",
+   "MD",
+   "Chain Strap"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m78678901103.jpg",
+  "box": [
+   0,
+   86,
+   230,
+   432
+  ],
+  "score": 0.775,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m79371454920.jpg",
+  "box": [
+   154,
+   0,
+   599,
+   668
+  ],
+  "score": 0.602,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m83181817628.jpg",
+  "box": [
+   430,
+   0,
+   744,
+   471
+  ],
+  "score": 0.656,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m85966480625.jpg",
+  "box": [
+   640,
+   253,
+   1081,
+   959
+  ],
+  "score": 0.516,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "Random Photocard Pack Korea",
+   "1"
+  ],
+  "old_h": 250
+ },
+ {
+  "photo": "SWIA_m87847298888.jpg",
+  "box": [
+   462,
+   172,
+   765,
+   612
+  ],
+  "score": 0.645,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "リズ",
+   "SWIA TAIPEI 特典",
+   "Early Bird"
+  ],
+  "old_h": 251
+ },
+ {
+  "photo": "SWIA_m88724366083.jpg",
+  "box": [
+   237,
+   557,
+   544,
+   1017
+  ],
+  "score": 0.956,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "イソ",
+   "Random Photocard Pack Korea",
+   "3"
+  ],
+  "old_h": 724
+ },
+ {
+  "photo": "SWIA_m89701006780.jpg",
+  "box": [
+   207,
+   26,
+   521,
+   228
+  ],
+  "score": 0.607,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "全員",
+   "DIVE JAPAN オンラインくじ C賞（京セラドーム）",
+   "IVE ③"
+  ],
+  "old_h": 546
+ },
+ {
+  "photo": "SWIA_m92588073799.jpg",
+  "box": [
+   256,
+   143,
+   563,
+   603
+  ],
+  "score": 0.576,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "VIP Perks USA",
+   ""
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "SWIA_m92893382509.jpg",
+  "box": [
+   738,
+   36,
+   1052,
+   501
+  ],
+  "score": 0.548,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Chain Strap"
+  ],
+  "old_h": 793
+ },
+ {
+  "photo": "SWIA_m94274349355.jpg",
+  "box": [
+   144,
+   233,
+   537,
+   820
+  ],
+  "score": 0.861,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "リズ",
+   "Random Photocard Pack Korea",
+   "5"
+  ],
+  "old_h": 308
+ },
+ {
+  "photo": "SWIA_m99170850061.jpg",
+  "box": [
+   715,
+   239,
+   1022,
+   727
+  ],
+  "score": 0.741,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "SWIA_m99215804346.jpg",
+  "box": [
+   224,
+   632,
+   523,
+   1081
+  ],
+  "score": 0.736,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m99514513033.jpg",
+  "box": [
+   244,
+   0,
+   571,
+   490
+  ],
+  "score": 0.678,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 276
+ },
+ {
+  "photo": "SWIA_m99871630304.jpg",
+  "box": [
+   773,
+   437,
+   1080,
+   925
+  ],
+  "score": 0.711,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ }
+]

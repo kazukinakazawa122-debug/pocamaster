@@ -1,0 +1,57 @@
+{
+"seed": [
+[
+"REVIVE+",
+"レイ",
+"Starship Square",
+"3TYPE"
+],
+[
+"I've MINE",
+"ガウル",
+"Starship Square",
+"PB EW+OTR+BADDIE 1"
+],
+[
+"I've IVE",
+"ウォニョン",
+"Starship Square Set",
+""
+]
+],
+"images": [
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Starship Square",
+"version": "3TYPE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109y/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109y/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "I've MINE",
+"members": [
+"ガウル"
+],
+"source": "Starship Square",
+"version": "PB EW+OTR+BADDIE 1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109y/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109y/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "I've IVE",
+"members": [
+"ウォニョン"
+],
+"source": "Starship Square Set",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109y/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109y/0002_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

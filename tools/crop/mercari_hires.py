@@ -42,7 +42,7 @@ def zipped():
 def find(name, folder, collection=None):
     z, entries = zipped()
     if collection:
-        entries = [e for e in entries if e["collection"] == collection]
+        entries = [e for e in entries if e["collection"] in collection.split("||")]  # 「A||B」で複数のコレクション
     thumbs = [Image.open(io.BytesIO(z.read(e["thumb"]))).convert("RGB") for e in entries]
     os.makedirs(CFG, exist_ok=True)
     c = cfg(name); c.update(folder=folder, collection=collection); c.setdefault("ok", []); c.setdefault("trim", {})
