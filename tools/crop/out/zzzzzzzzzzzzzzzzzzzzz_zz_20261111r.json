@@ -1,0 +1,108 @@
+{
+"seed": [
+[
+"IVE SECRET",
+"レイ",
+"オフラインイベント",
+"9.23 TOKYO"
+],
+[
+"IVE SECRET",
+"ユジン",
+"Yetimall ラキドロ",
+"-2"
+],
+[
+"IVE SECRET",
+"ウォニョン",
+"Starship Square",
+"Digipack"
+],
+[
+"IVE SECRET",
+"イソ",
+"Starship Square",
+"Digipack"
+],
+[
+"IVE SECRET",
+"イソ",
+"Soundwave",
+"3.0"
+],
+[
+"IVE SECRET",
+"イソ",
+"オフラインイベント",
+"9.23 TOKYO"
+]
+],
+"images": [
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "9.23 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "Yetimall ラキドロ",
+"version": "-2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ウォニョン"
+],
+"source": "Starship Square",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"イソ"
+],
+"source": "Starship Square",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"イソ"
+],
+"source": "Soundwave",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"イソ"
+],
+"source": "オフラインイベント",
+"version": "9.23 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111r/0005_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

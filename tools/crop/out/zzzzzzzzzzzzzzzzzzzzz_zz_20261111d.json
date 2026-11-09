@@ -1,0 +1,145 @@
+{
+"seed": [
+[
+"ALIVE",
+"ガウル",
+"本体封入",
+"Limited ED（V ver.）"
+],
+[
+"ALIVE",
+"ガウル",
+"Tower Records",
+"Selca Photocard #B"
+],
+[
+"ALIVE",
+"ウォニョン/ユジン",
+"オフラインイベント",
+"10/13 TOKYO ユニット"
+],
+[
+"ALIVE",
+"ガウル/ユジン",
+"オフラインイベント",
+"9/5 TOKYO ユニット 1"
+],
+[
+"ALIVE",
+"ウォニョン/ガウル",
+"A!SMART",
+"ユニット 2"
+],
+[
+"ALIVE",
+"ウォニョン",
+"Japan CD Shop ラキドロ",
+""
+],
+[
+"ALIVE",
+"ウォニョン",
+"HMV・LAWSON",
+"Selca Photocard #C"
+],
+[
+"ALIVE",
+"ウォニョン",
+"本体封入",
+"Limited ED（V ver.）"
+]
+],
+"images": [
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "Limited ED（V ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル"
+],
+"source": "Tower Records",
+"version": "Selca Photocard #B",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン",
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "10/13 TOKYO ユニット",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ガウル",
+"ユジン"
+],
+"source": "オフラインイベント",
+"version": "9/5 TOKYO ユニット 1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン",
+"ガウル"
+],
+"source": "A!SMART",
+"version": "ユニット 2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "Japan CD Shop ラキドロ",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "HMV・LAWSON",
+"version": "Selca Photocard #C",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "ALIVE",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "Limited ED（V ver.）",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111d/0007_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

@@ -1,0 +1,329 @@
+{
+"seed": [
+[
+"IVE EMPATHY",
+"リズ",
+"IDOUSTAGE ラキドロ",
+"1.0 POLA"
+],
+[
+"IVE EMPATHY",
+"ガウル",
+"オフラインイベント",
+"OSAKA"
+],
+[
+"IVE EMPATHY",
+"ウォニョン",
+"withmuu ラキドロ",
+"5.0 POLA"
+],
+[
+"IVE EMPATHY",
+"リズ",
+"Soundwave",
+"6.0"
+],
+[
+"IVE EMPATHY",
+"イソ",
+"mymusictaste",
+"2.0"
+],
+[
+"IVE EMPATHY",
+"レイ",
+"Soundwave",
+"5.0"
+],
+[
+"IVE EMPATHY",
+"レイ",
+"本体封入",
+"You ver."
+],
+[
+"IVE EMPATHY",
+"リズ",
+"Starship Square",
+"3+6 (A)"
+],
+[
+"IVE EMPATHY",
+"ガウル",
+"mymusictaste",
+"2.0"
+],
+[
+"IVE EMPATHY",
+"ウォニョン",
+"Amulet Card (Tokyo 3/29)",
+""
+],
+[
+"IVE EMPATHY",
+"ウォニョン",
+"Soundwave",
+"6.0"
+],
+[
+"IVE EMPATHY",
+"ガウル",
+"withmuu",
+"2.0 Live Studio Choom"
+],
+[
+"IVE EMPATHY",
+"ウォニョン",
+"本体封入",
+"LOVED IVE ver."
+],
+[
+"IVE EMPATHY",
+"ウォニョン",
+"Soundwave",
+"3.0"
+],
+[
+"IVE EMPATHY",
+"ガウル",
+"本体封入",
+"LOVED IVE ver."
+],
+[
+"IVE EMPATHY",
+"ユジン",
+"Ktown4U",
+""
+],
+[
+"IVE EMPATHY",
+"ウォニョン",
+"Sony Music",
+"2.0"
+],
+[
+"IVE EMPATHY",
+"ウォニョン",
+"mymusictaste",
+"2.0"
+],
+[
+"IVE EMPATHY",
+"リズ",
+"Makestar",
+"3.0"
+]
+],
+"images": [
+{
+"collection": "IVE EMPATHY",
+"members": [
+"リズ"
+],
+"source": "IDOUSTAGE ラキドロ",
+"version": "1.0 POLA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ガウル"
+],
+"source": "オフラインイベント",
+"version": "OSAKA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ウォニョン"
+],
+"source": "withmuu ラキドロ",
+"version": "5.0 POLA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"リズ"
+],
+"source": "Soundwave",
+"version": "6.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"イソ"
+],
+"source": "mymusictaste",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"レイ"
+],
+"source": "Soundwave",
+"version": "5.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "You ver.",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"リズ"
+],
+"source": "Starship Square",
+"version": "3+6 (A)",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0007_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ガウル"
+],
+"source": "mymusictaste",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0008_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ウォニョン"
+],
+"source": "Amulet Card (Tokyo 3/29)",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0009_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ウォニョン"
+],
+"source": "Soundwave",
+"version": "6.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0010_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ガウル"
+],
+"source": "withmuu",
+"version": "2.0 Live Studio Choom",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0011_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "LOVED IVE ver.",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0012_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ウォニョン"
+],
+"source": "Soundwave",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0013_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "LOVED IVE ver.",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0014.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0014_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ユジン"
+],
+"source": "Ktown4U",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0015.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0015_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ウォニョン"
+],
+"source": "Sony Music",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0016.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0016_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"ウォニョン"
+],
+"source": "mymusictaste",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0017.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0017_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE EMPATHY",
+"members": [
+"リズ"
+],
+"source": "Makestar",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0018.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261111k/0018_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
