@@ -26,12 +26,6 @@
 ],
 [
 "LUCID DREAM",
-"ウォニョン",
-"本体封入",
-"初回生産限定盤 I"
-],
-[
-"LUCID DREAM",
 "レイ",
 "オフラインイベント",
 "9.20 スペシャルイベント"
@@ -229,23 +223,12 @@
 {
 "collection": "LUCID DREAM",
 "members": [
-"ウォニョン"
-],
-"source": "本体封入",
-"version": "初回生産限定盤 I",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0004.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0004_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
 "レイ"
 ],
 "source": "オフラインイベント",
 "version": "9.20 スペシャルイベント",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0005.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0005_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0004_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -255,8 +238,8 @@
 ],
 "source": "全国ラキドロ",
 "version": "",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0006.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0006_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0005_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -266,6 +249,17 @@
 ],
 "source": "タワレコ",
 "version": "online ラキドロ",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0006_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"ウォニョン"
+],
+"source": "本体封入",
+"version": "初回生産限定盤 E",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0007.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0007_t.jpg",
 "credit": "メルカリの出品写真"
@@ -276,7 +270,7 @@
 "ウォニョン"
 ],
 "source": "本体封入",
-"version": "初回生産限定盤 E",
+"version": "会場限定盤",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0008.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0008_t.jpg",
 "credit": "メルカリの出品写真"
@@ -286,21 +280,10 @@
 "members": [
 "ウォニョン"
 ],
-"source": "本体封入",
-"version": "会場限定盤",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0009.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0009_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"ウォニョン"
-],
 "source": "オフラインイベント",
 "version": "7.5 TOKYO",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0010.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0010_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0009_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -310,8 +293,8 @@
 ],
 "source": "本体封入",
 "version": "初回生産限定盤 E",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0011.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0011_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0010_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -321,8 +304,8 @@
 ],
 "source": "SWIA TOKYO exclusive",
 "version": "6.24-1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0012.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0012_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0011.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0011_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -332,8 +315,8 @@
 ],
 "source": "本体封入",
 "version": "会場限定盤",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0013.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0013_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0012.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0012_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -344,8 +327,8 @@
 ],
 "source": "本体封入",
 "version": "通常盤 ユニットトレカ 1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0014.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0014_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0013.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0013_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -355,8 +338,8 @@
 ],
 "source": "SWIA TOKYO exclusive",
 "version": "6.24-1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0015.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0015_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0014.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0014_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -366,8 +349,8 @@
 ],
 "source": "オフラインイベント",
 "version": "8.30 OSAKA",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0016.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0016_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0015.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0015_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -377,8 +360,8 @@
 ],
 "source": "タワレコ",
 "version": "online ラキドロ",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0017.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0017_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0016.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0016_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -388,8 +371,8 @@
 ],
 "source": "SWIA TOKYO exclusive",
 "version": "6.24-1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0018.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0018_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0017.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0017_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -399,8 +382,8 @@
 ],
 "source": "SWIA TOKYO exclusive",
 "version": "6.24-2",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0019.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0019_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0018.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0018_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -410,8 +393,8 @@
 ],
 "source": "タワレコ",
 "version": "B",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0020.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0020_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0019.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0019_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -421,8 +404,8 @@
 ],
 "source": "オフラインイベント",
 "version": "9.20 スペシャルイベント",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0021.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0021_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0020.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0020_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -432,8 +415,8 @@
 ],
 "source": "本体封入",
 "version": "会場限定盤",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0022.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0022_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0021.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0021_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -443,8 +426,8 @@
 ],
 "source": "本体封入",
 "version": "メンバーソロジャケット盤",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0023.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0023_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0022.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0022_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -454,6 +437,17 @@
 ],
 "source": "オフラインイベント",
 "version": "4.29 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0023.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0023_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LUCID DREAM",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "初回生産限定盤 I",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0024.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0024_t.jpg",
 "credit": "メルカリの出品写真"
@@ -464,20 +458,9 @@
 "レイ"
 ],
 "source": "本体封入",
-"version": "初回生産限定盤 I",
+"version": "会場限定盤",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0025.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0025_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "LUCID DREAM",
-"members": [
-"レイ"
-],
-"source": "本体封入",
-"version": "会場限定盤",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0026.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0026_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -488,8 +471,8 @@
 ],
 "source": "本体封入",
 "version": "通常盤 ユニットトレカ 2",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0027.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0027_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0026.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0026_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -499,8 +482,8 @@
 ],
 "source": "SWIA OSAKA exclusive",
 "version": "4.18",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0028.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0028_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0027.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0027_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -511,8 +494,8 @@
 ],
 "source": "SWIA OSAKA exclusive",
 "version": "4.19-1",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0029.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0029_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0028.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261109o/0028_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]
