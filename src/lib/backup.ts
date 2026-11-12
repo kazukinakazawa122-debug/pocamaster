@@ -1,5 +1,5 @@
 import JSZip from 'jszip'
-import { addImages, db, getSetting, putSetting, type Profile } from './db'
+import { addImages, changesSinceBackup, db, putSetting, type Profile } from './db'
 import { reloadCards } from './cardStore'
 
 const FORMAT = 1
@@ -20,13 +20,15 @@ export async function exportBackup(): Promise<{ file: File; skipped: number }> {
     db.myAlbums.toArray(),
   ])
   zip.file('data.json', JSON.stringify({ format: FORMAT, exportedAt: Date.now(), collections, cards, statusHistory, achievements, settings, myAlbums }))
-  const ownIds = [
+  let ownIds = [
     ...cards.filter((c) => c.imageId && !c.imageCredit).map((c) => c.imageId!),
     ...collections.filter((c) => c.coverImageId).map((c) => c.coverImageId!),
   ]
   // プロフィールのアイコン
   const profile = settings.find((s) => s.key === 'profile')?.value as Profile | undefined
   if (profile?.imageId) ownIds.push(profile.imageId)
+  // 同じ画像を 2 か所で使っていても 1 回だけ入れる（確認の枚数を合わせる）
+  ownIds = [...new Set(ownIds)]
   const dir = zip.folder('images')!
   // 読めない画像（iPhone で「The I/O read operation failed」になるもの）は飛ばし、記録だけでも保存できるようにする
   let skipped = 0
@@ -34,7 +36,12 @@ export async function exportBackup(): Promise<{ file: File; skipped: number }> {
   for (const [i, img] of fulls.entries()) {
     // 一覧用の小さい画像は thumbs にある（分ける前に保存した画像は images の中）
     const thumbBlob = thumbs[i]?.thumb ?? img?.thumb
-    if (!img || !thumbBlob) continue
+    // 画像の番号だけ残って中身がないものも「読めなかった画像」に数える
+    // （数えないと、あとの確認で枚数が合わず、バックアップがずっと作れなくなる。2026-11-13）
+    if (!img || !thumbBlob) {
+      skipped++
+      continue
+    }
     try {
       const [full, thumb] = await Promise.all([img.full.arrayBuffer(), thumbBlob.arrayBuffer()])
       dir.file(`${img.id}.full.jpg`, full)
@@ -69,11 +76,8 @@ export async function verifyBackup(blob: Blob, expected: { cards: number; collec
   if (images !== expected.images) throw new Error('バックアップの確認に失敗しました（画像の数が合いません）')
 }
 
-/** 最後のバックアップのあとに、カードの状態を切り替えた回数（バックアップしたことがなければ、これまでの全部） */
-export async function changesSinceBackup(): Promise<number> {
-  const last = (await getSetting<number>('lastBackupAt')) ?? 0
-  return db.statusHistory.where('changedAt').above(last).count()
-}
+// changesSinceBackup は db.ts に移した（ホームが使うので、ここに置くと ZIP の大きな部品 JSZip が最初の読み込みに入ってしまう。2026-11-13）
+export { changesSinceBackup }
 
 /** 保存できたら、最後にバックアップした日を記録する */
 export async function markBackedUp(): Promise<void> {

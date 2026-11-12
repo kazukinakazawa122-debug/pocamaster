@@ -270,3 +270,9 @@ export async function getSetting<T>(key: string): Promise<T | undefined> {
 export async function putSetting(key: string, value: unknown): Promise<void> {
   await db.settings.put({ key, value })
 }
+
+/** 最後のバックアップのあとに、カードの状態を切り替えた回数（バックアップしたことがなければ、これまでの全部） */
+export async function changesSinceBackup(): Promise<number> {
+  const last = (await getSetting<number>('lastBackupAt')) ?? 0
+  return db.statusHistory.where('changedAt').above(last).count()
+}

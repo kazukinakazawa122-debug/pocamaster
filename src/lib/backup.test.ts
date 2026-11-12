@@ -51,6 +51,19 @@ describe('バックアップ', () => {
     expect((await db.settings.get('profile'))!.value).toEqual({ name: 'テスト' })
   })
 
+  it('画像の中身がなくなっているカードがあっても、バックアップは作れる（記録はすべて入る）', async () => {
+    await seed()
+    // 画像の番号だけ残って、中身がないカード（途中で止まった保存などで起こりうる）
+    await db.cards.add(card({ id: 'lost', memberIds: ['liz'], imageId: 'lost-img' }))
+    const { file, skipped } = await exportBackup()
+    expect(skipped).toBe(1)
+    await resetDb()
+    await restoreBackup(file)
+    expect(await db.cards.count()).toBe(4)
+    expect((await db.cards.get('lost'))?.imageId).toBeUndefined()
+    expect(await getFull('own-img')).toBeDefined()
+  })
+
   it('戻したバックアップの日が「最後のバックアップ」になる', async () => {
     await seed()
     const { file } = await exportBackup()
