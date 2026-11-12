@@ -134,3 +134,15 @@ export function nudge(quad: Quad, i: number, dx: number, dy: number, width: numb
     k === i ? { x: Math.min(width, Math.max(0, q.x + dx)), y: Math.min(height, Math.max(0, q.y + dy)) } : q,
   ) as Quad
 }
+
+/**
+ * 枠を、その幅（＋少しのすき間）だけ右へずらす（同じ写真の、右どなりのカードを続けて切り取るとき。2026-11-13）。
+ * 右にはみ出すなら、はみ出さない所まで。もう右に動かせなければ、そのまま返す（次の段などは、手で合わせる）
+ */
+export function shiftRight(quad: Quad, width: number): Quad {
+  const left = Math.min(...quad.map((p) => p.x))
+  const right = Math.max(...quad.map((p) => p.x))
+  const dx = Math.min((right - left) * 1.04, width - right)
+  if (dx <= 0) return quad
+  return quad.map((p) => ({ x: p.x + dx, y: p.y })) as Quad
+}

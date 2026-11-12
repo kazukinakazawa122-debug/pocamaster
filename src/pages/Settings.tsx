@@ -292,27 +292,25 @@ export default function Settings() {
             )}
             <div className="xs muted">
               アプリで切り取った・登録した画像を、パソコンに残す用です。書き出し済みの{ownCount.done}枚は、次からは入りません
-              {ownCount.done > 0 && !ownFile && (
-                <>
-                  {' '}
-                  <button
-                    className="link"
-                    style={{ background: 'none', border: 'none', padding: 0, color: 'inherit', textDecoration: 'underline', font: 'inherit' }}
-                    disabled={busy}
-                    onClick={() =>
-                      run(async () => {
-                        const r = await exportOwnImages({ all: true })
-                        if (!r) return '書き出せる画像がありません'
-                        setOwnFile({ file: r.file, imageIds: r.imageIds })
-                        return `書き出し済みの分も入れて ${r.count} 枚を ZIP にしました。上の保存ボタンを押してください`
-                      })
-                    }
-                  >
-                    全部を書き出し直す
-                  </button>
-                </>
-              )}
             </div>
+            {ownCount.done > 0 && !ownFile && (
+              // ふつうのボタンにした（前は説明の中の下線の小さな文字で、本人が見つけられなかった。2026-11-13）
+              <button
+                className="btn block"
+                disabled={busy}
+                onClick={() =>
+                  run(async () => {
+                    const r = await exportOwnImages({ all: true })
+                    if (!r) return '書き出せる画像がありません'
+                    setOwnFile({ file: r.file, imageIds: r.imageIds })
+                    return `書き出し済みの分も入れて ${r.count} 枚を ZIP にしました。上の保存ボタンを押してください`
+                  })
+                }
+              >
+                <IconDownload size={20} aria-hidden />
+                自分の画像を全部書き出し直す（{ownCount.todo + ownCount.done} 枚）
+              </button>
+            )}
           </>
         )}
         <input

@@ -2,9 +2,9 @@ import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IconCrop, IconEdit, IconHeart, IconHeartFilled, IconPhotoPlus, IconTrash } from '@tabler/icons-react'
 import { addImages, db, deleteCard, deleteImages, newId, type Card } from '../lib/db'
-import { changeCardStatus } from '../lib/cardStore'
+import { changeCardStatus, peekCards } from '../lib/cardStore'
 import { makeImage } from '../lib/image'
-import { memberLabel } from '../lib/members'
+import { memberLabel, memberOrder } from '../lib/members'
 import { cardColors } from './CardTile'
 import { Sheet, useImageUrl } from './ui'
 import PhotoCropper from './PhotoCropper'
@@ -28,15 +28,33 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
   const { border, background } = cardColors(card)
   const owned = card.status === '所持中'
 
-  /** 自分で登録した画像として保存する（出典なし＝バックアップに入る。いまの画像は置き換える） */
-  const saveOwnImage = async (img: { full: Blob; thumb: Blob }) => {
+  /**
+   * 自分で登録した画像として保存する（出典なし＝バックアップに入る。いまの画像は置き換える）。
+   * 置き換える前の画像は、画面の card ではなく保存してある最新のものから読む（続けて切り取るとき、ほかのカードにも保存するため）
+   */
+  const saveOwnImage = async (img: { full: Blob; thumb: Blob }, cardId: string = card.id) => {
     const id = newId()
     await db.transaction('rw', db.images, db.thumbs, db.cards, async () => {
+      const old = (await db.cards.get(cardId))?.imageId
       await addImages([{ id, ...img }])
-      await db.cards.update(card.id, { imageId: id, imageCredit: undefined, imageHash: undefined })
-      if (card.imageId) await deleteImages([card.imageId])
+      await db.cards.update(cardId, { imageId: id, imageCredit: undefined, imageHash: undefined })
+      if (old) await deleteImages([old])
     })
   }
+
+  // 続けて切り取る（2026-11-13）：同じ段（同じコレクション・入手元・バージョン）のカードを、画面の並び（ソロをメンバー順、そのあとユニット）で。
+  // 写真を選んだときの並びを覚えておき、このカードから順に、右どなりへ進む
+  const [cropQueue, setCropQueue] = useState<Card[]>([])
+  const startCrop = (f: File) => {
+    const row = (peekCards() ?? [])
+      .filter((c) => c.collectionId === card.collectionId && c.source === card.source && c.version === card.version)
+      .sort((a, b) => a.memberIds.length - b.memberIds.length || memberOrder(a.memberIds[0]) - memberOrder(b.memberIds[0]) || a.order - b.order)
+    const at = row.findIndex((c) => c.id === card.id)
+    setCropQueue(at < 0 ? [card] : row.slice(at))
+    setCropFile(f)
+  }
+  const cropTarget = cropQueue[0] ?? card
+  const cropNext = cropQueue[1]
 
   const onFile = async (file: File | undefined) => {
     if (!file) return
@@ -138,10 +156,18 @@ export default function CardSheet({ card, collectionName, onClose, onToggle }: P
           onChange={(e) => {
             const f = e.target.files?.[0]
             e.target.value = ''
-            if (f) setCropFile(f)
+            if (f) startCrop(f)
           }}
         />
-        {cropFile && <PhotoCropper file={cropFile} onDone={saveOwnImage} onClose={() => setCropFile(null)} />}
+        {cropFile && (
+          <PhotoCropper
+            file={cropFile}
+            target={cropQueue.length > 1 || cropTarget.id !== card.id ? memberLabel(cropTarget.memberIds) : undefined}
+            onDone={(img) => saveOwnImage(img, cropTarget.id)}
+            next={cropNext ? { label: memberLabel(cropNext.memberIds), go: () => setCropQueue((q) => q.slice(1)) } : undefined}
+            onClose={() => setCropFile(null)}
+          />
+        )}
         {error && <div className="error" style={{ margin: 0 }}>{error}</div>}
         <div style={{ display: 'flex', gap: 8 }}>
           <Link className="btn" style={{ flex: 1 }} to={`/cards/${card.id}/edit`}>

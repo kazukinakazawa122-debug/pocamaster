@@ -2,13 +2,20 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { IconArrowDown, IconArrowLeft, IconArrowRight, IconArrowUp } from '@tabler/icons-react'
 import { makeImage } from '../lib/image'
-import { defaultQuad, nearestCorner, nudge, outputSize, warp, type Point, type Quad } from '../lib/warp'
+import { defaultQuad, nearestCorner, nudge, outputSize, shiftRight, warp, type Point, type Quad } from '../lib/warp'
 
 interface Props {
   file: File
   /** 切り取ったカードの画像（大きい画像と一覧用）を渡す。保存は呼んだ側で行う */
   onDone: (img: { full: Blob; thumb: Blob }) => Promise<void>
   onClose: () => void
+  /** いま切り取っているカードの名前（続けて切り取るとき、どのカードの番かわかるように） */
+  target?: string
+  /**
+   * 同じ写真から続けて切り取れる「次のカード」（6 枚並びの写真など。2026-11-13）。
+   * label は次のカードの名前。go は、登録が終わったあとに呼ぶ（呼んだ側が、登録先を次のカードに変える）
+   */
+  next?: { label: string; go: () => void }
 }
 
 const LOUPE = 112
@@ -24,7 +31,7 @@ const NAMES = ['左上', '右上', '右下', '左下']
  * ③写真は画面におさまる大きさ（縦長の写真でも、ページを動かせる） ④選んだ角を 1 ピクセルずつ動かすボタン（長押しで連続）
  * ⑤ドラッグ中は、点のまわりを拡大して見せる（指で隠れないように）
  */
-export default function PhotoCropper({ file, onDone, onClose }: Props) {
+export default function PhotoCropper({ file, onDone, onClose, target, next }: Props) {
   // 写真の仮の URL。useMemo で作ると、開発モードの二重実行で先に片付けられて写真が出なくなるので、effect の中で作って持つ
   const [url, setUrl] = useState('')
   useEffect(() => {
@@ -157,6 +164,23 @@ export default function PhotoCropper({ file, onDone, onClose }: Props) {
     }
   }
 
+  /** 登録して、同じ写真のまま次のカードへ。枠は、いまの枠の幅だけ右へずらす（横に並んだ写真なら、次のカードの近くに来る） */
+  const saveAndNext = async () => {
+    if (!preview || !next) return
+    setBusy(true)
+    try {
+      await onDone({ full: preview.full, thumb: preview.thumb })
+      next.go()
+      if (quad && size) setQuad(shiftRight(quad, size.w))
+      setSel(0)
+      setPreview(null)
+    } catch (e) {
+      setError((e as Error).message)
+    } finally {
+      setBusy(false)
+    }
+  }
+
   const arrow = (label: string, dx: number, dy: number, Icon: typeof IconArrowUp) => (
     <button
       className="btn"
@@ -182,7 +206,10 @@ export default function PhotoCropper({ file, onDone, onClose }: Props) {
       aria-modal="true"
     >
       <div style={{ maxWidth: 560, margin: '0 auto' }}>
-        <div style={{ fontWeight: 700, marginBottom: 6 }}>{preview ? 'この画像で登録しますか？' : '写真から切り取る'}</div>
+        <div style={{ fontWeight: 700, marginBottom: 6 }}>
+          {preview ? 'この画像で登録しますか？' : '写真から切り取る'}
+          {target && <span className="small muted" style={{ fontWeight: 400 }}>（{target}）</span>}
+        </div>
         {!preview && (
           <div className="small muted" style={{ marginBottom: 10 }}>
             カードの四隅に、赤い点を合わせてください。点の近くを押して動かすと、いちばん近い点が動きます。ななめに撮った写真でも、まっすぐに直します。
@@ -206,14 +233,17 @@ export default function PhotoCropper({ file, onDone, onClose }: Props) {
                 onPointerCancel={() => setDrag(null)}
               >
                 <img
-                  src={url}
+                  // 仮の URL ができるまでは src を付けない（空の src は、ブラウザがページをもう一度読みに行くことがある）
+                  src={url || undefined}
                   alt=""
                   draggable={false}
                   style={{ maxWidth: '100%', maxHeight: '58vh', width: 'auto', height: 'auto', display: 'block', borderRadius: 4 }}
                   onLoad={(e) => {
                     const im = e.currentTarget
                     setSize({ w: im.naturalWidth, h: im.naturalHeight })
-                    setQuad(defaultQuad(im.naturalWidth, im.naturalHeight))
+                    // 最初だけ、真ん中に枠を置く。確認の画面から戻ってきたとき（写真を出し直す）は、合わせた四隅をそのまま使う
+                    // （前は「もどって直す」で四隅が最初の位置に戻っていた。2026-11-13）
+                    setQuad((q) => q ?? defaultQuad(im.naturalWidth, im.naturalHeight))
                     setShown(im.clientWidth)
                   }}
                   // 開けない写真のときに、何も出ないまま「切り取る」が押せない状態にしない（2026-10-14）
@@ -290,14 +320,19 @@ export default function PhotoCropper({ file, onDone, onClose }: Props) {
             {error}
           </p>
         )}
-        <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
+        {preview && next && (
+          <button className="btn primary block" style={{ marginTop: 14 }} disabled={busy} onClick={saveAndNext}>
+            登録して、次のカード（{next.label}）へ
+          </button>
+        )}
+        <div style={{ display: 'flex', gap: 8, marginTop: preview && next ? 8 : 14 }}>
           {preview ? (
             <>
               <button className="btn" style={{ flex: 1 }} disabled={busy} onClick={() => setPreview(null)}>
                 もどって直す
               </button>
-              <button className="btn primary" style={{ flex: 1 }} disabled={busy} onClick={save}>
-                {busy ? '保存中…' : 'この画像で登録'}
+              <button className={next ? 'btn' : 'btn primary'} style={{ flex: 1 }} disabled={busy} onClick={save}>
+                {busy ? '保存中…' : next ? '登録して終わる' : 'この画像で登録'}
               </button>
             </>
           ) : (

@@ -29,8 +29,15 @@ export default function BulkCreate() {
     if (memberIds.length === 0) return setError('メンバーを 1 人以上選んでください')
     if (busy.current) return
     busy.current = true
-    const existing = await db.cards.where('collectionId').equals(id).sortBy('order')
-    let order = (existing.at(-1)?.order ?? -1) + 1
+    // 読むのに失敗しても「作成」をもう一度押せるようにする（前は、ここで失敗すると押せないままになった。2026-11-13）
+    let order: number
+    try {
+      const existing = await db.cards.where('collectionId').equals(id).sortBy('order')
+      order = (existing.at(-1)?.order ?? -1) + 1
+    } catch (e) {
+      busy.current = false
+      return setError(`保存できませんでした：${(e as Error).message}`)
+    }
     const sorted = [...memberIds].sort((a, b) => memberOrder(a) - memberOrder(b))
     const now = Date.now()
     const cards: Card[] = []

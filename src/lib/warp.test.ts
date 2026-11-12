@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { CARD_RATIO, defaultQuad, homography, nearestCorner, nudge, outputSize, warp, type Quad, type Rgba } from './warp'
+import { CARD_RATIO, defaultQuad, homography, nearestCorner, nudge, outputSize, shiftRight, warp, type Quad, type Rgba } from './warp'
 
 /** 小さな写真を作る：座標に比例する色（赤＝x、緑＝y）にして、どこから取ったか読めるようにする */
 function gradient(w: number, h: number): Rgba {
@@ -96,5 +96,22 @@ describe('遠近補正の切り出し', () => {
     expect(moved[0]).toEqual({ x: 0, y: 0 })
     expect(moved[1]).toEqual(q[1]) // ほかの角は動かない
     expect(nudge(q, 2, 1, 2, 100, 150)[2]).toEqual({ x: q[2].x + 1, y: q[2].y + 2 })
+  })
+})
+
+describe('枠を右どなりへずらす', () => {
+  const q: Quad = [{ x: 10, y: 20 }, { x: 110, y: 22 }, { x: 108, y: 170 }, { x: 12, y: 168 }]
+  it('枠の幅と少しのすき間だけ右へ動く（高さは変わらない）', () => {
+    const r = shiftRight(q, 1000)
+    expect(r[0].x).toBeCloseTo(114)
+    expect(r[1].x).toBeCloseTo(214)
+    expect(r.map((p) => p.y)).toEqual(q.map((p) => p.y))
+  })
+  it('右にはみ出すときは、写真の端まで', () => {
+    const r = shiftRight(q, 150)
+    expect(Math.max(...r.map((p) => p.x))).toBe(150)
+  })
+  it('もう右に動かせなければ、そのまま', () => {
+    expect(shiftRight(q, 110)).toBe(q)
   })
 })
