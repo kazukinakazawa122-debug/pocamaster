@@ -11,3 +11,7 @@ public/_review/
 dist-prof
 dist-prof-base
 dist-prof-new
+
+# 画面を押すテスト（Playwright）の結果
+test-results/
+playwright-report/

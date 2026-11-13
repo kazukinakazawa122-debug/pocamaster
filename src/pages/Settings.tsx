@@ -11,6 +11,7 @@ import { exportOwnImages, markExported, OWN_EXPORTED_KEY, ownImageCounts } from 
 import { changesSinceBackup, exportBackup, markBackedUp, restoreBackup, saveFile } from '../lib/backup'
 import { importCsv, removeObsolete } from '../lib/csv'
 import { importImages, type ImageZipInfo } from '../lib/imageImport'
+import { missedText, updateMissed, type ImageMissed } from '../lib/imageMissed'
 import { ProfileAvatar, ProgressBar, TopBar } from '../components/ui'
 
 const SEED_BASE = `${import.meta.env.BASE_URL}seed/`
@@ -68,6 +69,7 @@ function versionText(): string {
 export default function Settings() {
   const lastBackupAt = useLiveQuery(() => getSetting<number>('lastBackupAt'))
   const imageZip = useLiveQuery(() => getSetting<ImageZipState>('imageZip'))
+  const missed = useLiveQuery(() => getSetting<ImageMissed>('imageZipMissed'))
   const changes = useLiveQuery(() => changesSinceBackup())
   // カードの数は手元の記録から数える（前は開くたび・画像の取り込みの保存のたびに、全カードをデータベースから読み直していた。
   // iPhone ではその間ほかの画面の画像の読み込みが待たされる。2026-10-14）。取り込み中など続けて変わるときは、手が空いたときにまとめて数え直す
@@ -173,6 +175,8 @@ export default function Settings() {
           await putSetting('imageZip', { seq, date: isDiff && seq !== info.seq ? last?.date : info?.date, importedAt: Date.now() } satisfies ImageZipState)
         }
         const miss = r.unmatched.length
+        // 入らなかった枚数は、この文を閉じたあとも設定に出し続ける（2026-11-13）
+        await putSetting('imageZipMissed', updateMissed(await getSetting<ImageMissed>('imageZipMissed'), info, miss))
         return (
           `${isDiff ? `差分 No.${info.seq} の画像` : '画像'} ${r.matched} 枚を取り込みました` +
           (r.skipped ? `（前に取り込んだ画像と同じ ${r.skipped} 枚はとばしました）` : '') +
@@ -315,6 +319,7 @@ export default function Settings() {
         )}
         <input
           ref={restoreRef}
+          data-testid="restore-input"
           type="file"
           accept=".zip,application/zip"
           hidden
@@ -361,6 +366,7 @@ export default function Settings() {
         </button>
         <input
           ref={imagesRef}
+          data-testid="images-input"
           type="file"
           accept=".zip,application/zip"
           hidden
@@ -376,6 +382,7 @@ export default function Settings() {
         </button>
         <input
           ref={diffRef}
+          data-testid="diff-input"
           type="file"
           accept=".zip,application/zip"
           hidden
@@ -389,6 +396,7 @@ export default function Settings() {
           取り込んだ画像の版：
           {imageZip?.seq !== undefined ? `No.${imageZip.seq}${imageZip.date ? `（${imageZip.date.replaceAll('-', '/')} の版）` : ''}` : imageZip ? '番号なし（前の形の ZIP）' : 'まだありません'}
         </div>
+        {missedText(missed) && <div className="xs" style={{ color: 'var(--danger, #b42318)' }}>{missedText(missed)}</div>}
         <div className="xs muted">
           差分 ZIP は番号の順に取り込んでください。新しいカードが増えたときは、先に「初期データを取り込む」をしてください。
         </div>

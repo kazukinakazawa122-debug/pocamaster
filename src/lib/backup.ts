@@ -143,6 +143,7 @@ export async function restoreBackup(file: Blob): Promise<void> {
     await db.settings.put({ key: 'lastBackupAt', value: data.exportedAt })
     // 画像の ZIP から取り込んだ画像は戻らないので、取り込んだ版の記録も消す（全部入りの ZIP から取り込み直す）
     await db.settings.delete('imageZip')
+    await db.settings.delete('imageZipMissed')
   })
   // 全部が入れ替わったので、手元のカードの記録も読み直す
   await reloadCards()
