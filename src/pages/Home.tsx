@@ -221,17 +221,6 @@ export default function Home() {
       )}
 
       {/* 空のときは見出しごと出さない（説明文を並べない。本人の要望 2026-10-01「AI っぽくなくする」） */}
-      {pinned.length > 0 && (
-        <>
-          <div className="section-title">収集中のアルバム</div>
-          <div className="h-scroll">
-            {pinned.map(({ col, p }) => (
-              <PinnedAlbum key={col.id} col={col} p={p} />
-            ))}
-          </div>
-        </>
-      )}
-
       {favorites.length > 0 && (
         <>
           <div className="section-title">お気に入りのカード</div>
@@ -249,6 +238,18 @@ export default function Home() {
           <div className="h-scroll">
             {recent.map(({ card, at }) => (
               <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} at={at} />
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* 収集中のアルバムは、最近入手したカードの下（本人の要望、2026-11-13） */}
+      {pinned.length > 0 && (
+        <>
+          <div className="section-title">収集中のアルバム</div>
+          <div className="h-scroll">
+            {pinned.map(({ col, p }) => (
+              <PinnedAlbum key={col.id} col={col} p={p} />
             ))}
           </div>
         </>

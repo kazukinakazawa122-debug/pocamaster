@@ -88,6 +88,14 @@ blurred = {(c["collection"], mkey(c["members"]), c["source"], c["version"]) for 
 blurred = {k for k in blurred if k in by_key and by_key[k]["blur"] <= 300}
 blurred |= {k for k, e in by_key.items() if e["blur"] <= BLUR_MAX}
 
+# --- 探したが無い（メルカリと X の両方で探して、大きい写真が見つからなかった枠。本人が自分で探す。2026-11-13） ---
+# tools/crop/review/notfound.json に枠（collection・members・source・version）と探した日・場所を書く。画像が良くなって一覧から外れた枠の印は、出さないだけ（ファイルには残る）
+NF_PATH = SP + "review/notfound.json"
+notfound = {}
+if os.path.exists(NF_PATH):
+    for c in json.load(open(NF_PATH, encoding="utf-8"))["cards"]:
+        notfound[(c["collection"], mkey(c["members"]), c["source"], c["version"])] = c.get("searched", "")
+
 # --- 分ける ---
 none, replace, low = [], [], []
 for k in dict.fromkeys(slots):  # 初期データの並び（同じ枠は 1 回）
@@ -132,7 +140,9 @@ def tile(x, kind):
         size = f'<div class="tag">{"粗い " if kind == "low" else ""}{e["w"]}×{e["h"]}</div>'
         why = "".join(f'<div class="why">{esc(r)}</div>' for r in x.get("why", []))
         note = size + why + f'<div class="cr">{esc(e.get("credit") or "")}</div>'
-    return f'<div class="t">{pic}<b>{esc(label(mk))}</b><br>{esc(src)} {esc(ver)}{note}</div>'
+    if x["k"] in notfound:
+        note += f'<div class="nf">探したが無い{("（" + esc(notfound[x["k"]]) + "）") if notfound[x["k"]] else ""}</div>'
+    return f'<div class="t{" isnf" if x["k"] in notfound else ""}">{pic}<b>{esc(label(mk))}</b><br>{esc(src)} {esc(ver)}{note}</div>'
 
 
 cols_order = [r["name"] for r in csv.DictReader(open(PROJ + "public/seed/collections.csv", encoding="utf-8"))]
@@ -147,6 +157,7 @@ cols = sorted(groups, key=lambda c: cols_order.index(c) if c in cols_order else 
 rows = "".join(
     f'<tr><td><a href="#c{n}">{esc(c)}</a></td><td class="n">{total_slots[c]}</td>'
     + "".join(f'<td class="n">{sum(1 for g in groups[c] if g[1] == kind) or ""}</td>' for kind in ("none", "replace", "low"))
+    + f'<td class="n">{sum(1 for g in groups[c] if g[2]["k"] in notfound) or ""}</td>'
     + f'<td class="n"><b>{len(groups[c])}</b></td></tr>'
     for n, c in enumerate(cols)
 )
@@ -156,6 +167,7 @@ sections = [
     for n, c in enumerate(cols)
 ]
 
+nf_shown = sum(1 for lst in (none, replace, low) for x in lst if x["k"] in notfound)
 page = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>要対応カード一覧</title><style>
 :root{{--bg:#f4f4f2;--text:#1f1f1f;--muted:#6b6b68;--line:#dcdcd8;--warn:#b42318;--panel:#ffffff}}
@@ -174,12 +186,16 @@ summary span{{color:var(--muted);font-size:12px;font-weight:600}}
 .t img,.t .ph{{width:100%;aspect-ratio:55/85;object-fit:cover;border-radius:5px;border:2px solid;display:block;box-sizing:border-box;margin-bottom:3px}}
 .t .ph{{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;text-align:center;padding:4px;color:var(--text)}}
 .tag{{font-weight:700}} .tag.none,.why{{color:var(--warn)}} .cr{{color:var(--muted)}}
+.nf{{display:inline-block;margin-top:2px;padding:1px 6px;border-radius:4px;background:#7a4bd6;color:#fff;font-weight:700}}
+body.onlynf .t:not(.isnf){{display:none}} .sw{{display:inline-flex;gap:6px;align-items:center;margin:0 0 12px;font-weight:600}}
 </style></head><body id="top">
 <h1>要対応カード一覧</h1>
 <p>全部入りの ZIP{(" No." + str(info["seq"])) if info.get("seq") else ""}（{info.get("date", "")}）と初期データ（{len(dict.fromkeys(slots))} 枠）から作りました。
 画像なし <b>{len(none)} 枠</b>・差し替えが必要 <b>{len(replace)} 枚</b>・粗い <b>{len(low)} 枚</b>（高さ {LOW}px 未満）。
 コレクション名を押すと、そのコレクションのカードが開きます（開いたものだけ画像を読むので軽い）。「資料の作者」は、同じ作者のもっと大きな版を探す手がかりです。</p>
-<table><tr><th>コレクション</th><th class="n">枠</th><th class="n">画像なし</th><th class="n">差し替え</th><th class="n">粗い</th><th class="n">合計</th></tr>{rows}</table>
+<p>紫の「探したが無い」は、メルカリと X の両方で探して大きい写真が見つからなかったカードです（<b>{nf_shown} 枚</b>）。</p>
+<label class="sw"><input type="checkbox" onchange="document.body.classList.toggle('onlynf', this.checked)">「探したが無い」だけを出す</label>
+<table><tr><th>コレクション</th><th class="n">枠</th><th class="n">画像なし</th><th class="n">差し替え</th><th class="n">粗い</th><th class="n">うち探したが無い</th><th class="n">合計</th></tr>{rows}</table>
 <main>{"".join(sections)}</main>
 <script>
 function show(d) {{ d.querySelectorAll('img[data-src]').forEach(i => {{ i.src = i.dataset.src; i.removeAttribute('data-src'); }}); }}
@@ -206,5 +222,6 @@ for x in replace + low:
     phone = phone.replace(f'data-src="{x["img"]}"', f'data-src="{inline(x["img"])}"', 1)
 open(PHONE, "w", encoding="utf-8").write(phone)
 print(f"画像なし {len(none)} 枠・差し替えが必要 {len(replace)} 枚・粗い {len(low)} 枚／ 枠 {len(dict.fromkeys(slots))}・画像 {len(manifest)}")
+print(f"探したが無い {nf_shown} 枚（notfound.json には {len(notfound)} 枠）")
 print("内訳（差し替え）", collections.Counter(("ちがう" if any("ちがう" in r for r in x["why"]) else "") + ("重複" if any("同じ写真" in r for r in x["why"]) else "") + ("ぼかし" if any("ぼかし" in r for r in x["why"]) else "") for x in replace))
 print("出力", PROJ + "public/_review/todo.html", "／", PHONE, round(os.path.getsize(PHONE) / 1e6, 1), "MB")
