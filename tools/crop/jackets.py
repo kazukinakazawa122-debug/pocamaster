@@ -34,6 +34,7 @@ MAP = {
     "ive_dive_into_ive_cover": "4th FAN CONCERT 'DIVE into IVE'",
     "ive_lovedive_cover": "LOVE DIVE",
     "ive_lucid_dream_cover": "LUCID DREAM",
+    "ive_looks_can_kill_cover": "LOOKS CAN KILL",  # 2026-11-16 kpopofficial.com のピンクと黄色の表紙（本人が選んだ）
     "ive_magazine_ive_cover": "2nd FANMEETING 'MAGAZINE IVE'",
     "ive_pepsi_cover": "Pepsi × IVE 'BLUE & BLACK'",
     "ive_scount_jacket": "3rd FAN CONCERT 'IVE SCOUT'",
