@@ -1,4 +1,4 @@
-"""REVIVE+ の足りない画像（本人が 2026-10-01 にフォルダへ入れた資料。pocamaster-images/新しい資料 2026-10-01/REVIVE+ 追加分/）
+"""REVIVE+ の足りない画像（本人が 2026-10-01 にフォルダへ入れた資料。pocamaster-images/資料/2026-10-01/REVIVE+ 追加分/）
 
 - HIT_MAGAZINE_POB_nishitemplates.jpg：「IVE x HIT MAGAZINE POB」6 人（上段ユジン・ガウル・レイ、下段ウォニョン・リズ・イソ）→ HIT! MAGAZINE。
   作者 @nishitemplates の名前は表の上の画像の隅にあるだけ（カードには写っていない）
@@ -15,7 +15,7 @@ from PIL import Image
 import grid
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/REVIVE+ 追加分/"
+D = ROOT + "資料/2026-10-01/REVIVE+ 追加分/"
 C = "REVIVE+"
 box = lambda r, c: (56 + 405 * c, 1338 + 702 * r, 56 + 405 * c + 326, 1338 + 702 * r + 506)
 ORDER = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]

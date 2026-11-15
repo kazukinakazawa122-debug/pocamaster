@@ -1,4 +1,4 @@
-"""MINIVE：@hallojisoo のメンバー別の表 6 枚（本人が 2026-09-30 に追加、新しい資料 2026-09-30/MINIVE_hallojisoo/）
+"""MINIVE：@hallojisoo のメンバー別の表 6 枚（本人が 2026-09-30 に追加、資料/2026-09-30/MINIVE_hallojisoo/）
 
 - カードに透かしなし（作者名は右上だけ）。カード 260×390px
 - 表の並び：MINIVE PARK 6（Mega Cushion・Face Cushion・Pouch・Binder・50K MINIVE VER・50K ANIMAL VER）／MINIVE CHRISTMAS 1／
@@ -11,7 +11,7 @@ import glob, json
 from PIL import Image
 from build2 import *
 
-D = ROOT + "新しい資料 2026-09-30/MINIVE_hallojisoo/"
+D = ROOT + "資料/2026-09-30/MINIVE_hallojisoo/"
 C = "Collab & Event｜コラボ・イベント"
 PARK, SCHOOL = "MINIVE POP-UP 'MINIVE PARK'", "MINIVE POP-UP 'MINIVE SCHOOL'"
 LABELS = [(C, PARK, "Mega Cushion"), (C, PARK, "Face Cushion"), (C, PARK, "Pouch"), (C, PARK, "Poca Binder"),

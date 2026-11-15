@@ -14,7 +14,7 @@ import csv, glob, io, json, os
 import grid
 from build2 import *
 
-D = ROOT + "_nonalbum/idalshiro/"
+D = ROOT + "資料/_nonalbum/idalshiro/"
 MEMBERS = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]
 SW, WM, SWL, WML = "Soundwave", "withmuu", "Soundwave ラキドロ", "withmuu ラキドロ"
 H, N, X = "have", "new", "skip"

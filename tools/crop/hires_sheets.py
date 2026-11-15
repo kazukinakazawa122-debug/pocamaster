@@ -1,7 +1,7 @@
 """画質を上げる（くり返し使う版、2026-09-30）：本人が追加した表のフォルダから、1 つのコレクションの画像を大きい方に差し替える
 
 使い方：python hires_sheets.py "<pocamaster-images の中のフォルダ>" "<コレクション名>" "<出典>" <出力名>
-  例：python hires_sheets.py "新しい資料 2026-09-30/LOVE DIVE_reina831wy" "LOVE DIVE" "@reina831wy" lovedive_0930
+  例：python hires_sheets.py "資料/2026-09-30/LOVE DIVE_reina831wy" "LOVE DIVE" "@reina831wy" lovedive_0930
 
 - 本人の指示：一覧版と種類ごとの表があるときは、種類ごとの表（カードが大きい）を使う → カードの横幅が MIN_CARD 未満の表は使わない
 - カードの上に ID や透かしがある資料は、先に目で確かめて使わないこと（このスクリプトは透かしを見分けない）

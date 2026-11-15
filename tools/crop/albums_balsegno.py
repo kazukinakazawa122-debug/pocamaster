@@ -1,6 +1,6 @@
 """@balsegno の「IVE Liz Non Album / Merchandise」一覧（2026-04-19 版、HD 版 bit.ly/liz-template）
 
-- 資料：pocamaster-images/_nonalbum/balsegno_liz/merch_1.jpg・merch_2.jpg（4000×7110）
+- 資料：pocamaster-images/資料/_nonalbum/balsegno_liz/merch_1.jpg・merch_2.jpg（4000×7110）
 - リズ 1 人分の表なので、種類（枠）は 6 人分作り、画像はリズの分だけ入れる（グッズ・特典はメンバー 1 人 1 種類）
 - ユニットのカード（リズとだれか）は、相手を顔で決めることになるので入れない
 - Prom Queens DVD の Ktown4U 特典は、アプリの「特典（店舗不明）」と同じとみなした（ほかの種類が同じなので）
@@ -13,7 +13,7 @@
 import grid
 from build2 import *
 
-D = ROOT + "_nonalbum/balsegno_liz/"
+D = ROOT + "資料/_nonalbum/balsegno_liz/"
 CREDIT = "@balsegno"
 MEMBERS = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]
 

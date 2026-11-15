@@ -4,13 +4,13 @@
   （ほかのメンバーの既存の画像と同じ写真で確かめた。似ている度合い 1.0）
 - 足したもの：ガウル 1・リズ 1（I ver.）、レイ 2（HAVE ver.）、リズ 3（IVE ver.）
 - 表の位置は 3 枚とも同じ：左から ガウル・ユジン・レイ／ウォニョン・リズ・イソ
-- ファイルは pocamaster-images/ の一番上にある日付名のもの（20220402_074217000_iOS 1 10.jpg = IVE、1 11 = I、2 2 = HAVE）。
-  新しい資料 2026-10-01/I've IVE 追加分_reina831wy/ に移してから使うこと（memlist.py の番号がずれるため）
+- 元は pocamaster-images/ の一番上にあった日付名のもの（20220402_074217000_iOS 1 10.jpg = IVE、1 11 = I、2 2 = HAVE）。
+  資料/2026-10-01/I've IVE 追加分_reina831wy/ に写したものを使う（一番上に残っていた元の 58 枚は 2026-11-16 に 使わない/ へ移した）
 """
 import grid
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/I've IVE 追加分_reina831wy/"
+D = ROOT + "資料/2026-10-01/I've IVE 追加分_reina831wy/"
 C = "I've IVE"
 FILES = {"IVE": "broadcast_IVE.jpg", "I": "broadcast_I.jpg", "HAVE": "broadcast_HAVE.jpg"}
 ORDER = ["ガウル", "ユジン", "レイ", "ウォニョン", "リズ", "イソ"]

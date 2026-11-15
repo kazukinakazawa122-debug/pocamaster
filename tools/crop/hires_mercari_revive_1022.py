@@ -1,5 +1,5 @@
 """2026-10-22：メルカリの出品写真（6 枚コンプ）で REVIVE+ の粗いカードの画質を上げる（本人「粗いカードも探せる？メルカリも使ってよい」「多いのから」）
-資料：新しい資料 2026-10-22/メルカリ REVIVE+/（保存は本人の了承ずみ。ファイル名に出品番号）
+資料：資料/2026-10-22/メルカリ REVIVE+/（保存は本人の了承ずみ。ファイル名に出品番号）
 使わない写真：裏面だけ（03_…_2・06_…_2・09_…_2）、出品者の文字がカードにかかる（08 OLIVE YOUNG「6種コンプリート」・09 LOVED IVE「匿名配送」）、
   カードが小さい（12 Digipack）、ぬいぐるみの写真（10_…_1・2）
 
@@ -14,7 +14,7 @@ from hires_real_0930 import locate
 import hires_real_1002 as H
 
 sys.stdout.reconfigure(encoding="utf-8")
-D = ROOT + "新しい資料 2026-10-22/メルカリ REVIVE+/"
+D = ROOT + "資料/2026-10-22/メルカリ REVIVE+/"
 OUTJ = SP + "review/1022/mercari_revive.json"
 JOB = "zzzzzzzzzzzzzzzzzzzzz_y_mercari_revive_1022"
 # 写真ごとの、カードが並んでいる範囲（x0, y0, x1, y1。写真を見て決めた）

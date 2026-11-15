@@ -13,7 +13,7 @@ from PIL import Image
 import grid
 from build2 import *
 
-D = ROOT + "_nonalbum/idalshiro/"
+D = ROOT + "資料/_nonalbum/idalshiro/"
 KEYS = [("yujin", "ユジン"), ("gaeul", "ガウル"), ("rei", "レイ"), ("wonyoung", "ウォニョン"), ("liz", "リズ"), ("leeseo", "イソ")]
 TH, MARGIN, GAIN = 0.85, 0.05, 1.25
 BLOCK_TH = 0.55  # 3×4 のブロックごとの似ている度合いの最低（上に重ねた文字・スタンプや、別の写真を外す）

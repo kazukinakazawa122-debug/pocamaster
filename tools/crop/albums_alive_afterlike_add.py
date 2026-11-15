@@ -1,4 +1,4 @@
-"""ALIVE の会場限定盤と After LIKE の Music Korea ファンサイン当選特典（本人が 2026-10-01 に入れた。pocamaster-images/新しい資料 2026-10-01/ALIVE・After LIKE 追加分/）
+"""ALIVE の会場限定盤と After LIKE の Music Korea ファンサイン当選特典（本人が 2026-10-01 に入れた。pocamaster-images/資料/2026-10-01/ALIVE・After LIKE 追加分/）
 
 - ALIVE_会場限定盤.png（実物の写真の画面写真。2 段×3 列）：並びは ユジン・ガウル・レイ／ウォニョン・リズ・イソ
   （アプリの既存の 4 枚と同じ写真で確認：ユジン 0.71・ガウル 0.67・レイ 0.90・リズ 0.59）。画像のなかったウォニョン・イソだけ入れる
@@ -10,7 +10,7 @@ from PIL import Image
 import grid
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/ALIVE・After LIKE 追加分/"
+D = ROOT + "資料/2026-10-01/ALIVE・After LIKE 追加分/"
 M = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]
 SRC = "Music Korea ファンサイン当選特典"
 if __name__ == "__main__":
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     for n, (x0, y0, x1, y1) in enumerate([(412, 1430, 743, 1644), (779, 1430, 1111, 1644), (1144, 1430, 1477, 1644)], start=1):
         j.add("After LIKE", ["全員"], SRC, f"PVC GROUP {n}", s.crop((x0, y0, x1, y1)), "@reina831wy")
     # LOVE DIVE の Jewel ver. 9set POB の Group Photocard 1・2（表の左＝1、右＝2。本人が 2026-10-01 に入れた）
-    ld = Image.open(ROOT + "新しい資料 2026-10-01/LOVE DIVE 追加分/LOVEDIVE_Jewel_9set_POB_group_reina831wy.jpg").convert("RGB")
+    ld = Image.open(ROOT + "資料/2026-10-01/LOVE DIVE 追加分/LOVEDIVE_Jewel_9set_POB_group_reina831wy.jpg").convert("RGB")
     k2 = 1996 / 1500
     for n, (x0, y0, x1, y1) in enumerate([(224, 922, 472, 1306), (522, 922, 770, 1306)], start=1):
         j.add("LOVE DIVE", ["全員"], "Jewel ver. 9set POB", f"Group Photocard {n}", ld.crop((int(x0 * k2) + 2, int(y0 * k2) + 2, int(x1 * k2) - 2, int(y1 * k2) - 2)), "@reina831wy")

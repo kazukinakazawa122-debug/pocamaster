@@ -1,4 +1,4 @@
-"""IVE SECRET の withmuu ラキドロ 8.0 POLA の実物の写真（本人が 2026-10-01 に入れた。pocamaster-images/新しい資料 2026-10-01/IVE SECRET withmuu 8.0 POLA 追加分/）
+"""IVE SECRET の withmuu ラキドロ 8.0 POLA の実物の写真（本人が 2026-10-01 に入れた。pocamaster-images/資料/2026-10-01/IVE SECRET withmuu 8.0 POLA 追加分/）
 
 - 「withmuu ラキドロ 4.0-3」は名前がまちがいで、withmuu 8.0 のポラロイド（本人）→ 4.0-3 の枠 6 を消す（merge.py の DROP_SLOT）
   （4.0-3 の画像はアプリの 8.0 POLA と同じ写真だった）
@@ -9,7 +9,7 @@
 from PIL import Image
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/IVE SECRET withmuu 8.0 POLA 追加分/"
+D = ROOT + "資料/2026-10-01/IVE SECRET withmuu 8.0 POLA 追加分/"
 k = 1284 / 647
 FILES = [("POLA_PRETTY_RUDE_ウォニョン.png", "ウォニョン", (113, 411, 500, 982)), ("POLA_I'm_lovely_レイ.png", "レイ", (197, 470, 493, 897)), ("POLA_Gasp_ガウル.png", "ガウル", (138, 440, 508, 984))]
 if __name__ == "__main__":

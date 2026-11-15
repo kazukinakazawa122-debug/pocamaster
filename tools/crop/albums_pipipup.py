@@ -1,4 +1,4 @@
-"""@_pipipup の「IVE MD pc List. 02」（メンバーごと 6 枚、2026-10-01 に本人が追加。pocamaster-images/新しい資料 2026-10-01/MD List 02・ソロ契約_pipipup/）
+"""@_pipipup の「IVE MD pc List. 02」（メンバーごと 6 枚、2026-10-01 に本人が追加。pocamaster-images/資料/2026-10-01/MD List 02・ソロ契約_pipipup/）
 
 - 6 人とも同じ並び（段 r・左から c）。ユジンの表の位置を基準に、ほかの 5 人は画像の横の位置（割合）で同じカードを探す
 - カードに ID はないが、一部のカードに「@BEAPCTRADING ON IG」など別の人の ID の透かしが写っている → WATERMARK に書いた位置は画像なし（本人のルール）
@@ -10,7 +10,7 @@ from PIL import Image
 import grid
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/MD List 02・ソロ契約_pipipup/"
+D = ROOT + "資料/2026-10-01/MD List 02・ソロ契約_pipipup/"
 NAMES = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]
 
 

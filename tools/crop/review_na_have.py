@@ -4,7 +4,7 @@ import base64, csv, glob, io, json, os
 import grid
 from build2 import *
 
-D = ROOT + "_nonalbum/idalshiro/"
+D = ROOT + "資料/_nonalbum/idalshiro/"
 KEYS = [("yujin", "ユジン"), ("gaeul", "ガウル"), ("rei", "レイ"), ("wonyoung", "ウォニョン"), ("liz", "リズ"), ("leeseo", "イソ")]
 PARK, SCHOOL, PROM, SWIH, MAG = "MINIVE POP-UP 'MINIVE PARK'", "MINIVE POP-UP 'MINIVE SCHOOL'", "The Prom Queens", "SHOW WHAT I HAVE", "MAGAZINE IVE'"
 # 番号 → (コレクション（部分）, 入手元（前方一致）, バージョン, 表のラベル)

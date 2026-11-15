@@ -10,7 +10,7 @@ import csv, glob, json, os
 import grid
 from build2 import *
 
-D = ROOT + "_nonalbum/idalshiro/"
+D = ROOT + "資料/_nonalbum/idalshiro/"
 CREDIT = "@idalshiro"
 PROM, SWIH, SCOUT, SWIA, DII = "The Prom Queens", "SHOW WHAT I HAVE", "IVE SCOUT'", "SHOW WHAT I AM", "DIVE into IVE'"
 COLLAB, MAGZ, FC = "Collab", "Magazine", "Fanclub"

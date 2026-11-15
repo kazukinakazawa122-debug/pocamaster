@@ -12,7 +12,7 @@ import grid
 
 SP = os.path.dirname(os.path.abspath(__file__)) + "/"
 PROJ = r"C:/Users/kazuk/pocamaster/"
-ENG = "C:/Users/kazuk/OneDrive/pocamaster-images/IVE English ver. - photocard list-20260927T144026Z-1-001/IVE English ver. - photocard list/"
+ENG = "C:/Users/kazuk/OneDrive/pocamaster-images/資料/IVE English ver. - photocard list-20260927T144026Z-1-001/IVE English ver. - photocard list/"
 ROOT = "C:/Users/kazuk/OneDrive/pocamaster-images/"
 CARDS = "C:/Users/kazuk/OneDrive/pocamaster-images/_cards/"
 ORDER = ["ガウル", "ユジン", "レイ", "ウォニョン", "リズ", "イソ"]  # reina831wy の並び

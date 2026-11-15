@@ -10,7 +10,7 @@ import grid
 from build2 import *
 from hires_ida import feat
 
-D = ROOT + "_nonalbum/idalshiro/"
+D = ROOT + "資料/_nonalbum/idalshiro/"
 KEYS = [("yujin", "ユジン"), ("gaeul", "ガウル"), ("rei", "レイ"), ("wonyoung", "ウォニョン"), ("liz", "リズ"), ("leeseo", "イソ")]
 TH = float(os.environ.get("GROUP_TH", "0.88"))
 

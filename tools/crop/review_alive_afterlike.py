@@ -27,7 +27,7 @@ if __name__ == "__main__":
     for n, (x0, y0, x1, y1) in enumerate([(412, 1430, 743, 1644), (779, 1430, 1111, 1644), (1144, 1430, 1477, 1644)], start=1): d.rectangle((x0, y0, x1, y1), outline=(30, 120, 220), width=6); d.text((x0 + 10, y0 + 8), f"GROUP {n}", fill=(30, 120, 220))
     body += f'<h2>After LIKE 「Music Korea ファンサイン当選特典 PVC」（表の名札どおり。緑＝メンバー、青＝全員のカード）</h2><img class="big" src="{b64(an, 520)}"><div class="grid">{cells(lambda e: e["collection"]=="After LIKE")}</div>'
     # LOVE DIVE
-    ld = Image.open(ROOT + "新しい資料 2026-10-01/LOVE DIVE 追加分/LOVEDIVE_Jewel_9set_POB_group_reina831wy.jpg").convert("RGB"); an = ld.copy(); d = ImageDraw.Draw(an); k2 = 1996 / 1500
+    ld = Image.open(ROOT + "資料/2026-10-01/LOVE DIVE 追加分/LOVEDIVE_Jewel_9set_POB_group_reina831wy.jpg").convert("RGB"); an = ld.copy(); d = ImageDraw.Draw(an); k2 = 1996 / 1500
     for n, (x0, y0, x1, y1) in enumerate([(224, 922, 472, 1306), (522, 922, 770, 1306)], start=1): d.rectangle((int(x0 * k2) + 2, int(y0 * k2) + 2, int(x1 * k2) - 2, int(y1 * k2) - 2), outline=(230, 30, 60), width=8); d.text((int(x0 * k2) + 14, int(y0 * k2) + 10), f"Group {n}", fill=(230, 30, 60))
     body += f'<h2>LOVE DIVE 「Jewel ver. 9set POB」の Group Photocard 1・2（表の左＝1、右＝2）</h2><img class="big" src="{b64(an, 520)}"><div class="grid">{cells(lambda e: e["collection"]=="LOVE DIVE")}</div>'
     page = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ALIVE・After LIKE・LOVE DIVE の切り出しの確認</title><style>

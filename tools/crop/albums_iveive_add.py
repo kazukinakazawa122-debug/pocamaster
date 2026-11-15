@@ -8,7 +8,7 @@
 import grid
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/I've IVE 追加分_reina831wy/"
+D = ROOT + "資料/2026-10-01/I've IVE 追加分_reina831wy/"
 C = "I've IVE"
 if __name__ == "__main__":
     j = Job("iveive_add")

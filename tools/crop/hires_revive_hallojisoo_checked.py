@@ -1,4 +1,4 @@
-"""REVIVE+：@hallojisoo のメンバー別の表（pocamaster-images/REVIVE+/hallojisoo/、本人が 2026-09-30 にもう一度追加したものと同じ版）で画質を上げる（目で確かめた分）
+"""REVIVE+：@hallojisoo のメンバー別の表（pocamaster-images/資料/REVIVE+/hallojisoo/、本人が 2026-09-30 にもう一度追加したものと同じ版）で画質を上げる（目で確かめた分）
 
 - hires_sheets.py（MIN_CARD=120）で自動に 32 枚差し替えた（out/zzz_hires_revive_hallojisoo.json）
 - 同じ写真らしいが、切り方・色の違いで自動では外れた 105 枚を並べて目で見た（review/0930/revive_hallojisoo_checked.json、[枠, 表, 位置]）。
@@ -17,6 +17,6 @@ if __name__ == "__main__":
         if n in SKIP:
             continue
         if fn not in ims:
-            ims[fn] = Image.open(ROOT + "REVIVE+/hallojisoo/" + fn.split("\\")[-1]).convert("RGB")
+            ims[fn] = Image.open(ROOT + "資料/REVIVE+/hallojisoo/" + fn.split("\\")[-1]).convert("RGB")
         j.add("REVIVE+", [k[0]], k[1], k[2], ims[fn].crop(box), "@hallojisoo")
     j.save()

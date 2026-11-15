@@ -1,6 +1,6 @@
 """@idalshiro の「solo merch template」（メンバー 1 人ずつの個人の広告・イベントのトレカ）
 
-- 資料：pocamaster-images/_nonalbum/idalshiro/solo/<メンバー>.jpg（4500×8000、ウォニョンは 2 枚）
+- 資料：pocamaster-images/資料/_nonalbum/idalshiro/solo/<メンバー>.jpg（4500×8000、ウォニョンは 2 枚）
   drive：tinyurl.com/idalshiro → IVE → solo merch
 - ラベルは目で読んだ（2026-09-30）。カードは上の段から、段の中は左から数える
 - 入れ先：メンバーごとの「個人（ソロ）」のコレクション（本人の要望）。ユジン・ガウル・レイ・イソは新しく作る
@@ -12,7 +12,7 @@
 import grid
 from build2 import *
 
-D = ROOT + "_nonalbum/idalshiro/solo/"
+D = ROOT + "資料/_nonalbum/idalshiro/solo/"
 CREDIT = "@idalshiro"
 
 

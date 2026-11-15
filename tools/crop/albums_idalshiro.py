@@ -1,6 +1,6 @@
 """@idalshiro の「IVE photocard template — all IVE photocards & pobs」メンバー別（2026-08-31 版、HD 版 tinyurl.com/idalshiro）
 
-- 資料：pocamaster-images/_nonalbum/idalshiro/<メンバー>_1〜3.jpg（アルバム）・<メンバー>_na.jpg（ノンアルバム）。4500×8000
+- 資料：pocamaster-images/資料/_nonalbum/idalshiro/<メンバー>_1〜3.jpg（アルバム）・<メンバー>_na.jpg（ノンアルバム）。4500×8000
 - 表の下に作者名（idalshiro）があるだけで、カードに ID はない。出典に @idalshiro を記録する（作者の希望：名前を消さない）
 - 6 人とも同じ並びなので、同じ位置のカードは同じ種類。ラベルは目で読んだ（2026-09-30）
 - ここで入れるもの：
@@ -12,7 +12,7 @@
 import grid
 from build2 import *
 
-D = ROOT + "_nonalbum/idalshiro/"
+D = ROOT + "資料/_nonalbum/idalshiro/"
 CREDIT = "@idalshiro"
 KEYS = [("yujin", "ユジン"), ("gaeul", "ガウル"), ("rei", "レイ"), ("wonyoung", "ウォニョン"), ("liz", "リズ"), ("leeseo", "イソ")]
 

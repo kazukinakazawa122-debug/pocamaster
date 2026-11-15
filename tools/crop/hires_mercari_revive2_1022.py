@@ -1,5 +1,5 @@
 """2026-10-22（2 回目）：メルカリのカード 1 枚の出品写真で REVIVE+ の粗いカードの画質を上げる（本人「多いのから」。保存は本人の了承ずみ）
-資料：新しい資料 2026-10-22/メルカリ REVIVE+ 2/（お店の名前_出品番号.jpg。各出品の 1 枚目の写真。Music Korea・Makestar・Soundwave・MusicArt・NY Music）
+資料：資料/2026-10-22/メルカリ REVIVE+ 2/（お店の名前_出品番号.jpg。各出品の 1 枚目の写真。Music Korea・Makestar・Soundwave・MusicArt・NY Music）
 
 python tools/crop/hires_mercari_revive2_1022.py find … 写真全体を幅 100px にして REVIVE+ の全カードと重ね（hires_real_1004.find_singles と同じ）、上位 8 枚を locate で決める
 """
@@ -11,7 +11,7 @@ from hires_real_0930 import locate, gray, ncc
 import hires_real_1002 as H
 
 sys.stdout.reconfigure(encoding="utf-8")
-D = ROOT + "新しい資料 2026-10-22/メルカリ REVIVE+ 2/"
+D = ROOT + "資料/2026-10-22/メルカリ REVIVE+ 2/"
 OUTJ = SP + "review/1022/mercari_revive2.json"
 JOB = "zzzzzzzzzzzzzzzzzzzzz_z_mercari_revive2_1022"  # 1 回目（_y_mercari_revive_1022）よりあとに読まれる名前（NY Music のイソ・レイが重なる）
 

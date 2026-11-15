@@ -12,7 +12,7 @@ import grid
 from build2 import *
 
 Image.MAX_IMAGE_PIXELS = None
-D = ROOT + "_nonalbum/idalshiro/"
+D = ROOT + "資料/_nonalbum/idalshiro/"
 COLL = "Collab & Event｜コラボ・イベント"
 SRC = "MINIVE × LINE FRIENDS"
 KEYS = [("yujin", "ユジン"), ("gaeul", "ガウル"), ("rei", "レイ"), ("wonyoung", "ウォニョン"), ("liz", "リズ"), ("leeseo", "イソ")]

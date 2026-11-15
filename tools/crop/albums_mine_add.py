@@ -1,4 +1,4 @@
-"""I've MINE の足りない画像（本人が 2026-10-01 にフォルダへ入れた。pocamaster-images/新しい資料 2026-10-01/I've MINE 追加分/）
+"""I've MINE の足りない画像（本人が 2026-10-01 にフォルダへ入れた。pocamaster-images/資料/2026-10-01/I've MINE 追加分/）
 
 - Soundwave_ファンサイン_Malaysia_Rei.png：レイの Soundwave ファンサイン Malaysia（画面写真。カードの位置を画面から見つけた）
 - Taiwan2_全員.jpg：Taiwan 2 の 6 人（2 段×3 列：ユジン・ガウル・レイ／ウォニョン・リズ・イソ）。既存の Taiwan 2 の画像と同じ写真で並びを確認（ユジン・ガウル・ウォニョン・リズ 0.61〜0.83）。6 人全員をこの写真に入れ替える（本人）
@@ -11,7 +11,7 @@ from PIL import Image
 import grid
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/I've MINE 追加分/"
+D = ROOT + "資料/2026-10-01/I've MINE 追加分/"
 C = "I've MINE"
 OSAKA = "会場限定特典 大阪城ホール"
 M = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]

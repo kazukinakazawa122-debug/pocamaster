@@ -4,7 +4,7 @@ import json, glob, csv, os
 from PIL import Image
 from build2 import *
 Image.MAX_IMAGE_PIXELS = None
-D = ROOT + "I've IVE/youngningz_HD/"
+D = ROOT + "資料/I've IVE/youngningz_HD/"
 MEM = {"yujin": "ユジン", "gaeul": "ガウル", "rei": "レイ", "wonyoung": "ウォニョン", "liz": "リズ", "leeseo": "イソ"}
 last = {}
 for p in sorted(glob.glob(SP + "out/*.json")):

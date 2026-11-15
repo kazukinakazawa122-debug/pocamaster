@@ -1,4 +1,4 @@
-"""画質を上げる：本人が 2026-09-30 に追加した ELEVEN の種類ごとの表（@reina831wy、pocamaster-images/新しい資料 2026-09-30/ELEVEN_reina831wy/）
+"""画質を上げる：本人が 2026-09-30 に追加した ELEVEN の種類ごとの表（@reina831wy、pocamaster-images/資料/2026-09-30/ELEVEN_reina831wy/）
 
 - 本人の指示どおり、メンバー別の一覧・まとめの表（ファイル名の並びで先頭 8 枚）は使わず、種類ごとの表だけ使う
 - カードの上に透かしはない（表の右下に作者名があるだけ）
@@ -12,7 +12,7 @@ import grid
 from build2 import *
 from hires_ida import feat, min_block
 
-D = ROOT + "新しい資料 2026-09-30/ELEVEN_reina831wy/"
+D = ROOT + "資料/2026-09-30/ELEVEN_reina831wy/"
 TH, MARGIN, GAIN, BLOCK_TH = 0.85, 0.05, 1.1, 0.55
 MIN_CARD = 190  # これより小さいカードの表（まとめの表など）は使わない
 OUT = "zzz_hires_eleven_0930"

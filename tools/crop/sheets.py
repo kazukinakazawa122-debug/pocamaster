@@ -1,6 +1,6 @@
 import sys, os
 from PIL import Image, ImageDraw
-BASE = r"C:/Users/kazuk/OneDrive/pocamaster-images/IVE English ver. - photocard list-20260927T144026Z-1-001/IVE English ver. - photocard list/"
+BASE = r"C:/Users/kazuk/OneDrive/pocamaster-images/資料/IVE English ver. - photocard list-20260927T144026Z-1-001/IVE English ver. - photocard list/"
 def run(prefix, rels, cols=3, w=660, per=6):
     fs = []
     for r in rels:

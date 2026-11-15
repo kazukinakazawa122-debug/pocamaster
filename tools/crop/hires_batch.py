@@ -7,7 +7,7 @@
   「A||B」で複数のコレクションをまとめて照らし合わせる。フォルダが _A・_B に分かれていても、もとの名前で書く。
 
   python tools/crop/hires_batch.py filter   <回> <集めた番号.txt>   … 保存済みの出品番号を外して <回>a_候補.txt を作る（件数を出す）
-  python tools/crop/hires_batch.py download <回>                   … 候補を「新しい資料 <回>/」に保存（本人の了承のあとだけ）。110 件を超える組は _A・_B に分ける
+  python tools/crop/hires_batch.py download <回>                   … 候補を「資料/<年-月-日>/」に保存（本人の了承のあとだけ）。110 件を超える組は _A・_B に分ける
   python tools/crop/hires_batch.py find     <回>                   … 全部のフォルダを並べて照らし合わせる（裏で動かす。10 本ずつ）
   python tools/crop/hires_batch.py dedupe   <回>                   … 同じ枠が 2 つの名前にあるとき、前の名前の ok から外す（あとの名前が勝つため）
   python tools/crop/hires_batch.py apply    <回>                   … 全部の名前を apply（このあと merge.py → make_diff.py）
@@ -52,9 +52,14 @@ def read_groups(path):
     return out
 
 
+def src(run):
+    """回（20261106）の保存先：資料/2026-11-06"""
+    return f"資料/{run[:4]}-{run[4:6]}-{run[6:8]}"
+
+
 def cmd_filter(run, raw):
     saved = set()
-    for d in glob.glob(ROOT + "新しい資料*"):
+    for d in glob.glob(ROOT + "資料/20*"):
         for _, _, fs in os.walk(d):
             for f in fs:
                 saved |= set(re.findall(r"m(\d{9,})", f))
@@ -85,7 +90,7 @@ def folders(run):
 
 
 def cmd_download(run):
-    base = ROOT + f"新しい資料 {run}/"
+    base = ROOT + src(run) + "/"
     jobs = []
     for folder, tag, ids in folders(run):
         os.makedirs(base + folder, exist_ok=True)
@@ -123,7 +128,7 @@ def cmd_find(run):
     def run_one(j):
         name, folder = j
         r = subprocess.run(
-            [sys.executable, HERE + "mercari_hires.py", "find", name, f"新しい資料 {run}/{folder}", groups[tag_of[folder]]],
+            [sys.executable, HERE + "mercari_hires.py", "find", name, f"{src(run)}/{folder}", groups[tag_of[folder]]],
             cwd=REPO, capture_output=True, text=True, encoding="utf-8", errors="replace",
         )
         print(name, folder, "OK" if r.returncode == 0 else "失敗 " + r.stderr[-300:], flush=True)

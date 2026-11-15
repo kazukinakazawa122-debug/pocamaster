@@ -1,4 +1,4 @@
-"""お守りカード（Amulet Card）：IVE EMPATHY と Be Alright（本人が 2026-10-01 に入れた実物の写真の画面写真。pocamaster-images/新しい資料 2026-10-01/お守りカード/）
+"""お守りカード（Amulet Card）：IVE EMPATHY と Be Alright（本人が 2026-10-01 に入れた実物の写真の画面写真。pocamaster-images/資料/2026-10-01/お守りカード/）
 
 - EMPATHY_amulet.png（クリーム色の衣装）：アプリの「オフラインイベント TOKYO 2」の画像と同じ写真（0.91・0.91・0.75・0.68 でメンバーの並びと一致）→ IVE EMPATHY の「Amulet Card (Tokyo 3/29)」6 人
 - BeAlright_amulet.png（茶色・ギターの衣装）：Be Alright の新しい枠「Amulet Card (お守りカード)」6 人（枠を新しく足す。本人の指示）
@@ -8,7 +8,7 @@
 from PIL import Image
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/お守りカード/"
+D = ROOT + "資料/2026-10-01/お守りカード/"
 M = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]
 k = 1284 / 650
 CFG = {

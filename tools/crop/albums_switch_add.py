@@ -1,4 +1,4 @@
-"""IVE SWITCH の足りない画像（本人が 2026-10-01 に入れた @ri__chan94 の表。pocamaster-images/新しい資料 2026-10-01/IVE SWITCH 追加分/）
+"""IVE SWITCH の足りない画像（本人が 2026-10-01 に入れた @ri__chan94 の表。pocamaster-images/資料/2026-10-01/IVE SWITCH 追加分/）
 
 - withmuu_LuckyDraw_2.0_ri__chan94.jpg：6 人の withmuu Lucky Draw 2.0（1 人 3 枚：カード 2 枚＋ポラ）。ウォニョンの 3 枚目（ポラ）→ 「withmuu ラキドロ 2.0 POLA」のウォニョン（画像なしだった。元画像が小さい＝約 87px）
 - Liz_PhotocardList_ri__chan94.png：リズの全種類の表。「Soundwave Lucky Draw 5.0」の 3 枚目（ポラ）→ リズの「Soundwave ラキドロ 5.0 POLA」
@@ -8,7 +8,7 @@ from PIL import Image
 from build2 import *
 
 Image.MAX_IMAGE_PIXELS = None
-D = ROOT + "新しい資料 2026-10-01/IVE SWITCH 追加分/"
+D = ROOT + "資料/2026-10-01/IVE SWITCH 追加分/"
 if __name__ == "__main__":
     j = Job("zzzzzzzzzzzzzzzz_switch_add")
     a = Image.open(D + "withmuu_LuckyDraw_2.0_ri__chan94.jpg").convert("RGB")

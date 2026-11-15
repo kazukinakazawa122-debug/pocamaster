@@ -6,8 +6,8 @@ from scipy import ndimage
 
 SP = os.path.dirname(os.path.abspath(__file__)) + "/"
 ROOT = r"C:/Users/kazuk/OneDrive/pocamaster-images/"
-ENG = ROOT + "IVE English ver. - photocard list-20260927T144026Z-1-001/IVE English ver. - photocard list/"
-roots = sorted(f for f in os.listdir(ROOT) if f.lower().endswith(".jpg"))
+ENG = ROOT + "資料/IVE English ver. - photocard list-20260927T144026Z-1-001/IVE English ver. - photocard list/"
+roots = ["資料/はじめの一覧表/" + f for f in sorted(f for f in os.listdir(ROOT + "資料/はじめの一覧表/") if f.lower().endswith(".jpg"))]
 
 SETS = {
     "switch": {m: ROOT + roots[i] for m, i in [("ガウル", 27), ("ユジン", 28), ("レイ", 29), ("リズ", 30), ("ウォニョン", 31), ("イソ", 32)]},

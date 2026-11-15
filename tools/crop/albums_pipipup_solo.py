@@ -1,4 +1,4 @@
-"""@_pipipup の「SOLO Contracts」（ユジンの広告・イベントのトレカ。pocamaster-images/新しい資料 2026-10-01/…/SOLO Contracts_ユジン.png）
+"""@_pipipup の「SOLO Contracts」（ユジンの広告・イベントのトレカ。pocamaster-images/資料/2026-10-01/…/SOLO Contracts_ユジン.png）
 
 - 段：Dewi Tree 4・CLIO 12＋12・HANA BANK 11・NEPA 12・Dongwon Tuna 4・Maxim 2
 - アプリのユジン個人（@idalshiro の solo merch から入れた 63 枚）と写真を突き合わせた（2026-10-01、目でも確認）：

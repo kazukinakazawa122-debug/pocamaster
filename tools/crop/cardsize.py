@@ -12,15 +12,16 @@ SP = os.path.dirname(os.path.abspath(__file__)) + "/"
 EXT = (".jpg", ".jpeg", ".png", ".webp")
 
 rows = []
-root_files = sorted(f for f in os.listdir(ROOT) if f.lower().endswith(".jpg"))  # memlist.FILES と同じ並び
-for d, dirs, files in os.walk(ROOT):
+SHEETS = "資料/はじめの一覧表"
+root_files = sorted(f for f in os.listdir(ROOT + SHEETS) if f.lower().endswith(".jpg"))  # memlist.FILES と同じ並び
+for d, dirs, files in os.walk(ROOT + "資料/"):
     dirs[:] = [x for x in dirs if x != "_cards"]
     for f in sorted(files):
         if not f.lower().endswith(EXT):
             continue
         p = os.path.join(d, f)
         folder = os.path.relpath(d, ROOT).replace("\\", "/")
-        idx = root_files.index(f) if folder == "." and f in root_files else ""
+        idx = root_files.index(f) if folder == SHEETS and f in root_files else ""
         try:
             im = grid.load(p)
             bs = grid.card_boxes(im)

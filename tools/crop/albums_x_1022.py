@@ -1,5 +1,5 @@
 """2026-10-22：X で探した資料で、画像なしの枠を埋める（本人「Claude in Chrome で新しい画像を探して」。保存は本人の了承ずみ）
-資料は pocamaster-images/新しい資料 2026-10-22/（X の元の大きさ）
+資料は pocamaster-images/資料/2026-10-22/（X の元の大きさ）
 
 - pepsi2025_2_yangdo0x.jpg（@yangdo0x の実物の写真 2048×2048）：Pepsi 2025「2」（2025-07-30〜 ペプシ ゼロ ライムの特典）6 人。
   カードに名前が印刷されている。リズの「2」も @balsegno の 205px から差し替え
@@ -16,7 +16,7 @@ import numpy as np
 from PIL import Image
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-22/"
+D = ROOT + "資料/2026-10-22/"
 PEPSI = "Pepsi × IVE 'BLUE & BLACK'"
 COLLAB = "Collab & Event｜コラボ・イベント"
 

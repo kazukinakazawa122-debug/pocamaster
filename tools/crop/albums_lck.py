@@ -1,6 +1,6 @@
 """2026-11-16：新しいアルバム LOOKS CAN KILL（IVE EP《SPIN-OFF》、2026-10-26 発売）の枠と画像
 
-資料は pocamaster-images/新しい資料 2026-11-16/（@LILY_221019 の X の一覧表を元の大きさで保存。本人の了承ずみ）
+資料は pocamaster-images/資料/2026-11-16/（@LILY_221019 の X の一覧表を元の大きさで保存。本人の了承ずみ）
 - lily_v5_1.jpg：封入＆特典＆ラキドロ 全員 ver.5（2026-11-01）。53 種類 × 6 人 → 枠はすべてここから。画像も基本はここ（カード 63×96px）
 - lily_v6_2.jpg：封入のみ ver.6（カード 約 100px）→ 本体封入・PLANET を差し替え
 - lily_solo_1〜3.jpg：封入のみ メンバー別 ver.3（ウォニョン・リズ・イソ。カード 約 140px）→ 同じく差し替え
@@ -13,7 +13,7 @@ import numpy as np
 from PIL import Image
 from build2 import *
 
-D = ROOT + "新しい資料 2026-11-16/"
+D = ROOT + "資料/2026-11-16/"
 COLL = "LOOKS CAN KILL"
 LILY = "@LILY_221019"
 M = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]  # 表の列の順

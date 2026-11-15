@@ -1,4 +1,4 @@
-"""REVIVE+ の画質を上げる：6 人の wishlist（@idalshiro、カード 326×506px。新しい資料 2026-10-01/REVIVE+ 追加分/）から、
+"""REVIVE+ の画質を上げる：6 人の wishlist（@idalshiro、カード 326×506px。資料/2026-10-01/REVIVE+ 追加分/）から、
 いまの画像と同じ写真を探して大きい画像に差し替える（枠はそのまま）。
 
 - 表は 11 列 × 約 9 段（列 x=56+405c・段 y=1338+702r）。カードを囲む青い枠は 12px 内側に切って除く
@@ -13,7 +13,7 @@ import grid
 from build2 import *
 from hires_ida import feat, min_block
 
-D = ROOT + "新しい資料 2026-10-01/REVIVE+ 追加分/"
+D = ROOT + "資料/2026-10-01/REVIVE+ 追加分/"
 C = "REVIVE+"
 EN = {"ユジン": "Yujin", "ガウル": "Gaeul", "レイ": "Rei", "ウォニョン": "Wonyoung", "リズ": "Liz", "イソ": "Leeseo"}
 TH, MARGIN, GAIN, BLOCK_TH = 0.85, 0.05, 1.25, 0.35

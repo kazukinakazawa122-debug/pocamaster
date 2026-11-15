@@ -1,7 +1,7 @@
 """メルカリ・X などの実物の写真（カード 1 枚ずつ）で、粗いカードの画質を上げる共通の道具（2026-10-23。hires_mercari_revive2〜4_1022.py をまとめたもの）
 スキル .claude/skills/pocamaster-card-hires/SKILL.md の手順で使う。
 
-資料：pocamaster-images/新しい資料 <日付>/<フォルダ>/ に、写真を「お店の名前_出品番号.jpg」で置く（保存は毎回本人の了承をとる）
+資料：pocamaster-images/資料/<年-月-日>/<フォルダ>/ に、写真を「お店の名前_出品番号.jpg」で置く（保存は毎回本人の了承をとる）
 設定：tools/crop/review/hires/<名前>.json（OK・TRIM・メモ。Claude が見比べて書く）
 結果：tools/crop/review/hires/<名前>_find.json（照らし合わせ）、job は out/zzzzzzzzzzzzzzzzzzzzz_zz_<名前>.json（これまでの _y_・_z_mercari… の job より後、アプリの job〈z が 22 個〉より前に読まれる）
 

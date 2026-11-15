@@ -3,6 +3,22 @@
 ファンが作ったフォトカード一覧表（`C:\Users\kazuk\OneDrive\pocamaster-images\`、Git には入れない）から
 カードを 1 枚ずつ切り出し、アプリに取り込む ZIP を作る。
 
+## pocamaster-images の決め事（2026-11-16）
+
+| 場所 | 入れるもの |
+|---|---|
+| 一番上 | はじめに読んでください.txt・`pocamaster-images.zip`・`pocamaster-jackets.zip`・スマホ用の HTML だけ |
+| `資料/<年-月-日>/` | 新しい資料（切り出しの元）。日付は `2026-11-16` の形。`hires_batch.py` の回 `20261116` も `資料/2026-11-16/` に入る |
+| `資料/はじめの一覧表/` | 最初の一覧表 75 枚。`memlist.py` が名前の順の番号で使うので、足さない・抜かない |
+| `資料/<コレクション名>/`・`資料/_nonalbum/`・`資料/IVE English ver. …/` | 前からある資料（今のまま） |
+| `_cards/`・`_jackets/`・`差分ZIP/` | 道具が作るもの・ジャケットの元 |
+| `アプリから/` | アプリから書き出した ZIP（pocamaster-own-images-*.zip） |
+| `メルカリ見比べ/` | 本人に送る見比べの画像 |
+| `バックアップ/` | pocamaster-backup-*.zip |
+| `使わない/` | いらないもの（消さずにここへ） |
+
+道具のパスは `ROOT`（pocamaster-images/）からの相対パスで書く。フォルダを動かしたら、`tools/crop` の `*.py`・`review/**/*.json`・`out/cardsizes.csv` を直し、`merge.py` と `make_diff.py` で枚数が変わらないことを確かめる。
+
 ## 流れ
 1. `albums_*.py` を実行 → `pocamaster-images/_cards/<名前>/` に画像、`out/<名前>.json` に枠と画像の対応
 2. `hires.py` を実行 → 店舗ごとの表（カードが大きい）に同じ写真があれば、大きい画像に差し替える（`out/zz_hires.json`、確認用 `out/hires_report.csv`）
@@ -19,11 +35,11 @@
 | build2.py | 切り出し方（全体表・6 人分の表・名前の札・型を使う） |
 | memlist.py | メンバー別リストのカードを読む順に並べる |
 | albums_*.py | コレクションごとの設定（どの表のどの位置がどのカードか） |
-| albums_new0929.py | 2026-09-29 に追加した資料（`新しい資料 2026-09-29/`）のコラボ・ペプシ・シーグリ・ALIVE・Be Alright など |
-| albums_balsegno.py | @balsegno のリズのノンアルバム一覧（`_nonalbum/balsegno_liz/`）から、ファンミ・ファンコン・ツアーの種類を 6 人分足す（画像はリズだけ） |
-| albums_idalshiro.py | @idalshiro のメンバー別の全トレカ一覧（`_nonalbum/idalshiro/`）から、メンバーごとに違うグッズなどを足す |
-| albums_pipipup.py | @_pipipup の「IVE MD pc List. 02」（メンバー 6 枚。`新しい資料 2026-10-01/`）。MAP の位置（段・列）→ 枠。画像のない枠を埋める。`pp_watermark.json` は別の人の ID の透かしがあって外した位置 |
-| albums_solo.py | @idalshiro の solo merch（`_nonalbum/idalshiro/solo/`）から、メンバー個人の広告・イベントのトレカを個人のコレクションに入れる |
+| albums_new0929.py | 2026-09-29 に追加した資料（`資料/2026-09-29/`）のコラボ・ペプシ・シーグリ・ALIVE・Be Alright など |
+| albums_balsegno.py | @balsegno のリズのノンアルバム一覧（`資料/_nonalbum/balsegno_liz/`）から、ファンミ・ファンコン・ツアーの種類を 6 人分足す（画像はリズだけ） |
+| albums_idalshiro.py | @idalshiro のメンバー別の全トレカ一覧（`資料/_nonalbum/idalshiro/`）から、メンバーごとに違うグッズなどを足す |
+| albums_pipipup.py | @_pipipup の「IVE MD pc List. 02」（メンバー 6 枚。`資料/2026-10-01/`）。MAP の位置（段・列）→ 枠。画像のない枠を埋める。`pp_watermark.json` は別の人の ID の透かしがあって外した位置 |
+| albums_solo.py | @idalshiro の solo merch（`資料/_nonalbum/idalshiro/solo/`）から、メンバー個人の広告・イベントのトレカを個人のコレクションに入れる |
 | hires_ida.py | 画質を上げる：@idalshiro のメンバー別の表から、同じ写真の大きい画像に差し替える（`ida_drop.json` は目で見て外したもの） |
 | albums_ida_check.py | 本人が確認ページで「ない」とした @idalshiro のカードを、ラベルに合わせて枠・画像にする（`review/` に番号と位置） |
 | jackets.py | コレクションの表紙（アルバムのジャケット）の ZIP を作る。`pocamaster-images/_jackets/` に「コレクション名.jpg」で入れて実行 → `pocamaster-jackets.zip` |

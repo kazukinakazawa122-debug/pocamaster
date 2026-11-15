@@ -9,7 +9,7 @@
 from PIL import Image
 from build2 import *
 
-I = ROOT
+I = ROOT + "資料/"
 SETS = [
     ("REVIVE+", "KMStation", "3.0", I + "REVIVE+/kmstation/kms3.0.jpg", "won1y-",
      [(62, 22, 372, 500), (405, 28, 718, 500), (748, 25, 1062, 492), (48, 540, 372, 1025), (425, 545, 718, 1035), (765, 540, 1075, 1020)],

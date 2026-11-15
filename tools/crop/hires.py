@@ -63,7 +63,7 @@ print("いまの画像", len(old))
 # 店舗ごとの表からカードを探す
 new = []
 for folder, coll in FOLDERS.items():
-    key = "IVE English ver. - photocard list-20260927T144026Z-1-001/IVE English ver. - photocard list/" + folder
+    key = "資料/IVE English ver. - photocard list-20260927T144026Z-1-001/IVE English ver. - photocard list/" + folder
     for f in sorted(os.listdir(ENG + folder)):
         if sizes.get((key, f), 0) < MIN_W:
             continue

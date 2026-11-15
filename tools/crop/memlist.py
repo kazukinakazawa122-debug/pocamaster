@@ -7,9 +7,10 @@ import grid
 SP = os.path.dirname(os.path.abspath(__file__)) + "/"
 ROOT = r"C:/Users/kazuk/OneDrive/pocamaster-images/"
 import re
-# 番号で資料を指している（albums_*.py）。2026-10-01 に最上位へ日付名（20211223_…_iOS.jpg など）の @reina831wy の表が 58 枚入り（店舗ごとの表と同じもの）、
-# 並びがずれたので除く。新しい資料は「新しい資料 <日付>/」に移すこと（番号がずれるため）
-FILES = sorted(f for f in os.listdir(ROOT) if f.lower().endswith(".jpg") and not re.match(r"20\d{6}_\d+_iOS", f))
+# 番号で資料を指している（albums_*.py）。元の一覧表は 資料/はじめの一覧表/ に置く（2026-11-16 に一番上から移した）。
+# ここに画像を足すと番号がずれる。新しい資料は 資料/<年-月-日>/ に入れること。値は ROOT からの相対パス
+SHEETS = "資料/はじめの一覧表/"
+FILES = [SHEETS + f for f in sorted(f for f in os.listdir(ROOT + SHEETS) if f.lower().endswith(".jpg") and not re.match(r"20\d{6}_\d+_iOS", f))]
 
 
 def ordered(path, ratio=(1.15, 1.8), min_w=0.03, max_w=0.12, y_min=0.0, tol=0.35, size_tol=(0.6, 1.5)):

@@ -1,4 +1,4 @@
-"""本人が 2026-09-30 に追加した資料（pocamaster-images/新しい資料 2026-09-30/）から、空いている枠を埋める・新しい種類を足す
+"""本人が 2026-09-30 に追加した資料（pocamaster-images/資料/2026-09-30/）から、空いている枠を埋める・新しい種類を足す
 
 - SHOW WHAT I HAVE の Random Photocard（@reina831wy）：UNIT の 15 枚と全員の 1 枚。組み合わせは、同じ作者のメンバー別一覧 6 枚のどこに
   同じ写真があるかで決めた（14 枚は 2 人の表と一致。29 はイソの表だけ一致し、残っている組み合わせがガウル・イソだけなのでそれにした）
@@ -15,7 +15,7 @@ import json
 from PIL import Image, ImageOps
 from build2 import *
 
-D = ROOT + "新しい資料 2026-09-30/"
+D = ROOT + "資料/2026-09-30/"
 R = SP + "review/0930/"
 ORD6 = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]
 SWIH = "1st WORLD TOUR 'SHOW WHAT I HAVE'"

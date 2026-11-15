@@ -8,7 +8,7 @@
 import grid
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/SHOW WHAT I AM ランダムトレカ 全員カード/"
+D = ROOT + "資料/2026-10-01/SHOW WHAT I AM ランダムトレカ 全員カード/"
 BOX = [(825, 134, 906, 261), (825, 265, 906, 392), (825, 397, 906, 524), (825, 528, 906, 655)]
 if __name__ == "__main__":
     im = grid.load(D + "SWIA_MD_TradingCard_Amazingk.jpg")

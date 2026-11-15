@@ -1,4 +1,4 @@
-"""2026-09-29 に本人が追加した資料（pocamaster-images/新しい資料 2026-09-29/）から枠と画像を作る
+"""2026-09-29 に本人が追加した資料（pocamaster-images/資料/2026-09-29/）から枠と画像を作る
 
 資料の番号は、ファイル名の順（0〜28）。カードの番号は、card_boxes で見つけた箱を読む順に並べたもの
 （確認用の画像で 1 つずつ見て決めた）。メンバーの並びは表に印刷された名前（YUJIN GAEUL REI WONYOUNG LIZ LEESEO）。
@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image
 from build2 import *
 
-D = ROOT + "新しい資料 2026-09-29/"
+D = ROOT + "資料/2026-09-29/"
 FILES = sorted(os.listdir(D))
 M = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"]  # 表の列の順
 ALL = ["全員"]

@@ -51,7 +51,7 @@ python tools/crop/hires_batch.py filter <回> <集めた番号.txt>   # 保存�
 `tools/crop/review/hires/<回>_組.json` に「組の名前 → コレクション名」を書く（「A||B」で複数のコレクションをまとめて照らし合わせられる。どのアルバムか分からない検索に使う。コレクションが多いほど遅い）。`"_見出し": {フォルダ名: 日本語の見出し}` を入れると、確かめるページの見出しになる。
 
 ```
-python tools/crop/hires_batch.py download <回>   # 了承のあとだけ。新しい資料 <回>/<組>/ に保存（110 件を超える組は _A・_B に分ける）。画像は Git に入れない
+python tools/crop/hires_batch.py download <回>   # 了承のあとだけ。資料/<年-月-日>/<組>/ に保存（回 20261116 → 資料/2026-11-16/）（110 件を超える組は _A・_B に分ける）。画像は Git に入れない
 python tools/crop/hires_batch.py find <回>       # 裏で（run_in_background）。10 本ずつ並べて動く。1,000 件で約 1 時間
 ```
 

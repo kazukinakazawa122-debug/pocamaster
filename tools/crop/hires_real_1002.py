@@ -1,5 +1,5 @@
 """本人が持ってきたフリマの出品写真（実物のカード 6 枚ずつ、iPhone の画面写真 11 枚）で画質を上げる（2026-10-02、本人の方針「画質はより良く」）
-資料：新しい資料 2026-10-02/フリマの実物の写真/（「〜iOS 1.png」は同じ画像の重なりなので使わない）
+資料：資料/2026-10-02/フリマの実物の写真/（「〜iOS 1.png」は同じ画像の重なりなので使わない）
 
 1 段目（python tools/crop/hires_real_1002.py find）：
   写真の部分を見つけて 3 列 × 2 段のマスに分け、マスの真ん中の模様をいまの全部入りの ZIP の全カードと比べて候補を 10 枚にしぼり、
@@ -14,7 +14,7 @@ from build2 import *
 from hires_real_0930 import locate
 
 sys.stdout.reconfigure(encoding="utf-8")
-D = ROOT + "新しい資料 2026-10-02/フリマの実物の写真/"
+D = ROOT + "資料/2026-10-02/フリマの実物の写真/"
 ZIP = ROOT + "pocamaster-images.zip"
 OUTJ = SP + "review/1002/real_flea.json"
 

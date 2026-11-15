@@ -1,4 +1,4 @@
-"""IVE SECRET の QQ Music（本人が 2026-10-01 にフォルダへ入れた。pocamaster-images/新しい資料 2026-10-01/IVE SECRET QQ Music 追加分/）
+"""IVE SECRET の QQ Music（本人が 2026-10-01 にフォルダへ入れた。pocamaster-images/資料/2026-10-01/IVE SECRET QQ Music 追加分/）
 
 - Christmas_Yujin.jpg：ユジンの「QQ Music × Starship Square｜Christmas」（239×332px と小さいが唯一の資料）
 - QQ1_A.png・QQ1_B.png・QQ1_C.png：「QQ Music 1」の足りないメンバー（レイ・リズ・イソ）の実物の写真の画面写真（1 枚ずつ）
@@ -8,7 +8,7 @@
 from PIL import Image
 from build2 import *
 
-D = ROOT + "新しい資料 2026-10-01/IVE SECRET QQ Music 追加分/"
+D = ROOT + "資料/2026-10-01/IVE SECRET QQ Music 追加分/"
 C = "IVE SECRET"
 k = 1284 / 601
 BOX = {"QQ1_A.png": (180, 462, 438, 860), "QQ1_B.png": (218, 522, 432, 852), "QQ1_C.png": (133, 366, 470, 880)}

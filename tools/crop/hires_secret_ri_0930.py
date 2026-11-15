@@ -1,4 +1,4 @@
-"""IVE SECRET：@ri__chan94 の種類ごとの表 7 枚（本人が 2026-09-30 に追加、新しい資料 2026-09-30/IVE SECRET_ri__chan94/）で画質を上げる
+"""IVE SECRET：@ri__chan94 の種類ごとの表 7 枚（本人が 2026-09-30 に追加、資料/2026-09-30/IVE SECRET_ri__chan94/）で画質を上げる
 
 - カードに透かしなし（作者名は表の上だけ）。カードの横幅 約 500〜800px（いまの画像は約 378px）
 - 表：Apple Music 1.0／SSQ 4set（＝4TYPE）／SSQ 9set（＝3+6、左が A・右が B）／SSQ Photobook（＝3TYPE 1・2）／SSQ LOVED IVE／withmuu 1.0／XOXZ Broadcast
@@ -9,7 +9,7 @@ import json
 from PIL import Image
 from build2 import *
 
-D = ROOT + "新しい資料 2026-09-30/IVE SECRET_ri__chan94/"
+D = ROOT + "資料/2026-09-30/IVE SECRET_ri__chan94/"
 OV = {13: ["ユジン", "Starship Square", "3+6 (B)"], 28: ["レイ", "Starship Square", "3TYPE 1"],
       38: ["レイ", "Starship Square", "LOVED IVE"], 44: ["レイ", "withmuu", "1.0"]}
 SKIP = {48}
