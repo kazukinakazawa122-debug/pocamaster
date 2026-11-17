@@ -1,0 +1,108 @@
+{
+"seed": [
+[
+"REVIVE+",
+"リズ",
+"本体封入",
+"Digipack"
+],
+[
+"REVIVE+",
+"ガウル",
+"Makestar ラキドロ",
+"4.0"
+],
+[
+"REVIVE+",
+"レイ",
+"Ktown4U",
+"3.0"
+],
+[
+"REVIVE+",
+"レイ",
+"withmuu",
+"8.0"
+],
+[
+"REVIVE+",
+"ガウル",
+"本体封入",
+"PETIT-IVE"
+],
+[
+"REVIVE+",
+"レイ",
+"Makestar ラキドロ",
+"4.0"
+]
+],
+"images": [
+{
+"collection": "REVIVE+",
+"members": [
+"リズ"
+],
+"source": "本体封入",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "Makestar ラキドロ",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Ktown4U",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "withmuu",
+"version": "8.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "本体封入",
+"version": "PETIT-IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0004_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"レイ"
+],
+"source": "Makestar ラキドロ",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117h/0005_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

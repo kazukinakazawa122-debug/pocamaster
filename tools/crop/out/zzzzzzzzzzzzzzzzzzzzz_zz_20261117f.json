@@ -1,0 +1,91 @@
+{
+"seed": [
+[
+"LOOKS CAN KILL",
+"ガウル",
+"QQ Music",
+"オフライン"
+],
+[
+"LOOKS CAN KILL",
+"リズ",
+"Tower Records",
+"1.0 A"
+],
+[
+"LOOKS CAN KILL",
+"イソ",
+"本体封入",
+"LOVED IVE"
+],
+[
+"LOOKS CAN KILL",
+"イソ",
+"Starship Square",
+"LOVED IVE"
+],
+[
+"LOOKS CAN KILL",
+"レイ",
+"HMV",
+"B"
+]
+],
+"images": [
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"ガウル"
+],
+"source": "QQ Music",
+"version": "オフライン",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"リズ"
+],
+"source": "Tower Records",
+"version": "1.0 A",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"イソ"
+],
+"source": "本体封入",
+"version": "LOVED IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"イソ"
+],
+"source": "Starship Square",
+"version": "LOVED IVE",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"レイ"
+],
+"source": "HMV",
+"version": "B",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117f/0004_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
