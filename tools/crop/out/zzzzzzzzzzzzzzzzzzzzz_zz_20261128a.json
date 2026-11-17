@@ -1,0 +1,74 @@
+{
+"seed": [
+[
+"IVE SECRET",
+"ユジン",
+"Apple Music",
+"1.0"
+],
+[
+"IVE SECRET",
+"ウォニョン",
+"Apple Music",
+"4.0"
+],
+[
+"IVE SECRET",
+"ガウル",
+"Apple Music",
+"4.0"
+],
+[
+"IVE SECRET",
+"レイ",
+"Apple Music",
+"2.0"
+]
+],
+"images": [
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "Apple Music",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261128a/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261128a/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ウォニョン"
+],
+"source": "Apple Music",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261128a/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261128a/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ガウル"
+],
+"source": "Apple Music",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261128a/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261128a/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "Apple Music",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261128a/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261128a/0003_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
