@@ -20,12 +20,6 @@
 ],
 [
 "REVIVE+",
-"ウォニョン",
-"withmuu ラキドロ",
-"3.0"
-],
-[
-"REVIVE+",
 "ユジン",
 "Apple Music",
 "1.0"
@@ -98,10 +92,10 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ウォニョン"
+"ユジン"
 ],
-"source": "withmuu ラキドロ",
-"version": "3.0",
+"source": "Apple Music",
+"version": "1.0",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0003.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0003_t.jpg",
 "credit": "メルカリの出品写真"
@@ -109,10 +103,10 @@
 {
 "collection": "REVIVE+",
 "members": [
-"ユジン"
+"リズ"
 ],
-"source": "Apple Music",
-"version": "1.0",
+"source": "本体封入",
+"version": "LOVED IVE",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0004.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0004_t.jpg",
 "credit": "メルカリの出品写真"
@@ -120,7 +114,7 @@
 {
 "collection": "REVIVE+",
 "members": [
-"リズ"
+"レイ"
 ],
 "source": "本体封入",
 "version": "LOVED IVE",
@@ -131,23 +125,12 @@
 {
 "collection": "REVIVE+",
 "members": [
-"レイ"
-],
-"source": "本体封入",
-"version": "LOVED IVE",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0006.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0006_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "REVIVE+",
-"members": [
 "リズ"
 ],
 "source": "Apple Music",
 "version": "2.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0007.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0007_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0006_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -157,8 +140,8 @@
 ],
 "source": "Apple Music",
 "version": "1.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0008.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0008_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0007_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -168,8 +151,8 @@
 ],
 "source": "Ktown4U ラキドロ",
 "version": "4.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0009.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0009_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261119f/0008_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]
