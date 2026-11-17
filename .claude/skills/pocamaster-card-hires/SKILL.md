@@ -34,6 +34,7 @@ description: pocamaster（IVE のトレカのアプリ）で、粗いカード�
 - お店の名前は日本語の呼び方でも探す（ミューコリ＝Music Korea、メイクスター＝Makestar、サウェ＝Soundwave、ケタポ＝Ktown4U、ソニミュ、スタシ など）。
 - **カード 1 枚の出品**がいちばん良い（高さ 600〜1,000px）。6 枚コンプは 1 枚 400px ほど。20 枚以上のまとめ売りは小さいので当たらない。
 - X：`https://x.com/search?q=<韓国語の語句>&f=media`。元の大きさは `pbs.twimg.com/media/<id>?format=jpg&name=orig`。告知画像はぼかし入り・重なりが多い。
+  - 集めた番号のファイルに `x<メディアの id>` と書けば、hires_batch.py がメルカリと同じ手順で保存・照らし合わせる（`img[src*="pbs.twimg.com/media/"]` を集める）。名前の .json に `"credit": "X の告知画像"` を足す。27 回目（Collab & Event）は検索に関係ない最近の画像が多く、当たり 0 だった
 - 見るだけ。ログイン・購入・いいね・コメントはしない。使い終わったタブは閉じる。
 
 集めた番号は「組の名前 番号 番号 …」を 1 行ずつのファイルにして：
