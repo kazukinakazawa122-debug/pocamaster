@@ -1,0 +1,74 @@
+{
+"seed": [
+[
+"LOOKS CAN KILL",
+"ウォニョン",
+"hello82",
+"オンライン"
+],
+[
+"LOOKS CAN KILL",
+"レイ",
+"本体封入",
+"PLANET フォトカード 2"
+],
+[
+"LOOKS CAN KILL",
+"レイ",
+"本体封入",
+"Digipack"
+],
+[
+"LOOKS CAN KILL",
+"レイ",
+"本体封入",
+"HERO ON SET"
+]
+],
+"images": [
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"ウォニョン"
+],
+"source": "hello82",
+"version": "オンライン",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118a/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118a/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "PLANET フォトカード 2",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118a/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118a/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "Digipack",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118a/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118a/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"レイ"
+],
+"source": "本体封入",
+"version": "HERO ON SET",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118a/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118a/0003_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
