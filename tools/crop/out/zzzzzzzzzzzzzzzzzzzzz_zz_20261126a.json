@@ -1,0 +1,57 @@
+{
+"seed": [
+[
+"I've MINE",
+"ガウル",
+"HOTTRACKS",
+""
+],
+[
+"I've MINE",
+"イソ",
+"Sony Music Japan",
+"2-1"
+],
+[
+"I've MINE",
+"ユジン",
+"HOTTRACKS",
+""
+]
+],
+"images": [
+{
+"collection": "I've MINE",
+"members": [
+"ガウル"
+],
+"source": "HOTTRACKS",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261126a/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261126a/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "I've MINE",
+"members": [
+"イソ"
+],
+"source": "Sony Music Japan",
+"version": "2-1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261126a/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261126a/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "I've MINE",
+"members": [
+"ユジン"
+],
+"source": "HOTTRACKS",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261126a/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261126a/0002_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
