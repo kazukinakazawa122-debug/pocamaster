@@ -2,12 +2,6 @@
 "seed": [
 [
 "LOOKS CAN KILL",
-"イソ",
-"hello82",
-"82EVENT オフライン"
-],
-[
-"LOOKS CAN KILL",
 "ウォニョン",
 "Starship Square",
 "Digipack"
@@ -65,10 +59,10 @@
 {
 "collection": "LOOKS CAN KILL",
 "members": [
-"イソ"
+"ウォニョン"
 ],
-"source": "hello82",
-"version": "82EVENT オフライン",
+"source": "Starship Square",
+"version": "Digipack",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0000.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0000_t.jpg",
 "credit": "メルカリの出品写真"
@@ -76,10 +70,10 @@
 {
 "collection": "LOOKS CAN KILL",
 "members": [
-"ウォニョン"
+"レイ"
 ],
-"source": "Starship Square",
-"version": "Digipack",
+"source": "withmuu",
+"version": "1.0",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0001.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0001_t.jpg",
 "credit": "メルカリの出品写真"
@@ -87,7 +81,7 @@
 {
 "collection": "LOOKS CAN KILL",
 "members": [
-"レイ"
+"ガウル"
 ],
 "source": "withmuu",
 "version": "1.0",
@@ -100,21 +94,10 @@
 "members": [
 "ガウル"
 ],
-"source": "withmuu",
-"version": "1.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0003.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0003_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "LOOKS CAN KILL",
-"members": [
-"ガウル"
-],
 "source": "本体封入",
 "version": "HERO ON SET",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0004.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0004_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0003_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -124,8 +107,8 @@
 ],
 "source": "Apple Music",
 "version": "1.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0005.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0005_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0004_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -135,8 +118,8 @@
 ],
 "source": "Starship Square",
 "version": "Digipack",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0006.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0006_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0005_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -146,8 +129,8 @@
 ],
 "source": "本体封入",
 "version": "HERO COMICS",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0007.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0007_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0006.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0006_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -157,8 +140,8 @@
 ],
 "source": "Apple Music",
 "version": "1.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0008.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0008_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0007.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0007_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -168,8 +151,8 @@
 ],
 "source": "Makestar",
 "version": "1.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0009.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0009_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261117b/0008_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]
