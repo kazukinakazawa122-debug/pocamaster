@@ -1,0 +1,57 @@
+{
+"seed": [
+[
+"Collab & Event｜コラボ・イベント",
+"レイ",
+"Papa John's",
+"2.0"
+],
+[
+"Collab & Event｜コラボ・イベント",
+"リズ",
+"Papa John's",
+"4.0 クリア"
+],
+[
+"Collab & Event｜コラボ・イベント",
+"リズ",
+"Papa John's",
+"2.0"
+]
+],
+"images": [
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"レイ"
+],
+"source": "Papa John's",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127c/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127c/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"リズ"
+],
+"source": "Papa John's",
+"version": "4.0 クリア",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127c/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127c/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"リズ"
+],
+"source": "Papa John's",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127c/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127c/0002_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

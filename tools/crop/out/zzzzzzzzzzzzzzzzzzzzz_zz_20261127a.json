@@ -1,0 +1,40 @@
+{
+"seed": [
+[
+"Collab & Event｜コラボ・イベント",
+"ガウル",
+"光東 とうもろこしのひげ茶",
+"2.0"
+],
+[
+"Collab & Event｜コラボ・イベント",
+"ユジン",
+"光東 とうもろこしのひげ茶",
+"1.0"
+]
+],
+"images": [
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ガウル"
+],
+"source": "光東 とうもろこしのひげ茶",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127a/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127a/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "Collab & Event｜コラボ・イベント",
+"members": [
+"ユジン"
+],
+"source": "光東 とうもろこしのひげ茶",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127a/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261127a/0001_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
