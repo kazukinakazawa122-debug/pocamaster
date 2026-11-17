@@ -8,12 +8,6 @@
 ],
 [
 "LOOKS CAN KILL",
-"ガウル",
-"MusicArt",
-"永豊文庫"
-],
-[
-"LOOKS CAN KILL",
 "ウォニョン",
 "withmuu",
 "1.0"
@@ -88,10 +82,10 @@
 {
 "collection": "LOOKS CAN KILL",
 "members": [
-"ガウル"
+"ウォニョン"
 ],
-"source": "MusicArt",
-"version": "永豊文庫",
+"source": "withmuu",
+"version": "1.0",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0001.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0001_t.jpg",
 "credit": "メルカリの出品写真"
@@ -99,10 +93,10 @@
 {
 "collection": "LOOKS CAN KILL",
 "members": [
-"ウォニョン"
+"リズ"
 ],
-"source": "withmuu",
-"version": "1.0",
+"source": "withmuu ラキドロ",
+"version": "2.0 POLA",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0002.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0002_t.jpg",
 "credit": "メルカリの出品写真"
@@ -110,7 +104,7 @@
 {
 "collection": "LOOKS CAN KILL",
 "members": [
-"リズ"
+"イソ"
 ],
 "source": "withmuu ラキドロ",
 "version": "2.0 POLA",
@@ -123,21 +117,10 @@
 "members": [
 "イソ"
 ],
-"source": "withmuu ラキドロ",
-"version": "2.0 POLA",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0004.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0004_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "LOOKS CAN KILL",
-"members": [
-"イソ"
-],
 "source": "MusicArt",
 "version": "ARTBOX",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0005.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0005_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0004_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -147,6 +130,17 @@
 ],
 "source": "Makestar",
 "version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0005.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0005_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"ユジン"
+],
+"source": "MusicArt",
+"version": "ARTBOX",
 "file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0006.jpg",
 "thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0006_t.jpg",
 "credit": "メルカリの出品写真"
@@ -154,7 +148,7 @@
 {
 "collection": "LOOKS CAN KILL",
 "members": [
-"ユジン"
+"ガウル"
 ],
 "source": "MusicArt",
 "version": "ARTBOX",
@@ -165,23 +159,12 @@
 {
 "collection": "LOOKS CAN KILL",
 "members": [
-"ガウル"
-],
-"source": "MusicArt",
-"version": "ARTBOX",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0008.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0008_t.jpg",
-"credit": "メルカリの出品写真"
-},
-{
-"collection": "LOOKS CAN KILL",
-"members": [
 "ユジン"
 ],
 "source": "MusicArt",
 "version": "永豊文庫",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0009.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0009_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0008.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0008_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -191,8 +174,8 @@
 ],
 "source": "withmuu",
 "version": "1.0",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0010.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0010_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0009.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0009_t.jpg",
 "credit": "メルカリの出品写真"
 },
 {
@@ -202,8 +185,8 @@
 ],
 "source": "MusicArt",
 "version": "ARTBOX",
-"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0011.jpg",
-"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0011_t.jpg",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0010.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261118b/0010_t.jpg",
 "credit": "メルカリの出品写真"
 }
 ]
