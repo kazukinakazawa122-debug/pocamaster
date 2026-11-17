@@ -1,0 +1,40 @@
+{
+"seed": [
+[
+"IVE SECRET",
+"ユジン",
+"IDOLSHOP",
+""
+],
+[
+"IVE SECRET",
+"レイ",
+"オフラインイベント",
+"10.12 TOKYO"
+]
+],
+"images": [
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "IDOLSHOP",
+"version": "",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124e/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124e/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "オフラインイベント",
+"version": "10.12 TOKYO",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124e/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124e/0001_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}

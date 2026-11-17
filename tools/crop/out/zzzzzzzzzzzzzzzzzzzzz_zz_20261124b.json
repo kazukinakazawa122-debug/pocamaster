@@ -1,0 +1,92 @@
+{
+"seed": [
+[
+"IVE SECRET",
+"ユジン",
+"Yetimall ラキドロ",
+"-1"
+],
+[
+"IVE SECRET",
+"ユジン",
+"Soundwave ラキドロ",
+"2.0"
+],
+[
+"IVE SECRET",
+"レイ",
+"A!SMART",
+"C"
+],
+[
+"IVE SECRET",
+"ガウル/リズ",
+"Makestar ラキドロ",
+"4.0 UNIT"
+],
+[
+"IVE SECRET",
+"ユジン",
+"Makestar",
+"5.0"
+]
+],
+"images": [
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "Yetimall ラキドロ",
+"version": "-1",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "Soundwave ラキドロ",
+"version": "2.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"レイ"
+],
+"source": "A!SMART",
+"version": "C",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ガウル",
+"リズ"
+],
+"source": "Makestar ラキドロ",
+"version": "4.0 UNIT",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0003_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "IVE SECRET",
+"members": [
+"ユジン"
+],
+"source": "Makestar",
+"version": "5.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0004.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261124b/0004_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
