@@ -1,0 +1,74 @@
+{
+"seed": [
+[
+"REVIVE+",
+"ユジン",
+"withmuu ラキドロ",
+"3.0"
+],
+[
+"REVIVE+",
+"イソ",
+"Makestar ラキドロ",
+"4.0"
+],
+[
+"REVIVE+",
+"ガウル",
+"withmuu ラキドロ",
+"6.0 POLA"
+],
+[
+"REVIVE+",
+"ユジン",
+"withmuu ラキドロ",
+"6.0 POLA"
+]
+],
+"images": [
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "withmuu ラキドロ",
+"version": "3.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261120c/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261120c/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"イソ"
+],
+"source": "Makestar ラキドロ",
+"version": "4.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261120c/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261120c/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ガウル"
+],
+"source": "withmuu ラキドロ",
+"version": "6.0 POLA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261120c/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261120c/0002_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "REVIVE+",
+"members": [
+"ユジン"
+],
+"source": "withmuu ラキドロ",
+"version": "6.0 POLA",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261120c/0003.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261120c/0003_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
