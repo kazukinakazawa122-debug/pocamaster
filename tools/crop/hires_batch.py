@@ -15,7 +15,7 @@
   python tools/crop/hires_batch.py ng       <回> a-03 e-01 …       … 本人が「合っていない」にした組を ok から外す（そのあと apply → merge → make_diff）
   python tools/crop/hires_batch.py split    <差分ZIP>              … 28MB を超える差分 ZIP を、同じ番号のまま 1of2・2of2… に分ける（スマホに送れるのは 30MB まで）
 
-集めた番号.txt・候補.txt の形：1 行に「組の名前 出品番号 出品番号 …」（番号は m があってもなくてもよい）
+集めた番号.txt・候補.txt の形：1 行に「組の名前 出品番号 出品番号 …」（番号は m があってもなくてもよい。X の画像は x<メディアの id>）
 """
 import glob, json, os, re, string, subprocess, sys, zipfile
 from concurrent.futures import ThreadPoolExecutor
@@ -26,6 +26,7 @@ REPO = os.path.dirname(os.path.dirname(HERE.rstrip("/"))).replace("\\", "/") + "
 ROOT = "C:/Users/kazuk/OneDrive/pocamaster-images/"
 CFG = HERE + "review/hires/"
 PHOTO = "https://static.mercdn.net/item/detail/orig/photos/m%s_1.jpg"
+XPHOTO = "https://pbs.twimg.com/media/%s?format=jpg&name=orig"  # X の画像（番号の頭に x）
 SPLIT_OVER = 110  # 1 つのフォルダに入れる件数（多いと照らし合わせが長くなるので半分に分ける）
 ZIP_LIMIT = 28 * 1024 * 1024
 
@@ -48,7 +49,7 @@ def read_groups(path):
     for line in open(path, encoding="utf-8"):
         p = line.split()
         if len(p) >= 1:
-            out.append((p[0], [x.lstrip("m") for x in p[1:]]))
+            out.append((p[0], [x if x.startswith("x") else x.lstrip("m") for x in p[1:]]))
     return out
 
 
@@ -62,14 +63,14 @@ def cmd_filter(run, raw):
     for d in glob.glob(ROOT + "資料/20*"):
         for _, _, fs in os.walk(d):
             for f in fs:
-                saved |= set(re.findall(r"m(\d{9,})", f))
+                saved |= set(re.findall(r"m(\d{9,})", f)) | set(re.findall(r"_(x[A-Za-z0-9_-]{10,})\.jpg", f))
     seen, lines, total = set(), [], 0
     for tag, ids in read_groups(raw):
         new = [i for i in dict.fromkeys(ids) if i not in saved and i not in seen]
         seen |= set(new)
         total += len(new)
         print(f"{tag}：{len(ids)} 件 → 新しい {len(new)} 件")
-        lines.append(tag + " " + " ".join("m" + i for i in new))
+        lines.append(tag + " " + " ".join(i if i.startswith("x") else "m" + i for i in new))
     out = CFG + run + "a_候補.txt"
     open(out, "w", encoding="utf-8").write("\n".join(lines) + "\n")
     print(f"合計 {total} 件 → {out}（保存済み {len(saved)} 件は外した）")
@@ -94,7 +95,8 @@ def cmd_download(run):
     jobs = []
     for folder, tag, ids in folders(run):
         os.makedirs(base + folder, exist_ok=True)
-        jobs += [(base + f"{folder}/{tag}_m{i}.jpg", PHOTO % i) for i in ids]
+        jobs += [(base + f"{folder}/{tag}_{i}.jpg", XPHOTO % i[1:]) if i.startswith("x")
+                 else (base + f"{folder}/{tag}_m{i}.jpg", PHOTO % i) for i in ids]
 
     def get(j):
         path, url = j
