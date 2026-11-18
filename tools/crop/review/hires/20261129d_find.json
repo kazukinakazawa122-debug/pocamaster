@@ -1,0 +1,87 @@
+[
+ {
+  "photo": "petit_m14605878760.jpg",
+  "box": [
+   290,
+   622,
+   601,
+   1080
+  ],
+  "score": 0.579,
+  "key": [
+   "LOOKS CAN KILL",
+   "イソ",
+   "HMV",
+   "B"
+  ],
+  "old_h": 1002
+ },
+ {
+  "photo": "petit_m37549508357.jpg",
+  "box": [
+   253,
+   0,
+   616,
+   534
+  ],
+  "score": 0.609,
+  "key": [
+   "LOOKS CAN KILL",
+   "イソ",
+   "HMV",
+   "B"
+  ],
+  "old_h": 1002
+ },
+ {
+  "photo": "petit_m39807720560.jpg",
+  "box": [
+   207,
+   560,
+   543,
+   1080
+  ],
+  "score": 0.75,
+  "key": [
+   "LOOKS CAN KILL",
+   "ユジン",
+   "A!SMART",
+   "D"
+  ],
+  "old_h": 298
+ },
+ {
+  "photo": "petit_m76821600659.jpg",
+  "box": [
+   263,
+   90,
+   792,
+   910
+  ],
+  "score": 0.846,
+  "key": [
+   "LOOKS CAN KILL",
+   "ウォニョン",
+   "本体封入",
+   "PETIT-IVE"
+  ],
+  "old_h": 217
+ },
+ {
+  "photo": "petit_m78661481765.jpg",
+  "box": [
+   531,
+   2,
+   851,
+   498
+  ],
+  "score": 0.571,
+  "key": [
+   "LOOKS CAN KILL",
+   "ウォニョン",
+   "Amazon",
+   ""
+  ],
+  "old_h": 96
+ }
+]

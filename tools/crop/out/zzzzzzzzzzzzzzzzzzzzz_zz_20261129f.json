@@ -1,0 +1,57 @@
+{
+"seed": [
+[
+"LOOKS CAN KILL",
+"ガウル",
+"Ktown4U",
+"1.0"
+],
+[
+"LOOKS CAN KILL",
+"リズ",
+"Tower Records",
+"1.0 渋谷"
+],
+[
+"LOOKS CAN KILL",
+"イソ",
+"Music Korea",
+"1.0"
+]
+],
+"images": [
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"ガウル"
+],
+"source": "Ktown4U",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261129f/0000.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261129f/0000_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"リズ"
+],
+"source": "Tower Records",
+"version": "1.0 渋谷",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261129f/0001.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261129f/0001_t.jpg",
+"credit": "メルカリの出品写真"
+},
+{
+"collection": "LOOKS CAN KILL",
+"members": [
+"イソ"
+],
+"source": "Music Korea",
+"version": "1.0",
+"file": "zzzzzzzzzzzzzzzzzzzzz_zz_20261129f/0002.jpg",
+"thumb": "zzzzzzzzzzzzzzzzzzzzz_zz_20261129f/0002_t.jpg",
+"credit": "メルカリの出品写真"
+}
+]
+}
