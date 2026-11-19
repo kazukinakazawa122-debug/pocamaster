@@ -117,7 +117,7 @@ function render(){
       c.className = "card" + (v === "ok" ? " is-ok" : v === "ng" ? " is-ng" : "");
       c.innerHTML = `
         <div class="head"><span class="code">${it.sheet} の ${it.no}</span><span class="name"></span><span class="src"></span>${it.flag ? '<span class="flag">前の画像がぼかし・特に見てください</span>' : ''}</div>
-        <img class="pic" loading="lazy" alt="" src="${it.img}">
+        <img class="pic" alt="" src="${it.img}">
         <div class="cap"><span>新しい写真</span><span>前の画像</span></div>
         <div class="btns">
           <button type="button" class="b-ok" id="ok-${it.id}" aria-pressed="${v==='ok'}">合っている</button>
