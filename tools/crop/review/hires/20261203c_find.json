@@ -1,0 +1,3130 @@
+[
+ {
+  "photo": "ENC_m10350522317.jpg",
+  "box": [
+   64,
+   58,
+   518,
+   756
+  ],
+  "score": 0.912,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m10555260215.jpg",
+  "box": [
+   359,
+   267,
+   736,
+   789
+  ],
+  "score": 0.956,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 809
+ },
+ {
+  "photo": "ENC_m10650199410.jpg",
+  "box": [
+   346,
+   532,
+   676,
+   1020
+  ],
+  "score": 0.654,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル/ユジン",
+   "Random Photocard",
+   "ユニット"
+  ],
+  "old_h": 621
+ },
+ {
+  "photo": "ENC_m12273171467.jpg",
+  "box": [
+   773,
+   495,
+   1080,
+   983
+  ],
+  "score": 0.773,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m13303550384.jpg",
+  "box": [
+   334,
+   242,
+   783,
+   919
+  ],
+  "score": 0.875,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 761
+ },
+ {
+  "photo": "ENC_m13552562205.jpg",
+  "box": [
+   90,
+   167,
+   548,
+   858
+  ],
+  "score": 0.873,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 761
+ },
+ {
+  "photo": "ENC_m13954210212.jpg",
+  "box": [
+   385,
+   452,
+   692,
+   799
+  ],
+  "score": 0.726,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 502
+ },
+ {
+  "photo": "ENC_m15192021810.jpg",
+  "box": [
+   272,
+   135,
+   813,
+   943
+  ],
+  "score": 0.956,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "DIVE ZONE FC ブース特典",
+   "Day 3"
+  ],
+  "old_h": 865
+ },
+ {
+  "photo": "ENC_m15504001617.jpg",
+  "box": [
+   310,
+   165,
+   742,
+   865
+  ],
+  "score": 0.943,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore（アンコール）",
+   "Wing Hair Pin Set"
+  ],
+  "old_h": 895
+ },
+ {
+  "photo": "ENC_m17006799070.jpg",
+  "box": [
+   672,
+   6,
+   999,
+   510
+  ],
+  "score": 0.646,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "イソ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 253
+ },
+ {
+  "photo": "ENC_m17138515645.jpg",
+  "box": [
+   137,
+   216,
+   526,
+   815
+  ],
+  "score": 0.922,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m17244743102.jpg",
+  "box": [
+   627,
+   354,
+   934,
+   811
+  ],
+  "score": 0.627,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m17533872399.jpg",
+  "box": [
+   563,
+   561,
+   870,
+   1023
+  ],
+  "score": 0.758,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m18013003370.jpg",
+  "box": [
+   711,
+   592,
+   1018,
+   1080
+  ],
+  "score": 0.772,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m18168521078.jpg",
+  "box": [
+   186,
+   212,
+   617,
+   855
+  ],
+  "score": 0.969,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "DIVE ZONE FC ブース特典",
+   "Day 3"
+  ],
+  "old_h": 865
+ },
+ {
+  "photo": "ENC_m18433252210.jpg",
+  "box": [
+   427,
+   0,
+   787,
+   557
+  ],
+  "score": 0.63,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ/レイ",
+   "Random Photocard",
+   "ユニット"
+  ],
+  "old_h": 757
+ },
+ {
+  "photo": "ENC_m19082370298.jpg",
+  "box": [
+   667,
+   339,
+   974,
+   815
+  ],
+  "score": 0.818,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 789
+ },
+ {
+  "photo": "ENC_m19127678252.jpg",
+  "box": [
+   633,
+   387,
+   1069,
+   1080
+  ],
+  "score": 0.819,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m20004176829.jpg",
+  "box": [
+   167,
+   38,
+   511,
+   611
+  ],
+  "score": 0.717,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "Random Photocard Pack Japan",
+   "2"
+  ],
+  "old_h": 1010
+ },
+ {
+  "photo": "ENC_m20079872144.jpg",
+  "box": [
+   111,
+   64,
+   463,
+   588
+  ],
+  "score": 0.716,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "イソ",
+   "SuperStar STARSHIP",
+   "LA"
+  ],
+  "old_h": 274
+ },
+ {
+  "photo": "ENC_m20299462614.jpg",
+  "box": [
+   323,
+   120,
+   672,
+   622
+  ],
+  "score": 0.789,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 758
+ },
+ {
+  "photo": "ENC_m20640498510.jpg",
+  "box": [
+   656,
+   410,
+   1078,
+   1080
+  ],
+  "score": 0.768,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m21370354490.jpg",
+  "box": [
+   132,
+   42,
+   462,
+   533
+  ],
+  "score": 0.619,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "リズ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 274
+ },
+ {
+  "photo": "ENC_m21370576958.jpg",
+  "box": [
+   309,
+   228,
+   731,
+   891
+  ],
+  "score": 0.848,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 2"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m22707856493.jpg",
+  "box": [
+   496,
+   523,
+   726,
+   881
+  ],
+  "score": 0.703,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "DVD・Blu-ray・Kit",
+   "DVD"
+  ],
+  "old_h": 1017
+ },
+ {
+  "photo": "ENC_m23469548364.jpg",
+  "box": [
+   42,
+   0,
+   349,
+   198
+  ],
+  "score": 0.608,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "全員",
+   "DIVE JAPAN オンラインくじ C賞（京セラドーム）",
+   "IVE ③"
+  ],
+  "old_h": 546
+ },
+ {
+  "photo": "ENC_m24430800834.jpg",
+  "box": [
+   260,
+   730,
+   490,
+   1021
+  ],
+  "score": 0.765,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 208
+ },
+ {
+  "photo": "ENC_m24779297698.jpg",
+  "box": [
+   424,
+   546,
+   731,
+   1008
+  ],
+  "score": 0.74,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m25090586779.jpg",
+  "box": [
+   310,
+   205,
+   799,
+   920
+  ],
+  "score": 0.917,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "MD",
+   "Smart Tok"
+  ],
+  "old_h": 837
+ },
+ {
+  "photo": "ENC_m25971451577.jpg",
+  "box": [
+   534,
+   581,
+   764,
+   947
+  ],
+  "score": 0.78,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m25978442315.jpg",
+  "box": [
+   162,
+   0,
+   469,
+   462
+  ],
+  "score": 0.701,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 463
+ },
+ {
+  "photo": "ENC_m25983608788.jpg",
+  "box": [
+   127,
+   99,
+   715,
+   1074
+  ],
+  "score": 0.762,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 926
+ },
+ {
+  "photo": "ENC_m26593331901.jpg",
+  "box": [
+   4,
+   266,
+   356,
+   821
+  ],
+  "score": 0.695,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "in CINEMA",
+   "Acryl Photocard Stand"
+  ],
+  "old_h": 418
+ },
+ {
+  "photo": "ENC_m26995411594.jpg",
+  "box": [
+   720,
+   210,
+   1037,
+   707
+  ],
+  "score": 0.584,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "in CINEMA",
+   "Light Stick Bag"
+  ],
+  "old_h": 772
+ },
+ {
+  "photo": "ENC_m28258335783.jpg",
+  "box": [
+   50,
+   100,
+   357,
+   612
+  ],
+  "score": 0.734,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "Random Photocard Pack Japan",
+   "2"
+  ],
+  "old_h": 1010
+ },
+ {
+  "photo": "ENC_m28939649600.jpg",
+  "box": [
+   189,
+   136,
+   618,
+   778
+  ],
+  "score": 0.854,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "DIVE ZONE FC ブース特典",
+   "Day 3"
+  ],
+  "old_h": 842
+ },
+ {
+  "photo": "ENC_m29451786420.jpg",
+  "box": [
+   127,
+   151,
+   662,
+   960
+  ],
+  "score": 0.815,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Blu-ray"
+  ],
+  "old_h": 774
+ },
+ {
+  "photo": "ENC_m29989626528.jpg",
+  "box": [
+   295,
+   149,
+   758,
+   928
+  ],
+  "score": 0.957,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 855
+ },
+ {
+  "photo": "ENC_m30189974299.jpg",
+  "box": [
+   445,
+   324,
+   765,
+   817
+  ],
+  "score": 0.869,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m30483612351.jpg",
+  "box": [
+   654,
+   202,
+   1035,
+   785
+  ],
+  "score": 0.644,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "MD",
+   "Acrylic Stand"
+  ],
+  "old_h": 927
+ },
+ {
+  "photo": "ENC_m30499844871.jpg",
+  "box": [
+   300,
+   572,
+   630,
+   988
+  ],
+  "score": 0.764,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 208
+ },
+ {
+  "photo": "ENC_m31031117714.jpg",
+  "box": [
+   44,
+   233,
+   351,
+   639
+  ],
+  "score": 0.569,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore（アンコール）",
+   "DIVE ZONE Day 1"
+  ],
+  "old_h": 231
+ },
+ {
+  "photo": "ENC_m31509866783.jpg",
+  "box": [
+   70,
+   651,
+   377,
+   998
+  ],
+  "score": 0.684,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 502
+ },
+ {
+  "photo": "ENC_m32177530260.jpg",
+  "box": [
+   192,
+   244,
+   562,
+   814
+  ],
+  "score": 0.848,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m32343498231.jpg",
+  "box": [
+   240,
+   78,
+   848,
+   998
+  ],
+  "score": 0.822,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Blu-ray"
+  ],
+  "old_h": 774
+ },
+ {
+  "photo": "ENC_m32648311086.jpg",
+  "box": [
+   186,
+   221,
+   600,
+   860
+  ],
+  "score": 0.958,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Encore Blu-ray・Kit",
+   "Blu-ray"
+  ],
+  "old_h": 841
+ },
+ {
+  "photo": "ENC_m32953478350.jpg",
+  "box": [
+   72,
+   79,
+   530,
+   784
+  ],
+  "score": 0.913,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m33341391087.jpg",
+  "box": [
+   351,
+   101,
+   695,
+   616
+  ],
+  "score": 0.684,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m33522879948.jpg",
+  "box": [
+   536,
+   143,
+   766,
+   477
+  ],
+  "score": 0.671,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "リズ",
+   "SWIA TAIPEI 特典",
+   "Early Bird"
+  ],
+  "old_h": 251
+ },
+ {
+  "photo": "ENC_m34220084542.jpg",
+  "box": [
+   0,
+   0,
+   307,
+   476
+  ],
+  "score": 0.691,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 789
+ },
+ {
+  "photo": "ENC_m34409461067.jpg",
+  "box": [
+   64,
+   40,
+   518,
+   692
+  ],
+  "score": 0.967,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore（アンコール）",
+   "Random Photocard 2"
+  ],
+  "old_h": 748
+ },
+ {
+  "photo": "ENC_m35133288239.jpg",
+  "box": [
+   594,
+   287,
+   901,
+   748
+  ],
+  "score": 0.701,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 606
+ },
+ {
+  "photo": "ENC_m35179217674.jpg",
+  "box": [
+   773,
+   277,
+   1080,
+   665
+  ],
+  "score": 0.619,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 208
+ },
+ {
+  "photo": "ENC_m35421756605.jpg",
+  "box": [
+   214,
+   265,
+   570,
+   776
+  ],
+  "score": 0.857,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore（アンコール）",
+   "Random Photocard 2"
+  ],
+  "old_h": 748
+ },
+ {
+  "photo": "ENC_m38879527913.jpg",
+  "box": [
+   535,
+   0,
+   962,
+   635
+  ],
+  "score": 0.632,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore Blu-ray・Kit",
+   "Apple Music 特典"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m39638592880.jpg",
+  "box": [
+   585,
+   270,
+   892,
+   758
+  ],
+  "score": 0.711,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m39725554935.jpg",
+  "box": [
+   284,
+   192,
+   783,
+   940
+  ],
+  "score": 0.898,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore（アンコール）",
+   "Wing Hair Pin Set"
+  ],
+  "old_h": 991
+ },
+ {
+  "photo": "ENC_m40051323340.jpg",
+  "box": [
+   301,
+   115,
+   759,
+   792
+  ],
+  "score": 0.785,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "MD",
+   "70K Benefit"
+  ],
+  "old_h": 601
+ },
+ {
+  "photo": "ENC_m40451650366.jpg",
+  "box": [
+   489,
+   685,
+   719,
+   1069
+  ],
+  "score": 0.716,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "Random Photocard Pack Japan",
+   "2"
+  ],
+  "old_h": 1010
+ },
+ {
+  "photo": "ENC_m40587117622.jpg",
+  "box": [
+   342,
+   229,
+   727,
+   805
+  ],
+  "score": 0.804,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "MD",
+   "Chain Strap"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m40891524523.jpg",
+  "box": [
+   75,
+   34,
+   382,
+   495
+  ],
+  "score": 0.748,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 606
+ },
+ {
+  "photo": "ENC_m41061539938.jpg",
+  "box": [
+   149,
+   72,
+   399,
+   449
+  ],
+  "score": 0.754,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Apple Music 特典"
+  ],
+  "old_h": 305
+ },
+ {
+  "photo": "ENC_m41326720110.jpg",
+  "box": [
+   202,
+   221,
+   640,
+   868
+  ],
+  "score": 0.799,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "Random Photocard Pack Korea",
+   "3"
+  ],
+  "old_h": 1032
+ },
+ {
+  "photo": "ENC_m41533549134.jpg",
+  "box": [
+   308,
+   615,
+   615,
+   1079
+  ],
+  "score": 0.615,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "in CINEMA",
+   "Tumbler"
+  ],
+  "old_h": 148
+ },
+ {
+  "photo": "ENC_m41737248685.jpg",
+  "box": [
+   360,
+   515,
+   624,
+   934
+  ],
+  "score": 0.781,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m41822361251.jpg",
+  "box": [
+   699,
+   425,
+   979,
+   843
+  ],
+  "score": 0.643,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ウォニョン",
+   "VIP Perks Japan",
+   ""
+  ],
+  "old_h": 862
+ },
+ {
+  "photo": "ENC_m42027916311.jpg",
+  "box": [
+   318,
+   188,
+   759,
+   843
+  ],
+  "score": 0.825,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Encore Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m42033898473.jpg",
+  "box": [
+   396,
+   351,
+   703,
+   808
+  ],
+  "score": 0.555,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m42075561800.jpg",
+  "box": [
+   212,
+   260,
+   630,
+   906
+  ],
+  "score": 0.934,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "DIVE ZONE Day 2"
+  ],
+  "old_h": 207
+ },
+ {
+  "photo": "ENC_m42173840242.jpg",
+  "box": [
+   113,
+   379,
+   408,
+   822
+  ],
+  "score": 0.623,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 606
+ },
+ {
+  "photo": "ENC_m43178295138.jpg",
+  "box": [
+   228,
+   349,
+   538,
+   834
+  ],
+  "score": 0.907,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 746
+ },
+ {
+  "photo": "ENC_m44088551347.jpg",
+  "box": [
+   271,
+   161,
+   784,
+   962
+  ],
+  "score": 0.819,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m44105080908.jpg",
+  "box": [
+   88,
+   285,
+   473,
+   878
+  ],
+  "score": 0.761,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Encore（アンコール）",
+   "DIVE ZONE Day 2"
+  ],
+  "old_h": 277
+ },
+ {
+  "photo": "ENC_m44206774773.jpg",
+  "box": [
+   585,
+   120,
+   962,
+   690
+  ],
+  "score": 0.861,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Blu-ray"
+  ],
+  "old_h": 774
+ },
+ {
+  "photo": "ENC_m45257735888.jpg",
+  "box": [
+   410,
+   48,
+   631,
+   190
+  ],
+  "score": 0.621,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "全員",
+   "DIVE JAPAN オンラインくじ C賞（京セラドーム）",
+   "IVE ③"
+  ],
+  "old_h": 546
+ },
+ {
+  "photo": "ENC_m45834689125.jpg",
+  "box": [
+   731,
+   467,
+   1038,
+   955
+  ],
+  "score": 0.729,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m45900450661.jpg",
+  "box": [
+   121,
+   576,
+   428,
+   1080
+  ],
+  "score": 0.769,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "Random Photocard Pack Korea",
+   "6"
+  ],
+  "old_h": 587
+ },
+ {
+  "photo": "ENC_m45962258957.jpg",
+  "box": [
+   559,
+   533,
+   853,
+   985
+  ],
+  "score": 0.774,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ウォニョン",
+   "Random Photocard Pack Japan",
+   "2"
+  ],
+  "old_h": 1030
+ },
+ {
+  "photo": "ENC_m46379174588.jpg",
+  "box": [
+   603,
+   277,
+   1068,
+   963
+  ],
+  "score": 0.899,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore Blu-ray・Kit",
+   "Starship Square 特典"
+  ],
+  "old_h": 886
+ },
+ {
+  "photo": "ENC_m46663624556.jpg",
+  "box": [
+   664,
+   515,
+   971,
+   1003
+  ],
+  "score": 0.847,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m46854282226.jpg",
+  "box": [
+   458,
+   6,
+   961,
+   781
+  ],
+  "score": 0.496,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "DVD・Blu-ray・Kit",
+   "Apple Music 特典"
+  ],
+  "old_h": 191
+ },
+ {
+  "photo": "ENC_m46887209875.jpg",
+  "box": [
+   682,
+   591,
+   989,
+   1053
+  ],
+  "score": 0.804,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m47206644391.jpg",
+  "box": [
+   564,
+   390,
+   934,
+   977
+  ],
+  "score": 0.792,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m48443426488.jpg",
+  "box": [
+   211,
+   73,
+   834,
+   1012
+  ],
+  "score": 0.857,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 1021
+ },
+ {
+  "photo": "ENC_m48703604045.jpg",
+  "box": [
+   238,
+   125,
+   746,
+   906
+  ],
+  "score": 0.745,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore（アンコール）",
+   "Wing Hair Pin Set"
+  ],
+  "old_h": 842
+ },
+ {
+  "photo": "ENC_m49559598133.jpg",
+  "box": [
+   663,
+   194,
+   970,
+   682
+  ],
+  "score": 0.664,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m49622979772.jpg",
+  "box": [
+   232,
+   362,
+   664,
+   1081
+  ],
+  "score": 0.762,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "Random Photocard Pack Japan",
+   "2"
+  ],
+  "old_h": 1010
+ },
+ {
+  "photo": "ENC_m49859166432.jpg",
+  "box": [
+   240,
+   62,
+   842,
+   1009
+  ],
+  "score": 0.766,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 2"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m50390129545.jpg",
+  "box": [
+   134,
+   367,
+   441,
+   828
+  ],
+  "score": 0.656,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 606
+ },
+ {
+  "photo": "ENC_m50435091663.jpg",
+  "box": [
+   720,
+   233,
+   1027,
+   721
+  ],
+  "score": 0.717,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m50451210130.jpg",
+  "box": [
+   197,
+   356,
+   594,
+   987
+  ],
+  "score": 0.897,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 490
+ },
+ {
+  "photo": "ENC_m50498562059.jpg",
+  "box": [
+   497,
+   437,
+   907,
+   1046
+  ],
+  "score": 0.756,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m51001339604.jpg",
+  "box": [
+   389,
+   432,
+   703,
+   931
+  ],
+  "score": 0.713,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m51321389431.jpg",
+  "box": [
+   219,
+   596,
+   464,
+   974
+  ],
+  "score": 0.66,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "MD",
+   "Photo Kit"
+  ],
+  "old_h": 536
+ },
+ {
+  "photo": "ENC_m52716682124.jpg",
+  "box": [
+   352,
+   239,
+   784,
+   803
+  ],
+  "score": 0.829,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore（アンコール）",
+   "DIVE ZONE Day 1"
+  ],
+  "old_h": 620
+ },
+ {
+  "photo": "ENC_m53051843768.jpg",
+  "box": [
+   204,
+   225,
+   597,
+   842
+  ],
+  "score": 0.852,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 2"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m53378434309.jpg",
+  "box": [
+   54,
+   200,
+   519,
+   918
+  ],
+  "score": 0.943,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "DVD・Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 977
+ },
+ {
+  "photo": "ENC_m53741600095.jpg",
+  "box": [
+   680,
+   592,
+   987,
+   1080
+  ],
+  "score": 0.735,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m53945606448.jpg",
+  "box": [
+   409,
+   0,
+   782,
+   558
+  ],
+  "score": 0.675,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m54910363774.jpg",
+  "box": [
+   521,
+   405,
+   787,
+   801
+  ],
+  "score": 0.743,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ウォニョン",
+   "VIP Perks Japan",
+   ""
+  ],
+  "old_h": 862
+ },
+ {
+  "photo": "ENC_m54957981526.jpg",
+  "box": [
+   190,
+   218,
+   587,
+   789
+  ],
+  "score": 0.914,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 758
+ },
+ {
+  "photo": "ENC_m55100450532.jpg",
+  "box": [
+   216,
+   252,
+   638,
+   907
+  ],
+  "score": 0.828,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 827
+ },
+ {
+  "photo": "ENC_m55117722471.jpg",
+  "box": [
+   264,
+   562,
+   623,
+   1036
+  ],
+  "score": 0.56,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore（アンコール）",
+   "DIVE ZONE Day 1"
+  ],
+  "old_h": 231
+ },
+ {
+  "photo": "ENC_m55503617940.jpg",
+  "box": [
+   244,
+   14,
+   873,
+   990
+  ],
+  "score": 0.896,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 827
+ },
+ {
+  "photo": "ENC_m55644843831.jpg",
+  "box": [
+   175,
+   195,
+   601,
+   855
+  ],
+  "score": 0.882,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 789
+ },
+ {
+  "photo": "ENC_m55972087882.jpg",
+  "box": [
+   684,
+   592,
+   991,
+   1080
+  ],
+  "score": 0.71,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m57091211303.jpg",
+  "box": [
+   341,
+   177,
+   830,
+   989
+  ],
+  "score": 0.829,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 926
+ },
+ {
+  "photo": "ENC_m57850643805.jpg",
+  "box": [
+   398,
+   2,
+   787,
+   599
+  ],
+  "score": 0.623,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ウォニョン",
+   "Random Photocard Pack Japan",
+   "2"
+  ],
+  "old_h": 1030
+ },
+ {
+  "photo": "ENC_m59705980106.jpg",
+  "box": [
+   117,
+   236,
+   531,
+   854
+  ],
+  "score": 0.66,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Encore Blu-ray・Kit",
+   "Starship Square 特典"
+  ],
+  "old_h": 915
+ },
+ {
+  "photo": "ENC_m61074431966.jpg",
+  "box": [
+   124,
+   518,
+   444,
+   979
+  ],
+  "score": 0.569,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 758
+ },
+ {
+  "photo": "ENC_m61477014311.jpg",
+  "box": [
+   189,
+   390,
+   529,
+   921
+  ],
+  "score": 0.537,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "イソ",
+   "DIVE ZONE FC ブース特典",
+   "Day 1"
+  ],
+  "old_h": 896
+ },
+ {
+  "photo": "ENC_m62226813918.jpg",
+  "box": [
+   284,
+   229,
+   721,
+   924
+  ],
+  "score": 0.92,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 490
+ },
+ {
+  "photo": "ENC_m63066130942.jpg",
+  "box": [
+   342,
+   171,
+   769,
+   822
+  ],
+  "score": 0.715,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Starship Square 特典"
+  ],
+  "old_h": 720
+ },
+ {
+  "photo": "ENC_m64638748719.jpg",
+  "box": [
+   348,
+   213,
+   711,
+   807
+  ],
+  "score": 0.903,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Wing Hair Pin Set"
+  ],
+  "old_h": 653
+ },
+ {
+  "photo": "ENC_m64733376095.jpg",
+  "box": [
+   242,
+   380,
+   683,
+   1046
+  ],
+  "score": 0.779,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Apple Music 特典"
+  ],
+  "old_h": 305
+ },
+ {
+  "photo": "ENC_m65678906255.jpg",
+  "box": [
+   152,
+   78,
+   459,
+   553
+  ],
+  "score": 0.72,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Japan Random Photocard",
+   "1"
+  ],
+  "old_h": 855
+ },
+ {
+  "photo": "ENC_m66794786558.jpg",
+  "box": [
+   467,
+   714,
+   697,
+   1080
+  ],
+  "score": 0.747,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m66970644646.jpg",
+  "box": [
+   404,
+   479,
+   756,
+   1002
+  ],
+  "score": 0.784,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m67015001062.jpg",
+  "box": [
+   773,
+   166,
+   1080,
+   654
+  ],
+  "score": 0.681,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m67530209212.jpg",
+  "box": [
+   597,
+   163,
+   904,
+   625
+  ],
+  "score": 0.727,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m68354563882.jpg",
+  "box": [
+   277,
+   181,
+   584,
+   655
+  ],
+  "score": 0.715,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "MD",
+   "Photo Kit"
+  ],
+  "old_h": 536
+ },
+ {
+  "photo": "ENC_m68355558650.jpg",
+  "box": [
+   773,
+   166,
+   1080,
+   654
+  ],
+  "score": 0.681,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m72263800025.jpg",
+  "box": [
+   256,
+   173,
+   825,
+   941
+  ],
+  "score": 0.92,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン/ガウル",
+   "Random Photocard",
+   "ユニット"
+  ],
+  "old_h": 289
+ },
+ {
+  "photo": "ENC_m73024079612.jpg",
+  "box": [
+   180,
+   664,
+   494,
+   1060
+  ],
+  "score": 0.621,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 208
+ },
+ {
+  "photo": "ENC_m73193685482.jpg",
+  "box": [
+   688,
+   480,
+   995,
+   968
+  ],
+  "score": 0.689,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m73330689902.jpg",
+  "box": [
+   291,
+   115,
+   693,
+   719
+  ],
+  "score": 0.632,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m74005788377.jpg",
+  "box": [
+   526,
+   0,
+   843,
+   392
+  ],
+  "score": 0.535,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 690
+ },
+ {
+  "photo": "ENC_m74029736009.jpg",
+  "box": [
+   503,
+   639,
+   733,
+   973
+  ],
+  "score": 0.764,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "リズ",
+   "SWIA TAIPEI 特典",
+   "Early Bird"
+  ],
+  "old_h": 251
+ },
+ {
+  "photo": "ENC_m74093777754.jpg",
+  "box": [
+   195,
+   733,
+   425,
+   1080
+  ],
+  "score": 0.714,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m74221965590.jpg",
+  "box": [
+   672,
+   541,
+   1005,
+   1070
+  ],
+  "score": 0.827,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m74842069513.jpg",
+  "box": [
+   489,
+   700,
+   719,
+   1066
+  ],
+  "score": 0.818,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m75428238053.jpg",
+  "box": [
+   288,
+   161,
+   782,
+   957
+  ],
+  "score": 0.872,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 973
+ },
+ {
+  "photo": "ENC_m75512332739.jpg",
+  "box": [
+   328,
+   321,
+   639,
+   768
+  ],
+  "score": 0.638,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 758
+ },
+ {
+  "photo": "ENC_m75575426497.jpg",
+  "box": [
+   140,
+   212,
+   447,
+   688
+  ],
+  "score": 0.643,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Random Photocard",
+   "3"
+  ],
+  "old_h": 359
+ },
+ {
+  "photo": "ENC_m76554999202.jpg",
+  "box": [
+   82,
+   0,
+   383,
+   455
+  ],
+  "score": 0.761,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Apple Music 特典"
+  ],
+  "old_h": 305
+ },
+ {
+  "photo": "ENC_m78740382310.jpg",
+  "box": [
+   2,
+   0,
+   309,
+   512
+  ],
+  "score": 0.661,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "Random Photocard Pack Japan",
+   "2"
+  ],
+  "old_h": 1010
+ },
+ {
+  "photo": "ENC_m80295240191.jpg",
+  "box": [
+   22,
+   428,
+   329,
+   890
+  ],
+  "score": 0.69,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m80451387141.jpg",
+  "box": [
+   331,
+   485,
+   638,
+   873
+  ],
+  "score": 0.613,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 208
+ },
+ {
+  "photo": "ENC_m80567366244.jpg",
+  "box": [
+   86,
+   146,
+   483,
+   769
+  ],
+  "score": 0.799,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore（アンコール）",
+   "Random Photocard 2"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m81239658219.jpg",
+  "box": [
+   42,
+   16,
+   507,
+   684
+  ],
+  "score": 0.97,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore（アンコール）",
+   "Random Photocard 2"
+  ],
+  "old_h": 748
+ },
+ {
+  "photo": "ENC_m81942605236.jpg",
+  "box": [
+   753,
+   327,
+   1060,
+   715
+  ],
+  "score": 0.711,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 208
+ },
+ {
+  "photo": "ENC_m83271985414.jpg",
+  "box": [
+   394,
+   107,
+   624,
+   454
+  ],
+  "score": 0.772,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m83439339760.jpg",
+  "box": [
+   280,
+   184,
+   769,
+   928
+  ],
+  "score": 0.781,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 791
+ },
+ {
+  "photo": "ENC_m84059567739.jpg",
+  "box": [
+   282,
+   211,
+   727,
+   873
+  ],
+  "score": 0.875,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "Encore Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m84590228116.jpg",
+  "box": [
+   319,
+   193,
+   733,
+   830
+  ],
+  "score": 0.932,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m84783894390.jpg",
+  "box": [
+   545,
+   257,
+   934,
+   885
+  ],
+  "score": 0.85,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 973
+ },
+ {
+  "photo": "ENC_m84873838885.jpg",
+  "box": [
+   524,
+   112,
+   819,
+   551
+  ],
+  "score": 0.593,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ウォニョン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m84899522767.jpg",
+  "box": [
+   279,
+   136,
+   792,
+   886
+  ],
+  "score": 0.921,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 879
+ },
+ {
+  "photo": "ENC_m85026504711.jpg",
+  "box": [
+   348,
+   554,
+   659,
+   1021
+  ],
+  "score": 0.69,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "VIP Perks Japan",
+   ""
+  ],
+  "old_h": 1025
+ },
+ {
+  "photo": "ENC_m85554237404.jpg",
+  "box": [
+   290,
+   667,
+   520,
+   1014
+  ],
+  "score": 0.832,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m85970481534.jpg",
+  "box": [
+   98,
+   188,
+   425,
+   677
+  ],
+  "score": 0.734,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "Random Photocard Pack Korea",
+   "4"
+  ],
+  "old_h": 540
+ },
+ {
+  "photo": "ENC_m86792448239.jpg",
+  "box": [
+   351,
+   265,
+   740,
+   864
+  ],
+  "score": 0.949,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m86825180541.jpg",
+  "box": [
+   290,
+   167,
+   700,
+   858
+  ],
+  "score": 0.871,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 855
+ },
+ {
+  "photo": "ENC_m86949563439.jpg",
+  "box": [
+   707,
+   545,
+   1024,
+   1049
+  ],
+  "score": 0.802,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m87969552005.jpg",
+  "box": [
+   343,
+   111,
+   650,
+   573
+  ],
+  "score": 0.749,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 743
+ },
+ {
+  "photo": "ENC_m88908075342.jpg",
+  "box": [
+   84,
+   129,
+   594,
+   927
+  ],
+  "score": 0.82,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore（アンコール）",
+   "Random Photocard 1"
+  ],
+  "old_h": 746
+ },
+ {
+  "photo": "ENC_m88928285853.jpg",
+  "box": [
+   401,
+   0,
+   631,
+   346
+  ],
+  "score": 0.662,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "VIP Perks Japan",
+   ""
+  ],
+  "old_h": 1025
+ },
+ {
+  "photo": "ENC_m91058436206.jpg",
+  "box": [
+   309,
+   236,
+   758,
+   951
+  ],
+  "score": 0.905,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 490
+ },
+ {
+  "photo": "ENC_m91074159359.jpg",
+  "box": [
+   312,
+   315,
+   542,
+   575
+  ],
+  "score": 0.641,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Japan Random Photocard",
+   "2"
+  ],
+  "old_h": 502
+ },
+ {
+  "photo": "ENC_m91419006329.jpg",
+  "box": [
+   534,
+   226,
+   764,
+   610
+  ],
+  "score": 0.706,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "Random Photocard Pack Japan",
+   "2"
+  ],
+  "old_h": 1010
+ },
+ {
+  "photo": "ENC_m92191041855.jpg",
+  "box": [
+   528,
+   676,
+   753,
+   1033
+  ],
+  "score": 0.703,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m92595757503.jpg",
+  "box": [
+   712,
+   16,
+   1052,
+   544
+  ],
+  "score": 0.738,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "イソ",
+   "DVD・Blu-ray・Kit",
+   "DVD"
+  ],
+  "old_h": 1017
+ },
+ {
+  "photo": "ENC_m92964862081.jpg",
+  "box": [
+   372,
+   233,
+   724,
+   758
+  ],
+  "score": 0.65,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "in CINEMA",
+   "Acryl Photocard Stand"
+  ],
+  "old_h": 678
+ },
+ {
+  "photo": "ENC_m93360369975.jpg",
+  "box": [
+   84,
+   356,
+   417,
+   828
+  ],
+  "score": 0.629,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "in CINEMA",
+   "Taiwan"
+  ],
+  "old_h": 252
+ },
+ {
+  "photo": "ENC_m93493923097.jpg",
+  "box": [
+   368,
+   205,
+   675,
+   665
+  ],
+  "score": 0.69,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m93540375104.jpg",
+  "box": [
+   335,
+   116,
+   793,
+   797
+  ],
+  "score": 0.741,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ガウル",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 275
+ },
+ {
+  "photo": "ENC_m93542511727.jpg",
+  "box": [
+   556,
+   172,
+   1001,
+   845
+  ],
+  "score": 0.755,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Blu-ray"
+  ],
+  "old_h": 774
+ },
+ {
+  "photo": "ENC_m94077850023.jpg",
+  "box": [
+   80,
+   60,
+   732,
+   1044
+  ],
+  "score": 0.831,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 1021
+ },
+ {
+  "photo": "ENC_m94282344664.jpg",
+  "box": [
+   146,
+   12,
+   645,
+   765
+  ],
+  "score": 0.668,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore Blu-ray・Kit",
+   "Apple Music 特典"
+  ],
+  "old_h": 305
+ },
+ {
+  "photo": "ENC_m94442996556.jpg",
+  "box": [
+   566,
+   165,
+   925,
+   736
+  ],
+  "score": 0.88,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 490
+ },
+ {
+  "photo": "ENC_m94792081602.jpg",
+  "box": [
+   497,
+   621,
+   727,
+   987
+  ],
+  "score": 0.765,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m95240041766.jpg",
+  "box": [
+   435,
+   578,
+   805,
+   1044
+  ],
+  "score": 0.697,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "SWIA TAIPEI 特典",
+   "Holder"
+  ],
+  "old_h": 208
+ },
+ {
+  "photo": "ENC_m95694491325.jpg",
+  "box": [
+   703,
+   183,
+   1080,
+   782
+  ],
+  "score": 0.764,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m95784309313.jpg",
+  "box": [
+   306,
+   186,
+   762,
+   810
+  ],
+  "score": 0.877,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Encore Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 731
+ },
+ {
+  "photo": "ENC_m96405652481.jpg",
+  "box": [
+   76,
+   307,
+   409,
+   823
+  ],
+  "score": 0.719,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "Random Photocard",
+   "4"
+  ],
+  "old_h": 692
+ },
+ {
+  "photo": "ENC_m97572217332.jpg",
+  "box": [
+   642,
+   445,
+   1031,
+   1064
+  ],
+  "score": 0.732,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "ユジン",
+   "SWIA TAIPEI 特典",
+   "Mnet+"
+  ],
+  "old_h": 262
+ },
+ {
+  "photo": "ENC_m98013251659.jpg",
+  "box": [
+   215,
+   100,
+   578,
+   668
+  ],
+  "score": 0.688,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "レイ",
+   "Encore（アンコール）",
+   "Random Photocard 2"
+  ],
+  "old_h": 800
+ },
+ {
+  "photo": "ENC_m98315335011.jpg",
+  "box": [
+   251,
+   181,
+   701,
+   861
+  ],
+  "score": 0.812,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "リズ",
+   "Encore（アンコール）",
+   "Compact Mirror"
+  ],
+  "old_h": 305
+ },
+ {
+  "photo": "ENC_m98502515374.jpg",
+  "box": [
+   299,
+   161,
+   588,
+   598
+  ],
+  "score": 0.782,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ウォニョン",
+   "in CINEMA",
+   "Tumbler"
+  ],
+  "old_h": 148
+ },
+ {
+  "photo": "ENC_m98743575113.jpg",
+  "box": [
+   0,
+   301,
+   307,
+   776
+  ],
+  "score": 0.682,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Ktown4U 特典"
+  ],
+  "old_h": 904
+ },
+ {
+  "photo": "ENC_m98754092228.jpg",
+  "box": [
+   271,
+   249,
+   611,
+   814
+  ],
+  "score": 0.793,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 926
+ },
+ {
+  "photo": "ENC_m98990424234.jpg",
+  "box": [
+   4,
+   235,
+   431,
+   895
+  ],
+  "score": 0.66,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ガウル",
+   "DVD・Blu-ray・Kit",
+   "Kit"
+  ],
+  "old_h": 977
+ },
+ {
+  "photo": "ENC_m99012294083.jpg",
+  "box": [
+   81,
+   168,
+   395,
+   690
+  ],
+  "score": 0.602,
+  "key": [
+   "2nd WORLD TOUR 'SHOW WHAT I AM'",
+   "レイ",
+   "Random Photocard Pack Japan",
+   "2"
+  ],
+  "old_h": 1010
+ },
+ {
+  "photo": "ENC_m99447623436.jpg",
+  "box": [
+   136,
+   85,
+   671,
+   900
+  ],
+  "score": 0.781,
+  "key": [
+   "1st WORLD TOUR 'SHOW WHAT I HAVE'",
+   "ユジン",
+   "Encore Blu-ray・Kit",
+   "Blu-ray"
+  ],
+  "old_h": 796
+ }
+]
