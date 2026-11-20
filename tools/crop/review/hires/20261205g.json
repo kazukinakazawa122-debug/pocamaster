@@ -1,0 +1,40 @@
+{
+ "folder": "資料/2026-12-05/SS_B",
+ "collection": "2nd WORLD TOUR 'SHOW WHAT I AM'||2nd FANMEETING 'MAGAZINE IVE'||1st WORLD TOUR 'SHOW WHAT I HAVE'||3rd FAN CONCERT 'IVE SCOUT'||Collab & Event｜コラボ・イベント",
+ "ok": [
+  1,
+  4,
+  6,
+  8,
+  41,
+  42,
+  115,
+  120,
+  126
+ ],
+ "trim": {
+  "4": [
+   0,
+   0,
+   0.04,
+   0
+  ],
+  "120": [
+   0,
+   0,
+   0.03,
+   0
+  ],
+  "126": [
+   0.03,
+   0,
+   0,
+   0
+  ]
+ },
+ "flag": [
+  6,
+  41
+ ],
+ "note": "外した：35・84・100（SWIA TAIPEI 特典）、20・59（枠の色がちがう）、14・118（カードの一部だけ）、54・119（ちがうカード）、2（虹色のホロの筋）、66（強い光の反射）"
+}
