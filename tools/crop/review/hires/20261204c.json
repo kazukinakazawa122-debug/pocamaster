@@ -1,0 +1,21 @@
+{
+ "folder": "資料/2026-12-04/LD",
+ "collection": "IVE SWITCH||I've MINE||REVIVE+||IVE EMPATHY||IVE SECRET",
+ "ok": [
+  1,
+  2,
+  8
+ ],
+ "trim": {
+  "2": [
+   0,
+   0,
+   0,
+   0.03
+  ]
+ },
+ "flag": [
+  8
+ ],
+ "note": "外した：5（古い画像がぼかし）、10（ちがう写真）"
+}
