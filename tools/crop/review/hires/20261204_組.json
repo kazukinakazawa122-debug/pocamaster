@@ -1,0 +1,14 @@
+{
+ "SEC": "IVE SECRET",
+ "MINE": "I've MINE",
+ "SW": "IVE SWITCH",
+ "EMP": "IVE EMPATHY",
+ "LD": "IVE SWITCH||I've MINE||REVIVE+||IVE EMPATHY||IVE SECRET",
+ "_見出し": {
+  "SEC": "IVE SECRET（メンバー名で検索）",
+  "MINE": "I've MINE（メンバー名で検索）",
+  "SW": "IVE SWITCH（メンバー名で検索）",
+  "EMP": "IVE EMPATHY（メンバー名で検索）",
+  "LD": "ラキドロ（メンバー名で検索）"
+ }
+}
