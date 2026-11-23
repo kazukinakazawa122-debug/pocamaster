@@ -1,0 +1,212 @@
+<title>粗いカード一覧</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* 上に絞り込みの帯（スクロールしても残る）、下にコレクション→入手元ごとのカードの並び */
+:root {
+  --bg: #f7f6f9; --panel: #ffffff; --fg: #1f1d24; --muted: #6c6875; --line: #e3e0e8;
+  --accent: #b23a74; --accent-soft: #f6e4ee; --ok: #1f7a4d; --ok-soft: #e2f3ea; --nf: #6b46b8; --nf-soft: #ece6f8;
+  --num: "Space Grotesk", ui-monospace, monospace;
+  --sans: system-ui, -apple-system, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #16151a; --panel: #201e26; --fg: #ece9f1; --muted: #a29dab; --line: #34313c;
+  --accent: #ee7fb3; --accent-soft: #3a2230; --ok: #6fd3a0; --ok-soft: #1d3329; --nf: #b9a2f0; --nf-soft: #2b2540; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #16151a; --panel: #201e26; --fg: #ece9f1; --muted: #a29dab; --line: #34313c;
+  --accent: #ee7fb3; --accent-soft: #3a2230; --ok: #6fd3a0; --ok-soft: #1d3329; --nf: #b9a2f0; --nf-soft: #2b2540; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 14px; line-height: 1.5; }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); max-width: 1200px; margin: 0 auto; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--panel); }
+header { padding-block: 16px 8px; }
+h1 { margin: 0; font-size: 22px; text-wrap: balance; }
+.sub { color: var(--muted); margin: 4px 0 0; }
+.num { font-family: var(--num); font-variant-numeric: tabular-nums; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; padding-block: 10px; }
+select, input[type="search"] { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; min-width: 0; }
+select { flex: 1 1 240px; width: 100%; max-width: 420px; }
+.bar .wrap > * { min-width: 0; }
+@media (max-width: 600px) { .bar { position: static; } }
+input[type="search"] { flex: 1 1 160px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+label.tg { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); cursor: pointer; }
+.stat { margin-left: auto; font-size: 13px; color: var(--muted); }
+.stat b { color: var(--fg); }
+main { padding-block: 12px 40px; display: grid; gap: 22px; }
+.coll h2 { font-size: 17px; margin: 0 0 6px; text-wrap: balance; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.coll h2 .n { font-size: 13px; color: var(--muted); font-weight: 500; }
+.src { margin-top: 10px; }
+.src h3 { font-size: 13px; font-weight: 600; color: var(--muted); margin: 0 0 8px; letter-spacing: .02em; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.card.done { border-color: var(--ok); background: var(--ok-soft); }
+.thumb { height: 150px; display: grid; place-items: center; background: var(--bg); border-radius: 6px; overflow: hidden; }
+.thumb img { max-height: 150px; max-width: 100%; object-fit: contain; display: block; }
+.thumb .ph { color: var(--muted); font-size: 12px; }
+.who { font-weight: 600; }
+.ver { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; font-size: 12px; }
+.pill { border-radius: 999px; padding: 1px 7px; font-size: 11px; }
+.pill.px { background: var(--accent-soft); color: var(--accent); }
+.pill.nf { background: var(--nf-soft); color: var(--nf); }
+.links { display: flex; gap: 6px; flex-wrap: wrap; }
+.links a { font-size: 12px; color: var(--accent); text-decoration: none; border: 1px solid var(--line); border-radius: 6px; padding: 3px 8px; }
+.links a:hover, .links a:focus-visible { border-color: var(--accent); }
+.found { font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); border-radius: 8px; padding: 5px; cursor: pointer; }
+.card.done .found { background: var(--ok); border-color: var(--ok); color: var(--panel); }
+.found:disabled { opacity: .5; cursor: default; }
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.empty, .note { color: var(--muted); }
+.note { font-size: 12px; }
+</style>
+
+<header class="wrap">
+  <h1>粗いカード一覧</h1>
+  <p class="sub" id="sub">読み込み中…</p>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <select id="coll" aria-label="コレクション"><option value="">すべてのコレクション</option></select>
+    <div class="chips" id="mem" role="group" aria-label="メンバー"></div>
+    <input type="search" id="q" placeholder="入手元・バージョンで探す" aria-label="入手元・バージョンで探す">
+    <label class="tg"><input type="checkbox" id="hideDone"> 見つけたものを隠す</label>
+    <label class="tg"><input type="checkbox" id="onlyNf"> 「探したが無い」だけ</label>
+    <span class="stat" id="stat"></span>
+  </div>
+</div>
+
+<main class="wrap" id="list"><p class="empty">カードを読み込んでいます…</p></main>
+<p class="wrap note" id="dbnote"></p>
+
+<script>
+const MEMBERS = ["ユジン", "ガウル", "レイ", "ウォニョン", "リズ", "イソ"];
+let CARDS = [], THUMBS = {}, FOUND = {}, DB = null;
+const st = { coll: "", mem: "", q: "", hideDone: false, onlyNf: false };
+try { Object.assign(st, JSON.parse(localStorage.getItem("rough-filter") || "{}")); } catch (e) {}
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function short(c) {
+  const name = c.split("｜")[0];
+  const m = name.match(/'([^']+)'/);
+  return m ? m[1] : name;
+}
+function words(card) {
+  const who = card.m.includes("・") || card.m === "全員" ? "IVE" : card.m;
+  return `${who} ${short(card.c)} トレカ`;
+}
+const mercari = card => "https://jp.mercari.com/search?keyword=" + encodeURIComponent(words(card));
+const xsearch = card => "https://x.com/search?f=media&q=" + encodeURIComponent(words(card).replace(" トレカ", ""));
+
+function save() { try { localStorage.setItem("rough-filter", JSON.stringify(st)); } catch (e) {} }
+
+function visible() {
+  const q = st.q.trim().toLowerCase();
+  return CARDS.filter(c =>
+    (!st.coll || c.c === st.coll) &&
+    (!st.mem || c.m.split("・").includes(st.mem) || (c.m === "全員")) &&
+    (!q || (c.s + " " + c.v + " " + c.c).toLowerCase().includes(q)) &&
+    (!st.hideDone || !FOUND[c.id]) &&
+    (!st.onlyNf || c.nf));
+}
+
+function render() {
+  const list = visible();
+  const done = CARDS.filter(c => FOUND[c.id]).length;
+  $("stat").innerHTML = `表示 <b class="num">${list.length}</b> 枚 ・ 見つけた <b class="num">${done}</b> / <span class="num">${CARDS.length}</span>`;
+  if (!list.length) { $("list").innerHTML = '<p class="empty">この条件のカードはありません。絞り込みを変えてください。</p>'; return; }
+  const by = new Map();
+  for (const c of list) {
+    if (!by.has(c.c)) by.set(c.c, new Map());
+    const s = by.get(c.c);
+    if (!s.has(c.s)) s.set(c.s, []);
+    s.get(c.s).push(c);
+  }
+  let h = "";
+  for (const [coll, srcs] of by) {
+    const n = [...srcs.values()].reduce((a, b) => a + b.length, 0);
+    h += `<section class="coll"><h2>${esc(coll.split("｜")[0])} <span class="n num">${n} 枚</span></h2>`;
+    for (const [src, cs] of srcs) {
+      h += `<div class="src"><h3>${esc(src)}（${cs.length}）</h3><div class="grid">`;
+      for (const c of cs) {
+        const t = THUMBS[c.id];
+        h += `<article class="card${FOUND[c.id] ? " done" : ""}" data-id="${esc(c.id)}">
+          <div class="thumb">${t ? `<img src="${t}" alt="${esc(c.m + " " + c.v)} の今の画像" loading="lazy">` : '<span class="ph">画像を読み込み中</span>'}</div>
+          <div class="who">${esc(c.m)}</div>
+          <div class="ver">${esc(c.v || "（バージョンなし）")}</div>
+          <div class="meta"><span class="pill px num">${c.w}×${c.h}px</span>${c.nf ? `<span class="pill nf" title="${esc(c.nf)}">探したが無い</span>` : ""}</div>
+          <div class="links"><a href="${mercari(c)}" target="_blank" rel="noopener">メルカリ</a><a href="${xsearch(c)}" target="_blank" rel="noopener">X</a></div>
+          <button class="found" type="button" ${DB ? "" : "disabled"}>${FOUND[c.id] ? "見つけた ✓" : "見つけた"}</button>
+        </article>`;
+      }
+      h += `</div></div>`;
+    }
+    h += `</section>`;
+  }
+  $("list").innerHTML = h;
+}
+
+function controls() {
+  const colls = [...new Set(CARDS.map(c => c.c))];
+  const counts = {}; CARDS.forEach(c => counts[c.c] = (counts[c.c] || 0) + 1);
+  $("coll").innerHTML = '<option value="">すべてのコレクション</option>' +
+    colls.map(c => `<option value="${esc(c)}">${esc(c.split("｜")[0])}（${counts[c]}）</option>`).join("");
+  $("coll").value = colls.includes(st.coll) ? st.coll : (st.coll = "");
+  $("mem").innerHTML = ["", ...MEMBERS].map(m => `<button class="chip" type="button" data-m="${m}" aria-pressed="${st.mem === m}">${m || "全員"}</button>`).join("");
+  $("q").value = st.q; $("hideDone").checked = st.hideDone; $("onlyNf").checked = st.onlyNf;
+}
+
+$("coll").addEventListener("change", e => { st.coll = e.target.value; save(); render(); });
+$("mem").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  st.mem = b.dataset.m; save();
+  $("mem").querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x.dataset.m === st.mem));
+  render();
+});
+let qt; $("q").addEventListener("input", e => { clearTimeout(qt); qt = setTimeout(() => { st.q = e.target.value; save(); render(); }, 200); });
+$("hideDone").addEventListener("change", e => { st.hideDone = e.target.checked; save(); render(); });
+$("onlyNf").addEventListener("change", e => { st.onlyNf = e.target.checked; save(); render(); });
+
+$("list").addEventListener("click", async e => {
+  const b = e.target.closest(".found"); if (!b || !DB) return;
+  const id = b.closest(".card").dataset.id;
+  b.disabled = true;
+  try {
+    if (FOUND[id]) await DB.collection("found").doc(id).delete();
+    else await DB.collection("found").doc(id).set({ at: new Date().toISOString() });
+  } catch (err) {
+    $("dbnote").textContent = "「見つけた」を保存できませんでした。通信を確かめて、もう一度押してください。";
+    b.disabled = false;
+  }
+});
+
+(async () => {
+  try {
+    const d = await (await fetch("cards.json")).json();
+    CARDS = d.cards;
+    $("sub").innerHTML = `画像の高さが ${d.meta.low}px 未満のカード <b class="num">${d.meta.count}</b> 枚（全部入りの ZIP No.${esc(d.meta.made)} で数えた）。メルカリ・X のボタンで検索が開きます。`;
+    controls(); render();
+  } catch (e) {
+    $("list").innerHTML = '<p class="empty">カードの一覧を読み込めませんでした。ページを開き直してください。</p>';
+    return;
+  }
+  fetch("thumbs.json").then(r => r.json()).then(t => { THUMBS = t; render(); }).catch(() => {});
+})();
+
+(async () => {
+  const timer = setTimeout(() => { if (!DB) $("dbnote").textContent = "「見つけた」の記録につながっていません。見るだけはできます。"; }, 10000);
+  const db = await window.claude?.use?.("db");
+  if (!db) { clearTimeout(timer); $("dbnote").textContent = "この画面では「見つけた」を記録できません（見るだけはできます）。"; return; }
+  db.collection("found").limit(1000).onSnapshot(snap => {
+    clearTimeout(timer);
+    DB = db; $("dbnote").textContent = "「見つけた」は PC とスマホで共有されます。";
+    FOUND = {}; snap.docs.forEach(d => FOUND[d.id] = true);
+    render();
+  }, () => { clearTimeout(timer); $("dbnote").textContent = "「見つけた」の記録を読み込めませんでした。ページを開き直してください。"; });
+})();
+</script>
