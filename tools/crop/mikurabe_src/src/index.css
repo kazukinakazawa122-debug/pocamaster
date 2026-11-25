@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 色は紙・墨・赤の 3 つだけ。暗い画面でも読めるように */
+:root {
+  --paper: #f4f2ee; --surface: #ffffff; --ink: #24211d; --muted: #6e675e; --line: #dcd6cc;
+  --ng: #c0392b; --flag: #9a6200; --flagbg: #fff0d1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #161513; --surface: #201e1b; --ink: #efebe4; --muted: #a8a096; --line: #3a3631;
+    --ng: #ff7a6b; --flag: #f0b44c; --flagbg: #3a2c12; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #161513; --surface: #201e1b; --ink: #efebe4; --muted: #a8a096; --line: #3a3631;
+  --ng: #ff7a6b; --flag: #f0b44c; --flagbg: #3a2c12; color-scheme: dark;
+}
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: 15px; line-height: 1.6; -webkit-tap-highlight-color: transparent;
+}
+button { touch-action: manipulation; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }

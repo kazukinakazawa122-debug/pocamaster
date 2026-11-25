@@ -101,13 +101,14 @@ python tools/crop/hires_batch.py page <回> <出力フォルダ> <見出し>    
 ```
 
 - 出力フォルダの `mikurabe_<回>.html` を Artifact で公開する（root＝出力フォルダ、files＝files.json の一覧、capabilities `{"db": {}}`）。画像が 255 枚を超えるときは、2 回目の公開で残りの files を足す。
-- 左＝新しい写真、右＝前の画像。本人が 1 組ずつ「合っている／合っていない」を押す（本人が選んだやり方。JPEG を送るより見やすい）。
+- 左＝新しい写真、右＝前の画像。本人は**ちがう組だけ「ちがう」を押す**（押さない組は合っている）。上にコレクションのボタン（絞り込み・見た数）と見た割合の棒、開き直すと前の所から続き、最後に「見終えた」（2026-11-26 本人が選んだ形）。
+- ページのひな形は `tools/crop/mikurabe_page.html`（`mikurabe_src/` の React を web-artifacts-builder でまとめたもの。画像は別ファイルなので数百組でも 16MB を超えない）。見た目を直すときは mikurabe_src を直し、スキル web-artifacts-builder で雛形を作って src などを写し、bundle-artifact.sh でまとめて mikurabe_page.html に写す（pnpm は build scripts を許す `--allow-build` が要る）。
 - 差分 ZIP は SendUserFile（display: attach）で送る。取り込む順（No.xx のあと）を書く。場所を書くだけにしない。
 - 報告は短く：差し替えた枚数、粗いカードの数（前 → 後）、組ごとの表、外した理由、特に見てほしい組、ZIP、次の候補、コミットしたこと（push はしていない）。
 
 ## 9.「やりました」のあと
 
-ArtifactData でページの db の `checks` を `v == "ng"` で読む（0 件のときは、ほかの組が ok で入っているかも確かめる＝押していないのと区別する）。
+ArtifactData でページの db の `checks` を `v == "ng"` で読む。あわせて `meta` の `done`（見終えた日時）と `seen`（見た組）を読む。done が無い・seen が全部の組に足りないときは、まだ見終えていないので本人に聞く（ng が 0 件でも、done があれば全部合っている）。
 
 ```
 python tools/crop/hires_batch.py ng <回> a-03 e-01 …    # ok から外して apply まで行う

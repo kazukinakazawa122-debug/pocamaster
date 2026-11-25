@@ -176,7 +176,8 @@ def cmd_apply(run):
 def cmd_page(run, out, label):
     """左＝新しい写真、右＝前の画像を並べ、「合っている／合っていない」を押すページを作る。
     公開は Artifact（root=<出力フォルダ>、files=img/*.jpg、capabilities {"db": {}}）。画像が 255 枚を超えたら 2 回に分けて公開する。
-    結果は db の "checks"（id は a-01 など、v が "ng" のものが合っていない）"""
+    結果は db の "checks"（id は a-01 など、v が "ng" のものが合っていない。押さない組は合っている）。
+    「見終えた」は db の meta/done、見た組は meta/seen"""
     from PIL import Image
     os.makedirs(out + "/img", exist_ok=True)
     out = os.path.abspath(out).replace("\\", "/")
@@ -220,8 +221,10 @@ def cmd_page(run, out, label):
             c.save(f"{out}/img/{iid}.jpg", quality=82)
             items.append({"id": iid, "round": label, "group": title.get(folder, folder), "sheet": L, "no": no, "member": k[1], "source": k[2], "version": k[3],
                           "img": f"img/{iid}.jpg", "flag": n in load(name).get("flag", [])})
-    html = open(HERE + "hires_review_template.html", encoding="utf-8").read()
-    html = html.replace("7回目・8回目", label).replace("__ITEMS__", json.dumps(items, ensure_ascii=False))
+    # ページは mikurabe_src/（React）をまとめた mikurabe_page.html。画像は別のファイルなので 16MB を超えない
+    html = open(HERE + "mikurabe_page.html", encoding="utf-8").read()
+    data = json.dumps({"title": f"見比べチェック（{label}）", "items": items}, ensure_ascii=False).replace("<", "\\u003c")
+    html = html.replace("__MIKURABE_DATA__", data, 1)
     open(f"{out}/mikurabe_{run}.html", "w", encoding="utf-8").write(html)
     json.dump([{"path": x["img"]} for x in items], open(f"{out}/files.json", "w"))
     print(f"{len(items)} 組 → {out}/mikurabe_{run}.html（公開する画像の一覧は files.json）")
