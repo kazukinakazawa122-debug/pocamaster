@@ -2,10 +2,19 @@ import { memo, useRef } from 'react'
 import type { Card } from '../lib/db'
 import { memberLabel, memberNames } from '../lib/members'
 import { useImageUrl, useNearScreen } from './ui'
+import { tapHaptic } from '../lib/haptic'
 
 const LONG_PRESS_MS = 450
 
-/** 仮カードの枠と背景。ユニットカードは写っているメンバーの色を縞にする */
+/** カードが小さく沈んで戻る動き（「視差効果を減らす」がオンなら動かさない） */
+function press(el: HTMLElement | null) {
+  if (!el?.animate || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  el.animate([{ transform: 'scale(1)' }, { transform: 'scale(.94)', offset: 0.35 }, { transform: 'scale(1)' }], {
+    duration: 260,
+    easing: 'cubic-bezier(.3,.7,.4,1)',
+  })
+}
+
 /**
  * カードの縁と下地（2026-11-26、本人の要望で見直し）。
  * 大きな SNS（Instagram・YouTube）の写真のように、縁は目立たない細い線、下地は灰色にして写真だけを目立たせる。
@@ -98,6 +107,9 @@ function CardTileView({ card, collectionName, compact, bright, selected, onTap, 
       onContextMenu={(e) => e.preventDefault()}
       onClick={() => {
         if (longPressed.current) return
+        // 押した手ごたえ（2026-11-26）：iPhone を軽く震わせ、持っていないカードを持っているにしたときはカードが小さく沈んで戻る
+        tapHaptic()
+        if (selected === undefined && !owned) press(ref.current)
         onTap(card)
       }}
     >
