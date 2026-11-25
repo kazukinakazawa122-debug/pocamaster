@@ -223,10 +223,10 @@ export default function Home() {
       {/* 空のときは見出しごと出さない（説明文を並べない。本人の要望 2026-10-01「AI っぽくなくする」） */}
       {favorites.length > 0 && (
         <section className="glass">
-          <div className="section-title">お気に入りのカード</div>
+          <div className="section-title">お気に入り<span className="count num">{favorites.length} 枚</span></div>
           <div className="h-scroll">
             {favorites.map((card) => (
-              <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} />
+              <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} width={124} />
             ))}
           </div>
         </section>
@@ -234,7 +234,7 @@ export default function Home() {
 
       {recent.length > 0 && (
         <section className="glass">
-          <div className="section-title">最近入手したカード</div>
+          <div className="section-title">最近入手<span className="count num">{recent.length} 枚</span></div>
           <div className="h-scroll">
             {recent.map(({ card, at }) => (
               <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} at={at} />
@@ -246,7 +246,7 @@ export default function Home() {
       {/* 収集中のアルバムは、最近入手したカードの下（本人の要望、2026-11-13） */}
       {pinned.length > 0 && (
         <section className="glass">
-          <div className="section-title">収集中のアルバム</div>
+          <div className="section-title">収集中のアルバム<span className="count num">{pinned.length}</span></div>
           <div className="h-scroll">
             {pinned.map(({ col, p }) => (
               <PinnedAlbum key={col.id} col={col} p={p} />
@@ -345,7 +345,7 @@ function PinnedAlbum({ col, p }: { col: Collection; p: Progress }) {
 }
 
 /** 横に並べる小さなカード。at があれば下に日付を出す */
-function RecentCard({ card, col, at }: { card: Card; col?: Collection; at?: number }) {
+function RecentCard({ card, col, at, width = 92 }: { card: Card; col?: Collection; at?: number; width?: number }) {
   // 横に並ぶ一覧（お気に入りは何十枚にもなる）は、見える近くの画像だけを読む（本人の報告「ラグ」の調査、2026-10-04）
   const ref = useRef<HTMLAnchorElement>(null)
   const near = useNearScreen(ref, 300, 'x')
@@ -353,7 +353,7 @@ function RecentCard({ card, col, at }: { card: Card; col?: Collection; at?: numb
   const { border, background } = cardColors(card)
   const d = at ? new Date(at) : null
   return (
-    <Link ref={ref} to={`/collections/${card.collectionId}`} style={{ width: 92, flex: 'none' }} aria-label={`${col?.name ?? ''} ${memberLabel(card.memberIds)}`}>
+    <Link ref={ref} to={`/collections/${card.collectionId}`} style={{ width, flex: 'none' }} aria-label={`${col?.name ?? ''} ${memberLabel(card.memberIds)}`}>
       <div className="poca" style={{ borderColor: border, background }}>
         {url ? (
           <img src={url} alt="" decoding="async" />

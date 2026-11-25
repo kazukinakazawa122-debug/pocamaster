@@ -440,4 +440,7 @@ a { color: inherit; text-decoration: none; }
   border: .5px solid var(--glass-edge);
   box-shadow: inset 0 1px 0 var(--glass-hi), 0 10px 30px -18px rgba(0,0,0,.35), 0 1px 2px rgba(0,0,0,.04);
 }
-.glass > .section-title:first-child, .glass > .total-title:first-child { margin-top: 12px; }
+.glass > .section-title:first-child, .glass > .total-title:first-child { margin-top: 14px; }
+/* ホームの欄の見出し：大きく太く、右に枚数を小さく（文字の段階：見出し 20・名前 14・日付や枚数 12） */
+.glass > .section-title { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
+.glass > .section-title .count { font-size: 12px; font-weight: 600; color: var(--text-2); letter-spacing: 0; }
