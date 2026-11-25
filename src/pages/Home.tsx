@@ -220,8 +220,6 @@ export default function Home() {
         </Link>
       )}
 
-      {/* 画面の後ろ一面に、いちばん上と同じ最近入手したカード（なければお気に入り）の写真をぼかして敷く（2026-11-26、本人の要望「背景に画像・デザイン性」） */}
-      <HomeBackdrop imageId={(recent[0]?.card ?? favorites[0])?.imageId} />
       {/* 空のときは見出しごと出さない（説明文を並べない。本人の要望 2026-10-01「AI っぽくなくする」） */}
       {favorites.length > 0 && (
         <section className="glass">
@@ -409,13 +407,3 @@ function CompletedCover({ col }: { col: Collection }) {
   )
 }
 
-/** 画面の後ろ一面の写真（ぼかす）。上の欄はすりガラスのように透けて重なる */
-function HomeBackdrop({ imageId }: { imageId?: string }) {
-  const url = useImageUrl(imageId, 'thumb')
-  if (!url) return null
-  return (
-    <div className="backdrop" aria-hidden>
-      <img src={url} alt="" />
-    </div>
-  )
-}

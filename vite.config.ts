@@ -36,6 +36,14 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,woff2,csv}'],
         // 手元の確認ページ（public/_review、Git に入れない）はアプリに含めない
         globIgnores: ['**/_review/**'],
+        // 字（Pretendard JP、index.html）は一度読んだら保存して、電波がなくても使う
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.origin === 'https://cdn.jsdelivr.net' && url.pathname.includes('/pretendard@'),
+            handler: 'CacheFirst',
+            options: { cacheName: 'fonts', expiration: { maxEntries: 400, maxAgeSeconds: 60 * 60 * 24 * 365 }, cacheableResponse: { statuses: [0, 200] } },
+          },
+        ],
       },
     }),
   ],
