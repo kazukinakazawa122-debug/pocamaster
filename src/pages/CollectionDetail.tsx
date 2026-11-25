@@ -6,12 +6,13 @@ import { IconEdit, IconLayoutGridAdd, IconPin, IconPinFilled, IconPlus, IconSqua
 import { db, type Card } from '../lib/db'
 import { changeCardStatus, toggleCardStatus, useAllCards } from '../lib/cardStore'
 import { MEMBER_BY_ID, MEMBERS, memberLabel, memberOrder, type MemberId } from '../lib/members'
-import { memberProgress, pctText, progress } from '../lib/stats'
+import { isComplete, memberProgress, pctText, progress } from '../lib/stats'
 import { ProgressBar, TopBar } from '../components/ui'
 import CardTile from '../components/CardTile'
 import CardSheet from '../components/CardSheet'
 import { MiniveLoading } from '../components/Minive'
 import { useUndo } from '../components/Undo'
+import { Celebrate } from '../components/Celebrate'
 import SelectBar from '../components/SelectBar'
 
 const STATUS_FILTERS = ['すべて', '未所持', '所持中'] as const
@@ -374,6 +375,7 @@ export default function CollectionDetail() {
           }}
         />
       )}
+      <Celebrate key={id} complete={isComplete(total)} name={col.name} />
       {openCard && <CardSheet card={openCard} collectionName={col.name} onClose={() => setOpenCardId(null)} onToggle={() => toggle(openCard)} />}
     </div>
   )

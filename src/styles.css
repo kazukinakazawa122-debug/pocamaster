@@ -191,6 +191,27 @@ a { color: inherit; text-decoration: none; }
 @keyframes toast-in { from { transform: translateY(12px); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .toast { animation: none; } }
 
+/* コンプしたときの表示（src/components/Celebrate.tsx）。トレカの形の札・細い二重の縁・ホロの光が一度だけ */
+.celebrate { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; pointer-events: none; animation: celebrate-out 2.4s ease forwards; }
+.comp-card {
+  position: relative; overflow: hidden; width: 168px; aspect-ratio: 55 / 85; border-radius: 10px;
+  background: var(--bg); box-shadow: 0 0 0 .5px rgba(201,162,58,.9), 0 12px 40px rgba(0,0,0,.16);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 0 14px; text-align: center;
+  animation: comp-in .45s cubic-bezier(.2,.9,.3,1);
+}
+.comp-card::before { content: ''; position: absolute; inset: 5px; border-radius: 6px; border: .5px solid rgba(201,162,58,.7); pointer-events: none; }
+.comp-card::after {
+  content: ''; position: absolute; inset: -40% -60%; pointer-events: none;
+  background: linear-gradient(115deg, transparent 38%, rgba(55,138,221,.16) 41%, rgba(63,181,107,.16) 44%, rgba(242,194,48,.2) 47%, rgba(240,138,60,.16) 50%, rgba(232,90,156,.16) 53%, rgba(226,75,74,.14) 56%, transparent 59%);
+  transform: translateX(-60%); animation: comp-sheen 1.1s .35s ease-in-out forwards;
+}
+.comp-title { font-size: 12px; font-weight: 600; letter-spacing: .32em; margin-right: -.32em; color: #A8862C; }
+.comp-name { font-size: 12px; line-height: 1.4; color: var(--text-2); }
+@keyframes comp-in { from { transform: translateY(10px) scale(.96); opacity: 0; } }
+@keyframes comp-sheen { to { transform: translateX(60%); } }
+@keyframes celebrate-out { 0%, 85% { opacity: 1; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .celebrate, .comp-card { animation: none; } .comp-card::after { display: none; } }
+
 .sheet-backdrop { position: fixed; inset: 0; z-index: 40; background: rgba(0,0,0,.5); display: flex; align-items: flex-end; justify-content: center; }
 .sheet { background: var(--bg); width: 100%; max-width: 640px; max-height: 92dvh; overflow-y: auto; border-radius: 16px 16px 0 0; padding: 8px 16px calc(16px + var(--safe-bottom)); }
 
