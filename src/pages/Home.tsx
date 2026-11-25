@@ -220,51 +220,54 @@ export default function Home() {
         </Link>
       )}
 
+      {/* 画面の後ろ一面に、いちばん上と同じ最近入手したカード（なければお気に入り）の写真をぼかして敷く（2026-11-26、本人の要望「背景に画像・デザイン性」） */}
+      <HomeBackdrop imageId={(recent[0]?.card ?? favorites[0])?.imageId} />
       {/* 空のときは見出しごと出さない（説明文を並べない。本人の要望 2026-10-01「AI っぽくなくする」） */}
       {favorites.length > 0 && (
-        <>
+        <section className="glass">
           <div className="section-title">お気に入りのカード</div>
           <div className="h-scroll">
             {favorites.map((card) => (
               <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} />
             ))}
           </div>
-        </>
+        </section>
       )}
 
       {recent.length > 0 && (
-        <>
+        <section className="glass">
           <div className="section-title">最近入手したカード</div>
           <div className="h-scroll">
             {recent.map(({ card, at }) => (
               <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} at={at} />
             ))}
           </div>
-        </>
+        </section>
       )}
 
       {/* 収集中のアルバムは、最近入手したカードの下（本人の要望、2026-11-13） */}
       {pinned.length > 0 && (
-        <>
+        <section className="glass">
           <div className="section-title">収集中のアルバム</div>
           <div className="h-scroll">
             {pinned.map(({ col, p }) => (
               <PinnedAlbum key={col.id} col={col} p={p} />
             ))}
           </div>
-        </>
+        </section>
       )}
 
       {almost.length > 0 && (
-        <>
+        <section className="glass">
           <div className="section-title">もうすぐコンプ</div>
           {almost.map(({ col, p }) => (
             <AlmostRow key={col.id} col={col} p={p} />
           ))}
-        </>
+        </section>
       )}
 
       {/* 全体コンプ率とメンバー別は下の方に（本人の要望、2026-10-01） */}
+      <section className="glass">
       <div className="total-title" style={sel ? { color: sel.text } : undefined}>{sel ? `${sel.name}のコンプ率` : '全体コンプ率'}</div>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
         <span className="total-pct" style={sel ? { color: sel.color } : undefined}>
@@ -306,16 +309,17 @@ export default function Home() {
       </div>
       </>
       )}
+      </section>
 
       {completed.length > 0 && (
-        <>
+        <section className="glass">
           <div className="section-title">最近コンプしたコレクション</div>
           <div style={{ display: 'flex', gap: 8, overflowX: 'auto' }}>
             {completed.slice(0, 10).map(({ col }) => (
               <CompletedCover key={col.id} col={col} />
             ))}
           </div>
-        </>
+        </section>
       )}
     </div>
   )
@@ -402,5 +406,16 @@ function CompletedCover({ col }: { col: Collection }) {
         {col.name}
       </div>
     </Link>
+  )
+}
+
+/** 画面の後ろ一面の写真（ぼかす）。上の欄はすりガラスのように透けて重なる */
+function HomeBackdrop({ imageId }: { imageId?: string }) {
+  const url = useImageUrl(imageId, 'thumb')
+  if (!url) return null
+  return (
+    <div className="backdrop" aria-hidden>
+      <img src={url} alt="" />
+    </div>
   )
 }

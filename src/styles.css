@@ -35,7 +35,9 @@
   }
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; background: var(--bg); color: var(--text); }
+html, body { margin: 0; color: var(--text); }
+/* 地の色は html だけに付ける（body に付けると、ホームの後ろ一面の写真（z-index: -1）が隠れるため） */
+html { background: var(--bg); }
 /* 一番上・一番下でさらに引っぱったときの、画面全体のはね返りを止める */
 html { overscroll-behavior: none; }
 body {
@@ -422,3 +424,21 @@ a { color: inherit; text-decoration: none; }
 .col-meta { font-size: 11px; opacity: .8; margin-top: 1px; }
 /* コレクションの画面：段の見出しは小さく、段の間は広く（カードを目立たせる） */
 .row-head { font-size: 12px; margin: 18px 0 6px; }
+
+/* ホームの後ろ一面の写真と、すりガラスの欄（Home.tsx の HomeBackdrop・section.glass） */
+.backdrop { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; background: var(--bg); }
+.backdrop img { position: absolute; inset: -15%; width: 130%; height: 130%; object-fit: cover; filter: blur(40px) saturate(1.35); opacity: .95; transform: translateZ(0); }
+.backdrop::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, color-mix(in srgb, var(--bg) 10%, transparent), color-mix(in srgb, var(--bg) 40%, transparent)); }
+.glass {
+  margin: 12px 0; padding: 2px 14px 14px; border-radius: 18px;
+  background: color-mix(in srgb, var(--bg) 58%, transparent);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5); backdrop-filter: blur(20px) saturate(1.5);
+  box-shadow: inset 0 0 0 .5px color-mix(in srgb, var(--text) 8%, transparent), 0 8px 24px -16px rgba(0,0,0,.25);
+}
+.glass > .section-title:first-child, .glass > .total-title:first-child { margin-top: 12px; }
+/* 後ろに写真がある画面では、上のバー・メンバーのボタン・お知らせも透かす */
+.page:has(> .backdrop) .topbar, .page:has(> .backdrop) .sticky-chips {
+  background: color-mix(in srgb, var(--bg) 50%, transparent);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4); backdrop-filter: blur(24px) saturate(1.4);
+}
+.page:has(> .backdrop) .sticky-chips .chip:not(.on), .page:has(> .backdrop) .banner { background: color-mix(in srgb, var(--bg) 60%, transparent); }
