@@ -7,6 +7,7 @@
   --text: #1f1f1f;
   --text-2: #6b6b68;
   --line: #dcdcd8;
+  --poca-line: rgba(0,0,0,.08);
   --all: #1f1f1f;
   --on-all: #ffffff;
   --warn-bg: #e8e8e5;
@@ -26,6 +27,7 @@
     --text: #f4f4f5;
     --text-2: #a1a1aa;
     --line: #2a2a2e;
+    --poca-line: rgba(255,255,255,.08);
     --all: #ededed;
     --on-all: #111113;
     --warn-bg: #2a2a2e;
@@ -163,7 +165,7 @@ a { color: inherit; text-decoration: none; }
 .poca {
   position: relative; display: block; width: 100%; padding: 0;
   aspect-ratio: 55 / 85; border-radius: var(--r-card); overflow: hidden;
-  border: 1.5px solid; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+  border: .5px solid; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
   transition: filter .15s; touch-action: manipulation;
 }
 .poca { container-type: inline-size; }

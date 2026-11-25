@@ -1,17 +1,18 @@
 import { memo, useRef } from 'react'
 import type { Card } from '../lib/db'
-import { MEMBER_BY_ID, memberLabel, memberNames, memberOrder } from '../lib/members'
+import { memberLabel, memberNames } from '../lib/members'
 import { useImageUrl, useNearScreen } from './ui'
 
 const LONG_PRESS_MS = 450
 
 /** 仮カードの枠と背景。ユニットカードは写っているメンバーの色を縞にする */
-export function cardColors(card: Card): { border: string; background: string } {
-  const members = [...card.memberIds].sort((a, b) => memberOrder(a) - memberOrder(b)).map((id) => MEMBER_BY_ID[id])
-  if (members.length === 1) return { border: members[0].color, background: members[0].color + '40' }
-  const stripe = 8
-  const stops = members.map((m, i) => `${m.color}55 ${i * stripe}px ${(i + 1) * stripe}px`).join(', ')
-  return { border: 'var(--text-2)', background: `repeating-linear-gradient(135deg, ${stops})` }
+/**
+ * カードの縁と下地（2026-11-26、本人の要望で見直し）。
+ * 大きな SNS（Instagram・YouTube）の写真のように、縁は目立たない細い線、下地は灰色にして写真だけを目立たせる。
+ * メンバーカラーはタブや絞り込みのボタンだけに使い、カードの縁には使わない
+ */
+export function cardColors(_card: Card): { border: string; background: string } {
+  return { border: 'var(--poca-line)', background: 'var(--surface)' }
 }
 
 interface Props {
