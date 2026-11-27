@@ -132,8 +132,7 @@ export default function Home() {
         {MEMBERS.map((m) => (
           <button
             key={m.id}
-            className={`chip member${member === m.id ? ' on' : ''}`}
-            style={member === m.id ? { borderColor: m.color, color: m.text } : { color: m.text }}
+            className={`chip${member === m.id ? ' on' : ''}`}
             onClick={() => setMember(m.id)}
           >
             {m.name}
