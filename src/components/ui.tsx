@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode, type RefObject } from 'react'
+import { useCallback, useEffect, useState, type ReactNode, type RefObject } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { IconChevronLeft, IconUser } from '@tabler/icons-react'
 import { db, getFull, getThumb, type Profile } from '../lib/db'
@@ -35,13 +35,20 @@ export function TopBar({ title, back, minive, menu, children }: { title: string;
 }
 
 export function Sheet({ onClose, children }: { onClose: () => void; children: ReactNode }) {
+  // 外を押したとき・Esc のときは、下へ引っこめてから閉じる（0.2 秒）
+  const [closing, setClosing] = useState(false)
+  const close = useCallback(() => {
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return onClose()
+    setClosing(true)
+    window.setTimeout(onClose, 200)
+  }, [onClose])
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && close()
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+  }, [close])
   return (
-    <div className="sheet-backdrop" onClick={onClose}>
+    <div className={`sheet-backdrop${closing ? ' closing' : ''}`} onClick={closing ? undefined : close}>
       <div className="sheet" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
         {children}
       </div>

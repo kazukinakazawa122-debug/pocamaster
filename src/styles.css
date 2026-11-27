@@ -224,6 +224,13 @@ a { color: inherit; text-decoration: none; }
 
 .sheet-backdrop { position: fixed; inset: 0; z-index: 40; background: rgba(0,0,0,.5); display: flex; align-items: flex-end; justify-content: center; }
 .sheet { background: var(--bg); width: 100%; max-width: 640px; max-height: 92dvh; overflow-y: auto; border-radius: 16px 16px 0 0; padding: 8px 16px calc(16px + var(--safe-bottom)); }
+/* シートの動き：下からせり上がる・閉じるときは下へ引っこむ */
+.sheet-backdrop { animation: drawer-fade .22s ease-out; }
+.sheet { animation: sheet-up .3s cubic-bezier(.2,.9,.3,1); }
+.sheet-backdrop.closing { animation: drawer-fade .2s ease-in reverse forwards; }
+.sheet-backdrop.closing .sheet { animation: sheet-up .2s ease-in reverse forwards; }
+@keyframes sheet-up { from { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) { .sheet-backdrop, .sheet, .sheet-backdrop.closing, .sheet-backdrop.closing .sheet { animation: none; } }
 
 .list-item { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); min-height: 44px; }
 .cover { width: 64px; height: 64px; flex: none; border-radius: 8px; background: var(--surface); overflow: hidden; display: flex; align-items: center; justify-content: center; color: var(--text-2); }
