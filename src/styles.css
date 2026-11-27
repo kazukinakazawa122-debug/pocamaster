@@ -312,8 +312,14 @@ a { color: inherit; text-decoration: none; }
 /* 絞り込みのボタンの上と下の線はなくす（本人「違和感がある」、2026-11-13）。上のバーの線は、すぐ下に絞り込みがある画面だけ消す（高さは変えない） */
 .topbar:has(~ .sticky-chips) { border-bottom-color: transparent; }
 /* 線の代わりに、ボタンを少し大きく、うすい地の色にして見やすくする（選んでいないボタンの枠線もなくす） */
-.sticky-chips .chip { min-height: 36px; padding: 6px 14px; font-size: 14px; border-color: transparent; background: var(--surface); }
-.sticky-chips .chip.on { background: var(--all); border-color: var(--all); }
+/* 上の絞り込みのボタンはすりガラスの色に（本人の要望、2026-11-27）。選んでいるボタンは白を濃くして、メンバーの色の縁を付ける */
+.sticky-chips .chip {
+  min-height: 36px; padding: 6px 14px; font-size: 14px;
+  background: var(--glass); border: 1.5px solid var(--glass-edge);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8); backdrop-filter: blur(24px) saturate(1.8);
+  box-shadow: inset 0 1px 0 var(--glass-hi), 0 4px 12px -8px rgba(0,0,0,.3);
+}
+.sticky-chips .chip.on { background: var(--glass-hi); border-color: var(--text); color: var(--text); }
 .chip.member.on { color: #fff; }
 
 /* 読み込み中：画面の真ん中に MINIVE の 6 人（2026-10-01） */

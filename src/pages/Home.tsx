@@ -133,7 +133,7 @@ export default function Home() {
           <button
             key={m.id}
             className={`chip member${member === m.id ? ' on' : ''}`}
-            style={member === m.id ? { background: m.color, borderColor: m.color, color: m.on } : { color: m.text }}
+            style={member === m.id ? { borderColor: m.color, color: m.text } : { color: m.text }}
             onClick={() => setMember(m.id)}
           >
             {m.name}
