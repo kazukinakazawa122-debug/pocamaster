@@ -201,9 +201,13 @@ export default function Settings() {
     <div className="page">
       <TopBar title="設定" minive="face" menu />
 
-      <div className="section-title">プロフィール</div>
-      <ProfileEditor />
+      {/* ホームと同じすりガラスの板に、見出しごとにまとめる（2026-11-27） */}
+      <section className="glass">
+        <div className="section-title">プロフィール</div>
+        <ProfileEditor />
+      </section>
 
+      <section className="glass">
       <div className="section-title">バックアップ</div>
       <div className="panel stack">
         <div className="small muted">
@@ -335,7 +339,9 @@ export default function Settings() {
           }}
         />
       </div>
+      </section>
 
+      <section className="glass">
       <div className="section-title">データの取り込み</div>
       <div className="panel stack">
         <div className="small muted">
@@ -406,6 +412,7 @@ export default function Settings() {
           </Link>
         )}
       </div>
+      </section>
 
       {message && (
         <p className="small" role="status" style={{ marginTop: 16 }}>
