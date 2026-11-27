@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react'
+import { lazy, Suspense, useEffect, useRef } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import TabBar from './components/TabBar'
 import { UndoProvider } from './components/Undo'
@@ -51,15 +51,33 @@ function useKeyboardFix() {
   }, [])
 }
 
+/**
+ * 画面を移ったら、新しい画面をふわっと出す（0.2 秒）。
+ * 作り直さずに透明度だけ動かす（動かす向き＝transform は、上のバーなど固定の物の位置を崩すため使わない）
+ */
+function usePageFade(pathname: string) {
+  const ref = useRef<HTMLDivElement>(null)
+  const first = useRef(true)
+  useEffect(() => {
+    if (first.current) { first.current = false; return }
+    const el = ref.current
+    if (!el?.animate || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return
+    el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 200, easing: 'ease-out' })
+  }, [pathname])
+  return ref
+}
+
 export default function App() {
   const { pathname } = useLocation()
   useKeyboardFix()
+  const pageRef = usePageFade(pathname)
   return (
     <UndoProvider>
       <div className="app">
         {/* 画面を移ったらエラー表示を消す（作り直さずに。作り直すと画面の切り替えが 0.3 秒遅れる） */}
         <ErrorBoundary resetKey={pathname}>
           <Suspense fallback={<MiniveLoading />}>
+          <div ref={pageRef}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/collections" element={<Collections />} />
@@ -76,6 +94,7 @@ export default function App() {
             <Route path="/history" element={<History />} />
             <Route path="/orphans" element={<Orphans />} />
           </Routes>
+          </div>
           </Suspense>
         </ErrorBoundary>
         <TabBar pathname={pathname} />
