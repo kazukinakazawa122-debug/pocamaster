@@ -193,6 +193,19 @@ export default function Home() {
     .slice(0, 3)
   const colById = new Map(collections.map((c) => [c.id, c]))
 
+  // 今月の入手：今月「所持中」にして、いまも所持中のカードの数（カードの記録の日時で数える。履歴は 200 件までなので使わない）
+  const monthStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1).getTime()
+  const thisMonth = cards.filter((c) => c.status === '所持中' && c.statusChangedAt >= monthStart).length
+
+  // 次に狙うカード：あと 3 枚以内でコンプのコレクションの、持っていないカード。残りの少ないコレクションから 15 枚まで
+  const targets = collections
+    .map((col) => ({ col, list: byCollection.get(col.id) ?? [] }))
+    .map(({ col, list }) => ({ col, missing: list.filter((c) => c.status !== '所持中').sort((a, b) => a.order - b.order), owned: list.some((c) => c.status === '所持中') }))
+    .filter(({ missing, owned }) => owned && missing.length > 0 && missing.length <= 3)
+    .sort((a, b) => a.missing.length - b.missing.length)
+    .flatMap(({ col, missing }) => missing.map((card) => ({ card, col })))
+    .slice(0, 15)
+
   // 収集中のアルバム（コレクションの画面で「ホームに出す」を押したもの）。発売日の新しい順
   const pinned = collections
     .filter((c) => c.pinned)
@@ -233,7 +246,7 @@ export default function Home() {
 
       {recent.length > 0 && (
         <section className="glass">
-          <div className="section-title">最近入手<span className="count num">{recent.length} 枚</span></div>
+          <div className="section-title">最近入手<span className="count num">今月 {thisMonth} 枚</span></div>
           <div className="h-scroll">
             {recent.map(({ card, at }) => (
               <RecentCard key={card.id} card={card} col={colById.get(card.collectionId)} at={at} />
@@ -249,6 +262,18 @@ export default function Home() {
           <div className="h-scroll">
             {pinned.map(({ col, p }) => (
               <PinnedAlbum key={col.id} col={col} p={p} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* 次に狙うカード：あと少しでコンプになる、持っていないカード（見る人向けの並べ方、2026-11-27） */}
+      {targets.length > 0 && (
+        <section className="glass">
+          <div className="section-title">次に狙うカード<span className="count num">{targets.length} 枚</span></div>
+          <div className="h-scroll">
+            {targets.map(({ card, col }) => (
+              <RecentCard key={card.id} card={card} col={col} off />
             ))}
           </div>
         </section>
@@ -344,7 +369,7 @@ function PinnedAlbum({ col, p }: { col: Collection; p: Progress }) {
 }
 
 /** 横に並べる小さなカード。at があれば下に日付を出す */
-function RecentCard({ card, col, at, width = 92 }: { card: Card; col?: Collection; at?: number; width?: number }) {
+function RecentCard({ card, col, at, width = 92, off }: { card: Card; col?: Collection; at?: number; width?: number; off?: boolean }) {
   // 横に並ぶ一覧（お気に入りは何十枚にもなる）は、見える近くの画像だけを読む（本人の報告「ラグ」の調査、2026-10-04）
   const ref = useRef<HTMLAnchorElement>(null)
   const near = useNearScreen(ref, 300, 'x')
@@ -353,7 +378,7 @@ function RecentCard({ card, col, at, width = 92 }: { card: Card; col?: Collectio
   const d = at ? new Date(at) : null
   return (
     <Link ref={ref} to={`/collections/${card.collectionId}`} style={{ width, flex: 'none' }} aria-label={`${col?.name ?? ''} ${memberLabel(card.memberIds)}`}>
-      <div className="poca" style={{ borderColor: border, background }}>
+      <div className={`poca${off ? ' off' : ''}`} style={{ borderColor: border, background }}>
         {url ? (
           <img src={url} alt="" decoding="async" />
         ) : (
