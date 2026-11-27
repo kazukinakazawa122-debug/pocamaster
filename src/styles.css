@@ -459,3 +459,12 @@ a { color: inherit; text-decoration: none; }
 .glass > .section-title .count { font-size: 12px; font-weight: 600; color: var(--text-2); letter-spacing: 0; }
 /* 板の中の一覧（コレクションの画面）：最後の行の下の線はなくす */
 .glass > .list-item:last-child { border-bottom: none; }
+/* マイアルバム：バインダーの台紙と下のボタンを、ホームと同じすりガラスに（2026-11-27） */
+.album-page .binder, .album-actions .btn {
+  background: var(--glass); border: .5px solid var(--glass-edge);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8); backdrop-filter: blur(24px) saturate(1.8);
+  box-shadow: inset 0 1px 0 var(--glass-hi), 0 10px 30px -18px rgba(0,0,0,.35), 0 1px 2px rgba(0,0,0,.04);
+}
+.album-page .binder { border-radius: 18px; }
+/* 台紙の下の影が横に送る枠で切れないよう、下に余白（そのぶん下のページ番号を上げる） */
+.album-pages { padding-bottom: 16px; margin-bottom: -8px; }

@@ -156,7 +156,7 @@ export default function MyAlbumDetail({ albumId: id }: { albumId: string }) {
           <IconChevronRight size={24} />
         </button>
       </div>
-      <div style={{ display: 'flex', gap: 8, marginTop: 8 }}>
+      <div className="album-actions" style={{ display: 'flex', gap: 8, marginTop: 8 }}>
         <button className="btn" style={{ flex: 1 }} onClick={addPage}>
           <IconPlus size={20} aria-hidden />
           ページを追加
