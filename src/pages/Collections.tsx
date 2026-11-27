@@ -30,6 +30,7 @@ const GROUP: Record<string, number> = {
   'ライブ・ツアー': 3,
 }
 const groupOf = (c: Collection) => GROUP[c.type] ?? 4
+const GROUP_NAME = ['アルバム', 'シーズングリーティング', 'ファンミ・ファンコン', 'ライブ・ツアー', 'その他']
 
 // 一覧に戻ってきたとき、読み込み中に白い画面にならないよう、前回の内容とスクロール位置を覚えておく
 let lastCollections: Collection[] | undefined
@@ -108,7 +109,17 @@ export default function Collections() {
           </Link>
         </div>
       ) : (
-        list.map((c) => <Row key={c.id} col={c} p={data.byCollection.get(c.id) ?? EMPTY} />)
+        // ホームと同じすりガラスの板に、種類ごとにまとめる（2026-11-27）
+        GROUP_NAME.map((name, g) => {
+          const rows = list.filter((c) => groupOf(c) === g)
+          if (rows.length === 0) return null
+          return (
+            <section key={name} className="glass">
+              <div className="section-title">{name}<span className="count num">{rows.length}</span></div>
+              {rows.map((c) => <Row key={c.id} col={c} p={data.byCollection.get(c.id) ?? EMPTY} />)}
+            </section>
+          )
+        })
       )}
     </div>
   )
