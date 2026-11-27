@@ -7,7 +7,7 @@ import { db, type Card } from '../lib/db'
 import { changeCardStatus, toggleCardStatus, useAllCards } from '../lib/cardStore'
 import { MEMBER_BY_ID, MEMBERS, memberLabel, memberOrder, type MemberId } from '../lib/members'
 import { isComplete, memberProgress, pctText, progress } from '../lib/stats'
-import { ProgressBar, TopBar } from '../components/ui'
+import { ProgressBar, TopBar, cardNo } from '../components/ui'
 import CardTile from '../components/CardTile'
 import CardSheet from '../components/CardSheet'
 import { MiniveLoading } from '../components/Minive'
@@ -98,7 +98,7 @@ const RowSection = memo(
             {row.source} <span className="muted" style={{ fontWeight: 400 }}>{row.version}</span>
           </span>
           <span className="muted num">
-            {progress(row.all).owned}/{row.all.length}
+            {cardNo(progress(row.all).owned, row.all.length)}
           </span>
         </div>
         <div className="grid-6">
@@ -243,7 +243,7 @@ export default function CollectionDetail() {
           <ProgressBar pct={total.pct} />
         </div>
         <span className="small muted num">
-          {total.owned} / {total.total}
+          {cardNo(total.owned, total.total)}
         </span>
         <button
           className={`chip${col.pinned ? ' on' : ''}`}
@@ -328,7 +328,7 @@ export default function CollectionDetail() {
               <div className="row-head">
                 <span style={{ fontWeight: 700 }}>{source}</span>
                 <span className="muted num">
-                  {progress(all).owned}/{all.length}
+                  {cardNo(progress(all).owned, all.length)}
                 </span>
               </div>
               <div className="grid-3">

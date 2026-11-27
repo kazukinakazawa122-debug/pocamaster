@@ -34,6 +34,12 @@ export function TopBar({ title, back, minive, menu, children }: { title: string;
   )
 }
 
+/** 枚数をトレカの番号の書き方に（12 枚・全 48 → 012/048）。けたは全体の数に合わせ、少なくとも 3 けた */
+export function cardNo(owned: number, total: number): string {
+  const w = Math.max(3, String(total).length)
+  return `${String(owned).padStart(w, '0')}/${String(total).padStart(w, '0')}`
+}
+
 export function Sheet({ onClose, children }: { onClose: () => void; children: ReactNode }) {
   // 外を押したとき・Esc のときは、下へ引っこめてから閉じる（0.2 秒）
   const [closing, setClosing] = useState(false)

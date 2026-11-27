@@ -6,7 +6,7 @@ import { changesSinceBackup, db, getSetting, type Card, type Collection, type Pr
 import { useAllCards } from '../lib/cardStore'
 import { MEMBERS, MEMBER_BY_ID, memberLabel, type MemberId } from '../lib/members'
 import { isComplete, memberProgress, pctText, progress, type Progress } from '../lib/stats'
-import { ProfileAvatar, ProgressBar, useCoverUrl, useImageUrl, useNearScreen, warmCovers } from '../components/ui'
+import { ProfileAvatar, ProgressBar, useCoverUrl, useImageUrl, useNearScreen, warmCovers, cardNo } from '../components/ui'
 import { cardColors } from '../components/CardTile'
 import { MiniveTrio, MiniveLoading } from '../components/Minive'
 import { MenuButton } from '../components/SideMenu'
@@ -272,14 +272,14 @@ export default function Home() {
           {total.pct !== null && <span className="pct-sign">%</span>}
         </span>
         <span className="small muted">
-          {total.owned} / {total.total} 種類
+          <span className="num">{cardNo(total.owned, total.total)}</span> 種類
         </span>
       </div>
       <div style={{ margin: '8px 0' }}>
         <ProgressBar pct={total.pct} color={sel?.color} />
       </div>
       <div className="small muted">
-        コンプ済みコレクション <span className="num">{completed.length} / {collections.length}</span>
+        コンプ済みコレクション <span className="num">{cardNo(completed.length, collections.length)}</span>
       </div>
 
       {/* 全体コンプ率のすぐ下にメンバー別（「すべて」のときだけ。押すとそのメンバーを選ぶ） */}
